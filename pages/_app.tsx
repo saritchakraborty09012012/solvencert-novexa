@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Toaster } from 'react-hot-toast';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { supabase } from '@/lib/supabase';
 import { useAuthStore } from '@/store/authStore';
 import { useCollabStore, attachCollabChannel } from '@/store/collabStore';
@@ -140,6 +141,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Component {...pageProps} />
+      <SpeedInsights />
       <Toaster
         position="top-center"
         toastOptions={{
