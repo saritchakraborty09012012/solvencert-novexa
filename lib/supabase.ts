@@ -5,13 +5,13 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 // (process.env[key]). Next.js/webpack only inlines NEXT_PUBLIC_* into the
 // client bundle when it can statically analyse the member access at build time.
 function supabaseUrl(): string {
-  return process.env.NEXT_PUBLIC_SUPABASE_URL;
+  return requireEnv(process.env.NEXT_PUBLIC_SUPABASE_URL, 'NEXT_PUBLIC_SUPABASE_URL');
 }
 function supabaseAnonKey(): string {
-  return process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+  return requireEnv(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY, 'NEXT_PUBLIC_SUPABASE_ANON_KEY');
 }
 function supabaseServiceKey(): string {
-  return process.env.SUPABASE_SERVICE_ROLE_KEY;
+  return requireEnv(process.env.SUPABASE_SERVICE_ROLE_KEY, 'SUPABASE_SERVICE_ROLE_KEY');
 }
 function requireEnv(value: string | undefined, key: string): string {
   if (!value) {

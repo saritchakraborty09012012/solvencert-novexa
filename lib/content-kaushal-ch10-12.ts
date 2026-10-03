@@ -695,7 +695,20 @@ export const KAUSHAL_CH10_12_CHAPTERS = [
           },
         ],
       },
-    ],
+      {
+        id: 's3', title: 'Hands-On Tasks — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Preparation for service — Safety (§11.8): discuss whether you need to add any other safety aspects for the particular tourism service you will provide. How should you approach it?',
+            answer: {
+              answerKey: 'List service-specific risks, then add matching precautions beyond the textbook list.',
+              schoolMethod: 'Take your chosen service (guiding, food stall, transport help) and list its <u>specific risks</u> (crowds, fire, water, traffic, allergies). For each, add a <u>precaution</u> — first-aid kit, emergency numbers, safe pathways, hygiene steps — and <u>justify each addition</u> to the group.',
+            }
+          },
+        ]
+      },
+    ]
   },
   {
     id: 'ch12',

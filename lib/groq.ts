@@ -179,7 +179,7 @@ export async function askAI(userMessage: string, mode: AIMode='doubt', context?:
     [getMainKey(), ...FALLBACK_KEYS].filter(Boolean) as string[],
     withEffort({ model: GROQ_MODELS, messages: msgs, max_tokens: 1400, temperature: 0.35, stream: false } as unknown as ChatParams),
   );
-  return c.choices[0]?.message?.content || 'Sorry, could not generate a response.';
+  return c.choices?.[0]?.message?.content || 'Sorry, could not generate a response.';
 }
 
 const ASK_ANYTHING_INSTRUCTIONS = `You are now running in "Ask Anything" mode — a quick-solution chatbot for CBSE Class 9 students.
@@ -210,7 +210,7 @@ export async function askAnythingAI(userMessage: string, history: { role:'user'|
   const c = await chatCompletions(getMainKey(), withEffort({
     model:GROQ_MODEL, messages:msgs, max_tokens:1500, temperature:0.3, stream:false,
   }));
-  return c.choices[0]?.message?.content || 'Sorry, could not generate a response.';
+  return c.choices?.[0]?.message?.content || 'Sorry, could not generate a response.';
 }
 
 export async function explainAnswer(question: string, answer: string, subject: string): Promise<string> {
@@ -232,7 +232,7 @@ Be encouraging. Use proper math formatting where needed.` }
   const c = await chatCompletions(getMainKey(), withEffort({
     model:GROQ_MODEL, messages:msgs, max_tokens:1200, temperature:0.3, stream:false,
   }));
-  return c.choices[0]?.message?.content || 'Could not generate explanation.';
+  return c.choices?.[0]?.message?.content || 'Could not generate explanation.';
 }
 
 export async function aiSmartSearch(query: string): Promise<{title:string;subject:string;chapter:string;url:string;snippet:string}[]> {
@@ -266,7 +266,7 @@ URL patterns:
       model:GROQ_MODEL, messages:[{role:'user',content:prompt}],
       max_tokens:600, temperature:0.1, stream:false,
     }));
-    const text = (c.choices[0]?.message?.content||'[]').replace(/```json|```/g,'').trim();
+    const text = (c.choices?.[0]?.message?.content||'[]').replace(/```json|```/g,'').trim();
     const start = text.indexOf('['); const end = text.lastIndexOf(']');
     if (start===-1) return [];
     return JSON.parse(text.slice(start,end+1));
@@ -282,6 +282,6 @@ Reply ONLY with JSON: {"verified":true/false,"confidence":"high/medium/low","rea
       model:GROQ_MODEL, messages:[{role:'user',content:prompt}],
       max_tokens:150, temperature:0, stream:false,
     }));
-    return JSON.parse((c.choices[0]?.message?.content||'{}').replace(/```json|```/g,'').trim());
+    return JSON.parse((c.choices?.[0]?.message?.content||'{}').replace(/```json|```/g,'').trim());
   } catch { return {verified:false,confidence:'low',reason:'Service unavailable.'}; }
 }

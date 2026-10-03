@@ -8,6 +8,7 @@ import {
   Check, Loader2, ArrowLeft, Globe, Palette,
   FileText, Library, BookMarked, Sparkles, ArrowRight,
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { CLASS_9_SUBJECTS, getChapterPdfUrl } from '@/lib/content';
 import type { Subject } from '@/lib/content';
@@ -22,7 +23,7 @@ interface BookCardDef {
   tagline: string;
   desc: string;
   imageKey: string;
-  Icon: React.ComponentType<{ size?: number; strokeWidth?: number; color?: string }>;
+  Icon: LucideIcon;
   from: string;
   to: string;
   ring: string;
@@ -679,7 +680,7 @@ function UI1GridView({
               onClick={() => onOpen(card)}
               className="card p-0 overflow-hidden transition-all duration-300 text-left hover:ring-2 hover:ring-blue-500/30"
             >
-              <div className={cn('relative p-5 bg-gradient-to-br', COLOR_GRADIENT[subject?.color] || COLOR_GRADIENT.blue)}>
+              <div className={cn('relative p-5 bg-gradient-to-br', COLOR_GRADIENT[subject?.color ?? 'blue'] || COLOR_GRADIENT.blue)}>
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-xl bg-white dark:bg-black/25 flex items-center justify-center text-xl shadow-sm flex-shrink-0">
                     {subject?.icon || ''}

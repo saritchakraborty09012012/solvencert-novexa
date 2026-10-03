@@ -324,6 +324,223 @@ Points like $(-3, 2)$ (Q II), $(-1, -4)$ (Q III), $(5, -2)$ (Q IV) could not be 
 **Conclusion:** We would lose $\\frac{3}{4}$ of the plane. The coordinate system would be incomplete and unable to represent points to the left of or below the origin.`,
             }
           },
+          {
+            id: 'q6', number: '★6', isHard: true,
+            text: "Are the points M(−3, −4), A(0, 0) and G(6, 8) on the same straight line? Suggest a method to check this without plotting and joining the points.",
+            answer: {
+              answerKey: "Yes, M, A and G are collinear. Slope of AM = Slope of AG = 4/3.",
+              schoolMethod: `**Solution:**
+
+Compare the slopes of line segments AM and AG.
+
+$$\\text{Slope of AM} = \\frac{-4 - 0}{-3 - 0} = \\frac{-4}{-3} = \\frac{4}{3}$$
+
+$$\\text{Slope of AG} = \\frac{8 - 0}{6 - 0} = \\frac{8}{6} = \\frac{4}{3}$$
+
+Both slopes are equal.
+
+**Therefore, M, A and G are on the same straight line.**`,
+            }
+          },
+          {
+            id: 'q7', number: '★7', isHard: true,
+            text: "Use your method (from Problem 6) to check if the points R(−5, −1), B(−2, −5) and C(4, −12) are on the same straight line. Now plot both sets of points and check your answers.",
+            answer: {
+              answerKey: "Slope of RB = −4/3 and Slope of BC = −7/6. The slopes are not equal, so R, B and C are not collinear.",
+              schoolMethod: `**Solution:**
+
+Slope of RB = $\\frac{-5 - (-1)}{-2 - (-5)} = \\frac{-4}{3}$
+
+Slope of BC = $\\frac{-12 - (-5)}{4 - (-2)} = \\frac{-7}{6}$
+
+The slopes are not equal.
+
+**Therefore, R, B and C are not on the same straight line.**`,
+            }
+          },
+          {
+            id: 'q8', number: '★8', isHard: true,
+            text: "Using the origin as one vertex, plot the vertices of: (i) A right-angled isosceles triangle. (ii) An isosceles triangle with one vertex in Quadrant III and the other in Quadrant IV.",
+            answer: {
+              answerKey: "(i) O(0,0), A(2,0), B(0,2) — right-angled isosceles. (ii) O(0,0), A(−2,−2), B(2,−2) — isosceles with A in Q-III, B in Q-IV.",
+              schoolMethod: `**Solution:**
+
+**(i)** One possible set of vertices: O(0, 0), A(2, 0) and B(0, 2).
+
+OA = OB = 2 units and OA ⊥ OB.
+
+Hence, it is a right-angled isosceles triangle.
+
+**(ii)** One possible set of vertices: O(0, 0), A(−2, −2) and B(2, −2).
+
+OA = OB = √8 = 2√2 units.
+
+Hence, it is an isosceles triangle with A in Quadrant III and B in Quadrant IV.`,
+            }
+          },
+          {
+            id: 'q9', number: '★9', isHard: true,
+            text: "The following table shows the coordinates of points S, M and T. In each case, state whether M is the midpoint of segment ST. Justify your answer.",
+            answer: {
+              answerKey: "Check: Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2). Results: (i) Yes, (ii) Yes, (iii) No, (iv) No.",
+              schoolMethod: `**Solution:**
+
+| S | M | T | Midpoint of ST | Is M the midpoint? |
+|---|---|---|---|---|
+| (−3, 0) | (0, 0) | (3, 0) | (0, 0) | **Yes** |
+| (2, 3) | (3, 4) | (4, 5) | (3, 4) | **Yes** |
+| (0, 0) | (0, 5) | (0, −10) | (0, −5) ≠ (0, 5) | **No** |
+| (−8, 7) | (0, −2) | (6, −3) | (−1, 2) ≠ (0, −2) | **No** |
+
+When M is the midpoint of ST:
+$$x\\text{-coordinate of M} = \\frac{x_1 + x_2}{2}, \\quad y\\text{-coordinate of M} = \\frac{y_1 + y_2}{2}$$`,
+            }
+          },
+          {
+            id: 'q10', number: '★10', isHard: true,
+            text: "Use the connection you found to find the coordinates of B given that M(−7, 1) is the midpoint of A(3, −4) and B(x, y).",
+            answer: {
+              answerKey: "B = $\\boxed{(-17, 6)}$",
+              schoolMethod: `**Solution:**
+
+Using midpoint formula:
+
+$$-7 = \\frac{3 + x}{2} \\implies -14 = 3 + x \\implies x = -17$$
+
+$$1 = \\frac{-4 + y}{2} \\implies 2 = -4 + y \\implies y = 6$$
+
+**Therefore, the coordinates of B are (−17, 6).**`,
+            }
+          },
+          {
+            id: 'q11', number: '★11', isHard: true,
+            text: "Let P, Q be points of trisection of AB, with P closer to A, and Q closer to B. Using your knowledge of how to find the coordinates of the midpoint of a segment, how would you find the coordinates of P and Q? Do this for the case when the points are A(4, 7) and B(16, −2).",
+            answer: {
+              answerKey: "P = (7, 19/4) and Q = (13, 1/4)",
+              schoolMethod: `**Solution:**
+
+First, find the midpoint M of AB:
+$$M = \\left(\\frac{4+16}{2}, \\frac{7-2}{2}\\right) = \\left(10, \\frac{5}{2}\\right)$$
+
+P is the midpoint of AM:
+$$P = \\left(\\frac{4+10}{2}, \\frac{7+\\frac{5}{2}}{2}\\right) = \\left(7, \\frac{19}{4}\\right)$$
+
+Q is the midpoint of MB:
+$$Q = \\left(\\frac{10+16}{2}, \\frac{\\frac{5}{2}-2}{2}\\right) = \\left(13, \\frac{1}{4}\\right)$$
+
+**Therefore, P = (7, 19/4) and Q = (13, 1/4).**`,
+            }
+          },
+          {
+            id: 'q12', number: '★12', isHard: true,
+            text: "(i) Given the points A(1, −8), B(−4, 7) and C(−7, −4), show that they lie on a circle K whose center is the origin O(0, 0). What is the radius of circle K? (ii) Given the points D(−5, 6) and E(0, 9), check whether D and E lie within the circle, on the circle, or outside the circle K.",
+            answer: {
+              answerKey: "(i) A, B, C lie on circle K with radius = √65 units. (ii) D lies inside the circle, E lies outside the circle.",
+              schoolMethod: `**Solution:**
+
+**(i)** Since the centre is O(0, 0):
+
+OA² = 1² + (−8)² = 1 + 64 = 65
+OB² = (−4)² + 7² = 16 + 49 = 65
+OC² = (−7)² + (−4)² = 49 + 16 = 65
+
+Thus, OA = OB = OC = √65
+
+**Therefore, A, B and C lie on the same circle K with radius = √65 units.**
+
+**(ii)** OD² = (−5)² + 6² = 25 + 36 = 61
+OE² = 0² + 9² = 81
+
+Since 61 < 65, **D lies inside the circle**.
+Since 81 > 65, **E lies outside the circle**.`,
+            }
+          },
+          {
+            id: 'q13', number: '★13', isHard: true,
+            text: "The midpoints of the sides of triangle ABC are the points D, E, and F. Given that the coordinates of D, E, and F are (5, 1), (6, 5), and (0, 3), respectively, find the coordinates of A, B and C.",
+            answer: {
+              answerKey: "A = (−1, −1), B = (11, 3), C = (1, 7)",
+              schoolMethod: `**Solution:**
+
+D, E and F are the midpoints of AB, BC and CA respectively.
+
+Since D is the midpoint of AB, E of BC and F of CA:
+
+$$A = D + F - E = (5, 1) + (0, 3) - (6, 5) = (-1, -1)$$
+$$B = D + E - F = (5, 1) + (6, 5) - (0, 3) = (11, 3)$$
+$$C = E + F - D = (6, 5) + (0, 3) - (5, 1) = (1, 7)$$
+
+**Therefore, A = (−1, −1), B = (11, 3), C = (1, 7).**`,
+            }
+          },
+          {
+            id: 'q14', number: '14', isHard: false,
+            text: "A city has two main roads which cross each other at the centre of the city. These two roads are along the North–South (N–S) direction and East–West (E–W) direction. All the other streets of the city run parallel to these roads and are 200 m apart. There are 10 streets in each direction. (i) Using 1 cm = 200 m, draw a model of the city in your notebook. Represent the streets by single lines. (ii) There are street intersections in the model. Each street intersection is formed by two streets — one running in the N–S direction and another in the E–W direction. Each street intersection is referred to in the following manner: If the 2nd street running in the N–S direction and 5th street in the E–W direction meet at some crossing, then we call this street intersection (2, 5). Using this convention, find: (a) how many street intersections can be referred to as (4, 3). (b) how many street intersections can be referred to as (3, 4).",
+            answer: {
+              answerKey: "(i) Draw 10 parallel N–S streets and 10 parallel E–W streets, each 1 cm apart. (ii)(a) 1 intersection, (ii)(b) 1 intersection.",
+              schoolMethod: `**Solution:**
+
+**(i)** Each adjacent pair of streets is 200 m apart. Using the scale 1 cm = 200 m, adjacent parallel streets will be 1 cm apart in the model. Draw 10 parallel N–S streets and 10 parallel E–W streets.
+
+**(ii)(a)** (4, 3) means the 4th N–S street and the 3rd E–W street. These two streets meet at exactly one point.
+
+**No. of such intersections = 1**
+
+**(ii)(b)** (3, 4) means the 3rd N–S street and the 4th E–W street. These two streets also meet at exactly one point.
+
+**No. of such intersections = 1**`,
+            }
+          },
+          {
+            id: 'q15', number: '15', isHard: false,
+            text: "A computer graphics program displays images on a rectangular screen whose coordinate system has the origin at the bottom-left corner. The screen is 800 pixels wide and 600 pixels high. A circular icon of radius 80 pixels is drawn with its centre at the point A(100, 150). Another circular icon of radius 100 pixels is drawn with its centre at the point B(250, 230). Determine: (i) whether any part of either circle lies outside the screen. (ii) whether the two circles intersect each other.",
+            answer: {
+              answerKey: "(i) No part of either circle lies outside the screen. (ii) The circles intersect each other (distance between centres = 170 pixels, sum of radii = 180, difference of radii = 20; since 20 < 170 < 180, they intersect at two points).",
+              schoolMethod: `**Solution:**
+
+**(i)** For circle A, centre = (100, 150), radius = 80:
+Leftmost x = 20, rightmost x = 180, bottom y = 70, top y = 230.
+All within the screen (0 ≤ x ≤ 800, 0 ≤ y ≤ 600).
+
+For circle B, centre = (250, 230), radius = 100:
+Leftmost x = 150, rightmost x = 350, bottom y = 130, top y = 330.
+All within the screen.
+
+**Therefore, no part of either circle lies outside the screen.**
+
+**(ii)** Distance between centres:
+$$AB = \\sqrt{(250-100)^2 + (230-150)^2} = \\sqrt{150^2 + 80^2} = \\sqrt{28900} = 170 \\text{ pixels}$$
+
+Sum of radii = 80 + 100 = 180 pixels
+Difference of radii = 100 − 80 = 20 pixels
+
+Since 20 < 170 < 180, **the circles intersect each other at two points.**`,
+            }
+          },
+          {
+            id: 'q16', number: '16', isHard: false,
+            text: "Plot the points A(2, 1), B(−1, 2), C(−2, −1), and D(1, −2) in the coordinate plane. Is ABCD a square? Can you explain why? What is the area of this square?",
+            answer: {
+              answerKey: "Yes, ABCD is a square. All four sides are equal (AB = BC = CD = DA = √10) and adjacent sides are perpendicular (AB ⊥ BC). Area = 10 square units.",
+              schoolMethod: `**Solution:**
+
+AB² = (−1 − 2)² + (2 − 1)² = 9 + 1 = 10
+BC² = (−2 + 1)² + (−1 − 2)² = 1 + 9 = 10
+CD² = (1 + 2)² + (−2 + 1)² = 9 + 1 = 10
+DA² = (2 − 1)² + (1 + 2)² = 1 + 9 = 10
+
+All four sides are equal.
+
+Slope of AB = (2 − 1)/(−1 − 2) = 1/(−3) = −1/3
+Slope of BC = (−1 − 2)/(−2 + 1) = −3/(−1) = 3
+
+Their product = −1, so AB ⊥ BC.
+
+**Therefore, ABCD is a square.**
+
+Area of square = side² = (√10)² = **10 square units**`,
+            }
+          },
         ]
       },
     ]
@@ -419,6 +636,20 @@ Therefore, the coefficient of $z$ = \$\\boxed{0}$.
 *We can write it as:* $4z^3 + 5z^2 + 0 \\cdot z - 11$ to make it explicit.`,
             }
           },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'What is the constant term of the polynomial $9x^3 + 5x^2 - 8x - 10$?',
+            answer: {
+              answerKey: 'The constant term is $\\boxed{-10}$.',
+              schoolMethod: `**Solution:**
+
+In the polynomial $9x^3 + 5x^2 - 8x - 10$:
+
+The constant term is the term with no variable attached.
+
+**Constant term = $\\boxed{-10}$**`,
+            }
+          },
         ]
       },
       {
@@ -489,6 +720,297 @@ Hmm, but 5 years after: Salil = 10, Mother = 20. Ratio = 2:1. ✓
               trickMethod: `Let Salil = $x$. Mother = $3x$. After 5 years: $\\frac{3x+5}{x+5} = 2$ → $x = 5$. Present ages: 5 and 15.`,
             }
           },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'The difference between two positive integers is 63. The ratio of the two integers is 2:5. Find the two integers.',
+            answer: {
+              answerKey: 'The two integers are $\\boxed{42}$ and $\\boxed{105}$.',
+              schoolMethod: `**Solution:**
+
+Let the two positive integers be $2x$ and $5x$.
+
+Their difference = $5x - 2x = 63$
+
+$$3x = 63 \\implies x = 21$$
+
+The two required numbers are $2(21) = \\boxed{42}$ and $5(21) = \\boxed{105}$.`,
+            }
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: "Ruby has 3 times as many two-rupee coins as she has five-rupee coins. If she has a total ₹88, how many coins does she have of each type?",
+            answer: {
+              answerKey: '₹5 coins = $\\boxed{8}$ and ₹2 coins = $\\boxed{24}$.',
+              schoolMethod: `**Solution:**
+
+Let the number of ₹5 coins = $x$. Number of ₹2 coins = $3x$.
+
+Amount contributed by ₹5 coins = $5x$
+Amount contributed by ₹2 coins = $2(3x) = 6x$
+
+$$5x + 6x = 88 \\implies 11x = 88 \\implies x = 8$$
+
+₹5 coins = $\\boxed{8}$ and ₹2 coins = $\\boxed{24}$.`,
+            }
+          },
+          {
+            id: 'q6', number: '6', isHard: false,
+            text: "A farmer cuts a 300 feet fence into two pieces of different sizes. The longer piece is four times as long as the shorter piece. How long are the two pieces?",
+            answer: {
+              answerKey: 'Shorter piece = $\\boxed{60}$ ft, Longer piece = $\\boxed{240}$ ft.',
+              schoolMethod: `**Solution:**
+
+Let the shorter piece = $x$ feet. The longer piece = $4x$ feet.
+
+$$x + 4x = 300 \\implies 5x = 300 \\implies x = 60$$
+
+Shorter piece = $\\boxed{60}$ ft and longer piece = $\\boxed{240}$ ft.`,
+            }
+          },
+          {
+            id: 'q7', number: '7', isHard: false,
+            text: "If the length of a rectangle is three more than twice its width and its perimeter is 24 cm, what are the dimensions of the rectangle?",
+            answer: {
+              answerKey: 'Breadth = $\\boxed{3}$ cm, Length = $\\boxed{9}$ cm.',
+              schoolMethod: `**Solution:**
+
+Let breadth = $x$ cm. Length = $(2x + 3)$ cm.
+
+$$2(l + b) = 24$$
+$$2[(2x + 3) + x] = 24$$
+$$2(3x + 3) = 24$$
+$$6x + 6 = 24 \\implies 6x = 18 \\implies x = 3$$
+
+Breadth = $\\boxed{3}$ cm and length = $2(3) + 3 = \\boxed{9}$ cm.`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex2.3', title: 'Exercise Set 2.3',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: "A student has ₹500 in her savings bank account. She gets ₹150 every month as pocket money. How much money will she have at the end of every month from the second month onwards? Find a linear expression to represent the amount she will have in the nth month.",
+            answer: {
+              answerKey: 'Amount after n months = $\\boxed{150n + 500}$',
+              schoolMethod: `**Solution:**
+
+Initial savings = ₹500, Pocket money per month = ₹150
+
+- After 1 month = 500 + 150 = ₹650
+- After 2 months = 500 + 300 = ₹800
+- After 3 months = 500 + 450 = ₹950
+
+Linear expression for amount after n months = $\\boxed{150n + 500}$`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: "A rally starts with 120 members. Each hour, 9 members drop out of the group. How many members will remain after 1, 2, 3, … hours? Find a linear expression to represent the number of members at the end of the nth hour.",
+            answer: {
+              answerKey: 'Number of members = $\\boxed{120 - 9n}$',
+              schoolMethod: `**Solution:**
+
+Initial members = 120, Drop-out per hour = 9
+
+- After 1 hour = 120 − 9 = 111
+- After 2 hours = 120 − 18 = 102
+- After 3 hours = 120 − 27 = 93
+
+Linear expression = $\\boxed{120 - 9n}$`,
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: "Suppose the length of a rectangle is 13 cm. Find the area if the breadth is (i) 12 cm, (ii) 10 cm, (iii) 8 cm. Find the linear pattern representing the area of the rectangle.",
+            answer: {
+              answerKey: '(i) 156 cm², (ii) 130 cm², (iii) 104 cm². Linear pattern = $182 - 26n$',
+              schoolMethod: `**Solution:**
+
+Length = 13 cm.
+
+(i) Breadth = 12 cm → Area = 13 × 12 = $\\boxed{156 \\text{ cm}^2}$
+(ii) Breadth = 10 cm → Area = 13 × 10 = $\\boxed{130 \\text{ cm}^2}$
+(iii) Breadth = 8 cm → Area = 13 × 8 = $\\boxed{104 \\text{ cm}^2}$
+
+The areas decrease by 26 cm² each time.
+
+Linear pattern = $\\boxed{182 - 26n}$`,
+            }
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: "Suppose the length of a rectangular box is 7 cm and breadth is 11 cm. Find the volume if the height is (i) 5 cm, (ii) 9 cm, (iii) 13 cm. Find the linear pattern representing the volume of the rectangular box.",
+            answer: {
+              answerKey: '(i) 385 cm³, (ii) 693 cm³, (iii) 1001 cm³. Linear pattern = $77(4n+1)$',
+              schoolMethod: `**Solution:**
+
+Length = 7 cm, Breadth = 11 cm.
+
+(i) h = 5 cm: V = 7 × 11 × 5 = $\\boxed{385 \\text{ cm}^3}$
+(ii) h = 9 cm: V = 7 × 11 × 9 = $\\boxed{693 \\text{ cm}^3}$
+(iii) h = 13 cm: V = 7 × 11 × 13 = $\\boxed{1001 \\text{ cm}^3}$
+
+Linear pattern = $\\boxed{77(4n + 1)}$`,
+            }
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: "Sarita is reading a book of 500 pages. She reads 20 pages every day. How many pages will be left after 15 days? Express this as a linear pattern.",
+            answer: {
+              answerKey: 'Pages left = $\\boxed{200}$. Linear pattern: $500 - 20n$',
+              schoolMethod: `**Solution:**
+
+Initial pages = 500, Pages read per day = 20
+
+Pages left after n days = $500 - 20n$
+
+After 15 days = $500 - 20 \\times 15 = \\boxed{200}$ pages
+
+Linear pattern: $\\boxed{500 - 20n}$`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex2.4', title: 'Exercise Set 2.4',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: "Suppose a plant has height 1.75 feet and it grows by 0.5 feet each month. (i) Find the height after 7 months. (ii) Make a table of values for t varying from 0 to 10 months and show how the height, h, increases every month. (iii) Find an expression that relates h and t, and explain why it represents linear growth.",
+            answer: {
+              answerKey: '(i) 5.25 ft. (iii) h = 0.5t + 1.75 — constant change of 0.5 ft/month.',
+              schoolMethod: `**Solution:**
+
+Initial height = 1.75 ft, Growth = 0.5 ft/month
+
+(i) Height after 7 months = 1.75 + 7 × 0.5 = $\\boxed{5.25 \\text{ ft}}$
+
+(iii) $h = 1.75 + 0.5t = \\boxed{0.5t + 1.75}$. It represents linear growth because h changes by a constant 0.5 ft per month.`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: "A mobile phone is bought for ₹10,000. Its value decreases by ₹800 every year. (i) Find the value of the phone after 3 years. (ii) Make a table of values for t varying from 0 to 8 years and show how the value of the phone, v, depreciates with time. (iii) Find an expression that relates v and t, and explain why it represents linear decay.",
+            answer: {
+              answerKey: '(i) ₹7600. (iii) v = 10000 − 800t — constant decrease of ₹800/year.',
+              schoolMethod: `**Solution:**
+
+Initial value = ₹10,000, Decrease per year = ₹800
+
+(i) Value after 3 years = 10000 − 3 × 800 = $\\boxed{₹7600}$
+
+(iii) $v = \\boxed{10000 - 800t}$. Since the value decreases by a constant amount every year, it is linear decay.`,
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: "The initial population of a village is 750. Every year, 50 people move from a nearby city to the village. (i) Find the population of the village after 6 years. (ii) Make a table of values for t varying from 0 to 10 years and show how the population, P, increases every year. (iii) Find an expression that relates P and t, and explain why it represents linear growth.",
+            answer: {
+              answerKey: '(i) 1050. (iii) P = 750 + 50t — constant increase of 50/year.',
+              schoolMethod: `**Solution:**
+
+Initial population = 750, Increase per year = 50
+
+(i) Population after 6 years = 750 + 6 × 50 = $\\boxed{1050}$
+
+(iii) $P = \\boxed{750 + 50t}$. The increase is constant, so it represents linear growth.`,
+            }
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: "A telecom company charges ₹600 for a certain recharge scheme. This prepaid balance is reduced by ₹15 each day after the recharge. (i) Write an equation that models the remaining balance b(x) after using the scheme for x days. Explain why it represents linear decay. (ii) After how many days will the balance run out? (iii) Make a table of values for x varying from 1 to 10 days and show how the balance b(x) reduces with time.",
+            answer: {
+              answerKey: '(i) b(x) = 600 − 15x. (ii) 40 days.',
+              schoolMethod: `**Solution:**
+
+Initial balance = ₹600, Reduction per day = ₹15
+
+(i) $b(x) = \\boxed{600 - 15x}$. It represents linear decay because the balance decreases by a constant ₹15 each day.
+
+(ii) For balance to become zero: $0 = 600 - 15x \\implies 15x = 600 \\implies \\boxed{x = 40 \\text{ days}}$`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex2.5', title: 'Exercise Set 2.5',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: "A learning platform charges a fixed monthly fee and an additional cost per digital learning module accessed. A student observes that when she accessed 10 modules, her bill was ₹400. When she accessed 14 modules, her bill was ₹500. If the monthly bill y depends on the number of modules accessed, x, according to the relation y = ax + b, find the values of a and b.",
+            answer: {
+              answerKey: '$a = \\boxed{25}$, $b = \\boxed{150}$. So $y = 25x + 150$.',
+              schoolMethod: `**Solution:**
+
+Let $y = ax + b$.
+
+When $x = 10, y = 400$: $10a + b = 400$ ... (1)
+When $x = 14, y = 500$: $14a + b = 500$ ... (2)
+
+Subtracting (1) from (2): $4a = 100 \\implies a = \\boxed{25}$
+
+Putting $a = 25$ in (1): $250 + b = 400 \\implies b = \\boxed{150}$
+
+$\\therefore y = \\boxed{25x + 150}$`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: "A gym charges a fixed monthly fee and an additional cost per hour for using the badminton court. A student using the gym observed that when she used the badminton court for 10 hours, her bill was ₹800. When she used it for 15 hours, her bill was ₹1100. If the monthly bill y depends on the hours of the use of the badminton court, x, according to the relation y = ax + b, find the values of a and b.",
+            answer: {
+              answerKey: '$a = \\boxed{60}$, $b = \\boxed{200}$. So $y = 60x + 200$.',
+              schoolMethod: `**Solution:**
+
+Let $y = ax + b$.
+
+When $x = 10, y = 800$: $10a + b = 800$ ... (1)
+When $x = 15, y = 1100$: $15a + b = 1100$ ... (2)
+
+Subtracting: $5a = 300 \\implies a = \\boxed{60}$
+
+Putting $a = 60$: $600 + b = 800 \\implies b = \\boxed{200}$
+
+$\\therefore y = \\boxed{60x + 200}$`,
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: true,
+            text: "Consider the relationship between temperature measured in degrees Celsius (°C) and degrees Fahrenheit (°F), which is given by °C = a °F + b. Find a and b, given that ice melts at 0 degrees Celsius and 32 degrees Fahrenheit, and water boils at 100 degrees Celsius and 212 degrees Fahrenheit.",
+            answer: {
+              answerKey: '$a = \\frac{5}{9}$, $b = -\\frac{160}{9}$. So $°C = \\frac{5}{9} °F - \\frac{160}{9}$.',
+              schoolMethod: `**Solution:**
+
+Given: When °F = 32, °C = 0 → $0 = 32a + b$ ... (1)
+When °F = 212, °C = 100 → $100 = 212a + b$ ... (2)
+
+Subtracting: $100 = 180a \\implies a = \\frac{5}{9}$
+
+From (1): $b = -32 \\times \\frac{5}{9} = -\\frac{160}{9}$
+
+$\\therefore °C = \\boxed{\\frac{5}{9} °F - \\frac{160}{9}}$`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex2.6', title: 'Exercise Set 2.6',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: true,
+            text: "Draw the graphs of the following sets of lines. In each case, reflect on the role of 'a' and 'b'. (i) y = 4x, y = 2x, y = x (ii) y = −6x, y = −3x, y = −x (iii) y = 5x, y = −5x (iv) y = 3x − 1, y = 3x, y = 3x + 1 (v) y = −2x − 3, y = −2x, y = 2x + 3",
+            answer: {
+              answerKey: '(i) All pass through origin; slopes 4, 2, 1. (iv) Parallel lines (same slope 3, different intercepts).',
+              schoolMethod: `**Solution:**
+
+(i) y = 4x, y = 2x, y = x have y-intercept 0; slopes are 4, 2 and 1 respectively.
+(ii) y = −6x, y = −3x, y = −x have slopes −6, −3 and −1; all pass through origin.
+(iii) y = 5x and y = −5x have slopes 5 and −5; mirror lines about the y-axis.
+(iv) y = 3x − 1, 3x, 3x + 1 have same slope 3 and different y-intercepts −1, 0, 1 → parallel lines.
+(v) y = −2x − 3, y = −2x, y = 2x + 3 have slopes −2, −2, 2; first two are parallel.`,
+            }
+          },
         ]
       },
       {
@@ -512,6 +1034,163 @@ Here:
 - Coefficient of $x^2$ = \$\\boxed{0}$ ✓
 - Coefficient of $x$ = 5
 - Constant = –2`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Find the values of the following polynomials at the indicated values of the variables. (i) $5x^2 - 3x + 7$ if $x = 1$ (ii) $4t^3 - t^2 + 6$ if $t = a$',
+            answer: {
+              answerKey: '(i) $\\boxed{9}$ (ii) $\\boxed{4a^3 - a^2 + 6}$',
+              schoolMethod: `**Solution:**
+
+(i) For $x = 1$: $5(1)^2 - 3(1) + 7 = 5 - 3 + 7 = \\boxed{9}$
+
+(ii) For $t = a$: $4a^3 - a^2 + 6 = \\boxed{4a^3 - a^2 + 6}$`,
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'If we multiply a number by 2 and add 3 to the product, we get $-\\frac{7}{12}$. Find the number.',
+            answer: {
+              answerKey: '$x = \\boxed{-\\frac{43}{24}}$',
+              schoolMethod: `**Solution:**
+
+Let the number be $x$.
+
+$$2x + 3 = -\\frac{7}{12}$$
+$$2x = -\\frac{7}{12} - 3 = -\\frac{7}{12} - \\frac{36}{12} = -\\frac{43}{12}$$
+$$x = \\boxed{-\\frac{43}{24}}$$`,
+            }
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'A positive number is 5 times another number. If 21 is added to both the numbers, then one of the new numbers becomes twice the other new number. What are the numbers?',
+            answer: {
+              answerKey: 'The numbers are $\\boxed{7}$ and $\\boxed{35}$.',
+              schoolMethod: `**Solution:**
+
+Let the smaller number = $x$, Larger number = $5x$.
+
+After adding 21: $x + 21$ and $5x + 21$.
+
+$$5x + 21 = 2(x + 21)$$
+$$5x + 21 = 2x + 42$$
+$$3x = 21 \\implies x = 7$$
+
+Numbers = $\\boxed{7}$ and $\\boxed{35}$.`,
+            }
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'If you have ₹800 and you save ₹250 every month, find the amount you have after (i) 6 months (ii) 2 years. Express this as a linear pattern.',
+            answer: {
+              answerKey: '(i) ₹2300 (ii) ₹6800. Linear pattern: $800 + 250n$',
+              schoolMethod: `**Solution:**
+
+Initial amount = ₹800, Saving per month = ₹250.
+
+(i) After 6 months = $800 + 6 \\times 250 = \\boxed{₹2300}$
+
+(ii) After 2 years = 24 months = $800 + 24 \\times 250 = \\boxed{₹6800}$
+
+Linear pattern: $\\boxed{800 + 250n}$`,
+            }
+          },
+          {
+            id: 'q6', number: '★6', isHard: true,
+            text: 'The digits of a two-digit number differ by 3. If the digits are interchanged, and the resulting number is added to the original number, we get 143. Find both the numbers.',
+            answer: {
+              answerKey: 'The numbers are $\\boxed{85}$ and $\\boxed{58}$.',
+              schoolMethod: `**Solution:**
+
+Let one digit = $x$. Other digit = $x - 3$.
+
+Two-digit number = $10x + (x - 3) = 11x - 3$
+
+Number with interchanged digits = $10(x - 3) + x = 11x - 30$
+
+$$11x - 3 + 11x - 30 = 143$$
+$$22x - 33 = 143$$
+$$22x = 176 \\implies x = 8$$
+
+Other digit = $8 - 3 = 5$
+
+The required numbers are $\\boxed{85}$ and $\\boxed{58}$.`,
+            }
+          },
+          {
+            id: 'q7', number: '★7', isHard: true,
+            text: 'Draw the graph of the following equations, and identify their slopes and y-intercepts. Also, find the coordinates of the points where these lines cut the y-axis. (i) $y = -3x + 4$ (ii) $2y = 4x + 7$ (iii) $5y = 6x - 10$ (iv) $3y = 6x - 11$. Are any of the lines parallel?',
+            answer: {
+              answerKey: '(i) Slope −3, y-int 4. (ii) Slope 2, y-int 7/2. (iii) Slope 6/5, y-int −2. (iv) Slope 2, y-int −11/3. Lines (ii) and (iv) are parallel.',
+              schoolMethod: `**Solution:**
+
+(i) $y = -3x + 4$: Slope = $\\boxed{-3}$, y-intercept = $\\boxed{4}$, cuts y-axis at $(0, 4)$
+
+(ii) $2y = 4x + 7 \\implies y = 2x + \\frac{7}{2}$: Slope = $\\boxed{2}$, y-intercept = $\\boxed{\\frac{7}{2}}$, cuts y-axis at $(0, \\frac{7}{2})$
+
+(iii) $5y = 6x - 10 \\implies y = \\frac{6}{5}x - 2$: Slope = $\\boxed{\\frac{6}{5}}$, y-intercept = $\\boxed{-2}$, cuts y-axis at $(0, -2)$
+
+(iv) $3y = 6x - 11 \\implies y = 2x - \\frac{11}{3}$: Slope = $\\boxed{2}$, y-intercept = $\\boxed{-\\frac{11}{3}}$, cuts y-axis at $(0, -\\frac{11}{3})$
+
+**(ii) and (iv) are parallel** because their slopes are equal.`,
+            }
+          },
+          {
+            id: 'q8', number: '★8', isHard: true,
+            text: 'If the temperature of a liquid can be measured in Kelvin units as $x$ K and in Fahrenheit units as $y$ °F, the relation between the two systems of measurement of temperature is given by the linear equation $y = \\frac{9}{5}(x - 273) + 32$. (i) Find the temperature of the liquid in Fahrenheit if the temperature of the liquid is 313 K. (ii) If the temperature is 158 °F, then find the temperature in Kelvin.',
+            answer: {
+              answerKey: '(i) $\\boxed{104°F}$ (ii) $\\boxed{343 K}$',
+              schoolMethod: `**Solution:**
+
+Given $y = \\frac{9}{5}(x - 273) + 32$
+
+(i) $x = 313$ K:
+$$y = \\frac{9}{5}(313 - 273) + 32 = \\frac{9}{5} \\times 40 + 32 = 72 + 32 = \\boxed{104°F}$$
+
+(ii) $y = 158$ °F:
+$$158 = \\frac{9}{5}(x - 273) + 32$$
+$$126 = \\frac{9}{5}(x - 273)$$
+$$x - 273 = \\frac{126 \\times 5}{9} = 70$$
+$$x = 273 + 70 = \\boxed{343 K}$$`,
+            }
+          },
+          {
+            id: 'q9', number: '★9', isHard: true,
+            text: 'The work done by a body on the application of a constant force is the product of the constant force and the distance travelled by the body in the direction of the force. Express this in the form of a linear equation in two variables (work w and distance d), and draw its graph by taking the constant force as 3 units. What is the work done when the distance travelled is 2 units? Verify it by plotting it on the graph.',
+            answer: {
+              answerKey: '$w = 3d$. When $d = 2$, $w = \\boxed{6}$ units.',
+              schoolMethod: `**Solution:**
+
+Work done = distance × force. Constant force = 3 units.
+
+$$w = 3d$$
+
+When distance travelled = 2 units:
+$$w = 3 \\times 2 = \\boxed{6 \\text{ units}}$$
+
+Verified by the point $(2, 6)$ on the graph.`,
+            }
+          },
+          {
+            id: 'q10', number: '★10', isHard: true,
+            text: 'The graph of a linear polynomial $p(x)$ passes through the points $(1, 5)$ and $(3, 11)$. (i) Find the polynomial $p(x)$. (ii) Find the coordinates where the graph of $p(x)$ cuts the axes. (iii) Draw the graph of $p(x)$ and verify your answers.',
+            answer: {
+              answerKey: '(i) $p(x) = 3x + 2$. (ii) Cuts y-axis at $(0, 2)$, cuts x-axis at $(-\\frac{2}{3}, 0)$.',
+              schoolMethod: `**Solution:**
+
+Let $p(x) = ax + b$.
+
+$p(1) = 5 \\implies a + b = 5$ ... (1)
+$p(3) = 11 \\implies 3a + b = 11$ ... (2)
+
+Subtracting: $2a = 6 \\implies a = 3$, $b = 2$
+
+**(i)** $p(x) = \\boxed{3x + 2}$
+
+**(ii)** For x-axis ($y = 0$): $0 = 3x + 2 \\implies x = -\\frac{2}{3}$. Point = $\\boxed{(-\\frac{2}{3}, 0)}$
+
+For y-axis ($x = 0$): $y = 2$. Point = $\\boxed{(0, 2)}$`,
             }
           },
         ]
@@ -694,6 +1373,225 @@ Subtracting a debt (−200) is same as gaining ₹200.
         ]
       },
       {
+        id: 'ex3.3', title: 'Exercise Set 3.3',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Prove that the following rational numbers are equal: (i) 2/3 and 4/6 (ii) 5/4 and 10/8 (iii) −3/5 and −6/10 (iv) 7/11 and 14/22',
+            answer: {
+              answerKey: 'In each case, LHS = RHS after simplification.',
+              schoolMethod: `**Solution:**
+
+**(i)** LHS = $\\frac{2}{3}$, RHS = $\\frac{4}{6} = \\frac{2}{3}$. LHS = RHS. ✓
+
+**(ii)** LHS = $\\frac{5}{4}$, RHS = $\\frac{10}{8} = \\frac{5}{4}$. LHS = RHS. ✓
+
+**(iii)** LHS = $\\frac{-3}{5}$, RHS = $\\frac{-6}{10} = \\frac{-3}{5}$. LHS = RHS. ✓
+
+**(iv)** LHS = $\\frac{7}{11}$, RHS = $\\frac{14}{22} = \\frac{7}{11}$. LHS = RHS. ✓`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Find the sum of the following rational numbers: (i) 3/4 and 5/6 (ii) −2/3 and 4/5 (iii) 7/8 and −3/4',
+            answer: {
+              answerKey: '(i) 19/12 (ii) 2/15 (iii) 1/8',
+              schoolMethod: `**Solution:**
+
+**(i)** $\\frac{3}{4} + \\frac{5}{6} = \\frac{9 + 10}{12} = \\frac{19}{12}$
+
+**(ii)** $\\frac{-2}{3} + \\frac{4}{5} = \\frac{-10 + 12}{15} = \\frac{2}{15}$
+
+**(iii)** $\\frac{7}{8} + \\frac{-3}{4} = \\frac{7 - 6}{8} = \\frac{1}{8}$`,
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Find the difference: (i) 5/6 − 1/3 (ii) −3/4 − 1/2 (iii) 2/5 − (−1/5)',
+            answer: {
+              answerKey: '(i) 1/2 (ii) −5/4 (iii) 3/5',
+              schoolMethod: `**Solution:**
+
+**(i)** $\\frac{5}{6} - \\frac{1}{3} = \\frac{5 - 2}{6} = \\frac{3}{6} = \\frac{1}{2}$
+
+**(ii)** $\\frac{-3}{4} - \\frac{1}{2} = \\frac{-3 - 2}{4} = \\frac{-5}{4}$
+
+**(iii)** $\\frac{2}{5} - \\frac{-1}{5} = \\frac{2 + 1}{5} = \\frac{3}{5}$`,
+            }
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'Find the product: (i) 2/3 × 3/4 (ii) −5/6 × 2/5 (iii) 7/8 × (−4/7)',
+            answer: {
+              answerKey: '(i) 1/2 (ii) −1/3 (iii) −1/2',
+              schoolMethod: `**Solution:**
+
+**(i)** $\\frac{2}{3} \\times \\frac{3}{4} = \\frac{6}{12} = \\frac{1}{2}$
+
+**(ii)** $\\frac{-5}{6} \\times \\frac{2}{5} = \\frac{-10}{30} = \\frac{-1}{3}$
+
+**(iii)** $\\frac{7}{8} \\times \\frac{-4}{7} = \\frac{-28}{56} = \\frac{-1}{2}$`,
+            }
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'Find the quotient: (i) 3/4 ÷ 1/2 (ii) −5/6 ÷ 2/3 (iii) 7/8 ÷ 7/4',
+            answer: {
+              answerKey: '(i) 3/2 (ii) −5/4 (iii) 1/2',
+              schoolMethod: `**Solution:**
+
+**(i)** $\\frac{3}{4} \\div \\frac{1}{2} = \\frac{3}{4} \\times \\frac{2}{1} = \\frac{6}{4} = \\frac{3}{2}$
+
+**(ii)** $\\frac{-5}{6} \\div \\frac{2}{3} = \\frac{-5}{6} \\times \\frac{3}{2} = \\frac{-15}{12} = \\frac{-5}{4}$
+
+**(iii)** $\\frac{7}{8} \\div \\frac{7}{4} = \\frac{7}{8} \\times \\frac{4}{7} = \\frac{28}{56} = \\frac{1}{2}$`,
+            }
+          },
+          {
+            id: 'q6', number: '6', isHard: false,
+            text: 'Verify the distributive property: a × (b + c) = a × b + a × c for a = 2/3, b = 1/4, c = 3/8.',
+            answer: {
+              answerKey: 'LHS = 7/12, RHS = 7/12. Hence verified.',
+              schoolMethod: `**Solution:**
+
+LHS: $a \\times (b + c) = \\frac{2}{3} \\times \\left(\\frac{1}{4} + \\frac{3}{8}\\right) = \\frac{2}{3} \\times \\frac{5}{8} = \\frac{10}{24} = \\frac{5}{12}$
+
+RHS: $a \\times b + a \\times c = \\frac{2}{3} \\times \\frac{1}{4} + \\frac{2}{3} \\times \\frac{3}{8} = \\frac{2}{12} + \\frac{6}{24} = \\frac{4}{24} + \\frac{6}{24} = \\frac{10}{24} = \\frac{5}{12}$
+
+**LHS = RHS. Hence verified.**`,
+            }
+          },
+          {
+            id: 'q7', number: '7', isHard: true,
+            text: 'Find three rational numbers between 1/3 and 1/2.',
+            answer: {
+              answerKey: 'Three rational numbers: 5/12, 11/24, 7/16 (answers may vary).',
+              schoolMethod: `**Solution:**
+
+$\\frac{1}{3} = \\frac{8}{24}$ and $\\frac{1}{2} = \\frac{12}{24}$
+
+Three rational numbers between them: $\\frac{9}{24} = \\frac{3}{8}$, $\\frac{10}{24} = \\frac{5}{12}$, $\\frac{11}{24}$
+
+Or: $\\frac{5}{12}$, $\\frac{11}{24}$, $\\frac{7}{16}$`,
+            }
+          },
+          {
+            id: 'q8', number: '8', isHard: false,
+            text: 'Simplify: (i) (2/3 + 1/4) × 5/6 (ii) 3/4 × (2/5 + 1/10)',
+            answer: {
+              answerKey: '(i) 25/72 (ii) 7/20',
+              schoolMethod: `**Solution:**
+
+**(i)** $\\left(\\frac{2}{3} + \\frac{1}{4}\\right) \\times \\frac{5}{6} = \\frac{11}{12} \\times \\frac{5}{6} = \\frac{55}{72}$
+
+**(ii)** $\\frac{3}{4} \\times \\left(\\frac{2}{5} + \\frac{1}{10}\\right) = \\frac{3}{4} \\times \\frac{5}{10} = \\frac{3}{4} \\times \\frac{1}{2} = \\frac{3}{8}$`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex3.4', title: 'Exercise Set 3.4',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Locate the following rational numbers on a number line: (i) 3/4 (ii) −5/3 (iii) 7/2 (iv) −2/5',
+            answer: {
+              answerKey: 'Mark each fraction at its correct position on the number line.',
+              schoolMethod: `**Solution:**
+
+**(i)** $\\frac{3}{4}$: Between 0 and 1, at 75% of the unit from 0.
+
+**(ii)** $\\frac{-5}{3} = -1\\frac{2}{3}$: Between −1 and −2, two-thirds of the way from −1 to −2.
+
+**(iii)** $\\frac{7}{2} = 3\\frac{1}{2}$: Exactly halfway between 3 and 4.
+
+**(iv)** $\\frac{-2}{5}$: Between 0 and −1, two-fifths of the way from 0 to −1.`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Find five rational numbers between −2/3 and 1/4.',
+            answer: {
+              answerKey: 'Five rational numbers (answers may vary).',
+              schoolMethod: `**Solution:**
+
+$\\frac{-2}{3} = \\frac{-8}{12}$ and $\\frac{1}{4} = \\frac{3}{12}$
+
+Five rational numbers between them: $\\frac{-7}{12}$, $\\frac{-6}{12} = \\frac{-1}{2}$, $\\frac{-5}{12}$, $\\frac{0}{12} = 0$, $\\frac{1}{12}$`,
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Simplify the following: (i) 1/2 + 3/4 − 1/8 (ii) 2/3 − 1/6 + 5/9',
+            answer: {
+              answerKey: '(i) 9/8 (ii) 13/18',
+              schoolMethod: `**Solution:**
+
+**(i)** $\\frac{1}{2} + \\frac{3}{4} - \\frac{1}{8} = \\frac{4 + 6 - 1}{8} = \\frac{9}{8}$
+
+**(ii)** $\\frac{2}{3} - \\frac{1}{6} + \\frac{5}{9} = \\frac{12 - 3 + 10}{18} = \\frac{19}{18}$`,
+            }
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: "A tailor needs $\\frac{3}{4}$ m of cloth for one kurta. If he has $\\frac{15}{2}$ m of cloth, how many kurtas can he stitch?",
+            answer: {
+              answerKey: '$\\boxed{10}$ kurtas.',
+              schoolMethod: `**Solution:**
+
+Number of kurtas = $\\frac{15}{2} \\div \\frac{3}{4} = \\frac{15}{2} \\times \\frac{4}{3} = \\frac{60}{6} = \\boxed{10}$ kurtas.`,
+            }
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'Find a rational number exactly halfway between 1/3 and 5/6.',
+            answer: {
+              answerKey: '$\\boxed{7/12}$',
+              schoolMethod: `**Solution:**
+
+Midpoint = $\\frac{\\frac{1}{3} + \\frac{5}{6}}{2} = \\frac{\\frac{2}{6} + \\frac{5}{6}}{2} = \\frac{\\frac{7}{6}}{2} = \\boxed{\\frac{7}{12}}$`,
+            }
+          },
+          {
+            id: 'q6', number: '6', isHard: true,
+            text: 'Express $\\frac{3}{7}$ as a sum of two rational numbers in three different ways.',
+            answer: {
+              answerKey: 'Three possible ways (answers may vary).',
+              schoolMethod: `**Solution:**
+
+Three possible ways:
+
+1. $\\frac{3}{7} = \\frac{1}{7} + \\frac{2}{7}$
+2. $\\frac{3}{7} = \\frac{1}{14} + \\frac{5}{14}$
+3. $\\frac{3}{7} = \\frac{2}{7} + \\frac{1}{7}$
+
+(Many other answers are possible.)`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex3.5', title: 'Exercise Set 3.5',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Express the following fractions as decimals and state whether they are terminating or recurring: (i) 1/4 (ii) 1/3 (iii) 5/8 (iv) 7/6',
+            answer: {
+              answerKey: '(i) 0.25 terminating (ii) 0.333... recurring (iii) 0.625 terminating (iv) 1.1666... recurring',
+              schoolMethod: `**Solution:**
+
+**(i)** $\\frac{1}{4} = 0.25$ — **Terminating**
+
+**(ii)** $\\frac{1}{3} = 0.\\overline{3}$ — **Recurring**
+
+**(iii)** $\\frac{5}{8} = 0.625$ — **Terminating**
+
+**(iv)** $\\frac{7}{6} = 1.1\\overline{6}$ — **Recurring**`,
+            }
+          },
+        ]
+      },
+      {
         id: 'ex3.eoc', title: 'End-of-Chapter Exercises',
         questions: [
           {
@@ -714,6 +1612,76 @@ On a number line, negative numbers are to the **left** of 0 and positive numbers
 **(iv) $\\frac{3}{4}$:** Between 0 and 1, at 75% of the unit.
 
 $$\\leftarrow \\cdots -4 \\cdots -2.5 \\cdots 0 \\cdots \\frac{3}{4} \\cdots 7 \\cdots \\rightarrow$$`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Without performing long division, state whether the following rational numbers have terminating or non-terminating repeating decimal expansions: (i) 13/3125 (ii) 17/8 (iii) 23/56 (iv) 6/15',
+            answer: {
+              answerKey: '(i) Terminating (ii) Terminating (iii) Non-terminating repeating (iv) Terminating',
+              schoolMethod: `**Solution:**
+
+A rational number $\\frac{p}{q}$ has a terminating decimal expansion if the prime factorisation of $q$ is of the form $2^n \\times 5^m$.
+
+**(i)** $3125 = 5^5$ → Only factor 5. **Terminating.**
+
+**(ii)** $8 = 2^3$ → Only factor 2. **Terminating.**
+
+**(iii)** $56 = 2^3 \\times 7$ → Has factor 7 ≠ 2, 5. **Non-terminating repeating.**
+
+**(iv)** $15 = 3 \\times 5$ → Has factor 3. **Non-terminating repeating.**`,
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Write the decimal expansion of 5/8.',
+            answer: {
+              answerKey: '$5/8 = \\boxed{0.625}$',
+              schoolMethod: `**Solution:**
+
+$\\frac{5}{8} = 5 \\div 8 = 0.625$
+
+The decimal expansion is **0.625** (terminating).`,
+            }
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'Express 0.6 + 0.$\\overline{7}$ in the form $\\frac{p}{q}$, where $p$ and $q$ are integers and $q \\neq 0$.',
+            answer: {
+              answerKey: '$0.6 + 0.\\overline{7} = \\boxed{13/9}$',
+              schoolMethod: `**Solution:**
+
+$0.\\overline{7} = \\frac{7}{9}$
+
+$0.6 + 0.\\overline{7} = \\frac{6}{10} + \\frac{7}{9} = \\frac{54 + 70}{90} = \\frac{124}{90} = \\frac{62}{45}$
+
+Wait, let me recalculate:
+
+$0.6 = \\frac{3}{5}$
+
+$0.\\overline{7} = \\frac{7}{9}$
+
+$\\frac{3}{5} + \\frac{7}{9} = \\frac{27 + 35}{45} = \\frac{62}{45}$
+
+$\\therefore 0.6 + 0.\\overline{7} = \\boxed{\\frac{62}{45}}$`,
+            }
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'Express $0.\\overline{4}$ in the form $\\frac{p}{q}$.',
+            answer: {
+              answerKey: '$0.\\overline{4} = \\boxed{4/9}$',
+              schoolMethod: `**Solution:**
+
+Let $x = 0.\\overline{4} = 0.444...$
+
+$10x = 4.444...$
+
+$10x - x = 4$
+
+$9x = 4 \\implies x = \\frac{4}{9}$
+
+$\\therefore 0.\\overline{4} = \\boxed{\\frac{4}{9}}$`,
             }
           },
         ]
@@ -760,6 +1728,201 @@ Using $(a + b)^2 = a^2 + 2ab + b^2$:
 $$(103)^2 = (100 + 3)^2 = 100^2 + 2(100)(3) + 3^2$$
 $$= 10000 + 600 + 9 = \\boxed{10609}$$`,
               trickMethod: `$(103)^2 = (100+3)^2 = 10000 + 600 + 9 = 10609$. Quick mental math!`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex4.2', title: 'Exercise Set 4.2',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Factor completely: (i) $9x^2 + 24xy + 16y^2$ (ii) $4s^2 + 20st + 25t^2$ (iii) $49x^2 + 28xy + 4y^2$',
+            answer: {
+              answerKey: '(i) $(3x+4y)^2$ (ii) $(2s+5t)^2$ (iii) $(7x+2y)^2$',
+              schoolMethod: `**Solution:**
+
+Using $(a+b)^2 = a^2 + 2ab + b^2$
+
+**(i)** $9x^2 + 24xy + 16y^2 = (3x)^2 + 2(3x)(4y) + (4y)^2 = \\boxed{(3x+4y)^2}$
+
+**(ii)** $4s^2 + 20st + 25t^2 = (2s)^2 + 2(2s)(5t) + (5t)^2 = \\boxed{(2s+5t)^2}$
+
+**(iii)** $49x^2 + 28xy + 4y^2 = (7x)^2 + 2(7x)(2y) + (2y)^2 = \\boxed{(7x+2y)^2}$`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Find the values of the following using the identity $(a - b)^2 = a^2 - 2ab + b^2$. (i) $(79)^2$ (ii) $(193)^2$ (iii) $(299)^2$',
+            answer: {
+              answerKey: '(i) 6241 (ii) 37249 (iii) 89401',
+              schoolMethod: `**Solution:**
+
+**(i)** $(79)^2 = (80-1)^2 = 6400 - 160 + 1 = \\boxed{6241}$
+
+**(ii)** $(193)^2 = (200-7)^2 = 40000 - 2800 + 49 = \\boxed{37249}$
+
+**(iii)** $(299)^2 = (300-1)^2 = 90000 - 600 + 1 = \\boxed{89401}$`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex4.3', title: 'Exercise Set 4.3',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Find the following squares using identities: (i) $117^2$ (ii) $78^2$ (iii) $198^2$ (iv) $214^2$ (v) $1104^2$ (vi) $1120^2$',
+            answer: {
+              answerKey: '(i) 13689 (ii) 6084 (iii) 39204 (iv) 45796 (v) 1218816 (vi) 1254400',
+              schoolMethod: `**Solution:**
+
+**(i)** $117^2 = (120-3)^2 = 14400 - 720 + 9 = \\boxed{13689}$
+
+**(ii)** $78^2 = (80-2)^2 = 6400 - 320 + 4 = \\boxed{6084}$
+
+**(iii)** $198^2 = (200-2)^2 = 40000 - 800 + 4 = \\boxed{39204}$
+
+**(iv)** $214^2 = (200+14)^2 = 40000 + 5600 + 196 = \\boxed{45796}$
+
+**(v)** $1104^2 = (1100+4)^2 = 1210000 + 8800 + 16 = \\boxed{1218816}$
+
+**(vi)** $1120^2 = (1100+20)^2 = 1210000 + 44000 + 400 = \\boxed{1254400}$`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Factor using suitable identities: (i) $16y^2 - 24y + 9$ (ii) $9a^2 + 4b^2 + c^2 - 12ab + 6ac - 4bc$',
+            answer: {
+              answerKey: '(i) $(4y-3)^2$ (ii) $(3a-2b+c)^2$',
+              schoolMethod: `**Solution:**
+
+**(i)** $16y^2 - 24y + 9 = (4y)^2 - 2(4y)(3) + 3^2 = \\boxed{(4y-3)^2}$
+
+**(ii)** $9a^2 + 4b^2 + c^2 - 12ab + 6ac - 4bc = (3a)^2 + (-2b)^2 + c^2 + 2(3a)(-2b) + 2(3a)(c) + 2(-2b)(c) = \\boxed{(3a-2b+c)^2}$`,
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Expand using the identity $(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca$: (i) $(p + 3q + 7r)^2$ (ii) $(3x - 2y + 4z)^2$',
+            answer: {
+              answerKey: '(i) $p^2 + 9q^2 + 49r^2 + 6pq + 42qr + 14pr$ (ii) $9x^2 + 4y^2 + 16z^2 - 12xy - 16yz + 24xz$',
+              schoolMethod: `**Solution:**
+
+**(i)** $(p + 3q + 7r)^2 = p^2 + (3q)^2 + (7r)^2 + 2(p)(3q) + 2(3q)(7r) + 2(p)(7r)$
+
+$= \\boxed{p^2 + 9q^2 + 49r^2 + 6pq + 42qr + 14pr}$
+
+**(ii)** $(3x - 2y + 4z)^2 = (3x)^2 + (-2y)^2 + (4z)^2 + 2(3x)(-2y) + 2(-2y)(4z) + 2(3x)(4z)$
+
+$= \\boxed{9x^2 + 4y^2 + 16z^2 - 12xy - 16yz + 24xz}$`,
+            }
+          },
+          {
+            id: 'q4', number: '4', isHard: true,
+            text: 'Is this an identity? $(a + b - c)^2 + (a - b + c)^2 + (a - b - c)^2 = 2a^2 + 2b^2 + 2c^2$. Also, justify the identity $a^2 = (a + b)(a - b) + b^2$.',
+            answer: {
+              answerKey: 'The stated equality is NOT an identity. LHS expands to $3a^2 + 3b^2 + 3c^2 - 2ab - 2ac + 2bc \\neq 2a^2 + 2b^2 + 2c^2$.',
+              schoolMethod: `**Solution:**
+
+Expanding LHS:
+$(a+b-c)^2 + (a-b+c)^2 + (a-b-c)^2$
+
+$= 3a^2 + 3b^2 + 3c^2 - 2ab - 2ac + 2bc$
+
+This is NOT equal to $2a^2 + 2b^2 + 2c^2$.
+
+**Therefore, the stated equality is NOT an identity.**
+
+For the second part: $a^2 - b^2 = (a+b)(a-b)$, so $a^2 = (a+b)(a-b) + b^2$. ✓`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex4.4', title: 'Exercise Set 4.4',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Fill in the blanks: (i) $s^2 - 11s + 24 = (\\_\\_)(\\_\\_)$ (ii) $(\\_\\_)(x + 1) = 3x^2 - 4x - 7$ (iii) $10x^2 - 11x - 6 = (2x - \\_\\_)(\\_\\_ + 2)$ (iv) $6x^2 + 7x + 2 = (\\_\\_)(\\_\\_)$',
+            answer: {
+              answerKey: '(i) $(s-3)(s-8)$ (ii) $(3x-7)$ (iii) $(2x-3)(5x+2)$ (iv) $(3x+2)(2x+1)$',
+              schoolMethod: `**Solution:**
+
+**(i)** $s^2 - 11s + 24 = \\boxed{(s-3)(s-8)}$
+
+**(ii)** $\\boxed{(3x-7)}(x+1) = 3x^2 - 4x - 7$
+
+**(iii)** $10x^2 - 11x - 6 = \\boxed{(2x-3)}\\boxed{(5x+2)}$
+
+**(iv)** $6x^2 + 7x + 2 = \\boxed{(3x+2)}\\boxed{(2x+1)}$`,
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Find the following products without multiplying directly using identities: (i) $41 \\times 41$ (ii) $27 \\times 27$ (iii) $23 \\times 17$ (iv) $135^2$ (v) $97^2$ (vi) $18 \\times 29$ (vii) $34 \\times 43$ (viii) $205^2$',
+            answer: {
+              answerKey: '(i) 1681 (ii) 729 (iii) 391 (iv) 18225 (v) 9409 (vi) 504 (vii) 1428 (viii) 42025',
+              schoolMethod: `**Solution:**
+
+**(i)** $41^2 = (40+1)^2 = \\boxed{1681}$
+
+**(ii)** $27^2 = (30-3)^2 = \\boxed{729}$
+
+**(iii)** $23 \\times 17 = (20+3)(20-3) = 400 - 9 = \\boxed{391}$
+
+**(iv)** $135^2 = (100+35)^2 = \\boxed{18225}$
+
+**(v)** $97^2 = (100-3)^2 = \\boxed{9409}$
+
+**(vi)** $18 \\times 29 = (23-5)(23+5) = 529 - 25 = \\boxed{504}$
+
+**(vii)** $34 \\times 43 = (38.5-4.5)(38.5+4.5)$ — or use $(34)(43) = (38-4)(38+4) = 1444 - 16 = \\boxed{1428}$
+
+**(viii)** $205^2 = (200+5)^2 = \\boxed{42025}$`,
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Factor: (i) $9a^2 + b^2 + 4c^2 - 6ab + 12ac - 4bc$ (ii) $16s^2 + 25t^2 - 40st$ (iii) $r^2 - r - 42$ (iv) $49g^2 + 14gh + h^2$ (v) $64u^2 + 121v^2 + 4w^2 - 176uv - 32uw + 44vw$',
+            answer: {
+              answerKey: '(i) $(3a-b+2c)^2$ (ii) $(4s-5t)^2$ (iii) $(r-7)(r+6)$ (iv) $(7g+h)^2$ (v) $(8u-11v-2w)^2$',
+              schoolMethod: `**Solution:**
+
+**(i)** $9a^2 + b^2 + 4c^2 - 6ab + 12ac - 4bc = \\boxed{(3a-b+2c)^2}$
+
+**(ii)** $16s^2 + 25t^2 - 40st = (4s)^2 - 2(4s)(5t) + (5t)^2 = \\boxed{(4s-5t)^2}$
+
+**(iii)** $r^2 - r - 42 = \\boxed{(r-7)(r+6)}$
+
+**(iv)** $49g^2 + 14gh + h^2 = (7g)^2 + 2(7g)(h) + h^2 = \\boxed{(7g+h)^2}$
+
+**(v)** $64u^2 + 121v^2 + 4w^2 - 176uv - 32uw + 44vw = \\boxed{(8u-11v-2w)^2}$`,
+            }
+          },
+        ]
+      },
+      {
+        id: 'ex4.5', title: 'Exercise Set 4.5',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Simplify the following rational expressions: (i) $\\frac{3p^2 - 3pq - 18q^2}{p^2 + 3pq - 10q^2}$ (ii) $\\frac{n^3 - 3n^2m + 3nm^2 - m^3}{5m^2 - 10mn + 5n^2}$',
+            answer: {
+              answerKey: '(i) $\\frac{3(p-3q)}{p+5q}$ (ii) $\\frac{n-m}{5}$',
+              schoolMethod: `**Solution:**
+
+**(i)** Numerator: $3p^2 - 3pq - 18q^2 = 3(p^2 - pq - 6q^2) = 3(p-3q)(p+2q)$
+
+Denominator: $p^2 + 3pq - 10q^2 = (p+5q)(p-2q)$
+
+$= \\frac{3(p-3q)(p+2q)}{(p+5q)(p-2q)}$
+
+**(ii)** Numerator: $n^3 - 3n^2m + 3nm^2 - m^3 = (n-m)^3$
+
+Denominator: $5m^2 - 10mn + 5n^2 = 5(m-n)^2 = 5(n-m)^2$
+
+$= \\frac{(n-m)^3}{5(n-m)^2} = \\boxed{\\frac{n-m}{5}}$`,
             }
           },
         ]

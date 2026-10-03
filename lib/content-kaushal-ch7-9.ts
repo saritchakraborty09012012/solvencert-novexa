@@ -155,7 +155,76 @@ export const KAUSHAL_CH7_9_CHAPTERS = [
           },
         ],
       },
-    ],
+      {
+        id: 's4', title: 'Hands-On Tasks — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'PORTFOLIO (Sewing the product, §7.10): how should you document the stitching process, including any redo?',
+            answer: {
+              answerKey: 'Paste a sketch/image of every step with a brief note; record what was redone, why, and what changed.',
+              schoolMethod: 'Place a <u>sketch or photo of each step</u> in the portfolio with a <u>one-line description</u>. If stitching was redone, note <u>why</u> (puckering, wrong seam) and <u>what you did differently</u> (tension, stitch length, pinning) the second time.',
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Site visit (§7.3, Table 7.2): how should you use the table pointers when discussing with apparel practitioners?',
+            answer: {
+              answerKey: 'Turn each Table 7.2 pointer into a question; take notes during the discussion.',
+              schoolMethod: 'Convert the Table 7.2 pointers (tools, materials, processes, costing, markets) into <u>interview questions</u>. Ask practitioners, <u>take running notes</u>, and summarise findings under the same pointer headings afterwards.',
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Technical drawing of apparel (§7.4): how do you prepare a neat technical drawing with measurements?',
+            answer: {
+              answerKey: 'Sketch design options, take careful measurements, draw to scale with labelled parts and material notes.',
+              schoolMethod: 'Think through <u>design options</u>; take body/garment <u>measurements carefully</u>; draw a neat <u>scaled sketch labelling every part</u> with exact figures. Add notes on <u>fabric, thread, zippers, buttons or embroidery</u>.',
+            }
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'Selecting materials (§7.5): which material did you select for your apparel, and how should you justify it?',
+            answer: {
+              answerKey: 'Name the fabric and justify by suitability — comfort, strength, cost, care and occasion.',
+              schoolMethod: 'State the chosen material and defend it on <u>use</u> (daily wear vs occasion), <u>comfort and strength</u>, <u>cost and availability</u>, and <u>ease of care/stitching</u>. One line per reason keeps the justification complete.',
+            }
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'Bill of Materials (§7.7): how do you prepare the BoM for the apparel you will make?',
+            answer: {
+              answerKey: 'List every material with quantity, specification and estimated cost in a table.',
+              schoolMethod: 'Tabulate <u>each item</u> — fabric (metres), thread, buttons/zippers, interfacing — with <u>quantity, specification and cost</u>. Total it: the BoM becomes your <u>shopping and costing sheet</u> before cutting begins.',
+            }
+          },
+          {
+            id: 'q6', number: '6', isHard: false,
+            text: 'Sewing practice (§7.8.1, Fig. 7.8): how should you practise stitches on a sampler, and what else can you try?',
+            answer: {
+              answerKey: 'Sew each Fig. 7.8 stitch on sample cloth, file the sampler with its image, and practise on repairs or small covers.',
+              schoolMethod: 'Practise <u>every stitch in Fig. 7.8</u> on sample cloth (ask experts or videos for extras); place the <u>sampler or its image</u> in the portfolio. Extend practice by <u>repairing apparel</u> or stitching small <u>recycled-cloth glass covers</u>.',
+            }
+          },
+          {
+            id: 'q7', number: '7', isHard: false,
+            text: 'Drafting (§7.8.2): how do you prepare a paper pattern of your apparel?',
+            answer: {
+              answerKey: 'Transfer technical-drawing measurements to chart paper or old newspaper and cut the pattern pieces.',
+              schoolMethod: 'Copy all <u>measurements from the technical drawing</u> onto <u>chart paper or old newspaper</u>; draw each garment piece full-size with seam allowances; <u>cut out the paper pattern</u> and check pieces against each other before touching fabric.',
+            }
+          },
+          {
+            id: 'q8', number: '8', isHard: false,
+            text: 'Marking and cutting fabric (§7.9): how should you document the prepare–mark–cut steps?',
+            answer: {
+              answerKey: 'Photograph or sketch each step (pressing, laying, marking, cutting) with a brief description.',
+              schoolMethod: 'For every step — <u>pressing fabric, laying the pattern, marking outlines, cutting pieces</u> — place an <u>image or sketch</u> in the portfolio with a <u>short description</u> of what was done and checked.',
+            }
+          },
+        ]
+      },
+    ]
   },
   {
     id: 'ch09',
@@ -457,6 +526,27 @@ export const KAUSHAL_CH7_9_CHAPTERS = [
           },
         ],
       },
-    ],
+      {
+        id: 's8', title: 'Hands-On Tasks — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Observe a service in your neighbourhood (§9.2.1): pick one familiar service (ration shop, anganwadi, milk booth, bus stop, grocer…) and record five observations. What should you cover?',
+            answer: {
+              answerKey: 'Provider identity, communication, tools used, and what makes users happy — with reasons.',
+              schoolMethod: 'Record: (1) <u>service name</u>; (2) <u>how to identify the provider</u> (uniform, name plate, seat); (3) <u>how information reaches users</u> (labels, timings, tokens, announcements); (4) <u>tools/materials</u> (scale, register, phone, vessels); (5) <u>what pleases users and why</u>, justified from what you saw.',
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Selection of vocation (§9.6, Table 9.2): do you think this service work can be done in school? How should the group decide?',
+            answer: {
+              answerKey: 'Weigh Table 9.2 factors in a group discussion and conclude with reasons.',
+              schoolMethod: 'Discuss with Table 9.2: needed <u>skills, space, materials, time, permissions and safety</u> versus school realities. Conclude <u>yes/no with reasons</u> — e.g., a help-desk simulation is doable; running a real ration shop is not.',
+            }
+          },
+        ]
+      },
+    ]
   },
 ];

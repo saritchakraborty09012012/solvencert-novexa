@@ -184,6 +184,40 @@ export const IT_CHAPTERS: Chapter[] = [
               schoolMethod: '• www.india.gov.in\n• www.incometax.gov.in\n• www.epathshala.nic.in\n• www.digitalindia.gov.in\n• www.uidai.gov.in (Aadhaar)',
             }
           },
+          {
+            id: 'q14', number: '14', isHard: false,
+            text: 'Explore the impact of IT and ITeS in various areas of day-to-day life. Visit Indian government websites (such as the official portal of the Department of School Education), list the useful information and services you could obtain yourself, and list other instances where ICT is used in business and manufacturing.',
+            parts: [
+              'Impact of IT and ITeS in day-to-day life',
+              'Indian government websites visited and services obtainable',
+              'Instances where ICT is used in business and manufacturing',
+            ],
+            answer: {
+              answerKey: 'IT/ITeS speed up communication, payments, learning, governance; key portals: india.gov.in, incometax.gov.in, digitalindia.gov.in; ICT used in billing, inventory, marketing, automation.',
+              schoolMethod: 'Guided response: IT and ITeS impact daily life through quick communication, online payments and shopping, e-learning, tele-medicine, and e-governance services available without visiting offices. Visit portals such as www.india.gov.in, www.digitalindia.gov.in, www.incometax.gov.in and the Department of School Education portal; note services like certificates, scholarships, results, tax filing and grievance redressal you can obtain yourself. ICT is used in business for billing, stock control, payroll, online sales and marketing, and in manufacturing for design (CAD), production control, quality testing and supply-chain tracking — compile these into a list with one example each.',
+            },
+          },
+        ],
+      },
+      {
+        id: 'ex1.prac', title: 'Practical Exercise — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Make a list of e-government services provided by other countries (apart from India). How should you research this?',
+            answer: {
+              answerKey: 'Estonia (X-Road), Singapore (SingPass), UK (GOV.UK), South Korea, UAE — one service line each.',
+              schoolMethod: 'Search official portals country by country and note one flagship service each: <u>Estonia — X-Road</u> (all services linked), <u>Singapore — SingPass</u> (single login), <u>UK — GOV.UK</u> (licences, taxes), <u>South Korea/UAE</u> (customs, visas). Tabulate <u>country → service → what citizens get</u>.',
+            },
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Identify the advantages of using ICT over conventional methods in various areas. What should your answer cover?',
+            answer: {
+              answerKey: 'Speed, accuracy, 24×7 access, transparency, lower cost and wider reach versus manual methods.',
+              schoolMethod: 'Compare area by area: <u>speed</u> (instant transfers vs queues), <u>accuracy</u> (no manual errors), <u>24×7 access</u>, <u>transparency</u> (trackable records), <u>cost and reach</u> (one portal serves crores). Give <u>one conventional-vs-ICT pair</u> per area (bank, school, shop, hospital).',
+            },
+          },
         ]
       },
     ]
@@ -247,7 +281,36 @@ export const IT_CHAPTERS: Chapter[] = [
           { id: 'q3', number: '3', isHard: false, text: 'What do you understand by Guide Keys? Name the Guide keys of a (a) computer keyboard (b) typewriter.', answer: { answerKey: 'Guide keys have a raised mark for correct finger placement without looking; F and J on both computer keyboard and typewriter.', schoolMethod: 'Guide keys have a raised tactile mark that helps a touch typist place fingers correctly without looking at the keyboard. (a) Computer keyboard: F and J keys. (b) Typewriter: similarly F and J keys.' } },
           { id: 'q4', number: '4', isHard: false, text: 'Explain the role of typing ergonomics.', answer: { answerKey: 'Ensures correct posture, hand position, monitor/keyboard placement to maintain speed/accuracy and prevent fatigue.', schoolMethod: 'Typing ergonomics ensures correct sitting posture, hand position, monitor height and keyboard/mouse placement, which helps maintain speed and accuracy in typing while preventing fatigue and strain during long working hours.' } },
           { id: 'q5', number: '5', isHard: false, text: 'Why the use of various typing software is common now-a-days?', answer: { answerKey: 'Free, easy, structured lessons with speed/accuracy stats and games — convenient for learning touch typing.', schoolMethod: "Typing software like Rapid Typing Tutor is free, easy to use, and provides structured lessons, speed/accuracy statistics and games, making it convenient to learn touch typing efficiently at one's own pace." } },
-          { id: 'q6', number: '6', isHard: false, text: 'Mention the finger allocation of keys of the Bottom Row of computer keyboard.', answer: { answerKey: 'Left: Ring-Z, Middle-X, Index-C,V. Right: Index-B,N, Middle-M, Ring-comma, Little-full stop.', schoolMethod: 'Left hand: Ring-Z, Middle-X, Index-C, V. Right hand: Index-B, N, Middle-M, Ring-comma(,), Little-full stop(.). The little finger of the left hand is not used on this row.' } },
+          { id: 'q6', number: '6', isHard: false, text: 'Mention the finger allocation of keys of the Bottom Row of computer keyboard.', answer: { answerKey: 'Left: Ring-Z, Middle-X, Index-C,V. Right: Index-B,N, Middle-M, Ring-comma, Little-full stop.', schoolMethod: 'Left hand: Ring-Z, Middle-X, Index-C, V. Right hand: Index-B, N, Middle-M, Ring-comma(,), Little-full stop(.). The little finger of the left hand is not used on this row.' }           },
+        ],
+      },
+      {
+        id: 'ex2.type', title: 'Typing Practice — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Check your typing ergonomics: correct posture? ergonomic desk-chair? table, mouse, keyboard and screen placed right? tools arranged to avoid twisting and reaching? How should you verify each (Yes/No)?',
+            answer: {
+              answerKey: 'Sit straight with feet flat; top screen row at eye level; elbows at 90°; mouse beside keyboard; tools within easy reach.',
+              schoolMethod: 'Check point by point: <u>sit straight, feet flat</u>, back supported; <u>desk-chair height</u> so elbows rest at ~90°; <u>keyboard-mouse side by side</u>, screen top at <u>eye level</u> an arm away; keep tools <u>close enough to avoid twisting/reaching</u>. Mark Yes/No per item and fix the No items first.',
+            },
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Home-row (asdfg;lkjh), upper-row (qwert poiuy) and bottom-row drills, plus finger drills (left asdf/right ;lkj/both gh, T-stretch thth, deed/frrf, ujki, juut/kite/judge, high/thigh/fright). What is the correct practice method?',
+            answer: {
+              answerKey: 'Right fingers on right keys, eyes off keyboard, steady rhythm, double-line spacing — repeat till mastery.',
+              schoolMethod: 'Place fingers on <u>home row (left: asdf, right: ;lkj)</u>; <u>never look at keys</u>; type in <u>double-line spacing</u> with <u>even rhythm and accuracy over speed</u>. Learn rows in order — <u>home → upper → bottom</u> — then finger drills (T-stretch, deed/frrf, ujki patterns). <u>Repeat each till mastery</u> before moving on.',
+            },
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Practise the sentence drills (e.g., words like post/quite/type/wool, then full sentences such as “self help is the order of the day”). What should you focus on?',
+            answer: {
+              answerKey: 'Correct finger for every key, constant rhythm, and clean words before speed.',
+              schoolMethod: 'Type the <u>word lists first</u> (post, quite, type…), then <u>full sentences</u>, keeping <u>correct fingers and steady rhythm</u> throughout. Do not chase speed — <u>accuracy first</u>; speed follows automatically with repeated practice.',
+            },
+          },
         ]
       },
     ]
@@ -347,7 +410,124 @@ export const IT_CHAPTERS: Chapter[] = [
           { id: 'q14', number: '14', isHard: false, text: 'What is the importance of password in the document? How will you protect the document using password in Writer?', answer: { answerKey: "Restricts unauthorised access. File → Save As → tick 'Save with password' → enter twice → Save.", schoolMethod: "A password restricts unauthorised access and protects confidential content. Steps: File → Save As → tick 'Save with password' → enter the password twice → click Save." } },
           { id: 'q15', number: '15', isHard: false, text: 'What is mail merge? Write down the steps to create mailing labels to paste on wedding cards.', answer: { answerKey: 'Combines form letter + data source for personalised copies. Tools → Mail Merge Wizard → Labels → set data source → merge.', schoolMethod: 'Mail merge combines a form letter with a data source to create personalised copies for many recipients. Steps: open Writer → Tools → Mail Merge Wizard → select document type as Labels → choose/create the address data source → arrange address block → complete merge and print.' } },
           { id: 'q16', number: '16', isHard: false, text: 'What are the advantages of table? Prepare your report card of Class VIII in table format.', answer: { answerKey: 'Tables organise data into rows/columns, ease comparison, save space, improve readability.', schoolMethod: 'Tables organise data neatly into rows and columns, make comparison easy, save space and improve readability. (Prepare a table in Writer with columns: Subject, Marks Obtained, Maximum Marks, Grade, and fill in your own Class VIII results.)' } },
-          { id: 'q17', number: '17', isHard: false, text: 'Write an application to your Principal for field visit to any IT Industry.', answer: { answerKey: 'Formal application requesting permission for an educational IT-industry field visit.', schoolMethod: 'To,\nThe Principal,\n[School Name]\n\nSubject: Request for permission for an educational field visit\n\nRespected Sir/Madam,\n\nI am a student of Class IX, [Section]. I request your kind permission to organise a field visit for our class to [Name of IT Company], to help us understand real-world IT operations as part of our IT curriculum. Kindly grant permission and oblige.\n\nThanking you,\nYours obediently,\n[Your Name]\nClass IX, Roll No. ___' } },
+          { id: 'q17', number: '17', isHard: false, text: 'Write an application to your Principal for field visit to any IT Industry.', answer: { answerKey: 'Formal application requesting permission for an educational IT-industry field visit.', schoolMethod: 'To,\nThe Principal,\n[School Name]\n\nSubject: Request for permission for an educational field visit\n\nRespected Sir/Madam,\n\nI am a student of Class IX, [Section]. I request your kind permission to organise a field visit for our class to [Name of IT Company], to help us understand real-world IT operations as part of our IT curriculum. Kindly grant permission and oblige.\n\nThanking you,\nYours obediently,\n[Your Name]\nClass IX, Roll No. ___' }           },
+        ],
+      },
+      {
+        id: 'ex3.prac', title: 'Practical Exercise — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Activity 1: open LibreOffice Writer, type the IT Job Fair report paragraph, save as “Activity 1” in your folder, and close. What are the steps?',
+            answer: {
+              answerKey: 'Open Writer → type the given paragraph exactly → Save As “Activity 1” in your folder → Close.',
+              schoolMethod: 'Open <u>LibreOffice Writer</u>; type the <u>report paragraph exactly</u> as printed; press <u>Ctrl+S / Save As</u>, choose <u>your folder</u>, name it <u>Activity 1</u>; then <u>Close</u> the document.',
+            },
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Activity 3: set page to A4 Landscape with 2″ left-right and 1.5″ top-bottom margins via Page Setup, then apply Bold/Italic/Underline/Change-Case/Font-Colour as shown and save as Activity 3. How?',
+            answer: {
+              answerKey: 'Page Setup for size, orientation and margins; Format menu/toolbar for styling; Save As Activity 3.',
+              schoolMethod: 'Open <u>Format → Page Setup</u>: Size <u>A4</u>, Orientation <u>Landscape</u>, Margins <u>2″ sides, 1.5″ top-bottom</u>. Select text and apply <u>Bold, Italic, Underline, Change Case, Font Colour</u> from the toolbar to match the model; <u>Save As Activity 3</u>; Close.',
+            },
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Table formatting task: enter text and format paragraphs first as Column A, then re-format as Column B of the given table. What is the approach?',
+            answer: {
+              answerKey: 'Type once, format to Column A, Save; then restyle the same text to Column B and save again.',
+              schoolMethod: 'Enter the text; apply <u>Column A formatting</u> (alignment, font, spacing as shown) and <u>Save</u>. Then select all and <u>re-apply Column B formatting</u> over it; <u>Save and Close</u>. Comparing both teaches style reuse.',
+            },
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'Bullets tasks: assign normal bullets/numbering to the Computer Memory list as in the figure, then make a second bullet list and save. How?',
+            answer: {
+              answerKey: 'Type the list → select it → Bullets/Numbering toolbar → match the figure\u2019s styles → Save.',
+              schoolMethod: 'Type the <u>Computer Memory text</u>; select it; click <u>Bullets and Numbering</u> (toolbar or Format menu) and pick the <u>exact bullet/number styles in the figure</u>. Repeat for the second list; <u>Save and Close</u>.',
+            },
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'Create the Class IX time table (Day/Period 1–8 with LUNCH BREAK) as shown in the figure and save it. What are the steps?',
+            answer: {
+              answerKey: 'Insert Table with matching rows–columns → type all cells → merge lunch cells → Save.',
+              schoolMethod: '<u>Insert → Table</u> with the required rows and columns; type <u>days, periods, times and LUNCH BREAK</u> as shown; <u>merge cells</u> for the lunch column; adjust widths; <u>Save</u> in your folder.',
+            },
+          },
+          {
+            id: 'q6', number: '6', isHard: false,
+            text: 'Mail Merge task: type the parent-meet letter with <…> fields (single spacing), build a 10-person address list (Title, names, addresses, child, date, time), and merge. How?',
+            answer: {
+              answerKey: 'Type letter with field placeholders → create address table → Insert fields → Finish & Merge.',
+              schoolMethod: 'Type the letter, leaving <u><Title>, <Address>, <Child Name>, <date>, <Time></u> as fields. Create the <u>address list table</u> (10 rows as given). Use <u>Tools → Mail Merge → Insert fields</u> at each placeholder, preview, then <u>Finish & Merge</u> to generate all letters.',
+            },
+          },
+          {
+            id: 'q7', number: '7', isHard: false,
+            text: 'Prepare Certificates, Invitation cards, Forms, Letters, Announcements and a Banner in Writer; save the document and create its PDF. How?',
+            answer: {
+              answerKey: 'Make all six items with styled text/tables, Save, then Export as PDF.',
+              schoolMethod: 'Create each item with <u>headings, borders, tables and images</u> as fits (certificate borders, invite layout, form fields). <u>Save</u> the document; then <u>File → Export As → PDF</u> and check the PDF opens correctly.',
+            },
+          },
+          {
+            id: 'q8', number: '8', isHard: false,
+            text: 'Let\u2019s Revise: practise cursor keys, mouse positioning, selecting words/sentences/paragraphs (incl. Shift-click) and Select All until accurate. What should you be able to do?',
+            answer: {
+              answerKey: 'Place the cursor exactly by keys or mouse, and select any unit of text precisely on demand.',
+              schoolMethod: 'Drill till automatic: <u>arrow keys</u> move character/line/word (with Ctrl); <u>mouse click/drag</u> positions and selects; <u>double-click = word, triple-click = paragraph, Shift-click = extend</u>; <u>Ctrl+A = Select All</u>. Accuracy first, speed later.',
+            },
+          },
+          {
+            id: 'q9', number: '9', isHard: false,
+            text: 'File drills: create mydocument1 (name, address, school) on Desktop; modify and save as mydocument2 elsewhere; switch between both; keep one as password-protected mydocument3; practise 50%–200% zoom. What is the sequence?',
+            answer: {
+              answerKey: 'New → Save (Desktop) → Save As (new location) → Window-switch → Save As with password → Zoom slider.',
+              schoolMethod: '<u>Menu → New</u>, type details, <u>Save as mydocument1</u> on Desktop. Edit (division, teacher), <u>Save As mydocument2</u> elsewhere. Open both; practise <u>Window switching</u>. <u>Save As mydocument3 with password</u> (Save dialog options). Test <u>zoom 50/75/130/200%</u> via slider or View menu.',
+            },
+          },
+          {
+            id: 'q10', number: '10', isHard: false,
+            text: 'Word-completion drill: type the given paragraph about Word Completion vs AutoCorrect and save; then in mydocument2 type 15 state cities and Cut-Paste them into dictionary order. How?',
+            answer: {
+              answerKey: 'Type-save the paragraph (Enter accepts suggestions); list cities, then Cut (Ctrl+X) + Paste (Ctrl+V) to sort A–Z.',
+              schoolMethod: 'Type the paragraph — notice Writer <u>suggesting completions</u> (Enter accepts). Save. In mydocument2 list <u>15 cities</u>; then <u>Cut each (Ctrl+X) and Paste (Ctrl+V)</u> into alphabetical slots till the list runs A–Z.',
+            },
+          },
+          {
+            id: 'q11', number: '11', isHard: false,
+            text: 'Copy drills: copy the first three sentences of mydocument1 into mydocument3; then append the 6-student marks table (S.No., Name, City, Total/300) to mydocument2. How?',
+            answer: {
+              answerKey: 'Select → Copy (Ctrl+C) → switch document → Paste (Ctrl+V); then type the table values exactly.',
+              schoolMethod: 'Open both files; <u>select three sentences → Ctrl+C → switch window → Ctrl+V</u>; save and close both. Then open mydocument2 and <u>type the six rows</u> (RIYA 245 … ALANKRITA 258) exactly as given at the document end.',
+            },
+          },
+          {
+            id: 'q12', number: '12', isHard: false,
+            text: 'Edit drills: in the cities list delete positions 3 and 7, Undo, then delete 5 and 8; replace non-sentence-start \u2018the\u2019 with \u2018e\u2019; prefix 0 to all cities except Bhopal (@ for Bhopal); count words of paragraph 3. What are the steps?',
+            answer: {
+              answerKey: 'Select-delete, Ctrl+Z undo, Find & Replace, typed prefixes, status-bar/Tools word count.',
+              schoolMethod: '<u>Select city → Delete</u>; <u>Ctrl+Z</u> to Undo; repeat for new positions. <u>Edit → Find & Replace</u> (\u2018the\u2019 → \u2018e\u2019, Match case off as needed). Type <u>0/@ prefixes</u> manually. For paragraph 3, <u>select it and read Tools → Word Count</u> (or status bar).',
+            },
+          },
+          {
+            id: 'q13', number: '13', isHard: false,
+            text: 'AutoText + tables: store your address as AutoText and reuse it; create a merged-cells table; build the 5-student × 5-subject result table. How?',
+            answer: {
+              answerKey: 'Select address → AutoText → New; Table → Insert → Merge Cells; type all result values.',
+              schoolMethod: 'Select your address → <u>Tools → AutoText → New</u>; insert it elsewhere to verify. <u>Insert → Table</u>, select cells → <u>Merge Cells</u> where shown. For the result table, enter all <u>roll numbers and subject marks</u> exactly as printed.',
+            },
+          },
+          {
+            id: 'q14', number: '14', isHard: false,
+            text: 'Advanced table drills: column best-fit/Centre/row-height/alignment, insert total and average columns, split a cell for subject+roll, MP crop table with merge, and the Class IX-D timetable makeover (10 listed changes). Which features apply?',
+            answer: {
+              answerKey: 'Table Properties (width, alignment, height), Insert/Delete rows-columns, Merge/Split Cells, paragraph alignment and Bold.',
+              schoolMethod: 'Use <u>Table Properties</u> for best-fit width, Centre position, row height, vertical alignment. <u>Insert columns</u> left/right for totals/averages/BREAK; <u>Merge Cells</u> for headline, teacher row and double periods; <u>Split Cells</u> for subject+roll; apply <u>centre/bold/italic</u> per the 10-point makeover list; add the <u>Saturday row</u>.',
+            },
+          },
         ]
       },
     ]
@@ -435,7 +615,92 @@ export const IT_CHAPTERS: Chapter[] = [
           { id: 'q18', number: '18', isHard: false, text: 'Explain the advantages of drawing a chart in Calc.', answer: { answerKey: 'Charts show trends/comparisons visually, more presentable than raw numbers.', schoolMethod: 'Charts present numerical data visually, making trends, comparisons and patterns easier to understand at a glance than plain rows of numbers, and make reports more presentable.' } },
           { id: 'q19', number: '19', isHard: false, text: 'Explain in one line each the various types of charts.', answer: { answerKey: 'Bar (comparison), Pie (proportion), Line (trend), Area (volume of change).', schoolMethod: '• Bar chart – compares values using horizontal/vertical bars\n• Pie chart – shows proportion of a whole\n• Line chart – shows trend over time\n• Area chart – shows volume of change over time' } },
           { id: 'q20', number: '20', isHard: false, text: 'Write the steps to insert a chart in Calc.', answer: { answerKey: 'Select data → Insert → Chart → choose type → set range → Finish.', schoolMethod: 'Select the data range → click Insert menu → Chart → choose chart type in the wizard → set data range/series → add titles → click Finish to insert the chart.' } },
-          { id: 'q21', number: '21', isHard: false, text: 'Name and explain any five components of a chart in a spreadsheet package.', answer: { answerKey: 'Chart title, X-axis, Y-axis, Legend, Data series.', schoolMethod: '• Chart title – name of the chart\n• X-axis – shows categories\n• Y-axis – shows values\n• Legend – identifies data series by colour\n• Data series – the actual plotted values' } },
+          { id: 'q21', number: '21', isHard: false, text: 'Name and explain any five components of a chart in a spreadsheet package.', answer: { answerKey: 'Chart title, X-axis, Y-axis, Legend, Data series.', schoolMethod: '• Chart title – name of the chart\n• X-axis – shows categories\n• Y-axis – shows values\n• Legend – identifies data series by colour\n• Data series – the actual plotted values' }           },
+        ],
+      },
+      {
+        id: 'ex4.prac', title: 'Practical Exercise — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Cell addresses: first row–first column, first column–last row, first row–last column, seventh column–tenth row, tenth column–nineteenth row; in which row/column does LK89 sit? How should you answer?',
+            answer: {
+              answerKey: 'Columns are letters, rows are numbers: A1; A1048576; XFD1; G10; J19; LK89 = row 89, column LK.',
+              schoolMethod: 'Read addresses as <u>Letters (column) + Number (row)</u>: A1; last row is <u>1048576</u> (A1048576); last column is <u>XFD</u> (XFD1); G = 7th letter → <u>G10</u>; J = 10th → <u>J19</u>. <u>LK89</u> sits in <u>row 89, column LK</u>.',
+            },
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Range questions: first/last cell and A1-style range of Range1/Range2/Range3, name of row-wise and column-wise ranges, and cell count of Range3. How should you read them off the worksheet figure?',
+            answer: {
+              answerKey: 'Top-left:bottom-right gives any range; row-wise = row range, column-wise = column range; count = rows × columns.',
+              schoolMethod: 'A range is <u>top-left : bottom-right</u> (e.g., B2:D5). A range along a <u>row</u> is called a <u>row range</u>; along a <u>column</u>, a <u>column range</u>. Count = <u>rows × columns</u> (e.g., 3 rows × 4 cols = 12 cells). Read each Range off Fig. 4.x the same way.',
+            },
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Evaluate by operator precedence, then verify in Calc: 8-4/2, 5*5+8, 3+5*4, 2^5+8, 3+2^2, 5+6*2^2, 8/4*4, -4/2+2, 1+2^2-2, 4*3/2. What are the results and the rule?',
+            answer: {
+              answerKey: 'Brackets → ^ → ×/÷ (left to right) → +/−: 6, 33, 23, 40, 7, 29, 8, 0, 3, 6.',
+              schoolMethod: 'Apply <u>^ first, then ×/÷ left-to-right, then +/−</u>: 8−2=<u>6</u>; 25+8=<u>33</u>; 3+20=<u>23</u>; 32+8=<u>40</u>; 3+4=<u>7</u>; 5+24=<u>29</u>; 2×4=<u>8</u>; −2+2=<u>0</u>; 1+4−2=<u>3</u>; 12/2=<u>6</u>. Type each with <u>= first</u> in Calc to verify.',
+            },
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'Figure worksheets (Fig. 4.12, 4.17, 4.18): build each sheet, enter different values in the input cells (A2–C2 / B1 / B1–B2) and observe the formula columns. What should you watch?',
+            answer: {
+              answerKey: 'Dependent cells recalculate instantly — change inputs and read how each formula result moves.',
+              schoolMethod: 'Build the sheet <u>exactly as figured</u> with formulas referencing input cells. Change <u>one input at a time</u> and watch dependent results <u>recalculate automatically</u> — this live linkage is the point of the observation.',
+            },
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'Functions drill (Fig. 4.22, HARMAN\u2019s marks in 3 subjects): total in E2, average in F2, copy down; highest/lowest/count in Hindi (B7/B8/B9) and extend to English/Maths. Which formulas apply?',
+            answer: {
+              answerKey: 'E2 =SUM(B2:D2); F2 =AVERAGE(B2:D2); highest =MAX, lowest =MIN, count =COUNT; drag to copy.',
+              schoolMethod: 'E2: <u>=SUM(B2:D2)</u>; F2: <u>=AVERAGE(B2:D2)</u>; <u>drag the fill handle down</u> to copy relatively. B7: <u>=MAX(B2:B6)</u>; B9: <u>=MIN(B2:B6)</u>; B8: <u>=COUNT(B2:B6)</u>. Repeat MAX/MIN across the <u>English and Maths columns</u>.',
+            },
+          },
+          {
+            id: 'q6', number: '6', isHard: false,
+            text: 'Fill Handle drills (Fig. 4.30–4.33): drag days, months, natural/even/odd numbers to row 15; then =SUM(C2:G2) in H2 and =AVERAGE(C2:G2) in I2 dragged to row 11. What is the technique?',
+            answer: {
+              answerKey: 'Select seed cell(s), drag the small square handle; formulas adjust relatively per row.',
+              schoolMethod: 'Click the <u>seed cell(s)</u> (select <u>two cells</u> for even/odd patterns) and <u>drag the fill-handle square</u> to row 15. For marks: type <u>=SUM(C2:G2)</u> in H2, <u>=AVERAGE(C2:G2)</u> in I2, then <u>drag both down</u> — references shift per row automatically.',
+            },
+          },
+          {
+            id: 'q7', number: '7', isHard: false,
+            text: 'Salary + range drills (Fig. 4.35/4.36 gross salary to row 11 with H12 total; Fig. 4.43 ranges, B8 totals, G3 totals, F3→F4 copy, averages; Harman science max/min/count/average in B9–B12). What is the method?',
+            answer: {
+              answerKey: 'Type one row\u2019s formulas, fill down, total the column; ranges read top-left:bottom-right; copy by drag or Ctrl+C/V.',
+              schoolMethod: 'Enter <u>D2–H2 formulas once</u>, <u>fill down to row 11</u>, total in <u>H12 with =SUM</u>. For ranges: name the <u>top-left:bottom-right</u> cells; B8 total via <u>addresses or =SUM</u>; copy F3→F4 by <u>drag or paste</u>; B9–B12 via <u>MAX/MIN/COUNT/AVERAGE</u> down each subject column.',
+            },
+          },
+          {
+            id: 'q8', number: '8', isHard: false,
+            text: 'Explore tasks: count Save-As formats; 7 rainbow sheets (Violet… with matching tab colours); auto-fill negatives; two-date drag + monthly calendar; add your name to the dictionary. How?',
+            answer: {
+              answerKey: 'File → Save As (list formats, reopen to verify); Sheet tab +/colour; drag handle for series; Tools → dictionary.',
+              schoolMethod: '<u>Save As</u> and count the <u>format dropdown</u> entries; reopen one to verify. <u>+ new sheets ×7</u>, rename VIBGYOR, <u>right-click tab → colour</u> each. Drag negatives and <u>15-08-2013 + next date</u> down 10 for series/calendar. <u>Right-click your name → Add to Dictionary</u>.',
+            },
+          },
+          {
+            id: 'q9', number: '9', isHard: false,
+            text: 'Project drills: implement a superstore-style shopping bill; your 6-subject marks sheet (total, average, %); Khushi/Diya/Kushaal list sorted by Class then name; August-birth filter. How?',
+            answer: {
+              answerKey: 'Bill: itemized table with =SUM; marks: =SUM/=AVERAGE/percentage; Data → Sort; Data → AutoFilter.',
+              schoolMethod: 'Bill: <u>item/rate/qty/amount table + =SUM total</u>. Marks: six subjects, <u>=SUM, =AVERAGE, % = total÷600×100</u>. Friends list: <u>Data → Sort</u> by Class, then Name. August filter: <u>Data → AutoFilter</u> on Month-of-Birth = August.',
+            },
+          },
+          {
+            id: 'q10', number: '10', isHard: false,
+            text: 'Notes + validation + marksheet + charts: Help-based sorting/filtering notes; DOB 1–31 validation; school marksheet with % and grade; newspaper 3D pie; Y=3X+1 line chart; monthly bills comparison. What are the key steps?',
+            answer: {
+              answerKey: 'Help → notes; Data → Validity (whole 1–31); marksheet with IF grades; Insert → Chart (pie/line/column) + conclusion.',
+              schoolMethod: 'Read <u>Help on Sort/Filter/Validity</u> into notes. DOB column: <u>Data → Validity → Whole numbers 1–31</u>. Marksheet: <u>=AVERAGE, % and =IF grade slabs</u>. Charts: select data → <u>Insert → Chart</u> (pie for newspapers, line for Y=3X+1, column/line for bills) and <u>conclude which fits best</u> (trends → line, shares → pie).',
+            },
+          },
         ]
       },
     ]
@@ -516,7 +781,68 @@ export const IT_CHAPTERS: Chapter[] = [
           { id: 'q12', number: '12', isHard: false, text: 'How will you add the name of the company on the top of each slide?', answer: { answerKey: 'Add a text box on the Slide Master with the company name.', schoolMethod: 'Insert a text box on the Slide Master, type the company name, position it at the top → close Master View; the name then appears on top of every slide.' } },
           { id: 'q13', number: '13', isHard: false, text: 'Write down the steps to create a table in a presentation.', answer: { answerKey: 'Insert → Table → set rows/columns → OK → type data.', schoolMethod: 'Select the slide → click Insert menu → Table → enter the required number of rows and columns → click OK → type data into the table cells.' } },
           { id: 'q14', number: '14', isHard: false, text: 'Write down the steps to insert a chart in slide.', answer: { answerKey: 'Insert → Chart → edit sample data → choose type → click outside to finish.', schoolMethod: 'Select the slide → click Insert menu → Chart → a default chart with sample data appears → edit the data table → choose chart type → click outside to finish.' } },
-          { id: 'q15', number: '15', isHard: false, text: 'What are the five views of presentation?', answer: { answerKey: 'Normal, Outline, Notes, Slide Sorter, Handout.', schoolMethod: '• Normal view\n• Outline view\n• Notes view\n• Slide Sorter view\n• Handout view' } },
+          { id: 'q15', number: '15', isHard: false, text: 'What are the five views of presentation?', answer: { answerKey: 'Normal, Outline, Notes, Slide Sorter, Handout.', schoolMethod: '• Normal view\n• Outline view\n• Notes view\n• Slide Sorter view\n• Handout view' }           },
+        ],
+      },
+      {
+        id: 'ex5.prac', title: 'Practical Exercise — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'List the advantages of Impress with a multimedia projector, the multimedia contents a presentation can include, key points for an attractive presentation, and prepare your storyboard. What should you write?',
+            answer: {
+              answerKey: 'Projector: big, shared, engaging display; contents: text, images, audio, video, charts, animation; design: few words, contrast, consistency; storyboard first.',
+              schoolMethod: 'Advantages: <u>large shared display, engagement, live demo</u>. Contents: <u>text, images, audio, video, charts, tables, animation, transitions</u>. Design rules: <u>few words per slide, readable fonts, contrast, consistent theme, one idea each</u>. Draft your <u>storyboard (slide order + content)</u> before building.',
+            },
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Build the ICT Mela storyboard presentation (3 slides with the given colours, fonts, backgrounds, Fade-in animation as specified). How?',
+            answer: {
+              answerKey: 'New presentation → 3 blank slides → apply each slide\u2019s font size/colour/background → Fade-in animation per slide.',
+              schoolMethod: 'Create <u>3 blank slides</u>. Slide 1 (green 28, sky-blue bg), Slide 2 (objectives 44, red 32, light-yellow bg), Slide 3 (steps 24, blue 32, light-yellow bg) — set each via <u>text box + font/colour + Format → Page/Slide background</u>; add <u>Slide Show → Custom Animation → Fade In</u> per slide.',
+            },
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Create a science-subject overview presentation: title slide, index, one slide per chapter introduction. What is the structure?',
+            answer: {
+              answerKey: 'Title layout first, index second, then one content slide per chapter in order.',
+              schoolMethod: 'Slide 1: <u>Title Slide layout</u> with subject name. Slide 2: <u>Index</u> listing chapters. Then <u>one slide per chapter</u> (name + 3–4 line introduction) in textbook order; keep formatting <u>consistent</u> throughout.',
+            },
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'For that presentation: rename slides by chapter, change title fonts, add date+school footer, apply a master page, hide even chapters and present manually with Navigator visible. How?',
+            answer: {
+              answerKey: 'Outline/Notes rename; Slide Master for fonts/footer/master; Hide Slide; Slide Show settings + Navigator (F5 panel).',
+              schoolMethod: '<u>Rename</u> in Outline view; change <u>title fonts via Slide Master</u>; <u>Insert → Footer</u> (date + school); <u>apply a Master page</u>; <u>right-click → Hide</u> even slides; <u>Slide Show → manual advance</u> and open the <u>Navigator</u> during presenting.',
+            },
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'Convert the presentation to PDF and set Handout view to 4 slides per page. How?',
+            answer: {
+              answerKey: 'File → Export as PDF; View → Handout → 4-per-page layout → print/export.',
+              schoolMethod: '<u>File → Export As → PDF</u> and save. Then <u>View → Handout</u>, choose the <u>4-slides-per-page layout</u>, and print or re-export — ideal for revision handouts.',
+            },
+          },
+          {
+            id: 'q6', number: '6', isHard: false,
+            text: 'Create a new-car launch presentation: company intro, models sold, the new car. What should the slides hold?',
+            answer: {
+              answerKey: 'Slide 1: company profile; Slide 2: model list; Slide 3+: new car features, price, images.',
+              schoolMethod: 'Research any car company: slide 1 — <u>company intro</u> (founded, HQ, scale); slide 2 — <u>all models sold</u>; slides 3+ — <u>new car</u> (looks, engine, mileage, price) with <u>images throughout</u>.',
+            },
+          },
+          {
+            id: 'q7', number: '7', isHard: false,
+            text: 'For the car presentation: models in a table (name, price, average, capacity) with box animation, each model\u2019s image + description, and different background per slide. How?',
+            answer: {
+              answerKey: 'Insert → Table with 4 columns, style it, Box animation; image + caption per model; Format → Page background per slide.',
+              schoolMethod: '<u>Insert → Table</u> (Model, Basic Price, Average, Capacity); <u>format borders/shading</u>; <u>Custom Animation → Box</u> on the table. Add each model\u2019s <u>image with a 2-line description</u>. Change <u>each slide\u2019s background</u> via Properties/Format → Page.',
+            },
+          },
         ]
       },
     ]

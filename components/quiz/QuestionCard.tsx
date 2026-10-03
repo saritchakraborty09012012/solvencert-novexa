@@ -41,6 +41,11 @@ const DIFFICULTY_STYLES: Record<string, { bg: string; color: string }> = {
   hard: { bg: '#ef444422', color: '#ef4444' },
 };
 
+/** Options may be plain strings or { label, text } pairs — normalize for display/answer. */
+function optText(opt: string | { label: string; text: string }): string {
+  return typeof opt === 'string' ? opt : `${opt.label}. ${opt.text}`;
+}
+
 export default function QuestionCard({
   question,
   currentIndex,
@@ -112,7 +117,7 @@ export default function QuestionCard({
           return (
             <button
               key={i}
-              onClick={() => onAnswer(question.id, opt)}
+              onClick={() => onAnswer(question.id, optText(opt))}
               className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left border transition-all duration-200"
               style={{
                 background: isSelected ? 'var(--brand-primary)15' : 'var(--surface-2)',
@@ -129,7 +134,7 @@ export default function QuestionCard({
                 {letter}
               </span>
               <span style={{ color: isSelected ? 'var(--brand-primary)' : 'var(--text-primary)' }}>
-                {opt}
+                {optText(opt)}
               </span>
             </button>
           );
@@ -167,7 +172,7 @@ export default function QuestionCard({
                   {String.fromCharCode(65 + i)}
                 </span>
                 <span className="flex-1 px-3 py-2 text-sm" style={{ color: 'var(--text-primary)' }}>
-                  {opt}
+                  {optText(opt)}
                 </span>
                 <span style={{ color: 'var(--text-muted)' }}>→</span>
                 <select

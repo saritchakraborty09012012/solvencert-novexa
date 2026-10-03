@@ -253,7 +253,28 @@ export const KAUSHAL_CH5_6_CHAPTERS = [
           },
         ],
       },
-    ],
+      {
+        id: 's7', title: 'Hands-On Tasks — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Exploring vocations around us (§5.5): what shaping-materials work do you observe around yourself, and how should you describe it (inputs, processes, outcomes)?',
+            answer: {
+              answerKey: 'Survey nearby shaping work via experts, visits and reports; record inputs, key processes and outcomes for each.',
+              schoolMethod: 'Look around (carpentry, pottery, metalwork, weaving): for each, note <u>inputs</u> (materials, tools), <u>key processes</u> (cutting, joining, finishing) and <u>outcomes</u> (products). Gather details from <u>practitioners, site visits, libraries and government reports</u>.',
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Mapping resources (§5.5, Table 5.7): do you think this shaping-materials work can be done in school? How should you decide?',
+            answer: {
+              answerKey: 'Use Table 5.7 to match the work\u2019s needs (space, tools, safety, time) with school resources.',
+              schoolMethod: 'Discuss in a group with Table 5.7: list each candidate work\u2019s <u>requirements</u> (workspace, tools, materials, skill help, safety, time) against <u>what the school offers</u>. Choose only work where needs and resources <u>match</u>, with written reasons.',
+            }
+          },
+        ]
+      },
+    ]
   },
   {
     id: 'ch06',
@@ -449,6 +470,19 @@ export const KAUSHAL_CH5_6_CHAPTERS = [
           },
         ],
       },
-    ],
+      {
+        id: 's7', title: 'Hands-On Tasks — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Carrying out minor repairs (§6.8.1): how do you fill cracks, joints, tiles or uneven surfaces with cement mortar?',
+            answer: {
+              answerKey: '1 part cement + 3 parts sand + water to a thick paste; apply on cleaned, dampened surface; press, level, smooth.',
+              schoolMethod: '1. Mix <u>one part cement with three parts sand</u>. 2. Add water slowly to a <u>smooth, thick paste</u>. 3. <u>Clean the surface</u>, sprinkle water on it, and apply mortar with a <u>trowel</u>. 4. <u>Press, level and smoothen</u> the patch for a neat finish.',
+            }
+          },
+        ]
+      },
+    ]
   },
 ];

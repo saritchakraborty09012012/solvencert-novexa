@@ -129,6 +129,16 @@ function xmlToText(xml: string): string {
     .trim()
 }
 
+/** Extract + normalize text from the listed XML parts of an Office (zip) container. */
+async function zipXmlText(zip: JSZip, paths: string[]): Promise<string[]> {
+  const out: string[] = []
+  for (const p of paths) {
+    const f = zip.file(p)
+    if (f) out.push(xmlToText(await f.async('string')))
+  }
+  return out
+}
+
 async function extractDocText(name: string, mime: string, buf: Buffer): Promise<string | null> {
   const isPdf = /pdf/i.test(mime) || /\.pdf$/i.test(name)
   if (isPdf) return null
@@ -139,29 +149,24 @@ async function extractDocText(name: string, mime: string, buf: Buffer): Promise<
   const isTxt = /^text\//i.test(mime) || /\.(txt|md)$/i.test(name)
 
   if (isCsv || isTxt) return buf.toString('utf8').slice(0, 60000)
+
+  const zip = await JSZip.loadAsync(buf)
+
   if (isDocx) {
-    const zip = await JSZip.loadAsync(buf)
-    const doc = zip.file('word/document.xml')
-    return doc ? xmlToText(await doc.async('string')).slice(0, 60000) : null
+    const doc = await zipXmlText(zip, ['word/document.xml'])
+    return doc[0]?.slice(0, 60000) || null
   }
   if (isPpt) {
-    const zip = await JSZip.loadAsync(buf)
     const slides = Object.keys(zip.files).filter((n) => /^ppt\/slides\/slide\d+\.xml$/.test(n)).sort((a, b) => {
       const na = Number(a.match(/slide(\d+)/)?.[1] || 0), nb = Number(b.match(/slide(\d+)/)?.[1] || 0)
       return na - nb
     })
-    const parts: string[] = []
-    for (const s of slides) parts.push(xmlToText(await zip.file(s)!.async('string')))
+    const parts = await zipXmlText(zip, slides)
     return parts.join('\n\n').slice(0, 60000) || null
   }
   if (isXls) {
-    const zip = await JSZip.loadAsync(buf)
-    const chunks: string[] = []
-    const ss = zip.file('xl/sharedStrings.xml')
-    if (ss) chunks.push(xmlToText(await ss.async('string')))
-    for (const n of Object.keys(zip.files).filter((k) => /^xl\/worksheets\/sheet\d+\.xml$/.test(k)).sort()) {
-      chunks.push(xmlToText(await zip.file(n)!.async('string')))
-    }
+    const sheets = Object.keys(zip.files).filter((k) => /^xl\/worksheets\/sheet\d+\.xml$/.test(k)).sort()
+    const chunks = await zipXmlText(zip, ['xl/sharedStrings.xml', ...sheets])
     return chunks.join('\n').replace(/\n{3,}/g, '\n\n').trim().slice(0, 60000) || null
   }
   return null

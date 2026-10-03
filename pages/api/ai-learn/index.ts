@@ -114,7 +114,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     mode,
   )
 
-  let contents = messages.map((m) => ({
+  let contents: { role: string; parts: Array<Record<string, unknown>> }[] = messages.map((m) => ({
     role: m.role === 'model' ? 'model' : 'user',
     parts: [{ text: String(m.text) }],
   }))
@@ -126,7 +126,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     if (lastUserIdx !== -1) {
       const attachmentParts = buildAttachmentParts(attachments)
-      contents[lastUserIdx].parts.push(...attachmentParts)
+      contents[lastUserIdx].parts.push(...attachmentParts.flat())
     }
   }
 

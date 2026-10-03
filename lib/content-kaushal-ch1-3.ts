@@ -167,7 +167,52 @@ export const KAUSHAL_CH1_3_CHAPTERS = [
           },
         ],
       },
-    ],
+      {
+        id: 's6', title: 'Hands-On Tasks — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'TASK (Make your own Meteorological Lab): build a rain gauge, a dry-wet bulb thermometer and a wind vane in school (Fig. 1.3–1.5); track rainfall, temperature and wind direction for three months; optionally run a weather bulletin board. How should you do it?',
+            answer: {
+              answerKey: 'Build the three instruments from suggested materials, record daily readings for three months, and display them for local farmers.',
+              schoolMethod: 'Build each instrument per Fig. 1.3–1.5 (substitute materials only after consulting your teacher): <u>rain gauge</u> for rainfall, <u>dry-wet bulb thermometer</u> for temperature and range, <u>wind vane</u> for direction. Record <u>daily for three months</u>, compute averages, and pin highlights on a <u>weather bulletin board</u> for farmers.',
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Soil sample collection (§1.3.1): how should soil be collected and prepared for texture and pH testing (Fig. 1.6)?',
+            answer: {
+              answerKey: 'Multi-spot sampling, debris removed, sun-dried, crushed, sieved and labelled.',
+              schoolMethod: 'Collect from <u>several spots</u> (sandy patch, organic pit, channel) and mix; <u>avoid shade and fertiliser stores</u>. Remove stones/leaves, <u>sun-dry</u> a few hours, crush clumps, <u>sieve</u> fine, and <u>label</u> each sample (date, previous crop) for jar and pH tests.',
+            }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Mason jar test (§1.3.1): how do you find the clay and sand percentage of soil (Fig. 1.7), and why does texture matter?',
+            answer: {
+              answerKey: 'Shake soil with water in a jar; settled layers (sand → silt → clay) reveal texture, which governs water, nutrients and root growth.',
+              schoolMethod: 'Half-fill a jar with soil + water, shake hard, let settle: <u>sand sinks first, then silt, then clay</u> on top. Layer thicknesses give the <u>texture ratio</u>. Texture matters because it controls <u>water holding, nutrient supply and root penetration</u>.',
+            }
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'Floating method (§1.3.2): how do you select wheat seeds with salt water? List the steps.',
+            answer: {
+              answerKey: '1 L water + 100 g salt + 250 g seeds; wait 3–5 min; discard floaters; wash and shade-dry the sinkers.',
+              schoolMethod: '1. Take <u>1 L water</u> in a bucket. 2. Dissolve <u>100 g salt</u>. 3. Add <u>250 g wheat seeds</u>. 4. Wait <u>3–5 minutes</u> — damaged/hollow seeds <u>float</u>. 5. Discard floaters; <u>wash sinkers</u> in fresh water and <u>dry in shade</u> for sowing.',
+            }
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'Mapping resources (§1.4, Table 1.2): do you think the agricultural work can be done in school? How should the group decide?',
+            answer: {
+              answerKey: 'Decide with Table 1.2 — match required skills, space, materials, safety and time against what the school has.',
+              schoolMethod: 'Discuss in a group using Table 1.2: list the work\u2019s <u>needs</u> (space, tools, inputs, expert help, season/time, safety) and tick what the <u>school can provide</u>. Work is school-doable only where needs and resources <u>match</u>; record reasons for yes and no.',
+            }
+          },
+        ]
+      },
+    ]
   },
   {
     id: 'ch02',
@@ -399,7 +444,28 @@ export const KAUSHAL_CH1_3_CHAPTERS = [
           },
         ],
       },
-    ],
+      {
+        id: 's8', title: 'Hands-On Tasks — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Testing and adjusting pH (§2.8): for 20 pots of 1 L potting mix, how do you test pH and correct it to 6.5–7.0?',
+            answer: {
+              answerKey: 'Test per Chapter 1; add lime below 6.0, sulphur/manure above 8.5; retest till 6.5–7.0.',
+              schoolMethod: 'Test the mix as in Chapter 1. If <u>acidic (below 6.0)</u>, mix in garden lime (calcium carbonate); if <u>alkaline (above 8.5)</u>, add sulphur or organic manure — about a tablespoon at a time by trial. <u>Retest and repeat</u> till pH reads <u>6.5–7.0</u>.',
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Testing seed germination rate (§2.8, Fig. 2.7): how do you verify germination rate in a potting mix?',
+            answer: {
+              answerKey: 'Sow a counted sample in potting mix; germination % = sprouted ÷ sown × 100.',
+              schoolMethod: 'Count out sample seeds, sow in moist potting mix per Fig. 2.7, keep evenly moist and warm. Count sprouts after the expected days: <u>rate = sprouted ÷ sown × 100</u>. Field rate may differ from the packet figure with moisture and temperature.',
+            }
+          },
+        ]
+      },
+    ]
   },
   {
     id: 'ch03',
@@ -689,6 +755,27 @@ export const KAUSHAL_CH1_3_CHAPTERS = [
           },
         ],
       },
-    ],
+      {
+        id: 's11', title: 'Hands-On Tasks — How to Do',
+        questions: [
+          {
+            id: 'q1', number: '1', isHard: false,
+            text: 'Collecting weather data (§3.4.1): how do you gather data and decide the crop protection method for your area (Table 3.4)?',
+            answer: {
+              answerKey: 'Use the school observatory plus IMD/KVK data; match conditions to Table 3.4 methods.',
+              schoolMethod: 'Collect rainfall, temperature and wind readings from the <u>school observatory (Chapter 1)</u>; supplement with <u>IMD website, local KVK or agricultural university</u> data. Compare prevailing conditions against <u>Table 3.4</u> to select the suitable crop protection method for your area.',
+            }
+          },
+          {
+            id: 'q2', number: '2', isHard: false,
+            text: 'Rough estimation of organic carbon (§3.8.4): with Sample A (plain soil), Sample B (compost-mixed soil) and 3% hydrogen peroxide, how do you compare organic content?',
+            answer: {
+              answerKey: 'Saturate both with H2O2 wearing safety gear — stronger fizzing means more organic carbon.',
+              schoolMethod: 'Place equal debris-free samples A and B in clear containers; pour in <u>3% H2O2 till saturated</u> (<u>wear safety gear</u>). Peroxide oxidises organic carbon, releasing O2 — the sample that <u>fizzes/foams more (B)</u> holds <u>more organic carbon</u>. Compare intensity side by side.',
+            }
+          },
+        ]
+      },
+    ]
   },
 ];

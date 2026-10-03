@@ -84,7 +84,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const questions = await generateQuiz(
-      { ...config, numQuestions, totalQuestions: numQuestions },
+      { ...config, numQuestions },
       isGuest ? undefined : uid
     );
 

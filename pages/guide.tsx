@@ -7,6 +7,7 @@ import {
   FileText, PenTool, CheckCircle2, HelpCircle, ArrowRight, Info,
   ListChecks, Gift, Star, LayoutGrid, Usb, Lightbulb, PanelTop,
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 
 const ROUTES: Record<string, { name: string; desc: string; need?: string; href?: string }[]> = {
@@ -36,7 +37,7 @@ const ROUTES: Record<string, { name: string; desc: string; need?: string; href?:
   ],
 };
 
-function SectionCard({ icon: Icon, title, children }: { icon: React.ComponentType<{size?: number; className?: string}>; title: string; children: React.ReactNode }) {
+function SectionCard({ icon: Icon, title, children }: { icon: LucideIcon; title: string; children: React.ReactNode }) {
   return (
     <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-0)] p-5 mb-4">
       <h3 className="flex items-center gap-2 font-serif font-bold text-[var(--text-primary)] mb-3">
@@ -59,7 +60,7 @@ function Step({ n, children }: { n: number; children: React.ReactNode }) {
   );
 }
 
-function DeviceSection({ icon: Icon, title, points }: { icon: React.ComponentType<{size?: number; className?: string}>; title: string; points: string[] }) {
+function DeviceSection({ icon: Icon, title, points }: { icon: LucideIcon; title: string; points: string[] }) {
   return (
     <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-0)] p-5">
       <h4 className="flex items-center gap-2 font-serif font-bold text-[var(--text-primary)] mb-3">
