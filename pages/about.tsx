@@ -6,7 +6,7 @@ import { BrandLogo, NovexaLogo } from '@/components/ui/Logo';
 
 export default function AboutPage() {
   return (
-    <CompanyLayout title="About SolveNCERT" description="Learn about SolveNCERT — India's free AI-assisted NCERT solutions platform for CBSE Class 9. Built by NDe: NoirDemons, updated for the 2026 Revised Syllabus." canonical="/about" breadcrumb="About Us">
+    <CompanyLayout title="About SolveNCERT" description="Learn about SolveNCERT — India's free AI-assisted NCERT solutions platform for CBSE Class 9. SolveNCERT by NDE and SolveNCERT by NOVEXA — built by NDe: NoirDemons, updated for the 2026 Revised Syllabus." canonical="/about" breadcrumb="About Us">
       <div className="flex items-start gap-4 mb-6 not-prose">
         <BrandLogo size={52} />
       </div>
@@ -36,7 +36,7 @@ export default function AboutPage() {
       <h2>Our Story</h2>
       <p>SolveNCERT was founded by a team passionate about transforming how Indian students study. High-quality, structured NCERT solutions were either hidden behind paywalls or based on outdated syllabi. We built a single, trustworthy platform — free, accurate, and now fully updated for 2026.</p>
 
-      <h2>Powered by NDe: NoirDemons</h2>
+      <h2>Powered by NDe: NoirDemons — SolveNCERT by NDE</h2>
       <div className="flex items-center gap-3 p-4 rounded-xl bg-[var(--surface-1)] border border-[var(--border)] my-4 not-prose">
         <NovexaLogo size={40} withText={false} />
         <div>
@@ -48,7 +48,9 @@ export default function AboutPage() {
 
       <p className="text-sm text-[var(--text-muted)]">
         <strong className="text-[var(--text-primary)]">NDe: NoirDemons</strong> — NDe is the short name of the
-        company, quick to say, spell and remember.
+        company, quick to say, spell and remember. Searching <strong>SolveNCERT by NDE</strong>,
+        <strong> solve ncert by nde</strong> or <strong>solve ncert by novexa</strong> (the former name) all
+        lead to this same site.
       </p>
 
       <div className="not-prose mt-6">

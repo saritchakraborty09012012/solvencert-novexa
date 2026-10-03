@@ -28,8 +28,11 @@ export default function Document() {
           "NoirDemons" is the full name. Both always ship together so that typing
           NDe / NDE / nde / nDe / NdE / Noir Demons into Google resolves here.
         */}
-        <meta name="application-name" content="SolveNCERT by NDe · NoirDemons" />
-        <meta name="keywords" content="NDe, NDE, nde, nDe, NdE, NoirDemons, Noir Demons, NOVEXA, SolveNCERT, NCERT solutions class 9, CBSE 2026, ganita manjari solutions, exploration science solutions, kaveri english solutions" />
+        <meta name="application-name" content="SolveNCERT by NDe · NDE · NoirDemons" />
+        {/* Search-phrase parity: "solve ncert by novexa" and "solve ncert by nde"
+            both published verbatim so either query resolves to this site.
+            (author meta is emitted per-page by Layout with both phrases) */}
+        <meta name="keywords" content="NDe, NDE, nde, nDe, NdE, NoirDemons, Noir Demons, NOVEXA, SolveNCERT, solve ncert by novexa, solve ncert by nde, solve ncert by NDE, SolveNCERT by NOVEXA, SolveNCERT by NDE, NCERT solutions class 9, CBSE 2026, ganita manjari solutions, exploration science solutions, kaveri english solutions" />
         {googleVerification && <meta name="google-site-verification" content={googleVerification} />}
 
         {/* Favicons */}

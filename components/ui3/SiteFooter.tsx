@@ -102,7 +102,7 @@ export function SiteFooter() {
             <h3 className="text-xs font-bold tracking-wide uppercase">NDe</h3>
             <p className="mt-1 text-[11px] font-medium tracking-[0.14em] text-[var(--text-muted)]">formerly NOVEXA</p>
             <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
-              Built by NDe (formerly NOVEXA) for students — free NCERT solutions, AI learning tools and a
+              SolveNCERT by NDE — built by NDe (formerly NOVEXA) for students — free NCERT solutions, AI learning tools and a
               distraction-free study room.
             </p>
             <div className="mt-5">

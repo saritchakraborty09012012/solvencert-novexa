@@ -4,6 +4,10 @@
 # full name. Both are the same brand, so searching any of these should surface
 # this site:
 #   NDe · NDE · nde · nDe · NdE · nDE · NoirDemons · Noir Demons · NOVEXA
+# Search phrases (both spellings published verbatim, same site):
+#   solve ncert by novexa · SolveNCERT by NOVEXA · solve ncert by NOVEXA
+#   solve ncert by nde · solve ncert by NDE · SolveNCERT by NDE · SolveNCERT by NDe
+#   ncert by nde · NDE ncert solutions · nde ncert · NDE NCERT solutions
 # Site: https://solvencert-novexa.vercel.app
 #
 User-agent: *

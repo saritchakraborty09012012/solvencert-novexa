@@ -1,7 +1,12 @@
 {
   "name": "SolveNCERT for CBSE",
   "short_name": "SolveNCERT",
-  "description": "AI-powered NCERT solutions for CBSE — 2026 Revised Syllabus",
+  "description": "AI-powered NCERT solutions for CBSE — 2026 Revised Syllabus. SolveNCERT by NDE · SolveNCERT by NOVEXA",
+  "keywords": [
+    "SolveNCERT", "solve ncert by nde", "solve ncert by NDE", "SolveNCERT by NDE",
+    "solve ncert by novexa", "SolveNCERT by NOVEXA", "NDE", "nde", "NDe", "NOVEXA",
+    "NCERT solutions class 9", "CBSE 2026"
+  ],
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f7f8fc",

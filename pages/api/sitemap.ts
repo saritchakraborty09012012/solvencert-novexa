@@ -43,6 +43,10 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   NDe is the public-facing short name of NoirDemons (also searched as NDE, nde,
   nDe, NdE, nDE, Noir Demons, NOVEXA). Same brand, same site:
   ${base}
+  Search-phrase parity — both spellings published verbatim:
+  SolveNCERT by NOVEXA / solve ncert by novexa
+  SolveNCERT by NDE / solve ncert by nde / solve ncert by NDE / solve ncert by NDe
+  ncert by nde / NDE ncert solutions / nde ncert
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${allUrls.map(url => `  <url>

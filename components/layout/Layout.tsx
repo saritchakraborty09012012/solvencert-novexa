@@ -12,7 +12,7 @@ import { useUIStore } from '@/store/uiStore';
 import { useCollabStore } from '@/store/collabStore';
 import { supabase } from '@/lib/supabase';
 import { describePath } from '@/lib/history';
-import { SITE_ALTERNATE_NAME, BRAND_KEYWORDS, BRAND_LOCKUP, SITE_URL } from '@/lib/site';
+import { SITE_ALTERNATE_NAME, SITE_ALTERNATE_NAME_NDE, BRAND_KEYWORDS, BRAND_LOCKUP, SITE_URL } from '@/lib/site';
 
 interface LayoutProps {
   children:      React.ReactNode;
@@ -114,8 +114,8 @@ export default function Layout({
 
         {/* ── Extra SEO signals ── */}
         <meta name="robots"    content="index, follow, max-snippet:-1, max-image-preview:large" />
-        <meta name="author"    content={SITE_ALTERNATE_NAME} />
-        <meta name="owner"     content={`${BRAND_LOCKUP} (NOVEXA)`} />
+        <meta name="author"    content={`${SITE_ALTERNATE_NAME} · ${SITE_ALTERNATE_NAME_NDE}`} />
+        <meta name="owner"     content={`${BRAND_LOCKUP} · ${SITE_ALTERNATE_NAME_NDE} (NOVEXA)`} />
         {/* Site-wide defaults live in _document; only emit when a page adds its own */}
         {keywords && <meta name="keywords" content={`${BRAND_KEYWORDS}, ${keywords}`} />}
 

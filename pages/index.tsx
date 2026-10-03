@@ -42,7 +42,11 @@ const HOME_SCHEMA = [
     parentOrganization: {
       '@type': 'Organization',
       name: PUBLISHER_NAME,
-      alternateName: ['NDe', 'NDE', 'nde', 'NoirDemons', 'Noir Demons'],
+      alternateName: [
+        'NDe', 'NDE', 'nde', 'NoirDemons', 'Noir Demons',
+        'SolveNCERT by NDE', 'solve ncert by nde', 'solve ncert by NDE',
+        'SolveNCERT by NOVEXA', 'solve ncert by novexa',
+      ],
     },
   },
 ];

@@ -11,7 +11,7 @@ import { StudyTools } from './StudyTools'
 import { StatsStrip } from './StatsStrip'
 import { JourneyCta } from './JourneyCta'
 import { SiteFooter } from './SiteFooter'
-import { SITE_URL } from '@/lib/site'
+import { SITE_ALTERNATE_NAME, SITE_ALTERNATE_NAME_NDE, BRAND_KEYWORDS, SITE_URL } from '@/lib/site'
 
 const BASE_URL = SITE_URL
 
@@ -39,6 +39,8 @@ export function HomePage({
         <meta property="og:description" content={description} />
         <meta property="og:url" content={canonUrl} />
         <meta property="og:site_name" content="SolveNCERT · NDe · NoirDemons" />
+        <meta name="author" content={`${SITE_ALTERNATE_NAME} · ${SITE_ALTERNATE_NAME_NDE}`} />
+        <meta name="keywords" content={BRAND_KEYWORDS} />
         {schemaArr?.map((s, i) => (
           <script
             key={i}
