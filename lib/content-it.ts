@@ -184,19 +184,6 @@ export const IT_CHAPTERS: Chapter[] = [
               schoolMethod: '• www.india.gov.in\n• www.incometax.gov.in\n• www.epathshala.nic.in\n• www.digitalindia.gov.in\n• www.uidai.gov.in (Aadhaar)',
             }
           },
-          {
-            id: 'q14', number: '14', isHard: false,
-            text: 'Explore the impact of IT and ITeS in various areas of day-to-day life. Visit Indian government websites (such as the official portal of the Department of School Education), list the useful information and services you could obtain yourself, and list other instances where ICT is used in business and manufacturing.',
-            parts: [
-              'Impact of IT and ITeS in day-to-day life',
-              'Indian government websites visited and services obtainable',
-              'Instances where ICT is used in business and manufacturing',
-            ],
-            answer: {
-              answerKey: 'IT/ITeS speed up communication, payments, learning, governance; key portals: india.gov.in, incometax.gov.in, digitalindia.gov.in; ICT used in billing, inventory, marketing, automation.',
-              schoolMethod: 'Guided response: IT and ITeS impact daily life through quick communication, online payments and shopping, e-learning, tele-medicine, and e-governance services available without visiting offices. Visit portals such as www.india.gov.in, www.digitalindia.gov.in, www.incometax.gov.in and the Department of School Education portal; note services like certificates, scholarships, results, tax filing and grievance redressal you can obtain yourself. ICT is used in business for billing, stock control, payroll, online sales and marketing, and in manufacturing for design (CAD), production control, quality testing and supply-chain tracking — compile these into a list with one example each.',
-            },
-          },
         ],
       },
       {
@@ -204,19 +191,33 @@ export const IT_CHAPTERS: Chapter[] = [
         questions: [
           {
             id: 'q1', number: '1', isHard: false,
-            text: 'Make a list of e-government services provided by other countries (apart from India). How should you research this?',
-            answer: {
-              answerKey: 'Estonia (X-Road), Singapore (SingPass), UK (GOV.UK), South Korea, UAE — one service line each.',
-              schoolMethod: 'Search official portals country by country and note one flagship service each: <u>Estonia — X-Road</u> (all services linked), <u>Singapore — SingPass</u> (single login), <u>UK — GOV.UK</u> (licences, taxes), <u>South Korea/UAE</u> (customs, visas). Tabulate <u>country → service → what citizens get</u>.',
-            },
+            text: 'Explore the impact of IT and ITeS in various areas in day-to-day life.',
+            answer: { answerKey: 'Observe and record examples such as online banking, e-learning, digital payments, communication, healthcare and e-governance.', schoolMethod: 'Prepare a short list of day-to-day examples: online banking and payments, e-learning, mobile communication, online shopping, digital healthcare services and e-governance. For each, write how IT/ITeS makes the activity faster or easier.' }
           },
           {
             id: 'q2', number: '2', isHard: false,
-            text: 'Identify the advantages of using ICT over conventional methods in various areas. What should your answer cover?',
-            answer: {
-              answerKey: 'Speed, accuracy, 24×7 access, transparency, lower cost and wider reach versus manual methods.',
-              schoolMethod: 'Compare area by area: <u>speed</u> (instant transfers vs queues), <u>accuracy</u> (no manual errors), <u>24×7 access</u>, <u>transparency</u> (trackable records), <u>cost and reach</u> (one portal serves crores). Give <u>one conventional-vs-ICT pair</u> per area (bank, school, shop, hospital).',
-            },
+            text: 'Visit Indian government websites, such as the official web portal of Department of School Education, MHRD, Government of India. Make a list of all the valuable information and the services you could obtain yourself.',
+            answer: { answerKey: 'Visit official government portals and list useful information/services available to citizens or students, such as schemes, scholarships, results, certificates, forms and other e-services.', schoolMethod: 'Visit official government websites and record the useful information and services you can actually access, such as education schemes, scholarships, results, certificates, applications, forms and other e-governance services. Use the exact official website names/URLs you visited.' }
+          },
+          {
+            id: 'q3', number: '3', isHard: false,
+            text: 'Make a list of e-government services that are provided by other countries.',
+            answer: { answerKey: 'Research official government portals of other countries and list their e-government services.', schoolMethod: 'Use official government portals as sources and make a country → service → purpose table. Examples may include online taxation, licences, identity services, public records, visa services and other citizen services.' }
+          },
+          {
+            id: 'q4', number: '4', isHard: false,
+            text: 'Visit the various websites and list the areas where ICT is used.',
+            answer: { answerKey: 'Record areas such as education, banking, healthcare, business, government services, science, communication and manufacturing.', schoolMethod: 'Visit relevant websites and note the ICT use you observe in areas such as education, banking, healthcare, business, government services, science, communication and manufacturing. Give at least one concrete example for each area.' }
+          },
+          {
+            id: 'q5', number: '5', isHard: false,
+            text: 'Identify the advantages of using ICT over conventional methods in various areas.',
+            answer: { answerKey: 'ICT generally provides faster access, easier communication, greater reach, convenient storage/retrieval, improved efficiency and often lower cost.', schoolMethod: 'Compare conventional and ICT-based methods area by area. Mention relevant advantages such as speed, convenience, reach, storage and retrieval of information, efficiency, accuracy and reduced time/cost, with one example for each comparison.' }
+          },
+          {
+            id: 'q6', number: '6', isHard: false,
+            text: 'Observe other instances where ICT is used in business and manufacturing and compile a list.',
+            answer: { answerKey: 'Examples include billing, payroll, inventory control, e-commerce, customer management, CAD, production control, quality testing and supply-chain management.', schoolMethod: 'Compile observed examples such as billing and accounting, payroll, inventory/stock management, e-commerce, customer management, computer-aided design, production control, quality testing and supply-chain tracking.' }
           },
         ]
       },
@@ -326,7 +327,7 @@ export const IT_CHAPTERS: Chapter[] = [
         questions: [
           { id: 'q1', number: '1', isHard: false, text: 'Which of following is not a component of the Office Suite?', parts: ['(a) Writer', '(b) Impress', '(c) Internet Explorer', '(d) Base'], answer: { answerKey: '(c) Internet Explorer', schoolMethod: '(c) Internet Explorer is a web browser, not a component of an office suite.' } },
           { id: 'q2', number: '2', isHard: false, text: 'The most widely used word processing software in late 1970s was ______.', parts: ['(a) Word Perfect', '(b) Word', '(c) Word Star', '(d) Writer'], answer: { answerKey: '(c) Word Star', schoolMethod: '(c) Word Star was the most widely used word processing software in the late 1970s.' } },
-          { id: 'q3', number: '3', isHard: false, text: 'We can change the mistakes noticed in which of the following?', parts: ['(a) Electronic typewriter', '(b) Word processor software', '(c) Simple typewriter', '(d) Both (a) and (b)'], answer: { answerKey: '(d) Both (a) and (b)', schoolMethod: '(d) Both (a) and (b) — mistakes can be corrected in both an electronic typewriter and word processor software.' } },
+          { id: 'q3', number: '3', isHard: false, text: 'We can change the mistakes noticed in which of the following?', parts: ['(a) Electronic typewriter', '(b) Word processor software', '(c) Simple typewriter', '(d) Both (a) and (b)'], answer: { answerKey: '(b) Word processor software', schoolMethod: '(b) Word processor software — the textbook’s question expects the word-processing software option for changing noticed mistakes.' } },
           { id: 'q4', number: '4', isHard: false, text: 'Header and Footer is available in which of the following menus?', parts: ['(a) File Menu', '(b) Insert Menu', '(c) View Menu', '(d) Edit Menu'], answer: { answerKey: '(b) Insert Menu', schoolMethod: '(b) Insert Menu contains the Header and Footer option.' } },
           { id: 'q5', number: '5', isHard: false, text: 'To hide or view ruler we should go to which of the following menus?', parts: ['(a) Tools Menu', '(b) Insert Menu', '(c) View Menu', '(d) Edit Menu'], answer: { answerKey: '(c) View Menu', schoolMethod: '(c) View Menu is used to hide or view the ruler.' } },
           { id: 'q6', number: '6', isHard: false, text: 'To check the grammar we should go to which of the following menus?', parts: ['(a) Tools Menu', '(b) Insert Menu', '(c) View Menu', '(d) Edit Menu'], answer: { answerKey: '(a) Tools Menu', schoolMethod: '(a) Tools Menu contains the grammar check option.' } },
@@ -341,7 +342,7 @@ export const IT_CHAPTERS: Chapter[] = [
           { id: 'q15', number: '15', isHard: false, text: 'What is the shape of the mouse pointer when drawing a table?', parts: ['(a) Pencil', '(b) White pointing arrow', '(c) Black pointing arrow', '(d) Black plus'], answer: { answerKey: '(a) Pencil', schoolMethod: '(a) Pencil — the mouse pointer changes to a pencil shape when drawing a table.' } },
           { id: 'q16', number: '16', isHard: false, text: 'Which shortcut key is used for automatic spell checking?', parts: ['(a) SHIFT + INSERT', '(b) SHIFT + F7', '(c) CTRL + INSERT', '(d) TAB + INSERT'], answer: { answerKey: '(b) SHIFT + F7', schoolMethod: '(b) SHIFT + F7 is the shortcut for automatic spell checking.' } },
           { id: 'q17', number: '17', isHard: false, text: 'Which shortcut key is used to insert table?', parts: ['(a) CTRL + F12', '(b) ALT + DELETE', '(c) CTRL + DELETE', '(d) TAB + DELETE'], answer: { answerKey: '(a) CTRL + F12', schoolMethod: '(a) CTRL + F12 is the shortcut to insert a table.' } },
-          { id: 'q18', number: '18', isHard: false, text: 'Which of the following is not valid type of data source in mail merge?', parts: ['(a) Spreadsheet', '(b) Text files', '(c) MySQL', '(d) CSV file'], answer: { answerKey: '(c) MySQL', schoolMethod: '(c) MySQL is not a valid mail merge data source type in Writer.' } },
+          { id: 'q18', number: '18', isHard: false, text: 'Which of the following is not valid type of data source in mail merge?', parts: ['(a) Spreadsheet', '(b) Text files', '(c) MySQL', '(d) CSV file'], answer: { answerKey: '(b) Text files', schoolMethod: '(b) Text files is the option identified by the textbook answer key as the invalid mail-merge data-source type.' } },
           { id: 'q19', number: '19', isHard: false, text: 'The default orientation of a page in Writer is ______.', parts: ['(a) portrait', '(b) landscape', '(c) book', '(d) None of the above'], answer: { answerKey: '(a) portrait', schoolMethod: '(a) portrait is the default page orientation in Writer.' } },
           { id: 'q20', number: '20', isHard: false, text: 'Which of the following does not come under page formatting?', parts: ['(a) Setting margins', '(b) Find and replace', '(c) Setting header and footer', '(d) Page orientation'], answer: { answerKey: '(b) Find and replace', schoolMethod: '(b) Find and replace is a text-editing tool, not part of page formatting.' } },
           { id: 'q21', number: '21', isHard: false, text: 'Saving an existing document with some other name using the Save As option ______.', parts: ['(a) replaces the current document', '(b) leaves the current document intact', '(c) is not possible', '(d) closes the document'], answer: { answerKey: '(b) leaves the current document intact', schoolMethod: '(b) leaves the current document intact — Save As creates a new file without altering the original.' } },
@@ -545,14 +546,14 @@ export const IT_CHAPTERS: Chapter[] = [
           { id: 'q2', number: '2', isHard: false, text: 'Which of the following options when selected deletes all data validation?', parts: ['(a) Delete formatting', '(b) Delete all', '(c) Delete formula', '(d) Delete me'], answer: { answerKey: '(b) Delete all', schoolMethod: '(b) Delete all removes all data validation rules from a cell.' } },
           { id: 'q3', number: '3', isHard: false, text: 'We can replace multiple occurrences of a word using which of the following facilities of Calc?', parts: ['(a) Find and replace', '(b) By replace only', '(c) By copy command', '(d) By preview command'], answer: { answerKey: '(a) Find and replace', schoolMethod: '(a) Find and replace lets you replace multiple occurrences of a word at once.' } },
           { id: 'q4', number: '4', isHard: false, text: 'What is the name of mechanism to arrange the data in a particular order?', parts: ['(a) Sorting', '(b) Searching', '(c) Filtering', '(d) Validating'], answer: { answerKey: '(a) Sorting', schoolMethod: '(a) Sorting arranges data in ascending or descending order.' } },
-          { id: 'q5', number: '5', isHard: false, text: 'What is the name of mechanism to filter out unnecessary data?', parts: ['(a) Sorting', '(b) Searching', '(c) Filtering', '(d) Validating'], answer: { answerKey: '(d) Validating', schoolMethod: 'As per the answer key given in the source material, the correct answer is (d) Validating.' } },
+          { id: 'q5', number: '5', isHard: false, text: 'What is the name of mechanism to filter out unnecessary data?', parts: ['(a) Sorting', '(b) Searching', '(c) Filtering', '(d) Validating'], answer: { answerKey: '(c) Filtering', schoolMethod: '(c) Filtering is the mechanism used to display only the required data and filter out unnecessary records.' } },
           { id: 'q6', number: '6', isHard: false, text: 'Which of the following type of package does Calc refer to?', parts: ['(a) Spreadsheet', '(b) Double sheet', '(c) Multi-sheet', '(d) Cannot determine'], answer: { answerKey: '(d) Cannot determine', schoolMethod: 'As per the answer key given in the source material, the correct answer is (d) Cannot determine.' } },
           { id: 'q7', number: '7', isHard: false, text: 'Which of the following is an extension of a worksheet created in Calc?', parts: ['(a) .ods', '(b) .odd', '(c) .xls', '(d) .obj'], answer: { answerKey: '(a) .ods', schoolMethod: '(a) .ods is the default extension of a LibreOffice Calc worksheet.' } },
           { id: 'q8', number: '8', isHard: false, text: 'How can one calculate the total of values entered in a worksheet column?', parts: ['(a) By manual entry', '(b) By auto-sum', '(c) By formula', '(d) By sum function'], answer: { answerKey: '(d) By sum function', schoolMethod: '(d) By sum function — the SUM function totals values in a column.' } },
           { id: 'q9', number: '9', isHard: false, text: 'If we move a cell containing a formula having reference to another cell, what will happen to the cell numbers used in the formula?', parts: ['(a) Row and columns changed at destination', '(b) Row changes at destination', '(c) Columns changed at destination', '(d) No change will occur'], answer: { answerKey: '(c) The cell columns are changed at destination', schoolMethod: '(c) The cell columns are changed at destination when a formula cell is moved.' } },
           { id: 'q10', number: '10', isHard: false, text: 'What is the correct way to enter a function in Calc?', parts: ['(a) Directly typing function name in a cell', '(b) Using function wizard or toolbar', '(c) Both (a) and (b)', '(d) Depends on the function'], answer: { answerKey: '(d) Depends on the function', schoolMethod: '(d) Depends on the function — some functions are simple enough to type directly, others need the wizard.' } },
           { id: 'q11', number: '11', isHard: false, text: 'A function should start with ______.', parts: ["(a) '=' sign", '(b) alphabets', '(c) numbers', '(d) All of these'], answer: { answerKey: "(a) '=' sign", schoolMethod: "(a) '=' sign — every function/formula in Calc starts with an equal sign." } },
-          { id: 'q12', number: '12', isHard: false, text: 'Which of the following option is used to print a chart?', parts: ['(a) Insert → Chart', '(b) File → View', '(c) File → Print', '(d) View → Chart'], answer: { answerKey: '(a) Insert → Chart', schoolMethod: 'As per the answer key given in the source material, the correct answer is (a) Insert → Chart.' } },
+          { id: 'q12', number: '12', isHard: false, text: 'Which of the following option is used to print a chart?', parts: ['(a) Insert → Chart', '(b) File → View', '(c) File → Print', '(d) View → Chart'], answer: { answerKey: '(c) File → Print', schoolMethod: '(c) File → Print is the command used to print the chart; Insert → Chart is used to create a chart.' } },
           { id: 'q13', number: '13', isHard: false, text: 'How many axes does charts in Calc have?', parts: ['(a) Two', '(b) Three', '(c) Two or three', '(d) Four'], answer: { answerKey: '(a) Two', schoolMethod: '(a) Two — the X-axis and the Y-axis.' } },
           { id: 'q14', number: '14', isHard: false, text: 'The chart preview can be seen in ______.', parts: ['(a) Page preview', '(b) Chart preview', '(c) Export chart', '(d) All of these'], answer: { answerKey: '(d) All of these', schoolMethod: '(d) All of these options can show a chart preview.' } },
         ]
