@@ -8,6 +8,7 @@ import { REVA_HINDI_CHAPTERS } from './content-hindi-reva';
 import { IRAVATI_CHAPTERS } from './content-iravati';
 import { ARTS_CHAPTERS } from './content-arts';
 import { KAUSHAL_VIKAS_CHAPTERS } from './content-kaushal';
+import { MATHS_PART2_CHAPTERS } from './content-maths-part2';
 
 export interface Chapter {
   id:       string;
@@ -2703,6 +2704,13 @@ export const CLASS_9_SUBJECTS: Subject[] = [
     code: '0904mt', icon: '∑', color: 'blue',
     downloadUrl: '/ebooks/ganita-manjari-grade9-part1.pdf',
     chapters: MATHS_CHAPTERS,
+  },
+  {
+    id: 'maths-part-2', name: 'Mathematics', slug: 'maths',
+    book: 'Ganita Manjari Part II', bookSlug: 'ganita-manjari-part-2',
+    code: '0904mt2', icon: '∑', color: 'indigo',
+    description: 'Class 9 Mathematics (Ganita Manjari Part II) - CBSE 2026 Revised Syllabus. Solutions are being added.',
+    chapters: MATHS_PART2_CHAPTERS,
   },
   {
     id: 'advanced-maths', name: 'Advanced Mathematics', slug: 'advanced-maths',

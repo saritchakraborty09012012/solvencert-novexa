@@ -38,7 +38,7 @@ export default function RefundPolicyPage() {
       </ul>
 
       <h2>5. How to Request a Refund</h2>
-      <p>To request a refund, email us at <a href="mailto:support.noirdemons@puszao.resend.app">support.noirdemons@puszao.resend.app</a> with:</p>
+      <p>To request a refund, email us at <a href="mailto:nde.noirdemons@proton.me">nde.noirdemons@proton.me</a> with:</p>
       <ul>
         <li>Your registered email address</li>
         <li>The 12-digit UTR number of the payment</li>
@@ -47,7 +47,7 @@ export default function RefundPolicyPage() {
       <p>We will review your request within <strong>3 business days</strong> and process eligible refunds within 5–7 business days via the original payment method.</p>
 
       <h2>6. Contact</h2>
-      <p>For refund queries or payment issues, reach us at <a href="mailto:support.noirdemons@puszao.resend.app">support.noirdemons@puszao.resend.app</a> or visit our <Link href="/contact">Contact page</Link>.</p>
+      <p>For refund queries or payment issues, reach us at <a href="mailto:nde.noirdemons@proton.me">nde.noirdemons@proton.me</a> or visit our <Link href="/contact">Contact page</Link>.</p>
     </CompanyLayout>
   );
 }

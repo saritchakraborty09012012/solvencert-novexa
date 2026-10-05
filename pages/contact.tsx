@@ -5,7 +5,7 @@ import { FeedbackStars } from '@/components/features/FeedbackWidget';
 import { useAuthStore } from '@/store/authStore';
 import AuthModal from '@/components/auth/AuthModal';
 
-const SUPPORT_EMAIL = 'support.noirdemons@puszao.resend.app';
+const SUPPORT_EMAIL = 'nde.noirdemons@proton.me';
 
 export default function ContactPage() {
   const user = useAuthStore(s => s.user);

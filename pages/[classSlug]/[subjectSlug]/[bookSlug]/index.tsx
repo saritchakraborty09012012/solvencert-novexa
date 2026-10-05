@@ -23,10 +23,16 @@ export default function BookIndexPage({ classSlug, subjectSlug, bookSlug }: Prop
   // Make sure the bookSlug matches this subject
   if (!subject || subject.bookSlug !== bookSlug) return null;
 
+  const isComingSoon = subject.chapters.length === 0;
+
   return (
     <Layout
-      title={`Class 9 ${subject.name} NCERT Solutions — ${subject.book}`}
-      description={`Complete NCERT solutions for Class 9 ${subject.name} (${subject.book}). All ${subject.chapters.length} chapters covered — NCERT 2026 Revised Syllabus.`}
+      title={isComingSoon
+        ? `Class 9 ${subject.name} NCERT Solutions — ${subject.book} (Coming Soon)`
+        : `Class 9 ${subject.name} NCERT Solutions — ${subject.book}`}
+      description={isComingSoon
+        ? `NCERT solutions for Class 9 ${subject.name} (${subject.book}) are being prepared and will be published soon — NCERT 2026 Revised Syllabus.`
+        : `Complete NCERT solutions for Class 9 ${subject.name} (${subject.book}). All ${subject.chapters.length} chapters covered — NCERT 2026 Revised Syllabus.`}
       canonical={`/${classSlug}/${subjectSlug}/${bookSlug}`}
       schema={{
         '@context': 'https://schema.org',
@@ -59,13 +65,13 @@ export default function BookIndexPage({ classSlug, subjectSlug, bookSlug }: Prop
             <div>
               <span className="badge-2026 mb-1 inline-flex">NCERT 2026 Revised Syllabus</span>
               <h1 className="text-2xl font-display font-bold text-[var(--text-primary)]">Class 9 {subject.name}</h1>
-              <p className="text-sm text-[var(--text-muted)]">{subject.book} · {subject.chapters.length} Chapters</p>
+              <p className="text-sm text-[var(--text-muted)]">{subject.book} · {isComingSoon ? 'Coming soon' : `${subject.chapters.length} Chapters`}</p>
             </div>
           </div>
         </div>
 
         {/* Chapter list */}
-        {subject.chapters.length === 0 ? (
+        {isComingSoon ? (
           <div className="card p-10 text-center">
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/15 to-violet-600/10 border border-blue-500/30 mb-4">
               <BookOpen size={24} className="text-blue-400" />
@@ -105,9 +111,11 @@ export default function BookIndexPage({ classSlug, subjectSlug, bookSlug }: Prop
 
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: CLASS_9_SUBJECTS
-    // English (Kaveri) and Maths (Ganita Manjari) have dedicated book index
-    // pages (pages/class-9/*), so skip them here to avoid conflicting static paths.
-    .filter(s => s.slug !== 'english' && s.slug !== 'maths')
+    // English (Kaveri) and Maths (Ganita Manjari Part I) have dedicated book index
+    // pages (pages/class-9/*), so skip those books here to avoid conflicting
+    // static paths. Other books of the same subject (Ganita Manjari Part II) are
+    // still generated here.
+    .filter(s => s.bookSlug !== 'kaveri' && s.bookSlug !== 'ganita-manjari')
     .map(s => ({
     params: { classSlug: 'class-9', subjectSlug: s.slug, bookSlug: s.bookSlug },
   })),
