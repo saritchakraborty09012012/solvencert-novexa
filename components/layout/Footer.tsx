@@ -22,7 +22,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-2.5">
               {[Twitter, Instagram, Youtube, Mail].map((Icon, i) => (
-                <a key={i} href={Icon === Mail ? 'mailto:nde.noirdemons@proton.me' : '#'}
+                <a key={i} href={Icon === Mail ? 'mailto:nde.noirdemons@atomicmail.io' : '#'}
                   className="w-7 h-7 rounded-lg bg-[var(--surface-2)] flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-3)] hover:-translate-y-0.5 transition-all border border-[var(--border-subtle)]">
                   <Icon size={13} />
                 </a>
