@@ -33,7 +33,6 @@ export default function AnswersPage() {
   const itPartA = CLASS_9_SUBJECTS.find(s => s.id === 'it-part-a');
   const sanskritSharda = CLASS_9_SUBJECTS.find(s => s.id === 'sanskrit-sharda');
   const hindiGanga = CLASS_9_SUBJECTS.find(s => s.id === 'hindi');
-  const mathsPart2 = CLASS_9_SUBJECTS.find(s => s.id === 'maths-part-2');
 
   return (
     <Layout
@@ -101,25 +100,11 @@ export default function AnswersPage() {
                     <span className="w-6 h-6 rounded bg-red-100 dark:bg-red-900/40 text-[10px] font-bold text-red-700 dark:text-red-300 flex items-center justify-center flex-shrink-0">R3</span><span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] flex-1">R3: Reva</span><ChevronRight size={12} className="text-red-600 flex-shrink-0" />
                   </Link>
                 </> : subject.id === 'maths' ? <>
-                  {subject.chapters.slice(0, 4).map(ch => (
-                    <Link key={ch.id} href={chapterUrl(subject, ch)}
-                      className="flex items-center gap-2.5 px-3 py-2 rounded-lg hover:bg-[var(--surface-1)] transition-colors group">
-                      <span className="w-6 h-6 rounded bg-[var(--surface-2)] text-[10px] font-bold text-[var(--text-muted)] flex items-center justify-center flex-shrink-0">{ch.number}</span>
-                      <span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] flex-1 truncate transition-colors">{ch.title}</span>
-                      <ChevronRight size={12} className="text-[var(--text-muted)] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0"/>
-                    </Link>
-                  ))}
-                  {subject.chapters.length > 4 && (
-                    <Link href={`/class-9/${subject.slug}`}
-                      className="flex items-center gap-2 px-3 py-2 rounded-lg text-blue-500 hover:bg-blue-50 dark:hover:bg-blue-950/30 text-sm font-medium transition-colors mt-1">
-                      <BookOpen size={12}/> +{subject.chapters.length - 4} more chapters
-                    </Link>
-                  )}
-                  <Link href={`/class-9/maths/${mathsPart2?.bookSlug}`} className="flex items-center gap-2.5 px-3 py-3 rounded-lg border border-blue-200 dark:border-blue-800 hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors group mt-2">
-                    <span className="w-6 h-6 rounded bg-blue-100 dark:bg-blue-900/40 text-[10px] font-bold text-blue-700 dark:text-blue-300 flex items-center justify-center flex-shrink-0">II</span><span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] flex-1">Part II: Ganita Manjari</span>
-                    {mathsPart2?.chapters.length === 0
-                      ? <span className="text-[10px] font-bold uppercase tracking-wide text-amber-500 flex-shrink-0">Coming Soon</span>
-                      : <ChevronRight size={12} className="text-blue-600 flex-shrink-0" />}
+                  <Link href="/class-9/maths/ganita-manjari" className="flex items-center gap-2.5 px-3 py-3 rounded-lg border border-blue-200 dark:border-blue-800 hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors group">
+                    <span className="w-6 h-6 rounded bg-blue-100 dark:bg-blue-900/40 text-[10px] font-bold text-blue-700 dark:text-blue-300 flex items-center justify-center flex-shrink-0">I</span><span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] flex-1">Part I: Ganita Manjari (Ch 1–8)</span><ChevronRight size={12} className="text-blue-600 flex-shrink-0" />
+                  </Link>
+                  <Link href="/class-9/maths/ganita-manjari#part-2" className="mt-2 flex items-center gap-2.5 px-3 py-3 rounded-lg border border-blue-200 dark:border-blue-800 hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors group">
+                    <span className="w-6 h-6 rounded bg-blue-100 dark:bg-blue-900/40 text-[10px] font-bold text-blue-700 dark:text-blue-300 flex items-center justify-center flex-shrink-0">II</span><span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] flex-1">Part II: Ganita Manjari (Ch 9–14)</span><ChevronRight size={12} className="text-blue-600 flex-shrink-0" />
                   </Link>
                 </> : <>
                 {subject.chapters.slice(0, 5).map(ch => (

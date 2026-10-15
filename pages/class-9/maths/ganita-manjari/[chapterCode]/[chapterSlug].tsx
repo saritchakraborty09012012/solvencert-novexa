@@ -13,6 +13,9 @@ import ThumbsRating from '@/components/features/ThumbsRating';
 import ReportFlag from '@/components/features/ReportFlag';
 import AuthModal from '@/components/auth/AuthModal';
 import { MATHS_SOURCE_CHAPTERS, type MathsSourceQuestion, type MathsSourceExercise } from '@/lib/content-maths-source';
+import { MATHS_PART2_CHAPTERS } from '@/lib/content-maths-part2';
+import type { Chapter } from '@/lib/content';
+import MathRenderer from '@/components/features/MathRenderer';
 import { useAuthStore } from '@/store/authStore';
 import { hasReachedGuestLimit, incrementSolutionView } from '@/lib/guestLimits';
 import { cn, getSubjectBackground } from '@/utils/helpers';
@@ -34,8 +37,42 @@ function CopyBtn({ text }: { text: string }) {
   );
 }
 
+// ── Part II adapter ─────────────────────────────────────────────────────────
+// Part II content lives as the standard Chapter shape (markdown + $math$). The
+// page above renders Part I's notebook HTML, so Part II questions carry an
+// optional `md` payload that NotebookQuestion renders through MathRenderer.
+type GmQuestion = MathsSourceQuestion & { md?: { text: string; school: string } };
+interface GmExercise { id: string; title: string; introHtml: string; questions: GmQuestion[]; }
+interface GmChapter { code: string; slug: string; title: string; number: number; exercises: GmExercise[]; }
+
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function part2ToGm(chapter: Chapter): GmChapter {
+  return {
+    code: chapter.code, slug: chapter.slug, title: chapter.title, number: chapter.number,
+    exercises: chapter.exercises.map(ex => ({
+      id: ex.id, title: ex.title, introHtml: '',
+      questions: ex.questions.map(q => ({
+        id: q.id,
+        number: q.number,
+        head: `<div class="qnum">${escapeHtml(q.number)}</div><div class="qtext">${escapeHtml(q.text)}</div>`,
+        body: '',
+        plainText: `${q.text}\n\n${q.answer.schoolMethod}`,
+        answerKey: q.answer.answerKey,
+        md: { text: q.text, school: q.answer.schoolMethod },
+      })) as GmQuestion[],
+    })),
+  };
+}
+
+function questionText(q: GmQuestion): string {
+  return q.md ? q.md.text : q.plainText;
+}
+
 function ExerciseQuestions({ exercise, chapter, guestBlocked, onGuestBlock }: {
-  exercise: MathsSourceExercise;
+  exercise: GmExercise;
   chapter: { code: string; slug: string; title: string; number: number };
   guestBlocked: boolean;
   onGuestBlock: () => void;
@@ -84,7 +121,7 @@ function ExerciseQuestions({ exercise, chapter, guestBlocked, onGuestBlock }: {
 }
 
 function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, showKey, showSol, onToggleKey, onToggleSol }: {
-  q: MathsSourceQuestion; exercise: MathsSourceExercise;
+  q: GmQuestion; exercise: GmExercise;
   chapter: { code: string; slug: string; title: string; number: number };
   onGuestBlock: () => void; guestBlocked: boolean;
   showKey: boolean; showSol: boolean;
@@ -95,7 +132,12 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
     <div className="question-block" id={`q-${exercise.id}-${q.id}`}>
       <div className="ganita-notebook">
         <div className="qcard">
-          <div className="qhead" dangerouslySetInnerHTML={{ __html: q.head }} />
+          {q.md
+            ? <div className="qhead">
+                <div className="qnum">{q.number}</div>
+                <div className="qtext"><MathRenderer text={q.md.text} /></div>
+              </div>
+            : <div className="qhead" dangerouslySetInnerHTML={{ __html: q.head }} />}
           {guestBlocked ? (
             <div className="qbody">
               <GuestPaywall onSignUp={onGuestBlock} onLogin={onGuestBlock} />
@@ -116,7 +158,9 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
                   <div className="flex items-start gap-2">
                     <span className="flex-shrink-0 mt-1 rounded-md bg-amber-600/10 dark:bg-amber-400/15 text-amber-600 dark:text-amber-400 font-bold px-2 py-0.5">Ans.</span>
                     <div className="flex-1 min-w-0">
-                      <span className="box" style={{ whiteSpace: 'pre-line' }}>{q.answerKey}</span>
+                      {q.md
+                        ? <MathRenderer text={q.answerKey} className="box" />
+                        : <span className="box" style={{ whiteSpace: 'pre-line' }}>{q.answerKey}</span>}
                     </div>
                   </div>
                   <div className="flex items-center justify-between mt-2">
@@ -133,14 +177,16 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
                     <p className="font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">School Level Solution</p>
                     <BookmarkButton
                       subject="maths" chapterCode={chapter.code} chapterSlug={chapter.slug} chapterTitle={chapter.title}
-                      questionId={`${exercise.id}-${q.id}`} questionNumber={q.number.replace(/\u2605/g, '')} questionText={q.plainText}
+                      questionId={`${exercise.id}-${q.id}`} questionNumber={q.number.replace(/\u2605/g, '')} questionText={questionText(q)}
                       onGuestBlock={onGuestBlock}
                     />
                   </div>
-                  <div dangerouslySetInnerHTML={{ __html: q.body }} />
+                  {q.md
+                    ? <MathRenderer text={q.md.school} className="answer-body" />
+                    : <div dangerouslySetInnerHTML={{ __html: q.body }} />}
                   <div className="flex items-center justify-between mt-2">
-                    <div className="answer-actions"><ReadAloud text={q.plainText} size="sm" /><CopyBtn text={q.plainText} /></div>
-                    <ReportFlag reportedContent={q.plainText} onGuestBlock={onGuestBlock} />
+                    <div className="answer-actions"><ReadAloud text={questionText(q)} size="sm" /><CopyBtn text={questionText(q)} /></div>
+                    <ReportFlag reportedContent={questionText(q)} onGuestBlock={onGuestBlock} />
                   </div>
                   <ThumbsRating subject="maths" chapterNumber={chapter.number} exerciseLabel={exercise.title} itemKey={`${exercise.id}-${q.id}-solution`} />
                 </div>
@@ -156,8 +202,20 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
 
 interface PageProps { chapterCode: string; chapterSlug: string; }
 
+// Unified sidebar list — Part I (source HTML data) + Part II (Chapter data).
+const ALL_GM_CHAPTERS: { code: string; slug: string; title: string; number: number; part: 1 | 2 }[] = [
+  ...MATHS_SOURCE_CHAPTERS.map(ch => ({ code: ch.code, slug: ch.slug, title: ch.title, number: ch.number, part: 1 as const })),
+  ...MATHS_PART2_CHAPTERS.map(ch => ({ code: ch.code, slug: ch.slug, title: ch.title, number: ch.number, part: 2 as const })),
+];
+const PART2_FIRST = MATHS_PART2_CHAPTERS[0]?.number ?? Infinity;
+
 export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps) {
-  const chapter = MATHS_SOURCE_CHAPTERS.find(c => c.code === chapterCode && c.slug === chapterSlug);
+  const srcChapter = MATHS_SOURCE_CHAPTERS.find(c => c.code === chapterCode && c.slug === chapterSlug);
+  const p2Source = srcChapter ? undefined : MATHS_PART2_CHAPTERS.find(c => c.code === chapterCode && c.slug === chapterSlug);
+  const chapter: GmChapter | undefined = srcChapter
+    ? { code: srcChapter.code, slug: srcChapter.slug, title: srcChapter.title, number: srcChapter.number, exercises: srcChapter.exercises as unknown as GmExercise[] }
+    : (p2Source ? part2ToGm(p2Source) : undefined);
+  const bookLabel = chapter ? (chapter.number >= PART2_FIRST ? 'Part II' : 'Part I') : 'Part I';
   const [selEx, setSelEx] = useState<string>('all');
   const [guestBlocked, setGuestBlocked] = useState(false);
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null);
@@ -182,7 +240,7 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     const write = (line: string) => { if (y > 790) { pdf.addPage(); y = 48; } pdf.text(line, 48, y); y += 16; };
     pdf.setFontSize(16); pdf.text(`Chapter ${chapter.number}: ${chapter.title}`, 48, y); y += 20;
     pdf.setFontSize(10);
-    write('Class 9 Maths · Ganita Manjari Part I · NCERT 2026 Revised Syllabus');
+    write(`Class 9 Maths · Ganita Manjari ${bookLabel} · NCERT 2026 Revised Syllabus`);
     y += 10;
     exercises.forEach(ex => {
       pdf.setFontSize(13); write(ex.title); pdf.setFontSize(10); y += 6;
@@ -209,7 +267,7 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     .footer{position:fixed;bottom:0;left:0;right:0;background:#fff;padding:8px 24px;font-size:10px;color:#6b7280;border-top:1px solid #dde3f0;text-align:center}
     @media print{body{padding-bottom:40px}}</style></head><body>
     <h1>Chapter ${chapter.number}: ${chapter.title} — Answer Keys</h1>
-    <p style="color:#6b7280;font-size:12px;margin-bottom:20px">Class 9 Maths (Ganita Manjari Part I) · Quick-reference answer keys only · NCERT 2026 Revised Syllabus</p>
+    <p style="color:#6b7280;font-size:12px;margin-bottom:20px">Class 9 Maths (Ganita Manjari ${bookLabel}) · Quick-reference answer keys only · NCERT 2026 Revised Syllabus</p>
     ${exercises.map(ex => `<h2>${ex.title}</h2>${ex.questions.map(q => `
       <div class="q"><p><strong>Q${q.number.replace(/\u2605/g, '')}.</strong> ${q.answerKey.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\n/g, '<br>')}</p></div>`).join('')}`).join('')}
     <div class="footer">SolveNCERT — Powered by NDe · formerly NOVEXA | solvencert · NCERT 2026 Revised Syllabus</div>
@@ -256,13 +314,13 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     url: chapterUrl,
     identifier: chapterCodeUpper,
     about: { '@type': 'Chapter', name: chapter.title, position: chapter.number, code: chapterCodeUpper },
-    isPartOf: { '@type': 'Book', name: 'Ganita Manjari Part I', isbn: 'NCERT Class 9 Maths' },
+    isPartOf: { '@type': 'Book', name: `Ganita Manjari ${bookLabel}`, isbn: 'NCERT Class 9 Maths' },
   };
 
   return (
     <Layout
       title={`${chapter.title} — ${chapterCodeUpper} | Class 9 Maths NCERT Solutions`}
-      description={`NCERT Solutions for Class 9 Maths Chapter ${chapter.number} (${chapterCodeUpper}): ${chapter.title}. Step-by-step notebook-style answers for every exercise with diagrams and boxed solutions — CBSE 2026 Revised Syllabus (Ganita Manjari Part I).`}
+      description={`NCERT Solutions for Class 9 Maths Chapter ${chapter.number} (${chapterCodeUpper}): ${chapter.title}. Step-by-step notebook-style answers for every exercise with diagrams and boxed solutions — CBSE 2026 Revised Syllabus (Ganita Manjari ${bookLabel}).`}
       canonical={`/class-9/maths/ganita-manjari/${chapterCode}/${chapterSlug}`}
       ogType="article"
       schema={[breadcrumbSchema, articleSchema]}
@@ -289,13 +347,18 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
             <div className="sticky top-28 card p-4">
               <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-3">Chapters</p>
               <nav className="space-y-0.5 max-h-[65vh] overflow-y-auto scrollbar-hide">
-                {MATHS_SOURCE_CHAPTERS.map(ch => (
-                  <Link key={ch.slug} href={`/class-9/maths/ganita-manjari/${ch.code}/${ch.slug}`}
-                    className={cn('flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs transition-colors',
-                      ch.slug === chapterSlug ? 'bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 font-semibold' : 'text-[var(--text-muted)] hover:bg-[var(--surface-1)]')}>
-                    <span className="w-5 h-5 rounded bg-[var(--surface-2)] text-[10px] font-bold flex items-center justify-center flex-shrink-0">{ch.number}</span>
-                    <span className="truncate leading-tight">{ch.title}</span>
-                  </Link>
+                {ALL_GM_CHAPTERS.map(ch => (
+                  <React.Fragment key={ch.code}>
+                    {ch.number === PART2_FIRST && (
+                      <p className="text-[9px] font-bold uppercase tracking-[0.18em] text-blue-500/90 px-2.5 pt-2 pb-0.5">Part II</p>
+                    )}
+                    <Link href={`/class-9/maths/ganita-manjari/${ch.code}/${ch.slug}`}
+                      className={cn('flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs transition-colors',
+                        ch.slug === chapterSlug ? 'bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 font-semibold' : 'text-[var(--text-muted)] hover:bg-[var(--surface-1)]')}>
+                      <span className="w-5 h-5 rounded bg-[var(--surface-2)] text-[10px] font-bold flex items-center justify-center flex-shrink-0">{ch.number}</span>
+                      <span className="truncate leading-tight">{ch.title}</span>
+                    </Link>
+                  </React.Fragment>
                 ))}
               </nav>
             </div>
@@ -309,9 +372,9 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
                 <span className="badge-2026">NCERT 2026 Revised Syllabus</span>
               </div>
               <h1 className="text-2xl md:text-3xl font-display font-bold text-[var(--text-primary)] leading-tight">Chapter {chapter.number}: {chapter.title} <span className="text-lg md:text-xl font-normal text-[var(--text-muted)]">({chapter.code.toUpperCase()})</span></h1>
-              <p className="text-sm text-[var(--text-muted)] mt-2">Ganita Manjari Part I · {totalQ} questions · {chapter.exercises.length} exercises</p>
-              <p className="text-xs text-[var(--text-muted)] mt-4">Chapter code: <span className="font-mono font-semibold text-[var(--text-secondary)]">{chapter.code}</span> · Book: Ganita Manjari Part I · Class 9 Maths</p>
-              <p className="text-sm text-[var(--text-secondary)] mt-3 leading-relaxed">Find complete NCERT solutions for Class 9 Maths, Ganita Manjari Part I Chapter {chapter.number}. Every exercise has a clear, step-by-step answer for chapter code {chapter.code.toUpperCase()}.</p>
+<p className="text-sm text-[var(--text-muted)] mt-2">Ganita Manjari {bookLabel} · {totalQ} questions · {chapter.exercises.length} exercises</p>
+              <p className="text-xs text-[var(--text-muted)] mt-4">Chapter code: <span className="font-mono font-semibold text-[var(--text-secondary)]">{chapter.code}</span> · Book: Ganita Manjari {bookLabel} · Class 9 Maths</p>
+              <p className="text-sm text-[var(--text-secondary)] mt-3 leading-relaxed">Find complete NCERT solutions for Class 9 Maths, Ganita Manjari {bookLabel} Chapter {chapter.number}. Every exercise has a clear, step-by-step answer for chapter code {chapter.code.toUpperCase()}.</p>
             </div>
 
             {/* Exercise selector + download */}
@@ -359,13 +422,18 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
             {/* Mobile chapter nav */}
             <div className="lg:hidden mt-8 card p-4">
               <p className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)] mb-3">Other Chapters</p>
-              <div className="flex flex-wrap gap-2">
-                {MATHS_SOURCE_CHAPTERS.map(ch => (
-                  <Link key={ch.slug} href={`/class-9/maths/ganita-manjari/${ch.code}/${ch.slug}`}
-                    className={cn('px-3 py-1.5 rounded-lg text-xs font-medium transition-colors',
-                      ch.slug === chapterSlug ? 'bg-blue-600 text-white' : 'bg-[var(--surface-2)] text-[var(--text-secondary)] hover:bg-[var(--surface-3)]')}>
-                    {ch.number}
-                  </Link>
+              <div className="flex flex-wrap gap-2 items-center">
+                {ALL_GM_CHAPTERS.map(ch => (
+                  <React.Fragment key={ch.code}>
+                    {ch.number === PART2_FIRST && (
+                      <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-blue-500/90 w-full mt-1">Part II</span>
+                    )}
+                    <Link href={`/class-9/maths/ganita-manjari/${ch.code}/${ch.slug}`}
+                      className={cn('px-3 py-1.5 rounded-lg text-xs font-medium transition-colors',
+                        ch.slug === chapterSlug ? 'bg-blue-600 text-white' : 'bg-[var(--surface-2)] text-[var(--text-secondary)] hover:bg-[var(--surface-3)]')}>
+                      {ch.number}
+                    </Link>
+                  </React.Fragment>
                 ))}
               </div>
             </div>
@@ -385,7 +453,10 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
 }
 
 export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: MATHS_SOURCE_CHAPTERS.map(ch => ({ params: { chapterCode: ch.code, chapterSlug: ch.slug } })),
+  paths: [
+    ...MATHS_SOURCE_CHAPTERS.map(ch => ({ params: { chapterCode: ch.code, chapterSlug: ch.slug } })),
+    ...MATHS_PART2_CHAPTERS.map(ch => ({ params: { chapterCode: ch.code, chapterSlug: ch.slug } })),
+  ],
   fallback: 'blocking'
 });
 

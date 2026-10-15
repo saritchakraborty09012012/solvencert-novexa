@@ -113,9 +113,9 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   paths: CLASS_9_SUBJECTS
     // English (Kaveri) and Maths (Ganita Manjari Part I) have dedicated book index
     // pages (pages/class-9/*), so skip those books here to avoid conflicting
-    // static paths. Other books of the same subject (Ganita Manjari Part II) are
-    // still generated here.
-    .filter(s => s.bookSlug !== 'kaveri' && s.bookSlug !== 'ganita-manjari')
+    // static paths. Part II also lives on the shared book page (redirected via
+    // next.config.js), so it is skipped here too.
+    .filter(s => s.bookSlug !== 'kaveri' && s.bookSlug !== 'ganita-manjari' && s.bookSlug !== 'ganita-manjari-part-2')
     .map(s => ({
     params: { classSlug: 'class-9', subjectSlug: s.slug, bookSlug: s.bookSlug },
   })),

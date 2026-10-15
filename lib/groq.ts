@@ -53,6 +53,14 @@ Ch5: Circles — circumference = 2πr, area = πr², arc, sector, chord
 Ch6: Perimeter and Area — triangles (Heron's formula), quadrilaterals, composite shapes
 Ch7: Probability — sample space, events, P(E) = favourable/total outcomes
 Ch8: Sequences and Progressions — AP, nth term = a+(n-1)d, sum = n/2(2a+(n-1)d)
+
+GANITA MANJARI PART II — Class 9 Maths, Chapters 9-14 (NCERT 2026):
+Ch9: Propositions and Their Converses — statements, truth values, converses, parallel lines & transversals
+Ch10: Understanding Data — organising data, tables, bar graphs, mean, median, mode
+Ch11: The World of Algorithms — step-by-step algorithmic thinking, flowcharts, conditions, loops
+Ch12: Quadrilaterals — angle sum property, parallelogram properties, mid-point theorem
+Ch13: Two Variables, One Line — linear equations in two variables, plotting lines, solutions as ordered pairs
+Ch14: Math of Space — surface area and volume of cuboid, cube, cylinder, cone, sphere
 `;
 
 const SYSTEM_PROMPT = `You are SolveNCERT AI — a brilliant, warm and knowledgeable learning assistant for CBSE Class 9 students.
@@ -64,7 +72,7 @@ YOUR PERSONALITY:
 
 YOUR KNOWLEDGE (NCERT 2026 Revised Syllabus):
 
-=== MATHEMATICS (Ganita Manjari Part I) ===
+=== MATHEMATICS (Ganita Manjari Parts I & II) ===
 ${MATHS_CONTEXT}
 
 === SCIENCE (Exploration) ===
@@ -239,7 +247,7 @@ export async function aiSmartSearch(query: string): Promise<{title:string;subjec
   const prompt = `You are a search assistant for SolveNCERT (CBSE Class 9, NCERT 2026 Revised Syllabus).
 
 Available chapters:
-MATHS: Ch1-Coordinates, Ch2-Linear Polynomials, Ch3-World of Numbers, Ch4-Algebraic Identities, Ch5-Circles, Ch6-Perimeter & Area, Ch7-Probability, Ch8-Sequences & AP
+MATHS: Ch1-Coordinates, Ch2-Linear Polynomials, Ch3-World of Numbers, Ch4-Algebraic Identities, Ch5-Circles, Ch6-Perimeter & Area, Ch7-Probability, Ch8-Sequences & AP, Ch9-Propositions and Converses, Ch10-Understanding Data, Ch11-World of Algorithms, Ch12-Quadrilaterals, Ch13-Two Variables One Line, Ch14-Surface Area & Volume
 SCIENCE: Ch1-Exploring Science, Ch2-Cell, Ch3-Tissues, Ch4-Describing Motion, Ch5-Mixtures, Ch6-How Forces Affect Motion, Ch7-Work Energy Simple Machines, Ch8-Journey Inside Atom, Ch9-Atomic Foundations, Ch10-Sound Waves, Ch11-Reproduction, Ch12-Diversity Classification, Ch13-Earth as System
 ENGLISH: Ch1-How I Taught My Grandmother, Ch2-The Pot Maker, Ch3-Winds of Change, Ch4-Vitamin-M, Ch5-World of Limitless Possibilities, Ch6-Twin Melodies, Ch7-Carrier of Words, Ch8-Follow That Dream
 SST: Ch1-Understanding Social Science, Ch2-Shaping of the Earth's Surface, Ch3-Atmosphere and Climate, Ch4-Early Humans and Beginning of Civilisation, Ch5-State and Society up to 1000 CE, Ch6-Democracy, Ch7-Elections, Ch8-Building Blocks in Economics: The Problem of Choice, Ch9-The Price Puzzle: What Drives the Market
@@ -254,7 +262,7 @@ Return ONLY a JSON array (no markdown, no extra text):
 [{"title":"Chapter Title","subject":"Maths","chapter":"Chapter 1","url":"/class-9/maths/ganita-manjari/0904ch01/orienting-yourself-the-use-of-coordinates","snippet":"Brief description"}]
 
 URL patterns:
-- Maths: /class-9/maths/ganita-manjari/0904ch0N/chapter-slug
+- Maths: /class-9/maths/ganita-manjari/0904chNN/chapter-slug (Part I: ch01-ch08, Part II: ch09-ch14)
 - Science: /class-9/science/exploration/0906ch0N/chapter-slug  
 - English: /class-9/english/kaveri/0903ch0N/chapter-slug
 - SST: /class-9/sst/understanding-society-india-and-beyond/0908ch0N/chapter-slug

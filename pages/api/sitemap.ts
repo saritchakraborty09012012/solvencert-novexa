@@ -13,6 +13,16 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   const chapterUrls: string[] = [];
   for (const subject of CLASS_9_SUBJECTS) {
+    // Ganita Manjari Part II lives on the shared book page + shared chapter
+    // routes (solvencert-novexa.vercel.app/class-9/maths/ganita-manjari/...),
+    // not under its own bookSlug — publish those canonical URLs instead.
+    if (subject.id === 'maths-part-2') {
+      for (const chapter of subject.chapters) {
+        chapterUrls.push(`/class-9/maths/ganita-manjari/${chapter.code}/${chapter.slug}`);
+      }
+      continue;
+    }
+
     // Use the SEO-canonical book-level URL (e.g. /class-9/maths/ganita-manjari)
     chapterUrls.push(`/class-9/${subject.slug}/${subject.bookSlug}`);
 

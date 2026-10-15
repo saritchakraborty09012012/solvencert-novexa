@@ -53,6 +53,8 @@ const nextConfig = {
       { source: '/class-9/maths',   destination: '/class-9/maths/ganita-manjari', permanent: true },
       { source: '/class-9/science', destination: '/class-9/science/exploration',  permanent: true },
       { source: '/class-9/english', destination: '/class-9/english/kaveri',       permanent: true },
+      // Ganita Manjari Part II lives on the shared book page (anchored section)
+      { source: '/class-9/maths/ganita-manjari-part-2', destination: '/class-9/maths/ganita-manjari', permanent: true },
     ];
   },
   async rewrites() {

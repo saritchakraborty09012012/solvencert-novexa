@@ -2709,7 +2709,8 @@ export const CLASS_9_SUBJECTS: Subject[] = [
     id: 'maths-part-2', name: 'Mathematics', slug: 'maths',
     book: 'Ganita Manjari Part II', bookSlug: 'ganita-manjari-part-2',
     code: '0904mt2', icon: '∑', color: 'indigo',
-    description: 'Class 9 Mathematics (Ganita Manjari Part II) - CBSE 2026 Revised Syllabus. Solutions are being added.',
+    description: 'Class 9 Mathematics (Ganita Manjari Part II) - CBSE 2026 Revised Syllabus. Chapters 9-14 with complete worked solutions.',
+    downloadUrl: '/ebooks/Ganita-Mnajari-Part-2.pdf',
     chapters: MATHS_PART2_CHAPTERS,
   },
   {
@@ -3373,6 +3374,7 @@ export function getChapter(subjectSlug: string, chapterSlug: string, bookSlug?: 
 //   arts    → iemr101…iemr117   kaushal-vikas → iekv101…iekv112
 //   hindi (ganga) → ihga101…ihga112   hindi (reva) → reva101…reva110
 //   sanskrit (sharda) → ihsh101…ihsh116   sanskrit (iravati) → iravati101…iravati111
+//   maths part 2 → iemh201…iemh206 (chapter 9 → iemh201 … chapter 14 → iemh206)
 const CHAPTER_PDF_PREFIX: Record<string, string> = {
   english: 'iebe',
   maths:   'iemh',
@@ -3389,6 +3391,10 @@ const CHAPTER_PDF_PREFIX: Record<string, string> = {
 /** Returns the public URL of the chapter's own PDF (e.g. /ebooks/iemh103.pdf), or null if the subject has no per-chapter PDFs.
  *  Accepts subjectId to disambiguate subjects that share a slug (e.g. hindi → ganga vs reva). */
 export function getChapterPdfUrl(subjectSlug: string, chapterNumber: number, subjectId?: string): string | null {
+  // Ganita Manjari Part II keeps its own numbering: chapter 9 → iemh201 … chapter 14 → iemh206.
+  if (subjectId === 'maths-part-2') {
+    return `/ebooks/iemh2${String(chapterNumber - 8).padStart(2, '0')}.pdf`;
+  }
   const prefix = (subjectId && CHAPTER_PDF_PREFIX[subjectId]) || CHAPTER_PDF_PREFIX[subjectSlug];
   if (!prefix) return null;
   return `/ebooks/${prefix}1${String(chapterNumber).padStart(2, '0')}.pdf`;
@@ -3449,4 +3455,39 @@ CHAPTER 8: Predicting What Comes Next: Exploring Sequences and Progressions
 - Common difference d
 - nth term: aₙ = a + (n-1)d
 - Sum of n terms: Sₙ = n/2 × [2a + (n-1)d]
+
+GANITA MANJARI PART II - Grade 9 Mathematics, Chapters 9-14 (NCERT 2026 Revised Syllabus)
+
+CHAPTER 9: Propositions and Their Converses
+- Statements, propositions and their truth values
+- Converses of statements, verifying both directions
+- Parallel lines and transversals (corresponding angles and their converses)
+- Justifying arguments with logical reasoning
+
+CHAPTER 10: How Quantities Combine: Understanding Data
+- Organising and representing data, tables and bar graphs
+- Mean, median and mode of raw data
+- Reading and interpreting charts from daily life
+
+CHAPTER 11: The World of Algorithms
+- Algorithmic thinking: precise step-by-step instructions
+- Designing algorithms for everyday tasks (sorting, searching)
+- Flowcharts, conditions and loops in plain language
+
+CHAPTER 12: Quadrilaterals
+- Angle sum property of a quadrilateral
+- Types: parallelogram, rectangle, square, rhombus, trapezium
+- Properties of parallelograms (opposite sides/angles, diagonals)
+- Mid-point theorem and converse
+
+CHAPTER 13: Two Variables, One Line
+- Linear equations in two variables ax + by + c = 0
+- Solutions as ordered pairs, plotting lines on the Cartesian plane
+- Lines parallel to the axes, unique solution of a linear pair
+
+CHAPTER 14: Math of Space: Surface Area and Volume
+- Cuboid and cube: total surface area and volume
+- Cylinder: curved/total surface area and volume (πr²h)
+- Cone and sphere: surface area and volume formulas
+- Unit conversion and real-world mensuration problems
 `;

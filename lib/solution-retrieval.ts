@@ -7,6 +7,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { MATHS_SOURCE_CHAPTERS } from './content-maths-source';
+import { MATHS_PART2_CHAPTERS } from './content-maths-part2';
 import { SCIENCE_CHAPTERS } from './content-science';
 import { ADVMATH_CHAPTERS } from './content-advmath';
 import { ADVSCIENCE_CHAPTERS } from './content-advscience';
@@ -79,6 +80,25 @@ function getIndex(): IndexedEntry[] {
           question,
           solution: cap(q.plainText, 2200),
           tokens: new Set(tokenize(`${ch.title} ${ex.title} ${q.plainText}`)),
+        });
+      }
+    }
+  }
+
+  // Maths — Ganita Manjari Part II (chapters 9-14, standard Chapter shape)
+  for (const ch of MATHS_PART2_CHAPTERS) {
+    for (const ex of ch.exercises) {
+      for (const q of ex.questions) {
+        const sol = `${q.answer.answerKey}\n${q.answer.schoolMethod}`;
+        entries.push({
+          subject: 'Maths',
+          chapterNumber: ch.number,
+          chapterTitle: ch.title,
+          sectionTitle: ex.title,
+          questionNumber: q.number,
+          question: cap(q.text, 900),
+          solution: cap(sol, 2200),
+          tokens: new Set(tokenize(`${ch.title} ${ex.title} ${q.text} ${sol}`)),
         });
       }
     }
