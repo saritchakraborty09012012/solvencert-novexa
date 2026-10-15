@@ -41,7 +41,11 @@ function CopyBtn({ text }: { text: string }) {
 // Part II content lives as the standard Chapter shape (markdown + $math$). The
 // page above renders Part I's notebook HTML, so Part II questions carry an
 // optional `md` payload that NotebookQuestion renders through MathRenderer.
-type GmQuestion = MathsSourceQuestion & { md?: { text: string; school: string } };
+type GmQuestion = MathsSourceQuestion & {
+  md?: { text: string; school: string };
+  instruction?: string;
+  figure?: { svg: string; caption?: string };
+};
 interface GmExercise { id: string; title: string; introHtml: string; questions: GmQuestion[]; }
 interface GmChapter { code: string; slug: string; title: string; number: number; exercises: GmExercise[]; }
 
@@ -61,6 +65,8 @@ function part2ToGm(chapter: Chapter): GmChapter {
         body: '',
         plainText: `${q.text}\n\n${q.answer.schoolMethod}`,
         answerKey: q.answer.answerKey,
+        instruction: q.instruction,
+        figure: q.figure,
         md: { text: q.text, school: q.answer.schoolMethod },
       })) as GmQuestion[],
     })),
@@ -69,6 +75,24 @@ function part2ToGm(chapter: Chapter): GmChapter {
 
 function questionText(q: GmQuestion): string {
   return q.md ? q.md.text : q.plainText;
+}
+
+// Rasterise an inline SVG figure so jsPDF can embed it as a PNG.
+function svgToPngDataUrl(svg: string, scale = 2): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.max(1, Math.round(img.naturalWidth * scale));
+      canvas.height = Math.max(1, Math.round(img.naturalHeight * scale));
+      const ctx = canvas.getContext('2d');
+      if (!ctx) { reject(new Error('canvas context unavailable')); return; }
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      resolve(canvas.toDataURL('image/png'));
+    };
+    img.onerror = () => reject(new Error('SVG rasterisation failed'));
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  });
 }
 
 function ExerciseQuestions({ exercise, chapter, guestBlocked, onGuestBlock }: {
@@ -132,10 +156,19 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
     <div className="question-block" id={`q-${exercise.id}-${q.id}`}>
       <div className="ganita-notebook">
         <div className="qcard">
+          {q.instruction && <div className="qinstr">{q.instruction}</div>}
           {q.md
             ? <div className="qhead">
                 <div className="qnum">{q.number}</div>
-                <div className="qtext"><MathRenderer text={q.md.text} /></div>
+                <div className="qtext">
+                  <MathRenderer text={q.md.text} />
+                  {q.figure && (
+                    <figure className="qfig">
+                      <div dangerouslySetInnerHTML={{ __html: q.figure.svg }} />
+                      {q.figure.caption && <figcaption>{q.figure.caption}</figcaption>}
+                    </figure>
+                  )}
+                </div>
               </div>
             : <div className="qhead" dangerouslySetInnerHTML={{ __html: q.head }} />}
           {guestBlocked ? (
@@ -238,19 +271,49 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     const pdf = new jsPDF({ unit: 'pt', format: 'a4' });
     let y = 48;
     const write = (line: string) => { if (y > 790) { pdf.addPage(); y = 48; } pdf.text(line, 48, y); y += 16; };
+    const writeWrapped = (text: string, size: number, style: 'normal' | 'italic' = 'normal') => {
+      pdf.setFont('helvetica', style); pdf.setFontSize(size);
+      pdf.splitTextToSize(text, 510).forEach((l: string) => write(l));
+      pdf.setFont('helvetica', 'normal'); pdf.setFontSize(10);
+    };
     pdf.setFontSize(16); pdf.text(`Chapter ${chapter.number}: ${chapter.title}`, 48, y); y += 20;
     pdf.setFontSize(10);
     write(`Class 9 Maths · Ganita Manjari ${bookLabel} · NCERT 2026 Revised Syllabus`);
     y += 10;
-    exercises.forEach(ex => {
+    for (const ex of exercises) {
       pdf.setFontSize(13); write(ex.title); pdf.setFontSize(10); y += 6;
-      ex.questions.forEach(q => {
-        const lines = pdf.splitTextToSize(`Q${q.number.replace(/\u2605/g, '')}. ${q.plainText}`, 510);
-        lines.forEach((l: string) => write(l));
+      for (const q of ex.questions) {
+        const gm = q as GmQuestion;
+        if (gm.instruction) { writeWrapped(gm.instruction, 10, 'italic'); y += 4; }
+        const starred = q.number.includes('\u2605');
+        const num = q.number.replace(/\u2605/g, '');
+        const sep = q.plainText.indexOf('\n\n');
+        const qPart = sep >= 0 ? q.plainText.slice(0, sep) : q.plainText;
+        const sPart = sep >= 0 ? q.plainText.slice(sep + 2) : '';
+        writeWrapped(`Q${starred ? '*' : ''}${num}. ${qPart}`, 10);
+        if (gm.figure) {
+          try {
+            const png = await svgToPngDataUrl(gm.figure.svg);
+            const props = pdf.getImageProperties(png);
+            const w = 160;
+            const h = (w * props.height) / props.width;
+            if (y + h + 30 > 790) { pdf.addPage(); y = 48; }
+            pdf.addImage(png, 'PNG', 48 + (510 - w) / 2, y, w, h);
+            y += h + 4;
+            if (gm.figure.caption) {
+              pdf.setFontSize(9);
+              const capW = pdf.getTextWidth(gm.figure.caption);
+              pdf.text(gm.figure.caption, 48 + (510 - capW) / 2, y);
+              y += 14;
+              pdf.setFontSize(10);
+            }
+          } catch { /* skip figure if rasterisation fails */ }
+        }
+        if (sPart) { y += 4; writeWrapped(sPart, 10); }
         y += 6;
-      });
+      }
       y += 8;
-    });
+    }
     pdf.setFontSize(9);
     write('SolveNCERT — Powered by NDe · formerly NOVEXA | solvencert · NCERT 2026 Revised Syllabus');
     pdf.save(`class-9-maths-${chapter.code}-${selEx === 'all' ? 'all-exercises' : selEx}-solutions.pdf`);

@@ -95,7 +95,7 @@ function getIndex(): IndexedEntry[] {
           chapterNumber: ch.number,
           chapterTitle: ch.title,
           sectionTitle: ex.title,
-          questionNumber: q.number,
+          questionNumber: q.number.replace(/★/g, ''),
           question: cap(q.text, 900),
           solution: cap(sol, 2200),
           tokens: new Set(tokenize(`${ch.title} ${ex.title} ${q.text} ${sol}`)),

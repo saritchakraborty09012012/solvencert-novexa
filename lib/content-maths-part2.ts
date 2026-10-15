@@ -5,6 +5,32 @@ import type { Chapter } from './content';
  * Question prompts and exercise order are based on the supplied textbook PDF.
  * Open-ended estimation/project tasks state their sample assumptions explicitly.
  */
+
+// Fig. 9.1 — △ABC with the angle bisectors at B and C meeting at the incentre I,
+// extended beyond I to meet AC at E and AB at F.
+const FIG_9_1_SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="262" viewBox="0 0 300 262" role="img" aria-label="Fig. 9.1: triangle ABC whose angle bisectors at B and C meet at the incentre I and are extended to E on AC and F on AB">
+  <polygon points="150,28 30,222 270,222" fill="#fbf2e7"/>
+  <path d="M150 28 L30 222 L270 222 Z" fill="none" stroke="#3b3228" stroke-width="1.6" stroke-linejoin="round"/>
+  <line x1="30" y1="222" x2="216" y2="134" stroke="#1f2937" stroke-width="1.4"/>
+  <line x1="270" y1="222" x2="84" y2="134" stroke="#1f2937" stroke-width="1.4"/>
+  <g fill="#111827">
+    <circle cx="150" cy="28" r="3.2"/>
+    <circle cx="30" cy="222" r="3.2"/>
+    <circle cx="270" cy="222" r="3.2"/>
+    <circle cx="84" cy="134" r="3.2"/>
+    <circle cx="216" cy="134" r="3.2"/>
+    <circle cx="150" cy="165" r="3.2"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="15" fill="#111827">
+    <text x="150" y="18" text-anchor="middle">A</text>
+    <text x="20" y="244" text-anchor="middle">B</text>
+    <text x="280" y="244" text-anchor="middle">C</text>
+    <text x="74" y="128" text-anchor="end">F</text>
+    <text x="226" y="128" text-anchor="start">E</text>
+    <text x="158" y="184" text-anchor="start">I</text>
+  </g>
+</svg>`;
+
 export const MATHS_PART2_CHAPTERS: Chapter[] = [
   {
     "id": "ch09",
@@ -21,7 +47,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "If two lines are parallel, then the corresponding angles formed by a transversal are equal. Frame the converse and decide whether both statements are true.",
+            "instruction": "Frame the converse for each of the propositions in Questions 1–12. Then, determine if each of the two statements is true or not. Justify the true statements and give a counterexample for each false statement.",
+            "text": "If two lines are parallel, then the corresponding angles formed by a transversal are equal.",
             "answer": {
               "answerKey": "Both the proposition and its converse are true.",
               "schoolMethod": "**Proposition:** If two lines are parallel, their corresponding angles are equal.\n\n**Converse:** If a pair of corresponding angles formed by a transversal are equal, then the two lines are parallel.\n\nThe proposition is the corresponding-angles property of parallel lines. The converse is the converse of that theorem: equality of a pair of corresponding angles implies that the two lines are parallel. Hence, both statements are true."
@@ -31,7 +58,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "If a quadrilateral is a square, then all its angles are equal. Frame the converse and decide whether both statements are true.",
+            "text": "If a quadrilateral is a square, then all its angles are equal.",
             "answer": {
               "answerKey": "Proposition true; converse false.",
               "schoolMethod": "**Proposition:** A square has four right angles, so all its angles are equal. This is true.\n\n**Converse:** If all four angles of a quadrilateral are equal, then it is a square. Since a quadrilateral has angle sum 360°, each angle is 90°. It is therefore a rectangle, but its adjacent sides need not be equal. For example, a 4 cm by 2 cm rectangle has four equal angles but is not a square. Thus the converse is false."
@@ -39,9 +66,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q3",
-            "number": "3",
+            "number": "★3",
             "isHard": true,
-            "text": "In △ABC, the angle bisectors at B and C meet at incentre I and are extended beyond I to meet the opposite sides at E and F. Proposition: If AB = AC, then IE = IF. Frame the converse and decide whether it is true.",
+            "text": "Given any ∆ABC, let us bisect the angles at B and C. The bisectors meet at the incentre I of the triangle. Now extend the bisectors beyond I till they meet the opposite sides at E and F respectively, as shown. Proposition: If AB = AC, then IE = IF.",
+            "figure": { "svg": FIG_9_1_SVG, "caption": "Fig. 9.1" },
             "answer": {
               "answerKey": "Proposition true; converse false.",
               "schoolMethod": "**Proposition:** If AB = AC, then △ABC is isosceles at A, so ∠B = ∠C. The figure is symmetric about the bisector of ∠A. The B- and C-angle-bisectors and their intersection I are interchanged by this symmetry, as are E and F. Hence IE = IF.\n\n**Converse:** If IE = IF, then AB = AC. This is false. For example, take ∠A = 60°, ∠B = 40° and ∠C = 80°. The angles between the extended bisectors and the opposite sides are supplementary in pairs, so their sines are equal; since the inradius is the same, IE = IF, while ∠B ≠ ∠C and therefore AB ≠ AC. Hence this is a counterexample."
@@ -51,7 +79,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "If x = y, then a + x = a + y, where x, y and a are any three numbers. Frame the converse and decide whether both statements are true.",
+            "text": "If x = y, then a + x = a + y, where x, y and a are any three numbers. This proposition and its converse are routinely used while solving equations.",
             "answer": {
               "answerKey": "Both are true.",
               "schoolMethod": "**Proposition:** If x = y, adding the same number a to both sides gives a + x = a + y.\n\n**Converse:** If a + x = a + y, subtract a from both sides to obtain x = y.\n\nBoth statements are true by the addition and cancellation properties of equality."
@@ -61,7 +89,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "If a and b are perfect squares, then ab is a perfect square. Frame the converse and decide whether both statements are true.",
+            "text": "If a and b are perfect squares, then ab is a perfect square.",
             "answer": {
               "answerKey": "Proposition true; converse false.",
               "schoolMethod": "Write a = r² and b = s². Then ab = r²s² = (rs)², a perfect square; so the proposition is true.\n\n**Converse:** If ab is a perfect square, then a and b are both perfect squares. This is false: a = 2 and b = 8 are not perfect squares, but ab = 16 = 4²."
@@ -71,7 +99,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "For real numbers x and y, if x = y, then x² = y². Frame the converse and decide whether it is true.",
+            "instruction": "In Questions 6 and 7, x and y are real numbers.",
+            "text": "If x = y, then x² = y².",
             "answer": {
               "answerKey": "Proposition true; converse false.",
               "schoolMethod": "If x = y, squaring both sides gives x² = y².\n\n**Converse:** If x² = y², then x = y. From x² − y² = 0, we get (x − y)(x + y) = 0, so x = y **or** x = −y. For x = 2 and y = −2, x² = y² but x ≠ y. Thus the converse is false."
@@ -81,7 +110,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": false,
-            "text": "For real numbers x and y, if x = y, then x³ = y³. Frame the converse and decide whether it is true.",
+            "text": "If x = y, then x³ = y³.",
             "answer": {
               "answerKey": "Both are true.",
               "schoolMethod": "Cubing x = y proves x³ = y³.\n\n**Converse:** If x³ = y³, then x³ − y³ = (x − y)(x² + xy + y²) = 0. Alternatively, the cube function is one-to-one on the real numbers. Since x² + xy + y² is non-negative and can be zero only when x = y = 0, the equality forces x = y. Thus the converse is true."
@@ -91,7 +120,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "For a positive integer n, if n is divisible by 24, then it is divisible by both 4 and 6. Frame the converse and decide whether it is true.",
+            "instruction": "In Questions 8–12, n is a positive integer.",
+            "text": "If n is divisible by 24, then it is divisible by both 4 and 6.",
             "answer": {
               "answerKey": "Proposition true; converse false.",
               "schoolMethod": "Since 24 = 4 × 6, every multiple of 24 is divisible by both 4 and 6.\n\n**Converse:** If n is divisible by 4 and 6, then n is divisible by 24. A number divisible by both 4 and 6 need only be divisible by lcm(4,6) = 12. Counterexample: n = 12 is divisible by 4 and 6 but not by 24."
@@ -101,7 +131,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q9",
             "number": "9",
             "isHard": false,
-            "text": "For a positive integer n, if n is divisible by 60, then it is divisible by both 5 and 12. Frame the converse and decide whether it is true.",
+            "text": "If n is divisible by 60, then it is divisible by both 5 and 12.",
             "answer": {
               "answerKey": "Both are true.",
               "schoolMethod": "Because 60 is divisible by both 5 and 12, any multiple of 60 is divisible by each of them.\n\n**Converse:** If n is divisible by 5 and 12, then n is divisible by 60. Since gcd(5,12)=1, lcm(5,12)=5×12=60. Every common multiple is therefore a multiple of 60. The converse is true."
@@ -111,7 +141,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q10",
             "number": "10",
             "isHard": false,
-            "text": "For a positive integer n, if n is the square of a prime number, then it has exactly 3 factors. Frame the converse and decide whether it is true.",
+            "text": "If n is the square of a prime number, then it has exactly 3 factors.",
             "answer": {
               "answerKey": "Both are true.",
               "schoolMethod": "If n = p² for a prime p, its positive factors are exactly 1, p and p².\n\n**Converse:** If n has exactly three positive factors, then n is the square of a prime. A number with exactly three factors must have factor pairs 1·n and one repeated pair p·p, so n = p². Any non-prime p would introduce more factors. Hence the converse is true."
@@ -121,7 +151,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q11",
             "number": "11",
             "isHard": false,
-            "text": "For a positive integer n, if n is a product of two unequal prime numbers, then it has exactly 4 divisors. Frame the converse and decide whether it is true.",
+            "text": "If n is a product of two unequal prime numbers, then it has exactly 4 divisors.",
             "answer": {
               "answerKey": "Proposition true; converse false.",
               "schoolMethod": "If n = pq for distinct primes p and q, its positive divisors are 1, p, q and pq, so it has exactly four.\n\n**Converse:** If n has exactly four divisors, then it is a product of two unequal primes. False: 8 = 2³ has exactly four positive divisors, 1, 2, 4 and 8, but it is not a product of two unequal primes."
@@ -131,7 +161,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q12",
             "number": "12",
             "isHard": false,
-            "text": "For a positive integer n, if n and n + 3 have no factors in common, then n is not a multiple of 3. Frame the converse and decide whether it is true.",
+            "text": "If n and n + 3 have no factors in common, then n is not a multiple of 3.",
             "answer": {
               "answerKey": "Both are true.",
               "schoolMethod": "If 3 divides n, it also divides n + 3, so the two numbers have a common factor 3. The contrapositive proves that if they have no common factor, n is not a multiple of 3.\n\n**Converse:** If n is not a multiple of 3, then n and n + 3 have no factors in common. Any common divisor divides their difference (n + 3) − n = 3, so it can only be 1 or 3. Since 3 does not divide n, their only common positive divisor is 1. The converse is true."

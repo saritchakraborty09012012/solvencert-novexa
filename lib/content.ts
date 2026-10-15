@@ -33,6 +33,10 @@ export interface Question {
   parts?:  string[];
   isHard:  boolean;
   answer:  Answer;
+  /** Instruction shown above this question (e.g. shared exercise instructions). */
+  instruction?: string;
+  /** Optional inline SVG figure shown below the question text. */
+  figure?: { svg: string; caption?: string };
 }
 
 export interface Answer {
