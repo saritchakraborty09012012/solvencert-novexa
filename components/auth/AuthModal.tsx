@@ -9,6 +9,7 @@ import { captureEvent } from '@/lib/analytics';
 import { cn } from '@/utils/helpers';
 import RewardModal from './RewardModal';
 import HistoryRetentionModal from './HistoryRetentionModal';
+import ForgotPasswordForm from './ForgotPasswordForm';
 import toast from 'react-hot-toast';
 
 interface Props { mode:'login'|'signup'; onClose:()=>void; onSwitch:(m:'login'|'signup')=>void; }
@@ -46,6 +47,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
   const [reward,    setReward]    = useState<{ code: string } | null>(null);
   const [showRetentionNotice, setShowRetentionNotice] = useState(false);
   const [error,     setError]     = useState('');
+  const [fpStage,   setFpStage]   = useState<null | 'forgot'>(null);
 
   async function handleSignUp() {
     setError('');
@@ -94,16 +96,8 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
     finally { setLoading(false); }
   }
 
-  async function handleForgotPassword() {
-    if (!validateEmail(email)) return setError('Enter your email first.');
-    setLoading(true);
-    const { error: e } = await supabase.auth.resetPasswordForEmail(email, { redirectTo:`${window.location.origin}/auth/reset-password` });
-    setLoading(false);
-    if (e) return setError(e.message);
-    toast.success('Password reset email sent!');
-  }
-
   const isSignUp = mode === 'signup';
+  const isForgot = fpStage === 'forgot';
 
   return (
     <>
@@ -126,10 +120,11 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
             </div>
             <div>
               <h2 className="text-lg font-display font-bold text-[var(--text-primary)] leading-tight">
-                {isSignUp ? 'Create your account' : 'Welcome back'}
+                {isForgot ? 'Reset your password' : isSignUp ? 'Create your account' : 'Welcome back'}
               </h2>
               <p className="text-xs text-[var(--text-muted)]">
-                {isSignUp ? 'Join thousands of CBSE students' : 'Sign in to continue learning'}
+                {isForgot ? "We'll email you a link to set a new password"
+                  : isSignUp ? 'Join thousands of CBSE students' : 'Sign in to continue learning'}
               </p>
             </div>
           </div>
@@ -143,6 +138,8 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
               <p className="text-sm text-[var(--text-muted)]">We sent a verification link to <strong className="text-[var(--text-primary)]">{email}</strong>.</p>
               <button onClick={onClose} className="btn-primary mt-5 w-full justify-center">Done</button>
             </div>
+          ) : isForgot ? (
+            <ForgotPasswordForm initialEmail={email} onBack={() => { setFpStage(null); setError(''); }} />
           ) : (
             <div className="space-y-4">
               {isSignUp && <Field label="Full Name" value={fullName} onChange={setFullName} placeholder="Your full name" autoComplete="name" />}
@@ -189,7 +186,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
 
               {!isSignUp && (
                 <div className="text-right -mt-1">
-                  <button onClick={handleForgotPassword} className="text-xs text-blue-500 hover:text-blue-600 font-medium">Forgot password?</button>
+                  <button onClick={() => setFpStage('forgot')} className="text-xs text-blue-500 hover:text-blue-600 font-medium">Forgot password?</button>
                 </div>
               )}
 

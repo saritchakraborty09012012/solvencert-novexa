@@ -134,6 +134,11 @@ export default function App({ Component, pageProps }: AppProps) {
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      // Recovery links (custom email or Supabase's built-in template) carry a
+      // recovery session — always route it to the password-reset page.
+      if (_event === 'PASSWORD_RECOVERY') {
+        router.replace('/auth/reset-password');
+      }
       if (session?.user) {
         fetchProfile(session.user.id);
         setStorageUserId(session.user.id);

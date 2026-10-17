@@ -1,0 +1,199 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createAdminClient } from '@/lib/supabase';
+import { sendViaResend, defaultFromAddress } from '@/lib/serverEmail';
+import { SITE_NAME, SITE_URL } from '@/lib/site';
+
+const COOLDOWN_MS = 60_000;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+// Best-effort per-email cooldown (in-memory). The client also enforces the
+// same 60-second window for the faded resend button.
+const cooldowns = new Map<string, number>();
+
+function pruneCooldowns(now: number) {
+  if (cooldowns.size < 5000) return;
+  for (const [key, until] of cooldowns) {
+    if (until <= now) cooldowns.delete(key);
+  }
+}
+
+// Is the configured `from` domain verified in Resend? Cached for 10 minutes.
+// Checking FIRST matters: admin.generateLink consumes GoTrue's per-user email
+// rate token, so we must not call it unless the Resend send can actually go out.
+let domainCheck: { from: string; verified: boolean; at: number } | null = null;
+
+async function isResendFromVerified(): Promise<boolean> {
+  const from = defaultFromAddress();
+  if (domainCheck && domainCheck.from === from && Date.now() - domainCheck.at < 10 * 60_000) {
+    return domainCheck.verified;
+  }
+  const m = from.match(/<[^>]*@([^>]+)>/) || from.match(/@([^\s>]+)/);
+  const domain = m ? m[1] : '';
+  let verified = false;
+  if (domain && process.env.RESEND_API_KEY) {
+    try {
+      const res = await fetch('https://api.resend.com/domains', {
+        headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}` },
+      });
+      if (res.ok) {
+        const body = await res.json();
+        verified = Array.isArray(body?.data) && body.data.some((d: any) => d?.name === domain && d?.status === 'verified');
+      }
+    } catch { /* treat as not verified */ }
+  }
+  domainCheck = { from, verified, at: Date.now() };
+  return verified;
+}
+
+/** Same-origin only: the reset link must come back to this deployment (or localhost in dev). */
+function resolveBaseUrl(req: NextApiRequest): string {
+  const fallback = process.env.NEXT_PUBLIC_APP_URL || SITE_URL;
+  const raw = (req.headers.origin as string) || (req.headers.referer as string) || '';
+  try {
+    if (raw) {
+      const u = new URL(raw);
+      const isLocal = u.hostname === 'localhost' || u.hostname === '127.0.0.1';
+      const isSite = (() => { try { return u.hostname === new URL(fallback).hostname; } catch { return false; } })();
+      if (isLocal || isSite) return u.origin;
+    }
+  } catch { /* fall through */ }
+  return fallback;
+}
+
+function resetEmailHtml(link: string): string {
+  const href = link.replace(/&/g, '&amp;');
+  return `<div style="font-family:Arial,Helvetica,sans-serif;max-width:520px;margin:0 auto;padding:24px;color:#111827">
+  <div style="text-align:center;margin-bottom:20px">
+    <span style="display:inline-block;font-weight:800;font-size:20px;color:#2563eb;letter-spacing:-0.5px">SolveNCERT</span>
+  </div>
+  <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:26px">
+    <h1 style="margin:0 0 10px;font-size:19px">Reset your password</h1>
+    <p style="margin:0 0 18px;font-size:14px;color:#475569;line-height:1.6">
+      Hi, we received a request to reset the password for your ${SITE_NAME} account.
+      Click the button below to choose a new password &mdash; the link is valid for <strong>1 hour</strong>.
+    </p>
+    <a href="${href}" style="display:inline-block;background:#2563eb;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:700;font-size:14px">Reset password</a>
+    <p style="margin:18px 0 0;font-size:13px;color:#64748b;line-height:1.6">
+      If the button does not work, copy this link into your browser:<br/>
+      <span style="word-break:break-all;color:#2563eb">${href}</span>
+    </p>
+  </div>
+  <p style="font-size:12px;color:#94a3b8;text-align:center;margin-top:16px;line-height:1.7">
+    You are receiving this because a password reset was requested for your ${SITE_NAME} account.<br/>
+    If this was not you, you can safely ignore this email.<br/>
+    &copy; ${SITE_NAME} by NDe &middot; solvencert-novexa.vercel.app
+  </p>
+</div>`;
+}
+
+function resetEmailText(link: string): string {
+  return [
+    'Reset your password',
+    '',
+    `Hi, we received a request to reset the password for your ${SITE_NAME} account.`,
+    'Open the link below to choose a new password. The link is valid for 1 hour.',
+    '',
+    link,
+    '',
+    `If this was not you, you can safely ignore this email. — ${SITE_NAME} by NDe`,
+  ].join('\n');
+}
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed.' });
+  }
+
+  const email = (typeof req.body?.email === 'string' ? req.body.email : '').trim().toLowerCase();
+  if (!EMAIL_REGEX.test(email)) {
+    return res.status(400).json({ error: 'Enter a valid email address.' });
+  }
+
+  const now = Date.now();
+  pruneCooldowns(now);
+  const until = cooldowns.get(email);
+  if (until && now < until) {
+    const retryAfter = Math.ceil((until - now) / 1000);
+    return res.status(429).json({
+      error: `Please wait ${retryAfter} second${retryAfter === 1 ? '' : 's'} before requesting another reset email.`,
+      retryAfter,
+    });
+  }
+  cooldowns.set(email, now + COOLDOWN_MS);
+
+  const baseUrl = resolveBaseUrl(req);
+  // The callback URL is already part of the Supabase redirect allow-list
+  // (signup verification uses the same target); it forwards recovery links
+  // to the reset page via the PASSWORD_RECOVERY auth event.
+  const redirectTo = `${baseUrl}/auth/callback`;
+
+  let delivered = false;
+  const resendReady = await isResendFromVerified();
+
+  // ── Primary path: custom branded email sent through Resend (only when the   ──
+  // ── from-domain is verified, otherwise Resend would just 403).             ──
+  if (resendReady) {
+    try {
+      const admin = createAdminClient();
+      const { data, error } = await admin.auth.admin.generateLink({
+        type: 'recovery',
+        email,
+        options: { redirectTo },
+      });
+
+      const link = data?.properties?.action_link;
+      if (!error && link) {
+        const result = await sendViaResend({
+          to: email,
+          subject: `Reset your ${SITE_NAME} password`,
+          html: resetEmailHtml(link),
+          text: resetEmailText(link),
+        });
+        if (result.ok) {
+          delivered = true;
+          console.log('[forgot-password] reset email sent via Resend');
+        } else {
+          console.warn('[forgot-password] Resend send failed:', result.status, result.error);
+        }
+      } else {
+        console.warn('[forgot-password] generateLink failed (user may not exist):', error?.message);
+      }
+    } catch (err) {
+      console.error('[forgot-password] Resend path error:', err);
+    }
+  } else {
+    console.log('[forgot-password] Resend from-domain not verified — using Supabase built-in email');
+  }
+
+  // ── Fallback: Supabase's built-in recovery email (works even when the      ──
+  // ── Resend domain is not verified yet). Same reset landing page.          ──
+  if (!delivered) {
+    try {
+      const resp = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/auth/v1/recover`, {
+        method: 'POST',
+        headers: {
+          apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      if (resp.ok) {
+        delivered = true;
+        console.log('[forgot-password] reset email sent via Supabase fallback');
+      } else {
+        const detail = await resp.text().catch(() => '');
+        console.warn('[forgot-password] Supabase fallback failed:', resp.status, detail);
+      }
+    } catch (err) {
+      console.error('[forgot-password] Supabase fallback error:', err);
+    }
+  }
+
+  // Always succeed from the client's point of view — never reveal whether
+  // the account exists (anti-enumeration).
+  if (!delivered) {
+    console.warn('[forgot-password] no delivery path succeeded for a valid-looking request');
+  }
+  return res.status(200).json({ ok: true });
+}
