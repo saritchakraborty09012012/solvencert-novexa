@@ -156,7 +156,8 @@ export default function ChatFloatBubble({ isOpen, onToggle }: Props) {
           </div>
         </div>
 
-        <div className="p-5">
+        <div className="relative">
+          <div className="p-5 blur-[5px] opacity-60 pointer-events-none select-none">
           <UserPlus size={28} className="mx-auto text-blue-400 mb-3" />
           <p className="text-sm font-semibold text-[var(--text-primary)] mb-1 text-center">Invite a friend</p>
           <p className="text-xs text-[var(--text-muted)] mb-4 text-center">
@@ -185,6 +186,12 @@ export default function ChatFloatBubble({ isOpen, onToggle }: Props) {
               ? 'Premium — up to 10 friends can join.'
               : 'Free plan — up to 5 friends. Invite link works for 24 hours.'}
           </p>
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="px-3 py-1.5 rounded-full bg-[var(--surface-2)] border border-[var(--border)] text-[11px] font-bold uppercase tracking-wider text-[var(--text-primary)] shadow-soft">
+              Coming soon
+            </span>
+          </div>
         </div>
       </div>
     </>
