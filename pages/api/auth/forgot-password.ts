@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createAdminClient } from '@/lib/supabase';
 import { sendViaResend, defaultFromAddress } from '@/lib/serverEmail';
-import { SITE_NAME, SITE_URL } from '@/lib/site';
+import { SITE_URL } from '@/lib/site';
 
 const COOLDOWN_MS = 60_000;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -64,40 +64,50 @@ function resolveBaseUrl(req: NextApiRequest): string {
 
 function resetEmailHtml(link: string): string {
   const href = link.replace(/&/g, '&amp;');
-  return `<div style="font-family:Arial,Helvetica,sans-serif;max-width:520px;margin:0 auto;padding:24px;color:#111827">
-  <div style="text-align:center;margin-bottom:20px">
-    <span style="display:inline-block;font-weight:800;font-size:20px;color:#2563eb;letter-spacing:-0.5px">SolveNCERT</span>
-  </div>
-  <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:26px">
-    <h1 style="margin:0 0 10px;font-size:19px">Reset your password</h1>
-    <p style="margin:0 0 18px;font-size:14px;color:#475569;line-height:1.6">
-      Hi, we received a request to reset the password for your ${SITE_NAME} account.
-      Click the button below to choose a new password &mdash; the link is valid for <strong>1 hour</strong>.
-    </p>
-    <a href="${href}" style="display:inline-block;background:#2563eb;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:700;font-size:14px">Reset password</a>
-    <p style="margin:18px 0 0;font-size:13px;color:#64748b;line-height:1.6">
-      If the button does not work, copy this link into your browser:<br/>
-      <span style="word-break:break-all;color:#2563eb">${href}</span>
-    </p>
-  </div>
-  <p style="font-size:12px;color:#94a3b8;text-align:center;margin-top:16px;line-height:1.7">
-    You are receiving this because a password reset was requested for your ${SITE_NAME} account.<br/>
-    If this was not you, you can safely ignore this email.<br/>
-    &copy; ${SITE_NAME} by NDe &middot; solvencert-novexa.vercel.app
-  </p>
-</div>`;
+  // Site theme · UI-3 "Obsidian Gold": #0d0c0a bg, #17120c card, #ebaa2d gold
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Reset your password</title>
+</head>
+<body style="margin:0;padding:0;background-color:#0d0c0a;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#0d0c0a;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:500px;background-color:#17120c;border:1px solid #382d1d;border-radius:14px;">
+          <tr>
+            <td align="center" style="padding:26px 32px 18px;border-bottom:1px solid #382d1d;">
+              <span style="font-family:Georgia,'Times New Roman',serif;font-size:23px;font-weight:700;color:#ebaa2d;letter-spacing:0.4px;">SolveNCERT</span>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:26px 32px 30px;">
+              <h1 style="margin:0 0 14px;font-family:Georgia,'Times New Roman',serif;font-size:21px;font-weight:700;color:#f4f1ed;">Reset your password</h1>
+              <p style="margin:0 0 20px;font-size:15px;line-height:1.65;color:#9d9791;">We received a request to reset your password. Follow the link below to choose a new one.</p>
+              <p style="margin:0 0 20px;"><a href="${href}" style="font-size:15px;font-weight:600;color:#ebaa2d;text-decoration:underline;">Reset password</a></p>
+              <p style="margin:0;font-size:13px;line-height:1.6;color:#8e8578;">If you didn't request this, you can safely ignore this email.</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
 }
 
 function resetEmailText(link: string): string {
   return [
     'Reset your password',
     '',
-    `Hi, we received a request to reset the password for your ${SITE_NAME} account.`,
-    'Open the link below to choose a new password. The link is valid for 1 hour.',
+    'We received a request to reset your password. Follow the link below to choose a new one.',
     '',
     link,
     '',
-    `If this was not you, you can safely ignore this email. — ${SITE_NAME} by NDe`,
+    "If you didn't request this, you can safely ignore this email.",
   ].join('\n');
 }
 
@@ -123,7 +133,7 @@ async function sendResetLinkViaResend(to: string, link: string): Promise<boolean
     if (attempt > 1) await sleep(RETRY_DELAYS_MS[attempt - 2] ?? 500);
     const result = await sendViaResend({
       to,
-      subject: `Reset your ${SITE_NAME} password`,
+      subject: 'Reset your password',
       html: resetEmailHtml(link),
       text: resetEmailText(link),
     });
