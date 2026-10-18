@@ -17,14 +17,16 @@ function pruneCooldowns(now: number) {
   }
 }
 
-// Is the configured `from` domain verified in Resend? Cached for 10 minutes.
-// Checking FIRST matters: admin.generateLink consumes GoTrue's per-user email
-// rate token, so we must not call it unless the Resend send can actually go out.
+// Is the configured `from` domain verified in Resend? Cached for 60 seconds.
+// Checking FIRST matters: admin.generateLink consumes GoTrue's per-user 60s
+// email window (proven: recovery_sent_at is set), so we must not call it
+// unless the Resend send has a real chance of succeeding — otherwise the
+// Supabase fallback would 429 and the user would get NO email at all.
 let domainCheck: { from: string; verified: boolean; at: number } | null = null;
 
 async function isResendFromVerified(): Promise<boolean> {
   const from = defaultFromAddress();
-  if (domainCheck && domainCheck.from === from && Date.now() - domainCheck.at < 10 * 60_000) {
+  if (domainCheck && domainCheck.from === from && Date.now() - domainCheck.at < 60_000) {
     return domainCheck.verified;
   }
   const m = from.match(/<[^>]*@([^>]+)>/) || from.match(/@([^\s>]+)/);
@@ -99,6 +101,47 @@ function resetEmailText(link: string): string {
   ].join('\n');
 }
 
+// ── Resend send with retries (up to 3 attempts). Only a SUCCESSFUL Resend   ──
+// ── send sets delivered=true — the Supabase fallback runs exclusively when  ──
+// ── every attempt failed, so the user always receives exactly ONE email.    ──
+const MAX_RESEND_ATTEMPTS = 3;
+const RETRY_DELAYS_MS = [300, 900];
+const RETRY_WINDOW_MS = 4500;
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** 4xx (except 429) = Resend definitively rejected it — retrying cannot help. */
+function isDefinitiveFailure(r: { status?: number }): boolean {
+  return typeof r.status === 'number' && r.status >= 400 && r.status < 500 && r.status !== 429;
+}
+
+async function sendResetLinkViaResend(to: string, link: string): Promise<boolean> {
+  const started = Date.now();
+  let lastErr = 'unknown error';
+  for (let attempt = 1; attempt <= MAX_RESEND_ATTEMPTS; attempt++) {
+    if (attempt > 1 && Date.now() - started > RETRY_WINDOW_MS) break;
+    if (attempt > 1) await sleep(RETRY_DELAYS_MS[attempt - 2] ?? 500);
+    const result = await sendViaResend({
+      to,
+      subject: `Reset your ${SITE_NAME} password`,
+      html: resetEmailHtml(link),
+      text: resetEmailText(link),
+    });
+    if (result.ok) {
+      console.log(
+        `[forgot-password] reset email sent via Resend${attempt > 1 ? ` (attempt ${attempt})` : ''}`,
+      );
+      return true;
+    }
+    lastErr = `HTTP ${result.status ?? 'network'} ${result.error ?? ''}`.trim();
+    if (isDefinitiveFailure(result)) break;
+  }
+  console.warn(
+    `[forgot-password] Resend failed after up to ${MAX_RESEND_ATTEMPTS} attempt(s): ${lastErr} — falling back to Supabase email`,
+  );
+  return false;
+}
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -131,8 +174,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   let delivered = false;
   const resendReady = await isResendFromVerified();
 
-  // ── Primary path: custom branded email sent through Resend (only when the   ──
-  // ── from-domain is verified, otherwise Resend would just 403).             ──
+  // ── Primary path: branded email via Resend — tried first, up to 3 times   ──
+  // ── (skipped only when the from-domain is not verified in Resend, where   ──
+  // ── every send would 403 anyway and would burn the fallback's rate window).──
   if (resendReady) {
     try {
       const admin = createAdminClient();
@@ -144,18 +188,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       const link = data?.properties?.action_link;
       if (!error && link) {
-        const result = await sendViaResend({
-          to: email,
-          subject: `Reset your ${SITE_NAME} password`,
-          html: resetEmailHtml(link),
-          text: resetEmailText(link),
-        });
-        if (result.ok) {
-          delivered = true;
-          console.log('[forgot-password] reset email sent via Resend');
-        } else {
-          console.warn('[forgot-password] Resend send failed:', result.status, result.error);
-        }
+        delivered = await sendResetLinkViaResend(email, link);
       } else {
         console.warn('[forgot-password] generateLink failed (user may not exist):', error?.message);
       }
@@ -166,8 +199,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.log('[forgot-password] Resend from-domain not verified — using Supabase built-in email');
   }
 
-  // ── Fallback: Supabase's built-in recovery email (works even when the      ──
-  // ── Resend domain is not verified yet). Same reset landing page.          ──
+  // ── Fallback: ONLY when Resend did not deliver (never both emails). The   ──
+  // ── Same 60s window applies: if generateLink just ran, GoTrue may 429     ──
+  // ── here; the in-app "Resend email" button re-enables after 60s then.    ──
   if (!delivered) {
     try {
       const resp = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/auth/v1/recover`, {
@@ -183,7 +217,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         console.log('[forgot-password] reset email sent via Supabase fallback');
       } else {
         const detail = await resp.text().catch(() => '');
-        console.warn('[forgot-password] Supabase fallback failed:', resp.status, detail);
+        if (resp.status === 429) {
+          console.warn(
+            '[forgot-password] Supabase fallback rate-limited (generateLink consumed GoTrue\'s 60s email window); user can resend in ~60s',
+          );
+        } else {
+          console.warn('[forgot-password] Supabase fallback failed:', resp.status, detail);
+        }
       }
     } catch (err) {
       console.error('[forgot-password] Supabase fallback error:', err);

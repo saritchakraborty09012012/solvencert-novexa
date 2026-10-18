@@ -47,6 +47,8 @@ export async function sendViaResend(input: SendEmailInput): Promise<SendEmailRes
         html: input.html,
         text: input.text,
       }),
+      // Don't let a hanging request stall the API route (retries have a budget).
+      signal: AbortSignal.timeout(5000),
     });
 
     if (!res.ok) {
