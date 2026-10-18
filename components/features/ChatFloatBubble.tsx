@@ -188,7 +188,7 @@ export default function ChatFloatBubble({ isOpen, onToggle }: Props) {
           </p>
           </div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="px-3 py-1.5 rounded-full bg-[var(--surface-2)] border border-[var(--border)] text-[11px] font-bold uppercase tracking-wider text-[var(--text-primary)] shadow-soft">
+            <span className="px-4 py-2 rounded-full bg-black/80 border-2 border-[var(--brand-primary)] text-[11px] font-bold uppercase tracking-wider text-white shadow-soft-xl">
               Coming soon
             </span>
           </div>
