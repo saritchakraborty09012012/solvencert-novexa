@@ -80,6 +80,7 @@ export const NAV: NavItem[] = [
   {
     label: 'More',
     items: [
+      { label: 'Settings', href: '/settings/profile', desc: 'account & appearance' },
       { label: 'History', href: '/history' },
       { label: 'Syllabus', href: '/answers' },
       { label: 'User Guide', href: '/guide' },
