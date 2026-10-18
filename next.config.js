@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: { cpus: 3 },
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: true,
