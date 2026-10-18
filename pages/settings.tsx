@@ -5,11 +5,13 @@ import {
   User, Mail, Phone, Calendar, Lock, Camera,
   Save, Loader2, Shield, Trash2, Eye, EyeOff,
   Bell, Palette, Globe, ChevronRight, Archive, ArchiveRestore, KeyRound,
-  Clock, Crown, Info
+  Clock, Crown, Info, Sun, Moon, Monitor, Check
 } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { useAuthStore } from '@/store/authStore';
 import { useCollabStore } from '@/store/collabStore';
+import { useThemeStore } from '@/store/themeStore';
+import { useUIStore } from '@/store/uiStore';
 import { supabase } from '@/lib/supabase';
 import { generateInitials } from '@/utils/helpers';
 import { cn } from '@/utils/helpers';
@@ -18,9 +20,18 @@ import toast from 'react-hot-toast';
 
 type Tab = 'profile' | 'account' | 'notifications' | 'appearance';
 
+// Same Moods (UI) list as the header ribbon — Header.tsx keeps its own copy.
+const UI_OPTIONS = [
+  { id: 'ui1' as const, label: 'UI-1', name: 'Classic Nerdy',     desc: 'Clean, academic & focused' },
+  { id: 'ui2' as const, label: 'UI-2', name: 'Aesthetic Vintage', desc: 'Warm, timeless & elegant' },
+  { id: 'ui3' as const, label: 'UI-3', name: 'Signature Noir',    desc: 'Bold, cinematic & premium' },
+];
+
 export default function SettingsPage() {
   const router = useRouter();
   const { user, isGuest, fetchProfile } = useAuthStore();
+  const { theme, setTheme } = useThemeStore();
+  const { ui, setUi } = useUIStore();
 
   const [tab,       setTab]      = useState<Tab>('profile');
   const [loading,   setLoading]  = useState(false);
@@ -448,11 +459,56 @@ export default function SettingsPage() {
             {/* Appearance tab */}
             {tab === 'appearance' && (
               <div className="card p-6">
-                <h2 className="font-display font-semibold text-[var(--text-primary)] mb-4">Appearance</h2>
-                <p className="text-sm text-[var(--text-muted)]">Theme is controlled from the header ribbon on all pages.</p>
-                <div className="mt-4 p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--border)] flex items-center gap-3">
-                  <Palette size={16} className="text-blue-500" />
-                  <p className="text-sm text-[var(--text-secondary)]">Use the Theme buttons (System / Light / Dark) in the top ribbon to change the theme.</p>
+                <h2 className="font-display font-semibold text-[var(--text-primary)] mb-1">Appearance</h2>
+                <p className="text-sm text-[var(--text-muted)] mb-5">
+                  Same controls as the header ribbon — changes apply on all pages.
+                </p>
+
+                {/* Moods (UI) — mirrors the header Moods dropdown */}
+                <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-2">Mood</p>
+                <div className="grid sm:grid-cols-3 gap-2 mb-6">
+                  {UI_OPTIONS.map((opt) => (
+                    <button
+                      key={opt.id}
+                      onClick={() => setUi(opt.id)}
+                      className={cn(
+                        'text-left px-3.5 py-3 rounded-xl border transition-all',
+                        ui === opt.id
+                          ? 'border-[var(--brand-primary)] bg-[var(--surface-2)]'
+                          : 'border-[var(--border)] bg-[var(--surface-1)] hover:border-[var(--text-muted)]',
+                      )}
+                    >
+                      <span className="flex items-center justify-between gap-2">
+                        <span className="text-sm font-semibold text-[var(--text-primary)]">{opt.name}</span>
+                        {ui === opt.id && <Check size={14} className="text-[var(--brand-primary)] flex-shrink-0" />}
+                      </span>
+                      <span className="block text-[11px] text-[var(--text-muted)] mt-0.5">{opt.desc}</span>
+                    </button>
+                  ))}
+                </div>
+
+                {/* Theme — mirrors the header System / Light / Dark buttons */}
+                <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-2">Theme</p>
+                <div className="inline-flex items-center gap-1 p-1.5 rounded-xl bg-[var(--surface-1)] border border-[var(--border)]">
+                  {([
+                    { id: 'system' as const, icon: <Monitor size={14} />, label: 'System' },
+                    { id: 'light'  as const, icon: <Sun     size={14} />, label: 'Light'  },
+                    { id: 'dark'   as const, icon: <Moon    size={14} />, label: 'Dark'   },
+                  ]).map(({ id, icon, label }) => (
+                    <button
+                      key={id}
+                      onClick={() => setTheme(id)}
+                      title={label}
+                      className={cn(
+                        'flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all',
+                        theme === id
+                          ? 'bg-[var(--surface-3)] text-[var(--brand-primary)] shadow-inner'
+                          : 'text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-2)]',
+                      )}
+                    >
+                      {icon}{label}
+                    </button>
+                  ))}
                 </div>
               </div>
             )}
