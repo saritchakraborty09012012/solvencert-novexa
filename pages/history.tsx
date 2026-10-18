@@ -228,7 +228,7 @@ export default function HistoryPage() {
             <HistoryIcon size={20} className="text-blue-500" /> History
           </h1>
           {user && (
-            <Link href="/settings?tab=account" className="text-[11px] text-[var(--text-muted)] hover:text-blue-500 transition-colors">
+            <Link href="/settings/account" className="text-xs font-medium text-[var(--text-secondary)] hover:text-blue-500 transition-colors">
               {archivedCount > 0 ? archivedCount + '/' + ARCHIVE_LIMIT + ' archived' : retentionText(user)}
             </Link>
           )}
@@ -264,7 +264,7 @@ export default function HistoryPage() {
             </div>
           ) : (
             <>
-              <p className="text-xs text-[var(--text-muted)] mb-4">{retentionText(user)}</p>
+              <p className="text-sm font-medium text-[var(--text-secondary)] mb-4">{retentionText(user)}</p>
               {groupOrder.map(key => {
                 const rows = grouped[key];
                 if (!rows || rows.length === 0) return null;

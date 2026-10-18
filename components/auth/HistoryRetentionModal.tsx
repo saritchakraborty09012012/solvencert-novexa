@@ -60,7 +60,7 @@ export default function HistoryRetentionModal({ onClose }: { onClose: () => void
           </div>
 
           <div className="flex gap-2">
-            <Link href="/settings" onClick={onClose} className="btn-ghost flex-1 justify-center text-sm py-2.5">
+            <Link href="/settings/account" onClick={onClose} className="btn-ghost flex-1 justify-center text-sm py-2.5">
               Settings
             </Link>
             <button onClick={onClose} className="btn-primary flex-1 justify-center text-sm py-2.5">
