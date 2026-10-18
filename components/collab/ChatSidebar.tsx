@@ -478,33 +478,10 @@ export default function ChatSidebar({ onClose }: { onClose: () => void }) {
               </button>
             </div>
           </div>
-          <div className="flex-1 overflow-y-auto">
-            {groups.map(g => {
-              const online = g.is_dm ? (() => {
-                const peerId = collab.members.find(mm => mm.user_id !== me)?.user_id;
-                const m = peerId ? memberMap.get(peerId) : null;
-                return m ? isMemberOnline(m.last_seen_at) : false;
-              })() : false;
-              return (
-                <button key={g.id} onClick={() => { setActiveId(g.id); setMobileView('chat'); }}
-                  className={`w-full flex items-center gap-2 px-2.5 py-2.5 text-left transition-colors border-b border-[var(--border)] ${activeId === g.id ? 'bg-[var(--surface-2)]' : 'hover:bg-[var(--surface-1)]'}`}>
-                  {g.is_dm ? <DmAvatar peer={collab.members.find(mm => mm.user_id !== me) || null} /> : <GroupAvatar group={g} getSigned={signedUrl} />}
-                  <span className="flex-1 min-w-0">
-                    <span className="block text-[11px] font-semibold text-[var(--text-primary)] truncate">{titleOf(g)}</span>
-                    {g.is_dm && (
-                      <span className={`block text-[9px] truncate ${online ? 'text-emerald-500' : 'text-[var(--text-muted)]'}`}>
-                        {online ? 'online' : (() => {
-                          const peerId = collab.members.find(mm => mm.user_id !== me)?.user_id;
-                          const m = peerId ? memberMap.get(peerId) : null;
-                          return m ? lastActiveLabel(m.last_seen_at) : '';
-                        })()}
-                      </span>
-                    )}
-                  </span>
-                </button>
-              );
-            })}
-            {groups.length === 0 && <p className="text-[10px] text-[var(--text-muted)] text-center px-3 py-6">No chats yet.</p>}
+          <div className="flex-1 overflow-y-auto flex flex-col items-center justify-center px-3">
+            <span className="px-2.5 py-1 rounded-full bg-[var(--surface-2)] border border-[var(--border)] text-[10px] font-bold uppercase tracking-wider text-[var(--text-muted)]">
+              Coming soon
+            </span>
           </div>
         </div>
 
