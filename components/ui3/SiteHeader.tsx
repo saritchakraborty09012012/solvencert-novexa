@@ -1,6 +1,6 @@
 'use client'
 
-import { Check, ChevronDown, Crown, History, Layers, LogOut, Menu, MessageCircleQuestion, Monitor, Moon, Search, Settings, Sun, User, X } from 'lucide-react'
+import { Check, ChevronDown, Crown, History, Layers, LogOut, Menu, MessageCircleQuestion, Search, Settings, User, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -10,8 +10,6 @@ import AuthModal from '@/components/auth/AuthModal'
 import QueryModal from '@/components/features/QueryModal'
 import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
-import { useThemeStore } from '@/store/themeStore'
-import FadeNotice, { LIGHT_THEME_NOTICE } from '@/components/ui/FadeNotice'
 import { getInitialsColor } from '@/utils/helpers'
 import { NAV } from './data'
 
@@ -23,44 +21,10 @@ const UI_OPTIONS = [
   { id: 'ui3' as const, label: 'UI-3', name: 'Signature Noir',    desc: 'Bold, cinematic & premium' },
 ]
 
-const THEME_OPTIONS = [
-  { id: 'system' as const, icon: Monitor, label: 'System' },
-  { id: 'light'  as const, icon: Sun,     label: 'Light'  },
-  { id: 'dark'   as const, icon: Moon,    label: 'Dark'   },
-]
-
-function ThemeRow({ ui, theme, onPick }: {
-  ui: string
-  theme: string
-  onPick: (id: 'system' | 'light' | 'dark', blocked: boolean) => void
-}) {
-  return (
-    <div className="flex items-center gap-1">
-      {THEME_OPTIONS.map(({ id, icon: Icon, label }) => {
-        const blocked = id === 'light' && ui === 'ui3'
-        return (
-          <button
-            key={id}
-            type="button"
-            onClick={() => onPick(id, blocked)}
-            title={blocked ? 'Not supported in Signature Noir' : label}
-            className={`flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition-colors ${
-              theme === id ? 'bg-primary/15 text-primary' : 'text-foreground/70 hover:bg-primary/10 hover:text-primary'
-            } ${blocked ? 'opacity-40 cursor-not-allowed' : ''}`}
-          >
-            <Icon className="size-3.5" /> {label}
-          </button>
-        )
-      })}
-    </div>
-  )
-}
-
 export function SiteHeader() {
   const router = useRouter()
   const { user, isGuest, signOut } = useAuthStore()
   const { ui, setUi } = useUIStore()
-  const { theme, setTheme } = useThemeStore()
   const [openMenu, setOpenMenu] = useState<string | null>(null)
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -70,19 +34,9 @@ export function SiteHeader() {
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null)
   const [profileOpen, setProfileOpen] = useState(false)
   const [uiOpen, setUIOpen] = useState(false)
-  const [themeNotice, setThemeNotice] = useState<string | null>(null)
   const navRef = useRef<HTMLDivElement>(null)
   const profileRef = useRef<HTMLDivElement>(null)
   const uiRef = useRef<HTMLDivElement>(null)
-
-  const pickTheme = (id: 'system' | 'light' | 'dark', blocked: boolean) => {
-    if (blocked) {
-      setThemeNotice(LIGHT_THEME_NOTICE)
-      window.setTimeout(() => setThemeNotice(null), 3200)
-      return
-    }
-    setTheme(id)
-  }
 
   useEffect(() => {
     const onDocClick = (e: MouseEvent) => {
@@ -169,12 +123,6 @@ export function SiteHeader() {
                         )}
                       </Link>
                     ))}
-                    {item.label === 'More' ? (
-                      <div className="mt-1 border-t border-border px-3 pt-2 pb-1">
-                        <p className="py-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Theme</p>
-                        <ThemeRow ui={ui} theme={theme} onPick={pickTheme} />
-                      </div>
-                    ) : null}
                   </div>
                 ) : null}
               </div>
@@ -387,12 +335,6 @@ export function SiteHeader() {
                               )}
                             </Link>
                           ))}
-                          {item.label === 'More' ? (
-                            <div className="mt-1 border-t border-border pt-2">
-                              <p className="py-1 text-[10px] font-bold uppercase tracking-widest text-muted-foreground">Theme</p>
-                              <ThemeRow ui={ui} theme={theme} onPick={pickTheme} />
-                            </div>
-                          ) : null}
                         </div>
                       ) : null}
                     </>
@@ -416,8 +358,6 @@ export function SiteHeader() {
           </div>
         ) : null}
       </header>
-
-      <FadeNotice text={themeNotice} />
 
       <Modal
         open={searchOpen}
