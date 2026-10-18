@@ -29,11 +29,11 @@ export const useAuthStore = create<AuthState>((set) => ({
         .select('*')
         .eq('id', userId)
         .single();
-      if (error || !data) { set({ user: null, isGuest: true }); return; }
-      set({ user: data as Profile, isGuest: false });
+      if (error || !data) { set({ user: null, isGuest: true, loading: false }); return; }
+      set({ user: data as Profile, isGuest: false, loading: false });
       identifyUser(userId, { name: data.full_name, plan: data.plan });
     } catch {
-      set({ user: null, isGuest: true });
+      set({ user: null, isGuest: true, loading: false });
     }
   },
 
