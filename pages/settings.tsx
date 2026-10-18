@@ -17,6 +17,7 @@ import { generateInitials } from '@/utils/helpers';
 import { cn } from '@/utils/helpers';
 import { FREE_RETENTION_MAX, PREMIUM_RETENTION_MAX, ARCHIVE_LIMIT } from '@/lib/history';
 import toast from 'react-hot-toast';
+import FadeNotice, { LIGHT_THEME_NOTICE } from '@/components/ui/FadeNotice';
 
 type Tab = 'profile' | 'account' | 'notifications' | 'appearance';
 
@@ -34,6 +35,13 @@ export default function SettingsPage() {
   const { ui, setUi } = useUIStore();
 
   const [tab,       setTab]      = useState<Tab>('profile');
+  const [themeNotice, setThemeNotice] = useState<string | null>(null);
+
+  const flashThemeNotice = (msg: string) => {
+    setThemeNotice(msg);
+    window.setTimeout(() => setThemeNotice(null), 3200);
+  };
+
   const [loading,   setLoading]  = useState(false);
   const [showOld,   setShowOld]  = useState(false);
   const [showNew,   setShowNew]  = useState(false);
@@ -494,22 +502,27 @@ export default function SettingsPage() {
                     { id: 'system' as const, icon: <Monitor size={14} />, label: 'System' },
                     { id: 'light'  as const, icon: <Sun     size={14} />, label: 'Light'  },
                     { id: 'dark'   as const, icon: <Moon    size={14} />, label: 'Dark'   },
-                  ]).map(({ id, icon, label }) => (
-                    <button
-                      key={id}
-                      onClick={() => setTheme(id)}
-                      title={label}
-                      className={cn(
-                        'flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all',
-                        theme === id
-                          ? 'bg-[var(--surface-3)] text-[var(--brand-primary)] shadow-inner'
-                          : 'text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-2)]',
-                      )}
-                    >
-                      {icon}{label}
-                    </button>
-                  ))}
+                  ]).map(({ id, icon, label }) => {
+                    const blocked = id === 'light' && ui === 'ui3';
+                    return (
+                      <button
+                        key={id}
+                        onClick={() => (blocked ? flashThemeNotice(LIGHT_THEME_NOTICE) : setTheme(id))}
+                        title={blocked ? 'Not supported in Signature Noir' : label}
+                        className={cn(
+                          'flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all',
+                          blocked && 'opacity-40 cursor-not-allowed',
+                          theme === id
+                            ? 'bg-[var(--surface-3)] text-[var(--brand-primary)] shadow-inner'
+                            : 'text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-2)]',
+                        )}
+                      >
+                        {icon}{label}
+                      </button>
+                    );
+                  })}
                 </div>
+                <FadeNotice text={themeNotice} />
               </div>
             )}
           </div>

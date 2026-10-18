@@ -17,6 +17,7 @@ import QueryModal from '@/components/features/QueryModal';
 import Dashboard from '@/components/layout/Dashboard';
 import { cn } from '@/utils/helpers';
 import toast from 'react-hot-toast';
+import FadeNotice, { LIGHT_THEME_NOTICE } from '@/components/ui/FadeNotice';
 import { NAV } from '@/components/ui3/data';
 
 const POPULAR = ['Polynomials', 'Atoms and Molecules', 'The Fun They Had', 'Motion', 'Tissues'];
@@ -38,9 +39,15 @@ export default function Header() {
   const [searchOpen,   setSearchOpen]   = useState(false);
   const [queryOpen,    setQueryOpen]    = useState(false);
   const [query,        setQuery]        = useState('');
+  const [themeNotice,  setThemeNotice]  = useState<string | null>(null);
   const navRef      = useRef<HTMLDivElement>(null);
   const profileRef  = useRef<HTMLDivElement>(null);
   const uiRef       = useRef<HTMLDivElement>(null);
+
+  const flashThemeNotice = (msg: string) => {
+    setThemeNotice(msg);
+    window.setTimeout(() => setThemeNotice(null), 3200);
+  };
 
   const UI_OPTIONS = [
     { id: 'ui1' as const, label: 'UI-1', name: 'Classic Nerdy',       desc: 'Clean, academic & focused' },
@@ -201,14 +208,21 @@ export default function Header() {
                 { id:'system' as const, icon:<Monitor size={13}/>, label:'System' },
                 { id:'light'  as const, icon:<Sun     size={13}/>, label:'Light'  },
                 { id:'dark'   as const, icon:<Moon    size={13}/>, label:'Dark'   },
-              ]).map(({ id, icon, label }) => (
-                <button key={id} onClick={() => setTheme(id)} title={label}
-                  className={cn('p-1.5 rounded-md transition-all',
-                    theme === id ? 'bg-white/20 text-white shadow-inner' : 'text-white/40 hover:text-white/80 hover:bg-white/10')}>
-                  {icon}
-                </button>
-              ))}
+              ]).map(({ id, icon, label }) => {
+                const blocked = id === 'light' && ui === 'ui3';
+                return (
+                  <button key={id}
+                    onClick={() => (blocked ? flashThemeNotice(LIGHT_THEME_NOTICE) : setTheme(id))}
+                    title={blocked ? 'Not supported in Signature Noir' : label}
+                    className={cn('p-1.5 rounded-md transition-all',
+                      blocked && 'opacity-40 cursor-not-allowed',
+                      theme === id ? 'bg-white/20 text-white shadow-inner' : 'text-white/40 hover:text-white/80 hover:bg-white/10')}>
+                    {icon}
+                  </button>
+                );
+              })}
             </div>
+            <FadeNotice text={themeNotice} />
 
             {/* Auth */}
             {isGuest ? (
