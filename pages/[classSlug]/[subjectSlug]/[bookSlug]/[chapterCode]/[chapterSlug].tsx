@@ -279,19 +279,33 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
   };
 
   // QAPage schema — first exercise, first question as the primary Q&A
+  // Google requires answerCount on Question, plus text/author/datePublished on
+  // both the Question and its acceptedAnswer (Search Console Q&A report).
+  const CONTENT_PUBLISHED = '2026-08-26';
+  const plain = (s: string) => s.replace(/\$[^$]+\$/g, '[math]').replace(/\*\*/g, '').replace(/<[^>]+>/g, '').trim();
   const firstQ = chapter.exercises[0]?.questions[0];
+  const qaAuthor = { '@type': 'Organization', name: 'SolveNCERT', url: BASE };
   const qaSchema = firstQ ? {
     '@context': 'https://schema.org',
     '@type': 'QAPage',
     name: `${chapter.title} — Class 9 ${subject.name} NCERT Solutions`,
     url: chapterUrl,
+    datePublished: CONTENT_PUBLISHED,
+    dateModified: CONTENT_PUBLISHED,
     mainEntity: {
       '@type': 'Question',
-      name: firstQ.text,
+      name: plain(firstQ.text),
+      text: plain(firstQ.text),
+      answerCount: 1,
+      author: qaAuthor,
+      datePublished: CONTENT_PUBLISHED,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: firstQ.answer.answerKey,
+        text: plain(`${firstQ.answer.answerKey}\n\n${firstQ.answer.schoolMethod}`),
         url: chapterUrl,
+        author: qaAuthor,
+        datePublished: CONTENT_PUBLISHED,
+        upvoteCount: 1,
       },
     },
   } : null;
