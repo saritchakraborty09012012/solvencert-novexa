@@ -53,22 +53,34 @@ function escapeHtml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
+// Put (i)/(ii)/(a)/(b)-style subpoints on their own lines so they render as a
+// point-wise list instead of one long paragraph. Applied to question text only
+// (never to answer keys / solutions). Idempotent: markers already at a line
+// start are left untouched.
+function splitSubpoints(text: string): string {
+  return text.replace(/([^\w(])(\((?:iv|iii|ii|i|v|[a-h])\))\s+/g, (_m, pre: string, mark: string) =>
+    pre.includes('\n') ? `${pre}${mark} ` : `${pre.trimEnd()}\n${mark} `);
+}
+
 function part2ToGm(chapter: Chapter): GmChapter {
   return {
     code: chapter.code, slug: chapter.slug, title: chapter.title, number: chapter.number,
     exercises: chapter.exercises.map(ex => ({
       id: ex.id, title: ex.title, introHtml: '',
-      questions: ex.questions.map(q => ({
-        id: q.id,
-        number: q.number,
-        head: `<div class="qnum">${escapeHtml(q.number)}</div><div class="qtext">${escapeHtml(q.text)}</div>`,
-        body: '',
-        plainText: `${q.text}\n\n${q.answer.schoolMethod}`,
-        answerKey: q.answer.answerKey,
-        instruction: q.instruction,
-        figure: q.figure,
-        md: { text: q.text, school: q.answer.schoolMethod },
-      })) as GmQuestion[],
+      questions: ex.questions.map(q => {
+        const text = splitSubpoints(q.text);
+        return {
+          id: q.id,
+          number: q.number,
+          head: `<div class="qnum">${escapeHtml(q.number)}</div><div class="qtext">${escapeHtml(text)}</div>`,
+          body: '',
+          plainText: `${text}\n\n${q.answer.schoolMethod}`,
+          answerKey: q.answer.answerKey,
+          instruction: q.instruction,
+          figure: q.figure,
+          md: { text, school: q.answer.schoolMethod },
+        } as GmQuestion;
+      }),
     })),
   };
 }
@@ -155,8 +167,8 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
   return (
     <div className="question-block" id={`q-${exercise.id}-${q.id}`}>
       <div className="ganita-notebook">
+        {q.instruction && <div className="qinstr">{q.instruction}</div>}
         <div className="qcard">
-          {q.instruction && <div className="qinstr">{q.instruction}</div>}
           {q.md
             ? <div className="qhead">
                 <div className="qnum">{q.number}</div>
