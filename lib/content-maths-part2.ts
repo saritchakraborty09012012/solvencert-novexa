@@ -191,30 +191,30 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q15",
             "number": "15",
             "isHard": false,
-            "text": "(i) Justify: If a number is divisible by 8, then it is divisible by both 2 and 4. (ii) Is checking divisibility by 2 and 4 enough to check divisibility by 8? Explain.",
+            "text": "Consider the statement: ‘If a number is divisible by 8, then it is divisible by both 2 and 4’. (i) Justify the statement. (ii) Recall the divisibility shortcuts that we have studied for different numbers. To check whether a given number is divisible by 8, is it enough to check whether it is divisible by 2 and 4? Why or why not?",
             "answer": {
-              "answerKey": "(i) True. (ii) No; 12 is a counterexample.",
-              "schoolMethod": "(i) If n is divisible by 8, write n = 8k. Then n = 2(4k) and n = 4(2k), so n is divisible by both 2 and 4.\n\n(ii) The converse is false. For example, 12 is divisible by 2 and 4 but is not divisible by 8. Therefore both tests do not guarantee divisibility by 8."
+              "answerKey": "(i) True — every multiple of 8 is a multiple of both 2 and 4. (ii) No — 12 is divisible by 2 and 4 but not by 8.",
+              "schoolMethod": "(i) Let n be a number divisible by 8, so n = 8k for some integer k. Then n = 2 × 4k, so n is divisible by 2, and n = 4 × 2k, so n is divisible by 4. Hence the statement is true.\n\n(ii) No. A number is divisible by 4 when the number formed by its last two digits is a multiple of 4, and every such number is automatically divisible by 2 as well. For example, 12 is divisible by both 2 and 4, but 12 is not divisible by 8. So checking divisibility by 2 and 4 is not enough to decide whether a number is divisible by 8."
             }
           },
           {
             "id": "q16",
             "number": "16",
             "isHard": false,
-            "text": "Express the relationship between “a number is divisible by 3” and “the sum of its digits is a multiple of 3” using if-then sentences.",
+            "text": "Recall that a shortcut to check whether a given number is divisible by 3 is to add the digits of the number and check if the sum is a multiple of 3. Express the relationship between ‘a number is divisible by 3’ and ‘sum of the digits is a multiple of 3’ using ‘If-then’ sentences.",
             "answer": {
-              "answerKey": "Both implications are true.",
-              "schoolMethod": "1. If a whole number is divisible by 3, then the sum of its digits is divisible by 3.\n2. If the sum of the digits of a whole number is divisible by 3, then the number is divisible by 3.\n\nThese statements are equivalent because each power of 10 is congruent to 1 modulo 3; hence a number and its digit sum have the same remainder upon division by 3."
+              "answerKey": "Both if-then sentences are true.",
+              "schoolMethod": "1. If a number is divisible by 3, then the sum of its digits is a multiple of 3.\n2. If the sum of the digits of a number is a multiple of 3, then the number is divisible by 3.\n\n**Reason:** Powers of 10 leave remainder 1 on division by 3 (10 = 3 × 3 + 1, 100 = 3 × 33 + 1, and so on), so a number and the sum of its digits always leave the same remainder when divided by 3. Hence each of the two if-then sentences is true."
             }
           },
           {
             "id": "q17",
             "number": "17",
             "isHard": true,
-            "text": "A category Q of quadrilaterals is made using diagonal sticks. (i) If every Q-quadrilateral has equal diagonals, should the sticks be equal? Does their arrangement matter? (ii) If every quadrilateral with equal diagonals is of type Q, answer the same questions.",
+            "text": "We have identified different types of quadrilaterals — squares, rectangles, parallelograms, rhombi, kites and trapezia. One can identify more types (e.g., we could create a category of quadrilaterals that have equal-length opposite sides).\n\nSuppose we have identified a category of quadrilaterals called Q, and we have to construct a quadrilateral of this type. For this, we are to use two thin sticks, put them together as diagonals so that the quadrilateral obtained by joining their endpoints is of type Q.\n\n(i) Suppose Q satisfies the following property: If a quadrilateral is of type Q, then it has equal-length diagonals.\n(a) Should the two sticks be of equal length? Why or why not?\n(b) Will it matter how the two sticks are put together?\n\n(ii) Instead of the property mentioned above, suppose Q satisfies the following property: If a quadrilateral has equal diagonals, then it is of type Q. What will be your answers to (a) and (b) now?",
             "answer": {
               "answerKey": "(i) Sticks must be equal; arrangement may matter. (ii) Sticks must be equal; arrangement does not matter.",
-              "schoolMethod": "(i) **Lengths:** Yes. The diagonals of every Q-quadrilateral are equal, so the two sticks must have equal lengths. **Arrangement:** It may matter, because the stated condition is only necessary: equal diagonals alone do not guarantee that a quadrilateral belongs to an otherwise unspecified category Q.\n\n(ii) **Lengths:** Yes, since the converse condition explicitly requires equal diagonals. **Arrangement:** No. Under this assumption, every quadrilateral formed using equal-length diagonals is of type Q, regardless of the way the sticks are arranged (subject to forming a quadrilateral)."
+              "schoolMethod": "(i) (a) Yes, the two sticks must be of equal length. The given property says every quadrilateral of type Q has equal-length diagonals, and the sticks are used as those diagonals. If the sticks were unequal, the quadrilateral formed could never have equal diagonals, so it could not be of type Q.\n(b) Yes, it can matter. The property is only necessary: equal diagonals alone do not guarantee that the quadrilateral obtained belongs to category Q, so how the sticks are put together can decide whether the result is of type Q.\n\n(ii) (a) Yes, the sticks must still be of equal length, because this property also requires the diagonals to be equal.\n(b) No, it will not matter. Any quadrilateral formed by joining the endpoints of two equal sticks has equal diagonals, and the property says every such quadrilateral is of type Q — so any arrangement works."
             }
           }
         ]
