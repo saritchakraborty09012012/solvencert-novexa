@@ -116,7 +116,7 @@ html[data-ui="ui3"] .ganita-notebook {
   flex: none; padding: 0 6px;
 }
 .ganita-notebook .qhead .qtext {
-  font-size: .96rem; font-weight: 600; color: var(--qtext); line-height: 1.4;
+  font-size: .96rem; font-weight: 400; color: var(--qtext); line-height: 1.4;
   font-family: 'Inter', system-ui, sans-serif; min-width: 0;
 }
 
