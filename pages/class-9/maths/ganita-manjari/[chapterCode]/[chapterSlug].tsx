@@ -54,12 +54,13 @@ function escapeHtml(s: string): string {
 }
 
 // Put (i)/(ii)/(a)/(b)-style subpoints on their own lines so they render as a
-// point-wise list instead of one long paragraph. Applied to question text only
-// (never to answer keys / solutions). Idempotent: markers already at a line
-// start are left untouched.
+// point-wise list instead of one long paragraph. Only split after a sentence
+// boundary (. ; : ? !) or a newline so inline references like "answers to (a)
+// and (b) now?" stay untouched. Applied to question text only (never to answer
+// keys / solutions). Idempotent: markers already at a line start are skipped.
 function splitSubpoints(text: string): string {
-  return text.replace(/([^\w(])(\((?:iv|iii|ii|i|v|[a-h])\))\s+/g, (_m, pre: string, mark: string) =>
-    pre.includes('\n') ? `${pre}${mark} ` : `${pre.trimEnd()}\n${mark} `);
+  return text.replace(/(^|[.;:?!]\s|\n)(\((?:iv|iii|ii|i|v|[a-h])\))\s+/g, (_m, pre: string, mark: string) =>
+    (pre === '' || pre === '\n' ? `${pre}${mark} ` : `${pre.trimEnd()}\n${mark} `));
 }
 
 function part2ToGm(chapter: Chapter): GmChapter {
