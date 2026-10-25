@@ -281,7 +281,9 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
   // QAPage schema — first exercise, first question as the primary Q&A
   // Google requires answerCount on Question, plus text/author/datePublished on
   // both the Question and its acceptedAnswer (Search Console Q&A report).
-  const CONTENT_PUBLISHED = '2026-08-26';
+  // Full ISO 8601 datetime with an explicit timezone — Google rejects bare
+  // dates ("missing a timezone") and "Invalid datetime value" on Q&A items.
+  const CONTENT_PUBLISHED = '2026-08-26T00:00:00+00:00';
   const plain = (s: string) => s.replace(/\$[^$]+\$/g, '[math]').replace(/\*\*/g, '').replace(/<[^>]+>/g, '').trim();
   const firstQ = chapter.exercises[0]?.questions[0];
   const qaAuthor = { '@type': 'Organization', name: 'SolveNCERT', url: BASE };
