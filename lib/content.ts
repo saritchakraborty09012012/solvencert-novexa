@@ -3340,6 +3340,14 @@ export const CLASS_9_SUBJECTS: Subject[] = [
     description: 'Class 9 Social Science — Understanding Society India and Beyond. NCERT 2026 Revised.',
     chapters: SST_CHAPTERS,
   },
+  {
+    id: 'sst-part-2', name: 'Social Science', slug: 'sst',
+    book: 'SSt-Part-II', bookSlug: 'sst-part-2',
+    code: '0904ss2', icon: '🌍', color: 'indigo',
+    downloadUrl: '/ebooks/SSt-Part-II.pdf',
+    description: 'Class 9 Social Science Part II (NCERT 2026 Revised).',
+    chapters: [],
+  },
 
   // ── IT (Code 402) — has two independently-selectable "parts" sharing the same
   // subject slug 'it'; the /class-9/it landing page lets the student choose
@@ -3400,6 +3408,9 @@ export function getChapterPdfUrl(subjectSlug: string, chapterNumber: number, sub
   // Ganita Manjari Part II keeps its own numbering: chapter 9 → iemh201 … chapter 14 → iemh206.
   if (subjectId === 'maths-part-2') {
     return `/ebooks/iemh2${String(chapterNumber - 8).padStart(2, '0')}.pdf`;
+  }
+  if (subjectId === 'sst-part-2') {
+    return `/ebooks/iest2${String(chapterNumber).padStart(2, '0')}.pdf`;
   }
   const prefix = (subjectId && CHAPTER_PDF_PREFIX[subjectId]) || CHAPTER_PDF_PREFIX[subjectSlug];
   if (!prefix) return null;
