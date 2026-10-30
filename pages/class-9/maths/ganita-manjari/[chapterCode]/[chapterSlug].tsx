@@ -163,11 +163,11 @@ function ExerciseQuestions({ exercise, chapter, guestBlocked, onGuestBlock }: {
         ? pageGroups.map((g, gi) => (
             <React.Fragment key={g.page !== undefined ? `p${g.page}` : `g${gi}`}>
               {g.page !== undefined && (
-                <p className="mt-5 mb-2 first:mt-0 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-300">
-                  <span className="h-px flex-1 bg-blue-200/60 dark:bg-blue-800/60" />
+                <h3 className="mt-5 mb-4 first:mt-0 text-base font-display font-bold text-[var(--text-primary)] flex items-center gap-2">
+                  <BookOpen size={15} className="text-blue-500" />
                   Page {g.page}
-                  <span className="h-px flex-1 bg-blue-200/60 dark:bg-blue-800/60" />
-                </p>
+                  <span className="text-xs font-normal text-[var(--text-muted)]">({g.items.length} {g.items.length === 1 ? 'question' : 'questions'})</span>
+                </h3>
               )}
               {g.items.map(q => (
                 <NotebookQuestion key={q.id} q={q} exercise={exercise} chapter={chapter}
