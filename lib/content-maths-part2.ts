@@ -243,10 +243,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": true,
             "page": 2,
-            "text": "The factor-partner argument says that a positive integer with an odd number of positive factors is a perfect square. Which implication does this prove? Why is the converse also true?",
+            "text": "Proposition P: If n is a perfect square, then it has an odd number of factors. Converse Q: If n has an odd number of factors, then it is a perfect square. You may recall that we came across these statements in the previous grade. Which of them are true?",
             "answer": {
-              "answerKey": "The argument first proves “odd number of factors ⇒ perfect square”. The converse “perfect square ⇒ odd number of factors” is also true.",
-              "schoolMethod": "Pair each positive divisor d of n with its partner n/d. If n has an odd number of divisors, at least one pair must consist of the same number twice, so d=n/d and n=d². This proves the first implication. Conversely, if n=k², the divisor pair (k,k) is the one repeated pair; every other divisor pairs with a distinct partner. Hence n has an odd number of positive divisors."
+              "answerKey": "Both statements are true: P (perfect square ⇒ odd number of factors) and Q (odd number of factors ⇒ perfect square) are each true, and in fact they imply each other.",
+              "schoolMethod": "**Discussion:** Consider the following argument. Each factor of a number has a \u2018partner\u2019 factor such that their product gives the number: for example, 5 is a factor of 35 and 5 \u00d7 7 = 35, so 7 is the partner factor of 5 (and vice-versa). The factor-partner pairs for 12 are (1,12), (2,6) and (3,4). If a number has an odd number of factors, one partner pair must consist of the same number twice — e.g., the partner factor of 5 in 25. Otherwise every factor would pair with a distinct partner and the total number of factors would be even. Thus, if a number has an odd number of factors, then it is a perfect square. This argument proves **Q**, not P. It does not show that every square number has an odd number of factors.\n\n**Is P true?** Yes. Start from the square case: if n = k\u00b2, the divisor pair (k,k) is the one repeated pair, and every other divisor pairs with a distinct partner. Hence a square number necessarily has an odd number of factors. In this example, \u2018n is a perfect square\u2019 and \u2018n has an odd number of factors\u2019 imply each other."
             }
           },
           {
