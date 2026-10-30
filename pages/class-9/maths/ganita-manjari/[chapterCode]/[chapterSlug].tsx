@@ -45,6 +45,7 @@ function CopyBtn({ text }: { text: string }) {
 type GmQuestion = MathsSourceQuestion & {
   md?: { text: string; school: string };
   instruction?: string;
+  boxHeading?: string;
   page?: number;
   figure?: { svg: string; caption?: string };
 };
@@ -80,6 +81,7 @@ function part2ToGm(chapter: Chapter): GmChapter {
           plainText: `${text}\n\n${q.answer.schoolMethod}`,
           answerKey: q.answer.answerKey,
           instruction: q.instruction,
+          boxHeading: q.boxHeading,
           figure: q.figure,
           page: q.page,
           md: { text, school: q.answer.schoolMethod },
@@ -169,6 +171,11 @@ function ExerciseQuestions({ exercise, chapter, guestBlocked, onGuestBlock }: {
                   Page {g.page}
                   <span className="text-xs font-normal text-[var(--text-muted)]">({g.items.length} {g.items.length === 1 ? 'question' : 'questions'})</span>
                 </h3>
+              )}
+              {g.items[0]?.boxHeading && (
+                <h4 className="mb-4 first:mt-0 text-base font-display font-bold text-red-600 flex items-center gap-2">
+                  {g.items[0].boxHeading}
+                </h4>
               )}
               {g.items.map(q => (
                 <NotebookQuestion key={q.id} q={q} exercise={exercise} chapter={chapter}

@@ -37,6 +37,8 @@ export interface Question {
   answer:  Answer;
   /** Instruction shown above this question (e.g. shared exercise instructions). */
   instruction?: string;
+  /** Sub-heading printed in the book above this question box (e.g. "Discussion"). */
+  boxHeading?: string;
   /** Optional inline SVG figure shown below the question text. */
   figure?: { svg: string; caption?: string };
 }
