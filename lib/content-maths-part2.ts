@@ -232,10 +232,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": true,
             "page": 1,
-            "text": "In a triangle, if two angles are equal, prove that the sides opposite them are equal. (Use the hint in the book: draw an altitude from the vertex containing the third angle.)",
+            "text": "We have proved the first statement in an earlier grade. Is the second statement (Statement 2: If two angles of a triangle are equal, then the sides opposite the equal angles have equal lengths) true? Can you prove it? (Hint: Draw the altitude from the vertex containing the third angle.)",
             "answer": {
-              "answerKey": "The sides opposite the equal angles are equal.",
-              "schoolMethod": "Let △ABC have ∠B = ∠C. Draw AD ⟂ BC. Since ∠B = ∠C, the right triangles △ABD and △ACD have ∠ABD = ∠ACD, ∠ADB = ∠ADC = 90°, and the common side AD. They are congruent by AAS. Hence AB = AC, the sides opposite the equal angles."
+              "answerKey": "Yes — the second statement is true. The sides opposite the equal angles are equal: AB = AC, so the triangle is isosceles.",
+              "schoolMethod": "**Given:** In △ABC, ∠B = ∠C (two angles of the triangle are equal).\n**To prove:** AB = AC, i.e. the sides opposite the equal angles are equal.\n**Construction:** From vertex A — the vertex containing the third angle — draw AD ⟂ BC, meeting BC at D.\n\n**Proof:**\nIn △ABD and △ACD,\n∠ABD = ∠ACD  (∠B = ∠C, given)\n∠ADB = ∠ADC = 90°  (by construction)\nAD = AD  (common side)\n\n∴ △ABD ≅ △ACD  (AAS congruence rule: two angles and a non-included side)\n∴ AB = AC  (CPCT — corresponding parts of congruent triangles)\n\n**Conclusion:** The second statement is true. If two angles of a triangle are equal, the sides opposite them are equal, so △ABC is an isosceles triangle with AB = AC. Together with Statement 1 (proved in an earlier grade), this shows that here both a proposition and its converse are true."
             }
           },
           {
