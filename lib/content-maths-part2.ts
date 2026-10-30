@@ -255,10 +255,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 3,
-            "text": "Give an example in which both a proposition and its converse are false.",
+            "text": "It can also happen that both the proposition and its converse are false! Can you give an example?",
             "answer": {
-              "answerKey": "For example, “If an integer is divisible by 2, then it is divisible by 3” and its converse are both false.",
-              "schoolMethod": "The proposition is false for n = 2: 2 is divisible by 2 but not by 3. Its converse, “If an integer is divisible by 3, then it is divisible by 2,” is false for n = 3. One counterexample to each universal statement is enough to show it is false."
+              "answerKey": "Yes. Take “If an integer is divisible by 2, then it is divisible by 3.” The proposition fails for n = 2, and its converse “If an integer is divisible by 3, then it is divisible by 2” fails for n = 3 — so both the proposition and the converse are false.",
+              "schoolMethod": "**Proposition:** If an integer is divisible by 2, then it is divisible by 3.\nTake n = 2: 2 is divisible by 2, but 2 is not divisible by 3. So the proposition is false.\n\n**Converse:** If an integer is divisible by 3, then it is divisible by 2.\nTake n = 3: 3 is divisible by 3, but 3 is not divisible by 2. So the converse is false too.\n\n**Conclusion:** A single counterexample is enough to disprove a universal statement, and here each of the two statements has its own counterexample. Hence this is an example in which both a proposition and its converse are false."
             }
           },
           {
@@ -266,10 +266,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": true,
             "page": 4,
-            "text": "The Pythagoras theorem says that if a triangle is right-angled with legs a,b and hypotenuse c, then a²+b²=c². Prove the converse.",
+            "text": "Let a, b, c be the side lengths of a triangle. If the triangle is right-angled, then a² + b² = c². Its converse is: if a² + b² = c², then the triangle is right-angled. Is this converse true?",
             "answer": {
-              "answerKey": "If a²+b²=c² for the side lengths of a triangle, the angle opposite c is 90°.",
-              "schoolMethod": "Construct a right triangle with perpendicular legs a and b; by Pythagoras its hypotenuse has length √(a²+b²)=c. The constructed triangle therefore has side lengths a,b,c, exactly as the given triangle does. The triangles are congruent by SSS. Corresponding to the constructed right angle, the given triangle’s angle opposite side c is also 90°. Thus the converse is true."
+              "answerKey": "Yes. If a² + b² = c² for the side lengths of a triangle, then the angle opposite the side c is a right angle — the converse of the Baudhāyana–Pythagoras theorem is true.",
+              "schoolMethod": "**Given:** A triangle ABC with side lengths BC = a, CA = b and AB = c, where a² + b² = c².\n**To prove:** ∠C = 90°, i.e. the angle opposite the side c is a right angle.\n**Construction:** Construct a right triangle XYZ with perpendicular sides YZ = a and XZ = b, right-angled at Z.\n\n**Proof:**\nIn the right triangle XYZ, by the Baudhāyana–Pythagoras theorem,\nXY² = YZ² + XZ² = a² + b².\nBut a² + b² = c² (given), so XY² = c² and hence XY = c.\n\nNow compare ∆ABC and ∆XYZ:\nBC = YZ = a  (by construction)\nCA = XZ = b  (by construction)\nAB = XY = c  (just proved)\n\n∴ ∆ABC ≅ ∆XYZ  (SSS congruence rule)\n∴ ∠C = ∠Z  (CPCT)\nBut ∠Z = 90°  (by construction), so ∠C = 90°.\n\n**Conclusion:** The converse is true. If the squares of two sides of a triangle add up to the square of the third side, the triangle is right-angled."
             }
           },
           {
@@ -277,10 +277,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 5,
-            "text": "Give one real-life example of a true proposition whose converse is false, and state a counterexample to the converse.",
+            "text": "Identify real-life examples in which a proposition is true but not the converse. Give nice counterexamples!",
             "answer": {
-              "answerKey": "If a person lives in Delhi, then they live in India; the converse is false because a person may live in another Indian city.",
-              "schoolMethod": "**Proposition:** If a person lives in Delhi, then the person lives in India. This is true because Delhi is in India.\n\n**Converse:** If a person lives in India, then the person lives in Delhi. This is false; for example, a person who lives in Mumbai lives in India but not in Delhi."
+              "answerKey": "“If a person lives in Jaipur, then the person lives in Rajasthan” is true, but its converse is false — a person living in Udaipur lives in Rajasthan but not in Jaipur.",
+              "schoolMethod": "**Example 1 — Cities.**\n**Proposition:** If a person lives in Jaipur, then the person lives in Rajasthan. True — Jaipur is a city in Rajasthan.\n**Converse:** If a person lives in Rajasthan, then the person lives in Jaipur. False — a person living in Udaipur lives in Rajasthan but not in Jaipur.\n\n**Example 2 — Vehicles.**\n**Proposition:** If a vehicle is a car, then it runs on four wheels. True — a car has four wheels.\n**Converse:** If a vehicle runs on four wheels, then it is a car. False — a four-wheeled truck runs on four wheels but is not a car.\n\n**Example 3 — Weather.**\n**Proposition:** If it is raining, then the road is wet. True — rain wets the road.\n**Converse:** If the road is wet, then it is raining. False — a water tanker may have just sprinkled the road on a sunny day.\n\n**Conclusion:** Each proposition is true, yet each converse fails the moment one counterexample is produced."
             }
           },
           {
@@ -288,10 +288,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "2",
             "isHard": false,
             "page": 5,
-            "text": "Give one example each from everyday life, geometry and number theory of a true proposition whose converse is false.",
+            "text": "Give more examples from geometry as well as number theory in which a proposition is true but not its converse. Give appropriate counterexamples.",
             "answer": {
-              "answerKey": "Every resident of Delhi is a resident of India, but not every resident of India lives in Delhi; every square is a rectangle, but not every rectangle is a square; every multiple of 4 is even, but not every even number is a multiple of 4.",
-              "schoolMethod": "**Everyday life:** If a person lives in Delhi, then they live in India; the converse is false because a person may live in Mumbai.\n\n**Geometry:** Every square is a rectangle, but a non-square rectangle is a counterexample to the converse.\n\n**Number theory:** Every multiple of 4 is even, but 6 is even and is not a multiple of 4."
+              "answerKey": "Geometry: congruent triangles have equal areas, but equal-area triangles need not be congruent; every square is a rectangle, but a 4 cm × 2 cm rectangle is not a square. Number theory: every multiple of 4 is even, but 6 is even and not a multiple of 4; every multiple of 9 is a multiple of 3, but 6 is a multiple of 3 and not of 9.",
+              "schoolMethod": "**Geometry**\n(1) **Proposition:** If two triangles are congruent, then they have the same area. True — congruent figures are identical in shape and size.\n**Converse:** If two triangles have the same area, then they are congruent. False — a triangle with base 12 cm and height 1 cm has area 6 cm², and a triangle with base 3 cm and height 4 cm also has area 6 cm², but their sides are different, so they are not congruent.\n\n(2) **Proposition:** If a quadrilateral is a square, then it is a rectangle. True — a square is a rectangle with all sides equal.\n**Converse:** If a quadrilateral is a rectangle, then it is a square. False — a rectangle of sides 4 cm and 2 cm has four right angles but unequal adjacent sides.\n\n**Number theory**\n(1) **Proposition:** If n is a multiple of 4, then n is even. True — n = 4k = 2(2k) is even.\n**Converse:** If n is even, then n is a multiple of 4. False — n = 6 is even, but 6 ÷ 4 leaves remainder 2.\n\n(2) **Proposition:** If n is a multiple of 9, then n is a multiple of 3. True — n = 9k = 3(3k).\n**Converse:** If n is a multiple of 3, then n is a multiple of 9. False — n = 6 is a multiple of 3 but not of 9.\n\n**Conclusion:** In every pair the proposition holds in all cases, while one counterexample is enough to show that its converse fails."
             }
           }
         ]
