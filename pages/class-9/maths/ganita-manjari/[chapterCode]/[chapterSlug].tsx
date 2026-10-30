@@ -19,6 +19,7 @@ import MathRenderer from '@/components/features/MathRenderer';
 import { useAuthStore } from '@/store/authStore';
 import { hasReachedGuestLimit, incrementSolutionView } from '@/lib/guestLimits';
 import { cn, getSubjectBackground } from '@/utils/helpers';
+import { useChapterTabSession } from '@/lib/chapterTabSession';
 import { htmlToPdf } from '@/lib/pdf';
 
 function CopyBtn({ text }: { text: string }) {
@@ -293,6 +294,18 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     : (p2Source ? part2ToGm(p2Source) : undefined);
   const bookLabel = chapter ? (chapter.number >= PART2_FIRST ? 'Part II' : 'Part I') : 'Part I';
   const [selEx, setSelEx] = useState<string>('all');
+  useChapterTabSession({
+    scope: 'ganita-manjari',
+    code: chapterCode,
+    slug: chapterSlug,
+    tab: selEx,
+    setTab: setSelEx,
+    isTabValid: t => t === 'all' || (chapter?.exercises.some(e => e.id === t) ?? false),
+  });
+  // selEx is component state that survives client-side chapter navigation —
+  // while it points at an exercise the new chapter doesn't have, fall back to
+  // the default tab so we never render "no tab selected + no questions".
+  const sel = selEx === 'all' || (chapter?.exercises.some(e => e.id === selEx) ?? false) ? selEx : 'all';
   const [guestBlocked, setGuestBlocked] = useState(false);
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null);
   const { isGuest } = useAuthStore();
@@ -310,7 +323,7 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
   async function downloadPDF() {
     if (!chapter) return;
     const { jsPDF } = await import('jspdf');
-    const exercises = selEx === 'all' ? chapter.exercises : chapter.exercises.filter(e => e.id === selEx);
+    const exercises = sel === 'all' ? chapter.exercises : chapter.exercises.filter(e => e.id === sel);
     const pdf = new jsPDF({ unit: 'pt', format: 'a4' });
     let y = 48;
     const write = (line: string) => { if (y > 790) { pdf.addPage(); y = 48; } pdf.text(line, 48, y); y += 16; };
@@ -367,13 +380,13 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     }
     pdf.setFontSize(9);
     write('SolveNCERT — Powered by NDe · formerly NOVEXA | solvencert · NCERT 2026 Revised Syllabus');
-    pdf.save(`class-9-maths-${chapter.code}-${selEx === 'all' ? 'all-exercises' : selEx}-solutions.pdf`);
+    pdf.save(`class-9-maths-${chapter.code}-${sel === 'all' ? 'all-exercises' : sel}-solutions.pdf`);
   }
 
   async function downloadAnswerKeys() {
     if (!chapter) return;
     await import('jspdf');
-    const exercises = selEx === 'all' ? chapter.exercises : chapter.exercises.filter(e => e.id === selEx);
+    const exercises = sel === 'all' ? chapter.exercises : chapter.exercises.filter(e => e.id === sel);
     const html = `<html><head><title>${chapter.title} — Answer Keys Only</title>
     <style>body{font-family:Georgia,serif;max-width:720px;margin:0 auto;padding:24px;font-size:13px;line-height:1.8}
     h1{font-size:22px;border-bottom:2px solid #2563eb;padding-bottom:8px}h2{font-size:15px;color:#2563eb;margin-top:20px}
@@ -396,7 +409,7 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     }).join('')}
     <div class="footer">SolveNCERT — Powered by NDe · formerly NOVEXA | solvencert · NCERT 2026 Revised Syllabus</div>
     </body></html>`;
-    htmlToPdf(html, `class-9-maths-${chapter.code}-${selEx === 'all' ? 'all-exercises' : selEx}-answer-keys.pdf`);
+    htmlToPdf(html, `class-9-maths-${chapter.code}-${sel === 'all' ? 'all-exercises' : sel}-answer-keys.pdf`);
   }
 
   if (!chapter) {
@@ -410,7 +423,7 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     );
   }
 
-  const exercises = selEx === 'all' ? chapter.exercises : chapter.exercises.filter(e => e.id === selEx);
+  const exercises = sel === 'all' ? chapter.exercises : chapter.exercises.filter(e => e.id === sel);
   const totalQ = chapter.exercises.reduce((a, ex) => a + ex.questions.length, 0);
   const BASE = 'https://solvencert-novexa.vercel.app';
   const chapterUrl = `${BASE}/class-9/maths/ganita-manjari/${chapterCode}/${chapterSlug}`;
@@ -507,9 +520,9 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
                 <div className="mb-3">
                   <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Jump to:</span>
                   <div className="section-nav mt-2">
-                    <button onClick={() => setSelEx('all')} className={cn('method-tab section-nav-button text-xs', selEx === 'all' ? 'method-tab-active' : 'method-tab-inactive')}>All Exercises</button>
+                    <button onClick={() => setSelEx('all')} className={cn('method-tab section-nav-button text-xs', sel === 'all' ? 'method-tab-active' : 'method-tab-inactive')}>All Exercises</button>
                     {chapter.exercises.map(ex => (
-                      <button key={ex.id} onClick={() => setSelEx(ex.id)} className={cn('method-tab section-nav-button text-xs', selEx === ex.id ? 'method-tab-active' : 'method-tab-inactive')}>{ex.title}</button>
+                      <button key={ex.id} onClick={() => setSelEx(ex.id)} className={cn('method-tab section-nav-button text-xs', sel === ex.id ? 'method-tab-active' : 'method-tab-inactive')}>{ex.title}</button>
                     ))}
                   </div>
                 </div>
@@ -565,7 +578,7 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
 
           <QuestionNav
             questions={exercises.flatMap(ex => ex.questions.map(q => ({ id: `${ex.id}-${q.id}`, number: q.number.replace(/\u2605/g, ''), section: ex.title, page: q.page })))}
-            label={selEx === 'all' ? 'Questions' : (chapter.exercises.find(e => e.id === selEx)?.title || 'Questions')}
+            label={sel === 'all' ? 'Questions' : (chapter.exercises.find(e => e.id === sel)?.title || 'Questions')}
           />
         </div>
       </div>

@@ -19,6 +19,7 @@ import { hasReachedGuestLimit, incrementSolutionView } from '@/lib/guestLimits';
 import { cn } from '@/utils/helpers';
 import { getSubjectBackground } from '@/utils/helpers';
 import { htmlToPdf } from '@/lib/pdf';
+import { useChapterTabSession } from '@/lib/chapterTabSession';
 
 async function savePdf(html: string, filename: string) {
   await import('jspdf');
@@ -202,6 +203,18 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
   const chapter   = subject?.chapters.find(c=>c.slug===chapterSlug);
   const isMaths   = subjectSlug === 'maths' || subjectSlug === 'advanced-maths';
   const [selEx, setSelEx]   = useState<string>('all');
+  useChapterTabSession({
+    scope: `${subjectSlug}/${bookSlug}`,
+    code: chapterCode,
+    slug: chapterSlug,
+    tab: selEx,
+    setTab: setSelEx,
+    isTabValid: t => t === 'all' || (chapter?.exercises.some(e => e.id === t) ?? false),
+  });
+  // selEx survives client-side chapter navigation — if it points at an
+  // exercise this chapter doesn't have, fall back to the default tab so the
+  // page never renders with no tab selected and an empty question list.
+  const sel = selEx === 'all' || (chapter?.exercises.some(e => e.id === selEx) ?? false) ? selEx : 'all';
   const [guestBlocked, setGuestBlocked] = useState(false);
   const [authModal, setAuthModal]       = useState<'login'|'signup'|null>(null);
   const { isGuest } = useAuthStore();
@@ -222,7 +235,7 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
 
   function downloadPDF() {
     if (!subject || !chapter) return;
-    const exercises = selEx==='all' ? chapter.exercises : chapter.exercises.filter(e=>e.id===selEx);
+    const exercises = sel==='all' ? chapter.exercises : chapter.exercises.filter(e=>e.id===sel);
     const html = `<html><head><title>Ch${chapter.number} ${chapter.title} Solutions</title>
     <style>body{font-family:Georgia,serif;max-width:720px;margin:0 auto;padding:24px;font-size:13px;line-height:1.8}
     h1{font-size:20px;border-bottom:2px solid #1d4ed8;padding-bottom:8px}h2{font-size:15px;color:#1d4ed8;margin-top:20px}
@@ -233,12 +246,12 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
     <p style="color:#6b7280;font-size:12px;margin-bottom:20px">Class 9 ${subject.name} · ${subject.book} · NCERT 2026 Revised Syllabus</p>
     ${exercises.map(ex=>`<h2>${ex.title}</h2>${ex.questions.map(q=>`<div class="q"><p><strong>Q${q.number}.</strong> ${q.text.replace(/\$[^$]+\$/g,'[math]')}</p>${q.parts?'<ol>'+q.parts.map(p=>`<li>${p}</li>`).join('')+'</ol>':''}<p><strong>Answer Key:</strong> ${q.answer.answerKey.replace(/\$[^$]+\$/g,'[math]').replace(/\*\*/g,'')}</p><p><strong>Solution:</strong> ${q.answer.schoolMethod.replace(/\$[^$]+\$/g,'[math]').replace(/\*\*/g,'')}</p></div>`).join('')}`).join('')}
     <div class="footer">SolveNCERT — Powered by NDe · formerly NOVEXA | solvencert · NCERT 2026 Revised Syllabus</div></body></html>`;
-    savePdf(html, `class-9-${subject.slug}-${chapter.code}-${selEx === 'all' ? 'all-exercises' : selEx}-solutions.pdf`);
+    savePdf(html, `class-9-${subject.slug}-${chapter.code}-${sel === 'all' ? 'all-exercises' : sel}-solutions.pdf`);
   }
 
   function downloadAnswerKeys() {
     if (!subject || !chapter) return;
-    const exercises = selEx==='all' ? chapter.exercises : chapter.exercises.filter(e=>e.id===selEx);
+    const exercises = sel==='all' ? chapter.exercises : chapter.exercises.filter(e=>e.id===sel);
     const html = `<html><head><title>Ch${chapter.number} ${chapter.title} — Answer Keys</title>
     <style>body{font-family:Georgia,serif;max-width:720px;margin:0 auto;padding:24px;font-size:13px;line-height:1.8}
     h1{font-size:20px;border-bottom:2px solid #1d4ed8;padding-bottom:8px}h2{font-size:15px;color:#1d4ed8;margin-top:20px}
@@ -249,7 +262,7 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
     <p style="color:#6b7280;font-size:12px;margin-bottom:20px">Class 9 ${subject.name} · ${subject.book} · Quick-reference answer keys only · NCERT 2026 Revised Syllabus</p>
     ${exercises.map(ex=>`<h2>${ex.title}</h2>${ex.questions.map(q=>`<div class="q"><p><strong>Q${q.number}.</strong> ${q.answer.answerKey.replace(/\$[^$]+\$/g,'[math]').replace(/\*\*/g,'')}</p></div>`).join('')}`).join('')}
     <div class="footer">SolveNCERT — Powered by NDe · formerly NOVEXA | solvencert · NCERT 2026 Revised Syllabus</div></body></html>`;
-    savePdf(html, `class-9-${subject.slug}-${chapter.code}-${selEx === 'all' ? 'all-exercises' : selEx}-answer-keys.pdf`);
+    savePdf(html, `class-9-${subject.slug}-${chapter.code}-${sel === 'all' ? 'all-exercises' : sel}-answer-keys.pdf`);
   }
 
   if (!subject || !chapter) return (
@@ -261,7 +274,7 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
     </Layout>
   );
 
-  const exercises = selEx==='all' ? chapter.exercises : chapter.exercises.filter(e=>e.id===selEx);
+  const exercises = sel==='all' ? chapter.exercises : chapter.exercises.filter(e=>e.id===sel);
 
   const BASE = 'https://solvencert-novexa.vercel.app';
   const chapterUrl = `${BASE}/${classSlug}/${subjectSlug}/${bookSlug}/${chapterCode}/${chapterSlug}`;
@@ -403,9 +416,9 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
                   <div className="mb-3">
                     <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Jump to:</span>
                     <div className="section-nav mt-2">
-                      <button onClick={()=>setSelEx('all')} className={cn('method-tab section-nav-button text-xs',selEx==='all'?'method-tab-active':'method-tab-inactive')}>All Exercises</button>
+                      <button onClick={()=>setSelEx('all')} className={cn('method-tab section-nav-button text-xs',sel==='all'?'method-tab-active':'method-tab-inactive')}>All Exercises</button>
                       {chapter.exercises.map(ex=>(
-                        <button key={ex.id} onClick={()=>setSelEx(ex.id)} className={cn('method-tab section-nav-button text-xs',selEx===ex.id?'method-tab-active':'method-tab-inactive')}>{ex.title}</button>
+                        <button key={ex.id} onClick={()=>setSelEx(ex.id)} className={cn('method-tab section-nav-button text-xs',sel===ex.id?'method-tab-active':'method-tab-inactive')}>{ex.title}</button>
                       ))}
                     </div>
                   </div>
@@ -464,7 +477,7 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
 
           <QuestionNav
             questions={exercises.flatMap(ex => ex.questions.map(q => ({ id: `${ex.id}-${q.id}`, number: q.number, section: ex.title })))}
-            label={selEx === 'all' ? 'Questions' : (chapter.exercises.find(e=>e.id===selEx)?.title || 'Questions')}
+            label={sel === 'all' ? 'Questions' : (chapter.exercises.find(e=>e.id===sel)?.title || 'Questions')}
           />
         </div>
       </div>

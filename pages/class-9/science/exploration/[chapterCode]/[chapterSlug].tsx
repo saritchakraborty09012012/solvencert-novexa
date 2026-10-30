@@ -16,6 +16,7 @@ import { SCIENCE_CHAPTERS, type ScienceQuestion } from '@/lib/content-science';
 import { cn } from '@/utils/helpers';
 import { getSubjectBackground } from '@/utils/helpers';
 import { htmlToPdf } from '@/lib/pdf';
+import { useChapterTabSession } from '@/lib/chapterTabSession';
 
 async function savePdf(html: string, filename: string) {
   await import('jspdf');
@@ -156,6 +157,15 @@ export default function ScienceChapterPage({ chapterCode, chapterSlug }: PagePro
   const otherExercises = chapter ? chapter.exercises.filter(e => !e.id.endsWith('.pp') && !e.id.endsWith('.rr')) : [];
   const hasTabs = ppExercises.length > 0 && rrExercises.length > 0;
   const [activeTab, setActiveTab] = useState<'pp' | 'rr'>(ppExercises.length > 0 ? 'pp' : 'rr');
+  useChapterTabSession<'pp' | 'rr'>({
+    scope: 'science/exploration',
+    code: chapterCode,
+    slug: chapterSlug,
+    tab: activeTab,
+    setTab: setActiveTab,
+    isTabValid: t => (t === 'pp' ? ppExercises : rrExercises).length > 0,
+    defaultTab: ppExercises.length > 0 ? 'pp' : 'rr',
+  });
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null);
   const activeExercises = hasTabs ? (activeTab === 'pp' ? ppExercises : rrExercises) : [...ppExercises, ...rrExercises];
   const visibleExercises = [...activeExercises, ...otherExercises];

@@ -15,6 +15,7 @@ import { cn } from '@/utils/helpers';
 import { getSubjectBackground } from '@/utils/helpers';
 import QuestionNav from '@/components/features/QuestionNav';
 import { htmlToPdf } from '@/lib/pdf';
+import { useChapterTabSession } from '@/lib/chapterTabSession';
 
 function QuestionBlock({ q, sectionId, sectionTitle, chapterCode, contentSlug, contentTitle, chapterNumber, onGuestBlock }: {
   q: EnglishQuestion; sectionId: string; sectionTitle: string;
@@ -104,12 +105,23 @@ export default function EnglishContentPage({ chapterCode, chapterSlug }: PagePro
   const content = chapter?.contents.find(c => c.slug === chapterSlug);
   const otherContent = chapter?.contents.find(c => c.slug !== chapterSlug);
   const [selSec, setSelSec] = useState<string>('all');
+  useChapterTabSession({
+    scope: 'english/kaveri',
+    code: chapterCode,
+    slug: chapterSlug,
+    tab: selSec,
+    setTab: setSelSec,
+    isTabValid: t => t === 'all' || (content?.sections.some(s => s.id === t) ?? false),
+  });
+  // selSec survives client-side navigation — fall back to All Sections when it
+  // doesn't exist on this page so the section list is never empty.
+  const sel = selSec === 'all' || (content?.sections.some(s => s.id === selSec) ?? false) ? selSec : 'all';
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null);
 
   async function downloadPDF() {
     if (!chapter || !content) return;
     const { jsPDF } = await import('jspdf');
-    const secs = selSec === 'all' ? content.sections : content.sections.filter(s => s.id === selSec);
+    const secs = sel === 'all' ? content.sections : content.sections.filter(s => s.id === sel);
     const html = `<html><head><title>${content.title} — English Solutions</title>
     <style>
       body{font-family:Georgia,serif;max-width:720px;margin:0 auto;padding:24px;font-size:13px;line-height:1.8}
@@ -144,7 +156,7 @@ export default function EnglishContentPage({ chapterCode, chapterSlug }: PagePro
     </div>
     </body></html>`;
     await import('jspdf');
-    htmlToPdf(html, `class-9-english-${chapter.code}-${content.slug}-${selSec === 'all' ? 'all-sections' : selSec}-solutions.pdf`);
+    htmlToPdf(html, `class-9-english-${chapter.code}-${content.slug}-${sel === 'all' ? 'all-sections' : sel}-solutions.pdf`);
   }
 
   if (!chapter || !content) {
@@ -158,7 +170,7 @@ export default function EnglishContentPage({ chapterCode, chapterSlug }: PagePro
     );
   }
 
-  const sections = selSec === 'all' ? content.sections : content.sections.filter(s => s.id === selSec);
+  const sections = sel === 'all' ? content.sections : content.sections.filter(s => s.id === sel);
   const totalQ   = content.sections.reduce((a, s) => a + s.questions.length, 0);
 
   return (
@@ -281,12 +293,12 @@ export default function EnglishContentPage({ chapterCode, chapterSlug }: PagePro
                 <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Section:</span>
                 <div className="section-nav mt-2">
                   <button onClick={() => setSelSec('all')}
-                    className={cn('method-tab section-nav-button text-xs', selSec === 'all' ? 'method-tab-active' : 'method-tab-inactive')}>
+                    className={cn('method-tab section-nav-button text-xs', sel === 'all' ? 'method-tab-active' : 'method-tab-inactive')}>
                     All Sections
                   </button>
                   {content.sections.map(s => (
                     <button key={s.id} onClick={() => setSelSec(s.id)}
-                      className={cn('method-tab section-nav-button text-xs', selSec === s.id ? 'method-tab-active' : 'method-tab-inactive')}>
+                      className={cn('method-tab section-nav-button text-xs', sel === s.id ? 'method-tab-active' : 'method-tab-inactive')}>
                       {s.title.length > 18 ? s.title.slice(0, 18) + '…' : s.title}
                     </button>
                   ))}
@@ -339,7 +351,7 @@ export default function EnglishContentPage({ chapterCode, chapterSlug }: PagePro
           </main>
           <QuestionNav
             questions={sections.flatMap(s => s.questions.map(q => ({ id: `${s.id}-${q.id}`, number: q.number, section: s.title })))}
-            label={selSec === 'all' ? 'Questions' : sections[0]?.title || 'Questions'}
+            label={sel === 'all' ? 'Questions' : sections[0]?.title || 'Questions'}
           />
         </div>
       </div>
