@@ -44,6 +44,7 @@ function CopyBtn({ text }: { text: string }) {
 type GmQuestion = MathsSourceQuestion & {
   md?: { text: string; school: string };
   instruction?: string;
+  page?: number;
   figure?: { svg: string; caption?: string };
 };
 interface GmExercise { id: string; title: string; introHtml: string; questions: GmQuestion[]; }
@@ -79,6 +80,7 @@ function part2ToGm(chapter: Chapter): GmChapter {
           answerKey: q.answer.answerKey,
           instruction: q.instruction,
           figure: q.figure,
+          page: q.page,
           md: { text, school: q.answer.schoolMethod },
         } as GmQuestion;
       }),
@@ -145,14 +147,42 @@ function ExerciseQuestions({ exercise, chapter, guestBlocked, onGuestBlock }: {
     if (!showSol) setShowKey(false);
   }
 
+  // Group questions by printed book page (Think & Reflect boxes) so each page
+  // gets its own "Page N" side heading with numbering restarting under it.
+  const pageGroups: { page?: number; items: GmQuestion[] }[] = [];
+  for (const q of exercise.questions) {
+    const last = pageGroups[pageGroups.length - 1];
+    if (last && last.page === q.page) last.items.push(q);
+    else pageGroups.push({ page: q.page, items: [q] });
+  }
+  const hasPageGroups = pageGroups.some(g => g.page !== undefined);
+
   return (
     <>
-      {exercise.questions.map(q => (
-        <NotebookQuestion key={q.id} q={q} exercise={exercise} chapter={chapter}
-          guestBlocked={guestBlocked} onGuestBlock={onGuestBlock}
-          showKey={showKey} showSol={showSol}
-          onToggleKey={toggleKey} onToggleSol={toggleSol} />
-      ))}
+      {hasPageGroups
+        ? pageGroups.map((g, gi) => (
+            <React.Fragment key={g.page !== undefined ? `p${g.page}` : `g${gi}`}>
+              {g.page !== undefined && (
+                <p className="mt-5 mb-2 first:mt-0 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-300">
+                  <span className="h-px flex-1 bg-blue-200/60 dark:bg-blue-800/60" />
+                  Page {g.page}
+                  <span className="h-px flex-1 bg-blue-200/60 dark:bg-blue-800/60" />
+                </p>
+              )}
+              {g.items.map(q => (
+                <NotebookQuestion key={q.id} q={q} exercise={exercise} chapter={chapter}
+                  guestBlocked={guestBlocked} onGuestBlock={onGuestBlock}
+                  showKey={showKey} showSol={showSol}
+                  onToggleKey={toggleKey} onToggleSol={toggleSol} />
+              ))}
+            </React.Fragment>
+          ))
+        : exercise.questions.map(q => (
+            <NotebookQuestion key={q.id} q={q} exercise={exercise} chapter={chapter}
+              guestBlocked={guestBlocked} onGuestBlock={onGuestBlock}
+              showKey={showKey} showSol={showSol}
+              onToggleKey={toggleKey} onToggleSol={toggleSol} />
+          ))}
     </>
   );
 }
@@ -295,8 +325,16 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     y += 10;
     for (const ex of exercises) {
       pdf.setFontSize(13); write(ex.title); pdf.setFontSize(10); y += 6;
+      let lastPage: number | undefined;
       for (const q of ex.questions) {
         const gm = q as GmQuestion;
+        if (gm.page !== undefined && gm.page !== lastPage) {
+          lastPage = gm.page;
+          pdf.setFont('helvetica', 'bold'); pdf.setFontSize(11);
+          write(`Page ${gm.page}`);
+          pdf.setFont('helvetica', 'normal'); pdf.setFontSize(10);
+          y += 4;
+        }
         if (gm.instruction) { writeWrapped(gm.instruction, 10, 'italic'); y += 4; }
         const starred = q.number.includes('\u2605');
         const num = q.number.replace(/\u2605/g, '');
@@ -344,8 +382,18 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     @media print{body{padding-bottom:40px}}</style></head><body>
     <h1>Chapter ${chapter.number}: ${chapter.title} — Answer Keys</h1>
     <p style="color:#6b7280;font-size:12px;margin-bottom:20px">Class 9 Maths (Ganita Manjari ${bookLabel}) · Quick-reference answer keys only · NCERT 2026 Revised Syllabus</p>
-    ${exercises.map(ex => `<h2>${ex.title}</h2>${ex.questions.map(q => `
-      <div class="q"><p><strong>Q${q.number.replace(/\u2605/g, '')}.</strong> ${q.answerKey.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\n/g, '<br>')}</p></div>`).join('')}`).join('')}
+    ${exercises.map(ex => {
+      let lastPage: number | undefined;
+      return `<h2>${ex.title}</h2>${ex.questions.map(q => {
+        let pageHead = '';
+        if (q.page !== undefined && q.page !== lastPage) {
+          lastPage = q.page;
+          pageHead = `<h3 style="font-size:13px;color:#2563eb;margin:16px 0 4px">Page ${q.page}</h3>`;
+        }
+        return `${pageHead}
+      <div class="q"><p><strong>Q${q.number.replace(/\u2605/g, '')}.</strong> ${q.answerKey.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/\n/g, '<br>')}</p></div>`;
+      }).join('')}`;
+    }).join('')}
     <div class="footer">SolveNCERT — Powered by NDe · formerly NOVEXA | solvencert · NCERT 2026 Revised Syllabus</div>
     </body></html>`;
     htmlToPdf(html, `class-9-maths-${chapter.code}-${selEx === 'all' ? 'all-exercises' : selEx}-answer-keys.pdf`);
@@ -516,7 +564,7 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
           </main>
 
           <QuestionNav
-            questions={exercises.flatMap(ex => ex.questions.map(q => ({ id: `${ex.id}-${q.id}`, number: q.number.replace(/\u2605/g, ''), section: ex.title })))}
+            questions={exercises.flatMap(ex => ex.questions.map(q => ({ id: `${ex.id}-${q.id}`, number: q.number.replace(/\u2605/g, ''), section: ex.title, page: q.page })))}
             label={selEx === 'all' ? 'Questions' : (chapter.exercises.find(e => e.id === selEx)?.title || 'Questions')}
           />
         </div>

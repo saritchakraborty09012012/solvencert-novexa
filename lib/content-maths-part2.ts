@@ -225,12 +225,13 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
       },
       {
         "id": "ex9.reflect",
-        "title": "In-text and Think and Reflect",
+        "title": "Think and Reflect",
         "questions": [
           {
             "id": "q1",
             "number": "1",
             "isHard": true,
+            "page": 1,
             "text": "In a triangle, if two angles are equal, prove that the sides opposite them are equal. (Use the hint in the book: draw an altitude from the vertex containing the third angle.)",
             "answer": {
               "answerKey": "The sides opposite the equal angles are equal.",
@@ -238,9 +239,21 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             }
           },
           {
+            "id": "q6",
+            "number": "1",
+            "isHard": true,
+            "page": 2,
+            "text": "The factor-partner argument says that a positive integer with an odd number of positive factors is a perfect square. Which implication does this prove? Why is the converse also true?",
+            "answer": {
+              "answerKey": "The argument first proves “odd number of factors ⇒ perfect square”. The converse “perfect square ⇒ odd number of factors” is also true.",
+              "schoolMethod": "Pair each positive divisor d of n with its partner n/d. If n has an odd number of divisors, at least one pair must consist of the same number twice, so d=n/d and n=d². This proves the first implication. Conversely, if n=k², the divisor pair (k,k) is the one repeated pair; every other divisor pairs with a distinct partner. Hence n has an odd number of positive divisors."
+            }
+          },
+          {
             "id": "q2",
-            "number": "2",
+            "number": "1",
             "isHard": false,
+            "page": 3,
             "text": "Give an example in which both a proposition and its converse are false.",
             "answer": {
               "answerKey": "For example, “If an integer is divisible by 2, then it is divisible by 3” and its converse are both false.",
@@ -249,8 +262,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q3",
-            "number": "3",
+            "number": "1",
             "isHard": true,
+            "page": 4,
             "text": "The Pythagoras theorem says that if a triangle is right-angled with legs a,b and hypotenuse c, then a²+b²=c². Prove the converse.",
             "answer": {
               "answerKey": "If a²+b²=c² for the side lengths of a triangle, the angle opposite c is 90°.",
@@ -259,8 +273,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q4",
-            "number": "4",
+            "number": "1",
             "isHard": false,
+            "page": 5,
             "text": "Give one real-life example of a true proposition whose converse is false, and state a counterexample to the converse.",
             "answer": {
               "answerKey": "If a person lives in Delhi, then they live in India; the converse is false because a person may live in another Indian city.",
@@ -269,22 +284,13 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q5",
-            "number": "5",
+            "number": "2",
             "isHard": false,
+            "page": 5,
             "text": "Give one example each from everyday life, geometry and number theory of a true proposition whose converse is false.",
             "answer": {
               "answerKey": "Every resident of Delhi is a resident of India, but not every resident of India lives in Delhi; every square is a rectangle, but not every rectangle is a square; every multiple of 4 is even, but not every even number is a multiple of 4.",
               "schoolMethod": "**Everyday life:** If a person lives in Delhi, then they live in India; the converse is false because a person may live in Mumbai.\n\n**Geometry:** Every square is a rectangle, but a non-square rectangle is a counterexample to the converse.\n\n**Number theory:** Every multiple of 4 is even, but 6 is even and is not a multiple of 4."
-            }
-          },
-          {
-            "id": "q6",
-            "number": "6",
-            "isHard": true,
-            "text": "The factor-partner argument says that a positive integer with an odd number of positive factors is a perfect square. Which implication does this prove? Why is the converse also true?",
-            "answer": {
-              "answerKey": "The argument first proves “odd number of factors ⇒ perfect square”. The converse “perfect square ⇒ odd number of factors” is also true.",
-              "schoolMethod": "Pair each positive divisor d of n with its partner n/d. If n has an odd number of divisors, at least one pair must consist of the same number twice, so d=n/d and n=d². This proves the first implication. Conversely, if n=k², the divisor pair (k,k) is the one repeated pair; every other divisor pairs with a distinct partner. Hence n has an odd number of positive divisors."
             }
           }
         ]
@@ -666,12 +672,13 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
       },
       {
         "id": "ex10.reflect",
-        "title": "In-text and Think and Reflect",
+        "title": "Think and Reflect",
         "questions": [
           {
             "id": "q1",
             "number": "1",
             "isHard": false,
+            "page": 8,
             "text": "Eight senior students have average height 165.5 cm and three junior students have average height 149⅓ cm. Find the combined average and explain why simply averaging the two group averages is wrong.",
             "answer": {
               "answerKey": "Combined average = 161.09 cm (approximately).",
@@ -680,8 +687,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q2",
-            "number": "2",
+            "number": "1",
             "isHard": false,
+            "page": 11,
             "text": "A 500 mL bowl of lemonade contains 10% jaggery, and a 200 mL glass contains 20% jaggery. What percentage of jaggery is in the mixture?",
             "answer": {
               "answerKey": "90/700 × 100% ≈ 12.86%.",
@@ -690,8 +698,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q3",
-            "number": "3",
+            "number": "1",
             "isHard": false,
+            "page": 26,
             "text": "Answer the following about stacked bar charts and 100% stacked bar charts: (i) What does each show? (ii) Can a 100% stacked chart be made from a stacked chart? (iii) Can the original stacked chart generally be recovered from a 100% stacked chart? (iv) What comparisons suit each chart?",
             "answer": {
               "answerKey": "Stacked bars show absolute quantities and totals; 100% stacked bars show proportions. A 100% chart can be made from a stacked chart, but absolute counts cannot generally be recovered from percentages alone.",
@@ -700,8 +709,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q4",
-            "number": "4",
+            "number": "1",
             "isHard": false,
+            "page": 27,
             "text": "From a chart comparing how people of different age groups spend a typical day, state useful observations and explain why such observations should be treated as estimates rather than exact universal facts.",
             "answer": {
               "answerKey": "Reasonable observations include differences in sleep, learning and work time between age groups; conclusions should be qualified as trends in the displayed data.",
@@ -710,8 +720,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q5",
-            "number": "5",
+            "number": "1",
             "isHard": false,
+            "page": 28,
             "text": "In the “What Can a Strip Say?” activity, each strip represents a full day divided into activities. If the pieces for each activity are grouped, can the information be displayed as a 100% stacked bar chart?",
             "answer": {
               "answerKey": "Yes, provided each strip represents the same total duration and all activity segments add to that total.",
@@ -720,8 +731,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q6",
-            "number": "6",
+            "number": "1",
             "isHard": false,
+            "page": 30,
             "text": "For a chart based on one teacher’s five weekdays of activity, would the bars necessarily look the same for another teacher or when all seven days are included? Give a reasoned answer.",
             "answer": {
               "answerKey": "No. The bars depend on the person and the days sampled; a seven-day dataset can change weekday patterns by including the weekend.",
@@ -915,12 +927,13 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
       },
       {
         "id": "ex11.reflect",
-        "title": "In-text and Think and Reflect",
+        "title": "Think and Reflect",
         "questions": [
           {
             "id": "q1",
             "number": "1",
             "isHard": false,
+            "page": 39,
             "text": "Explain why the right-to-left column addition algorithm works, and show how to adapt it to add decimal fractions.",
             "answer": {
               "answerKey": "The algorithm is valid because each column represents a power of ten and each carry is worth ten units of the next column. Example: 12.5 + 3.78 = 16.28.",
@@ -929,8 +942,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q2",
-            "number": "2",
+            "number": "1",
             "isHard": false,
+            "page": 41,
             "text": "Use the divisor algorithm to list all positive divisors of 15, 135 and 775. What happens to the amount of work as the numbers grow?",
             "answer": {
               "answerKey": "Divisors: 15 → {1,3,5,15}; 135 → {1,3,5,9,15,27,45,135}; 775 → {1,5,25,31,155,775}.",
@@ -1380,12 +1394,13 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
       },
       {
         "id": "ex12.reflect",
-        "title": "In-text and Think and Reflect",
+        "title": "Think and Reflect",
         "questions": [
           {
             "id": "q1",
             "number": "1",
             "isHard": true,
+            "page": 51,
             "text": "Can every quadrilateral tile the plane? Explain why copies of any simple quadrilateral can cover the plane without gaps or overlaps.",
             "answer": {
               "answerKey": "Yes. Every simple quadrilateral can tile the plane.",
@@ -1394,8 +1409,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q2",
-            "number": "2",
+            "number": "1",
             "isHard": false,
+            "page": 52,
             "text": "Give a precise definition of a (simple planar) quadrilateral that excludes crossed or overlapping figures.",
             "answer": {
               "answerKey": "A quadrilateral is a simple closed polygon in a plane with four distinct vertices and four straight sides; non-adjacent sides do not intersect, and adjacent sides meet only at their common endpoint.",
@@ -1404,8 +1420,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q3",
-            "number": "3",
+            "number": "1",
             "isHard": true,
+            "page": 59,
             "text": "In a quadrilateral, if both pairs of opposite angles are equal, what can be said about adjacent angles? Is the converse true?",
             "answer": {
               "answerKey": "Adjacent angles are supplementary. Conversely, if every pair of adjacent angles is supplementary, the quadrilateral is a parallelogram.",
@@ -1414,8 +1431,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q4",
-            "number": "4",
+            "number": "1",
             "isHard": true,
+            "page": 63,
             "text": "State and prove the converse of the midpoint theorem: in △ABC, P is the midpoint of AB and PQ ∥ BC meets AC at Q. Show that Q is the midpoint of AC.",
             "answer": {
               "answerKey": "AQ = QC; Q is the midpoint of AC.",
@@ -1424,8 +1442,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q5",
-            "number": "5",
+            "number": "2",
             "isHard": true,
+            "page": 63,
             "text": "State and prove the Midpoint Theorem: in △ABC, P and Q are the midpoints of AB and AC. Prove that PQ ∥ BC and PQ = BC/2.",
             "answer": {
               "answerKey": "PQ ∥ BC and PQ = ½ BC.",
@@ -1434,8 +1453,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q6",
-            "number": "6",
+            "number": "1",
             "isHard": true,
+            "page": 66,
             "text": "Give the alternative proof of the Centroid Theorem suggested in the text. Let M be the intersection of medians CP and BQ. Extend AM to S so that M is the midpoint of AS. If R=AM∩BC, prove that R is the midpoint of BC.",
             "answer": {
               "answerKey": "R is the midpoint of BC; thus AM is the third median.",
@@ -1911,12 +1931,13 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
       },
       {
         "id": "ex13.reflect",
-        "title": "In-text and Think and Reflect",
+        "title": "Think and Reflect",
         "questions": [
           {
             "id": "q1",
             "number": "1",
             "isHard": false,
+            "page": 88,
             "text": "Why does every point (x,y) satisfying 2x + 3y = 6 lie on the graph of the equation? Give three different solutions and explain why a non-vertical, non-horizontal linear equation has infinitely many solutions.",
             "answer": {
               "answerKey": "Examples of solutions are (0,2), (3,0) and (−3,4). There are infinitely many solutions.",
@@ -1925,8 +1946,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q2",
-            "number": "2",
+            "number": "1",
             "isHard": false,
+            "page": 92,
             "text": "Explain why a line in standard form ax + by + c = 0 passes through the origin when c = 0.",
             "answer": {
               "answerKey": "When c = 0, the point (0,0) satisfies the equation, so the line passes through the origin.",
@@ -1934,19 +1956,21 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             }
           },
           {
-            "id": "q3",
-            "number": "3",
+            "id": "q9",
+            "number": "1",
             "isHard": false,
-            "text": "How many solutions can a pair of linear equations in two variables have? Explain the cases represented by intersecting, parallel and coincident lines.",
+            "page": 97,
+            "text": "The line AB in the figure passes through A=(2,0) and B=(4,3). (i) Find the point on AB whose x-coordinate is 8. (ii) Find the point on AB whose y-coordinate is 6.",
             "answer": {
-              "answerKey": "Intersecting lines: one solution; distinct parallel lines: no solution; coincident lines: infinitely many solutions.",
-              "schoolMethod": "A solution is an ordered pair lying on both lines. Two distinct intersecting lines meet at exactly one point, giving a unique solution. Distinct parallel lines never meet, so there is no solution. Coincident lines have every point in common, so there are infinitely many solutions."
+              "answerKey": "(i) (8,9). (ii) (6,6).",
+              "schoolMethod": "The slope is (3−0)/(4−2)=3/2. Using point A=(2,0), the line is y=(3/2)(x−2). (i) For x=8, y=(3/2)(6)=9, so the point is (8,9). (ii) Set y=6: 6=(3/2)(x−2), so 4=x−2 and x=6. The point is (6,6)."
             }
           },
           {
             "id": "q4",
-            "number": "4",
+            "number": "1",
             "isHard": true,
+            "page": 104,
             "text": "Solve the in-text paratha-and-dahi problem: one paratha and two bowls of dahi cost ₹90; two parathas and seven bowls of dahi cost ₹260. Find each price.",
             "answer": {
               "answerKey": "One paratha costs ₹110/3 = ₹36⅔ and one bowl of dahi costs ₹80/3 = ₹26⅔.",
@@ -1955,8 +1979,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q5",
-            "number": "5",
+            "number": "1",
             "isHard": false,
+            "page": 107,
             "text": "If two angles of a triangle are x° and y°, with y = 4x, and the third angle is 50°, find x and y.",
             "answer": {
               "answerKey": "x = 26° and y = 104°.",
@@ -1965,8 +1990,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q6",
-            "number": "6",
+            "number": "1",
             "isHard": false,
+            "page": 110,
             "text": "How many solutions do 10x − 5y = 20 and 4x − 2y = 8 have? Give a rule-based explanation.",
             "answer": {
               "answerKey": "Infinitely many solutions; both equations reduce to 2x − y = 4.",
@@ -1975,8 +2001,9 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
           },
           {
             "id": "q7",
-            "number": "7",
+            "number": "1",
             "isHard": false,
+            "page": 111,
             "text": "Give an example of a pair of linear equations with no solution and explain the reason.",
             "answer": {
               "answerKey": "For example, x − y = 10 and 10x − 10y = 101 have no solution.",
@@ -1984,39 +2011,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             }
           },
           {
-            "id": "q8",
-            "number": "8",
-            "isHard": true,
-            "text": "Prove that two distinct lines with equal slopes are parallel using y = mx + d₁ and y = mx + d₂.",
-            "answer": {
-              "answerKey": "If d₁ ≠ d₂, the lines have no common point and are parallel.",
-              "schoolMethod": "Suppose a point (x,y) lies on both lines. Then y=mx+d₁ and y=mx+d₂. Subtracting gives d₁=d₂. This contradicts d₁≠d₂. Therefore the lines have no point in common. Their equal slopes mean they have the same direction, so they are distinct parallel lines."
-            }
-          },
-          {
-            "id": "q9",
-            "number": "9",
-            "isHard": false,
-            "text": "The line AB in the figure passes through A=(2,0) and B=(4,3). (i) Find the point on AB whose x-coordinate is 8. (ii) Find the point on AB whose y-coordinate is 6.",
-            "answer": {
-              "answerKey": "(i) (8,9). (ii) (6,6).",
-              "schoolMethod": "The slope is (3−0)/(4−2)=3/2. Using point A=(2,0), the line is y=(3/2)(x−2). (i) For x=8, y=(3/2)(6)=9, so the point is (8,9). (ii) Set y=6: 6=(3/2)(x−2), so 4=x−2 and x=6. The point is (6,6)."
-            }
-          },
-          {
-            "id": "q10",
-            "number": "10",
-            "isHard": true,
-            "text": "For two linear equations a₁x+b₁y+c₁=0 and a₂x+b₂y+c₂=0, explain how to classify the pair as having a unique solution, no solution, or infinitely many solutions without dividing by a coefficient that might be zero.",
-            "answer": {
-              "answerKey": "Let D=a₁b₂−a₂b₁. If D≠0, there is a unique solution. If D=0, the equations are parallel or coincident: they coincide if their full coefficient triples are proportional; otherwise there is no solution.",
-              "schoolMethod": "The determinant D=a₁b₂−a₂b₁ checks whether the x- and y-coefficient pairs are proportional without dividing by a possibly zero coefficient. If D≠0, the two lines have different slopes and intersect once. If D=0, compare the constants as well: if (a₁,b₁,c₁) and (a₂,b₂,c₂) are proportional, the equations describe the same line and have infinitely many solutions. If the x- and y-coefficients are proportional but the constants are not in the same ratio, the lines are distinct and parallel, so there is no solution. This formulation also handles zero coefficients."
-            }
-          },
-          {
             "id": "q11",
-            "number": "11",
+            "number": "2",
             "isHard": false,
+            "page": 111,
             "text": "Give three pairs of linear equations with no solution and state the common rule.",
             "answer": {
               "answerKey": "(i) x+y=4 and x+y=5; (ii) 2x−3y=1 and 4x−6y=7; (iii) x=2 and x=5. In each pair the lines are distinct and parallel.",
@@ -2024,13 +2022,47 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             }
           },
           {
+            "id": "q10",
+            "number": "1",
+            "isHard": true,
+            "page": 112,
+            "text": "For two linear equations a₁x+b₁y+c₁=0 and a₂x+b₂y+c₂=0, explain how to classify the pair as having a unique solution, no solution, or infinitely many solutions without dividing by a coefficient that might be zero.",
+            "answer": {
+              "answerKey": "Let D=a₁b₂−a₂b₁. If D≠0, there is a unique solution. If D=0, the equations are parallel or coincident: they coincide if their full coefficient triples are proportional; otherwise there is no solution.",
+              "schoolMethod": "The determinant D=a₁b₂−a₂b₁ checks whether the x- and y-coefficient pairs are proportional without dividing by a possibly zero coefficient. If D≠0, the two lines have different slopes and intersect once. If D=0, compare the constants as well: if (a₁,b₁,c₁) and (a₂,b₂,c₂) are proportional, the equations describe the same line and have infinitely many solutions. If the x- and y-coefficients are proportional but the constants are not in the same ratio, the lines are distinct and parallel, so there is no solution. This formulation also handles zero coefficients."
+            }
+          },
+          {
             "id": "q12",
-            "number": "12",
+            "number": "2",
             "isHard": false,
+            "page": 112,
             "text": "Describe another way to solve a pair of linear equations besides elimination or substitution, and mention one limitation.",
             "answer": {
               "answerKey": "The graphing method can be used: plot both lines and read their intersection. Its main limitation is that a graph may give only an approximate solution.",
               "schoolMethod": "Plot each linear equation on the same coordinate plane using two or more points. If the lines intersect, the intersection coordinates solve both equations. Parallel lines indicate no solution; coincident lines indicate infinitely many. Graphing is useful visually, but a hand-drawn graph may not locate an exact fractional intersection, so algebra is usually better for an exact answer."
+            }
+          },
+          {
+            "id": "q3",
+            "number": "1",
+            "isHard": false,
+            "page": 113,
+            "text": "How many solutions can a pair of linear equations in two variables have? Explain the cases represented by intersecting, parallel and coincident lines.",
+            "answer": {
+              "answerKey": "Intersecting lines: one solution; distinct parallel lines: no solution; coincident lines: infinitely many solutions.",
+              "schoolMethod": "A solution is an ordered pair lying on both lines. Two distinct intersecting lines meet at exactly one point, giving a unique solution. Distinct parallel lines never meet, so there is no solution. Coincident lines have every point in common, so there are infinitely many solutions."
+            }
+          },
+          {
+            "id": "q8",
+            "number": "1",
+            "isHard": true,
+            "page": 115,
+            "text": "Prove that two distinct lines with equal slopes are parallel using y = mx + d₁ and y = mx + d₂.",
+            "answer": {
+              "answerKey": "If d₁ ≠ d₂, the lines have no common point and are parallel.",
+              "schoolMethod": "Suppose a point (x,y) lies on both lines. Then y=mx+d₁ and y=mx+d₂. Subtracting gives d₁=d₂. This contradicts d₁≠d₂. Therefore the lines have no point in common. Their equal slopes mean they have the same direction, so they are distinct parallel lines."
             }
           }
         ]
@@ -2606,12 +2638,13 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
       },
       {
         "id": "ex14.reflect",
-        "title": "In-text and Think and Reflect",
+        "title": "Think and Reflect",
         "questions": [
           {
             "id": "q1",
             "number": "1",
             "isHard": false,
+            "page": 124,
             "text": "Explain why the volume of a cuboid is area of base × height. Then write the total surface area and volume formulas for a cube of side a.",
             "answer": {
               "answerKey": "Cuboid volume = base area × height. For a cube: total surface area = 6a² and volume = a³.",

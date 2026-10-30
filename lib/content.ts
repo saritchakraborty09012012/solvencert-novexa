@@ -29,6 +29,8 @@ export interface Exercise {
 export interface Question {
   id:      string;
   number:  string;
+  /** Printed book page this question appears on (Ganita Manjari Think & Reflect boxes). */
+  page?:   number;
   text:    string;
   parts?:  string[];
   isHard:  boolean;

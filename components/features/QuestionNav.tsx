@@ -2,7 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ListOrdered, X } from 'lucide-react';
 
-export interface NavQuestion { id: string; number: string; section?: string; }
+export interface NavQuestion { id: string; number: string; section?: string; page?: number; }
+
+/** Split a group's questions into consecutive book-page buckets (undefined page = no grouping). */
+function splitByPage(items: NavQuestion[]) {
+  const buckets: { page?: number; items: NavQuestion[] }[] = [];
+  for (const q of items) {
+    const last = buckets[buckets.length - 1];
+    if (last && last.page === q.page) last.items.push(q);
+    else buckets.push({ page: q.page, items: [q] });
+  }
+  return buckets;
+}
 
 function scrollToQuestion(id: string) {
   const el = document.getElementById(`q-${id}`);
@@ -44,16 +55,22 @@ export default function QuestionNav({ questions, label = 'Questions' }: { questi
           <div className="max-h-[65vh] overflow-y-auto scrollbar-hide space-y-3">
             {groups.map(group => <div key={group.name}>
               {groups.length > 1 && <p className="mb-1 text-[9px] font-semibold leading-tight text-blue-600 dark:text-blue-300">{group.name}</p>}
-              <div className="grid grid-cols-4 gap-1">{group.items.map(q => (
-              <button
-                key={q.id}
-                onClick={() => scrollToQuestion(q.id)}
-                title={`Jump to Q${q.number}`}
-                className="min-w-0 w-full min-h-8 px-1 py-1 rounded-lg bg-[var(--surface-2)] hover:bg-[var(--surface-3)] text-[10px] font-semibold text-[var(--text-secondary)] flex items-center justify-center text-center break-words transition-colors"
-              >
-                {q.number}
-              </button>
-              ))}</div></div>)}
+              {splitByPage(group.items).map((b, bi) => (
+                <div key={b.page !== undefined ? `p${b.page}` : bi} className={bi > 0 ? 'mt-2' : ''}>
+                  {b.page !== undefined && <p className="mb-1 text-[9px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-300">Page {b.page}</p>}
+                  <div className="grid grid-cols-4 gap-1">{b.items.map(q => (
+                  <button
+                    key={q.id}
+                    onClick={() => scrollToQuestion(q.id)}
+                    title={`Jump to Q${q.number}`}
+                    className="min-w-0 w-full min-h-8 px-1 py-1 rounded-lg bg-[var(--surface-2)] hover:bg-[var(--surface-3)] text-[10px] font-semibold text-[var(--text-secondary)] flex items-center justify-center text-center break-words transition-colors"
+                  >
+                    {q.number}
+                  </button>
+                  ))}</div>
+                </div>
+              ))}
+            </div>)}
           </div>
         </div>
       </aside>
@@ -72,15 +89,21 @@ export default function QuestionNav({ questions, label = 'Questions' }: { questi
               <div className="space-y-3">
                 {groups.map(group => <div key={group.name}>
                   {groups.length > 1 && <p className="mb-1 text-[10px] font-semibold text-blue-600 dark:text-blue-300">{group.name}</p>}
-                  <div className="grid grid-cols-5 gap-1">{group.items.map(q => (
-                  <button
-                    key={q.id}
-                    onClick={() => { scrollToQuestion(q.id); setMobileOpen(false); }}
-                    className="min-w-0 w-full min-h-9 px-1 py-1 rounded-lg bg-[var(--surface-2)] text-[10px] font-semibold text-[var(--text-secondary)] flex items-center justify-center text-center break-words"
-                  >
-                    {q.number}
-                  </button>
-                  ))}</div></div>)}
+                  {splitByPage(group.items).map((b, bi) => (
+                    <div key={b.page !== undefined ? `p${b.page}` : bi} className={bi > 0 ? 'mt-2' : ''}>
+                      {b.page !== undefined && <p className="mb-1 text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-300">Page {b.page}</p>}
+                      <div className="grid grid-cols-5 gap-1">{b.items.map(q => (
+                      <button
+                        key={q.id}
+                        onClick={() => { scrollToQuestion(q.id); setMobileOpen(false); }}
+                        className="min-w-0 w-full min-h-9 px-1 py-1 rounded-lg bg-[var(--surface-2)] text-[10px] font-semibold text-[var(--text-secondary)] flex items-center justify-center text-center break-words"
+                      >
+                        {q.number}
+                      </button>
+                      ))}</div>
+                    </div>
+                  ))}
+                </div>)}
               </div>
             </div>
           )}
