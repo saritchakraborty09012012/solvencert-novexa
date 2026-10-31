@@ -106,6 +106,9 @@ export function useChapterTabSession<T extends string>({
   const key = `${scope}:${code}/${slug}`;
   const keyRef = useRef(key);
   const quietUntil = useRef(0);
+  // Tab value the restore/default just applied — effect (2) must not treat it
+  // as a user click (it would clobber the saved scroll with scrollY=0).
+  const ignoreTab = useRef<string | null>(null);
 
   if (keyRef.current !== key) {
     // Chapter changed at render time: switch the save-target immediately and
@@ -119,7 +122,9 @@ export function useChapterTabSession<T extends string>({
   useEffect(() => {
     const saved = readTabState(scope, code, slug);
     const valid = saved !== null && isTabValid(saved.tab as T);
-    setTab(valid ? (saved!.tab as T) : defaultTab);
+    const target = valid ? (saved!.tab as T) : defaultTab;
+    ignoreTab.current = target;
+    setTab(target);
     quietUntil.current = Date.now() + 900;
     if (saved) restoreScroll(saved.scroll);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -128,7 +133,11 @@ export function useChapterTabSession<T extends string>({
   // (2) Tab clicks → persist immediately (including the current position).
   useEffect(() => {
     if (keyRef.current !== key) return;      // stale closure from another chapter
-    if (Date.now() < quietUntil.current) return; // this write came from the restore itself
+    if (ignoreTab.current === tab) {         // this change came from the restore
+      ignoreTab.current = null;
+      return;
+    }
+    ignoreTab.current = null;                // consume any stale marker
     writeTabState(scope, code, slug, { tab, scroll: window.scrollY });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tab]);
