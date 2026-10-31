@@ -27,7 +27,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: 'Mathematics', href: '/class-9/maths/ganita-manjari' },
       { label: 'Science', href: '/class-9/science/exploration' },
       { label: 'English', href: '/class-9/english/kaveri' },
-      { label: 'Social Science', href: '/class-9/sst/understanding-society-india-and-beyond' },
+      { label: 'Social Science', href: '/class-9/sst' },
       { label: 'IT', href: '/class-9/it' },
       { label: 'Advanced Mathematics', href: '/class-9/advanced-maths/advanced-mathematics' },
       { label: 'Advanced Science', href: '/class-9/advanced-science/science-advanced' },

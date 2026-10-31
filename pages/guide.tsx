@@ -15,7 +15,7 @@ const ROUTES: Record<string, { name: string; desc: string; need?: string; href?:
     { name: 'Mathematics', desc: 'Ganita Manjari — solved answers for all 8 chapters', href: '/class-9/maths/ganita-manjari' },
     { name: 'Science', desc: 'Exploration — solved answers, parts & exercises', href: '/class-9/science/exploration' },
     { name: 'English', desc: 'Kaveri — sections with literature answers', href: '/class-9/english/kaveri' },
-    { name: 'Social Science', desc: 'Understanding Society — Geography, History, Civics, Economics', href: '/class-9/sst/understanding-society-india-and-beyond' },
+    { name: 'Social Science', desc: 'Understanding Society - Geography, History, Civics, Economics', href: '/class-9/sst' },
     { name: 'IT Part A', desc: 'Employability Skills', href: '/class-9/it' },
     { name: 'IT Part B', desc: 'IT Code 402', href: '/class-9/it' },
     { name: 'Advanced Mathematics', desc: 'Optional advanced set/log/polynomials', href: '/class-9/advanced-maths/advanced-mathematics' },

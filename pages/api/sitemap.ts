@@ -8,7 +8,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   const staticPages = [
     '', '/answers', '/books', '/premium', '/search',
-    '/privacy', '/terms', '/about', '/contact', '/class-9/it', '/class-9/sanskrit',
+    '/privacy', '/terms', '/about', '/contact', '/class-9/it', '/class-9/sanskrit', '/class-9/sst',
   ];
 
   const chapterUrls: string[] = [];

@@ -6,10 +6,12 @@ import { CLASS_9_SUBJECTS, getSubject } from '@/lib/content';
 // /class-9/maths   →  308 permanent redirect →  /class-9/maths/ganita-manjari
 // /class-9/science →  308 permanent redirect →  /class-9/science/exploration
 // Keeps old links & any existing backlinks working, consolidates SEO onto deeper URL.
-// NOTE: 'it', 'sanskrit' and 'hindi' are deliberately excluded — they have two
-// books/parts (IT: Employability Skills / Information Technology; Sanskrit:
-// Sharda / Iravati; Hindi: Ganga / Reva) sharing one slug, each served by its own
-// dedicated /class-9/<subject> landing page instead of a single-book redirect.
+// NOTE: 'it', 'sanskrit', 'hindi' and 'sst' are deliberately excluded — they
+// have two books/parts (IT: Employability Skills / Information Technology;
+// Sanskrit: Sharda / Iravati; Hindi: Ganga / Reva; SST: Understanding Society
+// Part I / Part II) sharing one slug, each served by its own dedicated
+// /class-9/<subject> landing page (a "choose a book" list) instead of a
+// single-book redirect.
 // The Set below collapses subjects that share a slug (e.g. Ganita Manjari Part I
 // and Part II both use 'maths') down to one redirect, which lands on Part I.
 export default function SubjectRedirectPage({ destination }: { destination: string }) {
@@ -23,7 +25,7 @@ export default function SubjectRedirectPage({ destination }: { destination: stri
 export const getStaticPaths: GetStaticPaths = async () => ({
   paths: Array.from(new Set(
     CLASS_9_SUBJECTS
-      .filter(s => s.slug !== 'it' && s.slug !== 'sanskrit' && s.slug !== 'hindi')
+      .filter(s => s.slug !== 'it' && s.slug !== 'sanskrit' && s.slug !== 'hindi' && s.slug !== 'sst')
       .map(s => s.slug),
   )).map(subjectSlug => ({ params: { classSlug: 'class-9', subjectSlug } })),
   fallback: false,

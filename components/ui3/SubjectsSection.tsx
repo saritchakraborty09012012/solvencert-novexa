@@ -32,7 +32,7 @@ const SUBJECTS: Subject[] = [
   { name: 'Mathematics', meta: '8 Chapters', image: '/ui3-images/subject-mathematics.png', href: '/class-9/maths/ganita-manjari', icon: Sigma },
   { name: 'Science', meta: '13 Chapters', image: '/ui3-images/subject-science.png', href: '/class-9/science/exploration', icon: Atom },
   { name: 'English', meta: '8 Chapters', image: '/ui3-images/subject-english.png', href: '/class-9/english/kaveri', icon: BookOpen },
-  { name: 'Social Science', meta: '9 Chapters', image: '/ui3-images/subject-social-science.png', href: '/class-9/sst/understanding-society-india-and-beyond', icon: Globe2 },
+  { name: 'Social Science', meta: 'Parts I & II', image: '/ui3-images/subject-social-science.png', href: '/class-9/sst', icon: Globe2 },
   { name: 'IT Part A', meta: '5 Units', image: '/ui3-images/subject-it-a.png', href: '/class-9/it/employability-skills', icon: Cpu },
   { name: 'IT Part B', meta: '5 Units', image: '/ui3-images/subject-it-b.png', href: '/class-9/it/information-technology', icon: Code2 },
   { name: 'Advanced Mathematics', meta: '6 Chapters', image: '/ui3-images/subject-advanced-math.png', href: '/class-9/advanced-maths/advanced-mathematics', icon: SquareSigma },

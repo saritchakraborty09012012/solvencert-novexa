@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <h4 className="text-[10px] font-serif font-bold uppercase tracking-[0.18em] text-[var(--text-muted)] mb-3">Class 9</h4>
             <ul className="space-y-2">
-              {[['Mathematics','/class-9/maths/ganita-manjari'],['Science','/class-9/science/exploration'],['English','/class-9/english/kaveri'],['Social Science','/class-9/sst/understanding-society-india-and-beyond'],['IT','/class-9/it'],['Advanced Mathematics','/class-9/advanced-maths/advanced-mathematics'],['Advanced Science','/class-9/advanced-science/science-advanced'],['Sanskrit','/class-9/sanskrit'],['Hindi','/class-9/hindi'],['Arts','/class-9/arts/madhurima'],['Kaushal Vikas','/class-9/kaushal-vikas/kaushal-vikas']].map(([l,h])=>(
+              {[['Mathematics','/class-9/maths/ganita-manjari'],['Science','/class-9/science/exploration'],['English','/class-9/english/kaveri'],['Social Science','/class-9/sst'],['IT','/class-9/it'],['Advanced Mathematics','/class-9/advanced-maths/advanced-mathematics'],['Advanced Science','/class-9/advanced-science/science-advanced'],['Sanskrit','/class-9/sanskrit'],['Hindi','/class-9/hindi'],['Arts','/class-9/arts/madhurima'],['Kaushal Vikas','/class-9/kaushal-vikas/kaushal-vikas']].map(([l,h])=>(
                 <li key={h}><Link href={h} className="text-xs text-[var(--text-secondary)] hover:text-[var(--brand-primary)] hover:pl-0.5 transition-all">{l}</Link></li>
               ))}
             </ul>

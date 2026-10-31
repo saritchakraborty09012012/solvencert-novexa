@@ -366,7 +366,7 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
           <ChevronRight size={10} className="flex-shrink-0"/>
           <Link href="/answers" className="hover:text-blue-500 flex-shrink-0">Solutions</Link>
           <ChevronRight size={10} className="flex-shrink-0"/>
-          <Link href={`/${classSlug}/${subjectSlug}/${bookSlug}`} className="hover:text-blue-500 flex-shrink-0 capitalize">{subject.name}</Link>
+          <Link href={`/${classSlug}/${subjectSlug}`} className="hover:text-blue-500 flex-shrink-0 capitalize">{subject.name}</Link>
           <ChevronRight size={10} className="flex-shrink-0"/>
           <span className="text-[var(--text-secondary)] font-semibold flex-shrink-0">Ch {chapter.number}</span>
         </div>
