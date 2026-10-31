@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronDown, BookOpen, Loader2, Sparkles, Pen, Layers } from 'lucide-react';
-import { CLASS_9_SUBJECTS } from '@/lib/content';
+import { CLASS_9_SUBJECTS, subjectOptions } from '@/lib/content';
 import { cn } from '@/utils/helpers';
 import MicButton from './MicButton';
 import FileAttach, { type AttachedFile } from './FileAttach';
@@ -101,7 +101,7 @@ export default function FlashcardsForm({ onGenerate, loading }: Props) {
           onChange={v => { setCls(v); setSubjSlug(''); setChapSlug(''); }} />
         <Dropdown
           value={subjSlug} placeholder="Select Subject"
-          options={subjects.map(s => ({ value: s.id, label: s.name }))}
+          options={subjectOptions(subjects)}
           onChange={v => { setSubjSlug(v); setChapSlug(''); }}
           disabled={!cls}
         />

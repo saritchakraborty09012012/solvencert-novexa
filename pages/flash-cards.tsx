@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
 import FlashCardViewer from '@/components/flashcards/FlashCardViewer';
-import { CLASS_9_SUBJECTS, type Subject, type Chapter } from '@/lib/content';
+import { CLASS_9_SUBJECTS, subjectOptions, type Subject, type Chapter } from '@/lib/content';
 import toast from 'react-hot-toast';
 import { useAuthStore } from '@/store/authStore';
 import { useFeedbackStore } from '@/store/feedbackStore';
@@ -276,7 +276,7 @@ export default function FlashCardsPage() {
                 label="Subject"
                 value={selectedSubjectId}
                 placeholder="Select Subject"
-                options={subjects.map(s => ({ value: s.slug, label: s.name }))}
+                options={subjectOptions(subjects)}
                 onChange={val => { setSelectedSubjectId(val); setSelectedChapterSlug(''); }}
               />
 

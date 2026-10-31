@@ -12,6 +12,7 @@ import { SCIENCE_CHAPTERS } from './content-science';
 import { ADVMATH_CHAPTERS } from './content-advmath';
 import { ADVSCIENCE_CHAPTERS } from './content-advscience';
 import { SST_CHAPTERS } from './content-sst';
+import { SST_CHAPTERS as SST_PART2_CHAPTERS } from './content-sst-part2';
 import { ENGLISH_CHAPTERS } from './content-english';
 
 export interface SolutionEntry {
@@ -165,6 +166,24 @@ function getIndex(): IndexedEntry[] {
       for (const q of ex.questions) {
         entries.push({
           subject: 'Social Science',
+          chapterNumber: ch.number,
+          chapterTitle: ch.title,
+          sectionTitle: ex.title,
+          questionNumber: q.number,
+          question: cap(q.text, 900),
+          solution: cap(`${q.answer.answerKey}\n${q.answer.schoolMethod}`, 2200),
+          tokens: new Set(tokenize(`${ch.title} ${ex.title} ${q.text} ${q.answer.answerKey} ${q.answer.schoolMethod}`)),
+        });
+      }
+    }
+  }
+
+  // Social Science — Understanding Society (Part II, beta)
+  for (const ch of SST_PART2_CHAPTERS) {
+    for (const ex of ch.exercises) {
+      for (const q of ex.questions) {
+        entries.push({
+          subject: 'Social Science (Part II)',
           chapterNumber: ch.number,
           chapterTitle: ch.title,
           sectionTitle: ex.title,

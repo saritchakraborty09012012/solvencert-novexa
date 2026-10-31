@@ -165,7 +165,7 @@ export default function SearchPage() {
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)] mb-3">Browse by Subject</p>
             <div className="grid grid-cols-2 gap-3">
-              {CLASS_9_SUBJECTS.filter(s => s.id !== 'it-part-a' && s.id !== 'sanskrit-sharda' && s.id !== 'hindi').map(s => (
+              {CLASS_9_SUBJECTS.filter(s => s.id !== 'it-part-a' && s.id !== 'sanskrit-sharda' && s.id !== 'hindi' && s.id !== 'sst-part-2').map(s => (
                 <Link key={s.id} href={`/class-9/${s.slug}`} className="card p-4 flex items-center gap-3">
                   <span className="text-xl">{s.icon}</span>
                   <div>

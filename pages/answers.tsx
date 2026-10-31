@@ -29,10 +29,12 @@ function chapterUrl(subject: typeof CLASS_9_SUBJECTS[0], chapter: typeof CLASS_9
 }
 
 export default function AnswersPage() {
-  const subjects = CLASS_9_SUBJECTS.filter(s => s.id !== 'it-part-a' && s.id !== 'sanskrit-sharda' && s.id !== 'hindi' && s.id !== 'maths-part-2');
+  const subjects = CLASS_9_SUBJECTS.filter(s => s.id !== 'it-part-a' && s.id !== 'sanskrit-sharda' && s.id !== 'hindi' && s.id !== 'maths-part-2' && s.id !== 'sst-part-2');
   const itPartA = CLASS_9_SUBJECTS.find(s => s.id === 'it-part-a');
   const sanskritSharda = CLASS_9_SUBJECTS.find(s => s.id === 'sanskrit-sharda');
   const hindiGanga = CLASS_9_SUBJECTS.find(s => s.id === 'hindi');
+  const sstPart1 = CLASS_9_SUBJECTS.find(s => s.id === 'sst');
+  const sstPart2 = CLASS_9_SUBJECTS.find(s => s.id === 'sst-part-2');
 
   return (
     <Layout
@@ -69,7 +71,7 @@ export default function AnswersPage() {
                   <div className="w-10 h-10 rounded-xl bg-white dark:bg-black/20 flex items-center justify-center text-xl shadow-sm flex-shrink-0">{subject.icon}</div>
                   <div className="flex-1 min-w-0">
                     <h2 className={cn('font-display font-bold text-base', TEXT[subject.color])}>{subject.id === 'it-part-b' ? 'IT' : subject.id === 'sanskrit-reva' ? 'Sanskrit' : subject.name}</h2>
-                    <p className="text-xs text-[var(--text-muted)]">{subject.id === 'it-part-b' ? 'Two parts' : (subject.id === 'maths') ? 'Ganita Manjari · Part I & II' : (subject.id === 'sanskrit-reva' || subject.id === 'hindi-reva') ? 'Two books' : `${subject.book} · ${subject.chapters.length} chapters`}</p>
+                    <p className="text-xs text-[var(--text-muted)]">{subject.id === 'it-part-b' ? 'Two parts' : (subject.id === 'maths') ? 'Ganita Manjari · Part I & II' : (subject.id === 'sst') ? 'Understanding Society · Part I & II' : (subject.id === 'sanskrit-reva' || subject.id === 'hindi-reva') ? 'Two books' : `${subject.book} · ${subject.chapters.length} chapters`}</p>
                   </div>
                   <Link href={`/class-9/${subject.slug}`}
                     className="text-xs text-blue-500 hover:text-blue-600 font-medium flex items-center gap-0.5 flex-shrink-0">
@@ -105,6 +107,15 @@ export default function AnswersPage() {
                   </Link>
                   <Link href="/class-9/maths/ganita-manjari#part-2" className="mt-2 flex items-center gap-2.5 px-3 py-3 rounded-lg border border-blue-200 dark:border-blue-800 hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors group">
                     <span className="w-6 h-6 rounded bg-blue-100 dark:bg-blue-900/40 text-[10px] font-bold text-blue-700 dark:text-blue-300 flex items-center justify-center flex-shrink-0">II</span><span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] flex-1">Part II: Ganita Manjari (Ch 9–14)</span><ChevronRight size={12} className="text-blue-600 flex-shrink-0" />
+                  </Link>
+                </> : subject.id === 'sst' ? <>
+                  <Link href={`/class-9/sst/${sstPart1?.bookSlug}`} className="flex items-center gap-2.5 px-3 py-3 rounded-lg border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 transition-colors group">
+                    <span className="w-6 h-6 rounded bg-indigo-100 dark:bg-indigo-900/40 text-[10px] font-bold text-indigo-700 dark:text-indigo-300 flex items-center justify-center flex-shrink-0">I</span><span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] flex-1">Part I: Understanding Society (Ch 1–9)</span><ChevronRight size={12} className="text-indigo-600 flex-shrink-0" />
+                  </Link>
+                  <Link href={`/class-9/sst/${sstPart2?.bookSlug}`} className="mt-2 flex items-center gap-2.5 px-3 py-3 rounded-lg border border-indigo-200 dark:border-indigo-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 transition-colors group">
+                    <span className="w-6 h-6 rounded bg-indigo-100 dark:bg-indigo-900/40 text-[10px] font-bold text-indigo-700 dark:text-indigo-300 flex items-center justify-center flex-shrink-0">II</span><span className="text-sm text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] flex-1">Part II: Understanding Society (Ch 1–6)</span>
+                    <span title="Beta — still under testing and constant improvement" className="px-1.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[8px] font-bold uppercase tracking-[0.14em] flex-shrink-0">Beta</span>
+                    <ChevronRight size={12} className="text-indigo-600 flex-shrink-0" />
                   </Link>
                 </> : <>
                 {subject.chapters.slice(0, 5).map(ch => (

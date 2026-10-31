@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import { ChevronRight, BookOpen, Star, Lightbulb, Copy, Check, Home, Loader2, Download, KeyRound, Zap } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
+import BetaBadge from '@/components/features/BetaBadge';
 import BackToTop from '@/components/features/BackToTop';
 import MathRenderer from '@/components/features/MathRenderer';
 import ReadAloud from '@/components/features/ReadAloud';
@@ -26,7 +27,15 @@ async function savePdf(html: string, filename: string) {
   htmlToPdf(html, filename);
 }
 
-function sstBranch(chNumber: number): string | null {
+function sstBranch(chNumber: number, bookSlug?: string): string | null {
+  // Part II (Oceans and Life … From Ideas to Startups) has its own subject split.
+  if (bookSlug === 'sst-part-2') {
+    if (chNumber <= 2) return 'Geography';
+    if (chNumber === 3) return 'History';
+    if (chNumber === 4) return 'Political Science';
+    if (chNumber <= 6) return 'Economics';
+    return null;
+  }
   if (chNumber === 1) return 'General';
   if (chNumber <= 3) return 'Geography';
   if (chNumber <= 5) return 'History';
@@ -371,8 +380,8 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
               <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-3">Chapters</p>
               <nav className="space-y-0.5 max-h-[65vh] overflow-y-auto scrollbar-hide">
                 {subject.chapters.map((ch, i) => {
-                  const branch = subjectSlug === 'sst' ? sstBranch(ch.number) : null;
-                  const prevBranch = subjectSlug === 'sst' && i > 0 ? sstBranch(subject.chapters[i-1].number) : null;
+                  const branch = subjectSlug === 'sst' ? sstBranch(ch.number, bookSlug) : null;
+                  const prevBranch = subjectSlug === 'sst' && i > 0 ? sstBranch(subject.chapters[i-1].number, bookSlug) : null;
                   return (
                     <React.Fragment key={ch.slug}>
                       {branch && branch !== prevBranch && (
@@ -397,6 +406,7 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
               <div className="flex flex-wrap items-center gap-2 mb-4">
                 <span className="px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-950/30 text-blue-700 dark:text-blue-300 text-xs font-bold">Class 9 · {subject.name}</span>
                 <span className="badge-2026">NCERT 2026 Revised Syllabus</span>
+                {subject.beta && <BetaBadge />}
               </div>
               <h1 className="text-2xl md:text-3xl font-display font-bold text-[var(--text-primary)] leading-tight">Chapter {chapter.number}: {chapter.title} {hasRealCode && <span className="text-lg md:text-xl font-normal text-[var(--text-muted)]">({chapter.code.toUpperCase()})</span>}</h1>
               <p className="text-sm text-[var(--text-muted)] mt-2">{subject.book}</p>

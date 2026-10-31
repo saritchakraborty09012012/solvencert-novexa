@@ -9,6 +9,7 @@ import { IRAVATI_CHAPTERS } from './content-iravati';
 import { ARTS_CHAPTERS } from './content-arts';
 import { KAUSHAL_VIKAS_CHAPTERS } from './content-kaushal';
 import { MATHS_PART2_CHAPTERS } from './content-maths-part2';
+import { SST_CHAPTERS as SST_PART2_CHAPTERS } from './content-sst-part2';
 
 export interface Chapter {
   id:       string;
@@ -60,6 +61,8 @@ export interface Subject {
   color:    string;
   downloadUrl?: string;
   description?: string;
+  /** Book is still being refined — show a "Beta" badge wherever it is presented. */
+  beta?:    boolean;
   chapters: Chapter[];
 }
 
@@ -3344,11 +3347,12 @@ export const CLASS_9_SUBJECTS: Subject[] = [
   },
   {
     id: 'sst-part-2', name: 'Social Science', slug: 'sst',
-    book: 'SSt-Part-II', bookSlug: 'sst-part-2',
+    book: 'Understanding Society Part II', bookSlug: 'sst-part-2',
     code: '0904ss2', icon: '🌍', color: 'indigo',
     downloadUrl: '/ebooks/SSt-Part-II.pdf',
-    description: 'Class 9 Social Science Part II (NCERT 2026 Revised).',
-    chapters: [],
+    description: 'Class 9 Social Science Part II — Understanding Society: India and Beyond (Oceans and Life … From Ideas to Startups). All 6 chapters with complete NCERT solutions. NCERT 2026 Revised.',
+    beta: true,
+    chapters: SST_PART2_CHAPTERS,
   },
 
   // ── IT (Code 402) — has two independently-selectable "parts" sharing the same
@@ -3376,6 +3380,20 @@ export function getSubject(slug: string, bookSlug?: string): Subject | undefined
   // Multiple "parts" share the same subject slug (e.g. IT has Part A: Employability
   // Skills + Part B: Information Technology) — bookSlug disambiguates which one.
   return bookSlug ? matches.find(s => s.bookSlug === bookSlug) : matches[0];
+}
+
+/**
+ * Dropdown options for a list of subjects, keyed by subject id. When several
+ * books share one subject name (Mathematics I/II, Social Science I/II, …) the
+ * book name is appended so the options stay distinguishable.
+ */
+export function subjectOptions(subjects: Subject[]): { value: string; label: string }[] {
+  return subjects.map(s => ({
+    value: s.id,
+    label: subjects.some(o => o.id !== s.id && o.name === s.name)
+      ? `${s.name} — ${s.book}`
+      : s.name,
+  }));
 }
 
 export function getChapter(subjectSlug: string, chapterSlug: string, bookSlug?: string): Chapter | undefined {

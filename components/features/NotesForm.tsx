@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { ChevronDown, BookOpen, FileText, Loader2, Sparkles, Pen } from 'lucide-react';
-import { CLASS_9_SUBJECTS } from '@/lib/content';
+import { CLASS_9_SUBJECTS, subjectOptions } from '@/lib/content';
 import { cn } from '@/utils/helpers';
 import MicButton from './MicButton';
 import FileAttach, { type AttachedFile } from './FileAttach';
@@ -85,7 +85,7 @@ export default function NotesForm({ onGenerate, loading }: Props) {
           v => { setSubjSlug(v); setChapSlug(''); },
           subjSlug,
           'Select Subject',
-          subjects.map(s => ({ value: s.id, label: s.name })),
+          subjectOptions(subjects),
           !cls
         )}
       </div>

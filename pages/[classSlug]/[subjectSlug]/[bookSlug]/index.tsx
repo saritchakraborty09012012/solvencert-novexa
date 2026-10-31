@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ChevronRight, BookOpen } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
+import BetaBadge from '@/components/features/BetaBadge';
 import { CLASS_9_SUBJECTS, getSubject } from '@/lib/content';
 import { cn } from '@/utils/helpers';
 
@@ -24,6 +25,8 @@ export default function BookIndexPage({ classSlug, subjectSlug, bookSlug }: Prop
   if (!subject || subject.bookSlug !== bookSlug) return null;
 
   const isComingSoon = subject.chapters.length === 0;
+  // Other parts/books sharing this subject slug (SST Part I ↔ II, IT A ↔ B, …)
+  const otherBooks = CLASS_9_SUBJECTS.filter(s => s.slug === subjectSlug && s.bookSlug !== bookSlug);
 
   return (
     <Layout
@@ -65,9 +68,34 @@ export default function BookIndexPage({ classSlug, subjectSlug, bookSlug }: Prop
             <div>
               <span className="badge-2026 mb-1 inline-flex">NCERT 2026 Revised Syllabus</span>
               <h1 className="text-2xl font-display font-bold text-[var(--text-primary)]">Class 9 {subject.name}</h1>
-              <p className="text-sm text-[var(--text-muted)]">{subject.book} · {isComingSoon ? 'Coming soon' : `${subject.chapters.length} Chapters`}</p>
+              <p className="text-sm text-[var(--text-muted)] flex items-center gap-2 flex-wrap">
+                {subject.book} · {isComingSoon ? 'Coming soon' : `${subject.chapters.length} Chapters`}
+                {subject.beta && <BetaBadge />}
+              </p>
             </div>
           </div>
+          {otherBooks.length > 0 && (
+            <div className="flex items-center gap-2 flex-wrap mt-5 pt-4 border-t border-[var(--border)]">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Parts / Books</span>
+              <Link
+                href={`/${classSlug}/${subjectSlug}/${bookSlug}`}
+                className={cn('px-3 py-1.5 rounded-lg text-xs font-semibold border transition-colors',
+                  'border-[var(--border)] text-[var(--text-primary)] bg-[var(--surface-1)]')}
+              >
+                {subject.book} ✓
+              </Link>
+              {otherBooks.map(sib => (
+                <Link
+                  key={sib.id}
+                  href={`/${classSlug}/${subjectSlug}/${sib.bookSlug}`}
+                  className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-1)] transition-colors inline-flex items-center gap-2"
+                >
+                  {sib.book}
+                  {sib.beta && <BetaBadge />}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Chapter list */}

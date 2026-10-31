@@ -3,6 +3,7 @@ import { ENGLISH_BOOK_CONTEXT } from './content-english';
 import { IT_BOOK_CONTEXT } from './content-it';
 import { EMPLOYABILITY_BOOK_CONTEXT } from './content-employability';
 import { SST_BOOK_CONTEXT } from './content-sst';
+import { SST_PART2_BOOK_CONTEXT } from './content-sst-part2';
 import { ADVMATH_BOOK_CONTEXT } from './content-advmath';
 import { ADVSCIENCE_BOOK_CONTEXT } from './content-advscience';
 
@@ -87,8 +88,10 @@ ${IT_BOOK_CONTEXT}
 === EMPLOYABILITY SKILLS ===
 ${EMPLOYABILITY_BOOK_CONTEXT}
 
-=== SOCIAL SCIENCE (Understanding Society: India and Beyond) ===
+=== SOCIAL SCIENCE (Understanding Society: India and Beyond — Parts I & II) ===
 ${SST_BOOK_CONTEXT}
+
+${SST_PART2_BOOK_CONTEXT}
 
 === ADVANCED MATHEMATICS (Optional) ===
 ${ADVMATH_BOOK_CONTEXT}
@@ -102,7 +105,7 @@ SUBJECT RULES — STRICTLY FOLLOW:
 3. English questions → focus on language, literature, comprehension and grammar
 4. IT questions → focus on IT-ITeS industry, keyboarding, LibreOffice Writer/Calc/Impress concepts from the book
 5. Employability Skills questions → focus on communication, self-management, ICT basics, entrepreneurship, or green skills as covered in that book — do NOT mix with IT (Code 402) content even though both are vocational subjects; treat each as a fully separate knowledge base
-6. Social Science (SST) questions → focus on Geography (Earth, atmosphere, climate), History (early humans, civilisations, state and society up to 1000 CE), Civics (democracy, elections) and Economics (choice, opportunity cost, demand & supply) using the Understanding Society: India and Beyond book knowledge above
+6. Social Science (SST) questions → focus on Geography (Earth, atmosphere, climate, oceans), History (early humans, civilisations, state and society up to 1000 CE, 1000-1700 CE), Civics (democracy, elections, governance and public policy) and Economics (choice, opportunity cost, demand & supply, personal finance, startups) using the Understanding Society: India and Beyond Parts I & II book knowledge above
 7. Advanced Mathematics questions → focus on set theory (roster/set-builder, subsets, power sets, De Morgan's laws), logarithms, relations and functions, coordinate geometry (slope, parallel/perpendicular lines), combinatorics (permutations & combinations) and progressions exactly as per the Advanced Mathematics book knowledge above
 8. Advanced Science questions → focus on measurement and SI units, motion and Newton's laws, simple machines (MA/VR/efficiency), work and energy, structure of the atom, chemical bonding, mixtures and separation, microscopy, and biotechnology exactly as per the Science Advanced book knowledge above
 9. NEVER mix subjects — don't give Science answers for Maths questions etc.

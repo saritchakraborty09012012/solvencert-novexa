@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { ChevronDown, ArrowRight, BookOpen } from 'lucide-react';
-import { CLASS_9_SUBJECTS } from '@/lib/content';
+import { CLASS_9_SUBJECTS, subjectOptions } from '@/lib/content';
 
 export default function SubjectDropdowns({ onGuestLimit }: { onGuestLimit?: () => void }) {
   const router = useRouter();
@@ -10,8 +10,12 @@ export default function SubjectDropdowns({ onGuestLimit }: { onGuestLimit?: () =
   const [chap, setChap] = useState('');
 
   const subjects = cls === 'class-9' ? CLASS_9_SUBJECTS.filter(s => s.id !== 'it-part-a') : [];
-  const subject  = subjects.find(s => s.slug === subj);
+  const subject  = subjects.find(s => s.id === subj);
   const chapters = subject?.chapters || [];
+  // Keyed by subject id so books sharing a subject name (Social Science I/II,
+  // Mathematics I/II) stay selectable as separate entries.
+  const subjectChoices = subjectOptions(subjects).map(o =>
+    o.value === 'it-part-b' ? { ...o, label: 'IT' } : o);
 
   function buildUrl(): string|null {
     if (!subject || !chap) return null;
@@ -50,7 +54,7 @@ export default function SubjectDropdowns({ onGuestLimit }: { onGuestLimit?: () =
     <div className="space-y-3">
       <div className="grid grid-cols-2 gap-3">
         {sel(setCls,  cls,  'Select Class',   [{ value:'class-9', label:'Class 9' }])}
-        {sel(v => { setSubj(v); setChap(''); }, subj, 'Select Subject', subjects.map(s=>({value:s.slug,label:s.id==='it-part-b'?'IT':s.name})), !cls)}
+        {sel(v => { setSubj(v); setChap(''); }, subj, 'Select Subject', subjectChoices, !cls)}
       </div>
 
       {subject && (
