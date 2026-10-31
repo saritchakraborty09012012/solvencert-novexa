@@ -8,15 +8,18 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   const staticPages = [
     '', '/answers', '/books', '/premium', '/search',
-    '/privacy', '/terms', '/about', '/contact', '/class-9/it', '/class-9/sanskrit', '/class-9/sst',
+    '/privacy', '/terms', '/about', '/contact',
+    // Subject landing pages (the "choose a book / part" lists)
+    '/class-9/it', '/class-9/hindi', '/class-9/sanskrit', '/class-9/sst',
   ];
 
   const chapterUrls: string[] = [];
   for (const subject of CLASS_9_SUBJECTS) {
-    // Ganita Manjari Part II lives on the shared book page + shared chapter
-    // routes (solvencert-novexa.vercel.app/class-9/maths/ganita-manjari/...),
-    // not under its own bookSlug — publish those canonical URLs instead.
+    // Ganita Manjari Part II (chapters 9–14) shares the Part I book page and the
+    // shared chapter routes (/class-9/maths/ganita-manjari/...), not a bookSlug
+    // of its own — publish that canonical book page plus its Part II chapters.
     if (subject.id === 'maths-part-2') {
+      chapterUrls.push('/class-9/maths/ganita-manjari');
       for (const chapter of subject.chapters) {
         chapterUrls.push(`/class-9/maths/ganita-manjari/${chapter.code}/${chapter.slug}`);
       }
@@ -45,7 +48,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     }
   }
 
-  const allUrls = [...staticPages, ...chapterUrls];
+  const allUrls = Array.from(new Set([...staticPages, ...chapterUrls]));
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <!--
