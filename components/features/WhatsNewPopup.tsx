@@ -19,6 +19,7 @@ import {
   type UpdateType,
 } from '@/lib/updates';
 import UpdateTypeBadge from '@/components/features/UpdateTypeBadge';
+import WhatsNewPyro from '@/components/features/WhatsNewPyro';
 
 /**
  * "What's New" popup — styled exactly like the site's other popups
@@ -398,6 +399,9 @@ export default function WhatsNewPopup() {
           )}
         </div>
       </div>
+
+      {/* Sparkler fountain + pyrotechnics around the popup (popup only). */}
+      <WhatsNewPyro />
     </div>
   );
 }
