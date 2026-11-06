@@ -120,13 +120,17 @@ export function useChapterTabSession<T extends string>({
 
   // (1) Entering a chapter → restore its saved tab (or the default) + position.
   useEffect(() => {
+    // A #hash link (e.g. from a What's New popup) must win over the saved
+    // reading position: render every exercise so the target exists, and let
+    // HashScrollHandler do the scrolling.
+    const hasHash = typeof window !== 'undefined' && window.location.hash.length > 1;
     const saved = readTabState(scope, code, slug);
     const valid = saved !== null && isTabValid(saved.tab as T);
-    const target = valid ? (saved!.tab as T) : defaultTab;
+    const target = hasHash ? defaultTab : valid ? (saved!.tab as T) : defaultTab;
     ignoreTab.current = target;
     setTab(target);
     quietUntil.current = Date.now() + 900;
-    if (saved) restoreScroll(saved.scroll);
+    if (saved && !hasHash) restoreScroll(saved.scroll);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scope, code, slug]);
 
@@ -161,4 +165,19 @@ export function useChapterTabSession<T extends string>({
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scope, code, slug]);
+
+  // (4) A #hash link on the page (e.g. from a What's New popup) may point at a
+  // question hidden by the currently selected exercise tab. Switch back to the
+  // default tab so every question is rendered, then let HashScrollHandler scroll.
+  useEffect(() => {
+    const onHash = () => {
+      if (typeof window === 'undefined' || window.location.hash.length <= 1) return;
+      ignoreTab.current = defaultTab;
+      setTab(defaultTab);
+      quietUntil.current = Date.now() + 900;
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [defaultTab, setTab]);
 }

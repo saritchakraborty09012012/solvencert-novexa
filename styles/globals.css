@@ -1766,6 +1766,50 @@ html[data-ui="ui2"][data-subject="it"].dark          { --ui3-aura: rgba(90,170,1
   100% { opacity: 1; transform: scale(1); }
 }
 .reward-scale { animation: rewardScaleBtn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* ── What's New celebration ─────────────────────────────────────────────── */
+@keyframes whatsnewGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 0 1px rgba(59, 130, 246, 0.22),
+      0 26px 70px rgba(59, 130, 246, 0.20),
+      0 0 46px rgba(168, 85, 247, 0.16);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(168, 85, 247, 0.42),
+      0 26px 84px rgba(168, 85, 247, 0.30),
+      0 0 64px rgba(59, 130, 246, 0.26);
+  }
+}
+.whatsnew-glow { animation: whatsnewGlow 3.2s ease-in-out infinite; }
+
+@keyframes whatsnewPop {
+  0%   { transform: scale(0) rotate(-14deg); opacity: 0; }
+  62%  { transform: scale(1.14) rotate(5deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+.whatsnew-pop { animation: whatsnewPop 0.62s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@keyframes whatsnewRibbon {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.whatsnew-topbar {
+  background-size: 220% 220%;
+  animation: whatsnewRibbon 3s ease infinite;
+}
+
+@keyframes whatsnewSpark {
+  0%, 100% { transform: translateY(0) rotate(-8deg) scale(1); opacity: 0.9; }
+  50%      { transform: translateY(-6px) rotate(8deg) scale(1.12); opacity: 1; }
+}
+.whatsnew-spark { animation: whatsnewSpark 2.4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsnew-glow, .whatsnew-pop, .whatsnew-topbar, .whatsnew-spark { animation: none !important; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .confetti-piece, .reward-pop, .reward-slide, .reward-scale, .reward-glow { animation: none !important; }
   .confetti-piece { display: none; }

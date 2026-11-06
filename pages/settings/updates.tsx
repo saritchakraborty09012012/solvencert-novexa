@@ -26,8 +26,7 @@ export default function UpdatesSettingsPage() {
           <div>
             <h2 className="font-display font-semibold text-[var(--text-primary)]">Updates</h2>
             <p className="text-[15px] text-[var(--text-secondary)]">
-              Everything we&apos;ve shipped{joinedOn ? ` since you joined on ${joinedOn}` : ''} —
-              new solutions, diagrams, subjects, features and corrections.
+              Everything new{joinedOn ? ` since you joined on ${joinedOn}` : ''}.
             </p>
           </div>
         </div>

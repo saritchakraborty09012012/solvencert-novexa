@@ -26,12 +26,17 @@ export interface UpdateEntry {
   /** Date the update went live, `YYYY-MM-DD`. */
   date: string;
   type: UpdateType;
+  /** Short headline, ideally under 40 characters. */
   title: string;
-  /** One or two sentences shown in the popup and the Settings list. */
+  /** One short value point (about 90 characters max), shown in the popup and Settings. */
   summary: string;
-  /** Optional extra detail, shown below the summary. */
+  /** Optional extra detail. Keep it short; the popup shows one update at a time. */
   body?: string;
-  /** Optional link to the thing that changed. */
+  /**
+   * Link to the thing that changed. Append `#anchor` to land exactly on a
+   * question or section, e.g.
+   * `/class-9/maths/ganita-manjari/0904ch09/...#q-ex9.1-q17`.
+   */
   href?: string;
   hrefLabel?: string;
   /** Mark beta features/books so the UI can show a Beta chip. */
@@ -51,31 +56,27 @@ export const UPDATES: UpdateEntry[] = [
     id: 'whats-new',
     date: '2026-11-06',
     type: 'feature',
-    title: "Introducing What's New",
-    summary:
-      "From now on, whenever we ship something — a new solution, diagram, subject, feature or fix — you'll see a short note here the first time you visit.",
-    body:
-      "Signed-in users can revisit the full history any time from Settings → Updates. That list only shows what shipped after you created your account.",
+    title: "What's New is here",
+    summary: 'A quick popup now tells you what changed on SolveNCERT.',
+    href: '/settings/updates',
+    hrefLabel: 'See all updates',
   },
   {
     id: 'sst-part-2',
     date: '2026-10-31',
     type: 'release',
-    title: 'Social Science Part II is live',
-    summary:
-      'Understanding Society Part II is now available in beta — 6 chapters on oceans and life, life on earth, resistance and resilience, governance and public policy, personal finances, and startups.',
-    body: 'Every chapter includes complete solutions. Open Social Science and pick Part I or Part II.',
+    title: 'SST Part II is live',
+    summary: 'Social Science Part II solutions are now available in beta.',
     href: '/class-9/sst/sst-part-2',
-    hrefLabel: 'Open Part II',
+    hrefLabel: 'View Part II',
     beta: true,
   },
   {
     id: 'sst-part-chooser',
     date: '2026-10-31',
     type: 'feature',
-    title: 'A clearer Social Science start',
-    summary:
-      'Opening Social Science now shows a Part I / Part II chooser — just like Hindi and Sanskrit show their books — instead of jumping straight into Part I.',
+    title: 'Pick your SST part',
+    summary: 'Social Science now opens with a Part I / Part II chooser.',
     href: '/class-9/sst',
     hrefLabel: 'Choose a part',
   },
@@ -83,48 +84,43 @@ export const UPDATES: UpdateEntry[] = [
     id: 'chapter-tab-restore',
     date: '2026-10-31',
     type: 'fix',
-    title: 'Chapter tabs stay put',
-    summary:
-      'Fixed the chapter navigation tabs so a fast click is no longer overwritten when the page restores your last reading position.',
-    body: 'You can now switch chapters immediately after opening a solution.',
+    title: 'Chapter tabs fixed',
+    summary: 'Switching chapters right after opening a solution now works.',
   },
   {
     id: 'maths-part-2',
     date: '2026-10-30',
     type: 'release',
-    title: 'Ganita Manjari Part II is here',
-    summary:
-      'Chapters 9–14 of the revised Class 9 Maths book are live in beta — propositions, understanding data, algorithms, quadrilaterals, linear equations, and surface area & volume.',
+    title: 'Maths Part II is live',
+    summary: 'Ganita Manjari Part II solutions are now available in beta.',
     href: '/class-9/maths/ganita-manjari#part-2',
-    hrefLabel: 'Open Part II',
+    hrefLabel: 'View Part II',
     beta: true,
   },
   {
     id: 'maths-ch9-corrections',
     date: '2026-10-30',
     type: 'fix',
-    title: 'Chapter 9 answers matched to the book',
-    summary:
-      'Reworked the Chapter 9 Think-and-Reflect questions and solutions so the wording and grouping match the NCERT book page by page.',
+    title: 'Chapter 9 answers updated',
+    summary: 'Think-and-Reflect answers now match the NCERT book.',
     href: '/class-9/maths/ganita-manjari/0904ch09/propositions-and-their-converses',
-    hrefLabel: 'Open Chapter 9',
+    hrefLabel: 'View Chapter 9',
   },
   {
     id: 'maths-ch9-fig-9-2',
     date: '2026-10-19',
     type: 'content',
-    title: 'New diagram in Maths Chapter 9',
-    summary: 'Added a redrawn Fig. 9.2 for Q17, styled to match the textbook diagram.',
-    href: '/class-9/maths/ganita-manjari/0904ch09/propositions-and-their-converses',
-    hrefLabel: 'Open Chapter 9',
+    title: 'New diagram in Maths Ch 9',
+    summary: 'Fig. 9.2 added for Q17, redrawn to match the textbook.',
+    href: '/class-9/maths/ganita-manjari/0904ch09/propositions-and-their-converses#q-ex9.1-q17',
+    hrefLabel: 'View Q17',
   },
   {
     id: 'settings-pages',
     date: '2026-10-18',
     type: 'feature',
-    title: 'Settings, split into clear pages',
-    summary:
-      'Profile, account, notifications and appearance now each have their own page with a shared sidebar — easier to find and change a setting.',
+    title: 'Settings, split into pages',
+    summary: 'Profile, account, notifications and appearance now have their own pages.',
     href: '/settings/profile',
     hrefLabel: 'Open Settings',
   },
@@ -132,9 +128,8 @@ export const UPDATES: UpdateEntry[] = [
     id: 'theme-controls',
     date: '2026-10-18',
     type: 'feature',
-    title: 'Theme and mood controls everywhere',
-    summary:
-      'System, light and dark themes plus the three interface moods can now be switched from the header on every page.',
+    title: 'Theme controls everywhere',
+    summary: 'Switch theme and mood from the header on every page.',
   },
 ];
 
