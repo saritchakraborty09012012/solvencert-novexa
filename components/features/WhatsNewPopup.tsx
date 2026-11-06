@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import {
   ArrowRight,
@@ -21,7 +21,10 @@ import {
 import UpdateTypeBadge from '@/components/features/UpdateTypeBadge';
 
 /**
- * Celebratory "What's New" popup.
+ * "What's New" popup — styled exactly like the site's other popups
+ * (GuestOnboardingPopups / AuthModal): `--surface-0` card, `--border`,
+ * `--brand-primary` icon tile and `btn-primary` action, so it follows the
+ * active theme and mood automatically.
  *
  * One update per popup. If a visitor missed several updates they are shown one
  * after another (newest first) — never as a long list inside a single card.
@@ -42,11 +45,6 @@ const SEEN_KEY = 'sn_updates_seen_v1';
 const GUEST_SINCE_KEY = 'sn_guest_since_v1';
 const GUEST_FIRST_SESSION_KEY = 'sn_guest_first_session';
 const GUEST_POPUPS_KEY = 'sn_guest_popups_done';
-
-const CONFETTI_COLORS = [
-  '#f59e0b', '#fbbf24', '#fde68a', '#ef4444', '#22c55e',
-  '#3b82f6', '#a855f7', '#ec4899', '#38bdf8',
-];
 
 const TYPE_ICON: Record<UpdateType, LucideIcon> = {
   feature: Sparkles,
@@ -282,20 +280,6 @@ export default function WhatsNewPopup() {
     };
   }, [open]);
 
-  // Fresh confetti for each update in the queue.
-  const pieces = useMemo(() => {
-    if (!open) return [];
-    return Array.from({ length: 46 }, (_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      delay: Math.random() * 0.9,
-      duration: 2.8 + Math.random() * 2.2,
-      size: 5 + Math.random() * 7,
-      color: CONFETTI_COLORS[i % CONFETTI_COLORS.length],
-      round: Math.random() > 0.5,
-    }));
-  }, [open, index]);
-
   if (!open || !current) return null;
 
   const Icon = TYPE_ICON[current.type];
@@ -305,28 +289,9 @@ export default function WhatsNewPopup() {
   const actionLabel = hasNext ? 'Next update' : 'Got it';
 
   return (
-    <div className="fixed inset-0 z-[90] flex items-end sm:items-center justify-center p-0 sm:p-4 overflow-hidden">
-      {/* Celebration confetti */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        {pieces.map((piece) => (
-          <span
-            key={piece.id}
-            className="confetti-piece"
-            style={{
-              left: `${piece.left}%`,
-              width: piece.size,
-              height: Math.max(4, piece.size * (piece.round ? 1 : 0.5)),
-              background: piece.color,
-              borderRadius: piece.round ? '50%' : '2px',
-              animationDelay: `${piece.delay}s`,
-              animationDuration: `${piece.duration}s`,
-            }}
-          />
-        ))}
-      </div>
-
+    <div className="fixed inset-0 z-[90] flex items-end sm:items-center justify-center p-0 sm:p-4">
       <div
-        className="absolute inset-0 bg-black/65 backdrop-blur-sm animate-fade-in"
+        className="absolute inset-0 bg-black/55 backdrop-blur-sm"
         onClick={closeAll}
         aria-hidden="true"
       />
@@ -336,60 +301,49 @@ export default function WhatsNewPopup() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="whats-new-title"
-        className="whatsnew-glow relative w-full max-w-md max-h-[90vh] sm:max-h-[88vh] flex flex-col overflow-hidden rounded-t-3xl sm:rounded-3xl border-2 border-white/30 dark:border-white/10 bg-[var(--surface-0)] shadow-2xl animate-scale-in"
+        className="relative w-full max-w-md max-h-[90vh] flex flex-col bg-[var(--surface-0)] rounded-t-2xl sm:rounded-2xl shadow-soft-xl border border-[var(--border)] animate-scale-in overflow-hidden"
       >
-        {/* Animated rainbow ribbon */}
-        <div className="whatsnew-topbar h-1.5 flex-shrink-0 bg-gradient-to-r from-blue-500 via-fuchsia-500 to-amber-400" />
+        {/* Same top accent as the site's other popups (AuthModal). */}
+        <div className="h-1 bg-gradient-to-r from-blue-500 via-blue-400 to-indigo-500 flex-shrink-0" />
 
         <button
           type="button"
           onClick={closeAll}
           aria-label="Close"
-          className="absolute top-4 right-3.5 z-10 p-1.5 rounded-lg bg-black/5 dark:bg-white/5 hover:bg-black/10 dark:hover:bg-white/10 text-[var(--text-muted)] transition-colors"
+          className="absolute top-4 right-4 p-1.5 rounded-lg hover:bg-[var(--surface-2)] text-[var(--text-muted)] z-10 transition-colors"
         >
           <X size={16} />
         </button>
 
-        <div className="overflow-y-auto px-6 pt-7 pb-5 text-center">
-          <div className="relative inline-flex mb-3">
-            <span className="whatsnew-spark absolute -left-7 top-1 text-amber-400" aria-hidden="true">
-              <Sparkles size={16} />
-            </span>
+        <div className="overflow-y-auto flex-1 p-5 sm:p-6">
+          {/* Header — same pattern as GuestOnboardingPopups / AuthModal */}
+          <div className="flex items-center gap-3 mb-4">
             <span
-              className="whatsnew-spark absolute -right-7 bottom-1 text-fuchsia-400"
-              style={{ animationDelay: '0.5s' }}
-              aria-hidden="true"
+              className="grid size-10 place-items-center rounded-xl text-white flex-shrink-0"
+              style={{ background: 'var(--brand-primary)' }}
             >
-              <Sparkles size={14} />
+              <Icon size={18} />
             </span>
-            <span
-              className="whatsnew-pop grid size-16 place-items-center rounded-2xl text-white shadow-xl shadow-blue-500/30"
-              style={{ background: 'linear-gradient(135deg, var(--brand-primary), #a855f7)' }}
-            >
-              <Icon size={28} />
-            </span>
+            <div className="min-w-0">
+              <h2 id="whats-new-title" className="text-lg font-display font-bold text-[var(--text-primary)] leading-tight pr-8">
+                What&apos;s New
+              </h2>
+              <p className="text-xs text-[var(--text-muted)]">
+                {queue.length > 1
+                  ? `Update ${index + 1} of ${queue.length} · ${formatUpdateDate(current.date)}`
+                  : `Updated ${formatUpdateDate(current.date)}`}
+              </p>
+            </div>
           </div>
 
-          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-fuchsia-500 dark:text-fuchsia-400">
-            {queue.length > 1 ? `Update ${index + 1} of ${queue.length}` : 'Just dropped'}
-          </p>
-
-          <h2
-            id="whats-new-title"
-            className="mt-1 text-xl sm:text-2xl font-display font-bold text-[var(--text-primary)] leading-tight"
-          >
-            {current.title}
-          </h2>
-
-          <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+          {/* The single update in this popup */}
+          <h3 className="text-base font-bold text-[var(--text-primary)]">{current.title}</h3>
+          <p className="text-sm leading-relaxed text-[var(--text-secondary)] mt-1">
             {current.summary}
           </p>
 
-          <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+          <div className="mt-3 flex flex-wrap items-center gap-2">
             <UpdateTypeBadge type={current.type} />
-            <span className="text-[11px] text-[var(--text-muted)]">
-              {formatUpdateDate(current.date)}
-            </span>
             {current.beta && (
               <span
                 className="px-2 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[9px] font-bold uppercase tracking-[0.14em]"
@@ -401,52 +355,47 @@ export default function WhatsNewPopup() {
           </div>
         </div>
 
-        <div className="mt-auto border-t border-[var(--border)] bg-[var(--surface-1)]/60 p-4 sm:p-5 space-y-2.5">
+        {/* Actions — site-standard primary button, follows theme + mood */}
+        <div className="p-5 sm:p-6 pt-0">
           {showLink ? (
             <Link
               href={current.href as string}
               onClick={openLink}
-              className="group flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-500/25 transition-transform hover:scale-[1.02] active:scale-[0.99]"
-              style={{ background: 'linear-gradient(135deg, var(--brand-primary), #a855f7)' }}
+              className="btn-primary w-full justify-center"
             >
-              {current.hrefLabel || 'View'}
-              <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+              {current.hrefLabel || 'View'} <ArrowRight size={16} />
             </Link>
           ) : (
-            <button
-              type="button"
-              onClick={next}
-              className="flex w-full items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-500/25 transition-transform hover:scale-[1.02] active:scale-[0.99]"
-              style={{ background: 'linear-gradient(135deg, var(--brand-primary), #a855f7)' }}
-            >
-              {actionLabel}
-              <Check size={16} />
+            <button type="button" onClick={next} className="btn-primary w-full justify-center">
+              {actionLabel} <Check size={16} />
             </button>
           )}
 
-          <div className="flex items-center justify-between gap-3 px-0.5">
-            {!isGuest ? (
-              <Link
-                href="/settings/updates"
-                onClick={openLink}
-                className="text-[12px] font-semibold text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
-              >
-                All updates
-              </Link>
-            ) : (
-              <span />
-            )}
+          {(showLink || !isGuest) && (
+            <div className="flex items-center justify-between gap-3 mt-3 px-0.5">
+              {!isGuest ? (
+                <Link
+                  href="/settings/updates"
+                  onClick={openLink}
+                  className="text-xs font-semibold text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+                >
+                  View all updates
+                </Link>
+              ) : (
+                <span />
+              )}
 
-            {showLink && (
-              <button
-                type="button"
-                onClick={next}
-                className="text-[12px] font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
-              >
-                {actionLabel}
-              </button>
-            )}
-          </div>
+              {showLink && (
+                <button
+                  type="button"
+                  onClick={next}
+                  className="text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+                >
+                  {actionLabel}
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
