@@ -35,8 +35,10 @@ import WhatsNewPyro from '@/components/features/WhatsNewPyro';
  *   • Guests never see popups on their very first visit. That visit only
  *     records a baseline (date + latest update id); later visits show the
  *     updates that shipped after that baseline.
- *   • Seen updates are remembered per browser in localStorage, so closing a
- *     popup never hides a different, newer update.
+ *   • Seen updates are remembered per browser in localStorage as a watermark:
+ *     only updates newer than the last one the visitor saw are ever queued.
+ *     Anything older is skipped forever — a new release never re-shows the
+ *     backlog, and a dismissed update never appears again.
  *
  * "View" navigates to the exact thing that changed. Links may include a
  * `#anchor` (e.g. a question block); HashScrollHandler in _app lands on it.
@@ -141,6 +143,16 @@ function markFirstGuestSession() {
   }
 }
 
+/** Index (in the newest-first UPDATES list) of the most recent update this
+ *  browser has seen — i.e. the seen watermark. Infinity when nothing seen. */
+function newestSeenIndex(seen: Set<string>): number {
+  let best = Infinity;
+  UPDATES.forEach((update, i) => {
+    if (seen.has(update.id) && i < best) best = i;
+  });
+  return best;
+}
+
 /** Updates that shipped after the guest's first visit and are still unseen. */
 function guestPending(seen: Set<string>, since: GuestSince): UpdateEntry[] {
   const baselineIndex = since.latestId
@@ -150,7 +162,10 @@ function guestPending(seen: Set<string>, since: GuestSince): UpdateEntry[] {
     baselineIndex >= 0
       ? UPDATES.slice(0, baselineIndex)
       : UPDATES.filter((update) => update.date > since.date);
-  return newer.filter((update) => !seen.has(update.id));
+  // Watermark: never re-show anything at or older than the newest seen update,
+  // even if it was never individually dismissed.
+  const watermark = newestSeenIndex(seen);
+  return newer.filter((update) => UPDATES.indexOf(update) < watermark && !seen.has(update.id));
 }
 
 export default function WhatsNewPopup() {
@@ -177,9 +192,15 @@ export default function WhatsNewPopup() {
       pending = guestPending(seen, since);
     } else {
       const available = getUpdatesForSignup(user?.created_at);
-      // A fresh browser shows only the newest update; a browser that already
-      // saw something gets every update newer than what it has seen.
-      pending = seen.size === 0 ? available.slice(0, 1) : available.filter((u) => !seen.has(u.id));
+      // Watermark: only updates newer than the most recent one this browser
+      // has seen are ever shown. Older updates that were never individually
+      // dismissed are skipped forever, so a new release never resurrects the
+      // whole backlog. A fresh browser (nothing seen) gets just the newest.
+      const watermark = newestSeenIndex(seen);
+      pending =
+        seen.size === 0
+          ? available.slice(0, 1)
+          : available.filter((u) => UPDATES.indexOf(u) < watermark);
     }
 
     if (pending.length === 0) return;
