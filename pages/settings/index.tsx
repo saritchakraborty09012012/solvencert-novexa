@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuthStore } from '@/store/authStore';
 
-const VALID_TABS = ['profile', 'account', 'notifications', 'appearance'];
+const VALID_TABS = ['profile', 'account', 'notifications', 'appearance', 'updates'];
 
 export default function SettingsIndexPage() {
   const router = useRouter();

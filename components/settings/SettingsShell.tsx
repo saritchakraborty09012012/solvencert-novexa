@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { User, Shield, Bell, Palette, Lock } from 'lucide-react';
+import { User, Shield, Bell, Palette, Sparkles, Lock } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { useAuthStore } from '@/store/authStore';
 import { useCollabStore } from '@/store/collabStore';
@@ -12,6 +12,7 @@ const TABS = [
   { id: 'account',       label: 'Account',       icon: Shield, href: '/settings/account' },
   { id: 'notifications', label: 'Notifications', icon: Bell,   href: '/settings/notifications' },
   { id: 'appearance',    label: 'Appearance',    icon: Palette, href: '/settings/appearance' },
+  { id: 'updates',       label: 'Updates',       icon: Sparkles, href: '/settings/updates' },
 ] as const;
 
 export type SettingsTabId = (typeof TABS)[number]['id'];

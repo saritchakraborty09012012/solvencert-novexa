@@ -14,6 +14,7 @@ import { initSharedLearningOnLogin, initSharedLearningOnLogout } from '@/lib/moc
 import { setStorageUserId, loadAllFromSupabase, clearAllStorageOnLogout } from '@/lib/mock-tests/storage';
 import TunnelLoader from '@/components/features/BrainLoader';
 import GuestOnboardingPopups from '@/components/features/GuestOnboardingPopups';
+import WhatsNewPopup from '@/components/features/WhatsNewPopup';
 import '@/styles/globals.css';
 import '@/styles/ui3.css';
 import '@/styles/ganita-notebook.css';
@@ -177,6 +178,7 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       <TunnelLoader state={loaderState} />
       <GuestOnboardingPopups />
+      <WhatsNewPopup />
       <CollabPresenceBar />
       <CollabBanner />
     </>
