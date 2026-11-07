@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
-import { ChevronRight, BookOpen, Home, Download, Loader2, Lightbulb, Baby, KeyRound } from 'lucide-react';
+import { ChevronRight, BookOpen, Home, Download, Loader2, Lightbulb, Baby, KeyRound, X } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import BackToTop from '@/components/features/BackToTop';
 import MathRenderer from '@/components/features/MathRenderer';
@@ -107,17 +107,6 @@ function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterTitle, c
             className={cn('method-tab text-xs', showKey ? 'method-tab-active' : 'method-tab-inactive')}><KeyRound size={12}/> Answer Key</button>
           <button onClick={() => { setShowSol(!showSol); if (!showSol) setShowKey(false); }}
             className={cn('method-tab text-xs', showSol ? 'method-tab-active' : 'method-tab-inactive')}><BookOpen size={12}/> School Level Solution</button>
-          {/* Explain + Simplify buttons */}
-          <span className="ml-auto flex items-center gap-2">
-            <button onClick={explain} disabled={explaining}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 text-violet-700 dark:text-violet-300 text-xs font-semibold hover:bg-violet-100 disabled:opacity-50 transition-all">
-              {explaining ? <Loader2 size={11} className="animate-spin" /> : <Lightbulb size={11} />} Explain
-            </button>
-            <button onClick={simplify} disabled={simplifying}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold hover:bg-emerald-100 disabled:opacity-50 transition-all">
-              {simplifying ? <Loader2 size={11} className="animate-spin" /> : <Baby size={11} />} Simplify
-            </button>
-          </span>
         </div>
 
         {showKey && (
@@ -146,13 +135,27 @@ function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterTitle, c
               <div className="answer-actions"><ReadAloud text={q.answer.solution.replace(/<[^>]+>/g,'')} size="sm" /><CopyBtn text={q.answer.solution.replace(/<[^>]+>/g,'')} /></div>
               <ReportFlag reportedContent={q.answer.solution.replace(/<[^>]+>/g,'')} onGuestBlock={onGuestBlock} />
             </div>
-            <ThumbsRating subject="science" chapterNumber={chapterNumber} exerciseLabel={exerciseLabel} itemKey={`${exerciseId}-${q.id}-solution`} />
+            <div className="flex items-center flex-wrap gap-2 mt-2">
+              <button onClick={explain} disabled={explaining} title="Get expert explanation"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-950/50 border border-violet-700/50 text-violet-300 text-xs font-semibold hover:bg-violet-900/50 disabled:opacity-50 transition-all">
+                {explaining ? <Loader2 size={11} className="animate-spin" /> : <Lightbulb size={11} />} Explain
+              </button>
+              <button onClick={simplify} disabled={simplifying} title="Simplify like explaining to a 5-year-old"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-600/50 text-emerald-300 text-xs font-semibold hover:bg-emerald-900/60 disabled:opacity-50 transition-all">
+                {simplifying ? <Loader2 size={11} className="animate-spin" /> : <Baby size={11} />} Simplify
+              </button>
+              <ThumbsRating subject="science" chapterNumber={chapterNumber} exerciseLabel={exerciseLabel} itemKey={`${exerciseId}-${q.id}-solution`} className="mt-0" />
+            </div>
           </div>
         )}
 
         {explainText && (
-          <div className="p-3 rounded-xl bg-violet-50 dark:bg-violet-950/20 border border-violet-100 dark:border-violet-900/40">
-            <p className="text-[10px] font-bold text-violet-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Lightbulb size={10} /> Expert Explanation</p>
+          <div className="p-3 rounded-xl bg-violet-950/40 border border-violet-700/40 relative">
+            <button type="button" onClick={() => setExplainText('')} aria-label="Close explanation"
+              className="absolute top-2.5 right-2.5 p-1 rounded-lg hover:bg-white/10 text-violet-300/70 hover:text-violet-200 transition-colors">
+              <X size={13} />
+            </button>
+            <p className="text-[10px] font-bold text-violet-300 uppercase tracking-wider mb-1.5 flex items-center gap-1 pr-6"><Lightbulb size={10} /> Expert Explanation</p>
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{explainText}</p>
             <div className="flex items-center justify-between mt-2">
               <div className="answer-actions"><ReadAloud text={explainText} size="sm" /><CopyBtn text={explainText} /></div>
@@ -163,8 +166,12 @@ function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterTitle, c
         )}
 
         {simplifyText && (
-          <div className="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/40">
-            <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Baby size={10} /> Simplified (Age 5)</p>
+          <div className="p-3 rounded-xl bg-emerald-950/40 border border-emerald-700/40 relative">
+            <button type="button" onClick={() => setSimplifyText('')} aria-label="Close simplification"
+              className="absolute top-2.5 right-2.5 p-1 rounded-lg hover:bg-white/10 text-emerald-300/70 hover:text-emerald-200 transition-colors">
+              <X size={13} />
+            </button>
+            <p className="text-[10px] font-bold text-emerald-300 uppercase tracking-wider mb-1.5 flex items-center gap-1 pr-6"><Baby size={10} /> Simplified</p>
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{simplifyText}</p>
             <div className="flex items-center justify-between mt-2">
               <div className="answer-actions"><ReadAloud text={simplifyText} size="sm" /><CopyBtn text={simplifyText} /></div>

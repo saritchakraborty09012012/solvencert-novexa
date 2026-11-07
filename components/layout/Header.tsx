@@ -5,7 +5,7 @@ import {
   Settings, History, Users, Menu, X,
   Sun, Moon, Monitor, ChevronDown,
   LogIn, UserPlus, LogOut, User,
-  Search, Crown, Sparkles, Layers, Check, Zap, MessageCircleQuestion
+  Search, Crown, Sparkles, Layers, Check, Zap, MessageCircleQuestion, Share2
 } from 'lucide-react';
 import { SolveNCERTLogo } from '@/components/ui/Logo';
 import { useAuthStore } from '@/store/authStore';
@@ -13,6 +13,7 @@ import { useThemeStore } from '@/store/themeStore';
 import { useUIStore } from '@/store/uiStore';
 import { getInitialsColor } from '@/utils/helpers';
 import AuthModal from '@/components/auth/AuthModal';
+import RewardModal from '@/components/auth/RewardModal';
 import QueryModal from '@/components/features/QueryModal';
 import Dashboard from '@/components/layout/Dashboard';
 import { cn } from '@/utils/helpers';
@@ -32,6 +33,7 @@ export default function Header() {
   const [authModal,    setAuthModal]    = useState<'login'|'signup'|null>(null);
   const [profileOpen,  setProfileOpen]  = useState(false);
   const [premiumPopup, setPremiumPopup] = useState(false);
+  const [showReward,   setShowReward]   = useState(false);
   const [uiOpen,       setUIOpen]       = useState(false);
   const [openMenu,     setOpenMenu]     = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
@@ -389,13 +391,24 @@ export default function Header() {
                   ? 'No card required. Unlock AI Learn, quizzes, mock tests, study rooms & more.'
                   : 'Loved it? Upgrade to keep everything unlocked — AI tools, mock tests, study rooms & more.'}
               </p>
-              <div className="flex gap-2">
-                <Link href="/premium" onClick={() => { setPremiumPopup(false); sessionStorage.setItem('sn_premium_dismissed','1'); }}
-                  className="btn-primary flex-1 justify-center text-sm">
-                  {user?.plan === 'free' ? <><Sparkles size={13} /> Activate Free Trial</> : <><Crown size={13} /> Upgrade & Pay</>}
-                </Link>
-                <button onClick={() => { setPremiumPopup(false); sessionStorage.setItem('sn_premium_dismissed','1'); }}
-                  className="btn-ghost text-sm px-4">Later</button>
+              <div className="flex flex-col gap-2">
+                <div className="flex gap-2">
+                  <Link href="/premium" onClick={() => { setPremiumPopup(false); sessionStorage.setItem('sn_premium_dismissed','1'); }}
+                    className="btn-primary flex-1 justify-center text-sm">
+                    {user?.plan === 'free' ? <><Sparkles size={13} /> Activate Free Trial</> : <><Crown size={13} /> Upgrade ₹99/mo</>}
+                  </Link>
+                  <button onClick={() => { setPremiumPopup(false); sessionStorage.setItem('sn_premium_dismissed','1'); }}
+                    className="btn-ghost text-sm px-4">Later</button>
+                </div>
+                <button
+                  onClick={() => setShowReward(true)}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-emerald-600/40 bg-emerald-500/10 hover:bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 text-sm font-semibold transition-colors"
+                >
+                  <Share2 size={14} /> Refer &amp; Earn Free Premium
+                </button>
+                <p className="text-[11px] text-[var(--text-muted)] text-center">
+                  Share your link — every friend who signs up with it gets you +1 month Premium free (and them 2 months free trial instead of 1).
+                </p>
               </div>
             </div>
           </div>
@@ -405,6 +418,10 @@ export default function Header() {
       <Dashboard open={dashOpen} onClose={() => setDashOpen(false)} onAuthRequest={setAuthModal} />
       {authModal && <AuthModal mode={authModal} onClose={() => setAuthModal(null)} onSwitch={m => setAuthModal(m)} />}
       <QueryModal open={queryOpen} onClose={() => setQueryOpen(false)} />
+      {/* Same refer popup new sign-ups see (RewardModal) — stacks above the trial popup */}
+      {showReward && user?.referral_code && (
+        <RewardModal referralCode={user.referral_code} onClose={() => setShowReward(false)} />
+      )}
     </>
   );
 }

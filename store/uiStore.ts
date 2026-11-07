@@ -11,7 +11,24 @@ const UIS = ['ui1', 'ui2', 'ui3'] as const;
 
 function applyUI(ui: UI) {
   if (typeof document === 'undefined') return;
-  document.documentElement.setAttribute('data-ui', ui);
+  const root = document.documentElement;
+  root.setAttribute('data-ui', ui);
+  // UI-3 (Signature Noir) is a dark-only interface: the light/dark theme
+  // must never leak into it. Force the dark class while UI-3 is active,
+  // and restore the user's real theme when leaving it.
+  if (ui === 'ui3') {
+    root.classList.remove('light');
+    root.classList.add('dark');
+  } else {
+    let resolved: 'light' | 'dark' = 'light';
+    try {
+      const t = localStorage.getItem('sn_theme') || 'system';
+      resolved = t === 'dark' ? 'dark' : t === 'light' ? 'light'
+        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch { /* keep default */ }
+    root.classList.remove('light', 'dark');
+    root.classList.add(resolved);
+  }
 }
 
 export const useUIStore = create<UIState>((set) => ({

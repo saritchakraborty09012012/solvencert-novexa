@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
-import { ChevronRight, BookOpen, Star, Lightbulb, Baby, Copy, Check, Home, Loader2, Download, KeyRound, Zap } from 'lucide-react';
+import { ChevronRight, BookOpen, Star, Lightbulb, Baby, Copy, Check, Home, Loader2, Download, KeyRound, Zap, X } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import BetaBadge from '@/components/features/BetaBadge';
 import BackToTop from '@/components/features/BackToTop';
@@ -69,7 +69,7 @@ function ExplainBtn({ question, answer, subject, onResult }: { question:string; 
   }
   return (
     <button onClick={go} disabled={loading} title="Get expert explanation"
-      className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 text-violet-700 dark:text-violet-300 text-xs font-semibold hover:bg-violet-100 disabled:opacity-50 transition-all">
+      className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-950/50 border border-violet-700/50 text-violet-300 text-xs font-semibold hover:bg-violet-900/50 disabled:opacity-50 transition-all">
       {loading ? <Loader2 size={11} className="animate-spin"/> : <Lightbulb size={11}/>} Explain
     </button>
   );
@@ -88,7 +88,7 @@ function SimplifyBtn({ question, answer, subject, onResult }: { question:string;
   }
   return (
     <button onClick={go} disabled={loading} title="Simplify like explaining to a 5-year-old"
-      className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold hover:bg-emerald-100 disabled:opacity-50 transition-all">
+      className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-600/50 text-emerald-300 text-xs font-semibold hover:bg-emerald-900/60 disabled:opacity-50 transition-all">
       {loading ? <Loader2 size={11} className="animate-spin"/> : <Baby size={11}/>} Simplify
     </button>
   );
@@ -153,8 +153,6 @@ function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, cha
                 <button onClick={()=>{setShowKey(!showKey);if(!showKey){setShowSchool(false);setShowTrick(false);}}} className={cn('method-tab text-xs',showKey?'method-tab-active':'method-tab-inactive')}><KeyRound size={12}/> Answer Key</button>
                 <button onClick={()=>{setShowSchool(!showSchool);if(!showSchool)setShowKey(false);}} className={cn('method-tab text-xs',showSchool?'method-tab-active':'method-tab-inactive')}><BookOpen size={12}/> {schoolLabel}</button>
                 {question.answer.trickMethod && <button onClick={()=>{setShowTrick(!showTrick);if(!showTrick)setShowKey(false);}} className={cn('method-tab text-xs',showTrick?'method-tab-active':'method-tab-inactive')}><Zap size={12}/> Quick Trick</button>}
-                <ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/>
-                <SimplifyBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setSimplifyTxt}/>
               </div>
             )}
 
@@ -177,8 +175,6 @@ function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, cha
               <div className="p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--border)]">
                 <div className="flex items-center justify-between mb-1.5">
                   {showTabs && <p className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">{schoolLabel}</p>}
-                  {!showTabs && <span className="flex items-center gap-2"><ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/><SimplifyBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setSimplifyTxt}/></span>}
-                  {showTabs && <div className="ml-auto flex items-center gap-2"><ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/><SimplifyBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setSimplifyTxt}/></div>}
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="flex-shrink-0 mt-1 rounded-md bg-blue-600/10 dark:bg-blue-400/15 text-blue-600 dark:text-blue-400 text-xs font-bold px-2 py-0.5">{answerLabel}</span>
@@ -188,10 +184,18 @@ function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, cha
                   <div className="answer-actions"><ReadAloud text={question.answer.schoolMethod} size="sm"/><CopyBtn text={question.answer.schoolMethod}/></div>
                   <ReportFlag reportedContent={question.answer.schoolMethod} onGuestBlock={onUnlock} />
                 </div>
-                <ThumbsRating subject={subjectSlug} chapterNumber={chapterNumber} exerciseLabel={exerciseLabel} itemKey={`${exerciseId}-${question.id}-solution`} />
+                <div className="flex items-center flex-wrap gap-2 mt-2">
+                  <ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/>
+                  <SimplifyBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setSimplifyTxt}/>
+                  <ThumbsRating subject={subjectSlug} chapterNumber={chapterNumber} exerciseLabel={exerciseLabel} itemKey={`${exerciseId}-${question.id}-solution`} className="mt-0" />
+                </div>
                 {explainTxt && (
-                  <div className="mt-3 p-3 rounded-xl bg-violet-50 dark:bg-violet-950/20 border border-violet-100 dark:border-violet-900/40">
-                    <p className="text-[10px] font-bold text-violet-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Lightbulb size={10}/> Expert Explanation</p>
+                  <div className="mt-3 p-3 rounded-xl bg-violet-950/40 border border-violet-700/40 relative">
+                    <button type="button" onClick={() => setExplainTxt('')} aria-label="Close explanation"
+                      className="absolute top-2.5 right-2.5 p-1 rounded-lg hover:bg-white/10 text-violet-300/70 hover:text-violet-200 transition-colors">
+                      <X size={13} />
+                    </button>
+                    <p className="text-[10px] font-bold text-violet-300 uppercase tracking-wider mb-1.5 flex items-center gap-1 pr-6"><Lightbulb size={10}/> Expert Explanation</p>
                     <MathRenderer text={explainTxt} className="text-xs"/>
                     <div className="flex items-center justify-between mt-2">
                       <div className="answer-actions"><ReadAloud text={explainTxt} size="sm"/><CopyBtn text={explainTxt}/></div>
@@ -201,8 +205,12 @@ function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, cha
                   </div>
                 )}
                 {simplifyTxt && (
-                  <div className="mt-3 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/40">
-                    <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Baby size={10}/> Simplified (Age 5)</p>
+                  <div className="mt-3 p-3 rounded-xl bg-emerald-950/40 border border-emerald-700/40 relative">
+                    <button type="button" onClick={() => setSimplifyTxt('')} aria-label="Close simplification"
+                      className="absolute top-2.5 right-2.5 p-1 rounded-lg hover:bg-white/10 text-emerald-300/70 hover:text-emerald-200 transition-colors">
+                      <X size={13} />
+                    </button>
+                    <p className="text-[10px] font-bold text-emerald-300 uppercase tracking-wider mb-1.5 flex items-center gap-1 pr-6"><Baby size={10}/> Simplified</p>
                     <MathRenderer text={simplifyTxt} className="text-xs"/>
                     <div className="flex items-center justify-between mt-2">
                       <div className="answer-actions"><ReadAloud text={simplifyTxt} size="sm"/><CopyBtn text={simplifyTxt}/></div>

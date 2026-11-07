@@ -19,6 +19,14 @@ function resolveTheme(theme: Theme): 'light' | 'dark' {
 function applyTheme(resolved: 'light' | 'dark') {
   if (typeof document === 'undefined') return;
   const root = document.documentElement;
+  // UI-3 is dark-only — never let a light theme class leak into it,
+  // regardless of the stored theme. The stored theme is restored as soon
+  // as the user leaves UI-3 (see applyUI in uiStore).
+  if (root.getAttribute('data-ui') === 'ui3') {
+    root.classList.remove('light');
+    root.classList.add('dark');
+    return;
+  }
   root.classList.remove('light', 'dark');
   root.classList.add(resolved);
 }

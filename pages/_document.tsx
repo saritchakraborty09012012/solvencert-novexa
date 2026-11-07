@@ -66,13 +66,16 @@ export default function Document() {
             demand by MathRenderer via a dynamic import. No CDN requests, so
             browser tracking prevention never blocks math rendering. */}
 
-        {/* UI init — restore selected interface (ui1/ui2/ui3) before paint */}
+        {/* UI init — restore selected interface (ui1/ui2/ui3) before paint.
+            UI-3 is dark-only: force the dark class here too so no light
+            theme can flash or leak into it before React hydrates. */}
         <script dangerouslySetInnerHTML={{ __html: `
           (function(){
             try{
               var u=localStorage.getItem('sn_ui');
               if(u!=='ui1'&&u!=='ui2'&&u!=='ui3') u='ui3';
               document.documentElement.setAttribute('data-ui',u);
+              if(u==='ui3'){ document.documentElement.classList.remove('light'); document.documentElement.classList.add('dark'); }
               if(u==='ui2'){
                 var parts=location.pathname||'';
                 parts=parts.split('/').filter(Boolean);
@@ -86,10 +89,15 @@ export default function Document() {
           })();
         `}} />
 
-        {/* Theme init — no flash of wrong theme */}
+        {/* Theme init — no flash of wrong theme. Skipped for UI-3 (dark-only). */}
         <script dangerouslySetInnerHTML={{ __html: `
           (function(){
             try{
+              if(document.documentElement.getAttribute('data-ui')==='ui3'){
+                document.documentElement.classList.remove('light');
+                document.documentElement.classList.add('dark');
+                return;
+              }
               var t=localStorage.getItem('sn_theme')||'system';
               var r=t==='dark'?'dark':t==='light'?'light':
                 (window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');

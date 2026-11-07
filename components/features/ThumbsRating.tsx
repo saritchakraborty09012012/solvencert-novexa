@@ -9,6 +9,7 @@ interface Props {
   exerciseLabel: string;
   /** Unique key for this specific answer/reply — used only for the local "already reacted" guard, never sent to the server. */
   itemKey: string;
+  className?: string;
 }
 
 type Reaction = 'up' | 'double_up' | 'down';

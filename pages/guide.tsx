@@ -120,7 +120,7 @@ function ChapterDiagram() {
       {/* action buttons on the card */}
       <g>
         <rect x="520" y="120" width="86" height="24" rx="6" fill="#eef2ff" stroke="#c7d2fe" />
-        <text x="532" y="136" font-size="9" fill="#4f46e5" font-family="sans-serif">Meta (AI)</text>
+        <text x="532" y="136" font-size="9" fill="#4f46e5" font-family="sans-serif">AI (Explain)</text>
         <rect x="618" y="120" width="86" height="24" rx="6" fill="#f0fdf5" stroke="#bbf7d0" />
         <text x="628" y="136" font-size="9" fill="#15803d" font-family="sans-serif">✓ Read</text>
         <rect x="24" y="104" width="0" height="0" />
