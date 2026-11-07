@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
-import { ChevronRight, BookOpen, Home, Download, Copy, Check, KeyRound } from 'lucide-react';
+import { ChevronRight, BookOpen, Home, Download, Copy, Check, KeyRound, Loader2, Lightbulb, Baby } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import BackToTop from '@/components/features/BackToTop';
 import ReadAloud from '@/components/features/ReadAloud';
@@ -265,6 +265,27 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
   onToggleKey: (e: React.MouseEvent<HTMLButtonElement>) => void; onToggleSol: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }) {
   const ctx = `Maths Question ${q.number}: ${q.plainText}`;
+  const [explainTxt, setExplainTxt] = useState('');
+  const [explainLoading, setExplainLoading] = useState(false);
+  const [simplifyTxt, setSimplifyTxt] = useState('');
+  const [simplifyLoading, setSimplifyLoading] = useState(false);
+  const answerForAI = q.md ? q.md.school : q.plainText;
+  const questionForAI = q.md ? q.md.text : q.plainText;
+
+  async function runAI(mode: 'explain' | 'simplify') {
+    const setText = mode === 'explain' ? setExplainTxt : setSimplifyTxt;
+    const setLoading = mode === 'explain' ? setExplainLoading : setSimplifyLoading;
+    setLoading(true);
+    try {
+      const res = await fetch(`/api/ai/${mode}`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: questionForAI, answer: answerForAI, subject: 'Mathematics' }),
+      });
+      const data = await res.json();
+      setText(data.explanation || data.simplified || (mode === 'explain' ? 'Could not generate explanation.' : 'Could not simplify the solution.'));
+    } catch { setText('Connection error.'); }
+    finally { setLoading(false); }
+  }
   return (
     <div className="question-block" id={`q-${exercise.id}-${q.id}`}>
       <div className="ganita-notebook">
@@ -296,6 +317,16 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
                   className={cn('method-tab text-xs', showKey ? 'method-tab-active' : 'method-tab-inactive')}><KeyRound size={12}/> Answer Key</button>
                 <button onClick={onToggleSol}
                   className={cn('method-tab text-xs', showSol ? 'method-tab-active' : 'method-tab-inactive')}><BookOpen size={12}/> School Level Solution</button>
+                <span className="ml-auto flex items-center gap-2">
+                  <button onClick={() => runAI('explain')} disabled={explainLoading} title="Get expert explanation"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 text-violet-700 dark:text-violet-300 text-xs font-semibold hover:bg-violet-100 disabled:opacity-50 transition-all">
+                    {explainLoading ? <Loader2 size={11} className="animate-spin" /> : <Lightbulb size={11} />} Explain
+                  </button>
+                  <button onClick={() => runAI('simplify')} disabled={simplifyLoading} title="Simplify like explaining to a 5-year-old"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold hover:bg-emerald-100 disabled:opacity-50 transition-all">
+                    {simplifyLoading ? <Loader2 size={11} className="animate-spin" /> : <Baby size={11} />} Simplify
+                  </button>
+                </span>
               </div>
 
               {showKey && (
@@ -337,6 +368,30 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
                     <ReportFlag reportedContent={questionText(q)} onGuestBlock={onGuestBlock} />
                   </div>
                   <ThumbsRating subject="maths" chapterNumber={chapter.number} exerciseLabel={exercise.title} itemKey={`${exercise.id}-${q.id}-solution`} />
+                </div>
+              )}
+
+              {explainTxt && (
+                <div className="p-3 rounded-xl bg-violet-50 dark:bg-violet-950/20 border border-violet-100 dark:border-violet-900/40 mb-2">
+                  <p className="font-bold text-violet-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Lightbulb size={11}/> Expert Explanation</p>
+                  <MathRenderer text={explainTxt} className="text-xs" />
+                  <div className="flex items-center justify-between mt-2">
+                    <div className="answer-actions"><ReadAloud text={explainTxt} size="sm" /><CopyBtn text={explainTxt} /></div>
+                    <ReportFlag reportedContent={explainTxt} onGuestBlock={onGuestBlock} />
+                  </div>
+                  <ThumbsRating subject="maths" chapterNumber={chapter.number} exerciseLabel={exercise.title} itemKey={`${exercise.id}-${q.id}-explain`} />
+                </div>
+              )}
+
+              {simplifyTxt && (
+                <div className="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/40 mb-2">
+                  <p className="font-bold text-emerald-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Baby size={11}/> Simplified (Age 5)</p>
+                  <MathRenderer text={simplifyTxt} className="text-xs" />
+                  <div className="flex items-center justify-between mt-2">
+                    <div className="answer-actions"><ReadAloud text={simplifyTxt} size="sm" /><CopyBtn text={simplifyTxt} /></div>
+                    <ReportFlag reportedContent={simplifyTxt} onGuestBlock={onGuestBlock} />
+                  </div>
+                  <ThumbsRating subject="maths" chapterNumber={chapter.number} exerciseLabel={exercise.title} itemKey={`${exercise.id}-${q.id}-simplify`} />
                 </div>
               )}
             </div>

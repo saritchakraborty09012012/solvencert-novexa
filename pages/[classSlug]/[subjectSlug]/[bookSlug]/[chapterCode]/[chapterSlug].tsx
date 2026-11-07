@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
-import { ChevronRight, BookOpen, Star, Lightbulb, Copy, Check, Home, Loader2, Download, KeyRound, Zap } from 'lucide-react';
+import { ChevronRight, BookOpen, Star, Lightbulb, Baby, Copy, Check, Home, Loader2, Download, KeyRound, Zap } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import BetaBadge from '@/components/features/BetaBadge';
 import BackToTop from '@/components/features/BackToTop';
@@ -75,6 +75,25 @@ function ExplainBtn({ question, answer, subject, onResult }: { question:string; 
   );
 }
 
+function SimplifyBtn({ question, answer, subject, onResult }: { question:string; answer:string; subject:string; onResult:(t:string)=>void }) {
+  const [loading, setLoading] = useState(false);
+  async function go() {
+    setLoading(true);
+    try {
+      const res = await fetch('/api/ai/simplify', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ question, answer, subject }) });
+      const data = await res.json();
+      onResult(data.simplified || 'Could not simplify the solution.');
+    } catch { onResult('Connection error.'); }
+    finally { setLoading(false); }
+  }
+  return (
+    <button onClick={go} disabled={loading} title="Simplify like explaining to a 5-year-old"
+      className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold hover:bg-emerald-100 disabled:opacity-50 transition-all">
+      {loading ? <Loader2 size={11} className="animate-spin"/> : <Baby size={11}/>} Simplify
+    </button>
+  );
+}
+
 function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, chapterCode, chapterSlug, chapterTitle, chapterNumber, exerciseLabel, guestBlocked, onUnlock }: {
   question: Question; exerciseId: string; isMaths: boolean; subject: string; subjectSlug: string;
   chapterCode: string; chapterSlug: string; chapterTitle: string; chapterNumber: number; exerciseLabel: string;
@@ -84,6 +103,7 @@ function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, cha
   const [showSchool, setShowSchool] = useState(true);
   const [showTrick, setShowTrick] = useState(false);
   const [explainTxt, setExplainTxt] = useState('');
+  const [simplifyTxt, setSimplifyTxt] = useState('');
   const showTabs = isMaths || subjectSlug === 'it' || subjectSlug === 'advanced-science';
   const schoolLabel = subjectSlug === 'advanced-science' ? 'Board Level Answers' : 'School Level Solution';
   const answerLabel = isMaths ? 'Sol.' : (subjectSlug === 'hindi' || subjectSlug === 'sanskrit') ? 'उत्तर:' : 'Ans.';
@@ -134,6 +154,7 @@ function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, cha
                 <button onClick={()=>{setShowSchool(!showSchool);if(!showSchool)setShowKey(false);}} className={cn('method-tab text-xs',showSchool?'method-tab-active':'method-tab-inactive')}><BookOpen size={12}/> {schoolLabel}</button>
                 {question.answer.trickMethod && <button onClick={()=>{setShowTrick(!showTrick);if(!showTrick)setShowKey(false);}} className={cn('method-tab text-xs',showTrick?'method-tab-active':'method-tab-inactive')}><Zap size={12}/> Quick Trick</button>}
                 <ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/>
+                <SimplifyBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setSimplifyTxt}/>
               </div>
             )}
 
@@ -156,8 +177,8 @@ function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, cha
               <div className="p-3 rounded-xl bg-[var(--surface-1)] border border-[var(--border)]">
                 <div className="flex items-center justify-between mb-1.5">
                   {showTabs && <p className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">{schoolLabel}</p>}
-                  {!showTabs && <ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/>}
-                  {showTabs && <div className="ml-auto"><ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/></div>}
+                  {!showTabs && <span className="flex items-center gap-2"><ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/><SimplifyBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setSimplifyTxt}/></span>}
+                  {showTabs && <div className="ml-auto flex items-center gap-2"><ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/><SimplifyBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setSimplifyTxt}/></div>}
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="flex-shrink-0 mt-1 rounded-md bg-blue-600/10 dark:bg-blue-400/15 text-blue-600 dark:text-blue-400 text-xs font-bold px-2 py-0.5">{answerLabel}</span>
@@ -177,6 +198,17 @@ function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, cha
                       <ReportFlag reportedContent={explainTxt} onGuestBlock={onUnlock} />
                     </div>
                     <ThumbsRating subject={subjectSlug} chapterNumber={chapterNumber} exerciseLabel={exerciseLabel} itemKey={`${exerciseId}-${question.id}-explain`} />
+                  </div>
+                )}
+                {simplifyTxt && (
+                  <div className="mt-3 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/40">
+                    <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Baby size={10}/> Simplified (Age 5)</p>
+                    <MathRenderer text={simplifyTxt} className="text-xs"/>
+                    <div className="flex items-center justify-between mt-2">
+                      <div className="answer-actions"><ReadAloud text={simplifyTxt} size="sm"/><CopyBtn text={simplifyTxt}/></div>
+                      <ReportFlag reportedContent={simplifyTxt} onGuestBlock={onUnlock} />
+                    </div>
+                    <ThumbsRating subject={subjectSlug} chapterNumber={chapterNumber} exerciseLabel={exerciseLabel} itemKey={`${exerciseId}-${question.id}-simplify`} />
                   </div>
                 )}
               </div>

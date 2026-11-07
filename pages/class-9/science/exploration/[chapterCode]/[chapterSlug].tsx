@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
-import { ChevronRight, BookOpen, Home, Download, Loader2, Lightbulb, KeyRound } from 'lucide-react';
+import { ChevronRight, BookOpen, Home, Download, Loader2, Lightbulb, Baby, KeyRound } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import BackToTop from '@/components/features/BackToTop';
 import MathRenderer from '@/components/features/MathRenderer';
@@ -42,6 +42,8 @@ function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterTitle, c
   const [showSol, setShowSol] = useState(true);
   const [explainText, setExplainText] = useState('');
   const [explaining, setExplaining] = useState(false);
+  const [simplifyText, setSimplifyText] = useState('');
+  const [simplifying, setSimplifying] = useState(false);
   const ctx = `Science Question: ${q.text}${q.parts ? '\n' + q.parts.join('\n') : ''}\nAnswer: ${q.answer.solution}`;
 
   async function explain() {
@@ -55,6 +57,19 @@ function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterTitle, c
       setExplainText(data.explanation || 'Could not generate explanation.');
     } catch { setExplainText('Connection error.'); }
     finally { setExplaining(false); }
+  }
+
+  async function simplify() {
+    setSimplifying(true);
+    try {
+      const res = await fetch('/api/ai/simplify', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q.text, answer: q.answer.solution, subject: 'Science' }),
+      });
+      const data = await res.json();
+      setSimplifyText(data.simplified || 'Could not simplify the solution.');
+    } catch { setSimplifyText('Connection error.'); }
+    finally { setSimplifying(false); }
   }
 
   return (
@@ -92,11 +107,17 @@ function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterTitle, c
             className={cn('method-tab text-xs', showKey ? 'method-tab-active' : 'method-tab-inactive')}><KeyRound size={12}/> Answer Key</button>
           <button onClick={() => { setShowSol(!showSol); if (!showSol) setShowKey(false); }}
             className={cn('method-tab text-xs', showSol ? 'method-tab-active' : 'method-tab-inactive')}><BookOpen size={12}/> School Level Solution</button>
-          {/* Explain button */}
-          <button onClick={explain} disabled={explaining}
-            className="ml-auto inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 text-violet-700 dark:text-violet-300 text-xs font-semibold hover:bg-violet-100 disabled:opacity-50 transition-all">
-            {explaining ? <Loader2 size={11} className="animate-spin" /> : <Lightbulb size={11} />} Explain
-          </button>
+          {/* Explain + Simplify buttons */}
+          <span className="ml-auto flex items-center gap-2">
+            <button onClick={explain} disabled={explaining}
+              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 text-violet-700 dark:text-violet-300 text-xs font-semibold hover:bg-violet-100 disabled:opacity-50 transition-all">
+              {explaining ? <Loader2 size={11} className="animate-spin" /> : <Lightbulb size={11} />} Explain
+            </button>
+            <button onClick={simplify} disabled={simplifying}
+              className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold hover:bg-emerald-100 disabled:opacity-50 transition-all">
+              {simplifying ? <Loader2 size={11} className="animate-spin" /> : <Baby size={11} />} Simplify
+            </button>
+          </span>
         </div>
 
         {showKey && (
@@ -138,6 +159,18 @@ function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterTitle, c
               <ReportFlag reportedContent={explainText} onGuestBlock={onGuestBlock} />
             </div>
             <ThumbsRating subject="science" chapterNumber={chapterNumber} exerciseLabel={exerciseLabel} itemKey={`${exerciseId}-${q.id}-explain`} />
+          </div>
+        )}
+
+        {simplifyText && (
+          <div className="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/40">
+            <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Baby size={10} /> Simplified (Age 5)</p>
+            <p className="text-xs text-[var(--text-secondary)] leading-relaxed">{simplifyText}</p>
+            <div className="flex items-center justify-between mt-2">
+              <div className="answer-actions"><ReadAloud text={simplifyText} size="sm" /><CopyBtn text={simplifyText} /></div>
+              <ReportFlag reportedContent={simplifyText} onGuestBlock={onGuestBlock} />
+            </div>
+            <ThumbsRating subject="science" chapterNumber={chapterNumber} exerciseLabel={exerciseLabel} itemKey={`${exerciseId}-${q.id}-simplify`} />
           </div>
         )}
 

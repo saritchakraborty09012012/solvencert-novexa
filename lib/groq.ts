@@ -246,6 +246,29 @@ Be encouraging. Use proper math formatting where needed.` }
   return c.choices?.[0]?.message?.content || 'Could not generate explanation.';
 }
 
+export async function simplifyAnswer(question: string, answer: string, subject: string): Promise<string> {
+  const msgs: Msg[] = [
+    { role:'system', content:SYSTEM_PROMPT },
+    { role:'user', content:`You are simplifying a ${subject} solution for a Class 9 student as if you were teaching a curious 5-year-old child.
+
+Question: ${question}
+Solution: ${answer}
+
+Rewrite this solution in the simplest possible words and language:
+1. Use very short, easy sentences. No big or difficult words — if a big word is unavoidable, explain it in simple words right there.
+2. Explain like you are telling a story to a 5-year-old: use everyday examples from home, school, toys and daily life.
+3. Keep every step of the solution, in the same order — only the words get simpler, the answer stays exactly the same.
+4. Keep math/formula formatting ($...$) wherever the original solution uses it, so numbers and steps stay correct.
+5. End with one tiny line: "Remember: ..." with the main idea in one simple sentence.
+
+Be warm and encouraging, like a kind teacher talking to a small child. Do not add new facts or change the answer.` }
+  ];
+  const c = await chatCompletions(getMainKey(), withEffort({
+    model:GROQ_MODEL, messages:msgs, max_tokens:1200, temperature:0.3, stream:false,
+  }));
+  return c.choices?.[0]?.message?.content || 'Could not simplify the solution.';
+}
+
 export async function aiSmartSearch(query: string): Promise<{title:string;subject:string;chapter:string;url:string;snippet:string}[]> {
   const prompt = `You are a search assistant for SolveNCERT (CBSE Class 9, NCERT 2026 Revised Syllabus).
 

@@ -53,6 +53,15 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'simplify-button',
+    date: '2026-11-07',
+    type: 'feature',
+    title: 'Simplify button on every solution',
+    summary: 'Tap Simplify to get any solution explained in the simplest words.',
+    href: '/class-9/maths/ganita-manjari/0904ch05/im-up-and-down-and-round-and-round#q-ex5.eoc-q2',
+    hrefLabel: 'Try it',
+  },
+  {
     id: 'maths-ch5-diagrams',
     date: '2026-11-06',
     type: 'content',

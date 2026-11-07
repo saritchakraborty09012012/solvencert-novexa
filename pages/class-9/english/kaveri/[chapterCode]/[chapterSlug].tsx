@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
-import { ChevronRight, BookOpen, Home, Download, FileText, Feather } from 'lucide-react';
+import { ChevronRight, BookOpen, Home, Download, FileText, Feather, Loader2, Lightbulb, Baby } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import BackToTop from '@/components/features/BackToTop';
 import ReadAloud from '@/components/features/ReadAloud';
@@ -23,6 +23,25 @@ function QuestionBlock({ q, sectionId, sectionTitle, chapterCode, contentSlug, c
 }) {
   const ctx = `English Question: ${q.text}${q.parts ? '\n' + q.parts.join('\n') : ''}`;
   const isComing = q.answer === 'Coming Soon';
+  const [explainTxt, setExplainTxt] = useState('');
+  const [explainLoading, setExplainLoading] = useState(false);
+  const [simplifyTxt, setSimplifyTxt] = useState('');
+  const [simplifyLoading, setSimplifyLoading] = useState(false);
+
+  async function runAI(mode: 'explain' | 'simplify') {
+    const setText = mode === 'explain' ? setExplainTxt : setSimplifyTxt;
+    const setLoading = mode === 'explain' ? setExplainLoading : setSimplifyLoading;
+    setLoading(true);
+    try {
+      const res = await fetch(`/api/ai/${mode}`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: q.text, answer: q.answer, subject: 'English' }),
+      });
+      const data = await res.json();
+      setText(data.explanation || data.simplified || (mode === 'explain' ? 'Could not generate explanation.' : 'Could not simplify the solution.'));
+    } catch { setText('Connection error.'); }
+    finally { setLoading(false); }
+  }
 
   return (
     <div className="question-block" id={`q-${sectionId}-${q.id}`}>
@@ -89,6 +108,41 @@ function QuestionBlock({ q, sectionId, sectionTitle, chapterCode, contentSlug, c
                 <ReportFlag reportedContent={q.answer} onGuestBlock={onGuestBlock} />
               </div>
               <ThumbsRating subject="english" chapterNumber={chapterNumber} exerciseLabel={sectionTitle} itemKey={`${sectionId}-${q.id}-answer`} />
+
+              <div className="flex items-center gap-2 flex-wrap mt-3">
+                <button onClick={() => runAI('explain')} disabled={explainLoading} title="Get expert explanation"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-50 dark:bg-violet-950/30 border border-violet-200 dark:border-violet-800 text-violet-700 dark:text-violet-300 text-xs font-semibold hover:bg-violet-100 disabled:opacity-50 transition-all">
+                  {explainLoading ? <Loader2 size={11} className="animate-spin" /> : <Lightbulb size={11} />} Explain
+                </button>
+                <button onClick={() => runAI('simplify')} disabled={simplifyLoading} title="Simplify like explaining to a 5-year-old"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold hover:bg-emerald-100 disabled:opacity-50 transition-all">
+                  {simplifyLoading ? <Loader2 size={11} className="animate-spin" /> : <Baby size={11} />} Simplify
+                </button>
+              </div>
+
+              {explainTxt && (
+                <div className="mt-3 p-3 rounded-xl bg-violet-50 dark:bg-violet-950/20 border border-violet-100 dark:border-violet-900/40">
+                  <p className="text-[10px] font-bold text-violet-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Lightbulb size={10} /> Expert Explanation</p>
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed" style={{ whiteSpace: 'pre-wrap' }}>{explainTxt}</p>
+                  <div className="flex items-center justify-between mt-2">
+                    <div className="answer-actions"><ReadAloud text={explainTxt} size="sm" /></div>
+                    <ReportFlag reportedContent={explainTxt} onGuestBlock={onGuestBlock} />
+                  </div>
+                  <ThumbsRating subject="english" chapterNumber={chapterNumber} exerciseLabel={sectionTitle} itemKey={`${sectionId}-${q.id}-explain`} />
+                </div>
+              )}
+
+              {simplifyTxt && (
+                <div className="mt-3 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-100 dark:border-emerald-900/40">
+                  <p className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider mb-1.5 flex items-center gap-1"><Baby size={10} /> Simplified (Age 5)</p>
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed" style={{ whiteSpace: 'pre-wrap' }}>{simplifyTxt}</p>
+                  <div className="flex items-center justify-between mt-2">
+                    <div className="answer-actions"><ReadAloud text={simplifyTxt} size="sm" /></div>
+                    <ReportFlag reportedContent={simplifyTxt} onGuestBlock={onGuestBlock} />
+                  </div>
+                  <ThumbsRating subject="english" chapterNumber={chapterNumber} exerciseLabel={sectionTitle} itemKey={`${sectionId}-${q.id}-simplify`} />
+                </div>
+              )}
             </>
           )}
         </div>
