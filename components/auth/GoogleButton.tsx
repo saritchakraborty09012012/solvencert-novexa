@@ -21,8 +21,10 @@ interface Props {
 }
 
 /**
- * Google sign-in button, styled with the site's theme variables so it
- * matches the AuthModal design system in every theme/mood.
+ * Google sign-in button in Google's official white style, so it stands out
+ * against the modal in every theme/mood (light or dark) instead of blending
+ * into the card. White background + grey border + subtle shadow, exactly
+ * like Google's own sign-in buttons.
  */
 export default function GoogleButton({ label, loading, disabled, onClick }: Props) {
   return (
@@ -30,12 +32,12 @@ export default function GoogleButton({ label, loading, disabled, onClick }: Prop
       type="button"
       onClick={onClick}
       disabled={loading || disabled}
-      className="w-full flex items-center justify-center gap-3 px-4 py-2.5 rounded-xl border border-[var(--border)] bg-[var(--surface-1)] hover:bg-[var(--surface-2)] text-sm font-semibold text-[var(--text-primary)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+      className="w-full flex items-center justify-center gap-3 px-4 py-[11px] rounded-xl border border-[#dadce0] bg-white hover:bg-[#f8f9fa] hover:shadow-[0_1px_3px_rgba(60,64,67,0.3),0_1px_2px_rgba(60,64,67,0.15)] text-sm font-semibold text-[#1f1f1f] shadow-[0_1px_2px_rgba(60,64,67,0.15)] transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:shadow-[0_1px_2px_rgba(60,64,67,0.15)]"
     >
       {loading ? (
         <Loader2 size={16} className="animate-spin" />
       ) : (
-        <GoogleLogo size={18} />
+        <GoogleLogo size={20} />
       )}
       {label}
     </button>
