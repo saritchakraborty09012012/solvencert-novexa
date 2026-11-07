@@ -185,9 +185,11 @@ function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, cha
                   <ReportFlag reportedContent={question.answer.schoolMethod} onGuestBlock={onUnlock} />
                 </div>
                 <div className="flex items-center flex-wrap gap-2 mt-2">
-                  <ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/>
-                  <SimplifyBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setSimplifyTxt}/>
                   <ThumbsRating subject={subjectSlug} chapterNumber={chapterNumber} exerciseLabel={exerciseLabel} itemKey={`${exerciseId}-${question.id}-solution`} className="mt-0" />
+                  <span className="ml-auto flex items-center gap-2">
+                    <ExplainBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setExplainTxt}/>
+                    <SimplifyBtn question={question.text} answer={question.answer.schoolMethod} subject={subject} onResult={setSimplifyTxt}/>
+                  </span>
                 </div>
                 {explainTxt && (
                   <div className="mt-3 p-3 rounded-xl bg-violet-950/40 border border-violet-700/40 relative">

@@ -108,15 +108,17 @@ function QuestionBlock({ q, sectionId, sectionTitle, chapterCode, contentSlug, c
                 <ReportFlag reportedContent={q.answer} onGuestBlock={onGuestBlock} />
               </div>
               <div className="flex items-center flex-wrap gap-2 mt-3">
-                <button onClick={() => runAI('explain')} disabled={explainLoading} title="Get expert explanation"
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-950/50 border border-violet-700/50 text-violet-300 text-xs font-semibold hover:bg-violet-900/50 disabled:opacity-50 transition-all">
-                  {explainLoading ? <Loader2 size={11} className="animate-spin" /> : <Lightbulb size={11} />} Explain
-                </button>
-                <button onClick={() => runAI('simplify')} disabled={simplifyLoading} title="Simplify like explaining to a 5-year-old"
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-600/50 text-emerald-300 text-xs font-semibold hover:bg-emerald-900/60 disabled:opacity-50 transition-all">
-                  {simplifyLoading ? <Loader2 size={11} className="animate-spin" /> : <Baby size={11} />} Simplify
-                </button>
                 <ThumbsRating subject="english" chapterNumber={chapterNumber} exerciseLabel={sectionTitle} itemKey={`${sectionId}-${q.id}-answer`} className="mt-0" />
+                <span className="ml-auto flex items-center gap-2">
+                  <button onClick={() => runAI('explain')} disabled={explainLoading} title="Get expert explanation"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-violet-950/50 border border-violet-700/50 text-violet-300 text-xs font-semibold hover:bg-violet-900/50 disabled:opacity-50 transition-all">
+                    {explainLoading ? <Loader2 size={11} className="animate-spin" /> : <Lightbulb size={11} />} Explain
+                  </button>
+                  <button onClick={() => runAI('simplify')} disabled={simplifyLoading} title="Simplify like explaining to a 5-year-old"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-emerald-950/60 border border-emerald-600/50 text-emerald-300 text-xs font-semibold hover:bg-emerald-900/60 disabled:opacity-50 transition-all">
+                    {simplifyLoading ? <Loader2 size={11} className="animate-spin" /> : <Baby size={11} />} Simplify
+                  </button>
+                </span>
               </div>
 
               {explainTxt && (
