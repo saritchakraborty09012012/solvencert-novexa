@@ -224,13 +224,25 @@ export async function askAnythingAI(userMessage: string, history: { role:'user'|
   return c.choices?.[0]?.message?.content || 'Sorry, could not generate a response.';
 }
 
+/**
+ * Compact system prompt for per-solution Explain/Simplify. The full
+ * SYSTEM_PROMPT embeds every book's knowledge base (~13k tokens), which
+ * exceeds the Groq free-tier tokens-per-minute limit and made these
+ * endpoints fail with 413. These two features only need the question +
+ * answer, so they use this short prompt instead.
+ */
+const EXPLAIN_SYSTEM = `You are SolveNCERT AI — a brilliant, warm teacher for CBSE Class 9 students.
+You are given one NCERT question and its official solution. Teach from that
+solution only: keep the same method, steps and final answer. Use proper
+math formatting ($...$, $$...$$) where needed, and **bold** for key terms.`;
+
 export async function explainAnswer(question: string, answer: string, subject: string): Promise<string> {
   const msgs: Msg[] = [
-    { role:'system', content:SYSTEM_PROMPT },
+    { role:'system', content:EXPLAIN_SYSTEM },
     { role:'user', content:`You are explaining a ${subject} solution to a Class 9 student like an expert teacher.
 
-Question: ${question}
-Solution: ${answer}
+Question: ${question.slice(0, 2000)}
+Solution: ${answer.slice(0, 6000)}
 
 Explain this solution in clear, simple but detailed terms. Cover:
 1. What concept is being used and why
@@ -248,11 +260,11 @@ Be encouraging. Use proper math formatting where needed.` }
 
 export async function simplifyAnswer(question: string, answer: string, subject: string): Promise<string> {
   const msgs: Msg[] = [
-    { role:'system', content:SYSTEM_PROMPT },
+    { role:'system', content:EXPLAIN_SYSTEM },
     { role:'user', content:`You are simplifying a ${subject} solution for a Class 9 student as if you were teaching a curious 5-year-old child.
 
-Question: ${question}
-Solution: ${answer}
+Question: ${question.slice(0, 2000)}
+Solution: ${answer.slice(0, 6000)}
 
 Rewrite this solution in the simplest possible words and language:
 1. Use very short, easy sentences. No big or difficult words — if a big word is unavoidable, explain it in simple words right there.
