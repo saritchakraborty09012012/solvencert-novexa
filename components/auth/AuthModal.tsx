@@ -10,6 +10,7 @@ import { cn } from '@/utils/helpers';
 import RewardModal from './RewardModal';
 import HistoryRetentionModal from './HistoryRetentionModal';
 import ForgotPasswordForm from './ForgotPasswordForm';
+import GoogleButton from './GoogleButton';
 import toast from 'react-hot-toast';
 
 interface Props { mode:'login'|'signup'; onClose:()=>void; onSwitch:(m:'login'|'signup')=>void; }
@@ -43,6 +44,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
   const [confirmPw, setConfirmPw] = useState('');
   const [showPw,    setShowPw]    = useState(false);
   const [loading,   setLoading]   = useState(false);
+  const [googleLoading, setGoogleLoading] = useState(false);
   const [otpSent,   setOtpSent]   = useState(false);
   const [reward,    setReward]    = useState<{ code: string } | null>(null);
   const [showRetentionNotice, setShowRetentionNotice] = useState(false);
@@ -73,7 +75,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
         clearGuestLimits();
         captureEvent('user_signed_up');
         if (data.session) {
-          await fetchProfile(data.user.id);
+          await fetchProfile(data.user.id, data.user);
           setReward({ code: generateReferralCode(data.user.id) });
         } else {
           setOtpSent(true);
@@ -81,6 +83,32 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
       }
     } catch { setError('Something went wrong. Please try again.'); }
     finally { setLoading(false); }
+  }
+
+  async function handleGoogle() {
+    setError('');
+    setGoogleLoading(true);
+    try {
+      // Full-page redirect to Google via Supabase; the browser returns to
+      // /auth/callback, where the session is picked up and the profile is
+      // ensured (authStore.fetchProfile) before redirecting home.
+      const { error: e } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback`,
+          queryParams: { access_type: 'offline', prompt: 'select_account' },
+        },
+      });
+      // On success the page navigates away; reaching here means an error
+      // (or a popup-blocked / misconfigured provider) — surface it.
+      if (e) setError(e.message.includes('provider') || e.message.includes('not enabled')
+        ? 'Google sign-in is not available right now. Please use email instead.'
+        : e.message);
+    } catch {
+      setError('Could not start Google sign-in. Please try again.');
+    } finally {
+      setGoogleLoading(false);
+    }
   }
 
   async function handleLogin() {
@@ -91,7 +119,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
     try {
       const { data, error: e } = await supabase.auth.signInWithPassword({ email: email.toLowerCase(), password });
       if (e) { setError(e.message.includes('Invalid') ? 'Invalid email or password.' : e.message); return; }
-      if (data.user) { await fetchProfile(data.user.id); clearGuestLimits(); captureEvent('user_logged_in'); toast.success('Welcome back!'); setShowRetentionNotice(true); }
+      if (data.user) { await fetchProfile(data.user.id, data.user); clearGuestLimits(); captureEvent('user_logged_in'); toast.success('Welcome back!'); setShowRetentionNotice(true); }
     } catch { setError('Something went wrong.'); }
     finally { setLoading(false); }
   }
@@ -142,6 +170,20 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
             <ForgotPasswordForm initialEmail={email} onBack={() => { setFpStage(null); setError(''); }} />
           ) : (
             <div className="space-y-4">
+              {/* Google OAuth — same button for sign-in and sign-up */}
+              <GoogleButton
+                label={isSignUp ? 'Continue with Google' : 'Sign in with Google'}
+                loading={googleLoading}
+                disabled={loading}
+                onClick={handleGoogle}
+              />
+
+              <div className="flex items-center gap-3" aria-hidden="true">
+                <span className="flex-1 h-px bg-[var(--border)]" />
+                <span className="text-[11px] font-medium text-[var(--text-muted)] uppercase tracking-wider">or continue with email</span>
+                <span className="flex-1 h-px bg-[var(--border)]" />
+              </div>
+
               {isSignUp && <Field label="Full Name" value={fullName} onChange={setFullName} placeholder="Your full name" autoComplete="name" />}
               <Field label="Email Address" type="email" value={email} onChange={v=>{setEmail(v);setError('');}} placeholder="you@example.com" autoComplete="email" />
               {isSignUp && (
@@ -190,7 +232,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
                 </div>
               )}
 
-              <button onClick={isSignUp?handleSignUp:handleLogin} disabled={loading} className="btn-primary w-full justify-center mt-1">
+              <button onClick={isSignUp?handleSignUp:handleLogin} disabled={loading || googleLoading} className="btn-primary w-full justify-center mt-1">
                 {loading ? <Loader2 size={16} className="animate-spin" />
                   : isSignUp ? 'Create Account'
                   : <span className="flex items-center gap-2">Sign In <ArrowRight size={14} /></span>}

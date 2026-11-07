@@ -121,7 +121,7 @@ export default function App({ Component, pageProps }: AppProps) {
     supabase.auth.getSession().then((result: any) => {
       const session = result?.data?.session ?? null;
       if (session?.user) {
-        fetchProfile(session.user.id);
+        fetchProfile(session.user.id, session.user);
         // Initialize mock test shared learning for this user
         setStorageUserId(session.user.id);
         loadAllFromSupabase(session.user.id);
@@ -142,7 +142,7 @@ export default function App({ Component, pageProps }: AppProps) {
         router.replace('/auth/reset-password');
       }
       if (session?.user) {
-        fetchProfile(session.user.id);
+        fetchProfile(session.user.id, session.user);
         setStorageUserId(session.user.id);
         loadAllFromSupabase(session.user.id);
         initSharedLearningOnLogin(session.user.id);

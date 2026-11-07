@@ -69,6 +69,7 @@ function createStub(): any {
         getUser: noSession,
         onAuthStateChange: () => ({ data: { subscription: { unsubscribe() {} } }, error: null }),
         signInWithPassword: empty,
+        signInWithOAuth: empty,
         signUp: empty,
         signOut: empty,
         updateUser: empty,
