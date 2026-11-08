@@ -60,6 +60,24 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'maths-ch10-reflect-zakir',
+    date: '2026-11-08',
+    type: 'content',
+    title: 'Think & Reflect, Page 30 fixed in Ch10',
+    summary: "Zakir's week Q1–Q3 now match the book, with full answers.",
+    href: '/class-9/maths/ganita-manjari/0904ch10/how-quantities-combine-understanding-data#q-ex10.reflect-q6',
+    hrefLabel: 'View questions',
+  },
+  {
+    id: 'maths-ch10-reflect-strip-say',
+    date: '2026-11-08',
+    type: 'content',
+    title: 'Think & Reflect, Page 28 fixed in Ch10',
+    summary: "What Can A Strip Say? Q1 now matches the book, with the answer.",
+    href: '/class-9/maths/ganita-manjari/0904ch10/how-quantities-combine-understanding-data#q-ex10.reflect-q5',
+    hrefLabel: 'View question',
+  },
+  {
     id: 'maths-ch10-reflect-time-use',
     date: '2026-11-08',
     type: 'content',

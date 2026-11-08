@@ -757,10 +757,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 28,
-            "text": "In the “What Can a Strip Say?” activity, each strip represents a full day divided into activities. If the pieces for each activity are grouped, can the information be displayed as a 100% stacked bar chart?",
+            "text": "Do you remember the ‘What Can A Strip Say?’ activity from last year? In each strip, if we club the tiny strips belonging to each activity together, will we get a 100% stacked bar chart like the one in Fig. 10.6?",
             "answer": {
-              "answerKey": "Yes, provided each strip represents the same total duration and all activity segments add to that total.",
-              "schoolMethod": "Treat one full day (24 hours) as 100%. For each person/day, calculate each activity’s share as (hours in that activity ÷ 24) × 100%. Place the activity segments consecutively in a bar of equal total length. The total remains 100%, so the result is a 100% stacked bar chart."
+              "answerKey": "Yes — clubbing each activity’s strips gives shares adding to 24 hours = 100%, so the grouped strip is a 100% stacked bar chart.",
+              "schoolMethod": "**Yes.** A single strip represents one full day (24 hours). The tiny strips are the activity segments of that day — sleep, school, play, etc. If we club the strips belonging to each activity together, each clubbed segment represents that activity’s total time in the day. Since the strip is 24 hours in total, the grouped segment shares are percentages of the day and must add to 100%. Each strip, drawn with equal total length and activity segments placed consecutively, becomes exactly a 100% stacked bar chart like Fig. 10.6, with each activity colour occupying its percentage share."
             }
           },
           {
@@ -768,10 +768,32 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 30,
-            "text": "For a chart based on one teacher’s five weekdays of activity, would the bars necessarily look the same for another teacher or when all seven days are included? Give a reasoned answer.",
+            "text": "Will the bars look similar if a different teacher’s data is considered instead of Zakir’s?",
             "answer": {
-              "answerKey": "No. The bars depend on the person and the days sampled; a seven-day dataset can change weekday patterns by including the weekend.",
-              "schoolMethod": "Different teachers have different routines, travel, duties and home responsibilities, so their category shares can differ. Adding Saturday and Sunday may change the averages or proportions because weekend schedules are often unlike weekdays. Some patterns could resemble those of other jobs, but the graph alone cannot uniquely identify a person’s occupation."
+              "answerKey": "Broadly similar in the overall pattern (schoolwork/sleep dominate) but not identical — each teacher’s exact hours differ.",
+              "schoolMethod": "**Similar in outline, different in detail.** Any teacher’s typical weekday is structured around school: more time in teaching, less in sleep compared with children, and substantial time in unpaid work & care (household duties) and personal care. So a different teacher’s chart would still show the teaching/study block largest, and sleep, personal care and leisure in comparable positions — broadly similar to Zakir’s.\n\nBut not identical: each teacher has different family responsibilities, travel, health habits, and prep time, so each segment’s hourly share would vary from teacher to teacher. The overall shape is comparable; the exact hours are not."
+            }
+          },
+          {
+            "id": "q6b",
+            "number": "2",
+            "isHard": false,
+            "page": 30,
+            "text": "Will the bars look different if the data for all 7 days of the week is considered?",
+            "answer": {
+              "answerKey": "Yes — adding the weekend (Saturday and Sunday) lowers schoolwork and sleep proportionally and raises leisure/personal care.",
+              "schoolMethod": "**Yes.** Zakir’s five-weekday chart clearly shows School spread across the day on working days. Saturday and Sunday are not school days, so over the seven days the teaching segment would shrink and the Leisure, Social & Travel and Personal Care segments would grow. Sleep increases too, because the weekend allows later mornings.\n\nHowever the totals must still add to 24 hours exactly, so the bars would look different in segment proportions — the weekend redistributes hours, it does not add hours."
+            }
+          },
+          {
+            "id": "q6c",
+            "number": "3",
+            "isHard": false,
+            "page": 30,
+            "text": "Some bars in the chart may also match people doing other kinds of work/activities. Can you think of any? Discuss.",
+            "answer": {
+              "answerKey": "Yes — other similarly structured jobs/activities: doctors, police officers, farmers, homemakers, students abroad — share the same day-pattern building blocks of work + care + sleep.",
+              "schoolMethod": "**Yes, plenty.** Zakir’s day — a large work block, household care, personal care, sleep and leisure — is a shape shared by many people:\n\n- **Doctors/nurses**: long work hours, plus study/learning (keeping up to date) and some unpaid care at home.\n- **Police officers or soldiers**: shifts containing work, rest/travel between duty, and unpaid care.\n- **Homemakers**: a huge Unpaid Work & Care segment, often larger than any paid-work segment.\n- **Shopkeepers/traders**: long hours including unpaid family members — such shops run on unpaid labour.\n- **Farmers**: seasonal variation — the day changes dramatically between sowing, harvesting and lean seasons.\n\nThe lesson: a single person’s chart is never unique to their job; the same bars can describe many roles. Classifying occupation from one day-chart alone would be unreliable — that is the limit of such data visualisation."
             }
           }
         ]
