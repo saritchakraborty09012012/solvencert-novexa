@@ -668,7 +668,6 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 26,
-            "instruction": "Think back to the Fatima and Naveen gardens discussion above: the percentage of flowers that bloomed in summer is more in Fatima's garden, but this says nothing about the actual number — Fatima's garden has more blooms than Naveen's in Case 1 but fewer blooms in Case 2. In Case 1 both gardens had 42 blooms, yet the percentages were different.",
             "text": "What does this say about the scope of the stacked bars and 100% stacked bars?",
             "answer": {
               "answerKey": "Stacked bars show the actual quantities (and totals); 100% stacked bars show only the proportions — percentages alone cannot tell the actual number.",
