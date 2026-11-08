@@ -65,9 +65,9 @@ export function SiteHeader() {
             <SolveNCERTLogo size={30} withText textSize="text-[15px]" />
           </Link>
 
-          {/* Centre nav — centred, sideways-scrollable when space runs out.
-              Overflow stays visible while a dropdown is open (else clipped). */}
-          <div ref={navRef} className={`hidden lg:flex min-w-0 flex-1 items-center justify-center gap-2 scrollbar-hide whitespace-nowrap ${openMenu ? 'overflow-visible' : 'overflow-x-auto'}`}>
+          {/* Centre nav — left-aligned so overflow scrolls right (never clips
+              left items); overflow stays visible while a dropdown is open. */}
+          <div ref={navRef} className={`hidden lg:flex min-w-0 flex-1 items-center gap-2 scrollbar-hide whitespace-nowrap ${openMenu ? 'overflow-visible' : 'overflow-x-auto'}`}>
             {NAV.filter(n => !n.authOnly || !isGuest).map((item, i) => (
               <div key={item.label} className="relative flex-shrink-0">
                 {item.items ? (
