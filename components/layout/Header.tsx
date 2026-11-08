@@ -100,7 +100,7 @@ export default function Header() {
         <div className="max-w-screen-xl mx-auto flex h-14 items-center justify-between gap-3 px-3 md:px-5">
 
           {/* LEFT — dashboard menu + logo */}
-          <div className="flex items-center gap-1 flex-shrink-0">
+          <div className="flex items-center gap-2 flex-shrink-0">
             <button onClick={() => setDashOpen(true)}
               className="p-2 rounded-lg hover:bg-white/10 text-white/80 hover:text-white transition-colors" aria-label="Menu">
               <Menu size={19} />
@@ -108,10 +108,10 @@ export default function Header() {
             <SolveNCERTLogo size={28} withText textSize="text-[16px]" linkToHome />
           </div>
 
-          {/* CENTRE — shared nav with dropdowns */}
-          <nav ref={navRef} className="hidden items-center gap-0.5 lg:flex">
+          {/* CENTRE — shared nav with dropdowns (centred, scrollable on overflow) */}
+          <nav ref={navRef} className="hidden lg:flex min-w-0 flex-1 items-center justify-center gap-2 overflow-x-auto scrollbar-hide whitespace-nowrap">
             {NAV.filter(n => !n.authOnly || !isGuest).map((item, i) => (
-              <div key={item.label} className="relative">
+              <div key={item.label} className="relative flex-shrink-0">
                 {item.items ? (
                   <button type="button" id={item.label === 'AI Tools' ? 'nav-ai-tools' : undefined}
                     onClick={() => setOpenMenu(openMenu === item.label ? null : item.label)}
@@ -158,7 +158,7 @@ export default function Header() {
           </nav>
 
           {/* RIGHT */}
-          <div className="flex items-center gap-1 flex-shrink-0">
+          <div className="flex items-center gap-2 flex-shrink-0">
             {!isGuest && user?.plan !== 'premium' && !trialActive && (
               <button onClick={() => setPremiumPopup(true)}
                 className="hidden md:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-500/20 border border-amber-400/30 hover:border-amber-300/70 hover:bg-amber-400/25 text-amber-300 text-xs font-semibold transition-all">

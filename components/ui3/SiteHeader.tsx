@@ -65,9 +65,10 @@ export function SiteHeader() {
             <SolveNCERTLogo size={30} withText textSize="text-[15px]" />
           </Link>
 
-          <div ref={navRef} className="hidden items-center gap-1 lg:flex">
+          {/* Centre nav — centred, sideways-scrollable when space runs out */}
+          <div ref={navRef} className="hidden lg:flex min-w-0 flex-1 items-center justify-center gap-2 overflow-x-auto scrollbar-hide whitespace-nowrap">
             {NAV.filter(n => !n.authOnly || !isGuest).map((item, i) => (
-              <div key={item.label} className="relative">
+              <div key={item.label} className="relative flex-shrink-0">
                 {item.items ? (
                   <button
                     type="button"
@@ -129,7 +130,7 @@ export function SiteHeader() {
             ))}
           </div>
 
-          <div className="flex items-center gap-1 sm:gap-1.5">
+          <div className="flex items-center gap-2 flex-shrink-0">
             <button
               type="button"
               id="header-query-btn"
