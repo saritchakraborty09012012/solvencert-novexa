@@ -239,18 +239,6 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             }
           },
           {
-            "id": "q6",
-            "number": "1",
-            "isHard": true,
-            "page": 2,
-            "boxHeading": "Discussion",
-            "text": "**Proposition P:** If n is a perfect square, then it has an odd number of factors.\n\n**Converse Q:** If n has an odd number of factors, then it is a perfect square.\n\nYou may recall that we came across these statements in the previous grade. Which of them are true?\n\nConsider the following argument.\n\nEach factor of a number has a ‘partner’ factor such that their product yields the given number, e.g., 5 is a factor of 35, and 5 × 7 = 35. Here, 7 is the partner factor of 5, and vice-versa. Let us focus on factor-partner pairs of numbers, e.g., (1, 12), (2, 6), (3, 4) are the pairs for the number 12.\n\nIf a number has an odd number of factors, there must be a factor-partner pair in which the same number repeats (e.g., the partner factor of 5 in 25). If not, the given number will have an even number of factors since each factor can be paired with its factor pair.\n\nThus, if a number has an odd number of factors, then it is a perfect square.\n\nWhat does this argument prove? Statement P or Q?",
-            "answer": {
-              "answerKey": "The argument proves Statement Q only. Statement P is nevertheless true, so in this example both P and Q are true — they imply each other.",
-              "schoolMethod": "**What the argument proves: Statement Q only.**\n\nReframe the argument as a chain of implications:\n(i) n has an odd number of factors\n⇒ (ii) there is a factor-partner pair in which the same number repeats, say (f, f)\n⇒ (iii) n is a square number: n = f × f\n\nThe chain begins at ‘n has an odd number of factors’ and ends at ‘n is a perfect square’, so it proves **Statement Q**. It says nothing about whether every square number has an odd number of factors, so it does not prove Statement P.\n\n**Is Statement P true? Yes.**\n\nStart from the last step. If n = f × f, then (f, f) is a factor-partner pair with a repeating factor, so ‘n is a square’ ⇒ ‘a pair repeats’.\n\nDoes ‘a pair repeats’ ⇒ ‘n has an odd number of factors’? Not by itself: it only says that some pair repeats, not how many pairs repeat. If two pairs repeated — say (f, f) and (g, g) — the number of factors would turn out even.\n\nBut a number cannot have more than one factor-partner pair with repeating factors. If (f, f) and (g, g) are both such pairs, then n = f² = g², and since f and g are positive, f = g — they are the same pair. So exactly one pair repeats, every other factor pairs off with a distinct partner, and the total number of factors is odd.\n\nHence ‘n is a square’ ⇒ ‘a pair repeats’ ⇒ ‘n has an odd number of factors’: a square number necessarily has an odd number of factors, so **Statement P is also true**.\n\n**Conclusion:** In this example both the proposition and its converse are true — ‘n is a perfect square’ and ‘n has an odd number of factors’ imply each other."
-            }
-          },
-          {
             "id": "q2",
             "number": "1",
             "isHard": false,
