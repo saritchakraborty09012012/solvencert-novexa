@@ -290,7 +290,7 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
   return (
     <div className="question-block" id={`q-${exercise.id}-${q.id}`}>
       <div className="ganita-notebook">
-        {q.instruction && <div className="qinstr">{q.instruction}</div>}
+        {q.instruction && <div className="qinstr" dangerouslySetInnerHTML={{ __html: q.instruction }} />}
         <div className="qcard">
           {q.md
             ? <div className="qhead">

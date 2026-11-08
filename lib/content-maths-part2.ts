@@ -712,11 +712,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 27,
-            "text": "When we visualise the same data by grouping ages, we get the following stacked column chart:\n\nWhat do you find interesting in the chart above? What can you infer? Discuss.",
-            "figure": {
-              "svg": "<img src=\"/figs/maths-0904ch10-fig10-6.png\" alt=\"Fig. 10.6 Age-wise grouping of data\" style=\"width:100%;max-width:420px;height:auto\" />",
-              "caption": "Fig. 10.6: Age-wise grouping of data (Values are rounded off). Source: National Time Use Survey 2024."
-            },
+            "instruction": "When we visualise the same data by grouping ages, we get the following stacked column chart:<br /><img src=\"/figs/maths-0904ch10-fig10-6.png\" alt=\"Fig. 10.6 Age-wise grouping of data\" style=\"display:block;width:100%;max-width:520px;height:auto;margin-top:10px;border-radius:8px;border:1px solid var(--border)\" /><div style=\"font-size:11px;font-style:italic;color:var(--note-text);margin-top:6px\">Fig. 10.6: Age-wise grouping of data (Values are rounded off). Source: National Time Use Survey 2024.</div>",
+            "text": "What do you find interesting in the chart above? What can you infer? Discuss.",
             "answer": {
               "answerKey": "Children spend more time learning, adults spend more time in paid and unpaid work, and sleep declines with age — the chart shows average trends, not rules.",
               "schoolMethod": "Read Fig. 10.6 across the age groups and compare the coloured segments. School-age children (6–14 years) devote the largest share of their day to Learning, far more than any adult group. The 15–24 group spends much more time on Paid Work/Leisure than on Learning, and adults devote the largest shares to Paid Work and Unpaid Work & Care (household work). Sleep occupies the largest single block in every age group but slowly shrinks as age increases. Personal care and leisure are also fairly similar across groups.\n\n**What we infer:** activity patterns shift systematically across age — learning declines, work rises, sleep falls slightly. The chart is aggregated, rounded data, so it suggests trends for typical days of each age group; it cannot say what any single individual does."
