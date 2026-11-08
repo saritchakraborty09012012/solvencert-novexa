@@ -657,7 +657,6 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 8,
-            "instruction": "Two students calculate the average height of 8 senior students (average 165.5 cm) and 3 junior students (average 149⅓ cm) in two ways. Method 1: (165.5 + 149.33) ÷ 2 = 157.415 cm. Method 2: (sum of all 11 heights) ÷ 11 = 1772 ÷ 11 = 161.09 cm. Whose calculation gives the correct average height of the whole group? Method 2 is correct, as the book shows.",
             "text": "Why did Method 1 not work?",
             "answer": {
               "answerKey": "Method 1 treats the average heights of seniors and juniors equally — but there are many more seniors (8) than juniors (3).",
