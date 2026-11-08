@@ -668,10 +668,44 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 26,
-            "text": "Answer the following about stacked bar charts and 100% stacked bar charts: (i) What does each show? (ii) Can a 100% stacked chart be made from a stacked chart? (iii) Can the original stacked chart generally be recovered from a 100% stacked chart? (iv) What comparisons suit each chart?",
+            "instruction": "Think back to the Fatima and Naveen gardens discussion above: the percentage of flowers that bloomed in summer is more in Fatima's garden, but this says nothing about the actual number — Fatima's garden has more blooms than Naveen's in Case 1 but fewer blooms in Case 2. In Case 1 both gardens had 42 blooms, yet the percentages were different.",
+            "text": "What does this say about the scope of the stacked bars and 100% stacked bars?",
             "answer": {
-              "answerKey": "Stacked bars show absolute quantities and totals; 100% stacked bars show proportions. A 100% chart can be made from a stacked chart, but absolute counts cannot generally be recovered from percentages alone.",
-              "schoolMethod": "(i) A stacked bar preserves each category’s count/quantity and the overall total. A 100% stacked bar normalizes each total to 100% and shows the share of each category. (ii) Yes: divide each segment by that bar’s total and multiply by 100%. (iii) Not without the original totals: the same percentages can describe bars of very different sizes. (iv) Use stacked bars to compare totals and absolute amounts; use 100% stacked bars to compare compositions or shares."
+              "answerKey": "Stacked bars show the actual quantities (and totals); 100% stacked bars show only the proportions — percentages alone cannot tell the actual number.",
+              "schoolMethod": "A stacked bar preserves each category's count/quantity and the overall total, so actual numbers can be read from it. A 100% stacked bar normalizes every total to 100% and shows only the share of each category. That is why the percentage of flowers bloomed in summer being higher in Fatima's garden says nothing about which garden actually had more blooms — in Case 1 both gardens had 42 blooms but the percentages were different, and in Case 2 Fatima's garden had fewer blooms despite the higher percentage. Use stacked bars when actual quantities matter, and 100% stacked bars only when proportions are what you want to compare."
+            }
+          },
+          {
+            "id": "q3b",
+            "number": "2",
+            "isHard": false,
+            "page": 26,
+            "text": "Given a stacked bar chart can we make a corresponding 100% stacked bar chart?",
+            "answer": {
+              "answerKey": "Yes — divide each segment by that bar's total and multiply by 100%.",
+              "schoolMethod": "Yes. A stacked bar chart gives every segment's quantity and each bar's total. For each bar, divide each segment by that bar's total and multiply by 100%. The new segments then show each category's percentage share, and every bar totals 100% — exactly a 100% stacked bar chart."
+            }
+          },
+          {
+            "id": "q3c",
+            "number": "3",
+            "isHard": false,
+            "page": 26,
+            "text": "Given a 100% stacked bar chart can we make a corresponding stacked bar chart?",
+            "answer": {
+              "answerKey": "Not generally — percentages alone do not tell the original totals, so absolute quantities cannot be recovered.",
+              "schoolMethod": "No, not generally. A 100% stacked bar chart shows only proportions: the same percentages can describe bars of very different sizes. In Case 1, both Fatima's and Naveen's gardens had 42 blooms, yet their percentages were different — so from percentages alone the original quantities cannot be recovered. The conversion is only possible if the original totals are also known."
+            }
+          },
+          {
+            "id": "q3d",
+            "number": "4",
+            "isHard": false,
+            "page": 26,
+            "text": "What kind of inferences or comparisons can be made from a stacked bar chart and in a 100% stacked bar chart?",
+            "answer": {
+              "answerKey": "Stacked bars: compare totals and absolute amounts. 100% stacked bars: compare compositions/shares within each total.",
+              "schoolMethod": "From a stacked bar chart, compare the overall totals of different groups and the absolute amount of each category in each group. From a 100% stacked bar chart, compare the composition (percentage share of each category) within each total — for example, which garden has a higher percentage of blooms in summer — but not the actual numbers. Choose the stacked bar when sizes matter, and the 100% stacked bar when only shares matter."
             }
           },
           {
