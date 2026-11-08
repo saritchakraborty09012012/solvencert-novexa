@@ -657,10 +657,11 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 8,
-            "text": "Eight senior students have average height 165.5 cm and three junior students have average height 149⅓ cm. Find the combined average and explain why simply averaging the two group averages is wrong.",
+            "instruction": "Two students calculate the average height of 8 senior students (average 165.5 cm) and 3 junior students (average 149⅓ cm) in two ways. Method 1: (165.5 + 149.33) ÷ 2 = 157.415 cm. Method 2: (sum of all 11 heights) ÷ 11 = 1772 ÷ 11 = 161.09 cm. Whose calculation gives the correct average height of the whole group? Method 2 is correct, as the book shows.",
+            "text": "Why did Method 1 not work?",
             "answer": {
-              "answerKey": "Combined average = 161.09 cm (approximately).",
-              "schoolMethod": "Total height of seniors = 8 × 165.5 = 1324 cm. Total height of juniors = 3 × 149⅓ = 448 cm. Combined total = 1772 cm for 11 students. Combined average = 1772/11 = 161.0909… ≈ **161.09 cm**. The simple mean of 165.5 and 149⅓ gives equal weight to the two group averages even though the group sizes are 8 and 3; use a weighted mean."
+              "answerKey": "Method 1 treats the average heights of seniors and juniors equally — but there are many more seniors (8) than juniors (3).",
+              "schoolMethod": "**Method 1 does not work because it treats the average heights of seniors and of juniors equally — but there are many more seniors than juniors!**\n\nMethod 1 simply averages the two group averages: (165.5 + 149.33) ÷ 2 = 157.415 cm. This gives the senior average and the junior average equal weight, as if there were equal numbers of seniors and juniors.\n\nBut there are 8 seniors and only 3 juniors, so the seniors are most of the group. The combined average must lie much closer to 165.5 than to 149.33. Method 2 does it correctly: (165.5 × 8 + 149.33 × 3) ÷ 11 = 1772 ÷ 11 = **161.09 cm** — a weighted mean where every student counts equally.\n\n**Remember:** never average averages unless the groups are the same size."
             }
           },
           {

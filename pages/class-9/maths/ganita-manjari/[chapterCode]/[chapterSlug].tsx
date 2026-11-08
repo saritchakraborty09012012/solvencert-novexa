@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ChevronRight, BookOpen, Home, Download, Copy, Check, KeyRound, Loader2, Lightbulb, Baby, X } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import BackToTop from '@/components/features/BackToTop';
+import BetaBadge from '@/components/features/BetaBadge';
 import ReadAloud from '@/components/features/ReadAloud';
 import AIFollowUp from '@/components/features/AIFollowUp';
 import GuestPaywall from '@/components/features/GuestPaywall';
@@ -646,6 +647,7 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
               <div className="flex flex-wrap items-center gap-2 mb-4">
                 <span className="px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-950/30 text-blue-700 dark:text-blue-300 text-xs font-bold">Class 9 · Maths</span>
                 <span className="badge-2026">NCERT 2026 Revised Syllabus</span>
+                {chapter.number >= PART2_FIRST && <BetaBadge />}
               </div>
               <h1 className="text-2xl md:text-3xl font-display font-bold text-[var(--text-primary)] leading-tight">Chapter {chapter.number}: {chapter.title} <span className="text-lg md:text-xl font-normal text-[var(--text-muted)]">({chapter.code.toUpperCase()})</span></h1>
 <p className="text-sm text-[var(--text-muted)] mt-2">Ganita Manjari {bookLabel} · {totalQ} questions · {chapter.exercises.length} exercises</p>
@@ -702,7 +704,10 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
                 {ALL_GM_CHAPTERS.map(ch => (
                   <React.Fragment key={ch.code}>
                     {ch.number === PART2_FIRST && (
-                      <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-blue-500/90 w-full mt-1">Part II</span>
+                      <span className="flex items-center gap-1.5 w-full mt-1">
+                        <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-blue-500/90">Part II</span>
+                        <span className="px-1.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[8px] font-bold uppercase tracking-[0.12em]">Beta</span>
+                      </span>
                     )}
                     <Link href={`/class-9/maths/ganita-manjari/${ch.code}/${ch.slug}`}
                       className={cn('px-3 py-1.5 rounded-lg text-xs font-medium transition-colors',
