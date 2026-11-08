@@ -130,17 +130,6 @@ export function SiteHeader() {
           </div>
 
           <div className="flex items-center gap-1 sm:gap-1.5">
-            {/* Same upgrade pill as UI-1/UI-2: logged-in, non-premium,
-                trial not active. Sits right before the query button. */}
-            {!isGuest && user?.plan !== 'premium' && !trialActive && (
-              <Link
-                href="/premium"
-                className="hidden md:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-500/20 border border-amber-400/30 hover:border-amber-300/70 hover:bg-amber-400/25 text-amber-300 text-xs font-semibold transition-all"
-              >
-                <Crown size={12} /><span>{user?.plan === 'free' ? 'Free Trial' : 'Upgrade'}</span>
-              </Link>
-            )}
-
             <button
               type="button"
               id="header-query-btn"

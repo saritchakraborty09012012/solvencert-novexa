@@ -7,6 +7,13 @@
  * chapter/book/part/class/subject, …) add a new entry at the TOP of `UPDATES`
  * with a fresh unique `id` and the date it goes live.
  *
+ * IMPORTANT — for question-level updates (any single question, diagram or
+ * answer change), the `title` and `summary` MUST name the exact location:
+ * section/exercise name + question number, e.g. "Think & Reflect, Page 8,
+ * Q1 in Maths Ch10". For Think & Reflect / Pause and Ponder boxes in Maths
+ * and Science, ALWAYS include the book page number too. Generic summaries
+ * like "questions now match the book" are not allowed.
+ *
  * Two things read this list:
  *   1. components/features/WhatsNewPopup.tsx — the dismissible popup shown to
  *      every visitor (guest, free, premium) on their first visit after an update.
@@ -56,8 +63,8 @@ export const UPDATES: UpdateEntry[] = [
     id: 'maths-ch10-reflect-stacked-bars',
     date: '2026-11-08',
     type: 'content',
-    title: 'Think & Reflect fixed in Maths Ch10',
-    summary: 'Stacked bars questions now match the book, with full answers.',
+    title: 'Think & Reflect, Page 26 fixed in Ch10',
+    summary: 'Stacked bars Q1–Q4 now match the book, with full answers.',
     href: '/class-9/maths/ganita-manjari/0904ch10/how-quantities-combine-understanding-data#q-ex10.reflect-q3',
     hrefLabel: 'View questions',
   },
@@ -65,8 +72,8 @@ export const UPDATES: UpdateEntry[] = [
     id: 'maths-ch10-reflect-answer',
     date: '2026-11-08',
     type: 'content',
-    title: 'Think & Reflect answer in Maths Ch10',
-    summary: 'Why Method 1 fails — now added with the full answer.',
+    title: 'Think & Reflect, Page 8 answer in Ch10',
+    summary: 'Why Method 1 fails (Q1) — now added with the full answer.',
     href: '/class-9/maths/ganita-manjari/0904ch10/how-quantities-combine-understanding-data#q-ex10.reflect-q1',
     hrefLabel: 'View answer',
   },
