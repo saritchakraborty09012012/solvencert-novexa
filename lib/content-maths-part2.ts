@@ -712,10 +712,44 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 27,
-            "text": "From a chart comparing how people of different age groups spend a typical day, state useful observations and explain why such observations should be treated as estimates rather than exact universal facts.",
+            "instruction": "Refer to Fig. 10.6: Age-wise grouping of data (Values are rounded off), based on the National Time Use Survey 2024. It compares how different age groups spend a typical day — Sleep, Personal Care, Paid Work, Unpaid Work & Care, Learning, Leisure, Social & Travel.",
+            "text": "What do you find interesting in the chart above? What can you infer? Discuss.",
             "answer": {
-              "answerKey": "Reasonable observations include differences in sleep, learning and work time between age groups; conclusions should be qualified as trends in the displayed data.",
-              "schoolMethod": "Read the displayed segments and compare the age groups rather than assuming every person follows the average. School-age children generally devote more time to learning than adults, while adults may devote more time to paid and unpaid work. Sleep time may also vary with age. The graph describes aggregated data, so it can suggest patterns but cannot prove causes or describe every individual. Any numerical readings from the chart are approximate."
+              "answerKey": "Children spend more time learning, adults spend more time in paid and unpaid work, and sleep declines with age — the chart shows average trends, not rules.",
+              "schoolMethod": "Read Fig. 10.6 across the age groups and compare the coloured segments. School-age children (6–14 years) devote the largest share of their day to Learning, far more than any adult group. The 15–24 group spends much more time on Paid Work/Leisure than on Learning, and adults devote the largest shares to Paid Work and Unpaid Work & Care (household work). Sleep occupies the largest single block in every age group but slowly shrinks as age increases. Personal care and leisure are also fairly similar across groups.\n\n**What we infer:** activity patterns shift systematically across age — learning declines, work rises, sleep falls slightly. The chart is aggregated, rounded data, so it suggests trends for typical days of each age group; it cannot say what any single individual does."
+            }
+          },
+          {
+            "id": "q4b",
+            "number": "2",
+            "isHard": false,
+            "page": 27,
+            "text": "Do you remember the sleep time over age trend that you studied last year? Does that trend align with this chart?",
+            "answer": {
+              "answerKey": "Yes — sleep time decreases with age, which is exactly what this chart shows.",
+              "schoolMethod": "Last year we read that sleep time steadily falls as age increases. The same trend is visible here: children sleep the most, the 15–24 group sleeps a little less, and adults sleep the least of the three age groups. The chart aligns with the known trend."
+            }
+          },
+          {
+            "id": "q4c",
+            "number": "3",
+            "isHard": false,
+            "page": 27,
+            "text": "Can you explain why the learning time of people in the age group 15 – 24 has reduced significantly compared to that of the age group 6 – 14?",
+            "answer": {
+              "answerKey": "Because 15–24-year-olds spend far more time in paid and unpaid work — learning is no longer their main activity, unlike children aged 6–14.",
+              "schoolMethod": "For children aged 6–14, school is their main activity, so Learning takes up the largest share of the day. The 15–24 group is at the stage of higher studies, job hunting and early careers: many have left school, and they spend much more time in Paid Work (or preparing for it) and Unpaid Work & Care. So the time devoted to Learning falls sharply — not because learning becomes unimportant, but because the structure of the day shifts from schooling to work and other responsibilities."
+            }
+          },
+          {
+            "id": "q4d",
+            "number": "4",
+            "isHard": false,
+            "page": 27,
+            "text": "Do adults spend about an equal amount of time in paid and unpaid work? What do you think?",
+            "answer": {
+              "answerKey": "Nearly equal — unpaid work & care (household work) is comparable to paid work in the adult groups.",
+              "schoolMethod": "Compare the Paid Work and Unpaid Work & Care segments in Fig. 10.6 for the adult groups. They are close. This is an important observation: unpaid work (cooking, cleaning, caring for family and elderly) is roughly as time-consuming as paid work, and is mostly done by women. So yes, adults spend about an equal amount of time in paid and unpaid work — and much of the unpaid workload is invisible in formal employment statistics."
             }
           },
           {
