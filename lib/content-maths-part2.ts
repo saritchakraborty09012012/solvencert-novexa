@@ -664,17 +664,6 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             }
           },
           {
-            "id": "q2",
-            "number": "1",
-            "isHard": false,
-            "page": 11,
-            "text": "A 500 mL bowl of lemonade contains 10% jaggery, and a 200 mL glass contains 20% jaggery. What percentage of jaggery is in the mixture?",
-            "answer": {
-              "answerKey": "90/700 × 100% ≈ 12.86%.",
-              "schoolMethod": "Jaggery in the bowl = 10% of 500 = 50 mL. Jaggery in the glass = 20% of 200 = 40 mL. Total jaggery = 90 mL and total mixture = 700 mL. Concentration = (90/700) × 100% = **12.857…% ≈ 12.86%**. It is closer to 10% because the larger quantity (500 mL) has the lower concentration."
-            }
-          },
-          {
             "id": "q3",
             "number": "1",
             "isHard": false,
