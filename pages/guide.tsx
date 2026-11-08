@@ -306,7 +306,8 @@ export default function GuidePage() {
                 ['Mock Tests & Practice Papers', '✗', '✗', '✓'],
                 ['Study Room (live whiteboard)', '✗', '✗', '✓'],
                 ['Download PDF solutions', '✗', '✗', '✓'],
-                ['Ad-free & priority AI', '✗', '✗', '✓'],
+                ['Ad-free experience', '✓', '✓', '✓'],
+                ['Priority AI responses', '✗', '✗', '✓'],
               ].map((r, i) => (
                 <tr key={i} className="border-b border-[var(--border-subtle)]">
                   <td className="p-3 text-[var(--text-primary)] font-medium">{r[0]}</td>

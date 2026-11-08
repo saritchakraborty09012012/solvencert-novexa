@@ -15,7 +15,6 @@ const FEATURES = [
   'Study Room — up to 10 friends',
   'Priority AI responses',
   'Download solutions as PDF',
-  'Ad-free experience',
 ];
 
 type Step = 'info' | 'qr' | 'utr' | 'verifying' | 'success' | 'manual';

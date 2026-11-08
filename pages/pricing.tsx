@@ -15,6 +15,7 @@ const FREE_FEATURES = [
   'Study Room — up to 5 friends',
   'Download solutions as PDF',
   'Bookmarks & study history',
+  'Ad-free experience',
   'Community support',
 ];
 
@@ -25,7 +26,6 @@ const PREMIUM_FEATURES = [
   'Mock tests — unlimited',
   'Study Room — up to 10 friends',
   'Priority AI responses',
-  'Ad-free experience',
 ];
 
 const ENTERPRISE_FEATURES = [

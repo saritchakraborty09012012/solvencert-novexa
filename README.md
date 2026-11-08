@@ -59,6 +59,8 @@ core solutions.
 
 **Platform**
 - Supabase auth, profiles, RLS-secured data, avatars, payment verification
+- **Ad-free platform for everyone** — SolveNCERT shows no ads on any plan;
+  ad-free is included in the free plan itself, not a Premium perk
 - Algolia search with a local-search fallback when the free-tier quota is hit
 - PostHog product analytics
 - Responsive (phone/laptop/tablet), SEO-complete, and PWA-capable
