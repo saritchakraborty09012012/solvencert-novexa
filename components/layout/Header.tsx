@@ -108,8 +108,10 @@ export default function Header() {
             <SolveNCERTLogo size={28} withText textSize="text-[16px]" linkToHome />
           </div>
 
-          {/* CENTRE — shared nav with dropdowns (centred, scrollable on overflow) */}
-          <nav ref={navRef} className="hidden lg:flex min-w-0 flex-1 items-center justify-center gap-2 overflow-x-auto scrollbar-hide whitespace-nowrap">
+          {/* CENTRE — shared nav with dropdowns (centred, scrollable on overflow).
+              NOTE: overflow must be visible while a dropdown is open, else the
+              absolutely-positioned menu gets clipped. */}
+          <nav ref={navRef} className={`hidden lg:flex min-w-0 flex-1 items-center justify-center gap-2 scrollbar-hide whitespace-nowrap ${openMenu ? 'overflow-visible' : 'overflow-x-auto'}`}>
             {NAV.filter(n => !n.authOnly || !isGuest).map((item, i) => (
               <div key={item.label} className="relative flex-shrink-0">
                 {item.items ? (
