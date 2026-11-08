@@ -250,17 +250,6 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             }
           },
           {
-            "id": "q3",
-            "number": "1",
-            "isHard": true,
-            "page": 4,
-            "text": "Let a, b, c be the side lengths of a triangle. If the triangle is right-angled, then a² + b² = c². Its converse is: if a² + b² = c², then the triangle is right-angled. Is this converse true?",
-            "answer": {
-              "answerKey": "Yes. If a² + b² = c² for the side lengths of a triangle, then the angle opposite the side c is a right angle — the converse of the Baudhāyana–Pythagoras theorem is true.",
-              "schoolMethod": "**Given:** A triangle ABC with side lengths BC = a, CA = b and AB = c, where a² + b² = c².\n**To prove:** ∠C = 90°, i.e. the angle opposite the side c is a right angle.\n**Construction:** Construct a right triangle XYZ with perpendicular sides YZ = a and XZ = b, right-angled at Z.\n\n**Proof:**\nIn the right triangle XYZ, by the Baudhāyana–Pythagoras theorem,\nXY² = YZ² + XZ² = a² + b².\nBut a² + b² = c² (given), so XY² = c² and hence XY = c.\n\nNow compare ∆ABC and ∆XYZ:\nBC = YZ = a  (by construction)\nCA = XZ = b  (by construction)\nAB = XY = c  (just proved)\n\n∴ ∆ABC ≅ ∆XYZ  (SSS congruence rule)\n∴ ∠C = ∠Z  (CPCT)\nBut ∠Z = 90°  (by construction), so ∠C = 90°.\n\n**Conclusion:** The converse is true. If the squares of two sides of a triangle add up to the square of the third side, the triangle is right-angled."
-            }
-          },
-          {
             "id": "q4",
             "number": "1",
             "isHard": false,
