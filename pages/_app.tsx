@@ -116,6 +116,91 @@ export default function App({ Component, pageProps }: AppProps) {
     return () => router.events.off('routeChangeComplete', handleRoute);
   }, [router.events]);
 
+  // ── Scroll position restore (reload + back/forward) ──────────────────────
+  // Next.js + hydration otherwise resets the page to the top on reload.
+  // We keep the scroll Y per pathname in sessionStorage and restore it after
+  // load — re-asserting a few times so late layout (fonts/images) can't
+  // clamp it back to the top. Hash links are left to HashScrollHandler.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try { window.history.scrollRestoration = 'manual'; } catch { /* older browsers */ }
+
+    const key = (pathname: string) => `sn_scroll:${pathname}`;
+    const readY = (pathname: string): number => {
+      try {
+        const raw = window.sessionStorage.getItem(key(pathname));
+        const y = raw ? Number(raw) : 0;
+        return Number.isFinite(y) && y > 0 ? y : 0;
+      } catch { return 0; }
+    };
+    const save = (pathname: string) => {
+      try { window.sessionStorage.setItem(key(pathname), String(Math.round(window.scrollY))); }
+      catch { /* storage unavailable — memory only */ }
+    };
+
+    let quietUntil = 0;
+    const restore = (pathname: string, url: string) => {
+      if (url.includes('#')) return; // HashScrollHandler owns anchored links
+      const target = readY(pathname);
+      if (target <= 0) return;
+      quietUntil = Date.now() + 1200;
+      let cancelled = false;
+      let attempts = 0;
+      let timer = 0;
+      const stop = () => { cancelled = true; window.clearTimeout(timer); };
+      const step = () => {
+        if (cancelled) return;
+        const root = document.documentElement;
+        const prev = root.style.scrollBehavior;
+        root.style.scrollBehavior = 'auto';
+        window.scrollTo(0, target);
+        root.style.scrollBehavior = prev;
+        attempts += 1;
+        if (Math.abs(window.scrollY - target) <= 2 || attempts >= 8) return;
+        timer = window.setTimeout(step, 150);
+      };
+      window.addEventListener('wheel', stop, { once: true, passive: true });
+      window.addEventListener('touchstart', stop, { once: true, passive: true });
+      timer = window.setTimeout(step, 60);
+    };
+
+    let saveTimer = 0;
+    const onScroll = () => {
+      if (Date.now() < quietUntil) return;
+      if (saveTimer) window.clearTimeout(saveTimer);
+      saveTimer = window.setTimeout(() => save(window.location.pathname), 150);
+    };
+    const onUnload = () => save(window.location.pathname);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('beforeunload', onUnload);
+
+    // Initial load (reload): restore this pathname's saved position.
+    restore(window.location.pathname, window.location.href);
+
+    const onStart = () => save(window.location.pathname);
+    const onComplete = (url: string) => {
+      const [pathname] = url.split('#');
+      const pathOnly = pathname || window.location.pathname;
+      const saved = readY(pathOnly);
+      if (saved > 0 && !url.includes('#')) {
+        restore(pathOnly, url);
+      } else if (!url.includes('#')) {
+        // Fresh navigation: start at the top (Next's default behaviour).
+        window.scrollTo(0, 0);
+      }
+    };
+    router.events.on('routeChangeStart', onStart);
+    router.events.on('routeChangeComplete', onComplete);
+    return () => {
+      onUnload();
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('beforeunload', onUnload);
+      if (saveTimer) window.clearTimeout(saveTimer);
+      router.events.off('routeChangeStart', onStart);
+      router.events.off('routeChangeComplete', onComplete);
+    };
+  }, [router.events]);
+
   // ── Auth session listener ─────────────────────────────────────────────────
   useEffect(() => {
     supabase.auth.getSession().then((result: any) => {
