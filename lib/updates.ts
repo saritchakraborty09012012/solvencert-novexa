@@ -60,6 +60,15 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'maths-ch10-exercise-10-2',
+    date: '2026-11-08',
+    type: 'content',
+    title: 'Exercise Set 10.2 Q1 fixed in Ch10',
+    summary: 'Savitri Kashmiri question now has the book sub-parts (i)–(iv).',
+    href: '/class-9/maths/ganita-manjari/0904ch10/how-quantities-combine-understanding-data#q-ex10.2-q1',
+    hrefLabel: 'View question',
+  },
+  {
     id: 'maths-ch10-exercise-10-1',
     date: '2026-11-08',
     type: 'content',

@@ -346,10 +346,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Savitri scores 35 out of 50 in internal tests, 44 out of 60 in a project and 80 out of 100 in the final exam. The three components are weighted in the ratio 3:4:5. Which of the given expressions correctly represents her annual percentage? Calculate the annual percentage using the weighted mean.",
+            "text": "Savitri’s marks in Kashmiri are as follows: 35 out of 50 in internal tests, 44 out of 60 in the project, and 80 out of 100 in the final exam. The annual percentage score is calculated by combining the internals, project, and final exam in the ratio 3 : 4 : 5. Which of the following expression(s) gives her annual score (as a percentage) in Kashmiri?\n(i) $\\frac{35 \\times 3 + 44 \\times 4 + 80 \\times 5}{3 + 4 + 5}$\n(ii) $\\frac{(35/100) \\times 3 + (44/100) \\times 4 + (80/100) \\times 5}{3 + 4 + 5}$\n(iii) $\\frac{(35/50) \\times 3 + (44/60) \\times 4 + (80/100) \\times 5}{3 + 4 + 5} \\times 100$\n(iv) $\\frac{(35/50 \\times 100) \\times 3 + (44/60 \\times 100) \\times 4 + (80/100 \\times 100) \\times 5}{3 + 4 + 5}$",
             "answer": {
-              "answerKey": "The valid expressions are (iii) and (iv). The weighted annual percentage is approximately 75.28%.",
-              "schoolMethod": "**Step 1: Convert each component to a percentage.** Internal tests: (35/50)×100 = 70%. Project: (44/60)×100 = 73⅓%. Final exam: (80/100)×100 = 80%.\n\n**Step 2: Apply the weights 3:4:5.** The sum of the weights is 3+4+5=12.\n\nWeighted percentage = [3(70)+4(73⅓)+5(80)]/12\n= [210+293⅓+400]/12\n= 903⅓/12\n= 75.277…% ≈ **75.28%**.\n\nThe ordinary total-marks percentage (159/210×100) is not the correct method because it ignores the stated weights."
+              "answerKey": "Expressions (iii) and (iv) are correct. Her annual percentage is approximately 75.28%.",
+              "schoolMethod": "**Step 1: Convert each component to a percentage.** Internal tests: (35/50)×100 = 70%. Project: (44/60)×100 = 73⅓%. Final exam: (80/100)×100 = 80%.\n\n**Step 2: Apply the weights 3:4:5.** The sum of the weights is 3+4+5=12.\n\nWeighted percentage = [3(70)+4(73⅓)+5(80)]/12\n= [210+293⅓+400]/12\n= 903⅓/12\n= 75.277…% ≈ **75.28%**.\n\nSo (iii) and (iv) — which both use the real component percentages — are correct. (i) uses raw marks of different maxima, and (ii) wrongly uses 100 as every component's maximum."
             }
           }
         ]
