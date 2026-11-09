@@ -290,7 +290,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Section A has 30 students with average score 72; Section B has 25 students with average score 76. Find the combined average.",
+            "text": "The average score of students on a test in Section A is 72 and that of students in Section B is 76. What is the combined average of both the sections given that Section A has 30 students and Section B has 25 students?",
             "answer": {
               "answerKey": "73.82 marks approximately.",
               "schoolMethod": "Combined total of marks = 30×72 + 25×76 = 2160 + 1900 = 4060.\nTotal students = 30 + 25 = 55.\n\nCombined average = 4060/55 = 73.818… ≈ **73.82 marks**."
@@ -300,17 +300,17 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Three equal quantities of fertiliser contain nitrogen fractions 1/10, 9/50 and 3/60 respectively. Find the fraction of nitrogen in the mixture.",
+            "text": "A farmer mixes three equal quantities of fertilisers. The first one contains 1/10 nitrogen, the second contains 9/50 nitrogen, and the third contains 3/60 nitrogen. What is the fraction of nitrogen in the mixture?",
             "answer": {
               "answerKey": "11/100 = 11%.",
-              "schoolMethod": "The quantities are equal, so take their weighted mean with equal weights.\n\nNitrogen fraction = [(1/10) + (9/50) + (3/60)]/3 = (0.10 + 0.18 + 0.05)/3 = 0.33/3 = **0.11 = 11/100**."
+              "schoolMethod": "The quantities are equal, so the nitrogen fraction is the mean of the three fractions.\n\nNitrogen fraction = [(1/10) + (9/50) + (3/60)]/3 = [(30 + 54 + 15)/300]/3 = (99/300)/3 = 33/100 ÷ 3 = **11/100**."
             }
           },
           {
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "A goldsmith combines 9 units of gold at 12 varṇa, 5 units at 10 varṇa and 17 units at 11 varṇa. Find the combined purity.",
+            "text": "(Śrīdhārācārya, Pāṭīgaṇita, c. 750 CE) In ancient India, Varṇa was the measure of gold purity. A purity of 16 varṇa meant pure gold; in general, a purity of k varṇa meant that the gold-alloy was k/16 gold and the rest impurities. (Now the term used is karat; 16 Varṇa = 24 karat.) Suppose a goldsmith melts together three pieces of gold: 9 units at 12 varṇa, 5 units at 10 varṇa, and 17 units at 11 varṇa. Find the purity in varṇa of the combined gold.",
             "answer": {
               "answerKey": "345/31 ≈ 11.13 varṇa.",
               "schoolMethod": "Total pure-gold equivalent = 9×12 + 5×10 + 17×11 = 108 + 50 + 187 = 345.\nTotal alloy = 9 + 5 + 17 = 31 units.\n\nCombined purity = 345/31 = **11.129… ≈ 11.13 varṇa**."
@@ -320,7 +320,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "Average daily rainfall in May, June and July is 3.5 mm, 10 mm and 8.7 mm, respectively. Write an expression for their combined average.",
+            "text": "The average rainfall per day in the months of May, June, and July in a certain location are 3.5 mm, 10 mm and 8.7 mm respectively. Write an expression that gives their combined average.",
             "answer": {
               "answerKey": "(31×3.5 + 30×10 + 31×8.7)/92 ≈ 7.37 mm.",
               "schoolMethod": "May, June and July have 31, 30 and 31 days. The combined average must weight each monthly average by the number of days.\n\nCombined mean = (31×3.5 + 30×10 + 31×8.7)/(31+30+31) = 678.2/92 ≈ **7.37 mm per day**."
@@ -330,7 +330,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "Find the spice concentration when (i) 100 mL at 5%, 200 mL at 10%, and 300 mL at 15% are mixed; (ii) 300 mL at 5%, 200 mL at 10%, and 100 mL at 15% are mixed.",
+            "text": "Calculate the concentration of spice mix in these two scenarios. (i) A 100 mL kashayam/kadha with 5% spice mix, a 200 mL one with 10% spice mix, and a 300 mL one with 15% spice mix are combined. (ii) A 300 mL kashayam/kadha with 5% spice mix, a 200 mL one with 10% spice mix, and a 100 mL one with 15% spice mix are mixed.",
             "answer": {
               "answerKey": "(i) 11.67%; (ii) 8.33%.",
               "schoolMethod": "(i) Spice amount = 100(0.05)+200(0.10)+300(0.15)=5+20+45=70 mL. Total volume = 600 mL. Concentration = 70/600×100% = **11.67%**.\n\n(ii) Spice amount = 300(0.05)+200(0.10)+100(0.15)=15+20+15=50 mL. Concentration = 50/600×100% = **8.33%**."
