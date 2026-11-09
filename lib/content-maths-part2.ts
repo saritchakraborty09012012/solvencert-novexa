@@ -716,7 +716,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "What do you find interesting in the chart above? What can you infer? Discuss.",
             "answer": {
               "answerKey": "Children spend more time learning, adults spend more time in paid and unpaid work, and sleep declines with age.",
-              "schoolMethod": "**In Fig. 10.6, children (6–14 years) devote the largest share of their day to Learning, while the 15–24 group and adults devote most time to Paid Work and Unpaid Work & Care; sleep is the largest single block in every age group but slowly falls with age. We infer that activity patterns shift systematically across age — learning declines, work rises and sleep falls slightly.**"
+              "schoolMethod": "In Fig. 10.6, children (6–14 years) devote the largest share of their day to Learning, while the 15–24 group and adults devote most time to Paid Work and Unpaid Work & Care; sleep is the largest single block in every age group but slowly falls with age. We infer that activity patterns shift systematically across age — learning declines, work rises and sleep falls slightly."
             }
           },
           {
