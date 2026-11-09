@@ -94,7 +94,7 @@ function SimplifyBtn({ question, answer, subject, onResult }: { question:string;
   );
 }
 
-function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, chapterCode, chapterSlug, chapterTitle, chapterNumber, exerciseLabel, guestBlocked, onUnlock }: {
+export function QuestionCard({ question, exerciseId, isMaths, subject, subjectSlug, chapterCode, chapterSlug, chapterTitle, chapterNumber, exerciseLabel, guestBlocked, onUnlock }: {
   question: Question; exerciseId: string; isMaths: boolean; subject: string; subjectSlug: string;
   chapterCode: string; chapterSlug: string; chapterTitle: string; chapterNumber: number; exerciseLabel: string;
   guestBlocked: boolean; onUnlock: () => void;
@@ -503,6 +503,7 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
                     <BookOpen size={15} className="text-blue-500"/>
                     {exercise.title}
                     <span className="text-xs font-normal text-[var(--text-muted)]">({exercise.questions.length} questions)</span>
+                    <Link href={`/${classSlug}/${subjectSlug}/${bookSlug}/${chapterCode}/${chapterSlug}/${exercise.id}`} className="ml-auto text-[11px] font-semibold text-blue-500 hover:text-blue-600 flex-shrink-0">Open as page</Link>
                   </h2>
                   {exercise.questions.map(q=>(
                     <QuestionCard key={q.id} question={q} exerciseId={exercise.id} isMaths={isMaths} subject={subject.name}

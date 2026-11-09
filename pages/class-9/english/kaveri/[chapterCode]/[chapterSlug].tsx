@@ -17,7 +17,7 @@ import QuestionNav from '@/components/features/QuestionNav';
 import { htmlToPdf } from '@/lib/pdf';
 import { useChapterTabSession } from '@/lib/chapterTabSession';
 
-function QuestionBlock({ q, sectionId, sectionTitle, chapterCode, contentSlug, contentTitle, chapterNumber, onGuestBlock }: {
+export function QuestionBlock({ q, sectionId, sectionTitle, chapterCode, contentSlug, contentTitle, chapterNumber, onGuestBlock }: {
   q: EnglishQuestion; sectionId: string; sectionTitle: string;
   chapterCode: string; contentSlug: string; contentTitle: string; chapterNumber: number; onGuestBlock: () => void;
 }) {
@@ -386,6 +386,7 @@ export default function EnglishContentPage({ chapterCode, chapterSlug }: PagePro
                   <span className="text-xs font-normal text-[var(--text-muted)]">
                     ({section.questions.length} questions)
                   </span>
+                  <Link href={`/class-9/english/kaveri/${chapter.code}/${content.slug}/${section.id}`} className="ml-auto text-[11px] font-semibold text-purple-500 hover:text-purple-600 flex-shrink-0">Open as page</Link>
                 </h2>
                 {section.questions.map(q => (
                   <QuestionBlock key={q.id} q={q} sectionId={section.id} sectionTitle={section.title}

@@ -43,15 +43,15 @@ function CopyBtn({ text }: { text: string }) {
 // Part II content lives as the standard Chapter shape (markdown + $math$). The
 // page above renders Part I's notebook HTML, so Part II questions carry an
 // optional `md` payload that NotebookQuestion renders through MathRenderer.
-type GmQuestion = MathsSourceQuestion & {
+export type GmQuestion = MathsSourceQuestion & {
   md?: { text: string; school: string };
   instruction?: string;
   boxHeading?: string;
   page?: number;
   figure?: { svg: string; caption?: string };
 };
-interface GmExercise { id: string; title: string; introHtml: string; questions: GmQuestion[]; }
-interface GmChapter { code: string; slug: string; title: string; number: number; exercises: GmExercise[]; }
+export interface GmExercise { id: string; title: string; introHtml: string; questions: GmQuestion[]; }
+export interface GmChapter { code: string; slug: string; title: string; number: number; exercises: GmExercise[]; }
 
 function escapeHtml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -67,7 +67,7 @@ function splitSubpoints(text: string): string {
     (pre === '' || pre === '\n' ? `${pre}${mark} ` : `${pre.trimEnd()}\n${mark} `));
 }
 
-function part2ToGm(chapter: Chapter): GmChapter {
+export function part2ToGm(chapter: Chapter): GmChapter {
   return {
     code: chapter.code, slug: chapter.slug, title: chapter.title, number: chapter.number,
     exercises: chapter.exercises.map(ex => ({
@@ -92,7 +92,7 @@ function part2ToGm(chapter: Chapter): GmChapter {
   };
 }
 
-function questionText(q: GmQuestion): string {
+export function questionText(q: GmQuestion): string {
   return q.md ? q.md.text : q.plainText;
 }
 
@@ -159,7 +159,7 @@ function chapterFiveDiagram(exerciseId: string, number: string): string {
 }
 
 // Rasterise an inline SVG figure so jsPDF can embed it as a PNG.
-function svgToPngDataUrl(svg: string, scale = 2): Promise<string> {
+export function svgToPngDataUrl(svg: string, scale = 2): Promise<string> {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => {
@@ -176,7 +176,7 @@ function svgToPngDataUrl(svg: string, scale = 2): Promise<string> {
   });
 }
 
-function ExerciseQuestions({ exercise, chapter, guestBlocked, onGuestBlock }: {
+export function ExerciseQuestions({ exercise, chapter, guestBlocked, onGuestBlock }: {
   exercise: GmExercise;
   chapter: { code: string; slug: string; title: string; number: number };
   guestBlocked: boolean;
@@ -417,11 +417,11 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
 interface PageProps { chapterCode: string; chapterSlug: string; }
 
 // Unified sidebar list — Part I (source HTML data) + Part II (Chapter data).
-const ALL_GM_CHAPTERS: { code: string; slug: string; title: string; number: number; part: 1 | 2 }[] = [
+export const ALL_GM_CHAPTERS: { code: string; slug: string; title: string; number: number; part: 1 | 2 }[] = [
   ...MATHS_SOURCE_CHAPTERS.map(ch => ({ code: ch.code, slug: ch.slug, title: ch.title, number: ch.number, part: 1 as const })),
   ...MATHS_PART2_CHAPTERS.map(ch => ({ code: ch.code, slug: ch.slug, title: ch.title, number: ch.number, part: 2 as const })),
 ];
-const PART2_FIRST = MATHS_PART2_CHAPTERS[0]?.number ?? Infinity;
+export const PART2_FIRST = MATHS_PART2_CHAPTERS[0]?.number ?? Infinity;
 
 export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps) {
   const srcChapter = MATHS_SOURCE_CHAPTERS.find(c => c.code === chapterCode && c.slug === chapterSlug);
@@ -684,6 +684,7 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
                   <BookOpen size={15} className="text-blue-500" />
                   {exercise.title}
                   <span className="text-xs font-normal text-[var(--text-muted)]">({exercise.questions.length} questions)</span>
+                  <Link href={`/class-9/maths/ganita-manjari/${chapter.code}/${chapter.slug}/${exercise.id}`} className="ml-auto text-[11px] font-semibold text-blue-500 hover:text-blue-600 flex-shrink-0">Open as page</Link>
                 </h2>
                 <ExerciseQuestions
                   exercise={exercise}

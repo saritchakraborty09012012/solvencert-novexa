@@ -34,7 +34,7 @@ function CopyBtn({ text }: { text: string }) {
   );
 }
 
-function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterTitle, chapterNumber, exerciseLabel, onGuestBlock }: {
+export function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterTitle, chapterNumber, exerciseLabel, onGuestBlock }: {
   q: ScienceQuestion; exerciseId: string; chapterCode: string; chapterSlug: string; chapterTitle: string;
   chapterNumber: number; exerciseLabel: string; onGuestBlock: () => void;
 }) {
@@ -351,6 +351,7 @@ export default function ScienceChapterPage({ chapterCode, chapterSlug }: PagePro
                   <BookOpen size={15} className="text-green-500" />
                   {exercise.title}
                   <span className="text-xs font-normal text-[var(--text-muted)]">({exercise.questions.length} questions)</span>
+                  <Link href={`/class-9/science/exploration/${chapter.code}/${chapter.slug}/${exercise.id}`} className="ml-auto text-[11px] font-semibold text-green-600 dark:text-green-400 hover:text-green-500 flex-shrink-0">Open as page</Link>
                 </h2>
                 {exercise.questions.map(q => (
                   <QuestionCard key={q.id} q={q} exerciseId={exercise.id}

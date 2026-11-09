@@ -22,6 +22,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       chapterUrls.push('/class-9/maths/ganita-manjari');
       for (const chapter of subject.chapters) {
         chapterUrls.push(`/class-9/maths/ganita-manjari/${chapter.code}/${chapter.slug}`);
+        for (const exercise of chapter.exercises) {
+          chapterUrls.push(`/class-9/maths/ganita-manjari/${chapter.code}/${chapter.slug}/${exercise.id}`);
+        }
       }
       continue;
     }
@@ -36,6 +39,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
         chapterUrls.push(`/class-9/english/kaveri/${chapter.code}`);
         for (const content of chapter.contents) {
           chapterUrls.push(`/class-9/english/kaveri/${chapter.code}/${content.slug}`);
+          for (const section of content.sections) {
+            chapterUrls.push(`/class-9/english/kaveri/${chapter.code}/${content.slug}/${section.id}`);
+          }
         }
       }
       continue;
@@ -45,6 +51,11 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       chapterUrls.push(
         `/class-9/${subject.slug}/${subject.bookSlug}/${chapter.code}/${chapter.slug}`
       );
+      for (const exercise of chapter.exercises) {
+        chapterUrls.push(
+          `/class-9/${subject.slug}/${subject.bookSlug}/${chapter.code}/${chapter.slug}/${exercise.id}`
+        );
+      }
     }
   }
 
