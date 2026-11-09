@@ -671,7 +671,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "What does this say about the scope of the stacked bars and 100% stacked bars?",
             "answer": {
               "answerKey": "Stacked bars show the actual quantities (and totals); 100% stacked bars show only the proportions — percentages alone cannot tell the actual number.",
-              "schoolMethod": "A stacked bar preserves each category's count/quantity and the overall total, so actual numbers can be read from it. A 100% stacked bar normalizes every total to 100% and shows only the share of each category. That is why the percentage of flowers bloomed in summer being higher in Fatima's garden says nothing about which garden actually had more blooms — in Case 1 both gardens had 42 blooms but the percentages were different, and in Case 2 Fatima's garden had fewer blooms despite the higher percentage. Use stacked bars when actual quantities matter, and 100% stacked bars only when proportions are what you want to compare."
+              "schoolMethod": "**This says that** stacked bars show actual quantities and totals, while 100% stacked bars show proportions only — percentages alone cannot tell the actual number. For example, Fatima's garden can have a higher percentage of blooms yet fewer actual blooms than Naveen's."
             }
           },
           {
@@ -681,8 +681,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "page": 26,
             "text": "Given a stacked bar chart can we make a corresponding 100% stacked bar chart?",
             "answer": {
-              "answerKey": "Yes — divide each segment by that bar's total and multiply by 100%.",
-              "schoolMethod": "Yes. A stacked bar chart gives every segment's quantity and each bar's total. For each bar, divide each segment by that bar's total and multiply by 100%. The new segments then show each category's percentage share, and every bar totals 100% — exactly a 100% stacked bar chart."
+              "answerKey": "Yes — we divide each segment by the bar's total and multiply by 100%.",
+              "schoolMethod": "**Yes.** We divide each segment by the bar's total and multiply by 100%. The new segments are the percentage shares, and the bar totals 100% — a 100% stacked bar chart."
             }
           },
           {
@@ -692,8 +692,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "page": 26,
             "text": "Given a 100% stacked bar chart can we make a corresponding stacked bar chart?",
             "answer": {
-              "answerKey": "Not generally — percentages alone do not tell the original totals, so absolute quantities cannot be recovered.",
-              "schoolMethod": "No, not generally. A 100% stacked bar chart shows only proportions: the same percentages can describe bars of very different sizes. In Case 1, both Fatima's and Naveen's gardens had 42 blooms, yet their percentages were different — so from percentages alone the original quantities cannot be recovered. The conversion is only possible if the original totals are also known."
+              "answerKey": "No, we cannot make a corresponding stacked bar chart because percentages alone do not tell the original totals.",
+              "schoolMethod": "**No, we cannot make a corresponding stacked bar chart because** percentages alone do not tell the original totals: the same percentages can describe bars of very different sizes (in Case 1 both gardens had 42 blooms, yet the percentages were different)."
             }
           },
           {
@@ -704,7 +704,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "What kind of inferences or comparisons can be made from a stacked bar chart and in a 100% stacked bar chart?",
             "answer": {
               "answerKey": "Stacked bars: compare totals and absolute amounts. 100% stacked bars: compare compositions/shares within each total.",
-              "schoolMethod": "From a stacked bar chart, compare the overall totals of different groups and the absolute amount of each category in each group. From a 100% stacked bar chart, compare the composition (percentage share of each category) within each total — for example, which garden has a higher percentage of blooms in summer — but not the actual numbers. Choose the stacked bar when sizes matter, and the 100% stacked bar when only shares matter."
+              "schoolMethod": "**From a stacked bar chart we can compare totals and the absolute amount of each category. From a 100% stacked bar chart we can compare the composition (percentage share of each category) within each total — but not the actual numbers.**"
             }
           },
           {
@@ -715,8 +715,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "instruction": "When we visualise the same data by grouping ages, we get the following stacked column chart:<br /><img src=\"/figs/maths-0904ch10-fig10-6.png\" alt=\"Fig. 10.6 Age-wise grouping of data\" style=\"display:block;width:100%;max-width:520px;height:auto;margin-top:10px;border-radius:8px;border:1px solid var(--border)\" /><div style=\"font-size:11px;font-style:italic;color:var(--note-text);margin-top:6px\">Fig. 10.6: Age-wise grouping of data (Values are rounded off). Source: National Time Use Survey 2024.</div>",
             "text": "What do you find interesting in the chart above? What can you infer? Discuss.",
             "answer": {
-              "answerKey": "Children spend more time learning, adults spend more time in paid and unpaid work, and sleep declines with age — the chart shows average trends, not rules.",
-              "schoolMethod": "Read Fig. 10.6 across the age groups and compare the coloured segments. School-age children (6–14 years) devote the largest share of their day to Learning, far more than any adult group. The 15–24 group spends much more time on Paid Work/Leisure than on Learning, and adults devote the largest shares to Paid Work and Unpaid Work & Care (household work). Sleep occupies the largest single block in every age group but slowly shrinks as age increases. Personal care and leisure are also fairly similar across groups.\n\n**What we infer:** activity patterns shift systematically across age — learning declines, work rises, sleep falls slightly. The chart is aggregated, rounded data, so it suggests trends for typical days of each age group; it cannot say what any single individual does."
+              "answerKey": "Children spend more time learning, adults spend more time in paid and unpaid work, and sleep declines with age.",
+              "schoolMethod": "**In Fig. 10.6, children (6–14 years) devote the largest share of their day to Learning, while the 15–24 group and adults devote most time to Paid Work and Unpaid Work & Care; sleep is the largest single block in every age group but slowly falls with age. We infer that activity patterns shift systematically across age — learning declines, work rises and sleep falls slightly.**"
             }
           },
           {
@@ -748,8 +748,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "page": 27,
             "text": "Do adults spend about an equal amount of time in paid and unpaid work? What do you think?",
             "answer": {
-              "answerKey": "Nearly equal — unpaid work & care (household work) is comparable to paid work in the adult groups.",
-              "schoolMethod": "Compare the Paid Work and Unpaid Work & Care segments in Fig. 10.6 for the adult groups. They are close. This is an important observation: unpaid work (cooking, cleaning, caring for family and elderly) is roughly as time-consuming as paid work, and is mostly done by women. So yes, adults spend about an equal amount of time in paid and unpaid work — and much of the unpaid workload is invisible in formal employment statistics."
+              "answerKey": "Yes — the Paid Work segment and the Unpaid Work & Care segment are almost equal in size for the adult groups.",
+              "schoolMethod": "**Yes.** In Fig. 10.6, the Paid Work and Unpaid Work & Care segments of the adult groups are almost equal in size. Unpaid work — cooking, cleaning and care work — takes roughly as much time as paid work."
             }
           },
           {
@@ -759,8 +759,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "page": 28,
             "text": "Do you remember the ‘What Can A Strip Say?’ activity from last year? In each strip, if we club the tiny strips belonging to each activity together, will we get a 100% stacked bar chart like the one in Fig. 10.6?",
             "answer": {
-              "answerKey": "Yes — clubbing each activity’s strips gives shares adding to 24 hours = 100%, so the grouped strip is a 100% stacked bar chart.",
-              "schoolMethod": "**Yes.** A single strip represents one full day (24 hours). The tiny strips are the activity segments of that day — sleep, school, play, etc. If we club the strips belonging to each activity together, each clubbed segment represents that activity’s total time in the day. Since the strip is 24 hours in total, the grouped segment shares are percentages of the day and must add to 100%. Each strip, drawn with equal total length and activity segments placed consecutively, becomes exactly a 100% stacked bar chart like Fig. 10.6, with each activity colour occupying its percentage share."
+              "answerKey": "Yes — clubbing each activity's strips gives shares adding to 24 hours = 100%, so the grouped strip is a 100% stacked bar chart.",
+              "schoolMethod": "**Yes.** A single strip represents one full day (24 hours). Clubbing the strips of each activity gives that activity's total time in the day, and the shares add to 100%. Each strip, drawn with equal total length and the activity segments placed consecutively, is a 100% stacked bar chart like Fig. 10.6."
             }
           },
           {
