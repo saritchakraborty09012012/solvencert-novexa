@@ -770,8 +770,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "page": 30,
             "text": "Will the bars look similar if a different teacher’s data is considered instead of Zakir’s?",
             "answer": {
-              "answerKey": "Broadly similar in the overall pattern (schoolwork/sleep dominate) but not identical — each teacher’s exact hours differ.",
-              "schoolMethod": "**Similar in outline, different in detail.** Any teacher’s typical weekday is structured around school: more time in teaching, less in sleep compared with children, and substantial time in unpaid work & care (household duties) and personal care. So a different teacher’s chart would still show the teaching/study block largest, and sleep, personal care and leisure in comparable positions — broadly similar to Zakir’s.\n\nBut not identical: each teacher has different family responsibilities, travel, health habits, and prep time, so each segment’s hourly share would vary from teacher to teacher. The overall shape is comparable; the exact hours are not."
+              "answerKey": "No. Different teachers have different routines, travel, duties and home responsibilities, so their exact hours differ.",
+              "schoolMethod": "**No.** A different teacher's hours in each activity will differ — routines, travel, duties and home responsibilities are never identical. The bars will not look the same as Zakir's."
             }
           },
           {
@@ -781,8 +781,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "page": 30,
             "text": "Will the bars look different if the data for all 7 days of the week is considered?",
             "answer": {
-              "answerKey": "Yes — adding the weekend (Saturday and Sunday) lowers schoolwork and sleep proportionally and raises leisure/personal care.",
-              "schoolMethod": "**Yes.** Zakir’s five-weekday chart clearly shows School spread across the day on working days. Saturday and Sunday are not school days, so over the seven days the teaching segment would shrink and the Leisure, Social & Travel and Personal Care segments would grow. Sleep increases too, because the weekend allows later mornings.\n\nHowever the totals must still add to 24 hours exactly, so the bars would look different in segment proportions — the weekend redistributes hours, it does not add hours."
+              "answerKey": "Yes. Adding Saturday and Sunday lowers the School share and raises leisure/personal care, so the proportions change.",
+              "schoolMethod": "**Yes.** The five-weekday chart clearly shows School on working days. Saturday and Sunday have no school, so over seven days the School share shrinks and Leisure, Social & Travel and Personal Care increase. The total remains 100%, so the bars look different."
             }
           },
           {
@@ -792,8 +792,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "page": 30,
             "text": "Some bars in the chart may also match people doing other kinds of work/activities. Can you think of any? Discuss.",
             "answer": {
-              "answerKey": "Yes — other similarly structured jobs/activities: doctors, police officers, farmers, homemakers, students abroad — share the same day-pattern building blocks of work + care + sleep.",
-              "schoolMethod": "**Yes, plenty.** Zakir’s day — a large work block, household care, personal care, sleep and leisure — is a shape shared by many people:\n\n- **Doctors/nurses**: long work hours, plus study/learning (keeping up to date) and some unpaid care at home.\n- **Police officers or soldiers**: shifts containing work, rest/travel between duty, and unpaid care.\n- **Homemakers**: a huge Unpaid Work & Care segment, often larger than any paid-work segment.\n- **Shopkeepers/traders**: long hours including unpaid family members — such shops run on unpaid labour.\n- **Farmers**: seasonal variation — the day changes dramatically between sowing, harvesting and lean seasons.\n\nThe lesson: a single person’s chart is never unique to their job; the same bars can describe many roles. Classifying occupation from one day-chart alone would be unreliable — that is the limit of such data visualisation."
+              "answerKey": "Yes — doctors, police officers, farmers and homemakers share the same work + care + sleep pattern.",
+              "schoolMethod": "**Yes.** Doctors/nurses (long work + study), police officers/soldiers (shifts + rest + travel), farmers (seasonal work), homemakers (large unpaid core) and shopkeepers (long paid hours plus family work) all mix work, unpaid care, sleep, personal care and leisure in the same building blocks. One day-chart alone cannot uniquely identify a job."
             }
           }
         ]
