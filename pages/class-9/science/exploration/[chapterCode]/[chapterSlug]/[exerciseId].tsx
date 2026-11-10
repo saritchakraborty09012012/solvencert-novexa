@@ -128,6 +128,17 @@ export default function ScienceExercisePage({ chapterCode, chapterSlug, exercise
               </div>
             </div>
 
+            {/* Exercise tabs — same tab style as the chapter page, each one its own page */}
+            {chapter.exercises.length > 1 && (
+              <div className="mb-3 flex items-center gap-2 flex-wrap">
+                <Link href={chapterUrl} className="method-tab science-tab text-xs shadow-sm hover:shadow-md hover:-translate-y-px method-tab-inactive">All Questions</Link>
+                {chapter.exercises.map(ex => (
+                  <Link key={ex.id} href={`${chapterUrl}/${ex.id}`}
+                    className={cn('method-tab science-tab text-xs shadow-sm hover:shadow-md hover:-translate-y-px', ex.id === exerciseId ? 'method-tab-active' : 'method-tab-inactive')}>{ex.title}</Link>
+                ))}
+              </div>
+            )}
+
             <div className="mb-8">
               <h2 className="text-base font-display font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
                 <BookOpen size={15} className="text-green-500" />

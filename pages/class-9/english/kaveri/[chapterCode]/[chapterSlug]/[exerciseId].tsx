@@ -195,6 +195,20 @@ export default function EnglishSectionPage({ chapterCode, chapterSlug, exerciseI
               </button>
             </div>
 
+            {/* Section tabs — same tabs as the content page, each one its own page */}
+            <div className="mb-3">
+              <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Section:</span>
+              <div className="section-nav mt-2">
+                <Link href={chapterUrl} className="method-tab section-nav-button text-xs method-tab-inactive">All Sections</Link>
+                {content.sections.map(s => (
+                  <Link key={s.id} href={`${chapterUrl}/${s.id}`}
+                    className={cn('method-tab section-nav-button text-xs', s.id === exerciseId ? 'method-tab-active' : 'method-tab-inactive')}>
+                    {s.title.length > 18 ? s.title.slice(0, 18) + '…' : s.title}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <div className="mb-8">
               <h2 className="text-base font-display font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
                 <BookOpen size={15} className="text-purple-500" />

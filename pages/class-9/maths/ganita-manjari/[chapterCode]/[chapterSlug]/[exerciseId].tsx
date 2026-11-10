@@ -180,6 +180,20 @@ export default function MathsExercisePage({ chapterCode, chapterSlug, exerciseId
               </div>
             </div>
 
+            {/* Exercise tabs — same tabs as the chapter page, each one its own page */}
+            {chapter.exercises.length > 1 && (
+              <div className="mb-3">
+                <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Jump to:</span>
+                <div className="section-nav mt-2">
+                  <Link href={chapterUrl} className="method-tab section-nav-button text-xs method-tab-inactive">All Exercises</Link>
+                  {chapter.exercises.map(ex => (
+                    <Link key={ex.id} href={`${chapterUrl}/${ex.id}`}
+                      className={cn('method-tab section-nav-button text-xs', ex.id === exerciseId ? 'method-tab-active' : 'method-tab-inactive')}>{ex.title}</Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="mb-8">
               <h2 className="text-base font-display font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
                 <BookOpen size={15} className="text-blue-500" />

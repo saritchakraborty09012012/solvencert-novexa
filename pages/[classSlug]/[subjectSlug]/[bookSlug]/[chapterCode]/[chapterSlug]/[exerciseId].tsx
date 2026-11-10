@@ -93,6 +93,7 @@ export default function ExercisePage({ classSlug, subjectSlug, bookSlug, chapter
   const BASE = 'https://solvencert-novexa.vercel.app';
   const chapterUrl = `${BASE}/${classSlug}/${subjectSlug}/${bookSlug}/${chapterCode}/${chapterSlug}`;
   const canonical = `/${classSlug}/${subjectSlug}/${bookSlug}/${chapterCode}/${chapterSlug}/${exerciseId}`;
+  const chapterPath = `/${classSlug}/${subjectSlug}/${bookSlug}/${chapterCode}/${chapterSlug}`;
   const hasRealCode = subject.id !== 'it-part-a' && subject.id !== 'advanced-maths' && subject.id !== 'advanced-science' && subject.id !== 'hindi-reva' && subject.id !== 'sanskrit-reva';
   const subjectBg = getSubjectBackground(subject.id, chapter.number);
 
@@ -189,6 +190,20 @@ export default function ExercisePage({ classSlug, subjectSlug, bookSlug, chapter
                 </button>
               </div>
             </div>
+
+            {/* Exercise tabs — same tabs as the chapter page, each one its own page */}
+            {chapter.exercises.length > 1 && (
+              <div className="mb-3">
+                <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Jump to:</span>
+                <div className="section-nav mt-2">
+                  <Link href={chapterPath} className="method-tab section-nav-button text-xs method-tab-inactive">All Exercises</Link>
+                  {chapter.exercises.map(ex => (
+                    <Link key={ex.id} href={`${chapterPath}/${ex.id}`}
+                      className={cn('method-tab section-nav-button text-xs', ex.id === exerciseId ? 'method-tab-active' : 'method-tab-inactive')}>{ex.title}</Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <div className="mb-8" id={exercise.id}>
               <h2 className="text-base font-display font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
