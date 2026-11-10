@@ -20,7 +20,6 @@ import MathRenderer from '@/components/features/MathRenderer';
 import { useAuthStore } from '@/store/authStore';
 import { hasReachedGuestLimit, incrementSolutionView } from '@/lib/guestLimits';
 import { cn, getSubjectBackground } from '@/utils/helpers';
-import { useChapterTabSession } from '@/lib/chapterTabSession';
 import { htmlToPdf } from '@/lib/pdf';
 
 function CopyBtn({ text }: { text: string }) {
@@ -430,19 +429,9 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
     ? { code: srcChapter.code, slug: srcChapter.slug, title: srcChapter.title, number: srcChapter.number, exercises: srcChapter.exercises as unknown as GmExercise[] }
     : (p2Source ? part2ToGm(p2Source) : undefined);
   const bookLabel = chapter ? (chapter.number >= PART2_FIRST ? 'Part II' : 'Part I') : 'Part I';
-  const [selEx, setSelEx] = useState<string>('all');
-  useChapterTabSession({
-    scope: 'ganita-manjari',
-    code: chapterCode,
-    slug: chapterSlug,
-    tab: selEx,
-    setTab: setSelEx,
-    isTabValid: t => t === 'all' || (chapter?.exercises.some(e => e.id === t) ?? false),
-  });
-  // selEx is component state that survives client-side chapter navigation —
-  // while it points at an exercise the new chapter doesn't have, fall back to
-  // the default tab so we never render "no tab selected + no questions".
-  const sel = selEx === 'all' || (chapter?.exercises.some(e => e.id === selEx) ?? false) ? selEx : 'all';
+  // Every exercise is its own page now, so this page always shows the full
+  // chapter; the exercise tabs below navigate to those separate pages.
+  const sel = 'all';
   const [guestBlocked, setGuestBlocked] = useState(false);
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null);
   const { isGuest } = useAuthStore();
@@ -661,9 +650,9 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
                 <div className="mb-3">
                   <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Jump to:</span>
                   <div className="section-nav mt-2">
-                    <button onClick={() => setSelEx('all')} className={cn('method-tab section-nav-button text-xs', sel === 'all' ? 'method-tab-active' : 'method-tab-inactive')}>All Exercises</button>
+                    <Link href={`/class-9/maths/ganita-manjari/${chapter.code}/${chapter.slug}`} className="method-tab section-nav-button text-xs method-tab-active">All Exercises</Link>
                     {chapter.exercises.map(ex => (
-                      <button key={ex.id} onClick={() => setSelEx(ex.id)} className={cn('method-tab section-nav-button text-xs', sel === ex.id ? 'method-tab-active' : 'method-tab-inactive')}>{ex.title}</button>
+                      <Link key={ex.id} href={`/class-9/maths/ganita-manjari/${chapter.code}/${chapter.slug}/${ex.id}`} className="method-tab section-nav-button text-xs method-tab-inactive">{ex.title}</Link>
                     ))}
                   </div>
                 </div>

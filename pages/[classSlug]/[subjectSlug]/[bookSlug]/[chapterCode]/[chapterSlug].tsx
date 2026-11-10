@@ -20,7 +20,6 @@ import { hasReachedGuestLimit, incrementSolutionView } from '@/lib/guestLimits';
 import { cn } from '@/utils/helpers';
 import { getSubjectBackground } from '@/utils/helpers';
 import { htmlToPdf } from '@/lib/pdf';
-import { useChapterTabSession } from '@/lib/chapterTabSession';
 
 async function savePdf(html: string, filename: string) {
   await import('jspdf');
@@ -253,19 +252,9 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
   const subject   = getSubject(subjectSlug, bookSlug);
   const chapter   = subject?.chapters.find(c=>c.slug===chapterSlug);
   const isMaths   = subjectSlug === 'maths' || subjectSlug === 'advanced-maths';
-  const [selEx, setSelEx]   = useState<string>('all');
-  useChapterTabSession({
-    scope: `${subjectSlug}/${bookSlug}`,
-    code: chapterCode,
-    slug: chapterSlug,
-    tab: selEx,
-    setTab: setSelEx,
-    isTabValid: t => t === 'all' || (chapter?.exercises.some(e => e.id === t) ?? false),
-  });
-  // selEx survives client-side chapter navigation — if it points at an
-  // exercise this chapter doesn't have, fall back to the default tab so the
-  // page never renders with no tab selected and an empty question list.
-  const sel = selEx === 'all' || (chapter?.exercises.some(e => e.id === selEx) ?? false) ? selEx : 'all';
+  // Every exercise is its own page now, so this page always shows the full
+  // chapter; the exercise tabs below navigate to those separate pages.
+  const sel = 'all';
   const [guestBlocked, setGuestBlocked] = useState(false);
   const [authModal, setAuthModal]       = useState<'login'|'signup'|null>(null);
   const { isGuest } = useAuthStore();
@@ -471,9 +460,9 @@ export default function ChapterPage({ classSlug, subjectSlug, bookSlug, chapterC
                   <div className="mb-3">
                     <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Jump to:</span>
                     <div className="section-nav mt-2">
-                      <button onClick={()=>setSelEx('all')} className={cn('method-tab section-nav-button text-xs',sel==='all'?'method-tab-active':'method-tab-inactive')}>All Exercises</button>
+                      <Link href={`/${classSlug}/${subjectSlug}/${bookSlug}/${chapter.code}/${chapter.slug}`} className="method-tab section-nav-button text-xs method-tab-active">All Exercises</Link>
                       {chapter.exercises.map(ex=>(
-                        <button key={ex.id} onClick={()=>setSelEx(ex.id)} className={cn('method-tab section-nav-button text-xs',sel===ex.id?'method-tab-active':'method-tab-inactive')}>{ex.title}</button>
+                        <Link key={ex.id} href={`/${classSlug}/${subjectSlug}/${bookSlug}/${chapter.code}/${chapter.slug}/${ex.id}`} className="method-tab section-nav-button text-xs method-tab-inactive">{ex.title}</Link>
                       ))}
                     </div>
                   </div>

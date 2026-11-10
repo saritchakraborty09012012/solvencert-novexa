@@ -16,7 +16,6 @@ import { SCIENCE_CHAPTERS, type ScienceQuestion } from '@/lib/content-science';
 import { cn } from '@/utils/helpers';
 import { getSubjectBackground } from '@/utils/helpers';
 import { htmlToPdf } from '@/lib/pdf';
-import { useChapterTabSession } from '@/lib/chapterTabSession';
 
 async function savePdf(html: string, filename: string) {
   await import('jspdf');
@@ -194,23 +193,10 @@ interface PageProps { chapterCode: string; chapterSlug: string; }
 export default function ScienceChapterPage({ chapterCode, chapterSlug }: PageProps) {
   const chapter = SCIENCE_CHAPTERS.find(c => c.slug === chapterSlug);
 
-  const ppExercises = chapter ? chapter.exercises.filter(e => e.id.endsWith('.pp')) : [];
-  const rrExercises = chapter ? chapter.exercises.filter(e => e.id.endsWith('.rr')) : [];
-  const otherExercises = chapter ? chapter.exercises.filter(e => !e.id.endsWith('.pp') && !e.id.endsWith('.rr')) : [];
-  const hasTabs = ppExercises.length > 0 && rrExercises.length > 0;
-  const [activeTab, setActiveTab] = useState<'pp' | 'rr'>(ppExercises.length > 0 ? 'pp' : 'rr');
-  useChapterTabSession<'pp' | 'rr'>({
-    scope: 'science/exploration',
-    code: chapterCode,
-    slug: chapterSlug,
-    tab: activeTab,
-    setTab: setActiveTab,
-    isTabValid: t => (t === 'pp' ? ppExercises : rrExercises).length > 0,
-    defaultTab: ppExercises.length > 0 ? 'pp' : 'rr',
-  });
+  // Every exercise is its own page now, so this page always shows the full
+  // chapter; the exercise tabs below navigate to those separate pages.
+  const visibleExercises = chapter ? chapter.exercises : [];
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null);
-  const activeExercises = hasTabs ? (activeTab === 'pp' ? ppExercises : rrExercises) : [...ppExercises, ...rrExercises];
-  const visibleExercises = [...activeExercises, ...otherExercises];
 
   function downloadPDF() {
     if (!chapter) return;
@@ -329,10 +315,12 @@ export default function ScienceChapterPage({ chapterCode, chapterSlug }: PagePro
             </div>
 
             <div className="mb-5 flex items-center gap-2 flex-wrap">
-              {hasTabs && (
+              {chapter.exercises.length > 1 && (
                 <>
-                  <button onClick={() => setActiveTab('pp')} className={cn('method-tab science-tab text-xs shadow-sm hover:shadow-md hover:-translate-y-px', activeTab === 'pp' ? 'method-tab-active' : 'method-tab-inactive')}>Pause &amp; Ponder</button>
-                  <button onClick={() => setActiveTab('rr')} className={cn('method-tab science-tab text-xs shadow-sm hover:shadow-md hover:-translate-y-px', activeTab === 'rr' ? 'method-tab-active' : 'method-tab-inactive')}>Revise, Reflect, Refine</button>
+                  <Link href={`/class-9/science/exploration/${chapter.code}/${chapter.slug}`} className="method-tab science-tab text-xs shadow-sm hover:shadow-md hover:-translate-y-px method-tab-active">All Questions</Link>
+                  {chapter.exercises.map(ex => (
+                    <Link key={ex.id} href={`/class-9/science/exploration/${chapter.code}/${chapter.slug}/${ex.id}`} className="method-tab science-tab text-xs shadow-sm hover:shadow-md hover:-translate-y-px method-tab-inactive">{ex.title}</Link>
+                  ))}
                 </>
               )}
               <div className="ml-auto flex items-center gap-2">
@@ -378,7 +366,7 @@ export default function ScienceChapterPage({ chapterCode, chapterSlug }: PagePro
 
           <QuestionNav
             questions={visibleExercises.flatMap(ex => ex.questions.map(q => ({ id: `${ex.id}-${q.id}`, number: q.number, section: ex.title })))}
-            label={hasTabs ? (activeTab === 'pp' ? 'Pause & Ponder' : 'Revise/Reflect') : 'Questions'}
+            label="Questions"
           />
         </div>
       </div>

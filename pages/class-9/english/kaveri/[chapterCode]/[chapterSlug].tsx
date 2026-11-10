@@ -15,7 +15,6 @@ import { cn } from '@/utils/helpers';
 import { getSubjectBackground } from '@/utils/helpers';
 import QuestionNav from '@/components/features/QuestionNav';
 import { htmlToPdf } from '@/lib/pdf';
-import { useChapterTabSession } from '@/lib/chapterTabSession';
 
 export function QuestionBlock({ q, sectionId, sectionTitle, chapterCode, contentSlug, contentTitle, chapterNumber, onGuestBlock }: {
   q: EnglishQuestion; sectionId: string; sectionTitle: string;
@@ -167,18 +166,9 @@ export default function EnglishContentPage({ chapterCode, chapterSlug }: PagePro
   const chapter = ENGLISH_CHAPTERS.find(c => c.code === chapterCode);
   const content = chapter?.contents.find(c => c.slug === chapterSlug);
   const otherContent = chapter?.contents.find(c => c.slug !== chapterSlug);
-  const [selSec, setSelSec] = useState<string>('all');
-  useChapterTabSession({
-    scope: 'english/kaveri',
-    code: chapterCode,
-    slug: chapterSlug,
-    tab: selSec,
-    setTab: setSelSec,
-    isTabValid: t => t === 'all' || (content?.sections.some(s => s.id === t) ?? false),
-  });
-  // selSec survives client-side navigation — fall back to All Sections when it
-  // doesn't exist on this page so the section list is never empty.
-  const sel = selSec === 'all' || (content?.sections.some(s => s.id === selSec) ?? false) ? selSec : 'all';
+  // Every section is its own page now, so this page always shows the full
+  // content; the section tabs below navigate to those separate pages.
+  const sel = 'all';
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null);
 
   async function downloadPDF() {
@@ -355,15 +345,15 @@ export default function EnglishContentPage({ chapterCode, chapterSlug }: PagePro
               <div className="mb-3">
                 <span className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Section:</span>
                 <div className="section-nav mt-2">
-                  <button onClick={() => setSelSec('all')}
-                    className={cn('method-tab section-nav-button text-xs', sel === 'all' ? 'method-tab-active' : 'method-tab-inactive')}>
+                  <Link href={`/class-9/english/kaveri/${chapterCode}/${chapterSlug}`}
+                    className="method-tab section-nav-button text-xs method-tab-active">
                     All Sections
-                  </button>
+                  </Link>
                   {content.sections.map(s => (
-                    <button key={s.id} onClick={() => setSelSec(s.id)}
-                      className={cn('method-tab section-nav-button text-xs', sel === s.id ? 'method-tab-active' : 'method-tab-inactive')}>
+                    <Link key={s.id} href={`/class-9/english/kaveri/${chapterCode}/${chapterSlug}/${s.id}`}
+                      className="method-tab section-nav-button text-xs method-tab-inactive">
                       {s.title.length > 18 ? s.title.slice(0, 18) + '…' : s.title}
-                    </button>
+                    </Link>
                   ))}
                 </div>
               </div>
