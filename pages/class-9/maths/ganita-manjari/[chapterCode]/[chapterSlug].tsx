@@ -458,6 +458,17 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
       pdf.splitTextToSize(text, 510).forEach((l: string) => write(l));
       pdf.setFont('helvetica', 'normal'); pdf.setFontSize(10);
     };
+    // jsPDF has no markdown: drop inline figure markers and flatten pipe tables.
+    const isTableRule = (line: string) =>
+      /^\s*\|/.test(line) && line.split('').every(ch => '|-: \t'.includes(ch));
+    const flatten = (text: string) => text
+      .replace(/!\[[^\]]*\]\([^)]+\)/g, '')
+      .split('\n')
+      .filter(line => !isTableRule(line))
+      .join('\n')
+      .replace(/\|/g, ' | ')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
     pdf.setFontSize(16); pdf.text(`Chapter ${chapter.number}: ${chapter.title}`, 48, y); y += 20;
     pdf.setFontSize(10);
     write(`Class 9 Maths · Ganita Manjari ${bookLabel} · NCERT 2026 Revised Syllabus`);
@@ -478,8 +489,8 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
         const starred = q.number.includes('\u2605');
         const num = q.number.replace(/\u2605/g, '');
         const sep = q.plainText.indexOf('\n\n');
-        const qPart = sep >= 0 ? q.plainText.slice(0, sep) : q.plainText;
-        const sPart = sep >= 0 ? q.plainText.slice(sep + 2) : '';
+        const qPart = flatten(sep >= 0 ? q.plainText.slice(0, sep) : q.plainText);
+        const sPart = sep >= 0 ? flatten(q.plainText.slice(sep + 2)) : '';
         writeWrapped(`Q${starred ? '*' : ''}${num}. ${qPart}`, 10);
         if (gm.figure) {
           try {

@@ -60,6 +60,32 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'maths-ch10-exercise-10-4',
+    date: '2026-11-11',
+    type: 'content',
+    title: 'Exercise Set 10.4 fixed in Ch10',
+    summary: 'Q1 IUCN chart and Q2 table + both stacked-bar charts now on the page.',
+    href: '/class-9/maths/ganita-manjari/0904ch10/how-quantities-combine-understanding-data/ex10.4#q-ex10.4-q1',
+    hrefLabel: 'View questions',
+  },
+  {
+    id: 'maths-ch10-exercise-10-3',
+    date: '2026-11-11',
+    type: 'content',
+    title: 'Exercise Set 10.3 fixed in Ch10',
+    summary: 'Q1–Q8 now match the book, with the Q3 options and Q6–Q8 tables (pp. 15–18).',
+    href: '/class-9/maths/ganita-manjari/0904ch10/how-quantities-combine-understanding-data/ex10.3#q-ex10.3-q6',
+    hrefLabel: 'View questions',
+  },
+  {
+    id: 'page-loader-holds-until-loaded',
+    date: '2026-11-11',
+    type: 'fix',
+    title: 'Page loader now waits for the page',
+    summary: 'The solar loader stays until the next page has actually painted.',
+    body: 'It now appears only if a page takes more than a moment, then stays on screen while the next page loads in the background and leaves the instant that page is ready. A “Loading” label with three bouncing dots sits under the planets.',
+  },
+  {
     id: 'exercise-pages',
     date: '2026-11-08',
     type: 'feature',

@@ -362,7 +362,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "A shop makes ₹8,000 from book sales with 30% profit and ₹1,000 from book-cover sales with 50% profit. Find the profit percentage on total sales.",
+            "text": "A stationery shop owner made ₹8000 selling books, of which 30% is the profit amount, and ₹1000 selling book covers, of which 50% is the profit amount. What is the percentage of profit on the total sales?",
             "answer": {
               "answerKey": "32.22% (taking profit percentages as a fraction of sales).",
               "schoolMethod": "Profit from books = 30% of ₹8,000 = ₹2,400. Profit from covers = 50% of ₹1,000 = ₹500.\nTotal sales = ₹9,000; total profit = ₹2,900.\n\nProfit percentage = (2900/9000)×100% = **32.22%**."
@@ -372,7 +372,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "A white stork travels an average of 44.5 km daily over 20 days and flies 55 km on day 21. Find its average daily distance over all 21 days.",
+            "text": "A white stork’s migration is tracked. The average daily distance travelled, calculated over 20 days, is 44.5 km. On the 21st day, it flew 55 km. What is the average daily distance travelled over these 21 days? Make a guess before you calculate.",
             "answer": {
               "answerKey": "45 km per day.",
               "schoolMethod": "Distance in first 20 days = 20×44.5 = 890 km.\nTotal for 21 days = 890+55 = 945 km.\nAverage = 945/21 = **45 km per day**. The new average rises slightly because 55 km exceeds the previous average."
@@ -382,7 +382,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "Mix 600 mL of solution containing 5% salt with 300 mL of solution containing 8% sugar. Find the salt and sugar concentrations in the mixture.",
+            "text": "A 600 mL solution with 5% salt is mixed with a 300 mL solution with 8% sugar. What are the concentrations of salt and sugar in the mixture?\n(i) Salt: 5%, Sugar: 8%\n(ii) Salt: 13%, Sugar: 3%\n(iii) Salt: 6%, Sugar: 6%\n(iv) Salt: 5.55%, Sugar: 8.88%\n(v) Salt: 3.33%, Sugar: 2.67%\n(vi) Salt: 4.1%, Sugar: 7.08%",
             "answer": {
               "answerKey": "Salt = 3⅓%; sugar = 2⅔% (option v).",
               "schoolMethod": "Salt amount = 5% of 600 = 30 mL. Sugar amount = 8% of 300 = 24 mL. Total mixture = 900 mL.\nSalt concentration = 30/900×100% = **3.33%**. Sugar concentration = 24/900×100% = **2.67%**. Therefore option (v) is correct."
@@ -392,7 +392,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "Ten litres of pani has 8% spice. How much regular water must be added to reduce spice concentration to 3/4 of its original value?",
+            "text": "At a panipuri (golgappa) stall, the concentration of spice in the pani (spiced water) was 8%. Many customers complained that it was too spicy. What quantity of regular water should be mixed into the 10 litres of pani so that the spice level is reduced to (3/4)th of the original concentration?",
             "answer": {
               "answerKey": "10/3 L = 3⅓ L.",
               "schoolMethod": "Spice initially = 8% of 10 = 0.8 L-equivalent. The target concentration is (3/4)×8% = 6%. Let x L of water be added.\n\n0.8/(10+x)=0.06 ⇒ 0.8=0.6+0.06x ⇒ x=0.2/0.06=**10/3 L = 3⅓ L**."
@@ -402,7 +402,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "Final fitness marks combine strength, flexibility and agility in ratio 4:5:6. Rashi scores 60,65,70 and Keerthi scores 55,65,75. (i) Whose score is higher without full calculation? (ii) Find both final marks.",
+            "text": "A physical fitness evaluation is being undertaken. The final marks are calculated by combining the marks for strength, flexibility, and agility in the ratio 4 : 5 : 6. Rashi has scored 60, 65, and 70. Keerthi has scored 55, 65, and 75 respectively.\n(i) Find out whose total is more without calculating.\n(ii) What are their final marks?",
             "answer": {
               "answerKey": "Keerthi scores higher: Rashi = 65⅔; Keerthi = 66⅓.",
               "schoolMethod": "(i) Compared with Rashi, Keerthi has 5 fewer strength marks (weight 4), equal flexibility marks, and 5 more agility marks (weight 6). The gain 5×6 = 30 exceeds the loss 5×4 = 20, so Keerthi scores higher.\n\n(ii) Rashi = [4(60)+5(65)+6(70)]/15 = 985/15 = **65⅔**.\nKeerthi = [4(55)+5(65)+6(75)]/15 = 995/15 = **66⅓**."
@@ -412,7 +412,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "Ten customers rated food, ambience and service on a 1–5 scale. Counts for ratings 5,4,3,2,1 are Food (5,3,2,0,0), Ambience (0,4,5,1,0), Service (1,2,2,4,1). Find the combined average for weights food:ambience:service = 6:5:4.",
+            "text": "A restaurant collected ratings from 10 customers on a scale of 1 to 5. The resulting data is shown in the table below.\n\n| | 5 | 4 | 3 | 2 | 1 |\n|---|---|---|---|---|---|\n| Food | 5 | 3 | 2 | 0 | 0 |\n| Ambience | 0 | 4 | 5 | 1 | 0 |\n| Service | 1 | 2 | 2 | 4 | 1 |\n\nWhat is the average rating if the metrics are combined with the weights food : ambience : service = 6 : 5 : 4?",
             "answer": {
               "answerKey": "Food: 4.3; ambience: 3.3; service: 2.8. With aspect weights 6:5:4, the overall weighted rating is 3.57 (approximately).",
               "schoolMethod": "For each aspect, multiply every rating by its frequency, add these products and divide by the 10 customers.\n\n**Food:** (5×5+4×3+3×2)/10 = (25+12+6)/10 = **4.3**.\n\n**Ambience:** (5×0+4×4+3×5+2×1+1×0)/10 = (16+15+2)/10 = **3.3**.\n\n**Service:** (5×1+4×2+3×2+2×4+1×1)/10 = (5+8+6+8+1)/10 = **2.8**.\n\nNow apply weights 6, 5 and 4 to food, ambience and service: overall rating = [6(4.3)+5(3.3)+4(2.8)]/(6+5+4) = (25.8+16.5+11.2)/15 = 53.5/15 = 3.566… ≈ **3.57 out of 5**."
@@ -422,17 +422,17 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": false,
-            "text": "There are 60 male and female langurs together. Their average weights are 16.5 kg (males), 13.8 kg (females), and 14.925 kg overall. (i) Select the correct equation. (ii) Find the number of males. (iii) Add a 15.2 kg female and find the new female mean. (iv) Release males weighing 16.9 kg and 16.1 kg and find the new male mean. (v) One remaining male loses 1 kg; find the average male weight.",
+            "text": "The following table shows the weight data of langurs in an animal facility. Without doing any computations, can you tell whether there are more male langurs or more female langurs? Or are they equal in number?\n\n| | Male langurs | Female langurs | All langurs |\n|---|---|---|---|\n| Average weight | 16.5 kg | 13.8 kg | 14.925 kg |\n| Number of langurs | | | 60 |\n\n(i) Which of the following expression(s) describes the given scenario?\n(a) $\\frac{16.5x + 13.8y}{x + y} = 14.925$\n(b) $\\frac{16.5x + 13.8y}{60} = – 14.925$\n(c) $\\frac{16.5x + 13.8y}{2} = – 14.925$\n(d) $\\frac{16.5x + 13.8y}{16.5 + 13.8} = – 14.925$\n(ii) Find out how many male langurs are present.\n(iii) A female langur weighing 15.2 kg is admitted to the facility. What is the average weight of the female langurs after this?\n(iv) Two male langurs weighing 16.9 kg and 16.1 kg are released from the facility. What is the average weight of the male langurs after this?\n(v) Now, suppose one of the male langurs lost 1 kg of weight. What is the average weight of all the male langurs after this?",
             "answer": {
-              "answerKey": "(i) Both (a) and (b). (ii) 25 male langurs. (iii) 13.84 kg average female weight. (iv) 16.5 kg average male weight. (v) 16.46 kg average male weight after the loss.",
-              "schoolMethod": "Let x be the number of male langurs and y the number of female langurs. The total number is x+y=60.\n\n**(i) Correct expression(s).** The mean formula gives (16.5x+13.8y)/(x+y)=14.925. Since x+y=60, this is also (16.5x+13.8y)/60=14.925. Therefore both (a) and (b) are correct.\n\n**(ii) Number of males.** Solve x+y=60 and 16.5x+13.8y=14.925(60)=895.5. Put y=60−x: 16.5x+13.8(60−x)=895.5 ⇒ 2.7x=67.5 ⇒ **x=25**. Hence y=60−25=35; there are 25 males and 35 females.\n\n**(iii) New female mean.** Original total female weight = 35×13.8=483 kg. After adding a 15.2 kg female, total weight = 483+15.2=498.2 kg and number =36. Mean =498.2/36=13.838… ≈ **13.84 kg**.\n\n**(iv) New male mean after releasing two males.** Original male total =25×16.5=412.5 kg. Released weight =16.9+16.1=33 kg, so remaining total =412.5−33=379.5 kg for 23 males. Mean =379.5/23=**16.5 kg**. This remains unchanged because the two released males’ average, (16.9+16.1)/2, is exactly 16.5 kg.\n\n**(v) One remaining male loses 1 kg.** The male total becomes 379.5−1=378.5 kg, while the number remains 23. New mean =378.5/23=16.4565… ≈ **16.46 kg**."
+              "answerKey": "(i) Both (a) and (b). (ii) 25 male langurs. (iii) 13.84 kg average female weight. (iv) 16.5 kg average male weight. (v) 16.46 kg average male weight after the loss. In the book, options (b)–(d) print an en dash before 14.925 instead of '='; this is a printing slip.",
+              "schoolMethod": "Let x be the number of male langurs and y the number of female langurs. The total number is x+y=60.\n\n**(i) Correct expression(s).** The mean formula gives (16.5x+13.8y)/(x+y)=14.925. Since x+y=60, this is also (16.5x+13.8y)/60=14.925. Therefore both (a) and (b) are correct. Options (b)–(d) are printed with an en dash in place of the equals sign before 14.925, which is a printing slip; read as '=', (b) is valid while (c) and (d) use the wrong denominator.\n\n**(ii) Number of males.** Solve x+y=60 and 16.5x+13.8y=14.925(60)=895.5. Put y=60−x: 16.5x+13.8(60−x)=895.5 ⇒ 2.7x=67.5 ⇒ **x=25**. Hence y=60−25=35; there are 25 males and 35 females.\n\n**(iii) New female mean.** Original total female weight = 35×13.8=483 kg. After adding a 15.2 kg female, total weight = 483+15.2=498.2 kg and number =36. Mean =498.2/36=13.838… ≈ **13.84 kg**.\n\n**(iv) New male mean after releasing two males.** Original male total =25×16.5=412.5 kg. Released weight =16.9+16.1=33 kg, so remaining total =412.5−33=379.5 kg for 23 males. Mean =379.5/23=**16.5 kg**. This remains unchanged because the two released males’ average, (16.9+16.1)/2, is exactly 16.5 kg.\n\n**(v) One remaining male loses 1 kg.** The male total becomes 379.5−1=378.5 kg, while the number remains 23. New mean =378.5/23=16.4565… ≈ **16.46 kg**."
             }
           },
           {
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "Dorjee has 1 litre of Dead Sea water (salinity ≈34%). (i) Find the salinity after mixing it with 2 litres of purified drinking water (≈0.001%). (ii) Can he obtain groundwater salinity (≈0.01%) by mixing Dead Sea water and purified water? If so, how much purified water must be mixed with 1 litre of Dead Sea water? (iii) Can he obtain purified-drinking-water salinity (≈0.001%) by mixing Dead Sea water and groundwater (≈0.01%)? If so, how much groundwater should be mixed with 1 litre of Dead Sea water?",
+            "text": "Dorjee has collected 1 litre of water from the Dead Sea! Using the information in the table, answer the following questions. A calculator can be used if necessary.\n\n| Water Source | Salinity |\n|---|---|\n| Dead Sea | ≈ 34% |\n| Other seas and oceans | ≈ 3.5% |\n| Ground water | ≈ 0.01% |\n| Purified drinking water | ≈ 0.001% |\n\n(i) What is the salinity of the mixture if he mixes 1 litre of water from the Dead Sea with 2 litres of purified drinking water?\n(ii) Is it possible to mix water from the Dead Sea and purified drinking water to get a mixture with the salinity of groundwater? Why/Why not? What quantity of purified drinking water should Dorjee mix with 1 litre of water from the Dead Sea to get a mixture having the salinity of groundwater?\n(iii) Is it possible to mix water from the Dead Sea and groundwater to get a mixture with the salinity of purified drinking water? Why/Why not? What quantity of groundwater should he mix with 1 litre of water from the Dead Sea to get a mixture having the salinity of purified drinking water?",
             "answer": {
               "answerKey": "(i) ≈11.334%. (ii) Yes; add ≈3,776.67 L purified water to 1 L Dead Sea water. (iii) Impossible: no nonnegative quantity of groundwater can lower the mixture below 0.01%.",
               "schoolMethod": "Treat the listed salinities as percentages of the mixture.\n\n**(i) Dead Sea + purified water.** Salt-equivalent amount = 1(0.34)+2(0.00001)=0.34002 L. Total volume = 3 L. Salinity = 0.34002/3×100% = **11.334% approximately**.\n\n**(ii) Reach groundwater salinity 0.01%.** Let x litres of purified water be added to the 1 L of Dead Sea water. Using fractions,\n\n(0.34+0.00001x)/(1+x)=0.0001.\n\nThus 0.34+0.00001x=0.0001+0.0001x ⇒ 0.3399=0.00009x ⇒ x≈**3,776.67 L**.\n\n**(iii) Reach purified-water salinity 0.001% using groundwater.** The two starting salinities are 34% and 0.01%. Any mixture containing positive amounts of both has salinity between 0.01% and 34%, so it cannot be as low as 0.001%. Even adding unlimited groundwater only approaches 0.01% from above. Therefore it is **impossible**, and no nonnegative quantity of groundwater satisfies the request."
@@ -448,17 +448,17 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "A stacked column chart gives the number of animal species on the IUCN Red List by class in 2007, 2010, 2013, 2016 and 2019. (i) What does 14,234 represent? (ii) Approximately how many reptile species were listed in 2016? (iii) Which classes show a relatively small increase from 2007 to 2019?",
+            "text": "The following stacked column chart shows the number of animal species in the IUCN Red List, by class, over time.\n\n![The number of endangered species is rising — number of animal species on the IUCN Red List, by class](/figs/maths-0904ch10-ex10-4-q1.png)\n\n> The International Union for Conservation of Nature (IUCN) Red List is a large, regularly-updated database that tells us the extinction risk of species across the world. It classifies species into groups such as Least Concern, Vulnerable, Endangered, Critically Endangered, Extinct in the Wild and Extinct, based on scientific data about their numbers, trends and habitats.\n\n(i) What does the number 14,234 on the top of the column 2019 represent?\n(ii) Approximately how many reptile species were in the list in 2016?\n(iii) Which class(es) of species have seen a relatively small increase in count between 2007 and 2019?",
             "answer": {
-              "answerKey": "(i) Total listed animal species in 2019: 14,234. (ii) Approximately 1,500 reptiles in 2016. (iii) Insects and other invertebrates (“Others”) show relatively small increases.",
-              "schoolMethod": "(i) The number **14,234** is the total height of the full 2019 stacked column, so it represents all animal species included across the classes shown on the IUCN Red List in 2019.\n\n(ii) Read the reptile segment (the red segment in the legend) in the 2016 column against the vertical scale. Its height is about **1,500 species**.\n\n(iii) Compare each coloured segment in the 2007 and 2019 columns. The green **insects** segment and the small top segment for **other invertebrates (“Others”)** show relatively small increases compared with the larger increases in several other classes."
+              "answerKey": "(i) Total listed animal species in 2019: 14,234. (ii) Approximately 1,100 reptile species in 2016. (iii) Mammals, birds and amphibians show relatively small increases between 2007 and 2019.",
+              "schoolMethod": "(i) The number **14,234** is the total height of the full 2019 stacked column, so it represents all animal species included across the classes shown on the IUCN Red List in 2019.\n\n(ii) Read the reptile segment (the dark-red segment in the legend) in the 2016 column against the vertical scale. It runs from about 1,100 to the bottom of the column, so there were approximately **1,100 reptile species** in the list in 2016.\n\n(iii) Compare each coloured segment in the 2007 and 2019 columns. **Mammals** (about 1,080 → 1,240), **birds** (about 1,210 → 1,510) and **amphibians** (about 1,810 → 2,210) each grew by only a few hundred species. By contrast, fish, molluscs, insects and reptiles roughly doubled or more over the same period."
             }
           },
           {
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "A bowler took wickets at home/overseas: Test 62/172, ODI 100/49 and T20 32/71. (i) Describe stacked bars comparing total home versus overseas wickets. (ii) Describe stacked bars comparing totals for Test, ODI and T20.",
+            "text": "The wickets taken by a bowler in International Cricket matches till 2025 are shown in the table. Complete the given stacked bar charts (the bar lengths can be approximate),\n\n| | Test | ODI | T20 |\n|---|---|---|---|\n| Home | 62 | 100 | 32 |\n| Overseas | 172 | 49 | 71 |\n\n(i) comparing the total wickets taken at home vs. overseas:\n\n![Wickets taken at home vs. overseas](/figs/maths-0904ch10-ex10-4-q2-i.png)\n\n(ii) The total wickets taken in each format:\n\n![Wickets taken in different formats](/figs/maths-0904ch10-ex10-4-q2-ii.png)",
             "answer": {
               "answerKey": "Home total 194; overseas total 292. Format totals: Test 234, ODI 149, T20 103.",
               "schoolMethod": "(i) Home total = 62+100+32 = **194 wickets**; overseas total = 172+49+71 = **292 wickets**. Draw two bars: Home, subdivided into Test 62, ODI 100 and T20 32; Overseas, subdivided into Test 172, ODI 49 and T20 71. Use a consistent scale.\n\n(ii) Totals by format: Test = 62+172 = **234**; ODI = 100+49 = **149**; T20 = 32+71 = **103**. Draw three bars of those total lengths, split into Home and Overseas portions using the given counts."

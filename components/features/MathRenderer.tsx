@@ -12,6 +12,8 @@ type Seg =
   | { type: 'table';     value: string }
   | { type: 'mtable';    value: string }
   | { type: 'heading';   value: string; level: number }
+  | { type: 'img';       value: string; alt?: string }
+  | { type: 'quote';     value: string }
   | { type: 'hr' }
   | { type: 'br' };
 
@@ -22,7 +24,7 @@ function parse(text: string): Seg[] {
   // tables, then text. Recognises PDF-copied delimiters: \(...\), \[...\],
   // \begin{env}...\end{env}. Bold is lazy so that **text $math$** still
   // renders the math inside it.
-  const re = /(<table[\s\S]*?<\/table>|\\begin\{[\s\S]*?\\end\{[^}]*\}|\\\[[\s\S]+?\\\]|\$\$[\s\S]+?\$\$|\\\([^\n]+?\\\)|\$[^$\n]+?\$|\*\*([\s\S]+?)\*\*|<u>([\s\S]+?)<\/u>|\*([^*\n]+?)\*|(?:^|\n+)(#{1,6})[ \t]*([^\n]+)|(?:^|\n+)(?:---+|\*\*\*|___)[ \t]*(?=\n|$)|(?:^|\n+)\|[^\n]*(?:\n\|[^\n]*)*|\n\n)/g;
+  const re = /(<table[\s\S]*?<\/table>|\\begin\{[\s\S]*?\\end\{[^}]*\}|\\\[[\s\S]+?\\\]|\$\$[\s\S]+?\$\$|\\\([^\n]+?\\\)|\$[^$\n]+?\$|\*\*([\s\S]+?)\*\*|<u>([\s\S]+?)<\/u>|\*([^*\n]+?)\*|(?:^|\n+)(#{1,6})[ \t]*([^\n]+)|(?:^|\n+)(?:---+|\*\*\*|___)[ \t]*(?=\n|$)|(?:^|\n+)\|[^\n]*(?:\n\|[^\n]*)*|(?:^|\n+)[ \t]*>[ \t]?([^\n]+)|\n\n|!\[([^\]\n]*)\]\(([^)\s]+)\))/g;
   let last = 0;
   let m: RegExpExecArray | null;
   while ((m = re.exec(text)) !== null) {
@@ -41,6 +43,10 @@ function parse(text: string): Seg[] {
       segs.push({ type:'bold',   value: m[2] });
     } else if (m[0].startsWith('<u>')) {
       segs.push({ type:'underline', value: m[3] });
+    } else if (m[0].startsWith('![')) {
+      segs.push({ type:'img', value: m[9], alt: m[8] });
+    } else if (m[7] !== undefined) {
+      segs.push({ type:'quote', value: m[7] });
     } else if (m[4] !== undefined) {
       segs.push({ type:'italic', value: m[4] });
     } else if (m[5] !== undefined) {
@@ -154,6 +160,10 @@ function renderSegs(segs: Seg[], depth: number): React.ReactNode[] {
       }
       case 'table':  return <span key={i} className="block my-3 overflow-x-auto" dangerouslySetInnerHTML={{ __html: seg.value }} />;
       case 'mtable': return <PipeTable key={i} raw={seg.value} depth={depth} />;
+      case 'img':
+        return <img key={i} className="qfig-img" src={seg.value} alt={seg.alt || ''} loading="lazy" />;
+      case 'quote':
+        return <blockquote key={i} className="qnote"><span>{renderSegs(parse(seg.value), depth + 1)}</span></blockquote>;
       case 'hr':     return <span key={i} className="block my-3 h-px bg-[var(--border)]" />;
       case 'block':  return <MathNode key={i} latex={seg.value} display />;
       case 'inline': return <MathNode key={i} latex={seg.value} display={false} />;

@@ -76,7 +76,19 @@ export default function MathsExercisePage({ chapterCode, chapterSlug, exerciseId
       pdf.setFont('helvetica', 'bold');
       write(`Q${gm.number.replace(/\u2605/g, '')}.`);
       pdf.setFont('helvetica', 'normal');
-      writeWrapped((gm.md ? gm.md.text : gm.plainText).replace(/\$/g, ''), 10);
+      // jsPDF has no markdown: drop inline figure markers and flatten pipe tables.
+      const isTableRule = (line: string) =>
+        /^\s*\|/.test(line) && line.split('').every(ch => '|-: \t'.includes(ch));
+      const plainQuestion = (gm.md ? gm.md.text : gm.plainText)
+        .replace(/!\[[^\]]*\]\([^)]+\)/g, '')
+        .split('\n')
+        .filter(line => !isTableRule(line))
+        .join('\n')
+        .replace(/\|/g, ' | ')
+        .replace(/\n{3,}/g, '\n\n')
+        .replace(/\$/g, '')
+        .trim();
+      writeWrapped(plainQuestion, 10);
       writeWrapped(`Answer Key: ${gm.answerKey}`, 10);
       if (gm.md) {
         pdf.setFont('helvetica', 'italic');

@@ -137,6 +137,21 @@ html[data-ui="ui3"] .ganita-notebook {
 .ganita-notebook .qtext .qfig figcaption {
   font-size: .78rem; font-style: italic; color: var(--note-text); margin-top: 4px;
 }
+/* figure images and book-style note boxes embedded in a question */
+.ganita-notebook .qtext .qfig-img {
+  display: block; width: 100%; max-width: 620px; height: auto;
+  margin: 14px auto 6px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--surface);
+}
+.ganita-notebook .qtext .qnote {
+  display: block; margin: 12px 0 6px; padding: 10px 14px;
+  font-size: .9rem; font-weight: 500; font-style: normal; line-height: 1.55;
+  color: var(--text-secondary); background: #eef6e4; border-left: 4px solid #b6cf9a;
+  border-radius: 0 8px 8px 0;
+}
+.dark .ganita-notebook .qtext .qnote { background: rgba(120, 160, 90, .16); border-left-color: #7f9c62; }
+.ganita-notebook .qtext table { font-weight: 500; }
+.ganita-notebook .qtext table th { font-weight: 700; }
 
 .ganita-notebook .qbody {
   padding: 18px 22px 22px 58px;

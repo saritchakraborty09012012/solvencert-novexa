@@ -1788,17 +1788,20 @@ html[data-ui="ui2"][data-subject="it"].dark          { --ui3-aura: rgba(90,170,1
 .solar-planet--jupiter::before { width:24%; height:15%; left:48%; top:58%; background:radial-gradient(ellipse,#4e2109 0 30%,#a44c16 45%,transparent 70%); transform:rotate(-9deg); }
 .solar-planet--saturn { left:15%; bottom:-28%; background:radial-gradient(circle at 32% 25%,#fff3c5,#d6a44c 42%,#76531d 74%,#211506 100%); animation-delay:3s; }
 .solar-planet--saturn::after { content:''; position:absolute; inset:-21% -48%; border:clamp(5px,1.5vw,13px) solid rgba(255,228,155,.82); border-left-color:rgba(132,83,23,.52); border-right-color:rgba(132,83,23,.52); border-radius:50%; transform:rotate(-18deg) rotateX(68deg); box-shadow:0 0 12px rgba(255,226,146,.5); }
-.solar-dots { position:absolute; z-index:2; left:50%; bottom:11vh; display:flex; gap:11px; transform:translateX(-50%); }
+.solar-loading { position:absolute; z-index:2; left:50%; bottom:10vh; display:flex; flex-direction:column; align-items:center; gap:12px; transform:translateX(-50%); }
+.solar-loading__label { font-size:12px; font-weight:700; letter-spacing:.3em; text-transform:uppercase; color:#fff8e1; text-shadow:0 0 16px rgba(244,206,114,.6),0 0 42px rgba(244,206,114,.28); animation:solarLabel .9s ease-in-out infinite alternate; }
+.solar-dots { display:flex; gap:11px; }
 .solar-dots span { width:10px; height:10px; border-radius:50%; background:#fff9e4; box-shadow:0 0 14px #f4ce72; animation:solarDot .85s ease-in-out infinite; }
 .solar-dots span:nth-child(2){animation-delay:.13s}.solar-dots span:nth-child(3){animation-delay:.26s}
-.tunnel-loader.finishing { animation:solarOut .75s ease-out both; }
+.tunnel-loader.finishing { animation:solarOut .24s ease-out both; }
 @keyframes solarDrift { to { transform:scale(1.35); opacity:0; } }
 @keyframes solarWarp { from { transform:scale(1.2) translateX(-6%); } to { transform:scale(1.75) translateX(7%); } }
 @keyframes planetFly { 0%,17%{opacity:0;transform:translate3d(0,0,0) scale(.3)} 25%,55%{opacity:1;transform:translate3d(4vw,-1vh,0) scale(1)} 68%,100%{opacity:0;transform:translate3d(22vw,-8vh,0) scale(1.8)} }
 @keyframes solarDot { 0%,100%{transform:translateY(0);opacity:.38} 50%{transform:translateY(-9px);opacity:1} }
+@keyframes solarLabel { from{opacity:.62} to{opacity:1} }
 @keyframes sunPulse { 0%,100%{transform:scale(.94);filter:brightness(.92)} 50%{transform:scale(1.06);filter:brightness(1.15)} }
 @keyframes solarOut { to{opacity:0} }
-@media (prefers-reduced-motion:reduce){.solar-stars,.solar-streaks,.solar-sun,.solar-planet,.solar-dots span,.tunnel-loader.finishing{animation:none}.solar-planets{display:none}.solar-dots{display:none}}
+@media (prefers-reduced-motion:reduce){.solar-stars,.solar-streaks,.solar-sun,.solar-planet,.solar-dots span,.solar-loading__label,.tunnel-loader.finishing{animation:none}.solar-planets{display:none}.solar-dots{display:none}}
 
 
 

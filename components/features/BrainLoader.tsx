@@ -18,7 +18,12 @@ export default function TunnelLoader({ state }: Props) {
         <span className="solar-planet solar-planet--jupiter" />
         <span className="solar-planet solar-planet--saturn" />
       </div>}
-      {!finishing && <div className="solar-dots" aria-label="Loading"><span /><span /><span /></div>}
+      {!finishing && (
+        <div className="solar-loading">
+          <span className="solar-loading__label">Loading</span>
+          <span className="solar-dots" aria-hidden="true"><span /><span /><span /></span>
+        </div>
+      )}
     </div>
   )
 }

@@ -25,53 +25,148 @@ export default function App({ Component, pageProps }: AppProps) {
   const router   = useRouter();
   const { fetchProfile, setUser, setLoading } = useAuthStore();
   const [loaderState, setLoaderState] = useState<'hidden' | 'loading' | 'finish'>('hidden');
+  const loaderStateRef = useRef<'hidden' | 'loading' | 'finish'>('hidden');
   const showTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const routeStartRef = useRef(0);
+  const shownAtRef = useRef(0);
 
-  // ── Page-transition knowledge tunnel ─────────────────────────────────────
-  // Shows only if the new route hasn't finished within ~200ms, so instant
-  // navigations never flash it. It is kept on screen until the destination
-  // page has actually PAINTED (the main thread reaches an idle slice — the
-  // page loads in the background) plus a ~500ms floor since route start, then
-  // fades cleanly, so the page is fully visible the moment it disappears.
+  const setLoader = (next: 'hidden' | 'loading' | 'finish') => {
+    loaderStateRef.current = next;
+    setLoaderState(next);
+  };
+
+  // ── Page-transition solar loader ─────────────────────────────────────────
+  // The destination page loads IN THE BACKGROUND while the loader is on screen.
+  // The loader is removed only after that page has been committed, painted,
+  // fonts are ready and its eager images have decoded — so it never disappears
+  // while the student is still staring at the old/blank page. If the next route
+  // is ready almost instantly it is never shown at all (no flash).
   useEffect(() => {
-    const start = (url: string) => {
-      routeStartRef.current = Date.now();
-      if (showTimerRef.current) clearTimeout(showTimerRef.current);
-      showTimerRef.current = setTimeout(() => setLoaderState('loading'), 200);
+    let cancelled = false;
+    let watchdog: ReturnType<typeof setTimeout> | null = null;
+    const SHOW_DELAY_MS = 120;    // don't flash for instant navigations
+    const MIN_VISIBLE_MS = 420;   // once shown, stay at least this long
+    const FADE_MS = 240;          // quick fade once the page is ready
+    const PAINT_CAP_MS = 1600;    // safety: never hang on a stalled image
+    const IMAGE_CAP_MS = 800;
+    const FONTS_CAP_MS = 350;     // fallback faces are fine; don't wait for webfonts
+    const WATCHDOG_MS = 20000;    // safety: never leave the loader stuck
+
+    const clearWatchdog = () => {
+      if (watchdog) { clearTimeout(watchdog); watchdog = null; }
     };
-    const done = () => {
+
+    const clearShowTimer = () => {
       if (showTimerRef.current) { clearTimeout(showTimerRef.current); showTimerRef.current = null; }
-      const reveal = () => {
-        setLoaderState('finish');
-        if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
-        hideTimerRef.current = setTimeout(() => setLoaderState('hidden'), 720);
-      };
-      setLoaderState((prev) => {
-        if (prev !== 'loading') return prev;
-        const waitIdle = typeof window !== 'undefined' && 'requestIdleCallback' in window;
-        if (waitIdle) {
-          const w = window as Window & { requestIdleCallback: (cb: () => void, opts?: { timeout: number }) => void };
-          w.requestIdleCallback(() => {
-            const remaining = 500 - (Date.now() - routeStartRef.current);
-            setTimeout(reveal, Math.max(0, remaining));
-          }, { timeout: 2600 });
-        } else {
-          reveal();
-        }
-        return prev;
-      });
     };
+    const clearHideTimer = () => {
+      if (hideTimerRef.current) { clearTimeout(hideTimerRef.current); hideTimerRef.current = null; }
+    };
+
+    const hide = () => {
+      if (cancelled) return;
+      clearHideTimer();
+      const shownFor = shownAtRef.current ? Date.now() - shownAtRef.current : MIN_VISIBLE_MS;
+      const wait = Math.max(0, MIN_VISIBLE_MS - shownFor);
+      hideTimerRef.current = setTimeout(() => {
+        if (cancelled) return;
+        setLoader('finish');
+        hideTimerRef.current = setTimeout(() => { if (!cancelled) setLoader('hidden'); }, FADE_MS + 60);
+      }, wait);
+    };
+
+    /** Run `cb` once the destination page has actually been painted. */
+    const whenPainted = (cb: () => void) => {
+      if (typeof window === 'undefined' || typeof window.requestAnimationFrame !== 'function') { cb(); return; }
+      let settled = false;
+      const settle = () => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(guard);
+        cb();
+      };
+      const guard = window.setTimeout(settle, PAINT_CAP_MS);
+
+      const waitImages = () => {
+        const startedAt = Date.now();
+        const poll = () => {
+          if (settled) return;
+          const pending = Array.from(document.images)
+            .filter(img => !img.complete && img.loading !== 'lazy');
+          if (pending.length === 0 || Date.now() - startedAt > IMAGE_CAP_MS) { settle(); return; }
+          window.setTimeout(poll, 60);
+        };
+        poll();
+      };
+
+      // Fonts can take seconds to finish loading; the page is already readable
+      // with its fallback faces, so never hold the loader longer than this race.
+      const waitFonts = () => {
+        const fonts = (document as Document & { fonts?: { ready?: Promise<unknown> } }).fonts;
+        if (!fonts?.ready || typeof fonts.ready.then !== 'function') { waitImages(); return; }
+        let moved = false;
+        const next = () => {
+          if (moved) return;
+          moved = true;
+          waitImages();
+        };
+        fonts.ready.then(next, next);
+        window.setTimeout(next, FONTS_CAP_MS);
+      };
+
+      // Two frames = the browser has run layout + paint for the new page. If the
+      // tab is backgrounded, rAF may be throttled indefinitely, so start the same
+      // wait from a short timer as a fallback (whichever runs first wins).
+      let paintWaitStarted = false;
+      const startPaintWait = () => {
+        if (settled || paintWaitStarted) return;
+        paintWaitStarted = true;
+        waitFonts();
+      };
+      window.requestAnimationFrame(() => window.requestAnimationFrame(startPaintWait));
+      window.setTimeout(startPaintWait, 260);
+    };
+
+    const start = () => {
+      shownAtRef.current = 0;
+      clearShowTimer();
+      clearHideTimer();
+      clearWatchdog();
+      watchdog = setTimeout(() => {
+        if (loaderStateRef.current === 'loading') hide();
+      }, WATCHDOG_MS);
+      showTimerRef.current = setTimeout(() => {
+        if (cancelled) return;
+        shownAtRef.current = Date.now();
+        setLoader('loading');
+      }, SHOW_DELAY_MS);
+    };
+
+    const done = () => {
+      clearShowTimer();
+      clearWatchdog();
+      if (loaderStateRef.current !== 'loading') return; // never shown → nothing to hide
+      whenPainted(hide);
+    };
+
+    const failed = () => {
+      clearShowTimer();
+      clearWatchdog();
+      if (loaderStateRef.current !== 'loading') return;
+      hide();
+    };
+
     router.events.on('routeChangeStart', start);
     router.events.on('routeChangeComplete', done);
-    router.events.on('routeChangeError', done);
+    router.events.on('routeChangeError', failed);
     return () => {
-      if (showTimerRef.current) clearTimeout(showTimerRef.current);
-      if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
+      cancelled = true;
+      clearShowTimer();
+      clearHideTimer();
+      clearWatchdog();
       router.events.off('routeChangeStart', start);
       router.events.off('routeChangeComplete', done);
-      router.events.off('routeChangeError', done);
+      router.events.off('routeChangeError', failed);
     };
   }, [router.events]);
 
