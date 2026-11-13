@@ -5,7 +5,7 @@ import {
   Settings, History, Users, Menu, X,
   Sun, Moon, Monitor, ChevronDown,
   LogIn, UserPlus, LogOut, User,
-  Search, Crown, Sparkles, Layers, Check, Zap, MessageCircleQuestion, Share2
+  Search, Crown, Sparkles, Layers, Check, Zap, MessageCircleQuestion, Share2, Bookmark
 } from 'lucide-react';
 import { SolveNCERTLogo } from '@/components/ui/Logo';
 import { useAuthStore } from '@/store/authStore';
@@ -266,6 +266,7 @@ export default function Header() {
                     </div>
                     <Link href="/profile"  onClick={() => setProfileOpen(false)} className="sidebar-item mx-1 my-0.5 text-sm"><User size={14} /><span>Profile</span></Link>
                     <Link href="/settings/profile" onClick={() => setProfileOpen(false)} className="sidebar-item mx-1 my-0.5 text-sm"><Settings size={14} /><span>Settings</span></Link>
+                    <Link href="/settings/saved"   onClick={() => setProfileOpen(false)} className="sidebar-item mx-1 my-0.5 text-sm"><Bookmark size={14} /><span>Saved</span></Link>
                     <Link href="/history"  onClick={() => setProfileOpen(false)} className="sidebar-item mx-1 my-0.5 text-sm"><History size={14} /><span>History</span></Link>
                     {user?.plan !== 'premium' && (
                       <button onClick={() => { setProfileOpen(false); setPremiumPopup(true); }}

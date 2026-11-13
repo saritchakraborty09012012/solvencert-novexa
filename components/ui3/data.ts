@@ -81,6 +81,7 @@ export const NAV: NavItem[] = [
     label: 'More',
     items: [
       { label: 'Settings', href: '/settings/profile', desc: 'account & appearance' },
+      { label: 'Saved', href: '/settings/saved', desc: 'your saved solutions' },
       { label: 'History', href: '/history' },
       { label: 'Syllabus', href: '/answers' },
       { label: 'User Guide', href: '/guide' },

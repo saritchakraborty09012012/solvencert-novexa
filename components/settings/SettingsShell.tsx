@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { User, Shield, Bell, Palette, Sparkles, Lock } from 'lucide-react';
+import { User, Shield, Bell, Palette, Sparkles, Lock, Bookmark } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { useAuthStore } from '@/store/authStore';
 import { useCollabStore } from '@/store/collabStore';
@@ -9,6 +9,7 @@ import { cn } from '@/utils/helpers';
 
 const TABS = [
   { id: 'profile',       label: 'Profile',       icon: User,   href: '/settings/profile' },
+  { id: 'saved',         label: 'Saved',         icon: Bookmark, href: '/settings/saved' },
   { id: 'account',       label: 'Account',       icon: Shield, href: '/settings/account' },
   { id: 'notifications', label: 'Notifications', icon: Bell,   href: '/settings/notifications' },
   { id: 'appearance',    label: 'Appearance',    icon: Palette, href: '/settings/appearance' },

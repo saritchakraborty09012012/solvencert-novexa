@@ -5,32 +5,22 @@ import { Bookmark, Trash2, Loader2, ChevronRight } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { useAuthStore } from '@/store/authStore';
 import { useBookmarksStore } from '@/store/bookmarksStore';
-import { CLASS_9_SUBJECTS } from '@/lib/content';
+import { savedQuestionHref } from '@/lib/savedLinks';
 import { formatDate } from '@/utils/helpers';
-
-function chapterHref(subjectSlug: string, chapterCode: string, chapterSlug: string) {
-  if (subjectSlug === 'science') return `/class-9/science/exploration/${chapterCode}/${chapterSlug}`;
-  if (subjectSlug === 'english') return `/class-9/english/kaveri/${chapterCode}/${chapterSlug}`;
-  // Some subjects (e.g. IT) have multiple "parts" sharing one slug — disambiguate
-  // using which part actually contains this chapter code.
-  const candidates = CLASS_9_SUBJECTS.filter(s => s.slug === subjectSlug);
-  const subject = candidates.length > 1
-    ? candidates.find(s => s.chapters.some(c => c.code === chapterCode)) || candidates[0]
-    : candidates[0];
-  const bookSlug = subject?.bookSlug || subjectSlug;
-  return `/class-9/${subjectSlug}/${bookSlug}/${chapterCode}/${chapterSlug}`;
-}
 
 export default function BookmarksPage() {
   const router = useRouter();
-  const { user, isGuest } = useAuthStore();
+  const { user, isGuest, loading: authLoading } = useAuthStore();
   const { items, loaded, loading, fetchAll, remove } = useBookmarksStore();
 
   useEffect(() => {
+    // Wait for auth restore first — on a hard load `isGuest` starts true, so
+    // redirecting immediately bounced signed-in users to the home page.
+    if (authLoading) return;
     if (isGuest) { router.replace('/'); return; }
     if (user?.id && !loaded) fetchAll(user.id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isGuest, user?.id]);
+  }, [authLoading, isGuest, user?.id]);
 
   return (
     <Layout title="Bookmarks | SolveNCERT" description="Your saved NCERT questions, synced across devices." canonical="/bookmarks">
@@ -55,7 +45,7 @@ export default function BookmarksPage() {
             {items.map(b => (
               <div key={b.id} className="card p-4 group">
                 <div className="flex items-start justify-between gap-3">
-                  <Link href={chapterHref(b.subject, b.chapter_code, b.chapter_slug)} className="flex-1 min-w-0">
+                  <Link href={savedQuestionHref(b)} className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 uppercase tracking-wide capitalize">
                         {b.subject}
@@ -75,7 +65,7 @@ export default function BookmarksPage() {
                     >
                       <Trash2 size={14} />
                     </button>
-                    <Link href={chapterHref(b.subject, b.chapter_code, b.chapter_slug)}>
+                    <Link href={savedQuestionHref(b)}>
                       <ChevronRight size={16} className="text-[var(--text-muted)]" />
                     </Link>
                   </div>

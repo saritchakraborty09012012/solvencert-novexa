@@ -1,6 +1,6 @@
 'use client'
 
-import { Check, ChevronDown, Crown, History, Layers, LogOut, Menu, MessageCircleQuestion, Search, Settings, User, X } from 'lucide-react'
+import { Check, ChevronDown, Crown, History, Layers, LogOut, Menu, MessageCircleQuestion, Search, Settings, User, X, Bookmark } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -244,6 +244,13 @@ export function SiteHeader() {
                       className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground/85 transition-colors hover:bg-primary/10 hover:text-primary"
                     >
                       <Settings className="size-4" /> Settings
+                    </Link>
+                    <Link
+                      href="/settings/saved"
+                      onClick={() => setProfileOpen(false)}
+                      className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground/85 transition-colors hover:bg-primary/10 hover:text-primary"
+                    >
+                      <Bookmark className="size-4" /> Saved
                     </Link>
                     <Link
                       href="/history"

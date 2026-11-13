@@ -60,6 +60,15 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'settings-saved-list',
+    date: '2026-11-13',
+    type: 'feature',
+    title: 'Your Saved solutions are back',
+    summary: 'Everything you kept with the Save button now has a list in Settings — tap one to jump straight to it.',
+    href: '/settings/saved',
+    hrefLabel: 'Open Saved',
+  },
+  {
     id: 'maths-ch10-exercise-10-4',
     date: '2026-11-11',
     type: 'content',
