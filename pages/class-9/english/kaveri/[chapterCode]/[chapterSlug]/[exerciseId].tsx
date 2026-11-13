@@ -143,18 +143,6 @@ export default function EnglishSectionPage({ chapterCode, chapterSlug, exerciseI
                   </div>
                 ))}
               </nav>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mt-5 mb-2">This unit</p>
-              <nav className="space-y-0.5">
-                {content.sections.map(s => (
-                  <Link key={s.id} href={`${chapterUrl}/${s.id}`}
-                    className={cn('flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs transition-colors',
-                      s.id === exerciseId
-                        ? 'bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 font-semibold'
-                        : 'text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-1)]')}>
-                    <span className="truncate leading-tight">{s.title}</span>
-                  </Link>
-                ))}
-              </nav>
             </div>
           </aside>
 

@@ -97,16 +97,6 @@ export default function ScienceExercisePage({ chapterCode, chapterSlug, exercise
                   </Link>
                 ))}
               </nav>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mt-5 mb-2">This chapter</p>
-              <nav className="space-y-0.5">
-                {chapter.exercises.map(ex => (
-                  <Link key={ex.id} href={`${chapterUrl}/${ex.id}`}
-                    className={cn('flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs transition-colors',
-                      ex.id === exerciseId ? 'bg-green-50 dark:bg-green-950/40 text-green-600 dark:text-green-400 font-semibold' : 'text-[var(--text-muted)] hover:bg-[var(--surface-1)]')}>
-                    <span className="truncate">{ex.title}</span>
-                  </Link>
-                ))}
-              </nav>
             </div>
           </aside>
 
