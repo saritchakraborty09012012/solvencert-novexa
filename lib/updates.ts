@@ -60,6 +60,15 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'maths-ch10-ex10-4-charts-visible',
+    date: '2026-11-15',
+    type: 'fix',
+    title: 'Charts visible again in Exercise Set 10.4, Ch10',
+    summary: 'Q1 IUCN stacked column chart and Q2 both stacked-bar charts were showing as blank space — they render now.',
+    href: '/class-9/maths/ganita-manjari/0904ch10/how-quantities-combine-understanding-data/ex10.4#q-ex10.4-q1',
+    hrefLabel: 'View Q1',
+  },
+  {
     id: 'settings-saved-list',
     date: '2026-11-13',
     type: 'feature',
