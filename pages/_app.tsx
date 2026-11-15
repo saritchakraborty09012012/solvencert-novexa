@@ -198,6 +198,32 @@ export default function App({ Component, pageProps }: AppProps) {
   // ── Init analytics ───────────────────────────────────────────────────────
   useEffect(() => { initPostHog(); }, []);
 
+  // ── Reveal lazy images ───────────────────────────────────────────────────
+  // globals.css starts every `img[loading]` at opacity 0 and only shows
+  // `img.loaded` (the fade-in used by the subject cards). Every other lazy
+  // image in the app (question figures, diagrams, …) never got that class, so
+  // the chart/graph reserved its space but stayed invisible — a blank block.
+  // One capture-phase listener covers all of them: `load` doesn't bubble, but
+  // capture still sees it at the document, for images mounted now or later.
+  useEffect(() => {
+    const reveal = (e: Event) => {
+      const el = e.target as HTMLElement | null;
+      if (el?.tagName === 'IMG' && el.hasAttribute('loading')) el.classList.add('loaded');
+    };
+    document.addEventListener('load', reveal, true);
+    // A broken image never fires `load` — reveal it too so it doesn't stay an
+    // invisible hole (the alt text/border make the failure visible instead).
+    document.addEventListener('error', reveal, true);
+    // Images that finished before this effect ran (SSR HTML, browser cache).
+    document.querySelectorAll('img[loading]').forEach(img => {
+      if ((img as HTMLImageElement).complete) img.classList.add('loaded');
+    });
+    return () => {
+      document.removeEventListener('load', reveal, true);
+      document.removeEventListener('error', reveal, true);
+    };
+  }, []);
+
   // ── Collaboration: only attach if already in active session (no auto-restore) ────
   const { active, sessionId } = useCollabStore();
   useEffect(() => {
