@@ -2,26 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { ArrowLeft, Loader2, MailCheck, AlertCircle, Send } from 'lucide-react';
 import { validateEmail, cn } from '@/utils/helpers';
 
-/** Standing notice shown everywhere the forgot-password view is opened.
- *  The flow itself is untouched — this is only an informational banner. */
-function ServiceNotice() {
-  return (
-    <div className="flex items-start gap-2.5 rounded-xl border border-amber-300/70 bg-amber-50 p-3 text-left dark:border-amber-500/40 dark:bg-amber-950/30">
-      <AlertCircle size={16} className="mt-0.5 flex-shrink-0 text-amber-600 dark:text-amber-400" />
-      <div className="min-w-0">
-        <span className="mb-1 inline-block rounded-full bg-amber-500/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-700 dark:text-amber-300">
-          Service notice
-        </span>
-        <p className="text-xs leading-relaxed text-amber-800 dark:text-amber-200">
-          We&apos;re currently facing some trouble with the password-reset flow on our side. Our team is
-          working hard to get it back up, and we aim to resolve it by <strong>17 November 2026, 11:59 PM</strong>.
-          Sorry for the inconvenience caused.
-        </p>
-      </div>
-    </div>
-  );
-}
-
 const COOLDOWN_MS = 60_000;
 const STORE_KEY = 'fp_cooldown_until';
 const EMAIL_KEY = 'fp_last_email';
@@ -140,7 +120,6 @@ export default function ForgotPasswordForm({ initialEmail = '', onBack, compact 
   if (stage === 'sent') {
     return (
       <div className="text-center py-2">
-        <div className="mb-3 text-left"><ServiceNotice /></div>
         <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500/15 to-teal-500/10 flex items-center justify-center mx-auto mb-3 border border-emerald-200/60 dark:border-emerald-500/30">
           <MailCheck size={22} className="text-emerald-600 dark:text-emerald-400" />
         </div>
@@ -188,7 +167,6 @@ export default function ForgotPasswordForm({ initialEmail = '', onBack, compact 
 
   return (
     <div className="space-y-4">
-      <ServiceNotice />
       <div className="flex flex-col gap-1">
         <label className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Email Address</label>
         <input
