@@ -73,78 +73,20 @@ function DeviceSection({ icon: Icon, title, points }: { icon: LucideIcon; title:
   );
 }
 
-/** Inline SVG schematic of the desktop header (top bar) with labelled regions. */
-function HeaderDiagram() {
+/** Real product screenshot with a caption underneath. */
+function Shot({ src, alt, caption, priority = false }: { src: string; alt: string; caption: string; priority?: boolean }) {
   return (
-    <svg viewBox="0 0 760 90" className="w-full h-auto rounded-xl border border-[var(--border)]" role="img" aria-label="Desktop header layout">
-      <rect x="0" y="0" width="760" height="90" fill="#1b1b22" rx="12" />
-      <text x="26" y="30" font-size="11" fill="#8b8f9a" font-family="sans-serif">☰</text>
-      <text x="40" y="30" font-size="12" fill="#ffffff" font-family="sans-serif" font-weight="600">SolveNCERT</text>
-      {['Home', 'Solutions ▾', 'Books', 'AI Tools ▾', 'Study Room'].map((l, i) => (
-        <text key={i} x={150 + i * 92} y={30} font-size="11" fill="#c9ccd6" font-family="sans-serif">{l}</text>
-      ))}
-      <text x={545} y={30} font-size="11" fill="#c9ccd6" font-family="sans-serif">🔍</text>
-      <text x={575} y={30} font-size="11" fill="#8b8f9a" font-family="sans-serif">Moods</text>
-      <text x={640} y={30} font-size="11" fill="#8b8f9a" font-family="sans-serif">☀ ▢ 🌙</text>
-      <text x={705} y={30} font-size="11" fill="#ffffff" font-family="sans-serif" font-weight="600">Sign Up</text>
-      {/* callout labels */}
-      {[['45','55','30','30','28','Blocks'],['40','50','12','28','Left'],['520','55','30','34','Search'],['560','55','34','24','Moods'],['625','55','40','28','Theme']].map(([x,y,w,h,t],i)=>(
-        <g key={i}>
-          <rect x={Number(x)} y={Number(y)} width={Number(w)} height={Number(h)} fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3 2" rx="3" />
-          <text x={Number(x)} y={Number(y)-4} font-size="8.5" fill="#60a5fa" font-family="sans-serif">{t}</text>
-        </g>
-      ))}
-    </svg>
-  );
-}
-
-/** Inline SVG schematic of the chapter solution page with annotated areas. */
-function ChapterDiagram() {
-  return (
-    <svg viewBox="0 0 760 300" className="w-full h-auto rounded-xl border border-[var(--border)]" role="img" aria-label="Chapter solution page layout">
-      <rect x="0" y="0" width="760" height="300" fill="#f6f4ee" rx="12" />
-      <text x="24" y="30" font-size="13" fill="#1f2937" font-family="serif" font-weight="700">Chapter 2 — Linear Polynomials</text>
-      <text x="24" y="48" font-size="9" fill="#6b7280" font-family="sans-serif">Exercise tabs · Bookmark · Thumbs · AI Follow-up · Download PDF</text>
-      {/* exercise tabs */}
-      <rect x="24" y="60" width="110" height="26" fill="#3b82f6" rx="6" />
-      <text x="42" y="77" font-size="10" fill="#fff" font-family="sans-serif">Exercise 2.1</text>
-      <rect x="140" y="60" width="110" height="26" fill="#e5e7eb" rx="6" />
-      <text x="170" y="77" font-size="10" fill="#4b5563" font-family="sans-serif">Exercise 2.2</text>
-      {/* a question card */}
-      <rect x="24" y="104" width="712" height="150" fill="#ffffff" rx="10" stroke="#d1d5db" />
-      <text x="40" y="130" font-size="11" fill="#111827" font-family="sans-serif" font-weight="600">1. Solve x + 3 = 5</text>
-      <text x="40" y="156" font-size="11" fill="#4b5563" font-family="sans-serif">x + 3 = 5</text>
-      <text x="56" y="176" font-size="11" fill="#4b5563" font-family="sans-serif">⇒ x = 5 − 3</text>
-      <text x="56" y="196" font-size="11" fill="#111827" font-family="sans-serif">⇒ x = 2</text>
-      <text x="40" y="226" font-size="11" fill="#059669" font-family="sans-serif" font-weight="700">□ Answer: x = 2</text>
-      {/* action buttons on the card */}
-      <g>
-        <rect x="520" y="120" width="86" height="24" rx="6" fill="#eef2ff" stroke="#c7d2fe" />
-        <text x="532" y="136" font-size="9" fill="#4f46e5" font-family="sans-serif">AI (Explain)</text>
-        <rect x="618" y="120" width="86" height="24" rx="6" fill="#f0fdf5" stroke="#bbf7d0" />
-        <text x="628" y="136" font-size="9" fill="#15803d" font-family="sans-serif">✓ Read</text>
-        <rect x="24" y="104" width="0" height="0" />
-      </g>
-      <g>
-        <rect x="615" y="152" width="80" height="22" rx="6" fill="#fef3c7" stroke="#fde68a" />
-        <text x="626" y="167" font-size="9" fill="#b45309" font-family="sans-serif">✓ Bookmark</text>
-        <rect x="697" y="152" width="0" height="0" />
-      </g>
-      {/* arrows to nav */}
-      <g font-family="sans-serif" font-size="9" fill="#3b82f6" font-weight="600">
-        <line x1="168" y1="62" x2="205" y2="38" stroke="#ef4444" stroke-width="2" marker-end="url(#arrR)" />
-        <text x="206" y="32" fill="#ef4444">Switch exercise</text>
-        <line x1="120" y1="96" x2="72" y2="72" stroke="#ef4444" stroke-width="2" marker-end="url(#arrR)" />
-        <text x="20" y="94" fill="#ef4444">Pick a tab</text>
-        <line x1="240" y1="120" x2="400" y2="130" stroke="#ef4444" stroke-width="2" marker-end="url(#arrR)" />
-        <text x="250" y="118" fill="#ef4444">Read solution here</text>
-      </g>
-      <defs>
-        <marker id="arrR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L6,3 L0,6 Z" fill="#ef4444" />
-        </marker>
-      </defs>
-    </svg>
+    <figure className="mb-4">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt={alt}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        className="w-full h-auto rounded-xl border border-[var(--border)] shadow-soft"
+      />
+      <figcaption className="text-[11px] text-[var(--text-muted)] mt-2 leading-relaxed">{caption}</figcaption>
+    </figure>
   );
 }
 
@@ -184,6 +126,9 @@ export default function GuidePage() {
             <li><Link href="#devices" className="no-underline hover:text-blue-500">Phone / laptop / tablet</Link></li>
             <li><Link href="#access" className="no-underline hover:text-blue-500">What needs login / premium</Link></li>
             <li><Link href="#features" className="no-underline hover:text-blue-500">Every feature explained</Link></li>
+            <li><Link href="#explain-simplify" className="no-underline hover:text-blue-500">Explain &amp; Simplify buttons</Link></li>
+            <li><Link href="#saved" className="no-underline hover:text-blue-500">Saved solutions list</Link></li>
+            <li><Link href="#whats-new" className="no-underline hover:text-blue-500">What&rsquo;s New pop-ups</Link></li>
             <li><Link href="#tools" className="no-underline hover:text-blue-500">Best tool for each task</Link></li>
             <li><Link href="#subjects" className="no-underline hover:text-blue-500">Subject-by-subject</Link></li>
             <li><Link href="#tips" className="no-underline hover:text-blue-500">Pro tips</Link></li>
@@ -207,8 +152,12 @@ export default function GuidePage() {
           on a phone it is tucked behind the ☰ (three-line) menu button.
         </p>
 
-        <div className="mb-3"><HeaderDiagram /></div>
-        <p className="text-[11px] text-[var(--text-muted)] mb-6">Desktop header — menu on the left, search / moods / theme on the right.</p>
+        <Shot
+          src="/guide/header-desktop.png"
+          alt="SolveNCERT desktop header with menu, search, theme controls and Sign Up"
+          caption="Desktop header — menu on the left (Home, Solutions, Books, AI Tools, Study Room), search / moods / theme and Sign Up on the right."
+          priority
+        />
 
         <div className="grid md:grid-cols-2 gap-4 mb-8">
           <SectionCard icon={Home} title="On a laptop / tablet (wide screens)">
@@ -233,14 +182,20 @@ export default function GuidePage() {
 
         <h3 className="font-serif font-bold text-lg text-[var(--text-primary)] mb-3">Inside a chapter (solution page)</h3>
         <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
-          Every chapter lists its questions with full, step-by-step solutions. Here&rsquo;s the layout:
+          Every chapter lists its questions with full, step-by-step solutions. Each question card opens with an
+          <strong> Answer Key</strong> and the full <strong>School Level Solution</strong>, plus one-tap actions:
         </p>
-        <div className="mb-6"><ChapterDiagram /></div>
+        <Shot
+          src="/guide/solution-card.png"
+          alt="Question card with Answer Key, School Level Solution and Save, Read, Explain and Simplify actions"
+          caption="A question card — Answer Key first, then the board-pattern School Level Solution, with Save, Read / Copy, Explain, Simplify and AI Follow-up actions underneath."
+        />
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 mb-8">
           {[
             { i: <BookOpen size={14} />, t: 'Exercises', d: 'Tab/tap to switch between exercises of a chapter.' },
             { i: <Layers size={14} />, t: 'Moods & Theme', d: 'Change the look of the whole site anytime.' },
-            { i: <BookMarked size={14} />, t: 'Bookmark', d: 'Save questions to read later — see Bookmarks page.' },
+            { i: <BookMarked size={14} />, t: 'Save', d: 'Keep any solution in your Saved list — Settings → Saved.' },
+            { i: <MessageCircleQuestion size={14} />, t: 'Explain & Simplify', d: 'One tap: plain-language walkthrough or a short SIMPLIFIED version.' },
             { i: <Heart size={14} />, t: 'Thumbs rating', d: 'Rate how helpful a solution was.' },
             { i: <MessageCircleQuestion size={14} />, t: 'AI Follow-up', d: 'Ask AI to explain, simplify or extend any answer.' },
             { i: <Download size={14} />, t: 'Download PDF', d: 'Save the chapter/exercise as a formatted PDF.' },
@@ -337,6 +292,48 @@ export default function GuidePage() {
           Given / To Find / Solution, numbered steps, formulas, and the final answer boxed. Each solution has <strong>Read Aloud</strong>,
           <strong> Bookmark</strong>, <strong>Rate</strong>, <strong>AI Follow-up</strong>, and <strong>Download PDF</strong>.
         </p>
+
+        <h3 id="explain-simplify" className="font-serif font-bold text-lg text-[var(--text-primary)] mb-3 flex items-center gap-2"><MessageCircleQuestion size={16} className="text-violet-500" /> Explain &amp; Simplify (one tap under any solution)</h3>
+        <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+          Stuck on a heavy solution? Two buttons sit right under every answer. <strong>Explain</strong> opens an
+          <strong> Expert Explanation</strong> — the same steps rewritten as a plain-language walkthrough. <strong>Simplify</strong> returns a
+          short <strong>SIMPLIFIED</strong> version with the minimum you need to understand the idea. Nothing to type; ask follow-ups
+          from <strong>AI Follow-up</strong> if you still want more.
+        </p>
+        <Shot
+          src="/guide/explain-panel.png"
+          alt="Expert Explanation panel opened under a solution"
+          caption="Explain — the Expert Explanation panel expands under the question with a step-by-step, plain-language walkthrough."
+        />
+        <Shot
+          src="/guide/simplify-panel.png"
+          alt="Simplified version of a solution"
+          caption="Simplify — a short SIMPLIFIED version of the same answer, for a quick re-read before the exam."
+        />
+
+        <h3 id="saved" className="font-serif font-bold text-lg text-[var(--text-primary)] mb-3 flex items-center gap-2"><BookMarked size={16} className="text-blue-500" /> Saved Solutions (your kept answers)</h3>
+        <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+          Tap <strong>Save</strong> on any solution card and it is stored in your account — subject, chapter, date and a jump link.
+          Open the list anytime from <strong>Settings → Saved</strong>: every card shows <em>Open &amp; scroll to solution</em>, which takes
+          you back to the exact question. Saved solutions follow your account on every device.
+        </p>
+        <Shot
+          src="/guide/saved-list.png"
+          alt="Settings Saved page listing a saved maths solution"
+          caption="Settings → Saved — every solution you kept, with subject, chapter, date and a one-tap jump back to the question."
+        />
+
+        <h3 id="whats-new" className="font-serif font-bold text-lg text-[var(--text-primary)] mb-3 flex items-center gap-2"><Sparkles size={16} className="text-amber-500" /> What&rsquo;s New pop-ups</h3>
+        <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
+          When we ship something big, a <strong>What&rsquo;s New</strong> pop-up appears once — it walks you through the update one card at a
+          time (<em>Update 1 of …</em>) with a <strong>Next update</strong> button. You can close it any time; it never blocks the site and
+          will not show the same update twice. Revisit old announcements any time from <strong>Settings → Updates</strong>.
+        </p>
+        <Shot
+          src="/guide/whats-new.png"
+          alt="What's New announcement pop-up"
+          caption="What&rsquo;s New — a one-time card-per-update announcement; close it and it stays closed."
+        />
 
         <SectionCard icon={Sparkles} title="AI Tools — what each one is for">
           <ul className="list-disc list-inside space-y-1.5">
@@ -459,7 +456,7 @@ export default function GuidePage() {
           </div>
         </div>
 
-        <p className="text-xs text-[var(--text-muted)] mt-8 pt-6 border-t border-[var(--border)]">Last updated: August 2026</p>
+        <p className="text-xs text-[var(--text-muted)] mt-8 pt-6 border-t border-[var(--border)]">Last updated: November 2026</p>
       </div>
     </Layout>
   );
