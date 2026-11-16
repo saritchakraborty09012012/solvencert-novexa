@@ -452,7 +452,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "answer": {
               "answerKey": "(i) The species assessed on the IUCN Red List in 2019: 14,234. (ii) Approximately 1,100 reptile species in 2016. (iii) Mammals, birds and amphibians show relatively small increases between 2007 and 2019.",
               "schoolMethod": "(i) **14,234** is the total height of the full 2019 stacked column, so it is the number of species assessed on the IUCN Red List in 2019, added up over all the classes shown.\n\n(ii) In the 2016 column the reptile segment rises from the baseline to about **1,100** on the vertical scale, so approximately **1,100 reptile species** were in the list in 2016.\n\n(iii) Between 2007 and 2019: **Mammals** about 1,080 → 1,240, **birds** about 1,210 → 1,510, **amphibians** about 1,810 → 2,210 — each grew by only a few hundred species, while fish, molluscs, insects and reptiles roughly doubled or more. So the classes with a relatively small increase are **mammals, birds and amphibians**."
-            }
+            },
+            "solNote": "These are approximate values according to visual perception. Answers may vary and are not to scale."
           },
           {
             "id": "q2",
@@ -461,7 +462,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The wickets taken by a bowler in International Cricket matches till 2025 are shown in the table. Complete the given stacked bar charts (the bar lengths can be approximate),\n\n| | Test | ODI | T20 |\n|---|---|---|---|\n| Home | 62 | 100 | 32 |\n| Overseas | 172 | 49 | 71 |\n\n(i) comparing the total wickets taken at home vs. overseas:\n\n![Wickets taken at home vs. overseas](/figs/maths-0904ch10-ex10-4-q2-i.png)\n\n(ii) The total wickets taken in each format:\n\n![Wickets taken in different formats](/figs/maths-0904ch10-ex10-4-q2-ii.png)",
             "answer": {
               "answerKey": "Home total 194; overseas total 292. Format totals: Test 234, ODI 149, T20 103.",
-              "schoolMethod": "(i) Home total = 62+100+32 = **194 wickets**; overseas total = 172+49+71 = **292 wickets**. Draw two bars: Home, subdivided into Test 62, ODI 100 and T20 32; Overseas, subdivided into Test 172, ODI 49 and T20 71. Use a consistent scale.\n\n(ii) Totals by format: Test = 62+172 = **234**; ODI = 100+49 = **149**; T20 = 32+71 = **103**. Draw three bars of those total lengths, split into Home and Overseas portions using the given counts."
+              "schoolMethod": "(i) Home total = 62+100+32 = **194 wickets**\nOverseas total = 172+49+71 = **292 wickets**\n\n![Completed stacked bar chart of total wickets taken at home and overseas](/figs/maths-0904ch10-ex10-4-q2-i-solved.svg)\n\n(ii) Totals by format:\nTest = 62+172 = **234**\nODI = 100+49 = **149**\nT20 = 32+71 = **103**\n\n![Completed stacked bar chart of total wickets in each format, split into home and overseas](/figs/maths-0904ch10-ex10-4-q2-ii-solved.svg)"
             }
           }
         ]

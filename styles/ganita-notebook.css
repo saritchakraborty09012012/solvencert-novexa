@@ -138,7 +138,8 @@ html[data-ui="ui3"] .ganita-notebook {
   font-size: .78rem; font-style: italic; color: var(--note-text); margin-top: 4px;
 }
 /* figure images and book-style note boxes embedded in a question */
-.ganita-notebook .qtext .qfig-img {
+.ganita-notebook .qtext .qfig-img,
+.ganita-notebook .qbody .qfig-img {
   display: block; width: 100%; max-width: 620px; height: auto;
   margin: 14px auto 6px; border-radius: 8px; border: 1px solid var(--border);
   background: var(--surface);
@@ -172,6 +173,31 @@ html[data-ui="ui3"] .ganita-notebook {
   font-family: 'Inter', sans-serif; font-size: .85rem; color: var(--missing-text);
   background: var(--missing-bg); border: 1px dashed var(--missing-border); border-radius: 8px;
   padding: 10px 14px; margin: 6px 0;
+}
+
+/* disclaimer tag under a solution (graph-read / approximate answers) —
+   deliberately loud: high-contrast red so it can't be missed */
+.ganita-notebook .sol-note {
+  display: flex; align-items: flex-start; gap: 9px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: .8rem; font-weight: 600; line-height: 1.5;
+  color: #b91c1c; background: #fdecec;
+  border: 1.5px solid #dc2626; border-radius: 8px;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, .12);
+  padding: 9px 12px; margin: 10px 0 4px;
+}
+.ganita-notebook .sol-note-tag {
+  flex: none; margin-top: 1px;
+  font-size: .62rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+  color: #fff; background: #dc2626;
+  border-radius: 999px; padding: 3px 9px; line-height: 1.2;
+  box-shadow: 0 1px 3px rgba(220, 38, 38, .45);
+}
+html.dark .ganita-notebook .sol-note,
+html[data-ui="ui3"] .ganita-notebook .sol-note {
+  color: #fecaca; background: rgba(220, 38, 38, .16);
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, .18);
 }
 
 /* line groupings inside solution */
@@ -262,6 +288,37 @@ html[data-ui="ui3"] .ganita-notebook {
 .ganita-notebook .question-table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; }
 .ganita-notebook .question-table th, .ganita-notebook .question-table td { border: 1px solid var(--table-border); padding: 8px 10px; }
 .ganita-notebook .question-table th { background: var(--table-head2); font-weight: 700; }
+
+/* ── Book-look data tables ─────────────────────────────────────────────────
+   Colours sampled directly from the printed Ganita Manjari tables
+   (Part II, Ex 10.4): tan header + tan label column #DAC38D, cream body
+   #EEE3CC, hairline rules and text in near-black #231F20, serif type.
+   Applied to every table in the notebook (question text and solution) in
+   every theme, so a table always matches the book page it came from. */
+.ganita-notebook .qtext table,
+.ganita-notebook .qbody table {
+  background: #eee3cc;
+  font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+  font-size: 12.5px;
+}
+.ganita-notebook .qtext table th, .ganita-notebook .qtext table td,
+.ganita-notebook .qbody table th, .ganita-notebook .qbody table td {
+  border: 1px solid #231f20;
+  background: #eee3cc;
+  color: #231f20;
+  padding: 4px 9px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 400;
+}
+/* header row + first (label) column take the book's tan fill */
+.ganita-notebook .qtext table th,
+.ganita-notebook .qbody table th,
+.ganita-notebook .qtext table td:first-child,
+.ganita-notebook .qbody table td:first-child {
+  background: #dac38d;
+  font-weight: 700;
+}
 
 .ganita-notebook .solution-empty {
   min-height: 48px; border: 1px dashed var(--empty-border); border-radius: 8px; background: var(--empty-bg);

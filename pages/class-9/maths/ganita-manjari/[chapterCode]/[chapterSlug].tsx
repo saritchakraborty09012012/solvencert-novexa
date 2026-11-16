@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { ChevronRight, BookOpen, Home, Download, Copy, Check, KeyRound, Loader2, Lightbulb, Baby, X } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import BackToTop from '@/components/features/BackToTop';
-import BetaBadge from '@/components/features/BetaBadge';
 import ReadAloud from '@/components/features/ReadAloud';
 import AIFollowUp from '@/components/features/AIFollowUp';
 import GuestPaywall from '@/components/features/GuestPaywall';
@@ -48,6 +47,8 @@ export type GmQuestion = MathsSourceQuestion & {
   boxHeading?: string;
   page?: number;
   figure?: { svg: string; caption?: string };
+  /** Disclaimer note tag rendered under the School Level Solution. */
+  solNote?: string;
 };
 export interface GmExercise { id: string; title: string; introHtml: string; questions: GmQuestion[]; }
 export interface GmChapter { code: string; slug: string; title: string; number: number; exercises: GmExercise[]; }
@@ -84,6 +85,7 @@ export function part2ToGm(chapter: Chapter): GmChapter {
           boxHeading: q.boxHeading,
           figure: q.figure,
           page: q.page,
+          solNote: q.solNote,
           md: { text, school: q.answer.schoolMethod },
         } as GmQuestion;
       }),
@@ -353,6 +355,12 @@ function NotebookQuestion({ q, exercise, chapter, onGuestBlock, guestBlocked, sh
                     : <div dangerouslySetInnerHTML={{ __html: chapter.slug === 'im-up-and-down-and-round-and-round' && !/<(?:svg|img)\b/i.test(q.body)
                       ? `${q.body}${chapterFiveDiagram(exercise.id, q.number)}`
                       : q.body }} />}
+                  {q.solNote && (
+                    <div className="sol-note">
+                      <span className="sol-note-tag">Note</span>
+                      <span>{q.solNote}</span>
+                    </div>
+                  )}
                   <div className="flex items-center justify-between mt-2">
                     <div className="answer-actions"><ReadAloud text={questionText(q)} size="sm" /><CopyBtn text={questionText(q)} /></div>
                     <ReportFlag reportedContent={questionText(q)} onGuestBlock={onGuestBlock} />
@@ -631,9 +639,6 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
                         ch.slug === chapterSlug ? 'bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 font-semibold' : 'text-[var(--text-muted)] hover:bg-[var(--surface-1)]')}>
                       <span className="w-5 h-5 rounded bg-[var(--surface-2)] text-[10px] font-bold flex items-center justify-center flex-shrink-0">{ch.number}</span>
                       <span className="truncate leading-tight flex-1 min-w-0">{ch.title}</span>
-                      {ch.part === 2 && (
-                        <span className="px-1.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[8px] font-bold uppercase tracking-[0.12em] flex-shrink-0">Beta</span>
-                      )}
                     </Link>
                   </React.Fragment>
                 ))}
@@ -647,7 +652,6 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
               <div className="flex flex-wrap items-center gap-2 mb-4">
                 <span className="px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-950/30 text-blue-700 dark:text-blue-300 text-xs font-bold">Class 9 · Maths</span>
                 <span className="badge-2026">NCERT 2026 Revised Syllabus</span>
-                {chapter.number >= PART2_FIRST && <BetaBadge />}
               </div>
               <h1 className="text-2xl md:text-3xl font-display font-bold text-[var(--text-primary)] leading-tight">Chapter {chapter.number}: {chapter.title} <span className="text-lg md:text-xl font-normal text-[var(--text-muted)]">({chapter.code.toUpperCase()})</span></h1>
 <p className="text-sm text-[var(--text-muted)] mt-2">Ganita Manjari {bookLabel} · {totalQ} questions · {chapter.exercises.length} exercises</p>
@@ -707,7 +711,6 @@ export default function MathsChapterPage({ chapterCode, chapterSlug }: PageProps
                     {ch.number === PART2_FIRST && (
                       <span className="flex items-center gap-1.5 w-full mt-1">
                         <span className="text-[9px] font-bold uppercase tracking-[0.18em] text-blue-500/90">Part II</span>
-                        <span className="px-1.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[8px] font-bold uppercase tracking-[0.12em]">Beta</span>
                       </span>
                     )}
                     <Link href={`/class-9/maths/ganita-manjari/${ch.code}/${ch.slug}`}

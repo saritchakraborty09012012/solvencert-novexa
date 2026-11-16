@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { ChevronRight, BookOpen, CheckCircle2 } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
-import BetaBadge from '@/components/features/BetaBadge';
 import { MATHS_SOURCE_CHAPTERS } from '@/lib/content-maths-source';
 import { MATHS_PART2_CHAPTERS } from '@/lib/content-maths-part2';
 
@@ -27,7 +26,6 @@ function PartLabel({ part, from, to }: { part: 'I' | 'II'; from: number; to: num
     <div id={part === 'II' ? 'part-2' : undefined} className="scroll-mt-24 flex items-center gap-3 pt-2">
       <span className="px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-500 dark:text-blue-300 text-[10px] font-bold uppercase tracking-[0.18em] flex-shrink-0 inline-flex items-center gap-2">
         Part {part} · Ch {from}–{to}
-        {part === 'II' && <BetaBadge />}
       </span>
       <div className="h-px flex-1 bg-[var(--border)]" />
     </div>

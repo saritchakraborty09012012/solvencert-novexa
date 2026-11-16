@@ -233,10 +233,9 @@ export const UPDATES: UpdateEntry[] = [
     date: '2026-10-30',
     type: 'release',
     title: 'Maths Part II is live',
-    summary: 'Ganita Manjari Part II solutions are now available in beta.',
+    summary: 'Ganita Manjari Part II solutions are now available.',
     href: '/class-9/maths/ganita-manjari#part-2',
     hrefLabel: 'View Part II',
-    beta: true,
   },
   {
     id: 'maths-ch9-corrections',

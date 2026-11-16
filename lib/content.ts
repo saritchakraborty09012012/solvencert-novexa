@@ -42,6 +42,9 @@ export interface Question {
   boxHeading?: string;
   /** Optional inline SVG figure shown below the question text. */
   figure?: { svg: string; caption?: string };
+  /** Small disclaimer note tag shown under the School Level Solution
+   *  (used for answers read off a graph, where values are approximate). */
+  solNote?: string;
 }
 
 export interface Answer {
