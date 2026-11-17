@@ -119,7 +119,12 @@ export default function BookIndexPage({ classSlug, subjectSlug, bookSlug }: Prop
                   {chapter.number}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-[var(--text-primary)] truncate">{chapter.title}</p>
+                  <div className="flex items-center gap-2 min-w-0">
+                    <p className="text-sm font-semibold text-[var(--text-primary)] truncate">{chapter.title}</p>
+                    {chapter.beta && (
+                      <span title="This chapter is still under testing and constant improvement" className="flex-shrink-0 px-1.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[8px] font-bold uppercase tracking-[0.12em]">Beta</span>
+                    )}
+                  </div>
                   <p className="text-xs text-[var(--text-muted)]">
                     {chapter.exercises.length > 0
                       ? `${chapter.exercises.reduce((a, ex) => a + ex.questions.length, 0)} questions`

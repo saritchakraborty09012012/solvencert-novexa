@@ -18,6 +18,8 @@ export interface Chapter {
   slug:     string;
   code:     string;
   description?: string;
+  /** This chapter is still being refined — show a "Beta" chip on its card. */
+  beta?:    boolean;
   exercises: Exercise[];
 }
 
