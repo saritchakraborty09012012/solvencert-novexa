@@ -60,6 +60,16 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'maths-part2-ch12-ch14-book-exact',
+    date: '2026-11-17',
+    type: 'content',
+    title: 'Ch12–Ch14 now book-exact, with figures',
+    summary: 'Exercise Sets 12.1–12.4, 13.1–13.5, 14.1–14.4 and both End-of-Chapter sets: exact wording plus 34 book figures.',
+    body: 'Every question in Chapters 12–14 was checked visually against the NCERT book and rewritten word-for-word. Missing illustrations (Fig. 12.11, 12.22, 12.33–12.43, ski-hill diagrams, stool graph, painted cube, crowd and globe pictures) are now shown with the questions. Think-and-Reflect wording and starred-question flags were corrected too.',
+    href: '/class-9/maths/ganita-manjari/0904ch12/quadrilaterals/ex12.end',
+    hrefLabel: 'See Chapter 12',
+  },
+  {
     id: 'maths-ch10-ex10-4-charts-visible',
     date: '2026-11-15',
     type: 'fix',
