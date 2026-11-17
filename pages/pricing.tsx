@@ -5,6 +5,7 @@ import Layout from '@/components/layout/Layout';
 import AuthModal from '@/components/auth/AuthModal';
 import { useAuthStore } from '@/store/authStore';
 import { formatDate } from '@/utils/helpers';
+import { isTrialActive } from '@/lib/plan';
 import { cn } from '@/utils/helpers';
 
 const FREE_FEATURES = [
@@ -43,8 +44,8 @@ export default function PricingPage() {
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null);
 
   const isPremium = user?.plan === 'premium';
-  const isTrial   = user?.plan === 'trial';
-  const isFree    = user?.plan === 'free';
+  const isTrial   = isTrialActive(user);
+  const isFree    = !isPremium && !isTrial;
   const currentIsPremium = isPremium || isTrial;
 
   return (

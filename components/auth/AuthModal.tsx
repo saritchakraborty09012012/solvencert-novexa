@@ -69,7 +69,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
           id: data.user.id, email: email.toLowerCase(), full_name: fullName,
           phone: phone||null, dob: dob||null,
           initials: generateInitials(fullName),
-          plan: 'trial', trial_ends_at: new Date(Date.now()+30*864e5).toISOString(),
+          plan: 'freemium', trial_ends_at: new Date(Date.now()+30*864e5).toISOString(),
           referral_code: generateReferralCode(data.user.id), total_referrals: 0,
         });
         clearGuestLimits();

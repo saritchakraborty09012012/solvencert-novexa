@@ -20,6 +20,7 @@ import { cn } from '@/utils/helpers';
 import toast from 'react-hot-toast';
 import FadeNotice, { LIGHT_THEME_NOTICE } from '@/components/ui/FadeNotice';
 import { NAV } from '@/components/ui3/data';
+import { isTrialActive, isTrialExpired } from '@/lib/plan';
 
 const POPULAR = ['Polynomials', 'Atoms and Molecules', 'The Fun They Had', 'Motion', 'Tissues'];
 
@@ -58,13 +59,12 @@ export default function Header() {
   ];
 
   // ── Trial / upgrade popup ──
-  // plan 'free'            → offer the FREE TRIAL first
-  // plan 'trial', active   → nothing (enjoy!)
-  // plan 'trial', expired  → pay / upgrade now
+  // plan 'freemium' / 'trial', active → nothing (enjoy!)
+  // plan 'free', trial ran out        → pay / upgrade now
+  // plan 'free', never trialled       → offer the FREE TRIAL first
   useEffect(() => {
     if (!isGuest && user && user.plan !== 'premium') {
-      const trialActive = user.plan === 'trial' && user.trial_ends_at && new Date(user.trial_ends_at) > new Date();
-      if (trialActive) return;
+      if (isTrialActive(user)) return;
       const dismissed = sessionStorage.getItem('sn_premium_dismissed');
       if (!dismissed) {
         const t = setTimeout(() => setPremiumPopup(true), 2500);
@@ -73,8 +73,8 @@ export default function Header() {
     }
   }, [isGuest, user]);
 
-  const trialActive = !!user && user.plan === 'trial' && !!user.trial_ends_at && new Date(user.trial_ends_at) > new Date();
-  const trialExpired = !!user && user.plan === 'trial' && !!user.trial_ends_at && new Date(user.trial_ends_at) <= new Date();
+  const trialActive  = isTrialActive(user);
+  const trialExpired = isTrialExpired(user);
 
   useEffect(() => {
     function handle(e: MouseEvent) {
@@ -164,7 +164,7 @@ export default function Header() {
             {!isGuest && user?.plan !== 'premium' && !trialActive && (
               <button onClick={() => setPremiumPopup(true)}
                 className="hidden md:flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-amber-500/20 border border-amber-400/30 hover:border-amber-300/70 hover:bg-amber-400/25 text-amber-300 text-xs font-semibold transition-all">
-                <Crown size={12} /><span>{user?.plan === 'free' ? 'Free Trial' : 'Upgrade'}</span>
+                <Crown size={12} /><span>{trialExpired ? 'Upgrade' : 'Free Trial'}</span>
               </button>
             )}
 
@@ -259,9 +259,9 @@ export default function Header() {
                       <p className="text-xs text-[var(--text-muted)] truncate">{user?.email}</p>
                       <span className={cn('mt-1 inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold',
                         user?.plan === 'premium' ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400' :
-                        user?.plan === 'trial'   ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
+                        trialActive              ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
                                                    'bg-gray-100 text-gray-600 dark:bg-white/10 dark:text-gray-300')}>
-                        {user?.plan === 'trial' ? 'Free Trial' : user?.plan === 'premium' ? 'Premium' : 'Free'}
+                        {trialActive ? 'Free Trial' : user?.plan === 'premium' ? 'Premium' : 'Free'}
                       </span>
                     </div>
                     <Link href="/profile"  onClick={() => setProfileOpen(false)} className="sidebar-item mx-1 my-0.5 text-sm"><User size={14} /><span>Profile</span></Link>
@@ -387,18 +387,18 @@ export default function Header() {
                 <Crown size={22} className="text-white" />
               </div>
               <h3 className="text-lg font-serif font-bold text-[var(--text-primary)] mb-1">
-                {user?.plan === 'free' ? 'Try Premium Free for 1 Month' : 'Your free trial has ended'}
+                {trialExpired ? 'Your freemium trial has ended' : 'Try Premium Free for 1 Month'}
               </h3>
               <p className="text-sm text-[var(--text-muted)] mb-5">
-                {user?.plan === 'free'
-                  ? 'No card required. Unlock AI Learn, quizzes, mock tests, study rooms & more.'
-                  : 'Loved it? Upgrade to keep everything unlocked — AI tools, mock tests, study rooms & more.'}
+                {trialExpired
+                  ? 'Loved it? Upgrade to keep everything unlocked — AI tools, mock tests, study rooms & more.'
+                  : 'No card required. Unlock AI Learn, quizzes, mock tests, study rooms & more.'}
               </p>
               <div className="flex flex-col gap-2">
                 <div className="flex gap-2">
                   <Link href="/premium" onClick={() => { setPremiumPopup(false); sessionStorage.setItem('sn_premium_dismissed','1'); }}
                     className="btn-primary flex-1 justify-center text-sm">
-                    {user?.plan === 'free' ? <><Sparkles size={13} /> Activate Free Trial</> : <><Crown size={13} /> Upgrade ₹99/mo</>}
+                    {trialExpired ? <><Crown size={13} /> Upgrade ₹99/mo</> : <><Sparkles size={13} /> Activate Free Trial</>}
                   </Link>
                   <button onClick={() => { setPremiumPopup(false); sessionStorage.setItem('sn_premium_dismissed','1'); }}
                     className="btn-ghost text-sm px-4">Later</button>

@@ -40,7 +40,7 @@ export const useAuthStore = create<AuthState>((set) => ({
 
       // First login for an OAuth (Google) user: there is no email/password
       // signup form to create the profile row, so create it here with the
-      // same defaults email signup uses (trial plan, referral code,
+      // same defaults email signup uses (freemium trial, referral code,
       // initials) plus the name/avatar Google provides. Guarded to
       // non-email providers so legacy email accounts keep their old
       // behaviour, and reached only when NO row exists — combined with the
@@ -68,7 +68,7 @@ export const useAuthStore = create<AuthState>((set) => ({
           dob: null,
           avatar_url: avatarUrl,
           initials: generateInitials(fullName),
-          plan: 'trial',
+          plan: 'freemium',
           trial_ends_at: new Date(Date.now() + 30 * 864e5).toISOString(),
           referral_code: generateReferralCode(userId),
           total_referrals: 0,
@@ -84,6 +84,26 @@ export const useAuthStore = create<AuthState>((set) => ({
       }
 
       if (error || !data) { set({ user: null, isGuest: true, loading: false }); return; }
+
+      // Trial over → plan must read 'free'. Writes ONLY the `plan` column, only
+      // on the signed-in user's own row, and only while it still reads as a
+      // trial, so the upgrade popup, plan badge and premium gates all agree
+      // with trial_ends_at. Failure is harmless: the UI keys off the date.
+      if (
+        (data.plan === 'freemium' || data.plan === 'trial') &&
+        data.trial_ends_at &&
+        new Date(data.trial_ends_at).getTime() <= Date.now()
+      ) {
+        const { data: flipped } = await supabase
+          .from('profiles')
+          .update({ plan: 'free' })
+          .eq('id', userId)
+          .in('plan', ['freemium', 'trial'])
+          .select('plan')
+          .maybeSingle();
+        if (flipped) data.plan = 'free';
+      }
+
       set({ user: data as Profile, isGuest: false, loading: false });
       identifyUser(userId, { name: data.full_name, plan: data.plan });
     } catch {

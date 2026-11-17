@@ -13,7 +13,7 @@ export interface Database {
           bio:              string | null;
           avatar_url:       string | null;
           initials:         string;
-          plan:             'free' | 'premium' | 'trial';
+          plan:             'free' | 'premium' | 'trial' | 'freemium';
           trial_ends_at:    string | null;
           premium_ends_at:  string | null;
           referral_code:    string;

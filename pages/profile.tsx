@@ -6,6 +6,7 @@ import { useAuthStore } from '@/store/authStore';
 import { useRouter } from 'next/router';
 import { formatDate, getInitialsColor } from '@/utils/helpers';
 import { cn } from '@/utils/helpers';
+import { isTrialActive } from '@/lib/plan';
 
 export default function ProfilePage() {
   const { user, isGuest } = useAuthStore();
@@ -18,11 +19,12 @@ export default function ProfilePage() {
   if (isGuest) return null;
   if (!user)   return null;
 
-  const colors    = getInitialsColor(user.initials || 'SN');
-  const planLabel = user.plan === 'premium' ? 'Premium' : user.plan === 'trial' ? 'Free Trial' : 'Free Plan';
-  const planColor = user.plan === 'premium' ? 'text-amber-600 bg-amber-50 dark:bg-amber-900/30' :
-                    user.plan === 'trial'   ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30' :
-                                             'text-gray-600 bg-gray-100 dark:bg-gray-800';
+  const colors      = getInitialsColor(user.initials || 'SN');
+  const trialActive = isTrialActive(user);
+  const planLabel   = user.plan === 'premium' ? 'Premium' : trialActive ? 'Free Trial' : 'Free Plan';
+  const planColor   = user.plan === 'premium' ? 'text-amber-600 bg-amber-50 dark:bg-amber-900/30' :
+                      trialActive             ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/30' :
+                                               'text-gray-600 bg-gray-100 dark:bg-gray-800';
 
   return (
     <Layout title="My Profile | SolveNCERT" description="Manage your SolveNCERT profile, track progress and view your premium plan." canonical="/profile">

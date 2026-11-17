@@ -11,6 +11,7 @@ import QueryModal from '@/components/features/QueryModal'
 import { useAuthStore } from '@/store/authStore'
 import { useUIStore } from '@/store/uiStore'
 import { getInitialsColor } from '@/utils/helpers'
+import { isTrialActive, isTrialExpired } from '@/lib/plan'
 import { NAV } from './data'
 
 const POPULAR = ['Polynomials', 'Atoms and Molecules', 'The Fun They Had', 'Motion', 'Tissues']
@@ -55,7 +56,7 @@ export function SiteHeader() {
 
   const initials = user ? (user.initials || user.full_name?.slice(0, 2).toUpperCase() || 'SN') : ''
   const colors = user ? getInitialsColor(initials) : { fg: '#e2c37a' }
-  const trialActive = !!user && user.plan === 'trial' && !!user.trial_ends_at && new Date(user.trial_ends_at) > new Date()
+  const trialActive = isTrialActive(user)
 
   return (
     <>
@@ -265,7 +266,7 @@ export function SiteHeader() {
                         onClick={() => setProfileOpen(false)}
                         className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-amber-400 transition-colors hover:bg-amber-400/10 hover:text-amber-300"
                       >
-                        <Crown className="size-4" /> {user?.plan === 'free' ? 'Free Trial' : 'Upgrade'}
+                        <Crown className="size-4" /> {isTrialExpired(user) ? 'Upgrade' : 'Free Trial'}
                       </Link>
                     )}
                     <button

@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '@/lib/supabase';
 import { generateQuiz } from '@/lib/quiz/generator';
 import type { QuizConfig, QuizQuestion } from '@/types/quiz';
+import { isTrialActive } from '@/lib/plan';
 
 const guestUsage = new Map<string, { count: number; resetAt: number }>();
 const freeUserCooldown = new Map<string, number>();
@@ -54,8 +55,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (user) {
       uid = user.id;
       isGuest = false;
-      const { data: profile } = await supabase.from('profiles').select('plan').eq('id', user.id).single();
-      isPremium = profile?.plan === 'premium' || profile?.plan === 'trial';
+      const { data: profile } = await supabase.from('profiles').select('plan, trial_ends_at').eq('id', user.id).single();
+      isPremium = profile?.plan === 'premium' || isTrialActive(profile);
     }
   }
 
