@@ -19,7 +19,7 @@ export default function ContactPage() {
   }
 
   return (
-    <CompanyLayout title="Contact Us" description="Contact the SolveNCERT team for support, feedback or partnership queries. We respond within 24 hours." canonical="/contact" breadcrumb="Contact">
+    <CompanyLayout title="Contact Us" description="Contact the SolveNCERT team for support, feedback or partnership queries. We respond within 3 business days." canonical="/contact" breadcrumb="Contact">
       <h1>Contact Us</h1>
       <p className="lead">We'd love to hear from you — feedback, suggestions, or support. Click Contact Us and your email app will open with your name filled in, ready to type.</p>
 
@@ -44,7 +44,7 @@ export default function ContactPage() {
         </div>
         <h2 className="font-display font-bold text-[var(--text-primary)] mb-2">Send us a message</h2>
         <p className="text-sm text-[var(--text-muted)] max-w-xl mx-auto">
-          Tell us what's on your mind — a missing answer, a correction, feedback or a partnership idea. We respond within 24 hours.
+          Tell us what's on your mind — a missing answer, a correction, feedback or a partnership idea. We respond within 3 business days.
         </p>
         <button
           type="button"
