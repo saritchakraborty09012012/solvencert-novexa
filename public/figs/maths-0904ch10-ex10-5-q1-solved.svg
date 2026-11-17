@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 410" width="900" height="410" role="img" aria-labelledby="t3 d3">
+  <title id="t3">Completed body-state chart of five people</title>
+  <desc id="d3">Completed 100% stacked horizontal bar chart. Sahana's row is filled with the sample estimate 8 h lying down, 6 h sitting and 10 h standing/moving, i.e. 33.33%, 25% and 41.67% of the bar.</desc>
+
+  <rect x="0" y="0" width="900" height="410" fill="#ffffff"/>
+
+  <!-- legend -->
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="15" fill="#1f2937">
+    <rect x="200" y="14" width="16" height="16" rx="2" fill="#a3a3a3"/>
+    <text x="222" y="28">Lying down</text>
+    <rect x="340" y="14" width="16" height="16" rx="2" fill="#e53935"/>
+    <text x="362" y="28">Sitting</text>
+    <rect x="446" y="14" width="16" height="16" rx="2" fill="#4472c4"/>
+    <text x="468" y="28">Standing/Moving around, etc.</text>
+  </g>
+
+  <!-- gridlines + x axis labels (0-100%, every 25%) -->
+  <g stroke="#9ca3af" stroke-width="1">
+    <line x1="170" y1="58" x2="170" y2="352" stroke="#6b7280" stroke-width="1.4"/>
+    <line x1="335" y1="58" x2="335" y2="352"/>
+    <line x1="500" y1="58" x2="500" y2="352"/>
+    <line x1="665" y1="58" x2="665" y2="352"/>
+    <line x1="830" y1="58" x2="830" y2="352"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="14" fill="#374151" text-anchor="middle">
+    <text x="170" y="374">0%</text>
+    <text x="335" y="374">25%</text>
+    <text x="500" y="374">50%</text>
+    <text x="665" y="374">75%</text>
+    <text x="830" y="374">100%</text>
+  </g>
+
+  <!-- category labels -->
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#1f2937" text-anchor="end">
+    <text x="158" y="92">Pavani</text>
+    <text x="158" y="110">(Patient)</text>
+    <text x="158" y="148">Raghu</text>
+    <text x="158" y="166">(Nurse)</text>
+    <text x="158" y="204">Zakir</text>
+    <text x="158" y="222">(Teacher)</text>
+    <text x="158" y="260">Sahana</text>
+    <text x="158" y="278">(Student)</text>
+    <text x="158" y="316">Julie</text>
+    <text x="158" y="334">(________)</text>
+  </g>
+
+  <!-- Pavani: 20/24=83.33%, 3/24=12.50%, 1/24=4.17% -->
+  <g stroke="#ffffff" stroke-width="1">
+    <rect x="170" y="74" width="550" height="42" fill="#a3a3a3"/>
+    <rect x="720" y="74" width="82.5" height="42" fill="#e53935"/>
+    <rect x="802.5" y="74" width="27.5" height="42" fill="#4472c4"/>
+  </g>
+
+  <!-- Raghu: 7/24=29.17%, 4/24=16.67%, 13/24=54.17% -->
+  <g stroke="#ffffff" stroke-width="1">
+    <rect x="170" y="130" width="192.5" height="42" fill="#a3a3a3"/>
+    <rect x="362.5" y="130" width="110" height="42" fill="#e53935"/>
+    <rect x="472.5" y="130" width="357.5" height="42" fill="#4472c4"/>
+  </g>
+
+  <!-- Zakir: 8/24=33.33%, 6/24=25%, 10/24=41.67% -->
+  <g stroke="#ffffff" stroke-width="1">
+    <rect x="170" y="186" width="220" height="42" fill="#a3a3a3"/>
+    <rect x="390" y="186" width="165" height="42" fill="#e53935"/>
+    <rect x="555" y="186" width="275" height="42" fill="#4472c4"/>
+  </g>
+
+  <!-- Sahana (sample estimate 8, 6, 10): 33.33%, 25%, 41.67% -->
+  <g stroke="#ffffff" stroke-width="1">
+    <rect x="170" y="242" width="220" height="42" fill="#a3a3a3"/>
+    <rect x="390" y="242" width="165" height="42" fill="#e53935"/>
+    <rect x="555" y="242" width="275" height="42" fill="#4472c4"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="bold" text-anchor="middle">
+    <text x="280" y="269" fill="#1f2937">8 h</text>
+    <text x="472.5" y="269" fill="#ffffff">6 h</text>
+    <text x="692.5" y="269" fill="#ffffff">10 h</text>
+  </g>
+
+  <!-- Julie: 8/24=33.33%, 10/24=41.67%, 6/24=25% -->
+  <g stroke="#ffffff" stroke-width="1">
+    <rect x="170" y="298" width="220" height="42" fill="#a3a3a3"/>
+    <rect x="390" y="298" width="275" height="42" fill="#e53935"/>
+    <rect x="665" y="298" width="165" height="42" fill="#4472c4"/>
+  </g>
+
+  <text x="450" y="400" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic" fill="#6b7280" text-anchor="middle">Sahana's row completed with the sample estimate 8, 6, 10 (total 24 h); every bar adds to 100%.</text>
+</svg>

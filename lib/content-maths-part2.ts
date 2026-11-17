@@ -281,6 +281,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "How Quantities Combine: Understanding Data",
     "slug": "how-quantities-combine-understanding-data",
     "code": "0904ch10",
+    "beta": true,
     "exercises": [
       {
         "id": "ex10.1",
@@ -475,10 +476,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "The table records daily average hours for five people spent lying down, sitting, and standing/moving: Pavani (20,3,1), Raghu (7,4,13), Zakir (8,6,10), Sahana (student, to be estimated), Julie (8,10,6). (i) Make a reasonable 24-hour estimate for Sahana. (ii) Guess Julie’s work based on the data. (iii) Complete a 100% stacked bar chart.",
+            "text": "The smart watch data of 5 people was tracked from Monday to Friday. The recorded data tells us how many hours each person spent lying down, sitting, and standing or moving around, etc., as shown in the following table.\n\n**Table 10.3:** Average number of hours spent per day (Monday–Friday) lying down, sitting, and standing or moving around, etc., of 5 people\n\n| | Lying down | Sitting | Standing or Moving around etc. |\n|---|---|---|---|\n| Pavani (Patient) | 20 | 3 | 1 |\n| Raghu (Nurse) | 7 | 4 | 13 |\n| Zakir (Teacher) | 8 | 6 | 10 |\n| Sahana (Student) | | | |\n| Julie (________) | 8 | 10 | 6 |\n\n(i) How much time does Sahana spend per day in each of these body-states? Make a reasonable guess and fill her row in the table.\n\n(ii) Guess what activity or work Julie could be engaged in based on the data. Find out what your classmates' guesses are.\n\n(iii) Complete the chart below based on the tabular data.\n\n![100% stacked bar chart of the body-state data; Sahana's bar is left blank to be completed](/figs/maths-0904ch10-ex10-5-q1.svg)",
             "answer": {
-              "answerKey": "(i) Example estimate for Sahana: 8 h lying down, 6 h sitting, 10 h standing/moving. (ii) Julie may have a desk-based or seated occupation with considerable rest; guesses can vary. (iii) In order (lying, sitting, moving): Pavani 83.33%, 12.50%, 4.17%; Raghu 29.17%, 16.67%, 54.17%; Zakir 33.33%, 25.00%, 41.67%; Sahana (sample) 33.33%, 25.00%, 41.67%; Julie 33.33%, 41.67%, 25.00%.",
-              "schoolMethod": "**(i) Sahana’s estimate.** One reasonable illustrative row is 8 h lying down, 6 h sitting and 10 h standing/moving. The total is 8+6+10=24 hours. Many other estimates are possible, but the three entries should add to 24.\n\n**(ii) Julie’s possible work.** She spends 10 hours sitting, compared with 8 hours lying down and 6 hours standing/moving. A plausible guess is a desk-based or seated job with substantial rest; this is only an inference from the table, not a definite identification.\n\n**(iii) 100% stacked bars.** Divide each time by 24 and multiply by 100%. The segment percentages (lying down, sitting, standing/moving) are:\n\n- **Pavani:** 20/24=83.33%, 3/24=12.50%, 1/24=4.17%.\n- **Raghu:** 7/24=29.17%, 4/24=16.67%, 13/24=54.17%.\n- **Zakir:** 8/24=33.33%, 6/24=25.00%, 10/24=41.67%.\n- **Sahana (sample row):** 8/24=33.33%, 6/24=25.00%, 10/24=41.67%.\n- **Julie:** 8/24=33.33%, 10/24=41.67%, 6/24=25.00%.\n\nDraw five equal-length bars from 0% to 100%, and split each bar in this order using the percentages above. Rounded percentages may total 99.99% or 100.01%; use the exact hour fractions to draw the segments."
+              "answerKey": "(i) Sample row for Sahana: 8 h lying down, 6 h sitting, 10 h standing/moving (the three entries must total 24 h; any reasonable row summing to 24 is acceptable). (ii) Julie's largest block is 10 h of sitting (≈ 41.7% of the day) — likely seated work such as a desk/office job; guesses may vary. (iii) Percentages (lying down, sitting, standing/moving): Pavani 83.33%, 12.50%, 4.17%; Raghu 29.17%, 16.67%, 54.17%; Zakir 33.33%, 25.00%, 41.67%; Sahana (sample) 33.33%, 25.00%, 41.67%; Julie 33.33%, 41.67%, 25.00%.",
+              "schoolMethod": "**Given.** Table 10.3 records the average hours per day (Monday–Friday) spent in three body-states — lying down, sitting, and standing or moving around — for five people. The three entries of every row must add up to **24 hours**, since a full day has 24 hours.\n\nCheck for the given rows: 20 + 3 + 1 = 24 ✓, 7 + 4 + 13 = 24 ✓, 8 + 6 + 10 = 24 ✓, 8 + 10 + 6 = 24 ✓.\n\n**(i) Sahana's row (reasonable guess).** Sahana is a student. A reasonable split of her 24-hour day is:\n\n- Lying down (sleep and rest): **8 h**\n- Sitting (classroom, study, meals): **6 h**\n- Standing or moving around (school commute, games, chores): **10 h**\n\nCheck: 8 + 6 + 10 = **24 h** ✓, so her completed row is\n\n| | Lying down | Sitting | Standing or Moving around etc. |\n|---|---|---|---|\n| Sahana (Student) | 8 | 6 | 10 |\n\n*Note:* This is only an estimate — any three non-negative numbers that add to 24 are acceptable, provided they suit a student's day.\n\n**(ii) Julie's activity (inference).** Julie's row is 8 h lying down, 10 h sitting and 6 h moving around. Her **largest time block is 10 hours of sitting**: 10/24 × 100% ≈ **41.7% of her whole day**, which is more than her lying-down time (8 h ≈ 33.3%) and her moving time (6 h = 25%). A person who spends the biggest part of the day seated is probably engaged in **seated work** — for example, a desk or office job, working on a computer, tailoring, or work at a counter. This is only an inference from the table; different classmates may guess differently and no single guess can be confirmed without more information.\n\n**(iii) Completing the 100% stacked bar chart.** In a 100% stacked bar chart every bar has the same total length (100%), and it is divided into segments proportional to the three times. **Formula:** segment percentage = (hours ÷ 24) × 100%.\n\nPercentage of each segment (in the order lying down, sitting, standing/moving):\n\n- **Pavani:** 20/24 × 100 = 83.33%, 3/24 × 100 = 12.50%, 1/24 × 100 ≈ 4.17% (sum = 100%)\n- **Raghu:** 7/24 × 100 = 29.17%, 4/24 × 100 = 16.67%, 13/24 × 100 = 54.17% (sum = 100.01%, due to rounding)\n- **Zakir:** 8/24 × 100 = 33.33%, 6/24 × 100 = 25.00%, 10/24 × 100 = 41.67% (sum = 100%)\n- **Sahana (from (i)):** 8/24 × 100 = 33.33%, 6/24 × 100 = 25.00%, 10/24 × 100 = 41.67% (sum = 100%)\n- **Julie:** 8/24 × 100 = 33.33%, 10/24 × 100 = 41.67%, 6/24 × 100 = 25.00% (sum = 100%)\n\nSo each of the five bars is drawn from 0% to 100% and cut into three segments in this order with the percentages above (Pavani's bar is almost entirely grey; Raghu's bar is more than half blue; Zakir's and Sahana's bars are exactly one-third grey, one-quarter red, the rest blue; Julie's bar is one-third grey, about five-twelfths red, one-quarter blue).\n\n![Completed 100% stacked bar chart; Sahana's bar is filled with the sample row 8, 6, 10](/figs/maths-0904ch10-ex10-5-q1-solved.svg)\n\n*Tip for drawing:* when rounded percentages are added, the total may come to 99.99% or 100.01% because of rounding (e.g. Raghu's row). Mark the segment boundaries using the exact hour fractions (x/24 of the bar length), and the three segments will always fit the bar exactly."
             }
           }
         ]
@@ -807,6 +808,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "The World of Algorithms",
     "slug": "the-world-of-algorithms",
     "code": "0904ch11",
+    "beta": true,
     "exercises": [
       {
         "id": "ex11.1",
@@ -1018,6 +1020,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "Quadrilaterals",
     "slug": "quadrilaterals",
     "code": "0904ch12",
+    "beta": true,
     "exercises": [
       {
         "id": "ex12.1",
@@ -1529,6 +1532,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "Two Variables, One Line",
     "slug": "two-variables-one-line",
     "code": "0904ch13",
+    "beta": true,
     "exercises": [
       {
         "id": "ex13.1",
@@ -2132,6 +2136,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "Math of Space: Surface Area and Volume",
     "slug": "math-of-space-surface-area-and-volume",
     "code": "0904ch14",
+    "beta": true,
     "exercises": [
       {
         "id": "ex14.1",
