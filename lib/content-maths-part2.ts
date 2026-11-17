@@ -294,27 +294,27 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The average score of students on a test in Section A is 72 and that of students in Section B is 76. What is the combined average of both the sections given that Section A has 30 students and Section B has 25 students?",
             "answer": {
               "answerKey": "73.82 marks approximately.",
-              "schoolMethod": "Combined total of marks = 30×72 + 25×76 = 2160 + 1900 = 4060.\nTotal students = 30 + 25 = 55.\n\nCombined average = 4060/55 = 73.818… ≈ **73.82 marks**."
+              "schoolMethod": "Combined total of marks = 30×72 + 25×76 = 2160 + 1900 = 4060.\nTotal students = 30 + 25 = 55.\n\nCombined average = $\\frac{4060}{55}$ = 73.818… ≈ **73.82 marks**."
             }
           },
           {
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "A farmer mixes three equal quantities of fertilisers. The first one contains 1/10 nitrogen, the second contains 9/50 nitrogen, and the third contains 3/60 nitrogen. What is the fraction of nitrogen in the mixture?",
+            "text": "A farmer mixes three equal quantities of fertilisers. The first one contains $\\frac{1}{10}$ nitrogen, the second contains $\\frac{9}{50}$ nitrogen, and the third contains $\\frac{3}{60}$ nitrogen. What is the fraction of nitrogen in the mixture?",
             "answer": {
-              "answerKey": "11/100 = 11%.",
-              "schoolMethod": "The quantities are equal, so the nitrogen fraction is the mean of the three fractions.\n\nNitrogen fraction = [(1/10) + (9/50) + (3/60)]/3 = [(30 + 54 + 15)/300]/3 = (99/300)/3 = 33/100 ÷ 3 = **11/100**."
+              "answerKey": "$\\frac{11}{100}$ = 11%.",
+              "schoolMethod": "The quantities are equal, so the nitrogen fraction is the mean of the three fractions.\n\nNitrogen fraction = ($\\frac{1}{10}$ + $\\frac{9}{50}$ + $\\frac{3}{60}$) ÷ 3 = $\\frac{99}{300}$ ÷ 3 = **$\\frac{11}{100}$**."
             }
           },
           {
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "(Śrīdhārācārya, Pāṭīgaṇita, c. 750 CE) In ancient India, Varṇa was the measure of gold purity. A purity of 16 varṇa meant pure gold; in general, a purity of k varṇa meant that the gold-alloy was k/16 gold and the rest impurities. (Now the term used is karat; 16 Varṇa = 24 karat.) Suppose a goldsmith melts together three pieces of gold: 9 units at 12 varṇa, 5 units at 10 varṇa, and 17 units at 11 varṇa. Find the purity in varṇa of the combined gold.",
+            "text": "(Śrīdhārācārya, Pāṭīgaṇita, c. 750 CE) In ancient India, Varṇa was the measure of gold purity. A purity of 16 varṇa meant pure gold; in general, a purity of k varṇa meant that the gold-alloy was $\\frac{k}{16}$ gold and the rest impurities. (Now the term used is karat; 16 Varṇa = 24 karat.) Suppose a goldsmith melts together three pieces of gold: 9 units at 12 varṇa, 5 units at 10 varṇa, and 17 units at 11 varṇa. Find the purity in varṇa of the combined gold.",
             "answer": {
-              "answerKey": "345/31 ≈ 11.13 varṇa.",
-              "schoolMethod": "Total pure-gold equivalent = 9×12 + 5×10 + 17×11 = 108 + 50 + 187 = 345.\nTotal alloy = 9 + 5 + 17 = 31 units.\n\nCombined purity = 345/31 = **11.129… ≈ 11.13 varṇa**."
+              "answerKey": "$\\frac{345}{31}$ ≈ 11.13 varṇa.",
+              "schoolMethod": "Total pure-gold equivalent = 9×12 + 5×10 + 17×11 = 108 + 50 + 187 = 345.\nTotal alloy = 9 + 5 + 17 = 31 units.\n\nCombined purity = $\\frac{345}{31}$ = **11.129… ≈ 11.13 varṇa**."
             }
           },
           {
@@ -323,8 +323,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "The average rainfall per day in the months of May, June, and July in a certain location are 3.5 mm, 10 mm and 8.7 mm respectively. Write an expression that gives their combined average.",
             "answer": {
-              "answerKey": "(31×3.5 + 30×10 + 31×8.7)/92 ≈ 7.37 mm.",
-              "schoolMethod": "May, June and July have 31, 30 and 31 days. The combined average must weight each monthly average by the number of days.\n\nCombined mean = (31×3.5 + 30×10 + 31×8.7)/(31+30+31) = 678.2/92 ≈ **7.37 mm per day**."
+              "answerKey": "$\\frac{31×3.5 + 30×10 + 31×8.7}{92}$ ≈ 7.37 mm.",
+              "schoolMethod": "May, June and July have 31, 30 and 31 days. The combined average must weight each monthly average by the number of days.\n\nCombined mean = $\\frac{31×3.5 + 30×10 + 31×8.7}{31+30+31}$ = $\\frac{678.2}{92}$ ≈ **7.37 mm per day**."
             }
           },
           {
@@ -334,7 +334,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Calculate the concentration of spice mix in these two scenarios. (i) A 100 mL kashayam/kadha with 5% spice mix, a 200 mL one with 10% spice mix, and a 300 mL one with 15% spice mix are combined. (ii) A 300 mL kashayam/kadha with 5% spice mix, a 200 mL one with 10% spice mix, and a 100 mL one with 15% spice mix are mixed.",
             "answer": {
               "answerKey": "(i) 11.67%; (ii) 8.33%.",
-              "schoolMethod": "(i) Spice amount = 100(0.05)+200(0.10)+300(0.15)=5+20+45=70 mL. Total volume = 600 mL. Concentration = 70/600×100% = **11.67%**.\n\n(ii) Spice amount = 300(0.05)+200(0.10)+100(0.15)=15+20+15=50 mL. Concentration = 50/600×100% = **8.33%**."
+              "schoolMethod": "(i) Spice amount = 100(0.05)+200(0.10)+300(0.15)=5+20+45=70 mL. Total volume = 600 mL. Concentration = $\\frac{70}{600}$×100% = **11.67%**.\n\n(ii) Spice amount = 300(0.05)+200(0.10)+100(0.15)=15+20+15=50 mL. Concentration = $\\frac{50}{600}$×100% = **8.33%**."
             }
           }
         ]
@@ -347,10 +347,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Savitri’s marks in Kashmiri are as follows: 35 out of 50 in internal tests, 44 out of 60 in the project, and 80 out of 100 in the final exam. The annual percentage score is calculated by combining the internals, project, and final exam in the ratio 3 : 4 : 5. Which of the following expression(s) gives her annual score (as a percentage) in Kashmiri?\n(i) $\\frac{35 \\times 3 + 44 \\times 4 + 80 \\times 5}{3 + 4 + 5}$\n(ii) $\\frac{(35/100) \\times 3 + (44/100) \\times 4 + (80/100) \\times 5}{3 + 4 + 5}$\n(iii) $\\frac{(35/50) \\times 3 + (44/60) \\times 4 + (80/100) \\times 5}{3 + 4 + 5} \\times 100$\n(iv) $\\frac{(35/50 \\times 100) \\times 3 + (44/60 \\times 100) \\times 4 + (80/100 \\times 100) \\times 5}{3 + 4 + 5}$",
+            "text": "Savitri’s marks in Kashmiri are as follows: 35 out of 50 in internal tests, 44 out of 60 in the project, and 80 out of 100 in the final exam. The annual percentage score is calculated by combining the internals, project, and final exam in the ratio 3 : 4 : 5. Which of the following expression(s) gives her annual score (as a percentage) in Kashmiri?\n(i) $\\frac{35 \\times 3 + 44 \\times 4 + 80 \\times 5}{3 + 4 + 5}$\n(ii) $\\frac{(\\frac{35}{100}) \\times 3 + (\\frac{44}{100}) \\times 4 + (\\frac{80}{100}) \\times 5}{3 + 4 + 5}$\n(iii) $\\frac{(\\frac{35}{50}) \\times 3 + (\\frac{44}{60}) \\times 4 + (\\frac{80}{100}) \\times 5}{3 + 4 + 5} \\times 100$\n(iv) $\\frac{(\\frac{35}{50} \\times 100) \\times 3 + (\\frac{44}{60} \\times 100) \\times 4 + (\\frac{80}{100} \\times 100) \\times 5}{3 + 4 + 5}$",
             "answer": {
               "answerKey": "Expressions (iii) and (iv) are correct. Her annual percentage is approximately 75.28%.",
-              "schoolMethod": "Internal tests: (35/50)×100 = 70%.\nProject: (44/60)×100 = 73⅓%.\nFinal exam: (80/100)×100 = 80%.\n\nWeighted percentage\n= [3(70) + 4(73⅓) + 5(80)]/(3+4+5)\n= 903⅓/12\n= 75.277…% ≈ **75.28%**.\n\nSo (iii) and (iv) only are correct. [(i) uses raw marks with different maxima; (ii) wrongly takes 100 as the maximum of every component.]"
+              "schoolMethod": "Internal tests: ($\\frac{35}{50}$)×100 = 70%.\nProject: ($\\frac{44}{60}$)×100 = 73⅓%.\nFinal exam: ($\\frac{80}{100}$)×100 = 80%.\n\nWeighted percentage\n= [3(70) + 4(73⅓) + 5(80)]/(3+4+5)\n= $\\frac{903⅓}{12}$\n= 75.277…% ≈ **75.28%**.\n\nSo (iii) and (iv) only are correct. [(i) uses raw marks with different maxima; (ii) wrongly takes 100 as the maximum of every component.]"
             }
           }
         ]
@@ -366,7 +366,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A stationery shop owner made ₹8000 selling books, of which 30% is the profit amount, and ₹1000 selling book covers, of which 50% is the profit amount. What is the percentage of profit on the total sales?",
             "answer": {
               "answerKey": "32.22% (taking profit percentages as a fraction of sales).",
-              "schoolMethod": "Profit from books = 30% of ₹8,000 = ₹2,400. Profit from covers = 50% of ₹1,000 = ₹500.\nTotal sales = ₹9,000; total profit = ₹2,900.\n\nProfit percentage = (2900/9000)×100% = **32.22%**."
+              "schoolMethod": "Profit from books = 30% of ₹8,000 = ₹2,400. Profit from covers = 50% of ₹1,000 = ₹500.\nTotal sales = ₹9,000; total profit = ₹2,900.\n\nProfit percentage = ($\\frac{2900}{9000}$)×100% = **32.22%**."
             }
           },
           {
@@ -376,7 +376,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A white stork’s migration is tracked. The average daily distance travelled, calculated over 20 days, is 44.5 km. On the 21st day, it flew 55 km. What is the average daily distance travelled over these 21 days? Make a guess before you calculate.",
             "answer": {
               "answerKey": "45 km per day.",
-              "schoolMethod": "Distance in first 20 days = 20×44.5 = 890 km.\nTotal for 21 days = 890+55 = 945 km.\nAverage = 945/21 = **45 km per day**. The new average rises slightly because 55 km exceeds the previous average."
+              "schoolMethod": "Distance in first 20 days = 20×44.5 = 890 km.\nTotal for 21 days = 890+55 = 945 km.\nAverage = $\\frac{945}{21}$ = **45 km per day**. The new average rises slightly because 55 km exceeds the previous average."
             }
           },
           {
@@ -386,17 +386,17 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A 600 mL solution with 5% salt is mixed with a 300 mL solution with 8% sugar. What are the concentrations of salt and sugar in the mixture?\n(i) Salt: 5%, Sugar: 8%\n(ii) Salt: 13%, Sugar: 3%\n(iii) Salt: 6%, Sugar: 6%\n(iv) Salt: 5.55%, Sugar: 8.88%\n(v) Salt: 3.33%, Sugar: 2.67%\n(vi) Salt: 4.1%, Sugar: 7.08%",
             "answer": {
               "answerKey": "Salt = 3⅓%; sugar = 2⅔% (option v).",
-              "schoolMethod": "Salt amount = 5% of 600 = 30 mL. Sugar amount = 8% of 300 = 24 mL. Total mixture = 900 mL.\nSalt concentration = 30/900×100% = **3.33%**. Sugar concentration = 24/900×100% = **2.67%**. Therefore option (v) is correct."
+              "schoolMethod": "Salt amount = 5% of 600 = 30 mL. Sugar amount = 8% of 300 = 24 mL. Total mixture = 900 mL.\nSalt concentration = $\\frac{30}{900}$×100% = **3.33%**. Sugar concentration = $\\frac{24}{900}$×100% = **2.67%**. Therefore option (v) is correct."
             }
           },
           {
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "At a panipuri (golgappa) stall, the concentration of spice in the pani (spiced water) was 8%. Many customers complained that it was too spicy. What quantity of regular water should be mixed into the 10 litres of pani so that the spice level is reduced to (3/4)th of the original concentration?",
+            "text": "At a panipuri (golgappa) stall, the concentration of spice in the pani (spiced water) was 8%. Many customers complained that it was too spicy. What quantity of regular water should be mixed into the 10 litres of pani so that the spice level is reduced to ($\\frac{3}{4}$)th of the original concentration?",
             "answer": {
-              "answerKey": "10/3 L = 3⅓ L.",
-              "schoolMethod": "Spice initially = 8% of 10 = 0.8 L-equivalent. The target concentration is (3/4)×8% = 6%. Let x L of water be added.\n\n0.8/(10+x)=0.06 ⇒ 0.8=0.6+0.06x ⇒ x=0.2/0.06=**10/3 L = 3⅓ L**."
+              "answerKey": "$\\frac{10}{3}$ L = 3⅓ L.",
+              "schoolMethod": "Spice initially = 8% of 10 = 0.8 L-equivalent. The target concentration is ($\\frac{3}{4}$)×8% = 6%. Let x L of water be added.\n\n$\\frac{0.8}{10+x}$=0.06 ⇒ 0.8=0.6+0.06x ⇒ x=$\\frac{0.2}{0.06}$=**$\\frac{10}{3}$ L = 3⅓ L**."
             }
           },
           {
@@ -406,7 +406,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A physical fitness evaluation is being undertaken. The final marks are calculated by combining the marks for strength, flexibility, and agility in the ratio 4 : 5 : 6. Rashi has scored 60, 65, and 70. Keerthi has scored 55, 65, and 75 respectively.\n(i) Find out whose total is more without calculating.\n(ii) What are their final marks?",
             "answer": {
               "answerKey": "Keerthi scores higher: Rashi = 65⅔; Keerthi = 66⅓.",
-              "schoolMethod": "(i) Compared with Rashi, Keerthi has 5 fewer strength marks (weight 4), equal flexibility marks, and 5 more agility marks (weight 6). The gain 5×6 = 30 exceeds the loss 5×4 = 20, so Keerthi scores higher.\n\n(ii) Rashi = [4(60)+5(65)+6(70)]/15 = 985/15 = **65⅔**.\nKeerthi = [4(55)+5(65)+6(75)]/15 = 995/15 = **66⅓**."
+              "schoolMethod": "(i) Compared with Rashi, Keerthi has 5 fewer strength marks (weight 4), equal flexibility marks, and 5 more agility marks (weight 6). The gain 5×6 = 30 exceeds the loss 5×4 = 20, so Keerthi scores higher.\n\n(ii) Rashi = [4(60)+5(65)+6(70)]/15 = $\\frac{985}{15}$ = **65⅔**.\nKeerthi = [4(55)+5(65)+6(75)]/15 = $\\frac{995}{15}$ = **66⅓**."
             }
           },
           {
@@ -416,7 +416,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A restaurant collected ratings from 10 customers on a scale of 1 to 5. The resulting data is shown in the table below.\n\n| | 5 | 4 | 3 | 2 | 1 |\n|---|---|---|---|---|---|\n| Food | 5 | 3 | 2 | 0 | 0 |\n| Ambience | 0 | 4 | 5 | 1 | 0 |\n| Service | 1 | 2 | 2 | 4 | 1 |\n\nWhat is the average rating if the metrics are combined with the weights food : ambience : service = 6 : 5 : 4?",
             "answer": {
               "answerKey": "Food: 4.3; ambience: 3.3; service: 2.8. With aspect weights 6:5:4, the overall weighted rating is 3.57 (approximately).",
-              "schoolMethod": "For each aspect, multiply every rating by its frequency, add these products and divide by the 10 customers.\n\n**Food:** (5×5+4×3+3×2)/10 = (25+12+6)/10 = **4.3**.\n\n**Ambience:** (5×0+4×4+3×5+2×1+1×0)/10 = (16+15+2)/10 = **3.3**.\n\n**Service:** (5×1+4×2+3×2+2×4+1×1)/10 = (5+8+6+8+1)/10 = **2.8**.\n\nNow apply weights 6, 5 and 4 to food, ambience and service: overall rating = [6(4.3)+5(3.3)+4(2.8)]/(6+5+4) = (25.8+16.5+11.2)/15 = 53.5/15 = 3.566… ≈ **3.57 out of 5**."
+              "schoolMethod": "For each aspect, multiply every rating by its frequency, add these products and divide by the 10 customers.\n\n**Food:** $\\frac{5×5+4×3+3×2}{10}$ = $\\frac{25+12+6}{10}$ = **4.3**.\n\n**Ambience:** $\\frac{5×0+4×4+3×5+2×1+1×0}{10}$ = $\\frac{16+15+2}{10}$ = **3.3**.\n\n**Service:** $\\frac{5×1+4×2+3×2+2×4+1×1}{10}$ = $\\frac{5+8+6+8+1}{10}$ = **2.8**.\n\nNow apply weights 6, 5 and 4 to food, ambience and service: overall rating = [6(4.3)+5(3.3)+4(2.8)]/(6+5+4) = $\\frac{25.8+16.5+11.2}{15}$ = $\\frac{53.5}{15}$ = 3.566… ≈ **3.57 out of 5**."
             }
           },
           {
@@ -426,7 +426,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The following table shows the weight data of langurs in an animal facility. Without doing any computations, can you tell whether there are more male langurs or more female langurs? Or are they equal in number?\n\n| | Male langurs | Female langurs | All langurs |\n|---|---|---|---|\n| Average weight | 16.5 kg | 13.8 kg | 14.925 kg |\n| Number of langurs | | | 60 |\n\n(i) Which of the following expression(s) describes the given scenario?\n(a) $\\frac{16.5x + 13.8y}{x + y} = 14.925$\n(b) $\\frac{16.5x + 13.8y}{60} = – 14.925$\n(c) $\\frac{16.5x + 13.8y}{2} = – 14.925$\n(d) $\\frac{16.5x + 13.8y}{16.5 + 13.8} = – 14.925$\n(ii) Find out how many male langurs are present.\n(iii) A female langur weighing 15.2 kg is admitted to the facility. What is the average weight of the female langurs after this?\n(iv) Two male langurs weighing 16.9 kg and 16.1 kg are released from the facility. What is the average weight of the male langurs after this?\n(v) Now, suppose one of the male langurs lost 1 kg of weight. What is the average weight of all the male langurs after this?",
             "answer": {
               "answerKey": "(i) Both (a) and (b). (ii) 25 male langurs. (iii) 13.84 kg average female weight. (iv) 16.5 kg average male weight. (v) 16.46 kg average male weight after the loss. In the book, options (b)–(d) print an en dash before 14.925 instead of '='; this is a printing slip.",
-              "schoolMethod": "Let x be the number of male langurs and y the number of female langurs. The total number is x+y=60.\n\n**(i) Correct expression(s).** The mean formula gives (16.5x+13.8y)/(x+y)=14.925. Since x+y=60, this is also (16.5x+13.8y)/60=14.925. Therefore both (a) and (b) are correct. Options (b)–(d) are printed with an en dash in place of the equals sign before 14.925, which is a printing slip; read as '=', (b) is valid while (c) and (d) use the wrong denominator.\n\n**(ii) Number of males.** Solve x+y=60 and 16.5x+13.8y=14.925(60)=895.5. Put y=60−x: 16.5x+13.8(60−x)=895.5 ⇒ 2.7x=67.5 ⇒ **x=25**. Hence y=60−25=35; there are 25 males and 35 females.\n\n**(iii) New female mean.** Original total female weight = 35×13.8=483 kg. After adding a 15.2 kg female, total weight = 483+15.2=498.2 kg and number =36. Mean =498.2/36=13.838… ≈ **13.84 kg**.\n\n**(iv) New male mean after releasing two males.** Original male total =25×16.5=412.5 kg. Released weight =16.9+16.1=33 kg, so remaining total =412.5−33=379.5 kg for 23 males. Mean =379.5/23=**16.5 kg**. This remains unchanged because the two released males’ average, (16.9+16.1)/2, is exactly 16.5 kg.\n\n**(v) One remaining male loses 1 kg.** The male total becomes 379.5−1=378.5 kg, while the number remains 23. New mean =378.5/23=16.4565… ≈ **16.46 kg**."
+              "schoolMethod": "Let x be the number of male langurs and y the number of female langurs. The total number is x+y=60.\n\n**(i) Correct expression(s).** The mean formula gives $\\frac{16.5x+13.8y}{x+y}$=14.925. Since x+y=60, this is also $\\frac{16.5x+13.8y}{60}$=14.925. Therefore both (a) and (b) are correct. Options (b)–(d) are printed with an en dash in place of the equals sign before 14.925, which is a printing slip; read as '=', (b) is valid while (c) and (d) use the wrong denominator.\n\n**(ii) Number of males.** Solve x+y=60 and 16.5x+13.8y=14.925(60)=895.5. Put y=60−x: 16.5x+13.8(60−x)=895.5 ⇒ 2.7x=67.5 ⇒ **x=25**. Hence y=60−25=35; there are 25 males and 35 females.\n\n**(iii) New female mean.** Original total female weight = 35×13.8=483 kg. After adding a 15.2 kg female, total weight = 483+15.2=498.2 kg and number =36. Mean =$\\frac{498.2}{36}$=13.838… ≈ **13.84 kg**.\n\n**(iv) New male mean after releasing two males.** Original male total =25×16.5=412.5 kg. Released weight =16.9+16.1=33 kg, so remaining total =412.5−33=379.5 kg for 23 males. Mean =$\\frac{379.5}{23}$=**16.5 kg**. This remains unchanged because the two released males’ average, $\\frac{16.9+16.1}{2}$, is exactly 16.5 kg.\n\n**(v) One remaining male loses 1 kg.** The male total becomes 379.5−1=378.5 kg, while the number remains 23. New mean =$\\frac{378.5}{23}$=16.4565… ≈ **16.46 kg**."
             }
           },
           {
@@ -436,7 +436,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Dorjee has collected 1 litre of water from the Dead Sea! Using the information in the table, answer the following questions. A calculator can be used if necessary.\n\n| Water Source | Salinity |\n|---|---|\n| Dead Sea | ≈ 34% |\n| Other seas and oceans | ≈ 3.5% |\n| Ground water | ≈ 0.01% |\n| Purified drinking water | ≈ 0.001% |\n\n(i) What is the salinity of the mixture if he mixes 1 litre of water from the Dead Sea with 2 litres of purified drinking water?\n(ii) Is it possible to mix water from the Dead Sea and purified drinking water to get a mixture with the salinity of groundwater? Why/Why not? What quantity of purified drinking water should Dorjee mix with 1 litre of water from the Dead Sea to get a mixture having the salinity of groundwater?\n(iii) Is it possible to mix water from the Dead Sea and groundwater to get a mixture with the salinity of purified drinking water? Why/Why not? What quantity of groundwater should he mix with 1 litre of water from the Dead Sea to get a mixture having the salinity of purified drinking water?",
             "answer": {
               "answerKey": "(i) ≈11.334%. (ii) Yes; add ≈3,776.67 L purified water to 1 L Dead Sea water. (iii) Impossible: no nonnegative quantity of groundwater can lower the mixture below 0.01%.",
-              "schoolMethod": "Treat the listed salinities as percentages of the mixture.\n\n**(i) Dead Sea + purified water.** Salt-equivalent amount = 1(0.34)+2(0.00001)=0.34002 L. Total volume = 3 L. Salinity = 0.34002/3×100% = **11.334% approximately**.\n\n**(ii) Reach groundwater salinity 0.01%.** Let x litres of purified water be added to the 1 L of Dead Sea water. Using fractions,\n\n(0.34+0.00001x)/(1+x)=0.0001.\n\nThus 0.34+0.00001x=0.0001+0.0001x ⇒ 0.3399=0.00009x ⇒ x≈**3,776.67 L**.\n\n**(iii) Reach purified-water salinity 0.001% using groundwater.** The two starting salinities are 34% and 0.01%. Any mixture containing positive amounts of both has salinity between 0.01% and 34%, so it cannot be as low as 0.001%. Even adding unlimited groundwater only approaches 0.01% from above. Therefore it is **impossible**, and no nonnegative quantity of groundwater satisfies the request."
+              "schoolMethod": "Treat the listed salinities as percentages of the mixture.\n\n**(i) Dead Sea + purified water.** Salt-equivalent amount = 1(0.34)+2(0.00001)=0.34002 L. Total volume = 3 L. Salinity = $\\frac{0.34002}{3}$×100% = **11.334% approximately**.\n\n**(ii) Reach groundwater salinity 0.01%.** Let x litres of purified water be added to the 1 L of Dead Sea water. Using fractions,\n\n$\\frac{0.34+0.00001x}{1+x}$=0.0001.\n\nThus 0.34+0.00001x=0.0001+0.0001x ⇒ 0.3399=0.00009x ⇒ x≈**3,776.67 L**.\n\n**(iii) Reach purified-water salinity 0.001% using groundwater.** The two starting salinities are 34% and 0.01%. Any mixture containing positive amounts of both has salinity between 0.01% and 34%, so it cannot be as low as 0.001%. Even adding unlimited groundwater only approaches 0.01% from above. Therefore it is **impossible**, and no nonnegative quantity of groundwater satisfies the request."
             }
           }
         ]
@@ -479,7 +479,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The smart watch data of 5 people was tracked from Monday to Friday. The recorded data tells us how many hours each person spent lying down, sitting, and standing or moving around, etc., as shown in the following table.\n\n**Table 10.3:** Average number of hours spent per day (Monday–Friday) lying down, sitting, and standing or moving around, etc., of 5 people\n\n| | Lying down | Sitting | Standing or Moving around etc. |\n|---|---|---|---|\n| Pavani (Patient) | 20 | 3 | 1 |\n| Raghu (Nurse) | 7 | 4 | 13 |\n| Zakir (Teacher) | 8 | 6 | 10 |\n| Sahana (Student) | | | |\n| Julie (________) | 8 | 10 | 6 |\n\n(i) How much time does Sahana spend per day in each of these body-states? Make a reasonable guess and fill her row in the table.\n\n(ii) Guess what activity or work Julie could be engaged in based on the data. Find out what your classmates' guesses are.\n\n(iii) Complete the chart below based on the tabular data.\n\n![100% stacked bar chart of the body-state data; Sahana's bar is left blank to be completed](/figs/maths-0904ch10-ex10-5-q1.svg)",
             "answer": {
               "answerKey": "(i) Sample row for Sahana: 8 h lying down, 6 h sitting, 10 h standing/moving (the three entries must total 24 h; any reasonable row summing to 24 is acceptable). (ii) Julie's largest time block is sitting: 10 h > 8 h > 6 h [lying down and moving around respectively] — likely seated work such as a desk/office job. (iii) Percentages (lying down, sitting, standing/moving): Pavani 83.33%, 12.50%, 4.17%; Raghu 29.17%, 16.67%, 54.17%; Zakir 33.33%, 25.00%, 41.67%; Sahana (sample) 33.33%, 25.00%, 41.67%; Julie 33.33%, 41.67%, 25.00%.",
-              "schoolMethod": "**(i) Sahana's row (reasonable guess).** Sahana is a student. A reasonable split of her 24-hour day is:\n\n- Lying down (sleep and rest): **8 h**\n- Sitting (classroom, study, meals): **6 h**\n- Standing or moving around (school commute, games, chores): **10 h**\n\nCheck: 8 + 6 + 10 = **24 h** ✓, so her completed row is\n\n| | Lying down | Sitting | Standing or Moving around etc. |\n|---|---|---|---|\n| Sahana (Student) | 8 | 6 | 10 |\n\n*Note:* This is only an estimate — any three non-negative numbers that add to 24 are acceptable, provided they suit a student's day.\n\n**(ii) Julie's activity.** Julie's row:\n\n- Lying down = 8 h\n- Sitting = 10 h\n- Moving = 6 h\n\nHer **largest time block = sitting**, which is 10 h, i.e. > 8 h > 6 h [lying down and moving around respectively].\n\nA person who spends the biggest part of the day seated is probably engaged in **seated work** — for example, a desk or office job, working on a computer, tailoring, or work at a counter.\n\n**(iii) Completing the 100% stacked bar chart.** In a 100% stacked bar chart every bar has the same total length (100%), and it is divided into segments proportional to the three times.\n\n**Formula:**\n\nsegment percentage = (hours ÷ 24) × 100%\n\nPercentage of each segment (in the order lying down, sitting, standing/moving):\n\n- **Pavani:**\n  - Lying down = $\\frac{20}{24} \\times 100$ = 83.33%\n  - Sitting = $\\frac{3}{24} \\times 100$ = 12.50%\n  - Standing/Moving = $\\frac{1}{24} \\times 100$ ≈ 4.17% (sum = 100%)\n- **Raghu:**\n  - Lying down = $\\frac{7}{24} \\times 100$ = 29.17%\n  - Sitting = $\\frac{4}{24} \\times 100$ = 16.67%\n  - Standing/Moving = $\\frac{13}{24} \\times 100$ = 54.17% (sum = 100.01%, due to rounding)\n- **Zakir:**\n  - Lying down = $\\frac{8}{24} \\times 100$ = 33.33%\n  - Sitting = $\\frac{6}{24} \\times 100$ = 25.00%\n  - Standing/Moving = $\\frac{10}{24} \\times 100$ = 41.67% (sum = 100%)\n- **Sahana (from (i)):**\n  - Lying down = $\\frac{8}{24} \\times 100$ = 33.33%\n  - Sitting = $\\frac{6}{24} \\times 100$ = 25.00%\n  - Standing/Moving = $\\frac{10}{24} \\times 100$ = 41.67% (sum = 100%)\n- **Julie:**\n  - Lying down = $\\frac{8}{24} \\times 100$ = 33.33%\n  - Sitting = $\\frac{10}{24} \\times 100$ = 41.67%\n  - Standing/Moving = $\\frac{6}{24} \\times 100$ = 25.00% (sum = 100%)\n\nCompleting that graph with Sahana's data:\n\n![Completed 100% stacked bar chart; Sahana's bar is filled with the sample row 8, 6, 10](/figs/maths-0904ch10-ex10-5-q1-solved.svg)\n\n*Tip for drawing:* when rounded percentages are added, the total may come to 99.99% or 100.01% because of rounding (e.g. Raghu's row). Mark the segment boundaries using the exact hour fractions (x/24 of the bar length), and the three segments will always fit the bar exactly."
+              "schoolMethod": "**(i) Sahana's row (reasonable guess).** Sahana is a student. A reasonable split of her 24-hour day is:\n\n- Lying down (sleep and rest): **8 h**\n- Sitting (classroom, study, meals): **6 h**\n- Standing or moving around (school commute, games, chores): **10 h**\n\nCheck: 8 + 6 + 10 = **24 h** ✓, so her completed row is\n\n| | Lying down | Sitting | Standing or Moving around etc. |\n|---|---|---|---|\n| Sahana (Student) | 8 | 6 | 10 |\n\n*Note:* This is only an estimate — any three non-negative numbers that add to 24 are acceptable, provided they suit a student's day.\n\n**(ii) Julie's activity.** Julie's row:\n\n- Lying down = 8 h\n- Sitting = 10 h\n- Moving = 6 h\n\nHer **largest time block = sitting**, which is 10 h, i.e. > 8 h > 6 h [lying down and moving around respectively].\n\nA person who spends the biggest part of the day seated is probably engaged in **seated work** — for example, a desk or office job, working on a computer, tailoring, or work at a counter.\n\n**(iii) Completing the 100% stacked bar chart.** In a 100% stacked bar chart every bar has the same total length (100%), and it is divided into segments proportional to the three times.\n\n**Formula:**\n\nsegment percentage = (hours ÷ 24) × 100%\n\nPercentage of each segment (in the order lying down, sitting, standing/moving):\n\n- **Pavani:**\n  - Lying down = $\\frac{20}{24} \\times 100$ = 83.33%\n  - Sitting = $\\frac{3}{24} \\times 100$ = 12.50%\n  - Standing/Moving = $\\frac{1}{24} \\times 100$ ≈ 4.17% (sum = 100%)\n- **Raghu:**\n  - Lying down = $\\frac{7}{24} \\times 100$ = 29.17%\n  - Sitting = $\\frac{4}{24} \\times 100$ = 16.67%\n  - Standing/Moving = $\\frac{13}{24} \\times 100$ = 54.17% (sum = 100.01%, due to rounding)\n- **Zakir:**\n  - Lying down = $\\frac{8}{24} \\times 100$ = 33.33%\n  - Sitting = $\\frac{6}{24} \\times 100$ = 25.00%\n  - Standing/Moving = $\\frac{10}{24} \\times 100$ = 41.67% (sum = 100%)\n- **Sahana (from (i)):**\n  - Lying down = $\\frac{8}{24} \\times 100$ = 33.33%\n  - Sitting = $\\frac{6}{24} \\times 100$ = 25.00%\n  - Standing/Moving = $\\frac{10}{24} \\times 100$ = 41.67% (sum = 100%)\n- **Julie:**\n  - Lying down = $\\frac{8}{24} \\times 100$ = 33.33%\n  - Sitting = $\\frac{10}{24} \\times 100$ = 41.67%\n  - Standing/Moving = $\\frac{6}{24} \\times 100$ = 25.00% (sum = 100%)\n\nCompleting that graph with Sahana's data:\n\n![Completed 100% stacked bar chart; Sahana's bar is filled with the sample row 8, 6, 10](/figs/maths-0904ch10-ex10-5-q1-solved.svg)\n\n*Tip for drawing:* when rounded percentages are added, the total may come to 99.99% or 100.01% because of rounding (e.g. Raghu's row). Mark the segment boundaries using the exact hour fractions ($\\frac{x}{24}$ of the bar length), and the three segments will always fit the bar exactly."
             },
             "solNote": "Sahana's row is only a reasonable guess and Julie's work is only an inference — answers may vary."
           }
@@ -496,7 +496,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "In cricket, the run rate is the average number of runs scored per over. In a T20 match, a team scored 6 runs in the first over making the run rate 6.\n\n(i) In the second over they scored 12 runs. What is the run rate now?\n\n(ii) After Over 19, their run rate was 6. What is the run rate after 20 overs given the team made 12 runs in the last over?",
             "answer": {
               "answerKey": "(i) 9 runs/over; (ii) 6.3 runs/over.",
-              "schoolMethod": "(i) Total after two overs = 6+12=18.\n\nRun rate = 18/2 = **9 runs per over**.\n\n(ii) Runs after 19 overs = 19×6=114.\n\nAfter scoring 12, total =126 in 20 overs.\n\nFinal run rate =126/20=**6.3 runs per over**."
+              "schoolMethod": "(i) Total after two overs = 6+12=18.\n\nRun rate = $\\frac{18}{2}$ = **9 runs per over**.\n\n(ii) Runs after 19 overs = 19×6=114.\n\nAfter scoring 12, total =126 in 20 overs.\n\nFinal run rate =$\\frac{126}{20}$=**6.3 runs per over**."
             }
           },
           {
@@ -505,8 +505,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Five friends who play badminton surveyed the city and collected the price of shuttlecocks across brands and types (Nylon and Feather). The following is the list of the prices, in rupees (₹), that each one compiled.\n\nYusuf: 40(N), 105(N), 383(F), 108(N), 165(F), 116(F)\nSrikanth: 194(N), 85(N), 93(N), 121(N)\nKashvi: 49(N), 297(F), 105(N), 275(F), 40(N)\nPrasanna: 124(N), 333(F), 182(N), 258(F)\nGracy: 220(F), 458(F), 129(F), 183(N)\n\nCan you describe a way they can work together to find the average price of a shuttlecock across types?\n\n(i) Each one calculated the average of the prices they had gathered. Suppose these are $a_y$, $a_s$, $a_k$, $a_p$, $a_g$ respectively. Write an expression that gives the combined average.\n\n(ii) Suppose $a_n$, $a_f$ are the average prices of the nylon shuttlecocks and the feather shuttlecocks, respectively. Write an expression that gives the average price of a shuttlecock. Will this be equal to the answer we got using the method in the previous part?",
             "answer": {
-              "answerKey": "(i) Combined mean = $(6a_y + 4a_s + 5a_k + 4a_p + 4a_g)/23$. (ii) If 13 prices are nylon with mean $a_n$ and 10 are feather with mean $a_f$, the overall mean is $(13a_n + 10a_f)/23$. Using the textbook's listed data, the mean is 4063/23 ≈ ₹176.65.",
-              "schoolMethod": "From the lists in the question, Yusuf collected 6 prices, Srikanth 4, Kashvi 5, Prasanna 4 and Gracy 4 — 23 prices in total.\n\n**(i)** If their means are $a_y$, $a_s$, $a_k$, $a_p$ and $a_g$, the combined mean must weight each mean by how many prices contributed:\n\nCombined mean = $(6a_y + 4a_s + 5a_k + 4a_p + 4a_g)/23$.\n\nUsing the actual prices listed in the question, the total is ₹4,063, so the combined mean is 4063/23 ≈ **₹176.65**.\n\n**(ii)** The 13 nylon prices have mean $a_n=1429/13$≈₹109.92 and the 10 feather prices have mean $a_f=2634/10$=₹263.40. Therefore the combined mean is $(13a_n+10a_f)/23 = 4063/23$ ≈ **₹176.65**. Both approaches agree because they give each individual price equal weight."
+              "answerKey": "(i) Combined mean = $\\frac{6a_y + 4a_s + 5a_k + 4a_p + 4a_g}{23}$. (ii) If 13 prices are nylon with mean $a_n$ and 10 are feather with mean $a_f$, the overall mean is $\\frac{13a_n + 10a_f}{23}$. Using the textbook's listed data, the mean is $\\frac{4063}{23}$ ≈ ₹176.65.",
+              "schoolMethod": "From the lists in the question, Yusuf collected 6 prices, Srikanth 4, Kashvi 5, Prasanna 4 and Gracy 4 — 23 prices in total.\n\n**(i)** If their means are $a_y$, $a_s$, $a_k$, $a_p$ and $a_g$, the combined mean must weight each mean by how many prices contributed:\n\nCombined mean = $\\frac{6a_y + 4a_s + 5a_k + 4a_p + 4a_g}{23}$.\n\nUsing the actual prices listed in the question, the total is ₹4,063, so the combined mean is $\\frac{4063}{23}$ ≈ **₹176.65**.\n\n**(ii)** The 13 nylon prices have mean $a_n=\\frac{1429}{13}$≈₹109.92.\n\nThe 10 feather prices have mean $a_f=\\frac{2634}{10}$=₹263.40.\n\nTherefore the combined mean is\n\n$\\frac{13a_n+10a_f}{23}$\n\n= $\\frac{4063}{23}$ ≈ **₹176.65**. Both approaches agree because they give each individual price equal weight."
             }
           },
           {
@@ -516,7 +516,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Shreyas owns 25 shares at an average ₹150. (i) He buys 10 more at ₹30 each; find his new average. (ii) Vaishnavi owns 5 shares averaging ₹150 and buys x shares at ₹30 each; her new average is ₹70. Find x.",
             "answer": {
               "answerKey": "(i) ₹115.71 approx; (ii) 10 shares.",
-              "schoolMethod": "(i) Initial cost =25×150=₹3,750. New purchase =10×30=₹300. Total cost =₹4,050 for 35 shares. New average =4050/35≈**₹115.71 per share**.\n\n(ii) Vaishnavi’s initial cost =5×150=₹750. Let x be the number bought at ₹30.\n(750+30x)/(5+x)=70 ⇒ 750+30x=350+70x ⇒ 400=40x ⇒ **x=10 shares**."
+              "schoolMethod": "(i) Initial cost =25×150=₹3,750. New purchase =10×30=₹300. Total cost =₹4,050 for 35 shares. New average =$\\frac{4050}{35}$≈**₹115.71 per share**.\n\n(ii) Vaishnavi’s initial cost =5×150=₹750. Let x be the number bought at ₹30.\n$\\frac{750+30x}{5+x}$=70 ⇒ 750+30x=350+70x ⇒ 400=40x ⇒ **x=10 shares**."
             }
           },
           {
@@ -526,7 +526,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A 30-hasta pool is divided into lengths 4,5,6,7,8 hastas with depths 9,7,7,3,2 hastas. Find the mean depth.",
             "answer": {
               "answerKey": "5 hastas.",
-              "schoolMethod": "Mean depth is weighted by the lengths of the sections.\nTotal length =4+5+6+7+8=30 hastas.\nWeighted depth sum =4×9+5×7+6×7+7×3+8×2=36+35+42+21+16=150.\nMean depth =150/30=**5 hastas**."
+              "schoolMethod": "Mean depth is weighted by the lengths of the sections.\nTotal length =4+5+6+7+8=30 hastas.\nWeighted depth sum =4×9+5×7+6×7+7×3+8×2=36+35+42+21+16=150.\nMean depth =$\\frac{150}{30}$=**5 hastas**."
             }
           },
           {
@@ -536,7 +536,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Suvarna owns 1 g gold at an average price ₹15,000/g. Estimate the new average after: (i) 1 g at ₹30,000; (ii) 2 g at ₹30,000; (iii) 1 g at ₹10,000; (iv) 10 g at ₹10,000; (v) 0.5 g at ₹30,000; (vi) 0.5 g at ₹15,000.",
             "answer": {
               "answerKey": "(i) ₹22,500; (ii) ₹25,000; (iii) ₹12,500; (iv) ₹10,454.55; (v) ₹20,000; (vi) ₹15,000 per g.",
-              "schoolMethod": "Treat the original gram as costing ₹15,000. The new average is total cost divided by total grams.\n(i) (15,000+30,000)/2=**₹22,500/g**.\n(ii) (15,000+2×30,000)/3=**₹25,000/g**.\n(iii) (15,000+10,000)/2=**₹12,500/g**.\n(iv) (15,000+10×10,000)/11=115,000/11≈**₹10,454.55/g**.\n(v) (15,000+0.5×30,000)/1.5=30,000/1.5=**₹20,000/g**.\n(vi) (15,000+0.5×15,000)/1.5=22,500/1.5=**₹15,000/g**."
+              "schoolMethod": "Treat the original gram as costing ₹15,000. The new average is total cost divided by total grams.\n(i) $\\frac{15,000+30,000}{2}$=**₹22,500/g**.\n(ii) $\\frac{15,000+2×30,000}{3}$=**₹25,000/g**.\n(iii) $\\frac{15,000+10,000}{2}$=**₹12,500/g**.\n(iv) $\\frac{15,000+10×10,000}{11}$=$\\frac{115,000}{11}$≈**₹10,454.55/g**.\n(v) $\\frac{15,000+0.5×30,000}{1.5}$=$\\frac{30,000}{1.5}$=**₹20,000/g**.\n(vi) $\\frac{15,000+0.5×15,000}{1.5}$=$\\frac{22,500}{1.5}$=**₹15,000/g**."
             }
           },
           {
@@ -586,7 +586,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Triathlon times: Athlete 1 swimming 1:08, cycling 5:00, running 3:15; Athlete 2 1:05, 5:10, 3:35; Athlete 3 1:22, 5:55, 3:50. (i) Choose stacked or 100% stacked bars. (ii) Which questions can a 100% chart answer: first finisher, fraction of Athlete 1’s time cycling, longest running time?",
             "answer": {
               "answerKey": "(i) Stacked bar chart. (ii) Only (b).",
-              "schoolMethod": "(i) Use a **stacked bar chart**, because the total elapsed time matters and must be compared in absolute units. Convert to minutes if needed: Athlete 1 =68+300+195=563 min (9 h 23 min); Athlete 2 =65+310+215=590 min (9 h 50 min); Athlete 3 =82+355+230=667 min (11 h 7 min). Thus Athlete 1 finishes first.\n\n(ii) A 100% chart shows proportions of each athlete’s time, so it answers **(b)**: Athlete 1’s cycling share is 300/563≈53.3%. It does not establish (a), since total durations are lost; nor (c), because a segment’s share cannot by itself tell which athlete had the greatest absolute running time."
+              "schoolMethod": "(i) Use a **stacked bar chart**, because the total elapsed time matters and must be compared in absolute units. Convert to minutes if needed: Athlete 1 =68+300+195=563 min (9 h 23 min); Athlete 2 =65+310+215=590 min (9 h 50 min); Athlete 3 =82+355+230=667 min (11 h 7 min). Thus Athlete 1 finishes first.\n\n(ii) A 100% chart shows proportions of each athlete’s time, so it answers **(b)**: Athlete 1’s cycling share is $\\frac{300}{563}$≈53.3%. It does not establish (a), since total durations are lost; nor (c), because a segment’s share cannot by itself tell which athlete had the greatest absolute running time."
             }
           },
           {
@@ -616,7 +616,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Small-group project: design a weighted rating scheme for a shop, bus trip, tourist spot or clinic. Choose aspects, weights, collect ratings from ten people, calculate means and make a 100% stacked chart.",
             "answer": {
               "answerKey": "Illustrative weighted-rating project included.",
-              "schoolMethod": "**Example: local tourist spot.** Rate cleanliness, accessibility, safety, information/signage and attractions on a 1–5 scale, with weights 3:2:3:1:4 respectively. The weights sum to 13. For a visitor who gives 4, 3, 5, 4, 5, the score is [3(4)+2(3)+3(5)+1(4)+4(5)]/13=53/13≈4.08.\n\nUse the same weighted-mean formula for each of ten visitors, then average their ten scores. For the 100% stacked chart, show each visitor’s ratings as shares of their weighted total or show the proportion of respondents in each rating band per aspect. Report which aspects score highest/lowest and acknowledge that a 1–5 rating may not capture every aspect. This is a complete model; replace sample ratings with the group’s ten responses."
+              "schoolMethod": "**Example: local tourist spot.** Rate cleanliness, accessibility, safety, information/signage and attractions on a 1–5 scale, with weights 3:2:3:1:4 respectively. The weights sum to 13. For a visitor who gives 4, 3, 5, 4, 5, the score is [3(4)+2(3)+3(5)+1(4)+4(5)]/13=$\\frac{53}{13}$≈4.08.\n\nUse the same weighted-mean formula for each of ten visitors, then average their ten scores. For the 100% stacked chart, show each visitor’s ratings as shares of their weighted total or show the proportion of respondents in each rating band per aspect. Report which aspects score highest/lowest and acknowledge that a 1–5 rating may not capture every aspect. This is a complete model; replace sample ratings with the group’s ten responses."
             }
           },
           {
@@ -626,7 +626,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Each student shares their family’s average age and family size. How can the class calculate the average age of all people in all families?",
             "answer": {
               "answerKey": "Weighted average: Σ(family size × family mean age)/Σ(family sizes).",
-              "schoolMethod": "For family i, let nᵢ be the number of members and aᵢ their average age. Their combined ages total nᵢaᵢ. Add all family totals and divide by the total number of people: **class average age = (Σ nᵢaᵢ)/(Σ nᵢ)**. A simple average of the family averages would be wrong unless every family had the same size."
+              "schoolMethod": "For family i, let nᵢ be the number of members and aᵢ their average age. Their combined ages total nᵢaᵢ. Add all family totals and divide by the total number of people: **class average age = $\\frac{\\Sigma n_i a_i}{\\Sigma n_i}$**. A simple average of the family averages would be wrong unless every family had the same size."
             }
           },
           {
@@ -636,7 +636,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "If each weight wᵢ is increased by a constant such as 1, what happens to a weighted average? Justify algebraically.",
             "answer": {
               "answerKey": "It generally changes, moving toward the unweighted mean; it does not have a fixed direction for every data set.",
-              "schoolMethod": "Original weighted mean: μ=Σwᵢxᵢ/Σwᵢ. If each of n weights is increased by c, then μ′=(Σwᵢxᵢ+cΣxᵢ)/(Σwᵢ+nc). This is generally different from μ and can be written as a weighted combination of the old weighted mean and the unweighted mean.\n\nExample: values 10 and 20 with weights 1 and 3 give μ=(10+60)/4=17.5. Increasing both weights by 1 gives μ′=(2×10+4×20)/6=100/6≈16.67. Thus increasing all weights by the same additive constant is not the same as multiplying all weights by a common factor."
+              "schoolMethod": "Original weighted mean: μ=$\\frac{\\Sigma w_i x_i}{\\Sigma w_i}$. If each of n weights is increased by c, then μ′=$\\frac{\\Sigma w_i x_i+c\\Sigma x_i}{\\Sigma w_i+nc}$. This is generally different from μ and can be written as a weighted combination of the old weighted mean and the unweighted mean.\n\nExample: values 10 and 20 with weights 1 and 3 give μ=$\\frac{10+60}{4}$=17.5. Increasing both weights by 1 gives μ′=$\\frac{2×10+4×20}{6}$=$\\frac{100}{6}$≈16.67. Thus increasing all weights by the same additive constant is not the same as multiplying all weights by a common factor."
             }
           },
           {
@@ -887,7 +887,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Describe an algorithm to compute the least common multiple of two positive integers.",
             "answer": {
-              "answerKey": "Compute lcm(m,n)=mn/gcd(m,n).",
+              "answerKey": "Compute lcm(m,n)=$\\frac{mn}{\\gcd(m,n)}$.",
               "schoolMethod": "A correct algorithm is:\n```text\nLCM(m,n):\n    g := GCD(m,n)\n    return (m / g) * n\n```\nHere `GCD` can be Euclid’s division algorithm. Since m and n share exactly their gcd as common prime-factor content, dividing m by g before multiplying by n avoids counting shared factors twice. The answer is the least positive integer divisible by both m and n."
             }
           },
@@ -898,7 +898,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Divisors occur in pairs. (i) How many numbers between 1 and n must be checked to find all divisors in pairs? (ii) Would a gcd algorithm based on paired divisors work as described?",
             "answer": {
               "answerKey": "(i) Check through ⌊√n⌋. (ii) Yes, after ordering/comparing common divisors rather than relying on the last item in an unsorted list.",
-              "schoolMethod": "(i) If j divides n, the paired factor is n/j. At least one of the pair is at most √n, since if both were larger their product would exceed n. Therefore check j=1,2,…,⌊√n⌋. Whenever j divides n, record both j and n/j (record only one copy if j=√n).\n\n(ii) Yes, the common-divisor method still works if the divisors are paired. However, the list may no longer be in increasing order. So one cannot automatically report the rightmost/last common divisor as the gcd; instead compare all common divisors and report the largest, or use a descending search that stops at the first common divisor."
+              "schoolMethod": "(i) If j divides n, the paired factor is $\\frac{n}{j}$. At least one of the pair is at most √n, since if both were larger their product would exceed n. Therefore check j=1,2,…,⌊√n⌋. Whenever j divides n, record both j and $\\frac{n}{j}$ (record only one copy if j=√n).\n\n(ii) Yes, the common-divisor method still works if the divisors are paired. However, the list may no longer be in increasing order. So one cannot automatically report the rightmost/last common divisor as the gcd; instead compare all common divisors and report the largest, or use a descending search that stops at the first common divisor."
             }
           }
         ]
@@ -1120,7 +1120,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "ABCD is a parallelogram with AB≠BC. Show that pairwise intersections of its four angle bisectors form a rectangle. Why assume AB≠BC?",
             "answer": {
               "answerKey": "The four intersection angles are 90°, so the inner quadrilateral is a rectangle; AB≠BC avoids a degenerate rhombus case.",
-              "schoolMethod": "**Proof:** In a parallelogram, each pair of adjacent interior angles is supplementary. Let ∠A=α and ∠B=180°−α. Their internal bisectors make an angle α/2+(180°−α)/2=90°. The same calculation holds at each intersection of adjacent angle bisectors. Thus the quadrilateral formed by the four intersection points has four right angles and is a **rectangle**.\n\nIf AB=BC, the parallelogram is a rhombus. The bisectors of opposite angles then lie along the same diagonals, causing the “four intersection points” to coincide in pairs, so the inner rectangle degenerates. The assumption AB≠BC excludes that case."
+              "schoolMethod": "**Proof:** In a parallelogram, each pair of adjacent interior angles is supplementary. Let ∠A=α and ∠B=180°−α. Their internal bisectors make an angle $\\frac{\\alpha}{2}+\\frac{180^\\circ-\\alpha}{2}$=90°. The same calculation holds at each intersection of adjacent angle bisectors. Thus the quadrilateral formed by the four intersection points has four right angles and is a **rectangle**.\n\nIf AB=BC, the parallelogram is a rhombus. The bisectors of opposite angles then lie along the same diagonals, causing the “four intersection points” to coincide in pairs, so the inner rectangle degenerates. The assumption AB≠BC excludes that case."
             }
           }
         ]
@@ -1136,7 +1136,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "In △ABC, P, Q, R are midpoints of AB, AC, BC. (i) Show △PQR is congruent to △QPA and to two other triangles. (ii) Can △ABC be reconstructed from △PQR?",
             "answer": {
               "answerKey": "All four small triangles are congruent; PQR alone fixes the three side lengths of ABC, but not its orientation (which is irrelevant to congruence).",
-              "schoolMethod": "(i) By the Midpoint Theorem, PQ=BC/2, PR=AC/2 and QR=AB/2. Also AP=PB=AB/2, AQ=QC=AC/2 and BR=RC=BC/2. Thus each of △APQ, △PBR, △QCR and △PQR has side lengths AB/2, AC/2, BC/2 in some order. By **SSS**, all four are congruent.\n\n(ii) Yes, up to congruence: construct a triangle whose sides are twice the corresponding side lengths of △PQR; its side lengths are AB, AC and BC. By SSS, this reconstructed △A′B′C′ is congruent to △ABC."
+              "schoolMethod": "(i) By the Midpoint Theorem, PQ=$\\frac{BC}{2}$, PR=$\\frac{AC}{2}$ and QR=$\\frac{AB}{2}$. Also AP=PB=$\\frac{AB}{2}$, AQ=QC=$\\frac{AC}{2}$ and BR=RC=$\\frac{BC}{2}$. Thus each of △APQ, △PBR, △QCR and △PQR has side lengths $\\frac{AB}{2}$, $\\frac{AC}{2}$, $\\frac{BC}{2}$ in some order. By **SSS**, all four are congruent.\n\n(ii) Yes, up to congruence: construct a triangle whose sides are twice the corresponding side lengths of △PQR; its side lengths are AB, AC and BC. By SSS, this reconstructed △A′B′C′ is congruent to △ABC."
             }
           },
           {
@@ -1156,7 +1156,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "ABCD is a trapezium with AB∥DC and AB≠DC. G and H are the midpoints of AC and BD. Prove GH∥AB. Why assume AB≠DC?",
             "answer": {
               "answerKey": "GH is parallel to both bases; AB≠DC avoids the parallelogram case where G=H.",
-              "schoolMethod": "**Proof:** Draw diagonal AC. In △ABC, G and H are not both midpoints of the same triangle; instead use coordinates or a standard trapezium mid-segment argument. Set A=(0,h), B=(b,h), D=(d,0), C=(d+c,0), where AB=b and DC=c. Then G=((d+c)/2,h/2) and H=((b+d)/2,h/2). They have the same y-coordinate, so **GH∥AB∥DC**.\n\nIf AB=DC while the bases are parallel, ABCD is a parallelogram. Its diagonals bisect each other, so G=H and GH is not a non-zero segment. The condition prevents this degenerate case."
+              "schoolMethod": "**Proof:** Draw diagonal AC. In △ABC, G and H are not both midpoints of the same triangle; instead use coordinates or a standard trapezium mid-segment argument. Set A=(0,h), B=(b,h), D=(d,0), C=(d+c,0), where AB=b and DC=c. Then G=($\\frac{d+c}{2}$,$\\frac{h}{2}$) and H=($\\frac{b+d}{2}$,$\\frac{h}{2}$). They have the same y-coordinate, so **GH∥AB∥DC**.\n\nIf AB=DC while the bases are parallel, ABCD is a parallelogram. Its diagonals bisect each other, so G=H and GH is not a non-zero segment. The condition prevents this degenerate case."
             }
           },
           {
@@ -1166,7 +1166,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Suppose the midpoints of sides AB, BC, CD and DA of a quadrilateral ABCD are P, Q, R and S respectively. (i) Show that PR and QS bisect each other. (ii) Show that if AC = BD, then PR and QS are perpendicular. Is the converse true?",
             "answer": {
               "answerKey": "PR and QS bisect each other. Also, PR ⟂ QS if and only if AC = BD; therefore the converse is true.",
-              "schoolMethod": "**(i) Given:** P, Q, R, S are the midpoints of AB, BC, CD and DA.\n\nBy the Midpoint Theorem in △ABC and △ADC, PQ ∥ AC and PQ=AC/2; similarly SR ∥ AC and SR=AC/2. Hence PQ ∥ SR and PQ=SR. Likewise, QR ∥ BD and QR=BD/2, while PS ∥ BD and PS=BD/2. Therefore PQRS is a parallelogram (both pairs of opposite sides are parallel). The diagonals of a parallelogram bisect each other, so **PR and QS bisect each other**.\n\n**(ii)** If AC=BD, then PQ=AC/2=BD/2=QR. Thus the parallelogram PQRS has equal adjacent sides and is a rhombus. The diagonals of a rhombus are perpendicular, so PR ⟂ QS.\n\n**Converse:** Suppose PR ⟂ QS. Since PR and QS bisect each other, PQRS is a parallelogram whose diagonals are perpendicular; hence it is a rhombus. Thus PQ=QR. Since PQ=AC/2 and QR=BD/2, we obtain AC/2=BD/2, so **AC=BD**. Hence the converse is true."
+              "schoolMethod": "**(i) Given:** P, Q, R, S are the midpoints of AB, BC, CD and DA.\n\nBy the Midpoint Theorem in △ABC and △ADC, PQ ∥ AC and PQ=$\\frac{AC}{2}$; similarly SR ∥ AC and SR=$\\frac{AC}{2}$. Hence PQ ∥ SR and PQ=SR. Likewise, QR ∥ BD and QR=$\\frac{BD}{2}$, while PS ∥ BD and PS=$\\frac{BD}{2}$. Therefore PQRS is a parallelogram (both pairs of opposite sides are parallel). The diagonals of a parallelogram bisect each other, so **PR and QS bisect each other**.\n\n**(ii)** If AC=BD, then PQ=$\\frac{AC}{2}$=$\\frac{BD}{2}$=QR. Thus the parallelogram PQRS has equal adjacent sides and is a rhombus. The diagonals of a rhombus are perpendicular, so PR ⟂ QS.\n\n**Converse:** Suppose PR ⟂ QS. Since PR and QS bisect each other, PQRS is a parallelogram whose diagonals are perpendicular; hence it is a rhombus. Thus PQ=QR. Since PQ=$\\frac{AC}{2}$ and QR=$\\frac{BD}{2}$, we obtain $\\frac{AC}{2}$=$\\frac{BD}{2}$, so **AC=BD**. Hence the converse is true."
             }
           },
           {
@@ -1176,7 +1176,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Suppose PQRS is the Varignon parallelogram of quadrilateral ABCD. (i) Copy only PQRS onto another paper. Show how to reconstruct a congruent copy A′B′C′D′ of ABCD. (ii) Justify that the quadrilateral constructed is congruent to ABCD. (iii) Show that if PQRS is a square, then AC and BD are perpendicular and equal. Prove the converse.",
             "answer": {
               "answerKey": "(i)–(ii) As stated, PQRS alone does not determine a unique congruence class for ABCD, so an arbitrary original quadrilateral cannot always be reconstructed congruently without extra information. (iii) PQRS is a square if and only if AC=BD and AC ⟂ BD.",
-              "schoolMethod": "**(i)–(ii) Important mathematical qualification.** Copying only the Varignon parallelogram PQRS does not, in general, determine a unique quadrilateral ABCD up to congruence. The construction “copy △APS” would require knowing AP and AS or the position of A, but neither is specified by PQRS alone.\n\nA counterexample shows the underdetermination. The square with vertices A=(−2,0), B=(0,2), C=(2,0), D=(0,−2) has midpoint quadrilateral with vertices (−1,1), (1,1), (1,−1), (−1,−1), a square of side 2. The non-square convex quadrilateral A=(−2,0), B=(0,1), C=(2,0), D=(0,−3) has midpoint quadrilateral (−1,0.5), (1,0.5), (1,−1.5), (−1,−1.5), also a square of side 2, yet its side lengths are √5, √5, √13, √13 instead of 2√2, 2√2, 2√2, 2√2. Therefore these two original quadrilaterals are not congruent, although their Varignon parallelograms are congruent. More information (for example, a diagonal-intersection position or one additional appropriate measurement) is needed for a unique reconstruction.\n\n**(iii) Square condition.** By the Midpoint Theorem, adjacent sides of PQRS are parallel to the diagonals AC and BD of ABCD and have lengths AC/2 and BD/2. If PQRS is a square, its adjacent sides are equal and perpendicular, so AC=BD and AC ⟂ BD. Conversely, if AC=BD and AC ⟂ BD, adjacent sides of PQRS are equal and perpendicular. Since PQRS is a parallelogram, it is then a square."
+              "schoolMethod": "**(i)–(ii) Important mathematical qualification.** Copying only the Varignon parallelogram PQRS does not, in general, determine a unique quadrilateral ABCD up to congruence. The construction “copy △APS” would require knowing AP and AS or the position of A, but neither is specified by PQRS alone.\n\nA counterexample shows the underdetermination. The square with vertices A=(−2,0), B=(0,2), C=(2,0), D=(0,−2) has midpoint quadrilateral with vertices (−1,1), (1,1), (1,−1), (−1,−1), a square of side 2. The non-square convex quadrilateral A=(−2,0), B=(0,1), C=(2,0), D=(0,−3) has midpoint quadrilateral (−1,0.5), (1,0.5), (1,−1.5), (−1,−1.5), also a square of side 2, yet its side lengths are √5, √5, √13, √13 instead of 2√2, 2√2, 2√2, 2√2. Therefore these two original quadrilaterals are not congruent, although their Varignon parallelograms are congruent. More information (for example, a diagonal-intersection position or one additional appropriate measurement) is needed for a unique reconstruction.\n\n**(iii) Square condition.** By the Midpoint Theorem, adjacent sides of PQRS are parallel to the diagonals AC and BD of ABCD and have lengths $\\frac{AC}{2}$ and $\\frac{BD}{2}$. If PQRS is a square, its adjacent sides are equal and perpendicular, so AC=BD and AC ⟂ BD. Conversely, if AC=BD and AC ⟂ BD, adjacent sides of PQRS are equal and perpendicular. Since PQRS is a parallelogram, it is then a square."
             }
           }
         ]
@@ -1192,7 +1192,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Justify why the plane cannot be tiled using only regular pentagons.",
             "answer": {
               "answerKey": "Each regular pentagon has interior angle 108°, and no integer multiple of 108° equals 360°.",
-              "schoolMethod": "The interior angle of a regular n-gon is (n−2)×180°/n. For n=5, it is 3×180°/5=**108°**. At a point in a tiling, the angles of the tiles around that point must add to 360°. But 360°/108°=10/3 is not an integer. Three pentagons leave 36° uncovered, while four overlap. Therefore regular pentagons alone cannot tile the plane."
+              "schoolMethod": "The interior angle of a regular n-gon is $\\frac{(n-2)\\times180^\\circ}{n}$. For n=5, it is $\\frac{3\\times180^\\circ}{5}$=**108°**. At a point in a tiling, the angles of the tiles around that point must add to 360°. But $\\frac{360^\\circ}{108^\\circ}$=$\\frac{10}{3}$ is not an integer. Three pentagons leave 36° uncovered, while four overlap. Therefore regular pentagons alone cannot tile the plane."
             }
           },
           {
@@ -1265,20 +1265,20 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": true,
-            "text": "The medians of △ABC meet at centroid M and divide the triangle into six pieces. (i) Show how to assemble these six pieces into three congruent triangles, and find their side lengths. (ii) Repeat the procedure with each assembled triangle and show that the resulting nine triangles have sides AB/3, BC/3 and AC/3. (iii) Show how to cut and reassemble △ABC into two congruent triangles. (Use median AP and then a median of △APB.)",
+            "text": "The medians of △ABC meet at centroid M and divide the triangle into six pieces. (i) Show how to assemble these six pieces into three congruent triangles, and find their side lengths. (ii) Repeat the procedure with each assembled triangle and show that the resulting nine triangles have sides $\\frac{AB}{3}$, $\\frac{BC}{3}$ and $\\frac{AC}{3}$. (iii) Show how to cut and reassemble △ABC into two congruent triangles. (Use median AP and then a median of △APB.)",
             "answer": {
-              "answerKey": "(i) Three congruent triangles with sides 2/3 of the three medians. (ii) Nine congruent triangles, each with side lengths AB/3, BC/3, AC/3. (iii) Three pieces can be reassembled into two congruent triangles.",
-              "schoolMethod": "**(i)** Let P,Q,R be the midpoints of BC, CA, AB. The centroid theorem gives AM=2MP, BM=2MQ and CM=2MR. Rotate △MPB by 180° about P. Since PB=PC, B lands on C and M lands on M′ with P the midpoint of MM′. Because B,P,C are collinear, M,P,M′ are collinear; the moved △MPB joins △MPC to form triangle △MM′C. Its sides are MM′=2MP=AM, M′C=MB and MC. Since MB=2MQ and MC=2MR, the lengths are the three centroid-to-vertex segments AM, BM, CM (equivalently, two-thirds of the corresponding medians). Pair the other two pairs around Q and R in the same way. All three resulting triangles have the same three side lengths, so they are congruent by SSS.\n\n**(ii)** In an assembled triangle from part (i), the three medians have lengths BC/2, CA/2 and AB/2: this follows from the parallelograms formed by the half-turn construction and the midpoint relations. Reapplying part (i) makes the sides of each of its three pieces two-thirds of those medians, namely (2/3)(AB/2)=AB/3, (2/3)(BC/2)=BC/3 and (2/3)(AC/2)=AC/3. Doing this for each of the three assembled triangles produces **nine congruent triangles** with those side lengths.\n\n**(iii)** First cut along median AP, producing △APB and △APC, with P the midpoint of BC. In △APB, let K be the midpoint of AB and draw median PK. Cut along PK. Rotate △PKB by 180° about K: B maps to A, and P maps to P′, with K the midpoint of PP′. The pieces △PKA and the rotated △PKB form △APP′ because P,K,P′ are collinear. Its sides are AP, AP′=BP=PC and PP′=2PK=AC (by the Midpoint Theorem in △ABC). Thus △APP′ and △APC have the same three side lengths AP, PC and AC, so they are congruent by SSS. This gives two congruent triangles after cutting and rearranging the three pieces."
+              "answerKey": "(i) Three congruent triangles with sides $\\frac{2}{3}$ of the three medians. (ii) Nine congruent triangles, each with side lengths $\\frac{AB}{3}$, $\\frac{BC}{3}$, $\\frac{AC}{3}$. (iii) Three pieces can be reassembled into two congruent triangles.",
+              "schoolMethod": "**(i)** Let P,Q,R be the midpoints of BC, CA, AB. The centroid theorem gives AM=2MP, BM=2MQ and CM=2MR. Rotate △MPB by 180° about P. Since PB=PC, B lands on C and M lands on M′ with P the midpoint of MM′. Because B,P,C are collinear, M,P,M′ are collinear; the moved △MPB joins △MPC to form triangle △MM′C. Its sides are MM′=2MP=AM, M′C=MB and MC. Since MB=2MQ and MC=2MR, the lengths are the three centroid-to-vertex segments AM, BM, CM (equivalently, two-thirds of the corresponding medians). Pair the other two pairs around Q and R in the same way. All three resulting triangles have the same three side lengths, so they are congruent by SSS.\n\n**(ii)** In an assembled triangle from part (i), the three medians have lengths $\\frac{BC}{2}$, $\\frac{CA}{2}$ and $\\frac{AB}{2}$: this follows from the parallelograms formed by the half-turn construction and the midpoint relations. Reapplying part (i) makes the sides of each of its three pieces two-thirds of those medians, namely ($\\frac{2}{3}$)($\\frac{AB}{2}$)=$\\frac{AB}{3}$, ($\\frac{2}{3}$)($\\frac{BC}{2}$)=$\\frac{BC}{3}$ and ($\\frac{2}{3}$)($\\frac{AC}{2}$)=$\\frac{AC}{3}$. Doing this for each of the three assembled triangles produces **nine congruent triangles** with those side lengths.\n\n**(iii)** First cut along median AP, producing △APB and △APC, with P the midpoint of BC. In △APB, let K be the midpoint of AB and draw median PK. Cut along PK. Rotate △PKB by 180° about K: B maps to A, and P maps to P′, with K the midpoint of PP′. The pieces △PKA and the rotated △PKB form △APP′ because P,K,P′ are collinear. Its sides are AP, AP′=BP=PC and PP′=2PK=AC (by the Midpoint Theorem in △ABC). Thus △APP′ and △APC have the same three side lengths AP, PC and AC, so they are congruent by SSS. This gives two congruent triangles after cutting and rearranging the three pieces."
             }
           },
           {
             "id": "q7",
             "number": "7",
             "isHard": false,
-            "text": "Let ABCD be a trapezium with AB∥DC. E is the midpoint of AD, and a line through E meets BC at F. (i) If EF∥AB, prove that F is the midpoint of BC and that EF=(AB+CD)/2. (ii) If F is the midpoint of BC, prove that EF∥AB.",
+            "text": "Let ABCD be a trapezium with AB∥DC. E is the midpoint of AD, and a line through E meets BC at F. (i) If EF∥AB, prove that F is the midpoint of BC and that EF=$\\frac{AB+CD}{2}$. (ii) If F is the midpoint of BC, prove that EF∥AB.",
             "answer": {
-              "answerKey": "(i) F is the midpoint of BC and EF=(AB+CD)/2. (ii) EF∥AB.",
-              "schoolMethod": "**(i)** Draw diagonal AC and let EF meet it at G. In △ADC, E is the midpoint of AD and EG∥DC, so by the Converse of the Midpoint Theorem G is the midpoint of AC and EG=DC/2. In △CAB, G is the midpoint of CA and GF∥AB, so F is the midpoint of CB and GF=AB/2. Hence EF=EG+GF=DC/2+AB/2=(AB+CD)/2.\n\n**(ii)** Let M be the midpoint of BD. In △DAB, E and M are the midpoints of DA and DB, so EM∥AB. In △DBC, M and F are the midpoints of DB and BC, so MF∥DC∥AB. Since EM and MF pass through M and are both parallel to AB, they are the same line. Therefore E,M,F are collinear and **EF∥AB**."
+              "answerKey": "(i) F is the midpoint of BC and EF=$\\frac{AB+CD}{2}$. (ii) EF∥AB.",
+              "schoolMethod": "**(i)** Draw diagonal AC and let EF meet it at G. In △ADC, E is the midpoint of AD and EG∥DC, so by the Converse of the Midpoint Theorem G is the midpoint of AC and EG=$\\frac{DC}{2}$. In △CAB, G is the midpoint of CA and GF∥AB, so F is the midpoint of CB and GF=$\\frac{AB}{2}$. Hence EF=EG+GF=$\\frac{DC}{2}$+$\\frac{AB}{2}$=$\\frac{AB+CD}{2}$.\n\n**(ii)** Let M be the midpoint of BD. In △DAB, E and M are the midpoints of DA and DB, so EM∥AB. In △DBC, M and F are the midpoints of DB and BC, so MF∥DC∥AB. Since EM and MF pass through M and are both parallel to AB, they are the same line. Therefore E,M,F are collinear and **EF∥AB**."
             }
           },
           {
@@ -1298,7 +1298,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "ABCD is a trapezium with parallel sides AD=3 cm and BC=5 cm. E and F are the midpoints of the non-parallel sides. Find the ratio of the areas of quadrilaterals AEFD and EBCF.",
             "answer": {
               "answerKey": "Area(AEFD) : Area(EBCF) = 7 : 9.",
-              "schoolMethod": "By the trapezium midpoint theorem, EF∥AD∥BC and EF=(AD+BC)/2=(3+5)/2=4 cm. Let h be the distance between the two parallel sides. Since E and F are midpoints of the non-parallel sides, EF lies halfway between the bases, so each smaller trapezium has height h/2.\n\nArea(AEFD)=½(AD+EF)(h/2)=½(3+4)(h/2)=7h/4.\nArea(EBCF)=½(EF+BC)(h/2)=½(4+5)(h/2)=9h/4.\n\nTherefore the ratio is (7h/4):(9h/4)=**7:9**."
+              "schoolMethod": "By the trapezium midpoint theorem, EF∥AD∥BC and EF=$\\frac{AD+BC}{2}$=$\\frac{3+5}{2}$=4 cm. Let h be the distance between the two parallel sides. Since E and F are midpoints of the non-parallel sides, EF lies halfway between the bases, so each smaller trapezium has height $\\frac{h}{2}$.\n\nArea(AEFD)=½(AD+EF)($\\frac{h}{2}$)=½(3+4)($\\frac{h}{2}$)=7$\\frac{h}{4}$.\nArea(EBCF)=½(EF+BC)($\\frac{h}{2}$)=½(4+5)($\\frac{h}{2}$)=9$\\frac{h}{4}$.\n\nTherefore the ratio is (7$\\frac{h}{4}$):(9$\\frac{h}{4}$)=**7:9**."
             }
           },
           {
@@ -1308,17 +1308,17 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Consider four points A, B, C, D in a plane with no three collinear. (i) How many different quadrilaterals can be formed if self-intersecting and non-convex quadrilaterals are allowed? (ii) How many are self-intersecting and how many are convex?",
             "answer": {
               "answerKey": "There are 3 different cyclic orders. If the points are in convex position, 1 quadrilateral is convex and 2 are self-intersecting. If one point lies inside the triangle of the other three, all 3 are non-convex and simple; none is convex or self-intersecting.",
-              "schoolMethod": "**(i)** Fix A as the first vertex. The remaining three points can be arranged in 3!=6 orders, but traversing a quadrilateral in reverse gives the same four sides. Thus the number of distinct quadrilaterals is 6/2=**3** (for example, ABCD, ABDC and ACBD).\n\n**(ii)** There are two configurations. If all four points are vertices of their convex hull, only the order around the outside is convex; the other two cyclic orders cross, so there is 1 convex and 2 self-intersecting quadrilaterals. If one point lies inside the triangle formed by the other three, each of the 3 orders gives a simple concave quadrilateral; none is convex or self-intersecting."
+              "schoolMethod": "**(i)** Fix A as the first vertex. The remaining three points can be arranged in 3!=6 orders, but traversing a quadrilateral in reverse gives the same four sides. Thus the number of distinct quadrilaterals is $\\frac{6}{2}$=**3** (for example, ABCD, ABDC and ACBD).\n\n**(ii)** There are two configurations. If all four points are vertices of their convex hull, only the order around the outside is convex; the other two cyclic orders cross, so there is 1 convex and 2 self-intersecting quadrilaterals. If one point lies inside the triangle formed by the other three, each of the 3 orders gives a simple concave quadrilateral; none is convex or self-intersecting."
             }
           },
           {
             "id": "q11",
             "number": "11",
             "isHard": false,
-            "text": "Suppose P lies on side AB of △ABC and PQ∥BC meets AC at Q. Take AP=1 and AQ=√5. (i) If PB=2, find QC. (ii) If PB=1/3, find QC. (iii) If PB=2/3, find QC. (iv) Show that if AP/PB is rational, then AP/PB=AQ/QC.",
+            "text": "Suppose P lies on side AB of △ABC and PQ∥BC meets AC at Q. Take AP=1 and AQ=√5. (i) If PB=2, find QC. (ii) If PB=$\\frac{1}{3}$, find QC. (iii) If PB=$\\frac{2}{3}$, find QC. (iv) Show that if $\\frac{AP}{PB}$ is rational, then $\\frac{AP}{PB}$=$\\frac{AQ}{QC}$.",
             "answer": {
-              "answerKey": "(i) QC=2√5. (ii) QC=√5/3. (iii) QC=2√5/3. (iv) If AP/PB=m/n in positive integers, equal-intercept construction gives AQ/QC=m/n.",
-              "schoolMethod": "Because PQ∥BC, equally spaced subdivisions on AB produce equally spaced corresponding subdivisions on AC (Intercept Theorem; it can be proved stepwise using the converse of the Midpoint Theorem).\n\n**(i)** AP=1 and PB=2, so AB has 3 equal unit lengths: AP is 1 part and PB is 2 parts. Correspondingly AQ:QC=1:2. Since AQ=√5, QC=2√5.\n\n**(ii)** PB=1/3 and AP=1, so AP:PB=3:1. Thus AQ:QC=3:1, and QC=AQ/3=√5/3.\n\n**(iii)** PB=2/3, so AP:PB=1:(2/3)=3:2. Hence AQ:QC=3:2 and QC=(2/3)AQ=2√5/3.\n\n**(iv)** Let AP/PB=m/n for positive integers m,n. Divide AP into m equal parts and PB into n equal parts, all of common length. Through the division points draw lines parallel to BC. By repeated use of the midpoint/intercept result, the corresponding parts of AC are equal. The m parts comprising AQ therefore have the same unit length as each of the n parts comprising QC, so AQ/QC=m/n=AP/PB."
+              "answerKey": "(i) QC=2√5. (ii) QC=$\\frac{\\sqrt{5}}{3}$. (iii) QC=$\\frac{2\\sqrt{5}}{3}$. (iv) If $\\frac{AP}{PB}$=$\\frac{m}{n}$ in positive integers, equal-intercept construction gives $\\frac{AQ}{QC}$=$\\frac{m}{n}$.",
+              "schoolMethod": "Because PQ∥BC, equally spaced subdivisions on AB produce equally spaced corresponding subdivisions on AC (Intercept Theorem; it can be proved stepwise using the converse of the Midpoint Theorem).\n\n**(i)** AP=1 and PB=2, so AB has 3 equal unit lengths: AP is 1 part and PB is 2 parts. Correspondingly AQ:QC=1:2. Since AQ=√5, QC=2√5.\n\n**(ii)** PB=$\\frac{1}{3}$ and AP=1, so AP:PB=3:1. Thus AQ:QC=3:1, and QC=$\\frac{AQ}{3}$=$\\frac{\\sqrt{5}}{3}$.\n\n**(iii)** PB=$\\frac{2}{3}$, so AP:PB=1:($\\frac{2}{3}$)=3:2. Hence AQ:QC=3:2 and QC=($\\frac{2}{3}$)AQ=$\\frac{2\\sqrt{5}}{3}$.\n\n**(iv)** Let $\\frac{AP}{PB}$=$\\frac{m}{n}$ for positive integers m,n. Divide AP into m equal parts and PB into n equal parts, all of common length. Through the division points draw lines parallel to BC. By repeated use of the midpoint/intercept result, the corresponding parts of AC are equal. The m parts comprising AQ therefore have the same unit length as each of the n parts comprising QC, so $\\frac{AQ}{QC}$=$\\frac{m}{n}$=$\\frac{AP}{PB}$."
             }
           },
           {
@@ -1328,7 +1328,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "(i) In parallelogram ABCD, M and N are the midpoints of AB and CD. Show that DM and BN trisect diagonal AC. (ii) Use this result to describe one construction for trisecting any segment PQ. Then give two other constructions: one using the rational-ratio result of Exercise 11 and one using the Centroid Theorem.",
             "answer": {
               "answerKey": "The two intersections of DM and BN with AC divide AC into three equal parts. A segment can be trisected using this parallelogram construction, equal parallel intercepts, or the Centroid Theorem.",
-              "schoolMethod": "**(i)** Since M,N are midpoints, MB=AB/2 and DN=CD/2. In a parallelogram AB=CD, so MB=DN; also MB∥DN. Therefore MBND is a parallelogram and DM∥BN. Let DM meet AC at X, and BN meet AC at Y. In △ABY, M is the midpoint of AB and MX∥BY, so X is the midpoint of AY: AX=XY. In △CDX, N is the midpoint of CD and NY∥DX, so Y is the midpoint of CX: CY=YX. Hence **AX=XY=YC**.\n\n**(ii), Method 1 (parallelogram):** Make PQ a diagonal of a parallelogram PBQD. Let O be the midpoint of PQ; choose B,D on any line through O with OB=OD and construct the parallelogram. Find M and N, the midpoints of PB and QD; the lines DM and BN meet PQ at its trisection points by part (i).\n\n**Method 2 (parallel intercepts):** Draw a ray from P and mark three consecutive equal segments on it, ending at X₃. Join X₃ to Q. Through the first two marks draw lines parallel to X₃Q; by the equal-intercept theorem they cut PQ into three equal parts.\n\n**Method 3 (centroid):** Construct △PBC so that PQ is a median (choose B and C on a line through Q with QB=QC). Draw a second median from B to the midpoint of PC, meeting PQ at centroid G. The centroid theorem gives PG:GQ=2:1, so GQ=PQ/3. Bisect PG to obtain the other trisection point."
+              "schoolMethod": "**(i)** Since M,N are midpoints, MB=$\\frac{AB}{2}$ and DN=$\\frac{CD}{2}$. In a parallelogram AB=CD, so MB=DN; also MB∥DN. Therefore MBND is a parallelogram and DM∥BN. Let DM meet AC at X, and BN meet AC at Y. In △ABY, M is the midpoint of AB and MX∥BY, so X is the midpoint of AY: AX=XY. In △CDX, N is the midpoint of CD and NY∥DX, so Y is the midpoint of CX: CY=YX. Hence **AX=XY=YC**.\n\n**(ii), Method 1 (parallelogram):** Make PQ a diagonal of a parallelogram PBQD. Let O be the midpoint of PQ; choose B,D on any line through O with OB=OD and construct the parallelogram. Find M and N, the midpoints of PB and QD; the lines DM and BN meet PQ at its trisection points by part (i).\n\n**Method 2 (parallel intercepts):** Draw a ray from P and mark three consecutive equal segments on it, ending at X₃. Join X₃ to Q. Through the first two marks draw lines parallel to X₃Q; by the equal-intercept theorem they cut PQ into three equal parts.\n\n**Method 3 (centroid):** Construct △PBC so that PQ is a median (choose B and C on a line through Q with QB=QC). Draw a second median from B to the midpoint of PC, meeting PQ at centroid G. The centroid theorem gives PG:GQ=2:1, so GQ=$\\frac{PQ}{3}$. Bisect PG to obtain the other trisection point."
             }
           },
           {
@@ -1338,7 +1338,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Is the Midpoint Theorem for Quadrilaterals (Varignon’s Theorem) true when ABCD is non-convex? What about when it is self-intersecting? (i) Explain. (ii) When does the Varignon parallelogram collapse to a single segment? (iii) Does the reasoning still apply if ABCD is non-planar?",
             "answer": {
               "answerKey": "(i) Yes for non-convex and self-intersecting quadrilaterals. (ii) When AC∥BD, the midpoint parallelogram degenerates to a segment. (iii) Yes; the midpoint quadrilateral remains planar and is a parallelogram.",
-              "schoolMethod": "Let P,Q,R,S be the midpoints of AB, BC, CD, DA. The proof of Varignon’s theorem uses only the Midpoint Theorem in the four triangles formed by the diagonals; it does not use convexity. Thus PQ∥AC∥SR and PQ=SR=AC/2, while QR∥BD∥PS and QR=PS=BD/2. This proves PQRS is a parallelogram for non-convex and self-intersecting figures as well.\n\nThe parallelogram collapses when its adjacent sides PQ and QR are parallel, that is, when AC∥BD. This occurs in a special crossed configuration.\n\nThe same vector/midpoint reasoning works in space: opposite midpoint segments remain equal and parallel, so the four midpoint points are coplanar and form a planar parallelogram even if A,B,C,D themselves are non-coplanar."
+              "schoolMethod": "Let P,Q,R,S be the midpoints of AB, BC, CD, DA. The proof of Varignon’s theorem uses only the Midpoint Theorem in the four triangles formed by the diagonals; it does not use convexity. Thus PQ∥AC∥SR and PQ=SR=$\\frac{AC}{2}$, while QR∥BD∥PS and QR=PS=$\\frac{BD}{2}$. This proves PQRS is a parallelogram for non-convex and self-intersecting figures as well.\n\nThe parallelogram collapses when its adjacent sides PQ and QR are parallel, that is, when AC∥BD. This occurs in a special crossed configuration.\n\nThe same vector/midpoint reasoning works in space: opposite midpoint segments remain equal and parallel, so the four midpoint points are coplanar and form a planar parallelogram even if A,B,C,D themselves are non-coplanar."
             }
           },
           {
@@ -1348,7 +1348,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Let P, Q, R, S lie on sides AB, BC, CD and DA of a quadrilateral ABCD respectively. If PQRS is a parallelogram, must P, Q, R and S be the midpoints of their respective sides? Justify your answer.",
             "answer": {
               "answerKey": "No. In a square of side 4, choosing each point one unit from the next corner produces a smaller square PQRS, although no chosen point is a midpoint.",
-              "schoolMethod": "Take square ABCD of side 4. Let P be on AB with AP=1, Q on BC with BQ=1, R on CD with CR=1, and S on DA with DS=1. Each corner triangle, such as △SAP, is right-angled with legs 1 and 3. These four triangles are congruent by SAS, so their opposite hypotenuses satisfy PQ=QR=RS=SP. The four segments also have equal side directions by the symmetry of the square; hence PQRS is a square and therefore a parallelogram. But AP=1 while AB/2=2, so P is not a midpoint; similarly for Q,R,S. Thus the converse is **false**."
+              "schoolMethod": "Take square ABCD of side 4. Let P be on AB with AP=1, Q on BC with BQ=1, R on CD with CR=1, and S on DA with DS=1. Each corner triangle, such as △SAP, is right-angled with legs 1 and 3. These four triangles are congruent by SAS, so their opposite hypotenuses satisfy PQ=QR=RS=SP. The four segments also have equal side directions by the symmetry of the square; hence PQRS is a square and therefore a parallelogram. But AP=1 while $\\frac{AB}{2}$=2, so P is not a midpoint; similarly for Q,R,S. Thus the converse is **false**."
             }
           },
           {
@@ -1358,7 +1358,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "(i) Complete a proof of the Midpoint Theorem by extending PQ beyond Q to S. How far should PQ be extended, and how does this help prove △APQ≅△CSQ? (ii) Give a similar proof of the converse of the Midpoint Theorem (Theorem 7), starting by extending PQ to a suitable point S.",
             "answer": {
               "answerKey": "(i) Extend to S so that QS=PQ; then △APQ≅△CSQ and PBCS is a parallelogram. (ii) For the converse, extend to S so that PS=BC; again PBCS is a parallelogram and Q is the midpoint of AC.",
-              "schoolMethod": "**(i)** Given P and Q are the midpoints of AB and AC, extend PQ beyond Q to S so that QS=PQ. Then Q is the midpoint of PS. In △APQ and △CSQ, AQ=CQ, PQ=SQ and ∠AQP=∠CQS (vertically opposite), so the triangles are congruent by SAS. Thus CS=AP=PB and CS∥AB∥PB. Since one pair of opposite sides of PBCS is equal and parallel, PBCS is a parallelogram. Therefore PS∥BC and PS=BC. As PS=PQ+QS=2PQ, we obtain PQ∥BC and PQ=BC/2.\n\n**(ii)** Now P is the midpoint of AB and PQ∥BC. Extend PQ to S so that PS=BC. Since PS∥BC and PS=BC, PBCS is a parallelogram, so CS∥AB and CS=PB=AP. Compare △APQ and △CSQ: AP=CS, ∠PAQ=∠SCQ and ∠APQ=∠CSQ (alternate angles). They are congruent by ASA; hence AQ=CQ, so Q is the midpoint of AC. Also PQ=PS/2=BC/2."
+              "schoolMethod": "**(i)** Given P and Q are the midpoints of AB and AC, extend PQ beyond Q to S so that QS=PQ. Then Q is the midpoint of PS. In △APQ and △CSQ, AQ=CQ, PQ=SQ and ∠AQP=∠CQS (vertically opposite), so the triangles are congruent by SAS. Thus CS=AP=PB and CS∥AB∥PB. Since one pair of opposite sides of PBCS is equal and parallel, PBCS is a parallelogram. Therefore PS∥BC and PS=BC. As PS=PQ+QS=2PQ, we obtain PQ∥BC and PQ=$\\frac{BC}{2}$.\n\n**(ii)** Now P is the midpoint of AB and PQ∥BC. Extend PQ to S so that PS=BC. Since PS∥BC and PS=BC, PBCS is a parallelogram, so CS∥AB and CS=PB=AP. Compare △APQ and △CSQ: AP=CS, ∠PAQ=∠SCQ and ∠APQ=∠CSQ (alternate angles). They are congruent by ASA; hence AQ=CQ, so Q is the midpoint of AC. Also PQ=$\\frac{PS}{2}$=$\\frac{BC}{2}$."
             }
           },
           {
@@ -1407,8 +1407,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Counting diagonals of a polygon. (i) Define a diagonal and make a table of the number of diagonals for n=3,4,5,6,7,8. (ii) Find a formula for an n-gon, and state how many diagonals are added when the number of sides increases by one.",
             "answer": {
-              "answerKey": "Counts for n=3,4,5,6,7,8 are 0,2,5,9,14,20. D(n)=n(n−3)/2, and adding one side to an n-gon adds n−1 diagonals.",
-              "schoolMethod": "A **diagonal** is a segment joining two non-adjacent vertices. The counts are: n=3→0, n=4→2, n=5→5, n=6→9, n=7→14, n=8→20.\n\nFrom each of n vertices, diagonals can be drawn to n−3 other vertices (exclude itself and its two neighbours). This gives n(n−3) diagonal-ends, but each diagonal has two ends, so \\(D(n)=\\frac{n(n-3)}2\\).\n\nIncreasing the number of sides from n to n+1 adds n−1 diagonals: the new vertex joins to n−2 old non-neighbours, and the old side between its two neighbours becomes one new diagonal. Algebraically, D(n+1)−D(n)=[(n+1)(n−2)−n(n−3)]/2=n−1."
+              "answerKey": "Counts for n=3,4,5,6,7,8 are 0,2,5,9,14,20. D(n)=$\\frac{n(n-3)}{2}$, and adding one side to an n-gon adds n−1 diagonals.",
+              "schoolMethod": "A **diagonal** is a segment joining two non-adjacent vertices. The counts are: n=3→0, n=4→2, n=5→5, n=6→9, n=7→14, n=8→20.\n\nFrom each of n vertices, diagonals can be drawn to n−3 other vertices (exclude itself and its two neighbours). This gives n(n−3) diagonal-ends, but each diagonal has two ends, so \\(D(n)=\\frac{n(n-3)}2\\).\n\nIncreasing the number of sides from n to n+1 adds n−1 diagonals: the new vertex joins to n−2 old non-neighbours, and the old side between its two neighbours becomes one new diagonal. Algebraically, D(n+1)−D(n)=$\\frac{(n+1)(n-2)-n(n-3)}{2}$=n−1."
             }
           },
           {
@@ -1425,10 +1425,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q22",
             "number": "22",
             "isHard": false,
-            "text": "Multiple converses to the Midpoint Theorem. Let P lie on AB and Q on AC in △ABC. Use (P MID): P is midpoint of AB; (Q MID): Q is midpoint of AC; (PRLL): PQ∥BC; (HALF): PQ=BC/2. (i) Prove that (PRLL)+(HALF) imply (P MID)+(Q MID). (ii) Write the converse of the Midpoint Theorem while retaining P MID as an assumption. (iii) If P MID and HALF hold, can Q MID and/or PRLL be concluded?",
+            "text": "Multiple converses to the Midpoint Theorem. Let P lie on AB and Q on AC in △ABC. Use (P MID): P is midpoint of AB; (Q MID): Q is midpoint of AC; (PRLL): PQ∥BC; (HALF): PQ=$\\frac{BC}{2}$. (i) Prove that (PRLL)+(HALF) imply (P MID)+(Q MID). (ii) Write the converse of the Midpoint Theorem while retaining P MID as an assumption. (iii) If P MID and HALF hold, can Q MID and/or PRLL be concluded?",
             "answer": {
-              "answerKey": "(i) Yes: similarity gives AP=PB and AQ=QC. (ii) If P is midpoint of AB and PQ∥BC, then Q is midpoint of AC (and PQ=BC/2). (iii) No: P midpoint and PQ=BC/2 alone imply neither Q is midpoint nor PQ∥BC.",
-              "schoolMethod": "**(i)** Since PQ∥BC, △APQ∼△ABC. The ratio PQ/BC=1/2 therefore gives AP/AB=AQ/AC=1/2. Thus AP=PB and AQ=QC, so P and Q are the midpoints.\n\n**(ii)** The statement is: “If P is the midpoint of AB and the line through P parallel to BC meets AC at Q, then Q is the midpoint of AC.” By Theorem 7, PQ=BC/2 as well.\n\n**(iii)** Neither conclusion follows. A counterexample: take A=(0,0), B=(2,0), C=(3,1) and P=(1,0), which is the midpoint of AB. Let Q=(0.3,0.1), on AC. Then PQ²=(0.3−1)²+(0.1−0)²=0.50, so PQ=√0.5=√2/2; BC=√2 and hence PQ=BC/2. But Q is not the midpoint of AC (that would be (1.5,0.5)) and the slope of PQ is −1/7 while the slope of BC is 1, so PQ is not parallel to BC. Thus P MID and HALF alone imply neither Q MID nor PRLL."
+              "answerKey": "(i) Yes: similarity gives AP=PB and AQ=QC. (ii) If P is midpoint of AB and PQ∥BC, then Q is midpoint of AC (and PQ=$\\frac{BC}{2}$). (iii) No: P midpoint and PQ=$\\frac{BC}{2}$ alone imply neither Q is midpoint nor PQ∥BC.",
+              "schoolMethod": "**(i)** Since PQ∥BC, △APQ∼△ABC. The ratio $\\frac{PQ}{BC}$=$\\frac{1}{2}$ therefore gives $\\frac{AP}{AB}$=$\\frac{AQ}{AC}$=$\\frac{1}{2}$. Thus AP=PB and AQ=QC, so P and Q are the midpoints.\n\n**(ii)** The statement is: “If P is the midpoint of AB and the line through P parallel to BC meets AC at Q, then Q is the midpoint of AC.” By Theorem 7, PQ=$\\frac{BC}{2}$ as well.\n\n**(iii)** Neither conclusion follows. A counterexample: take A=(0,0), B=(2,0), C=(3,1) and P=(1,0), which is the midpoint of AB. Let Q=(0.3,0.1), on AC. Then PQ²=(0.3−1)²+(0.1−0)²=0.50, so PQ=√0.5=$\\frac{\\sqrt{2}}{2}$; BC=√2 and hence PQ=$\\frac{BC}{2}$. But Q is not the midpoint of AC (that would be (1.5,0.5)) and the slope of PQ is −$\\frac{1}{7}$ while the slope of BC is 1, so PQ is not parallel to BC. Thus P MID and HALF alone imply neither Q MID nor PRLL."
             }
           },
           {
@@ -1447,8 +1447,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "What fraction of the square is shaded in Fig. 12.43?",
             "answer": {
-              "answerKey": "The shaded fraction is 1/5 of the square.",
-              "schoolMethod": "Let the square have side 1, with corners (0,0), (1,0), (1,1), (0,1). The marked points are the midpoints of all four sides. The four lines shown have equations (after matching them to the figure): y=1−2x, y=1/2+x/2, y=2−2x and y=x/2. Their consecutive intersections forming the shaded parallelogram are (1/5,3/5), (3/5,4/5), (4/5,2/5) and (2/5,1/5). Adjacent side vectors can be taken as (2/5,1/5) and (1/5,−2/5). The parallelogram area is the absolute determinant: |(2/5)(−2/5)−(1/5)(1/5)|=|−4/25−1/25|=5/25=1/5. The square’s area is 1, so the shaded fraction is **1/5**."
+              "answerKey": "The shaded fraction is $\\frac{1}{5}$ of the square.",
+              "schoolMethod": "Let the square have side 1, with corners (0,0), (1,0), (1,1), (0,1). The marked points are the midpoints of all four sides. The four lines shown have equations (after matching them to the figure): y=1−2x, y=$\\frac{1}{2}$+$\\frac{x}{2}$, y=2−2x and y=$\\frac{x}{2}$. Their consecutive intersections forming the shaded parallelogram are ($\\frac{1}{5,3}$/5), ($\\frac{3}{5,4}$/5), ($\\frac{4}{5,2}$/5) and ($\\frac{2}{5,1}$/5). Adjacent side vectors can be taken as ($\\frac{2}{5,1}$/5) and ($\\frac{1}{5}$,−$\\frac{2}{5}$). The parallelogram area is the absolute determinant: |($\\frac{2}{5}$)(−$\\frac{2}{5}$)−($\\frac{1}{5}$)($\\frac{1}{5}$)|=|−$\\frac{4}{25}$−$\\frac{1}{25}$|=$\\frac{5}{25}$=$\\frac{1}{5}$. The square’s area is 1, so the shaded fraction is **$\\frac{1}{5}$**."
             }
           }
         ]
@@ -1498,7 +1498,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "State and prove the converse of the midpoint theorem: in △ABC, P is the midpoint of AB and PQ ∥ BC meets AC at Q. Show that Q is the midpoint of AC.",
             "answer": {
               "answerKey": "AQ = QC; Q is the midpoint of AC.",
-              "schoolMethod": "Because PQ ∥ BC, △APQ ∼ △ABC by AA. Therefore AP/AB = AQ/AC. Since P is the midpoint, AP = AB/2, so AQ/AC = 1/2, giving AQ = AC/2. Hence QC = AC − AQ = AC/2 = AQ, and Q is the midpoint of AC."
+              "schoolMethod": "Because PQ ∥ BC, △APQ ∼ △ABC by AA. Therefore $\\frac{AP}{AB}$ = $\\frac{AQ}{AC}$. Since P is the midpoint, AP = $\\frac{AB}{2}$, so $\\frac{AQ}{AC}$ = $\\frac{1}{2}$, giving AQ = $\\frac{AC}{2}$. Hence QC = AC − AQ = $\\frac{AC}{2}$ = AQ, and Q is the midpoint of AC."
             }
           },
           {
@@ -1506,10 +1506,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "2",
             "isHard": true,
             "page": 63,
-            "text": "State and prove the Midpoint Theorem: in △ABC, P and Q are the midpoints of AB and AC. Prove that PQ ∥ BC and PQ = BC/2.",
+            "text": "State and prove the Midpoint Theorem: in △ABC, P and Q are the midpoints of AB and AC. Prove that PQ ∥ BC and PQ = $\\frac{BC}{2}$.",
             "answer": {
               "answerKey": "PQ ∥ BC and PQ = ½ BC.",
-              "schoolMethod": "Extend PQ beyond Q to R so that QR=PQ. Since Q is the midpoint of AC, AQ=CQ; also ∠AQP=∠CQR (vertically opposite angles) and PQ=QR. Thus △AQP≅△CQR by SAS, giving AP=CR and AP∥CR. Since P is the midpoint of AB, AP=PB and A,P,B are collinear. Therefore PB and CR are equal and parallel, so PBCR is a parallelogram. Hence PR∥BC and PR=BC. As P,Q,R are collinear and PQ=QR, PR=2PQ. Thus PQ∥BC and PQ=BC/2."
+              "schoolMethod": "Extend PQ beyond Q to R so that QR=PQ. Since Q is the midpoint of AC, AQ=CQ; also ∠AQP=∠CQR (vertically opposite angles) and PQ=QR. Thus △AQP≅△CQR by SAS, giving AP=CR and AP∥CR. Since P is the midpoint of AB, AP=PB and A,P,B are collinear. Therefore PB and CR are equal and parallel, so PBCR is a parallelogram. Hence PR∥BC and PR=BC. As P,Q,R are collinear and PQ=QR, PR=2PQ. Thus PQ∥BC and PQ=$\\frac{BC}{2}$."
             }
           },
           {
@@ -1543,10 +1543,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Write a linear equation in two variables in standard form ax+by+c=0 in which a=3, b=0 and c=−1/5.",
+            "text": "Write a linear equation in two variables in standard form ax+by+c=0 in which a=3, b=0 and c=−$\\frac{1}{5}$.",
             "answer": {
-              "answerKey": "3x+0y−1/5=0; equivalently, 15x−1=0.",
-              "schoolMethod": "Substitute the given coefficients into ax+by+c=0:\n\n3x+0y−1/5=0.\n\nMultiplying every term by 5 gives **15x−1=0**. The coefficient of y is zero, which is allowed: this is a linear equation in two variables whose graph is a vertical line."
+              "answerKey": "3x+0y−$\\frac{1}{5}$=0; equivalently, 15x−1=0.",
+              "schoolMethod": "Substitute the given coefficients into ax+by+c=0:\n\n3x+0y−$\\frac{1}{5}$=0.\n\nMultiplying every term by 5 gives **15x−1=0**. The coefficient of y is zero, which is allowed: this is a linear equation in two variables whose graph is a vertical line."
             }
           },
           {
@@ -1601,8 +1601,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "For 2mx+3y=7 and 4x+ny=−10, if (2,−1) solves both equations, find m and n.",
             "answer": {
-              "answerKey": "m=5/2 and n=18.",
-              "schoolMethod": "Substitute x=2, y=−1 into 2mx+3y=7:\n\n2m(2)+3(−1)=7 ⇒ 4m−3=7 ⇒ 4m=10 ⇒ **m=5/2**.\n\nNow substitute in 4x+ny=−10:\n\n4(2)+n(−1)=−10 ⇒ 8−n=−10 ⇒ **n=18**."
+              "answerKey": "m=$\\frac{5}{2}$ and n=18.",
+              "schoolMethod": "Substitute x=2, y=−1 into 2mx+3y=7:\n\n2m(2)+3(−1)=7 ⇒ 4m−3=7 ⇒ 4m=10 ⇒ **m=$\\frac{5}{2}$**.\n\nNow substitute in 4x+ny=−10:\n\n4(2)+n(−1)=−10 ⇒ 8−n=−10 ⇒ **n=18**."
             }
           },
           {
@@ -1611,8 +1611,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Find two solutions in different quadrants for each equation and identify the quadrants: (i) 5x+3y=7; (ii) 5x−3y=7; (iii) −5x+3y=7; (iv) −5x−3y=7.",
             "answer": {
-              "answerKey": "(i) (1,2/3) QI and (2,−1) QIV; (ii) (1,−2/3) QIV and (2,1) QI; (iii) (−1,2/3) QII and (2,17/3) QI; (iv) (−1,−2/3) QIII and (−2,1) QII.",
-              "schoolMethod": "Substitute each selected x-value and solve for y.\n\n(i) 5x+3y=7: x=1 gives 5+3y=7, y=2/3 (QI); x=2 gives 10+3y=7, y=−1 (QIV).\n\n(ii) 5x−3y=7: x=1 gives 5−3y=7, y=−2/3 (QIV); x=2 gives 10−3y=7, y=1 (QI).\n\n(iii) −5x+3y=7: x=−1 gives 5+3y=7, y=2/3 (QII); x=2 gives −10+3y=7, y=17/3 (QI).\n\n(iv) −5x−3y=7: x=−1 gives 5−3y=7, y=−2/3 (QIII); x=−2 gives 10−3y=7, y=1 (QII).\n\nEach pair satisfies its equation and lies in two different quadrants. Plotting either pair for an equation and joining the points gives its straight-line graph."
+              "answerKey": "(i) ($\\frac{1,2}{3}$) QI and (2,−1) QIV; (ii) (1,−$\\frac{2}{3}$) QIV and (2,1) QI; (iii) (−$\\frac{1,2}{3}$) QII and ($\\frac{2,17}{3}$) QI; (iv) (−1,−$\\frac{2}{3}$) QIII and (−2,1) QII.",
+              "schoolMethod": "Substitute each selected x-value and solve for y.\n\n(i) 5x+3y=7: x=1 gives 5+3y=7, y=$\\frac{2}{3}$ (QI); x=2 gives 10+3y=7, y=−1 (QIV).\n\n(ii) 5x−3y=7: x=1 gives 5−3y=7, y=−$\\frac{2}{3}$ (QIV); x=2 gives 10−3y=7, y=1 (QI).\n\n(iii) −5x+3y=7: x=−1 gives 5+3y=7, y=$\\frac{2}{3}$ (QII); x=2 gives −10+3y=7, y=$\\frac{17}{3}$ (QI).\n\n(iv) −5x−3y=7: x=−1 gives 5−3y=7, y=−$\\frac{2}{3}$ (QIII); x=−2 gives 10−3y=7, y=1 (QII).\n\nEach pair satisfies its equation and lies in two different quadrants. Plotting either pair for an equation and joining the points gives its straight-line graph."
             }
           },
           {
@@ -1632,7 +1632,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "State True or False and justify: (i) a linear equation in two variables has only one solution; (ii) its graph always passes through the origin; (iii) it can never have rational solutions; (iv) x=3 is a valid linear equation in two variables; (v) 2x+3y=7 has infinitely many solutions; (vi) (1,2) solves 2x+3y=7.",
             "answer": {
               "answerKey": "(i) F; (ii) F; (iii) F; (iv) T; (v) T; (vi) F.",
-              "schoolMethod": "(i) **False:** a non-vertical linear equation has infinitely many ordered-pair solutions; for example, (0,7/3) and (1,5/3) solve 2x+3y=7.\n\n(ii) **False:** only equations with zero constant term (in standard form ax+by+c=0, c=0) necessarily pass through (0,0); 2x+3y=7 does not.\n\n(iii) **False:** for 2x+3y=7, (2,1) is an integer solution and hence rational.\n\n(iv) **True:** x=3 can be written x+0y−3=0, a linear equation in two variables.\n\n(v) **True:** choose any x and solve y=(7−2x)/3, giving infinitely many solutions.\n\n(vi) **False:** 2(1)+3(2)=8≠7."
+              "schoolMethod": "(i) **False:** a non-vertical linear equation has infinitely many ordered-pair solutions; for example, ($\\frac{0,7}{3}$) and ($\\frac{1,5}{3}$) solve 2x+3y=7.\n\n(ii) **False:** only equations with zero constant term (in standard form ax+by+c=0, c=0) necessarily pass through (0,0); 2x+3y=7 does not.\n\n(iii) **False:** for 2x+3y=7, (2,1) is an integer solution and hence rational.\n\n(iv) **True:** x=3 can be written x+0y−3=0, a linear equation in two variables.\n\n(v) **True:** choose any x and solve y=$\\frac{7-2x}{3}$, giving infinitely many solutions.\n\n(vi) **False:** 2(1)+3(2)=8≠7."
             }
           },
           {
@@ -1658,7 +1658,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Three ski hills have the following rises and horizontal runs: A rises 60 m over 70 m; B rises 60 m over 110 m; C rises 80 m over 100 m. Rank their steepness from least to greatest.",
             "answer": {
               "answerKey": "B, C, A.",
-              "schoolMethod": "Steepness is represented by slope = rise/run.\n\nA: 60/70=6/7≈0.857.\nB: 60/110=6/11≈0.545.\nC: 80/100=0.8.\n\nSince 0.545<0.8<0.857, the order from least to greatest steepness is **B, C, A**."
+              "schoolMethod": "Steepness is represented by slope = rise/run.\n\nA: $\\frac{60}{70}$=$\\frac{6}{7}$≈0.857.\nB: $\\frac{60}{110}$=$\\frac{6}{11}$≈0.545.\nC: $\\frac{80}{100}$=0.8.\n\nSince 0.545<0.8<0.857, the order from least to greatest steepness is **B, C, A**."
             }
           },
           {
@@ -1667,8 +1667,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "A loading-dock ramp rises 2.5 m over a horizontal run of 4 m. Find its slope.",
             "answer": {
-              "answerKey": "5/8=0.625.",
-              "schoolMethod": "Slope = vertical rise / horizontal run = 2.5/4 = 25/40 = **5/8 = 0.625**. The slope is dimensionless when both measurements use metres."
+              "answerKey": "$\\frac{5}{8}$=0.625.",
+              "schoolMethod": "Slope = vertical rise / horizontal run = $\\frac{2.5}{4}$ = $\\frac{25}{40}$ = **$\\frac{5}{8}$ = 0.625**. The slope is dimensionless when both measurements use metres."
             }
           },
           {
@@ -1677,7 +1677,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Find the slope of line l in each of the four diagrams in the textbook.",
             "answer": {
-              "answerKey": "(i) 0; (ii) −1; (iii) 2/3; (iv) undefined.",
+              "answerKey": "(i) 0; (ii) −1; (iii) $\\frac{2}{3}$; (iv) undefined.",
               "schoolMethod": "(i) The line is horizontal, so its rise is 0 for every non-zero run. Its slope is **0**.\n\n(ii) Two marked grid points are (−4, 4) and (4, −4). Therefore,\n\\[m=\\frac{−4−4}{4−(−4)}=\\frac{−8}{8}=\\mathbf{−1}.\\]\n\n(iii) Two marked grid points are (−4, −2) and (2, 2). Therefore,\n\\[m=\\frac{2−(−2)}{2−(−4)}=\\frac{4}{6}=\\mathbf{\\frac{2}{3}}.\\]\n\n(iv) The line is vertical, so its horizontal run is 0. Division by zero is not defined; hence the slope is **undefined**."
             }
           },
@@ -1688,7 +1688,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A wheelchair ramp must have a slope of 1 cm vertical rise for each 12 cm of horizontal length. What horizontal length is required for stairs with total height 18 cm?",
             "answer": {
               "answerKey": "216 cm = 2.16 m.",
-              "schoolMethod": "The slope guideline means rise/run=1/12. With a rise of 18 cm,\n\n18/run=1/12 ⇒ run=18×12=**216 cm = 2.16 m**."
+              "schoolMethod": "The slope guideline means rise/run=$\\frac{1}{12}$. With a rise of 18 cm,\n\$\\frac{n18}{run}$=$\\frac{1}{12}$ ⇒ run=18×12=**216 cm = 2.16 m**."
             }
           }
         ]
@@ -1737,10 +1737,10 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Form and solve a pair of linear equations for each: (i) sum of two integers is +5 and their difference is −21; (ii) the difference between two numbers is 26 and one is three times the other; (iii) 7 bats and 6 balls cost ₹8880, while 3 bats and 5 balls cost ₹4000; (iv) taxi fares are ₹155 for 10 km and ₹220 for 15 km; (v) adding 2 to numerator and denominator gives 9/11, adding 3 gives 5/6; (vi) adding 1 to the numerator and subtracting 1 from denominator gives 1, adding 1 only to denominator gives 1/2; (vii) five years ago Nuri was three times Sonu’s age; ten years later she will be twice his age; (viii) digits sum to 9 and nine times the number equals twice the reversed number; (ix) ₹2000 is paid in ₹50 and ₹100 notes, 25 notes total; (x) library fee is fixed for first 3 days plus extra daily charge; 7 days cost ₹27 and 5 days cost ₹21.",
+            "text": "Form and solve a pair of linear equations for each: (i) sum of two integers is +5 and their difference is −21; (ii) the difference between two numbers is 26 and one is three times the other; (iii) 7 bats and 6 balls cost ₹8880, while 3 bats and 5 balls cost ₹4000; (iv) taxi fares are ₹155 for 10 km and ₹220 for 15 km; (v) adding 2 to numerator and denominator gives $\\frac{9}{11}$, adding 3 gives $\\frac{5}{6}$; (vi) adding 1 to the numerator and subtracting 1 from denominator gives 1, adding 1 only to denominator gives $\\frac{1}{2}$; (vii) five years ago Nuri was three times Sonu’s age; ten years later she will be twice his age; (viii) digits sum to 9 and nine times the number equals twice the reversed number; (ix) ₹2000 is paid in ₹50 and ₹100 notes, 25 notes total; (x) library fee is fixed for first 3 days plus extra daily charge; 7 days cost ₹27 and 5 days cost ₹21.",
             "answer": {
-              "answerKey": "(i) −8 and 13; (ii) 39 and 13; (iii) bat ₹1200, ball ₹80; (iv) fixed ₹25, ₹13/km, 25 km costs ₹350; (v) 7/9; (vi) 3/5; (vii) Nuri 50, Sonu 20; (viii) 18; (ix) ten ₹50 notes and fifteen ₹100 notes; (x) fixed ₹15, then ₹3 per extra day.",
-              "schoolMethod": "**(i)** Let the integers be x,y. x+y=5 and x−y=−21. Adding gives 2x=−16 ⇒ x=−8; hence y=13.\n\n**(ii)** Let the larger number x and smaller y. x−y=26 and x=3y. Thus 3y−y=26 ⇒ y=13, x=39.\n\n**(iii)** Let bat cost b and ball cost c. 7b+6c=8880 ...(1), 3b+5c=4000 ...(2). Multiply (1) by 5 and (2) by 6: 35b+30c=44400; 18b+30c=24000. Subtract: 17b=20400, so b=₹1200. Substitute into (2): 3600+5c=4000 ⇒ c=₹80.\n\n**(iv)** Let fixed charge f and per-km fare r. f+10r=155, f+15r=220. Subtracting gives 5r=65 ⇒ r=₹13/km. Then f=155−130=₹25. For 25 km, fare=25+13×25=**₹350**.\n\n**(v)** Let the fraction be x/y. (x+2)/(y+2)=9/11 ⇒ 11x−9y=−4 ...(1). (x+3)/(y+3)=5/6 ⇒ 6x−5y=−3 ...(2). Multiplying (1) by 5 and (2) by 9: 55x−45y=−20, 54x−45y=−27. Thus x=7; substituting in (2), 42−5y=−3 ⇒ y=9. Fraction=**7/9**.\n\n**(vi)** (x+1)/(y−1)=1 gives y=x+2. Also x/(y+1)=1/2 gives 2x=y+1. Substitute: 2x=x+3 ⇒ x=3 and y=5. The fraction is **3/5**.\n\n**(vii)** Let current ages be N and S. N−5=3(S−5) ⇒ N=3S−10. N+10=2(S+10) ⇒ N=2S+10. Equating, 3S−10=2S+10 ⇒ S=20, N=50.\n\n**(viii)** Let tens digit a and units digit b. a+b=9. The number is 10a+b, reversed is 10b+a, and 9(10a+b)=2(10b+a). Simplify: 88a=11b, hence b=8a. Therefore 9a=9 ⇒ a=1,b=8, number **18**.\n\n**(ix)** Let x be the number of ₹50 notes and y the number of ₹100 notes. x+y=25 and 50x+100y=2000, i.e. x+2y=40. Subtract x+y=25: y=15, so x=10.\n\n**(x)** Let F be the fee for the first three days and r the charge for each additional day. F+4r=27 and F+2r=21. Subtract: 2r=6 ⇒ r=₹3; F=21−6=₹15."
+              "answerKey": "(i) −8 and 13; (ii) 39 and 13; (iii) bat ₹1200, ball ₹80; (iv) fixed ₹25, ₹13/km, 25 km costs ₹350; (v) $\\frac{7}{9}$; (vi) $\\frac{3}{5}$; (vii) Nuri 50, Sonu 20; (viii) 18; (ix) ten ₹50 notes and fifteen ₹100 notes; (x) fixed ₹15, then ₹3 per extra day.",
+              "schoolMethod": "**(i)** Let the integers be x,y. x+y=5 and x−y=−21. Adding gives 2x=−16 ⇒ x=−8; hence y=13.\n\n**(ii)** Let the larger number x and smaller y. x−y=26 and x=3y. Thus 3y−y=26 ⇒ y=13, x=39.\n\n**(iii)** Let bat cost b and ball cost c. 7b+6c=8880 ...(1), 3b+5c=4000 ...(2). Multiply (1) by 5 and (2) by 6: 35b+30c=44400; 18b+30c=24000. Subtract: 17b=20400, so b=₹1200. Substitute into (2): 3600+5c=4000 ⇒ c=₹80.\n\n**(iv)** Let fixed charge f and per-km fare r. f+10r=155, f+15r=220. Subtracting gives 5r=65 ⇒ r=₹13/km. Then f=155−130=₹25. For 25 km, fare=25+13×25=**₹350**.\n\n**(v)** Let the fraction be $\\frac{x}{y}$. $\\frac{x+2}{y+2}$=$\\frac{9}{11}$ ⇒ 11x−9y=−4 ...(1). $\\frac{x+3}{y+3}$=$\\frac{5}{6}$ ⇒ 6x−5y=−3 ...(2). Multiplying (1) by 5 and (2) by 9: 55x−45y=−20, 54x−45y=−27. Thus x=7; substituting in (2), 42−5y=−3 ⇒ y=9. Fraction=**$\\frac{7}{9}$**.\n\n**(vi)** $\\frac{x+1}{y-1}$=1 gives y=x+2. Also $\\frac{x}{y+1}$=$\\frac{1}{2}$ gives 2x=y+1. Substitute: 2x=x+3 ⇒ x=3 and y=5. The fraction is **$\\frac{3}{5}$**.\n\n**(vii)** Let current ages be N and S. N−5=3(S−5) ⇒ N=3S−10. N+10=2(S+10) ⇒ N=2S+10. Equating, 3S−10=2S+10 ⇒ S=20, N=50.\n\n**(viii)** Let tens digit a and units digit b. a+b=9. The number is 10a+b, reversed is 10b+a, and 9(10a+b)=2(10b+a). Simplify: 88a=11b, hence b=8a. Therefore 9a=9 ⇒ a=1,b=8, number **18**.\n\n**(ix)** Let x be the number of ₹50 notes and y the number of ₹100 notes. x+y=25 and 50x+100y=2000, i.e. x+2y=40. Subtract x+y=25: y=15, so x=10.\n\n**(x)** Let F be the fee for the first three days and r the charge for each additional day. F+4r=27 and F+2r=21. Subtract: 2r=6 ⇒ r=₹3; F=21−6=₹15."
             }
           },
           {
@@ -1760,7 +1760,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Use coefficient ratios to classify: (i) 5x−4y+8=0 and 7x+6y−9=0; (ii) 9x+3y+12=0 and 18x+6y+24=0; (iii) 6x−3y+10=0 and 2x−y+9=0.",
             "answer": {
               "answerKey": "(i) Intersect at one point; (ii) coincident; (iii) parallel and distinct.",
-              "schoolMethod": "(i) a₁/a₂=5/7, b₁/b₂=−4/6=−2/3; these differ. So the lines intersect at one point. Solving 5x−4y=−8 and 7x+6y=9 gives 29x=−6, so x=−6/29 and y=101/58.\n\n(ii) 18/9=6/3=24/12=2. All coefficient and constant ratios agree, so the equations describe **coincident lines** and have infinitely many common solutions.\n\n(iii) 6/2=3 and (−3)/(−1)=3, but 10/9≠3. Coefficients are proportional while constants are not, so the lines are **parallel and distinct**; there is no common solution."
+              "schoolMethod": "(i) $\\frac{a₁}{a₂}$=$\\frac{5}{7}$, $\\frac{b₁}{b₂}$=−$\\frac{4}{6}$=−$\\frac{2}{3}$; these differ. So the lines intersect at one point. Solving 5x−4y=−8 and 7x+6y=9 gives 29x=−6, so x=−$\\frac{6}{29}$ and y=$\\frac{101}{58}$.\n\n(ii) $\\frac{18}{9}$=$\\frac{6}{3}$=$\\frac{24}{12}$=2. All coefficient and constant ratios agree, so the equations describe **coincident lines** and have infinitely many common solutions.\n\n(iii) $\\frac{6}{2}$=3 and $\\frac{-3}{-1}$=3, but $\\frac{10}{9}$≠3. Coefficients are proportional while constants are not, so the lines are **parallel and distinct**; there is no common solution."
             }
           },
           {
@@ -1770,7 +1770,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Which pairs have solutions? For those that do, find the common solution graphically: (i) x+y=5 and 2x+2y=10; (ii) x−y=8 and 3x−3y=16; (iii) 2x+y−6=0 and 4x−2y−4=0; (iv) 2x−2y−2=0 and 4x−4y−5=0.",
             "answer": {
               "answerKey": "(i) Coincident, infinitely many solutions; (ii) no solution; (iii) (2,2); (iv) no solution.",
-              "schoolMethod": "(i) Dividing the second equation by 2 gives x+y=5, the first equation itself. The graphs coincide, so every point on x+y=5 is a common solution.\n\n(ii) The equations reduce to x−y=8 and x−y=16/3. These are distinct parallel lines; there is **no solution**.\n\n(iii) 2x+y=6 and 4x−2y=4. Doubling the first gives 4x+2y=12. Add the second: 8x=16 ⇒ x=2; then y=2. The graphs intersect at **(2,2)**.\n\n(iv) The first reduces to x−y=1 and the second to x−y=5/4. The lines are parallel and distinct, so there is no solution."
+              "schoolMethod": "(i) Dividing the second equation by 2 gives x+y=5, the first equation itself. The graphs coincide, so every point on x+y=5 is a common solution.\n\n(ii) The equations reduce to x−y=8 and x−y=$\\frac{16}{3}$. These are distinct parallel lines; there is **no solution**.\n\n(iii) 2x+y=6 and 4x−2y=4. Doubling the first gives 4x+2y=12. Add the second: 8x=16 ⇒ x=2; then y=2. The graphs intersect at **(2,2)**.\n\n(iv) The first reduces to x−y=1 and the second to x−y=$\\frac{5}{4}$. The lines are parallel and distinct, so there is no solution."
             }
           },
           {
@@ -1836,17 +1836,17 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "For y=3x: (i) find its slope from (0,0) and (2,6); (ii) state the y-intercept and its meaning; (iii) for a water tank whose level y cm after x minutes follows the line, find the level after 5 minutes and time to reach 21 cm; (iv) does (4,10) lie on it? (v) find its intersection with x=3.",
             "answer": {
               "answerKey": "Slope 3; y-intercept 0; 15 cm after 5 min; 7 min for 21 cm; (4,10) is not on line; intersection (3,9).",
-              "schoolMethod": "(i) Slope m=(y₂−y₁)/(x₂−x₁)=(6−0)/(2−0)=**3**.\n\n(ii) At x=0, y=0, so the y-intercept is 0. In the tank context, the water level starts at 0 cm.\n\n(iii)(a) At x=5, y=3(5)=**15 cm**. (b) For y=21, 21=3x, so x=**7 minutes**.\n\n(iv) At x=4 the line predicts y=3(4)=12, not 10. Therefore (4,10) does not lie on the line.\n\n(v) If x=3, then y=3×3=9. The intersection point is **(3,9)**."
+              "schoolMethod": "(i) Slope m=$\\frac{y₂-y₁}{x₂-x₁}$=$\\frac{6-0}{2-0}$=**3**.\n\n(ii) At x=0, y=0, so the y-intercept is 0. In the tank context, the water level starts at 0 cm.\n\n(iii)(a) At x=5, y=3(5)=**15 cm**. (b) For y=21, 21=3x, so x=**7 minutes**.\n\n(iv) At x=4 the line predicts y=3(4)=12, not 10. Therefore (4,10) does not lie on the line.\n\n(v) If x=3, then y=3×3=9. The intersection point is **(3,9)**."
             }
           },
           {
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Use F=(9/5)C+32 to: (i) draw the graph using Celsius on x-axis and Fahrenheit on y-axis; (ii) convert 30°C; (iii) convert 95°F; (iv) find F at 0°C and C at 0°F; (v) find a temperature numerically equal in both scales.",
+            "text": "Use F=($\\frac{9}{5}$)C+32 to: (i) draw the graph using Celsius on x-axis and Fahrenheit on y-axis; (ii) convert 30°C; (iii) convert 95°F; (iv) find F at 0°C and C at 0°F; (v) find a temperature numerically equal in both scales.",
             "answer": {
-              "answerKey": "(i) Plot e.g. (0,32),(100,212), join them; (ii) 86°F; (iii) 35°C; (iv) 32°F and −160/9°C ≈−17.8°C; (v) −40°.",
-              "schoolMethod": "(i) The graph is a straight line. Useful points are: C=0 gives F=32; C=100 gives F=(9/5)(100)+32=212; C=−40 gives F=−40. Plot points (0,32), (100,212), and join them with a straight line.\n\n(ii) F=(9/5)(30)+32=54+32=**86°F**.\n\n(iii) 95=(9/5)C+32 ⇒ 63=(9/5)C ⇒ C=63×5/9=**35°C**.\n\n(iv) At C=0, F=32°F. At F=0, 0=(9/5)C+32 ⇒ C=−160/9≈**−17.78°C**.\n\n(v) Set F=C: C=(9/5)C+32 ⇒ −(4/5)C=32 ⇒ C=−40. Thus **−40°C=−40°F**."
+              "answerKey": "(i) Plot e.g. (0,32),(100,212), join them; (ii) 86°F; (iii) 35°C; (iv) 32°F and −$\\frac{160}{9}$°C ≈−17.8°C; (v) −40°.",
+              "schoolMethod": "(i) The graph is a straight line. Useful points are: C=0 gives F=32; C=100 gives F=($\\frac{9}{5}$)(100)+32=212; C=−40 gives F=−40. Plot points (0,32), (100,212), and join them with a straight line.\n\n(ii) F=($\\frac{9}{5}$)(30)+32=54+32=**86°F**.\n\n(iii) 95=($\\frac{9}{5}$)C+32 ⇒ 63=($\\frac{9}{5}$)C ⇒ C=63×$\\frac{5}{9}$=**35°C**.\n\n(iv) At C=0, F=32°F. At F=0, 0=($\\frac{9}{5}$)C+32 ⇒ C=−$\\frac{160}{9}$≈**−17.78°C**.\n\n(v) Set F=C: C=($\\frac{9}{5}$)C+32 ⇒ −($\\frac{4}{5}$)C=32 ⇒ C=−40. Thus **−40°C=−40°F**."
             }
           },
           {
@@ -1875,8 +1875,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Give a formula for the x-intercept of y=mx+c.",
             "answer": {
-              "answerKey": "x-intercept = −c/m when m≠0.",
-              "schoolMethod": "At the x-intercept, y=0. Substitute into y=mx+c: 0=mx+c ⇒ mx=−c. If m≠0, **x=−c/m**. If m=0 and c≠0, the horizontal line never meets the x-axis; if m=c=0, the line is the x-axis itself and every point on it is an intercept."
+              "answerKey": "x-intercept = −$\\frac{c}{m}$ when m≠0.",
+              "schoolMethod": "At the x-intercept, y=0. Substitute into y=mx+c: 0=mx+c ⇒ mx=−c. If m≠0, **x=−$\\frac{c}{m}$**. If m=0 and c≠0, the horizontal line never meets the x-axis; if m=c=0, the line is the x-axis itself and every point on it is an intercept."
             }
           },
           {
@@ -1916,7 +1916,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Find a and b so that (a+b)x−2by=5a+2b+1 and 3x−y=14 have infinitely many solutions.",
             "answer": {
               "answerKey": "a=5 and b=1.",
-              "schoolMethod": "For coincident lines, all three ratios must agree. Write the first as (a+b)x−2by−(5a+2b+1)=0 and the second as 3x−y−14=0. The coefficient ratio requires (a+b)/3=(−2b)/(−1)=2b. Hence a+b=6b, so a=5b. The constant ratio gives (5a+2b+1)/14=2b. Substitute a=5b: (25b+2b+1)=28b ⇒ b=1; thus a=5. These values make the first equation 6x−2y=28, twice the second equation."
+              "schoolMethod": "For coincident lines, all three ratios must agree. Write the first as (a+b)x−2by−(5a+2b+1)=0 and the second as 3x−y−14=0. The coefficient ratio requires $\\frac{a+b}{3}$=$\\frac{-2b}{-1}$=2b. Hence a+b=6b, so a=5b. The constant ratio gives $\\frac{5a+2b+1}{14}$=2b. Substitute a=5b: (25b+2b+1)=28b ⇒ b=1; thus a=5. These values make the first equation 6x−2y=28, twice the second equation."
             }
           },
           {
@@ -1976,7 +1976,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A train takes 6 hours less for a journey when its speed is increased by 6 km/h, and 6 hours more if its speed is decreased by 4 km/h. Find its original speed and the distance.",
             "answer": {
               "answerKey": "Speed 24 km/h; distance 720 km.",
-              "schoolMethod": "Let original speed be v km/h and distance be d km. Original time is d/v.\n\nWith increased speed: d/v−d/(v+6)=6 ⇒ 6d/[v(v+6)]=6 ⇒ d=v(v+6).\n\nWith decreased speed: d/(v−4)−d/v=6 ⇒ 4d/[v(v−4)]=6 ⇒ d=3v(v−4)/2.\n\nEquate the expressions for d: v(v+6)=3v(v−4)/2. Since v>4, divide by v: v+6=1.5v−6 ⇒ 0.5v=12 ⇒ v=24. Then d=24×30=**720 km**."
+              "schoolMethod": "Let original speed be v km/h and distance be d km. Original time is $\\frac{d}{v}$.\n\nWith increased speed: $\\frac{d}{v}$−$\\frac{d}{v+6}$=6 ⇒ $\\frac{6d}{v(v+6)}$=6 ⇒ d=v(v+6).\n\nWith decreased speed: $\\frac{d}{v-4}$−$\\frac{d}{v}$=6 ⇒ $\\frac{4d}{v(v-4)}$=6 ⇒ d=$\\frac{3v(v-4)}{2}$.\n\nEquate the expressions for d: v(v+6)=$\\frac{3v(v-4)}{2}$. Since v>4, divide by v: v+6=1.5v−6 ⇒ 0.5v=12 ⇒ v=24. Then d=24×30=**720 km**."
             }
           },
           {
@@ -2003,7 +2003,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Why does every point (x,y) satisfying 2x + 3y = 6 lie on the graph of the equation? Give three different solutions and explain why a non-vertical, non-horizontal linear equation has infinitely many solutions.",
             "answer": {
               "answerKey": "Examples of solutions are (0,2), (3,0) and (−3,4). There are infinitely many solutions.",
-              "schoolMethod": "Substitution verifies each point: 2(0)+3(2)=6; 2(3)+3(0)=6; 2(−3)+3(4)=6. More generally, for any chosen x, y=(6−2x)/3 gives a solution. Since x can take infinitely many real values, so can the ordered pairs. The graph is a straight line containing all these points."
+              "schoolMethod": "Substitution verifies each point: 2(0)+3(2)=6; 2(3)+3(0)=6; 2(−3)+3(4)=6. More generally, for any chosen x, y=$\\frac{6-2x}{3}$ gives a solution. Since x can take infinitely many real values, so can the ordered pairs. The graph is a straight line containing all these points."
             }
           },
           {
@@ -2025,7 +2025,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The line AB in the figure passes through A=(2,0) and B=(4,3). (i) Find the point on AB whose x-coordinate is 8. (ii) Find the point on AB whose y-coordinate is 6.",
             "answer": {
               "answerKey": "(i) (8,9). (ii) (6,6).",
-              "schoolMethod": "The slope is (3−0)/(4−2)=3/2. Using point A=(2,0), the line is y=(3/2)(x−2). (i) For x=8, y=(3/2)(6)=9, so the point is (8,9). (ii) Set y=6: 6=(3/2)(x−2), so 4=x−2 and x=6. The point is (6,6)."
+              "schoolMethod": "The slope is $\\frac{3-0}{4-2}$=$\\frac{3}{2}$. Using point A=(2,0), the line is y=($\\frac{3}{2}$)(x−2). (i) For x=8, y=($\\frac{3}{2}$)(6)=9, so the point is (8,9). (ii) Set y=6: 6=($\\frac{3}{2}$)(x−2), so 4=x−2 and x=6. The point is (6,6)."
             }
           },
           {
@@ -2035,8 +2035,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "page": 104,
             "text": "Solve the in-text paratha-and-dahi problem: one paratha and two bowls of dahi cost ₹90; two parathas and seven bowls of dahi cost ₹260. Find each price.",
             "answer": {
-              "answerKey": "One paratha costs ₹110/3 = ₹36⅔ and one bowl of dahi costs ₹80/3 = ₹26⅔.",
-              "schoolMethod": "Let p be the price of a paratha and d the price of a bowl of dahi. Then p+2d=90 and 2p+7d=260. Double the first equation: 2p+4d=180. Subtract it from the second equation: 3d=80, so d=80/3. Then p=90−160/3=110/3. Check: 110/3+160/3=90 and 220/3+560/3=260. The fractional-rupee values follow from the data as stated."
+              "answerKey": "One paratha costs ₹$\\frac{110}{3}$ = ₹36⅔ and one bowl of dahi costs ₹$\\frac{80}{3}$ = ₹26⅔.",
+              "schoolMethod": "Let p be the price of a paratha and d the price of a bowl of dahi. Then p+2d=90 and 2p+7d=260. Double the first equation: 2p+4d=180. Subtract it from the second equation: 3d=80, so d=$\\frac{80}{3}$. Then p=90−$\\frac{160}{3}$=$\\frac{110}{3}$. Check: $\\frac{110}{3}$+$\\frac{160}{3}$=90 and $\\frac{220}{3}$+$\\frac{560}{3}$=260. The fractional-rupee values follow from the data as stated."
             }
           },
           {
@@ -2160,7 +2160,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "How many cubes of side 20 cm fit tightly in a cubical box of side 2 m?",
             "answer": {
               "answerKey": "1000 cubes.",
-              "schoolMethod": "Convert 2 m to 200 cm. Along each edge, 200/20=10 small cubes fit. Total =10×10×10=**1000 cubes**."
+              "schoolMethod": "Convert 2 m to 200 cm. Along each edge, $\\frac{200}{20}$=10 small cubes fit. Total =10×10×10=**1000 cubes**."
             }
           },
           {
@@ -2170,7 +2170,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A godown is 40 m×25 m×10 m and is filled with boxes measuring 2 m×1.25 m×1 m. Find the number of boxes.",
             "answer": {
               "answerKey": "4000 boxes.",
-              "schoolMethod": "Godown volume=40×25×10=10,000 m³. One box volume=2×1.25×1=2.5 m³. Since each dimension divides the corresponding godown dimension exactly, the packed count is (40/2)(25/1.25)(10/1)=20×20×10=**4000 boxes**."
+              "schoolMethod": "Godown volume=40×25×10=10,000 m³. One box volume=2×1.25×1=2.5 m³. Since each dimension divides the corresponding godown dimension exactly, the packed count is ($\\frac{40}{2}$)($\\frac{25}{1.25}$)($\\frac{10}{1}$)=20×20×10=**4000 boxes**."
             }
           },
           {
@@ -2246,7 +2246,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Cylinder B has twice the radius and half the height of cylinder A. Find CSA(A):CSA(B) and volume(A):volume(B).",
             "answer": {
               "answerKey": "CSA ratio 1:1; volume ratio 1:2.",
-              "schoolMethod": "Let cylinder A have radius r and height h. Then B has radius 2r and height h/2.\n\nCSA(A)=2πrh. CSA(B)=2π(2r)(h/2)=2πrh, so the ratio is **1:1**.\n\nV(A)=πr²h. V(B)=π(2r)²(h/2)=2πr²h, so V(A):V(B)=**1:2**."
+              "schoolMethod": "Let cylinder A have radius r and height h. Then B has radius 2r and height $\\frac{h}{2}$.\n\nCSA(A)=2πrh. CSA(B)=2π(2r)($\\frac{h}{2}$)=2πrh, so the ratio is **1:1**.\n\nV(A)=πr²h. V(B)=π(2r)²($\\frac{h}{2}$)=2πr²h, so V(A):V(B)=**1:2**."
             }
           },
           {
@@ -2266,7 +2266,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A cube has edge r cm. A largest possible right circular cylinder is cut out of it. Find the cylinder’s volume.",
             "answer": {
               "answerKey": "πr³/4 cm³.",
-              "schoolMethod": "The cylinder’s height equals the cube’s edge, h=r. Its circular base is the largest circle that fits in a square face, so its diameter is r and radius is r/2. Therefore V=π(r/2)²(r)=**πr³/4 cm³**."
+              "schoolMethod": "The cylinder’s height equals the cube’s edge, h=r. Its circular base is the largest circle that fits in a square face, so its diameter is r and radius is $\\frac{r}{2}$. Therefore V=π($\\frac{r}{2}$)²(r)=**πr³/4 cm³**."
             }
           },
           {
@@ -2276,17 +2276,17 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The radius of a cylinder is increased by 10% and its height is decreased by x%. Its volume remains unchanged. Find x.",
             "answer": {
               "answerKey": "x≈17.36%.",
-              "schoolMethod": "Let original volume be V=πr²h. New radius=1.1r and new height=(1−x/100)h. Equal volumes give 1.1²(1−x/100)=1. Thus 1−x/100=1/1.21=100/121. Hence x/100=21/121 and x=2100/121≈**17.36%**."
+              "schoolMethod": "Let original volume be V=πr²h. New radius=1.1r and new height=(1−$\\frac{x}{100}$)h. Equal volumes give 1.1²(1−$\\frac{x}{100}$)=1. Thus 1−$\\frac{x}{100}$=$\\frac{1}{1.21}$=$\\frac{100}{121}$. Hence $\\frac{x}{100}$=$\\frac{21}{121}$ and x=$\\frac{2100}{121}$≈**17.36%**."
             }
           },
           {
             "id": "q5",
             "number": "5",
             "isHard": true,
-            "text": "A metal cube of side 12 cm is melted and recast as cylindrical rods of radius 2 cm and height 12 cm. Find (i) cube volume, (ii) one rod volume, (iii) approximate number of complete rods using π≈22/7.",
+            "text": "A metal cube of side 12 cm is melted and recast as cylindrical rods of radius 2 cm and height 12 cm. Find (i) cube volume, (ii) one rod volume, (iii) approximate number of complete rods using π≈$\\frac{22}{7}$.",
             "answer": {
-              "answerKey": "(i) 1728 cm³; (ii) 48π=1056/7≈150.86 cm³; (iii) 11 complete rods.",
-              "schoolMethod": "(i) Cube volume=12³=**1728 cm³**.\n\n(ii) Rod volume=πr²h=π×2²×12=**48π cm³**. With π≈22/7, this is 1056/7≈**150.86 cm³**.\n\n(iii) Number of rods by volume=1728/(48π)=36/π≈11.46. Only whole rods can be made, so **11 complete rods** can be formed."
+              "answerKey": "(i) 1728 cm³; (ii) 48π=$\\frac{1056}{7}$≈150.86 cm³; (iii) 11 complete rods.",
+              "schoolMethod": "(i) Cube volume=12³=**1728 cm³**.\n\n(ii) Rod volume=πr²h=π×2²×12=**48π cm³**. With π≈$\\frac{22}{7}$, this is $\\frac{1056}{7}$≈**150.86 cm³**.\n\n(iii) Number of rods by volume=$\\frac{1728}{48π}$=36/π≈11.46. Only whole rods can be made, so **11 complete rods** can be formed."
             }
           }
         ]
@@ -2302,7 +2302,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Find the total surface area of a cone with slant height 21 m and base diameter 24 m.",
             "answer": {
               "answerKey": "Total surface area = 396π m² ≈ 1244.07 m².",
-              "schoolMethod": "Radius r=24/2=12 m and slant height l=21 m. Total surface area of a cone = πr(l+r) = π×12×(21+12)=396π m². Using π≈3.14159, 396π≈**1244.07 m²**."
+              "schoolMethod": "Radius r=$\\frac{24}{2}$=12 m and slant height l=21 m. Total surface area of a cone = πr(l+r) = π×12×(21+12)=396π m². Using π≈3.14159, 396π≈**1244.07 m²**."
             }
           },
           {
@@ -2311,8 +2311,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Find the curved surface area of a right circular cone with slant height 10 cm and radius 7 cm.",
             "answer": {
-              "answerKey": "220 cm² (using π=22/7).",
-              "schoolMethod": "CSA=πrl=π×7×10=70π cm². Using π=22/7, CSA=70×22/7=**220 cm²**."
+              "answerKey": "220 cm² (using π=$\\frac{22}{7}$).",
+              "schoolMethod": "CSA=πrl=π×7×10=70π cm². Using π=$\\frac{22}{7}$, CSA=70×$\\frac{22}{7}$=**220 cm²**."
             }
           },
           {
@@ -2332,7 +2332,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A cone has height 15 cm and volume 1570 cm³. Find its base radius.",
             "answer": {
               "answerKey": "10 cm (using π≈3.14).",
-              "schoolMethod": "V=(1/3)πr²h. Hence 1570=(1/3)πr²(15)=5πr². Thus r²=1570/(5π)=314/π. With π≈3.14, r²=100 and **r=10 cm**."
+              "schoolMethod": "V=($\\frac{1}{3}$)πr²h. Hence 1570=($\\frac{1}{3}$)πr²(15)=5πr². Thus r²=$\\frac{1570}{5\\pi}$=314/π. With π≈3.14, r²=100 and **r=10 cm**."
             }
           },
           {
@@ -2342,7 +2342,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The curved surface area of a cone is 308 cm² and its slant height is 14 cm. Find (i) radius, (ii) total surface area.",
             "answer": {
               "answerKey": "(i) 7 cm; (ii) 462 cm².",
-              "schoolMethod": "(i) CSA=πrl=308. With l=14 and π=22/7, 308=(22/7)×r×14=44r, so r=**7 cm**.\n\n(ii) Base area=πr²=(22/7)×49=154 cm². TSA=CSA+base area=308+154=**462 cm²**."
+              "schoolMethod": "(i) CSA=πrl=308. With l=14 and π=$\\frac{22}{7}$, 308=($\\frac{22}{7}$)×r×14=44r, so r=**7 cm**.\n\n(ii) Base area=πr²=($\\frac{22}{7}$)×49=154 cm². TSA=CSA+base area=308+154=**462 cm²**."
             }
           },
           {
@@ -2352,7 +2352,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A joker’s cap is a cone of radius 7 cm and height 24 cm. Find the sheet area needed to make 10 caps.",
             "answer": {
               "answerKey": "5500 cm².",
-              "schoolMethod": "Slant height l=√(7²+24²)=√625=25 cm. A cap is open at its base, so only curved area is needed. One cap: πrl=(22/7)×7×25=550 cm². Ten caps require 10×550=**5500 cm²**."
+              "schoolMethod": "Slant height l=√(7²+24²)=√625=25 cm. A cap is open at its base, so only curved area is needed. One cap: πrl=($\\frac{22}{7}$)×7×25=550 cm². Ten caps require 10×550=**5500 cm²**."
             }
           },
           {
@@ -2362,7 +2362,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A conical tent has height 8 m and base radius 6 m. Tarpaulin is 3 m wide. Find the length needed, including 20 cm extra for stitching and cutting waste.",
             "answer": {
               "answerKey": "Approximately 63.03 m.",
-              "schoolMethod": "Slant height l=√(8²+6²)=√100=10 m. The conical tent has no base sheet, so tarpaulin area=CSA=πrl=π×6×10=60π m². With a 3 m wide roll, required length before allowance=(60π)/3=20π≈62.832 m. Add 0.20 m for stitching/waste: **20π+0.2≈63.03 m**."
+              "schoolMethod": "Slant height l=√(8²+6²)=√100=10 m. The conical tent has no base sheet, so tarpaulin area=CSA=πrl=π×6×10=60π m². With a 3 m wide roll, required length before allowance=$\\frac{60π}{3}$=20π≈62.832 m. Add 0.20 m for stitching/waste: **20π+0.2≈63.03 m**."
             }
           },
           {
@@ -2372,7 +2372,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A right triangle with sides 6 cm, 8 cm and 10 cm is rotated 360° about its 8 cm side. Find the volume and curved surface area of the solid.",
             "answer": {
               "answerKey": "Volume=96π cm³; CSA=60π cm².",
-              "schoolMethod": "The 8 cm side is the cone’s height, the other perpendicular side 6 cm becomes the base radius, and the hypotenuse 10 cm is the slant height. Thus V=(1/3)πr²h=(1/3)π×36×8=**96π cm³**. Curved area=πrl=π×6×10=**60π cm²**."
+              "schoolMethod": "The 8 cm side is the cone’s height, the other perpendicular side 6 cm becomes the base radius, and the hypotenuse 10 cm is the slant height. Thus V=($\\frac{1}{3}$)πr²h=($\\frac{1}{3}$)π×36×8=**96π cm³**. Curved area=πrl=π×6×10=**60π cm²**."
             }
           },
           {
@@ -2381,8 +2381,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "A conical cup is filled with water to half its depth. What fraction of the cup’s volume does the water occupy?",
             "answer": {
-              "answerKey": "1/8.",
-              "schoolMethod": "The water fills a smaller cone similar to the full cup. Its height is half the original, so every linear dimension (including radius) is scaled by 1/2. Volumes of similar solids scale as the cube of the linear scale factor: (1/2)³=**1/8**. Only one-eighth of the cup’s volume is occupied."
+              "answerKey": "$\\frac{1}{8}$.",
+              "schoolMethod": "The water fills a smaller cone similar to the full cup. Its height is half the original, so every linear dimension (including radius) is scaled by $\\frac{1}{2}$. Volumes of similar solids scale as the cube of the linear scale factor: ($\\frac{1}{2}$)³=**$\\frac{1}{8}$**. Only one-eighth of the cup’s volume is occupied."
             }
           }
         ]
@@ -2398,7 +2398,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A ball bearing has radius 0.7 cm. Find its surface area.",
             "answer": {
               "answerKey": "6.16 cm² approximately.",
-              "schoolMethod": "Surface area of a sphere=4πr²=4π(0.7)²=1.96π. Using π=22/7 gives 1.96×22/7=**6.16 cm²**."
+              "schoolMethod": "Surface area of a sphere=4πr²=4π(0.7)²=1.96π. Using π=$\\frac{22}{7}$ gives 1.96×$\\frac{22}{7}$=**6.16 cm²**."
             }
           },
           {
@@ -2408,7 +2408,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Two solid spheres of the same metal weigh 5920 g and 740 g. Find the radius of the larger sphere if the smaller sphere has diameter 5 cm.",
             "answer": {
               "answerKey": "5 cm.",
-              "schoolMethod": "For the same material, mass is proportional to volume. Volume ratio=5920:740=8:1. For spheres, volume ratio equals the cube of the radius ratio; thus (R/r)³=8 ⇒ R/r=2. The smaller sphere radius is 5/2=2.5 cm, so larger radius=2×2.5=**5 cm**."
+              "schoolMethod": "For the same material, mass is proportional to volume. Volume ratio=5920:740=8:1. For spheres, volume ratio equals the cube of the radius ratio; thus ($\\frac{R}{r}$)³=8 ⇒ $\\frac{R}{r}$=2. The smaller sphere radius is $\\frac{5}{2}$=2.5 cm, so larger radius=2×2.5=**5 cm**."
             }
           },
           {
@@ -2428,7 +2428,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Find (i) the curved surface area and (ii) total surface area of a hemisphere of radius 21 cm.",
             "answer": {
               "answerKey": "(i) 2772 cm²; (ii) 4158 cm².",
-              "schoolMethod": "For a hemisphere, CSA=2πr² and TSA=3πr². With r=21 cm and π=22/7, CSA=2×(22/7)×441=**2772 cm²**. TSA=3×(22/7)×441=**4158 cm²**."
+              "schoolMethod": "For a hemisphere, CSA=2πr² and TSA=3πr². With r=21 cm and π=$\\frac{22}{7}$, CSA=2×($\\frac{22}{7}$)×441=**2772 cm²**. TSA=3×($\\frac{22}{7}$)×441=**4158 cm²**."
             }
           },
           {
@@ -2438,7 +2438,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Metal spheres of radius 2 cm are packed in a box 16 cm×8 cm×8 cm. The box is then filled with preservative liquid. Find the liquid volume to the nearest integer.",
             "answer": {
               "answerKey": "488 cm³ approximately.",
-              "schoolMethod": "Box volume=16×8×8=1024 cm³. One sphere volume=(4/3)π(2³)=32π/3 cm³. Sixteen spheres occupy 16×32π/3=512π/3≈536.17 cm³. Liquid volume=1024−512π/3≈487.83 cm³, which rounds to **488 cm³**."
+              "schoolMethod": "Box volume=16×8×8=1024 cm³. One sphere volume=($\\frac{4}{3}$)π(2³)=$\\frac{32\\pi}{3}$ cm³. Sixteen spheres occupy 16×$\\frac{32\\pi}{3}$=$\\frac{512\\pi}{3}$≈536.17 cm³. Liquid volume=1024−$\\frac{512\\pi}{3}$≈487.83 cm³, which rounds to **488 cm³**."
             }
           },
           {
@@ -2448,7 +2448,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Show that increasing the radius of a sphere by 10% increases its volume by approximately 33.1%.",
             "answer": {
               "answerKey": "Increase =33.1%.",
-              "schoolMethod": "Let the original radius be r. The old volume is (4/3)πr³. New radius=1.1r, so new volume=(4/3)π(1.1r)³=1.331(4/3)πr³. The new volume is 133.1% of the old volume; therefore the increase is **33.1%**."
+              "schoolMethod": "Let the original radius be r. The old volume is ($\\frac{4}{3}$)πr³. New radius=1.1r, so new volume=($\\frac{4}{3}$)π(1.1r)³=1.331($\\frac{4}{3}$)πr³. The new volume is 133.1% of the old volume; therefore the increase is **33.1%**."
             }
           },
           {
@@ -2458,7 +2458,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The radius of a sphere is increased by x%, and its volume increases by 72.8%. Find x.",
             "answer": {
               "answerKey": "x=20%.",
-              "schoolMethod": "The volume factor is 1+72.8/100=1.728. If the radius factor is 1+x/100, then (1+x/100)³=1.728. Since 1.2³=1.728, 1+x/100=1.2, hence **x=20%**."
+              "schoolMethod": "The volume factor is 1+$\\frac{72.8}{100}$=1.728. If the radius factor is 1+$\\frac{x}{100}$, then (1+$\\frac{x}{100}$)³=1.728. Since 1.2³=1.728, 1+$\\frac{x}{100}$=1.2, hence **x=20%**."
             }
           },
           {
@@ -2468,7 +2468,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A hemispherical dome has base circumference 35.2 m. Find the cost of painting its curved surface at ₹10 per 100 cm².",
             "answer": {
               "answerKey": "₹1,97,120.",
-              "schoolMethod": "Base circumference 2πr=35.2 m. Using π=22/7, r=35.2×7/44=5.6 m. Curved surface area of a hemisphere=2πr²=2×(22/7)×(5.6)²=197.12 m². Since 1 m²=10,000 cm², area=1,971,200 cm²=19,712 lots of 100 cm². Cost=19,712×₹10=**₹1,97,120**."
+              "schoolMethod": "Base circumference 2πr=35.2 m. Using π=$\\frac{22}{7}$, r=35.2×$\\frac{7}{44}$=5.6 m. Curved surface area of a hemisphere=2πr²=2×($\\frac{22}{7}$)×(5.6)²=197.12 m². Since 1 m²=10,000 cm², area=1,971,200 cm²=19,712 lots of 100 cm². Cost=19,712×₹10=**₹1,97,120**."
             }
           }
         ]
@@ -2484,7 +2484,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Estimate how many scoops of ice cream can be obtained from a cuboidal container measuring 10 cm×15 cm×20 cm.",
             "answer": {
               "answerKey": "Approximately 45 average scoops, assuming each scoop is about a sphere of radius 2.5 cm.",
-              "schoolMethod": "Container volume=10×15×20=3000 cm³. Assume one average scoop is approximated by a sphere of radius 2.5 cm. Its volume is (4/3)π(2.5)³≈65.45 cm³. The theoretical quotient is 3000/65.45≈45.8, so the container contains about **45 full scoops** under this assumption. Scoop size and trapped air change the real count, so the result is an estimate, not an exact universal number."
+              "schoolMethod": "Container volume=10×15×20=3000 cm³. Assume one average scoop is approximated by a sphere of radius 2.5 cm. Its volume is ($\\frac{4}{3}$)π(2.5)³≈65.45 cm³. The theoretical quotient is $\\frac{3000}{65.45}$≈45.8, so the container contains about **45 full scoops** under this assumption. Scoop size and trapped air change the real count, so the result is an estimate, not an exact universal number."
             }
           },
           {
@@ -2504,7 +2504,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Estimate: (i) could one person drink enough water in a lifetime to fill a classroom? (ii) estimate the number of bricks used in the walls of a classroom.",
             "answer": {
               "answerKey": "(i) Usually no; an 80-year drinking-water estimate is about 58 m³ versus a classroom around 150–200 m³. (ii) About 4000 bricks under the sample dimensions below.",
-              "schoolMethod": "(i) Assume a person drinks 2 L/day for 80 years. Water consumed≈2×365×80=58,400 L=**58.4 m³**. A sample classroom of 8 m×7 m×3 m has volume 168 m³, nearly three times as much. Under these assumptions the answer is **no**. A smaller room or higher daily water amount changes the comparison.\n\n(ii) Assume the classroom is 8 m×7 m with 3 m wall height. Gross wall area=perimeter×height=2(8+7)×3=90 m². Subtract about 8 m² for doors and windows, leaving 82 m². Approximate exposed face area of one brick is 0.20×0.10=0.020 m², so estimated brick count=82/0.020=**4100 bricks**, before allowing for mortar and breakage. This is a transparent estimate, not a site measurement."
+              "schoolMethod": "(i) Assume a person drinks 2 L/day for 80 years. Water consumed≈2×365×80=58,400 L=**58.4 m³**. A sample classroom of 8 m×7 m×3 m has volume 168 m³, nearly three times as much. Under these assumptions the answer is **no**. A smaller room or higher daily water amount changes the comparison.\n\n(ii) Assume the classroom is 8 m×7 m with 3 m wall height. Gross wall area=perimeter×height=2(8+7)×3=90 m². Subtract about 8 m² for doors and windows, leaving 82 m². Approximate exposed face area of one brick is 0.20×0.10=0.020 m², so estimated brick count=$\\frac{82}{0.020}$=**4100 bricks**, before allowing for mortar and breakage. This is a transparent estimate, not a site measurement."
             }
           },
           {
@@ -2534,7 +2534,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Milk is served in cylindrical glasses of diameter 7 cm and filled to height 12 cm. How many litres are needed for 1600 students? Use 1000 cm³=1 L.",
             "answer": {
               "answerKey": "About 739 L.",
-              "schoolMethod": "Radius=7/2=3.5 cm, height=12 cm. One glass volume=πr²h=π(3.5)²(12)=147π cm³. With π=22/7, this is 462 cm³. For 1600 students: 462×1600=739,200 cm³=**739.2 L**."
+              "schoolMethod": "Radius=$\\frac{7}{2}$=3.5 cm, height=12 cm. One glass volume=πr²h=π(3.5)²(12)=147π cm³. With π=$\\frac{22}{7}$, this is 462 cm³. For 1600 students: 462×1600=739,200 cm³=**739.2 L**."
             }
           },
           {
@@ -2544,7 +2544,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The surface area of a sphere of radius 5 cm is five times the curved surface area of a cone of radius 4 cm. Find the cone’s height and volume.",
             "answer": {
               "answerKey": "Height 3 cm; volume 16π cm³.",
-              "schoolMethod": "Sphere surface area=4π(5²)=100π cm². This equals five times the cone’s CSA, so the cone CSA=20π cm². For radius 4, CSA=πrl=4πl; hence 4πl=20π ⇒ l=5 cm. Cone height h=√(l²−r²)=√(25−16)=3 cm. Volume=(1/3)πr²h=(1/3)π×16×3=**16π cm³**."
+              "schoolMethod": "Sphere surface area=4π(5²)=100π cm². This equals five times the cone’s CSA, so the cone CSA=20π cm². For radius 4, CSA=πrl=4πl; hence 4πl=20π ⇒ l=5 cm. Cone height h=√(l²−r²)=√(25−16)=3 cm. Volume=($\\frac{1}{3}$)πr²h=($\\frac{1}{3}$)π×16×3=**16π cm³**."
             }
           },
           {
@@ -2554,17 +2554,17 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Take Earth radius 6370 km, Jupiter radius 69,900 km and Sun radius 695,700 km. Estimate (i) Jupiter/Earth volume ratio and (ii) Sun/Earth volume ratio.",
             "answer": {
               "answerKey": "(i) ≈1321:1; (ii) ≈1,302,710:1.",
-              "schoolMethod": "For spheres, V=(4/3)πr³, so the ratios are cubes of the radius ratios.\n\n(i) VJ/VE=(69,900/6370)³≈**1321.34**. Jupiter’s volume is about 1321 times Earth’s.\n\n(ii) VS/VE=(695,700/6370)³≈**1,302,710**. The Sun’s volume is about 1.30 million times Earth’s. The common factor (4/3)π cancels."
+              "schoolMethod": "For spheres, V=($\\frac{4}{3}$)πr³, so the ratios are cubes of the radius ratios.\n\n(i) $\\frac{VJ}{VE}$=($\\frac{69,900}{6370}$)³≈**1321.34**. Jupiter’s volume is about 1321 times Earth’s.\n\n(ii) $\\frac{VS}{VE}$=($\\frac{695,700}{6370}$)³≈**1,302,710**. The Sun’s volume is about 1.30 million times Earth’s. The common factor ($\\frac{4}{3}$)π cancels."
             }
           },
           {
             "id": "q9",
             "number": "9",
             "isHard": false,
-            "text": "Show that the volume of a sphere equals 2/3 of the volume of the smallest cylinder that encloses it.",
+            "text": "Show that the volume of a sphere equals $\\frac{2}{3}$ of the volume of the smallest cylinder that encloses it.",
             "answer": {
-              "answerKey": "Vsphere=(2/3)Vcylinder.",
-              "schoolMethod": "Let the sphere radius be r. The smallest right circular cylinder enclosing it has radius r and height 2r. Cylinder volume=πr²(2r)=2πr³. Sphere volume=(4/3)πr³. Therefore Vsphere/Vcylinder=[(4/3)πr³]/(2πr³)=**2/3**, as required."
+              "answerKey": "Vsphere=($\\frac{2}{3}$)Vcylinder.",
+              "schoolMethod": "Let the sphere radius be r. The smallest right circular cylinder enclosing it has radius r and height 2r. Cylinder volume=πr²(2r)=2πr³. Sphere volume=($\\frac{4}{3}$)πr³. Therefore Vsphere/Vcylinder=[($\\frac{4}{3}$)πr³]/(2πr³)=**$\\frac{2}{3}$**, as required."
             }
           },
           {
@@ -2573,8 +2573,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": true,
             "text": "A string wraps tightly around the equator of a spherical body. A second string 1 m longer forms a concentric circle at a constant height above it. Find the height above the surface for Earth, Moon, Jupiter and a volleyball.",
             "answer": {
-              "answerKey": "For every sphere, height =1/(2π) m≈0.159 m=15.9 cm.",
-              "schoolMethod": "Let the original radius be R and the added height be h. The circumference increases from 2πR to 2π(R+h), an increase of 2πh. Since the added string is 1 m longer, 2πh=1 ⇒ h=1/(2π)=0.15915 m≈**15.9 cm**. The original radius cancels, so the answer is the same for Earth, the Moon, Jupiter and a volleyball, assuming perfect spheres and a uniform gap."
+              "answerKey": "For every sphere, height =$\\frac{1}{2π}$ m≈0.159 m=15.9 cm.",
+              "schoolMethod": "Let the original radius be R and the added height be h. The circumference increases from 2πR to 2π(R+h), an increase of 2πh. Since the added string is 1 m longer, 2πh=1 ⇒ h=$\\frac{1}{2π}$=0.15915 m≈**15.9 cm**. The original radius cancels, so the answer is the same for Earth, the Moon, Jupiter and a volleyball, assuming perfect spheres and a uniform gap."
             }
           },
           {
@@ -2583,8 +2583,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": true,
             "text": "A square pyramid is fitted inside a cylinder of radius r and height h. The square base lies on the cylinder’s base with its corners on the circular boundary; the apex lies on the top. Find volume(pyramid):volume(cylinder).",
             "answer": {
-              "answerKey": "2:(3π), i.e. 2/(3π):1.",
-              "schoolMethod": "The square base is inscribed in the circle of radius r. Its diagonal is the circle’s diameter 2r. If the square side is s, s√2=2r, so s²=2r². Pyramid volume=(1/3)(base area)(height)=(1/3)(2r²)h=(2/3)r²h. Cylinder volume=πr²h. Thus the ratio is [(2/3)r²h] : [πr²h] = **2/(3π):1**."
+              "answerKey": "2:(3π), i.e. $\\frac{2}{3\\pi}$:1.",
+              "schoolMethod": "The square base is inscribed in the circle of radius r. Its diagonal is the circle’s diameter 2r. If the square side is s, s√2=2r, so s²=2r². Pyramid volume=($\\frac{1}{3}$)(base area)(height)=($\\frac{1}{3}$)(2r²)h=($\\frac{2}{3}$)r²h. Cylinder volume=πr²h. Thus the ratio is [($\\frac{2}{3}$)r²h] : [πr²h] = **$\\frac{2}{3\\pi}$:1**."
             }
           },
           {
@@ -2593,8 +2593,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Find the change in volume when: (i) the length of a cuboid l,w,h is increased by 1 unit; (ii) the radius of a cylinder r,h is increased by 1 unit; (iii) the radius of a sphere is decreased by 1 unit.",
             "answer": {
-              "answerKey": "(i) wh; (ii) 2πrh+πh; (iii) decrease = 4πr²−4πr+4π/3.",
-              "schoolMethod": "(i) Old V=lwh; new V=(l+1)wh. Change=(l+1)wh−lwh=**wh cubic units** (option c).\n\n(ii) Old V=πr²h; new V=π(r+1)²h. Increase=πh[(r+1)²−r²]=πh(2r+1)=**2πrh+πh cubic units** (option e).\n\n(iii) For r≥1, new radius r−1. Decrease=(4/3)πr³−(4/3)π(r−1)³=(4/3)π[3r²−3r+1]=**4πr²−4πr+4π/3 cubic units**. The signed change (new minus old) is the negative of this quantity."
+              "answerKey": "(i) wh; (ii) 2πrh+πh; (iii) decrease = 4πr²−4πr+$\\frac{4\\pi}{3}$.",
+              "schoolMethod": "(i) Old V=lwh; new V=(l+1)wh. Change=(l+1)wh−lwh=**wh cubic units** (option c).\n\n(ii) Old V=πr²h; new V=π(r+1)²h. Increase=πh[(r+1)²−r²]=πh(2r+1)=**2πrh+πh cubic units** (option e).\n\n(iii) For r≥1, new radius r−1. Decrease=($\\frac{4}{3}$)πr³−($\\frac{4}{3}$)π(r−1)³=($\\frac{4}{3}$)π[3r²−3r+1]=**4πr²−4πr+$\\frac{4\\pi}{3}$ cubic units**. The signed change (new minus old) is the negative of this quantity."
             }
           },
           {
@@ -2603,8 +2603,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Given a cube of volume V, express its total surface area S in terms of V.",
             "answer": {
-              "answerKey": "S=6V^(2/3).",
-              "schoolMethod": "If the cube side is a, then V=a³ ⇒ a=V^(1/3). Total surface area S=6a²=6(V^(1/3))²=**6V^(2/3)**."
+              "answerKey": "S=6V^($\\frac{2}{3}$).",
+              "schoolMethod": "If the cube side is a, then V=a³ ⇒ a=V^($\\frac{1}{3}$). Total surface area S=6a²=6(V^($\\frac{1}{3}$))²=**6V^($\\frac{2}{3}$)**."
             }
           },
           {
@@ -2613,8 +2613,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": false,
             "text": "Given a cube with total surface area S, express its volume V in terms of S.",
             "answer": {
-              "answerKey": "V=(S/6)^(3/2).",
-              "schoolMethod": "For side a, S=6a², so a=√(S/6). Volume V=a³=[√(S/6)]³=**(S/6)^(3/2)**."
+              "answerKey": "V=($\\frac{S}{6}$)^($\\frac{3}{2}$).",
+              "schoolMethod": "For side a, S=6a², so a=√($\\frac{S}{6}$). Volume V=a³=[√($\\frac{S}{6}$)]³=**($\\frac{S}{6}$)^($\\frac{3}{2}$)**."
             }
           },
           {
@@ -2624,7 +2624,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A cylindrical glass has radius 4 cm and water depth 16 cm. How many marbles of radius 1 cm must be dropped in to raise the water to 20 cm?",
             "answer": {
               "answerKey": "48 marbles.",
-              "schoolMethod": "The rise is 20−16=4 cm. The additional volume needed is the cylinder’s base area times the rise: π(4²)(4)=64π cm³. One marble displaces its own volume (fully submerged): (4/3)π(1³)=4π/3 cm³. Number=64π÷(4π/3)=64×3/4=**48 marbles**. The final water level 20 cm is below the glass height 25 cm."
+              "schoolMethod": "The rise is 20−16=4 cm. The additional volume needed is the cylinder’s base area times the rise: π(4²)(4)=64π cm³. One marble displaces its own volume (fully submerged): ($\\frac{4}{3}$)π(1³)=$\\frac{4\\pi}{3}$ cm³. Number=64π÷$\\frac{4\\pi}{3}$=64×$\\frac{3}{4}$=**48 marbles**. The final water level 20 cm is below the glass height 25 cm."
             }
           },
           {
@@ -2644,7 +2644,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "(i) A ball of chapati dough has radius 6 cm. Estimate how many chapatis can be made. (ii) Estimate edible flesh in half a coconut or muskmelon after taking measurements.",
             "answer": {
               "answerKey": "(i) About 10 chapatis under the sample assumptions. (ii) For a 5 cm-radius fruit, about 180 cm³ edible flesh under a 70% yield assumption.",
-              "schoolMethod": "(i) Dough volume=(4/3)π(6³)=288π≈904.8 cm³. Assume one chapati uses a dough volume equivalent to a disk of radius 12 cm and average thickness 0.2 cm: V≈π(12²)(0.2)=28.8π≈90.5 cm³. Number≈904.8/90.5≈10. Thus about **10 chapatis** can be made; actual count depends on size and thickness.\n\n(ii) As an example, approximate a half-muskmelon by a hemisphere of radius 5 cm. Half-sphere volume=(2/3)π(5³)≈261.8 cm³. If about 70% is edible flesh after excluding rind/seeds, edible volume≈0.70×261.8≈**183 cm³**. Measure the actual fruit and substitute its radius; this is only a worked estimate."
+              "schoolMethod": "(i) Dough volume=($\\frac{4}{3}$)π(6³)=288π≈904.8 cm³. Assume one chapati uses a dough volume equivalent to a disk of radius 12 cm and average thickness 0.2 cm: V≈π(12²)(0.2)=28.8π≈90.5 cm³. Number≈$\\frac{904.8}{90.5}$≈10. Thus about **10 chapatis** can be made; actual count depends on size and thickness.\n\n(ii) As an example, approximate a half-muskmelon by a hemisphere of radius 5 cm. Half-sphere volume=($\\frac{2}{3}$)π(5³)≈261.8 cm³. If about 70% is edible flesh after excluding rind/seeds, edible volume≈0.70×261.8≈**183 cm³**. Measure the actual fruit and substitute its radius; this is only a worked estimate."
             }
           },
           {
@@ -2654,7 +2654,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "(i) Would laying every page of this textbook side-by-side cover a classroom floor? (ii) Estimate the maximum number of textbooks that fit in an empty 15 ft×20 ft×30 ft storeroom.",
             "answer": {
               "answerKey": "(i) About 8 m², usually not a classroom floor. (ii) About 303,000 by a pure volume estimate using a 20×28×1.5 cm book.",
-              "schoolMethod": "(i) Suppose the book has about 150 pages, each approximately 20 cm×27 cm=0.054 m². Total area≈150×0.054=**8.1 m²**. A sample classroom floor 8 m×7 m=56 m² is much larger, so the pages would not cover it.\n\n(ii) Storeroom volume=15×20×30=9000 ft³. Since 1 ft³≈0.0283168 m³, that is about 254.85 m³. Approximate one book as 20 cm×28 cm×1.5 cm=840 cm³=0.00084 m³. Volume ratio=254.85/0.00084≈303,393, so the idealized upper bound is about **303,000 books**. Real packing is lower because of gaps, orientation and access space."
+              "schoolMethod": "(i) Suppose the book has about 150 pages, each approximately 20 cm×27 cm=0.054 m². Total area≈150×0.054=**8.1 m²**. A sample classroom floor 8 m×7 m=56 m² is much larger, so the pages would not cover it.\n\n(ii) Storeroom volume=15×20×30=9000 ft³. Since 1 ft³≈0.0283168 m³, that is about 254.85 m³. Approximate one book as 20 cm×28 cm×1.5 cm=840 cm³=0.00084 m³. Volume ratio=$\\frac{254.85}{0.00084}$≈303,393, so the idealized upper bound is about **303,000 books**. Real packing is lower because of gaps, orientation and access space."
             }
           },
           {
@@ -2673,8 +2673,8 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "isHard": true,
             "text": "Earth radius is about 6371 km and the estimated volume of surface water is 1.38 billion km³. If all this water formed a uniform spherical layer around Earth, (i) write an expression for thickness t; (ii) evaluate it.",
             "answer": {
-              "answerKey": "t=[6371³+3(1.38×10⁹)/(4π)]^(1/3)−6371≈2.704 km.",
-              "schoolMethod": "(i) Let R=6371 km. The water shell volume equals the difference of sphere volumes:\n\n(4/3)π[(R+t)³−R³]=1.38×10⁹.\n\nSolving for t gives **t=[R³+3(1.38×10⁹)/(4π)]^(1/3)−R**, with R=6371 km.\n\n(ii) Substitution gives t≈**2.704 km**, or about 2.7 km. The thin-shell approximation V≈4πR²t gives almost the same result."
+              "answerKey": "t=[6371³+3$\\frac{1.38\\times10^9}{4\\pi}$]^($\\frac{1}{3}$)−6371≈2.704 km.",
+              "schoolMethod": "(i) Let R=6371 km. The water shell volume equals the difference of sphere volumes:\n\n($\\frac{4}{3}$)π[(R+t)³−R³]=1.38×10⁹.\n\nSolving for t gives **t=[R³+3$\\frac{1.38\\times10^9}{4\\pi}$]^($\\frac{1}{3}$)−R**, with R=6371 km.\n\n(ii) Substitution gives t≈**2.704 km**, or about 2.7 km. The thin-shell approximation V≈4πR²t gives almost the same result."
             }
           },
           {
@@ -2684,7 +2684,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Give the dimensions of a cuboid whose volume is halved when its surface area is doubled.",
             "answer": {
               "answerKey": "The question does not specify the original solid or reference dimensions. Relative to a unit cube (volume 1 and total surface area 6), one approximate example is 2.361 × 2.361 × 0.0897 units: volume ≈0.5 and total surface area ≈12. This is not unique.",
-              "schoolMethod": "The prompt does not state the starting cuboid, so the phrase “halved” and “doubled” needs a reference. To give a concrete example, take a **unit cube** as the reference: volume 1 unit³ and total surface area 6 unit². We seek a cuboid with dimensions a × a × c satisfying\n\n(a) a²c = 1/2\n\n(b) 2(a² + 2ac) = 12, so a² + 2ac = 6.\n\nFrom (a), c = 1/(2a²). Substitute into (b): a² + 1/a = 6, or a³ − 6a + 1 = 0. One positive root is approximately a = 2.361; then c = 1/(2a²) ≈ 0.0897.\n\nThus one approximate example is **2.361 × 2.361 × 0.0897 units**. Its volume is about 0.5 unit³ and its total surface area about 12 unit². Other dimensions may also work; the original wording is ambiguous without a specified reference object."
+              "schoolMethod": "The prompt does not state the starting cuboid, so the phrase “halved” and “doubled” needs a reference. To give a concrete example, take a **unit cube** as the reference: volume 1 unit³ and total surface area 6 unit². We seek a cuboid with dimensions a × a × c satisfying\n\n(a) a²c = $\\frac{1}{2}$\n\n(b) 2(a² + 2ac) = 12, so a² + 2ac = 6.\n\nFrom (a), c = $\\frac{1}{2a²}$. Substitute into (b): a² + $\\frac{1}{a}$ = 6, or a³ − 6a + 1 = 0. One positive root is approximately a = 2.361; then c = $\\frac{1}{2a²}$ ≈ 0.0897.\n\nThus one approximate example is **2.361 × 2.361 × 0.0897 units**. Its volume is about 0.5 unit³ and its total surface area about 12 unit². Other dimensions may also work; the original wording is ambiguous without a specified reference object."
             }
           },
           {
