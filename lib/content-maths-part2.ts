@@ -493,17 +493,17 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "In a T20, a team scores 6 runs in the first over. (i) It scores 12 in the second over; find the run rate now. (ii) After 19 overs its run rate is 6; it scores 12 in the last over. Find its final run rate.",
+            "text": "In cricket, the run rate is the average number of runs scored per over. In a T20 match, a team scored 6 runs in the first over making the run rate 6.\n\n(i) In the second over they scored 12 runs. What is the run rate now?\n\n(ii) After Over 19, their run rate was 6. What is the run rate after 20 overs given the team made 12 runs in the last over?",
             "answer": {
               "answerKey": "(i) 9 runs/over; (ii) 6.3 runs/over.",
-              "schoolMethod": "(i) Total after two overs = 6+12=18. Run rate = 18/2 = **9 runs per over**.\n\n(ii) Runs after 19 overs = 19×6=114. After scoring 12, total =126 in 20 overs. Final run rate =126/20=**6.3 runs per over**."
+              "schoolMethod": "(i) Total after two overs = 6+12=18.\n\nRun rate = 18/2 = **9 runs per over**.\n\n(ii) Runs after 19 overs = 19×6=114.\n\nAfter scoring 12, total =126 in 20 overs.\n\nFinal run rate =126/20=**6.3 runs per over**."
             }
           },
           {
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Five friends report shuttlecock prices. (i) If their respective averages are ay, as, ak, ap, ag, write the combined average. (ii) If an and af are the average prices of nylon and feather shuttlecocks, give the overall average and compare methods.",
+            "text": "Five friends who play badminton surveyed the city and collected the price of shuttlecocks across brands and types (Nylon and Feather). The following is the list of the prices, in rupees (₹), that each one compiled.\n\nYusuf: 40(N), 105(N), 383(F), 108(N), 165(F), 116(F)\nSrikanth: 194(N), 85(N), 93(N), 121(N)\nKashvi: 49(N), 297(F), 105(N), 275(F), 40(N)\nPrasanna: 124(N), 333(F), 182(N), 258(F)\nGracy: 220(F), 458(F), 129(F), 183(N)\n\nCan you describe a way they can work together to find the average price of a shuttlecock across types?\n\n(i) Each one calculated the average of the prices they had gathered. Suppose these are aᵧ, aₛ, aₖ, aₚ, aɢ respectively. Write an expression that gives the combined average.\n\n(ii) Suppose aₙ, aբ are the average prices of the nylon shuttlecocks and the feather shuttlecocks, respectively. Write an expression that gives the average price of a shuttlecock. Will this be equal to the answer we got using the method in the previous part?",
             "answer": {
               "answerKey": "(i) Combined mean = (6aᵧ + 4aₛ + 5aₖ + 4aₚ + 4aɢ)/23. (ii) If 13 prices are nylon with mean aₙ and 10 are feather with mean aբ, the overall mean is (13aₙ + 10aբ)/23. Using the textbook’s listed data, the mean is 4063/23 ≈ ₹176.65.",
               "schoolMethod": "Let the five friends have collected 6, 4, 5, 4 and 4 prices, respectively, for 23 prices in total.\n\n**(i)** If their means are aᵧ, aₛ, aₖ, aₚ and aɢ, the combined mean must weight each mean by how many prices contributed:\n\n\\[(6a_y+4a_s+5a_k+4a_p+4a_g)/23.\\]\n\nUsing the actual prices listed in the question, the total is ₹4,063, so the combined mean is 4063/23 ≈ **₹176.65**.\n\n**(ii)** The 13 nylon prices have mean aₙ=1429/13≈₹109.92 and the 10 feather prices have mean aբ=2634/10=₹263.40. Therefore the combined mean is (13aₙ+10aբ)/23 = 4063/23 ≈ **₹176.65**. Both approaches agree because they give each individual price equal weight."
