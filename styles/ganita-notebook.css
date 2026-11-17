@@ -339,3 +339,10 @@ html[data-ui="ui3"] .ganita-notebook .sol-note {
   .ganita-notebook .qbody { padding-left: 54px; }
   .ganita-notebook .qinstr { margin-left: 54px; margin-right: 14px; }
 }
+
+/* Subscript letters on variables (a_y, a_n, …) rendered at 0.7em were much
+   smaller than the full-size \dfrac digits — bring them to the same size. */
+.ganita-notebook .katex .sizing.reset-size6.size3,
+.ganita-notebook .katex .sizing.reset-size6.size4 {
+  font-size: 1em !important;
+}
