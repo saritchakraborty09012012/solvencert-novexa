@@ -29,6 +29,18 @@ export function validateEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && email.includes('.com');
 }
 
+// Date of birth is compulsory for NEW email sign-ups (non-OAuth) from this
+// change onwards — existing users are never asked again. Returns an error
+// message, or null when the value is acceptable.
+export function validateDob(dob: string): string | null {
+  if (!dob) return 'Date of birth is required.';
+  const t = new Date(dob).getTime();
+  if (Number.isNaN(t)) return 'Enter a valid date of birth.';
+  if (t > Date.now()) return 'Date of birth cannot be in the future.';
+  if (t < new Date('1900-01-01').getTime()) return 'Enter a valid date of birth.';
+  return null;
+}
+
 export function validateUTR(utr: string): boolean {
   return /^\d{12}$/.test(utr);
 }

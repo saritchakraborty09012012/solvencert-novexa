@@ -5,7 +5,7 @@ import Layout from '@/components/layout/Layout';
 import { supabase } from '@/lib/supabase';
 import { useAuthStore } from '@/store/authStore';
 import { useCollabStore, attachCollabChannel } from '@/store/collabStore';
-import { validateEmail } from '@/utils/helpers';
+import { validateEmail, validateDob } from '@/utils/helpers';
 import toast from 'react-hot-toast';
 
 /**
@@ -91,6 +91,9 @@ export default function JoinCollabPage() {
     if (!fullName.trim()) return setError('Enter your name.');
     if (!validateEmail(email)) return setError('Enter a valid email.');
     if (password.length < 6) return setError('Password must be at least 6 characters.');
+    // Same rule as the main sign-up form: new email accounts must give a DOB.
+    const dobError = validateDob(dob);
+    if (dobError) return setError(dobError);
     setBusy(true);
     try {
       const { data, error: e2 } = await supabase.auth.signUp({
@@ -208,7 +211,8 @@ export default function JoinCollabPage() {
               />
               <input
                 type="date" value={dob} onChange={(e) => setDob(e.target.value)}
-                placeholder="Date of birth" autoComplete="bday" className="input-field w-full"
+                placeholder="Date of birth (required)" autoComplete="bday" required
+                className="input-field w-full"
               />
               <div className="flex flex-col gap-1">
                 <label className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Password</label>

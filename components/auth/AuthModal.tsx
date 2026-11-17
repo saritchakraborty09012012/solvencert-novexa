@@ -3,7 +3,7 @@ import { X, Eye, EyeOff, Loader2, ArrowRight, Mail, AlertCircle } from 'lucide-r
 import { SolveNCERTLogo } from '@/components/ui/Logo';
 import { supabase } from '@/lib/supabase';
 import { useAuthStore } from '@/store/authStore';
-import { validateEmail, generateInitials, generateReferralCode } from '@/utils/helpers';
+import { validateEmail, validateDob, generateInitials, generateReferralCode } from '@/utils/helpers';
 import { clearGuestLimits } from '@/lib/guestLimits';
 import { captureEvent } from '@/lib/analytics';
 import { cn } from '@/utils/helpers';
@@ -57,6 +57,10 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
     if (!validateEmail(email))  return setError('Enter a valid email (must include @ and .com).');
     if (password.length < 6)    return setError('Password must be at least 6 characters.');
     if (password !== confirmPw) return setError('Passwords do not match.');
+    // Email (non-OAuth) sign-ups must provide a date of birth. Applies to new
+    // sign-ups only — nothing is ever demanded from existing users.
+    const dobError = validateDob(dob);
+    if (dobError) return setError(dobError);
     setLoading(true);
     try {
       const { data, error: e } = await supabase.auth.signUp({
@@ -189,7 +193,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
               {isSignUp && (
                 <div className="grid grid-cols-2 gap-3">
                   <Field label="Phone (optional)" type="tel" value={phone} onChange={setPhone} placeholder="+91 …" autoComplete="tel" />
-                  <Field label="Date of Birth" type="date" value={dob} onChange={setDob} autoComplete="bday" />
+                  <Field label="Date of Birth *" type="date" value={dob} onChange={setDob} autoComplete="bday" />
                 </div>
               )}
 
