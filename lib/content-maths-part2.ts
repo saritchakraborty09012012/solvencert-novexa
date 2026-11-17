@@ -513,7 +513,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "Shreyas owns 25 shares at an average ₹150. (i) He buys 10 more at ₹30 each; find his new average. (ii) Vaishnavi owns 5 shares averaging ₹150 and buys x shares at ₹30 each; her new average is ₹70. Find x.",
+            "text": "Shreyas holds 25 shares of a company at an average price of ₹150 and Vaishnavi holds 5 shares of the same company at an average price of ₹150.\n\n(i) Shreyas buys 10 shares of this company at a price of ₹30 each. What is the average price per share for him after the purchase?\n\n(ii) Vaishnavi buys some shares of this company at a price of ₹30 each and the average price per share for her after the purchase is ₹70. How many shares did she buy?",
             "answer": {
               "answerKey": "(i) ₹115.71 approx; (ii) 10 shares.",
               "schoolMethod": "(i) Initial cost\n\n\u00a0\u00a0\u00a0= 25×150\n\n\u00a0\u00a0\u00a0= ₹3,750.\n\nNew purchase\n\n\u00a0\u00a0\u00a0= 10×30\n\n\u00a0\u00a0\u00a0= ₹300.\n\nTotal cost\n\n\u00a0\u00a0\u00a0= ₹4,050 for 35 shares.\n\nNew average\n\n\u00a0\u00a0\u00a0= $\\dfrac{4050}{35}$ ≈ **₹115.71 per share**.\n\n(ii) Vaishnavi’s initial cost\n\n\u00a0\u00a0\u00a0= 5×150\n\n\u00a0\u00a0\u00a0= ₹750.\n\nLet x be the number bought at ₹30.\n\n$\\dfrac{750+30x}{5+x}$ = 70\n\n\u00a0\u00a0\u00a0⇒ 750+30x = 350+70x\n\n\u00a0\u00a0\u00a0⇒ 400 = 40x\n\n\u00a0\u00a0\u00a0⇒ **x = 10 shares**."
@@ -523,7 +523,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "A 30-hasta pool is divided into lengths 4,5,6,7,8 hastas with depths 9,7,7,3,2 hastas. Find the mean depth.",
+            "text": "(Pṛthūdakasvāmī, commentary on Brahmagupta's Brāhmasphuṭasiddhānta, c. 864 CE) A “hasta” (meaning “forearm”) refers to a unit of length measuring around 18 inches. A pool 30 hastas long is dug to different depths along its length. It is divided into 5 sections having lengths 4, 5, 6, 7, and 8 hastas, and is dug to depths of 9, 7, 7, 3, and 2 hastas, respectively. Find the mean depth of the pool.",
             "answer": {
               "answerKey": "5 hastas.",
               "schoolMethod": "Mean depth is weighted by the lengths of the sections.\nTotal length =4+5+6+7+8=30 hastas.\nWeighted depth sum =4×9+5×7+6×7+7×3+8×2=36+35+42+21+16=150.\nMean depth =$\\dfrac{150}{30}$=**5 hastas**."
@@ -533,7 +533,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "Suvarna owns 1 g gold at an average price ₹15,000/g. Estimate the new average after: (i) 1 g at ₹30,000; (ii) 2 g at ₹30,000; (iii) 1 g at ₹10,000; (iv) 10 g at ₹10,000; (v) 0.5 g at ₹30,000; (vi) 0.5 g at ₹15,000.",
+            "text": "Suvarna had purchased 1g gold at ₹15k (short for ₹15,000). This is shown by point O denoting the average price of gold that she possesses. Six different scenarios are given below for her next transaction. For each scenario estimate and mark the average price of gold she will have after the transaction.\n\n(i) Purchase 1g gold at ₹30k (ii) Purchase 2g gold at ₹30k\n(iii) Purchase 1g gold at ₹10k (iv) Purchase 10g gold at ₹10k\n(v) Purchase 0.5g gold at ₹30k (vi) Purchase 0.5g gold at ₹15k",
             "answer": {
               "answerKey": "(i) ₹22,500; (ii) ₹25,000; (iii) ₹12,500; (iv) ₹10,454.55; (v) ₹20,000; (vi) ₹15,000 per g.",
               "schoolMethod": "Treat the original gram as costing ₹15,000. The new average is total cost divided by total grams.\n(i) $\\dfrac{15,000+30,000}{2}$=**₹22,500/g**.\n(ii) $\\dfrac{15,000+2×30,000}{3}$=**₹25,000/g**.\n(iii) $\\dfrac{15,000+10,000}{2}$=**₹12,500/g**.\n(iv) $\\dfrac{15,000+10×10,000}{11}$=$\\dfrac{115,000}{11}$≈**₹10,454.55/g**.\n(v) $\\dfrac{15,000+0.5×30,000}{1.5}$=$\\dfrac{30,000}{1.5}$=**₹20,000/g**.\n(vi) $\\dfrac{15,000+0.5×15,000}{1.5}$=$\\dfrac{22,500}{1.5}$=**₹15,000/g**."
@@ -543,7 +543,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "If every weight in a weighted mean is doubled, how does the weighted mean change? Justify algebraically.",
+            "text": "Given some data with corresponding weights, how would the weighted average change if all the weights are doubled? If required, experiment with some data. What do you observe? Justify your answer using algebra.",
             "answer": {
               "answerKey": "It remains unchanged.",
               "schoolMethod": "For values xᵢ with weights wᵢ, the mean is μ=Σwᵢxᵢ/Σwᵢ. After doubling every weight,\nμ′=Σ(2wᵢ)xᵢ/Σ(2wᵢ)=2Σwᵢxᵢ/(2Σwᵢ)=Σwᵢxᵢ/Σwᵢ=μ.\nTherefore doubling all weights does **not** change the weighted mean."
@@ -553,7 +553,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": false,
-            "text": "Use the cumulative graph of objects orbiting Earth by launch/separation year. (i) Estimate the total in 2003 and when it doubled. (ii) Estimate payload and other objects and their shares in 2025. (iii) Describe number and share trends.",
+            "text": "Answer the following questions based on the graph.\n\n(i) In 2003, approximately how many total objects were found orbiting Earth in space? In what year did this number double?\n\n(ii) Find the approximate number and share of payload objects and other objects in the year 2025.\n\n(iii) What can you say about the number of payload objects over time, and the number of other objects over time? What can you say about the share of payload objects over time, and the share of other objects over time?",
             "answer": {
               "answerKey": "(i) About 10,000 objects in 2003; the total reaches roughly 20,000 around 2021. (ii) In 2025, about 33,000 objects in total: approximately 17,000 payloads (about 52%) and 16,000 other objects (about 48%). (iii) Both categories increase in number; payloads rise particularly quickly in later years, so their share grows to about half while the share of other objects decreases.",
               "schoolMethod": "**(i) Doubling the total.** Read the stacked graph at 2003: the total is approximately **10,000 objects**. Twice this is 2 × 10,000 = 20,000. The cumulative total reaches about 20,000 near **2021** (read approximately from the graph).\n\n**(ii) Split in 2025.** The total height is approximately 33,000. The payload portion is about 17,000, so \\(\\dfrac{17,000}{33,000}\\times100\\%\\approx51.5\\%\\approx52\\%\\). The other-object count is about 33,000 − 17,000 = **16,000**, or \\(\\dfrac{16,000}{33,000}\\times100\\%\\approx48.5\\%\\approx48\\%\\). These are estimates because the graph is read visually.\n\n**(iii) Trend.** Both the payload count and other-object count increase over time. Payloads increase more sharply in the later years; consequently, payloads make up about 52% of the 2025 total and other objects about 48%, even though the number of other objects also continues to grow."
@@ -563,7 +563,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "Observe the school-playground infographic. (i) Decide which statements can be inferred: (a) more schools have a playground in Haryana than in Uttarakhand; (b) approximately 2 out of 3 schools in Arunachal Pradesh have a playground; (c) Punjab has the highest number of schools with a playground; (d) if Maharashtra has more schools than Telangana, then Maharashtra has more schools with a playground. (ii) Can the nationwide percentage of schools with playgrounds be found from the information given? If not, what additional information is needed?",
+            "text": "Observe the following infographic.\n\n(i) Identify the correct inference(s) from the statements given.\n\n(a) More schools have a playground in Haryana compared to Uttarakhand.\n\n(b) Approximately every 2 out of 3 schools in Arunachal Pradesh have a playground.\n\n(c) Punjab has the highest number of schools with a playground.\n\n(d) Suppose it is given that Maharashtra has more schools than Telangana. Then the number of schools having a playground is more in Maharashtra.\n\n(ii) Using the information given, can we find the nation-wide percentage of schools with a playground? If not, what additional information is needed?",
             "answer": {
               "answerKey": "(i) (b) and (d) can be inferred. (a) and (c) cannot be concluded from the displayed percentages alone. (ii) No. The number of schools in each state/UT (or the total count of schools and playground schools) is needed.",
               "schoolMethod": "**(i)(a)** The statement compares absolute counts, not percentages. The chart gives the share of schools with playgrounds; without knowing how many schools each state has, the count cannot be compared. **Not inferable.**\n\n**(i)(b)** Two out of three is about 66.7%, matching the displayed share for Arunachal Pradesh. **Inferable.**\n\n**(i)(c)** Punjab may have the highest displayed percentage, but that does not prove it has the largest count; state totals may differ. **Not inferable.**\n\n**(i)(d)** Given that Maharashtra has more schools than Telangana and the chart shows Maharashtra’s playground percentage is higher, the number with playgrounds must also be higher. If M and T are total schools and pM>pT while M>T, then MpM>TpT. **Inferable.**\n\n**(ii)** A national percentage is a weighted percentage: total schools with playgrounds divided by all schools. We need the number of schools in every state/UT (and then the corresponding playground counts), or equivalent nationwide totals. An unweighted average of state percentages would generally be incorrect."
@@ -573,7 +573,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q9",
             "number": "9",
             "isHard": false,
-            "text": "A 100% stacked bar chart shows the shares of ratings for Plays A, B and C. (i) Which play would you choose from this chart? (ii) Would the corresponding absolute-count stacked bar chart change your choice?",
+            "text": "Decision Dilemma:\n\n(i) Which of the plays would you choose to watch based on the following chart?\n\n(ii) The corresponding stacked bar chart is shown below. Would you change your decision after looking at this chart? Why/ Why not? Discuss.",
             "answer": {
               "answerKey": "(i) Play B is a reasonable overall choice: it has the largest combined share of 4-star and 5-star ratings and the smallest 1-star share. Play C has the largest 5-star share but also a substantial 1-star share. (ii) The absolute-count chart also favours B for the number of favourable ratings because many more ratings were recorded for B.",
               "schoolMethod": "**(i) Percentage chart.** All bars total 100%, so compare the distribution of ratings. Combining the 4-star (red) and 5-star (blue) portions, Play B has the largest favourable share. Play C has the largest 5-star portion alone, but also a sizeable 1-star (grey) portion. On an overall balance of very positive ratings and fewest 1-star ratings, **Play B** is the most defensible choice. A different personal preference (for example, valuing only 5-star ratings) could lead to a different choice.\n\n**(ii) Absolute-count chart.** This chart shows counts rather than shares. Play B has far more ratings than the other plays and therefore also the largest absolute number of 4- and 5-star ratings. Thus the second chart supports choosing **Play B** too, but it answers a different question: total counts versus proportion of each play’s ratings."
@@ -583,7 +583,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q10",
             "number": "10",
             "isHard": false,
-            "text": "Triathlon times: Athlete 1 swimming 1:08, cycling 5:00, running 3:15; Athlete 2 1:05, 5:10, 3:35; Athlete 3 1:22, 5:55, 3:50. (i) Choose stacked or 100% stacked bars. (ii) Which questions can a 100% chart answer: first finisher, fraction of Athlete 1’s time cycling, longest running time?",
+            "text": "A triathlon is an endurance race consisting of swimming 3.8 km, cycling 180 km, and running 42.2 km. Athletes compete for the fastest overall time, completing each segment in that order. The following table shows the finish time of 3 athletes in each segment.\n\n**Table 10.4:** Finish time of three athletes in each segment of a triathlon race (values in hh : mm)\n\n| | Swimming | Cycling | Running |\n|---|---|---|---|\n| Athlete 1 | 01:08 | 05:00 | 03:15 |\n| Athlete 2 | 01:05 | 05:10 | 03:35 |\n| Athlete 3 | 01:22 | 05:55 | 03:50 |\n\n(i) What is a suitable representation of this data — a stacked bar chart or a 100% stacked bar chart? Why do you think so?\n\n(ii) Suppose a 100% stacked bar chart is drawn. Which of the following question(s) can be answered by looking at just that chart?\n\n(a) Who finished the race first?\n\n(b) Approximately what fraction of their race time did Athlete 1 spend cycling?\n\n(c) Which athlete took the longest for running?",
             "answer": {
               "answerKey": "(i) Stacked bar chart. (ii) Only (b).",
               "schoolMethod": "(i) Use a **stacked bar chart**, because the total elapsed time matters and must be compared in absolute units. Convert to minutes if needed: Athlete 1 =68+300+195=563 min (9 h 23 min); Athlete 2 =65+310+215=590 min (9 h 50 min); Athlete 3 =82+355+230=667 min (11 h 7 min). Thus Athlete 1 finishes first.\n\n(ii) A 100% chart shows proportions of each athlete’s time, so it answers **(b)**: Athlete 1’s cycling share is $\\dfrac{300}{563}$≈53.3%. It does not establish (a), since total durations are lost; nor (c), because a segment’s share cannot by itself tell which athlete had the greatest absolute running time."
@@ -593,7 +593,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q11",
             "number": "11",
             "isHard": false,
-            "text": "Observe the 100% stacked bar chart of disability type by age group in India (Census 2011). State observations, questions and inferences.",
+            "text": "Look at the following graph. What do you notice? What do you wonder? Write your inferences.",
             "answer": {
               "answerKey": "The chart compares proportions of disability types within each age group; movement/seeing/hearing categories are substantial, and patterns vary by age.",
               "schoolMethod": "Each bar represents 100% of the disabled persons in one age group, so compare segment **shares**, not absolute numbers. A suitable observation is that the mix of disability types differs across age groups; movement-related disability tends to occupy a larger share among older groups, while some other types take larger relative shares among younger groups. The chart alone does not tell how many disabled persons are in each age group because absolute group totals are not shown. Useful follow-up questions include the counts by age group, causes of disability, and how trends differ by gender or region."
@@ -603,7 +603,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q12",
             "number": "12",
             "isHard": false,
-            "text": "Individual project: (i) estimate time spent lying, sitting and standing/moving for yourself and at least two family members, then draw a stacked bar chart; or (ii) show monthly family expenditure with a 100% stacked bar chart for at least three months.",
+            "text": "Individual project: Do at least one of the following.\n\n(i) Recall the previous day and fill in the approximate time spent lying down, sitting, and standing/moving around, etc. Ask at least 2 of your family members about their day and fill it in. Alternatively, you can choose to track just your own body-state for any one of the weekdays, Saturday, and Sunday. Visualise it using a stacked bar chart. Discuss with your class how you arrived at the estimated time spent in each state.\n\n(ii) Visualise your family’s monthly expenditure using a 100% stacked bar chart.\n\n(a) First, identify the expense categories in your family budget.\n\n(b) Discuss with your family members to decide how you will collect and organise the data.\n\n(c) Collect expense data for at least 3 months.\n\n(d) Represent the data in a 100% stacked bar chart, with each bar showing how the total monthly expenditure is divided across the different categories.\n\n(e) Finally, write your observations and inferences based on the chart.",
             "answer": {
               "answerKey": "Sample project solution provided.",
               "schoolMethod": "**Sample response for (i):** Record 24-hour totals (lying/sitting/moving): Student = (8,7,9), parent 1 = (7,8,9), parent 2 = (7,7,10). Each row sums to 24 hours. Percentages are each hours÷24×100; for the student, 33.3%, 29.2%, 37.5%. Draw equal-length 100% bars split into these three categories.\n\n**Sample response for (ii):** Suppose monthly expenditure in ₹ is Housing/Food/Education/Transport/Health/Other: January 8,000/6,000/2,000/1,500/1,000/1,500; February 8,000/6,200/2,000/1,600/800/1,400; March 8,000/5,800/2,000/1,700/1,200/1,300. Convert each category to a percentage of that month’s total and draw one 100% bar per month. Compare changes in shares, not just rupee amounts; note that actual family data should replace these illustrative figures."
@@ -613,7 +613,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q13",
             "number": "13",
             "isHard": false,
-            "text": "Small-group project: design a weighted rating scheme for a shop, bus trip, tourist spot or clinic. Choose aspects, weights, collect ratings from ten people, calculate means and make a 100% stacked chart.",
+            "text": "Small-group project: Make a group of 3–4 students. Choose one scenario to design a custom rating scheme by assigning appropriate weights: (a) shopping experience at a cloth store, (b) travel experience in a bus, (c) tourism experience of a nearby tourist spot, (d) clinic/hospital experience\n\n(i) Discuss and arrive at 4–6 aspects to rate. For each aspect chosen, justify why it matters for an overall experience.\n\n(ii) Discuss and decide the relative weights and justify.\n\n(iii) Collect or imagine ratings from at least 10 people on a scale of 1–5 (5 being very good).\n\n(iv) Compute each individual rating. Compute the overall average across individuals.\n\n(v) Make a 100% stacked bar chart using your data.\n\n(vi) Write a short note on the observations and inferences, what your rating system captures well and what it misses.",
             "answer": {
               "answerKey": "Illustrative weighted-rating project included.",
               "schoolMethod": "**Example: local tourist spot.** Rate cleanliness, accessibility, safety, information/signage and attractions on a 1–5 scale, with weights 3:2:3:1:4 respectively. The weights sum to 13. For a visitor who gives 4, 3, 5, 4, 5, the score is [3(4)+2(3)+3(5)+1(4)+4(5)]/13=$\\dfrac{53}{13}$≈4.08.\n\nUse the same weighted-mean formula for each of ten visitors, then average their ten scores. For the 100% stacked chart, show each visitor’s ratings as shares of their weighted total or show the proportion of respondents in each rating band per aspect. Report which aspects score highest/lowest and acknowledge that a 1–5 rating may not capture every aspect. This is a complete model; replace sample ratings with the group’s ten responses."
@@ -623,7 +623,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q14",
             "number": "14",
             "isHard": false,
-            "text": "Each student shares their family’s average age and family size. How can the class calculate the average age of all people in all families?",
+            "text": "Whole class project: Each student shares the average age of their family and the number of family members. Discuss among the class and come up with a way to find out the average age of all the families of the class.",
             "answer": {
               "answerKey": "Weighted average: Σ(family size × family mean age)/Σ(family sizes).",
               "schoolMethod": "For family i, let nᵢ be the number of members and aᵢ their average age. Their combined ages total nᵢaᵢ. Add all family totals and divide by the total number of people: **class average age = $\\dfrac{\\Sigma n_i a_i}{\\Sigma n_i}$**. A simple average of the family averages would be wrong unless every family had the same size."
@@ -633,7 +633,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q15",
             "number": "15",
             "isHard": true,
-            "text": "If each weight wᵢ is increased by a constant such as 1, what happens to a weighted average? Justify algebraically.",
+            "text": "Given some data with corresponding weights, what would happen to the weighted average if all the weights are increased by a constant value, say 1? If required, experiment with some data. What do you observe? Justify your answer using algebra.",
             "answer": {
               "answerKey": "It generally changes, moving toward the unweighted mean; it does not have a fixed direction for every data set.",
               "schoolMethod": "Original weighted mean: μ=$\\dfrac{\\Sigma w_i x_i}{\\Sigma w_i}$. If each of n weights is increased by c, then μ′=$\\dfrac{\\Sigma w_i x_i+c\\Sigma x_i}{\\Sigma w_i+nc}$. This is generally different from μ and can be written as a weighted combination of the old weighted mean and the unweighted mean.\n\nExample: values 10 and 20 with weights 1 and 3 give μ=$\\dfrac{10+60}{4}$=17.5. Increasing both weights by 1 gives μ′=$\\dfrac{2×10+4×20}{6}$=$\\dfrac{100}{6}$≈16.67. Thus increasing all weights by the same additive constant is not the same as multiplying all weights by a common factor."
@@ -643,7 +643,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q16",
             "number": "16",
             "isHard": false,
-            "text": "Last year a farm population was 60% cows, 25% sheep and 15% chickens. All three populations decrease. Which share-change scenarios are possible: (i) all shares decrease, (ii) all increase, (iii) all unchanged, (iv) cows share decreases, sheep share increases, chickens unchanged, (v) cows and sheep shares increase, chickens decrease?",
+            "text": "A farm has some cows, sheep, and chickens. Last year the cows made up 60%, the sheep 25%, and the chickens 15%. There was a decrease in the number of all three animals’ population over the year. Choose the possibilities for the change in their respective shares of the population —\n\n(i) % of cows decreased, % of sheep decreased, % of chickens decreased\n\n(ii) % of cows increased, % of sheep increased, % of chickens increased\n\n(iii) % of cows remained the same, % of sheep remained the same, % of chickens remained the same\n\n(iv) % of cows decreased, % of sheep increased, % of chickens remained the same\n\n(v) % of cows increased, % of sheep increased, % of chickens decreased.",
             "answer": {
               "answerKey": "(iii), (iv) and (v) are possible; (i) and (ii) are impossible.",
               "schoolMethod": "The three shares must always add to 100%, so they cannot **all decrease** or **all increase**; (i) and (ii) are impossible.\n\n(iii) is possible if all three populations shrink by the same percentage, preserving their ratios.\n\n(iv) is possible if the chicken population shrinks by the same factor as the total, sheep shrink less rapidly, and cows shrink more rapidly. For example, initial counts (60,25,15) can become (24,18.5,7.5), with all populations smaller but shares 48%, 37%, 15%.\n\n(v) is possible if cows and sheep shrink less rapidly than the chicken population, so their shares rise while the chicken share falls."
