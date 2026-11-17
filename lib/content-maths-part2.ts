@@ -533,7 +533,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "Suvarna had purchased 1g gold at ₹15k (short for ₹15,000). This is shown by point O denoting the average price of gold that she possesses. Six different scenarios are given below for her next transaction. For each scenario estimate and mark the average price of gold she will have after the transaction.\n\n(i) Purchase 1g gold at ₹30k (ii) Purchase 2g gold at ₹30k\n(iii) Purchase 1g gold at ₹10k (iv) Purchase 10g gold at ₹10k\n(v) Purchase 0.5g gold at ₹30k (vi) Purchase 0.5g gold at ₹15k",
+            "text": "Suvarna had purchased 1g gold at ₹15k (short for ₹15,000). This is shown by point O denoting the average price of gold that she possesses. Six different scenarios are given below for her next transaction. For each scenario estimate and mark the average price of gold she will have after the transaction.\n\n![Number line from 0 to 30 with point O marked at 15](/figs/maths-0904ch10-eoc-q5-numberline.png)\n\n(i) Purchase 1g gold at ₹30k (ii) Purchase 2g gold at ₹30k\n(iii) Purchase 1g gold at ₹10k (iv) Purchase 10g gold at ₹10k\n(v) Purchase 0.5g gold at ₹30k (vi) Purchase 0.5g gold at ₹15k",
             "answer": {
               "answerKey": "(i) ₹22,500; (ii) ₹25,000; (iii) ₹12,500; (iv) ₹10,454.55; (v) ₹20,000; (vi) ₹15,000 per g.",
               "schoolMethod": "Treat the original gram as costing ₹15,000. The new average is total cost divided by total grams.\n(i) $\\dfrac{15,000+30,000}{2}$=**₹22,500/g**.\n(ii) $\\dfrac{15,000+2×30,000}{3}$=**₹25,000/g**.\n(iii) $\\dfrac{15,000+10,000}{2}$=**₹12,500/g**.\n(iv) $\\dfrac{15,000+10×10,000}{11}$=$\\dfrac{115,000}{11}$≈**₹10,454.55/g**.\n(v) $\\dfrac{15,000+0.5×30,000}{1.5}$=$\\dfrac{30,000}{1.5}$=**₹20,000/g**.\n(vi) $\\dfrac{15,000+0.5×15,000}{1.5}$=$\\dfrac{22,500}{1.5}$=**₹15,000/g**."
@@ -553,7 +553,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": false,
-            "text": "Answer the following questions based on the graph.\n\n(i) In 2003, approximately how many total objects were found orbiting Earth in space? In what year did this number double?\n\n(ii) Find the approximate number and share of payload objects and other objects in the year 2025.\n\n(iii) What can you say about the number of payload objects over time, and the number of other objects over time? What can you say about the share of payload objects over time, and the share of other objects over time?",
+            "text": "Answer the following questions based on the graph.\n\n![Cumulative number of objects currently orbiting Earth, by year of launch/separation (as of Apr. 24, 2026)](/figs/maths-0904ch10-eoc-q7-graph.png)\n\n(i) In 2003, approximately how many total objects were found orbiting Earth in space? In what year did this number double?\n\n(ii) Find the approximate number and share of payload objects and other objects in the year 2025.\n\n(iii) What can you say about the number of payload objects over time, and the number of other objects over time? What can you say about the share of payload objects over time, and the share of other objects over time?",
             "answer": {
               "answerKey": "(i) About 10,000 objects in 2003; the total reaches roughly 20,000 around 2021. (ii) In 2025, about 33,000 objects in total: approximately 17,000 payloads (about 52%) and 16,000 other objects (about 48%). (iii) Both categories increase in number; payloads rise particularly quickly in later years, so their share grows to about half while the share of other objects decreases.",
               "schoolMethod": "**(i) Doubling the total.** Read the stacked graph at 2003: the total is approximately **10,000 objects**. Twice this is 2 × 10,000 = 20,000. The cumulative total reaches about 20,000 near **2021** (read approximately from the graph).\n\n**(ii) Split in 2025.** The total height is approximately 33,000. The payload portion is about 17,000, so \\(\\dfrac{17,000}{33,000}\\times100\\%\\approx51.5\\%\\approx52\\%\\). The other-object count is about 33,000 − 17,000 = **16,000**, or \\(\\dfrac{16,000}{33,000}\\times100\\%\\approx48.5\\%\\approx48\\%\\). These are estimates because the graph is read visually.\n\n**(iii) Trend.** Both the payload count and other-object count increase over time. Payloads increase more sharply in the later years; consequently, payloads make up about 52% of the 2025 total and other objects about 48%, even though the number of other objects also continues to grow."
@@ -563,7 +563,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "Observe the following infographic.\n\n(i) Identify the correct inference(s) from the statements given.\n\n(a) More schools have a playground in Haryana compared to Uttarakhand.\n\n(b) Approximately every 2 out of 3 schools in Arunachal Pradesh have a playground.\n\n(c) Punjab has the highest number of schools with a playground.\n\n(d) Suppose it is given that Maharashtra has more schools than Telangana. Then the number of schools having a playground is more in Maharashtra.\n\n(ii) Using the information given, can we find the nation-wide percentage of schools with a playground? If not, what additional information is needed?",
+            "text": "Observe the following infographic.\n\n![What percentage of schools have a playground — map of India](/figs/maths-0904ch10-eoc-q8-map.png)\n\n(i) Identify the correct inference(s) from the statements given.\n\n(a) More schools have a playground in Haryana compared to Uttarakhand.\n\n(b) Approximately every 2 out of 3 schools in Arunachal Pradesh have a playground.\n\n(c) Punjab has the highest number of schools with a playground.\n\n(d) Suppose it is given that Maharashtra has more schools than Telangana. Then the number of schools having a playground is more in Maharashtra.\n\n(ii) Using the information given, can we find the nation-wide percentage of schools with a playground? If not, what additional information is needed?",
             "answer": {
               "answerKey": "(i) (b) and (d) can be inferred. (a) and (c) cannot be concluded from the displayed percentages alone. (ii) No. The number of schools in each state/UT (or the total count of schools and playground schools) is needed.",
               "schoolMethod": "**(i)(a)** The statement compares absolute counts, not percentages. The chart gives the share of schools with playgrounds; without knowing how many schools each state has, the count cannot be compared. **Not inferable.**\n\n**(i)(b)** Two out of three is about 66.7%, matching the displayed share for Arunachal Pradesh. **Inferable.**\n\n**(i)(c)** Punjab may have the highest displayed percentage, but that does not prove it has the largest count; state totals may differ. **Not inferable.**\n\n**(i)(d)** Given that Maharashtra has more schools than Telangana and the chart shows Maharashtra’s playground percentage is higher, the number with playgrounds must also be higher. If M and T are total schools and pM>pT while M>T, then MpM>TpT. **Inferable.**\n\n**(ii)** A national percentage is a weighted percentage: total schools with playgrounds divided by all schools. We need the number of schools in every state/UT (and then the corresponding playground counts), or equivalent nationwide totals. An unweighted average of state percentages would generally be incorrect."
@@ -573,7 +573,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q9",
             "number": "9",
             "isHard": false,
-            "text": "Decision Dilemma:\n\n(i) Which of the plays would you choose to watch based on the following chart?\n\n(ii) The corresponding stacked bar chart is shown below. Would you change your decision after looking at this chart? Why/ Why not? Discuss.",
+            "text": "Decision Dilemma:\n\n(i) Which of the plays would you choose to watch based on the following chart?\n\n![Share of ratings of three plays — 100% stacked bar chart](/figs/maths-0904ch10-eoc-q9a-chart.png)\n\n(ii) The corresponding stacked bar chart is shown below. Would you change your decision after looking at this chart? Why/ Why not? Discuss.\n\n![Ratings of three plays — stacked bar chart](/figs/maths-0904ch10-eoc-q9b-chart.png)",
             "answer": {
               "answerKey": "(i) Play B is a reasonable overall choice: it has the largest combined share of 4-star and 5-star ratings and the smallest 1-star share. Play C has the largest 5-star share but also a substantial 1-star share. (ii) The absolute-count chart also favours B for the number of favourable ratings because many more ratings were recorded for B.",
               "schoolMethod": "**(i) Percentage chart.** All bars total 100%, so compare the distribution of ratings. Combining the 4-star (red) and 5-star (blue) portions, Play B has the largest favourable share. Play C has the largest 5-star portion alone, but also a sizeable 1-star (grey) portion. On an overall balance of very positive ratings and fewest 1-star ratings, **Play B** is the most defensible choice. A different personal preference (for example, valuing only 5-star ratings) could lead to a different choice.\n\n**(ii) Absolute-count chart.** This chart shows counts rather than shares. Play B has far more ratings than the other plays and therefore also the largest absolute number of 4- and 5-star ratings. Thus the second chart supports choosing **Play B** too, but it answers a different question: total counts versus proportion of each play’s ratings."
@@ -593,7 +593,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q11",
             "number": "11",
             "isHard": false,
-            "text": "Look at the following graph. What do you notice? What do you wonder? Write your inferences.",
+            "text": "Look at the following graph. What do you notice? What do you wonder? Write your inferences.\n\n![Distribution of disabled persons by age group and type of disability in India (Census 2011)](/figs/maths-0904ch10-eoc-q11-graph.png)",
             "answer": {
               "answerKey": "The chart compares proportions of disability types within each age group; movement/seeing/hearing categories are substantial, and patterns vary by age.",
               "schoolMethod": "Each bar represents 100% of the disabled persons in one age group, so compare segment **shares**, not absolute numbers. A suitable observation is that the mix of disability types differs across age groups; movement-related disability tends to occupy a larger share among older groups, while some other types take larger relative shares among younger groups. The chart alone does not tell how many disabled persons are in each age group because absolute group totals are not shown. Useful follow-up questions include the counts by age group, causes of disability, and how trends differ by gender or region."
@@ -819,7 +819,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Add two 4-digit numbers using the stated right-to-left column algorithm. Follow the steps exactly and check the result.",
+            "text": "Add two 4-digit numbers using the steps we have written down. Make sure you follow the steps precisely; do not perform any action that is not explicitly mentioned. Are you able to obtain the correct result?",
             "answer": {
               "answerKey": "Example: 4738 + 6957 = 11695.",
               "schoolMethod": "Take 4738 and 6957.\n\nUnits: 8+7=15; write 5, carry 1.\nTens: 3+5+1=9; write 9, carry 0.\nHundreds: 7+9=16; write 6, carry 1.\nThousands: 4+6+1=11; write 1, carry 1.\nNo digits remain, so the final carry 1 is written at the left.\n\nTherefore **4738+6957=11695**. The result agrees with direct addition."
@@ -829,7 +829,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "What happens if a 5-digit number is added to a 3-digit number? Do the stated steps handle this correctly?",
+            "text": "What happens if you add a 5-digit number to a 3-digit number? Do our steps handle this situation correctly?",
             "answer": {
               "answerKey": "Only if the shorter number is padded with leading zeros or missing digits are treated as zero.",
               "schoolMethod": "The column algorithm must line up digits by place value from the right. For example, 54321+789 is written as 54321+00789. The columns then give 10 in the units (write 0, carry 1), 9 in tens, 1 in hundreds, 4 in thousands and 5 in ten-thousands, so the answer is **55110**. If the algorithm requires a digit in every column, the shorter number must be padded by leading zeros; otherwise the written steps need this clarification."
@@ -849,7 +849,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "In Step 3 of the addition algorithm, why can the carry not be more than 1?",
+            "text": "In Step 3, why cannot the value of carry be more than 1?",
             "answer": {
               "answerKey": "Maximum digit-column sum is 9+9+1=19, so the carry is at most 1.",
               "schoolMethod": "Each digit is at most 9 and the previous carry is either 0 or 1. Thus the largest possible column sum is 9+9+1=19. The carry is the number of tens in that sum, which can only be 0 or 1. It can never be 2 or more."
@@ -859,7 +859,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "What happens if the fifth step (writing the final carry) is omitted? Give examples where the algorithm still works and fails.",
+            "text": "What happens if we do not include the fifth step in the algorithm above? Give examples where the algorithm will work correctly and where it will fail to work.",
             "answer": {
               "answerKey": "It works if the leftmost column produces no carry; it fails if a carry remains.",
               "schoolMethod": "For 1234+2345=3579, no carry remains after the thousands column, so omitting Step 5 does not change the result.\n\nFor 4738+6957, the thousands column gives 4+6+1=11, leaving a carry of 1 after all displayed columns are used. If Step 5 is omitted, the written answer would be 1695 instead of 11695. Hence the final-carry step is essential whenever a carry remains."
@@ -875,7 +875,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Describe algorithms to find elements in List 1 that are absent from List 2, and elements in List 2 that are absent from List 1. The lists are in increasing order.",
+            "text": "Suppose List 1 and List 2 are two lists of numbers in increasing order:\n\n(i) Write an algorithm to find elements in List 1 that are not present in List 2.\n\n(ii) Write an algorithm to find elements in List 2 that are not present in List 1.",
             "answer": {
               "answerKey": "Use two-pointer scans; advance the smaller value and record it when it occurs only in its own list.",
               "schoolMethod": "**Algorithm for List 1 \\ List 2** (indices i=j=0):\n1. While i is within List 1 and j is within List 2: if L1[i] < L2[j], output L1[i] and increment i; if L1[i] > L2[j], increment j; if equal, increment both i and j.\n2. Output all remaining elements of L1.\n\n**Algorithm for List 2 \\ List 1:** exchange the roles of the lists. If duplicate values are allowed, first specify whether “elements” means distinct values or occurrences; for set difference, output each distinct missing value once. The increasing order makes these scans efficient."
@@ -885,7 +885,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Describe an algorithm to compute the least common multiple of two positive integers.",
+            "text": "Describe an algorithm to compute the least common multiple (lcm) of two numbers.",
             "answer": {
               "answerKey": "Compute lcm(m,n)=$\\dfrac{mn}{\\gcd(m,n)}$.",
               "schoolMethod": "A correct algorithm is:\n```text\nLCM(m,n):\n    g := GCD(m,n)\n    return (m / g) * n\n```\nHere `GCD` can be Euclid’s division algorithm. Since m and n share exactly their gcd as common prime-factor content, dividing m by g before multiplying by n avoids counting shared factors twice. The answer is the least positive integer divisible by both m and n."
@@ -895,7 +895,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": true,
-            "text": "Divisors occur in pairs. (i) How many numbers between 1 and n must be checked to find all divisors in pairs? (ii) Would a gcd algorithm based on paired divisors work as described?",
+            "text": "Divisors occur in pairs. For instance, the divisors of 18 are (1, 18), (2, 9) and (3, 6).\n\n(i) If we write out divisors in pairs, how many numbers do we have to examine between 1 and n to find all the divisors of n?\n\n(ii) If we list out the divisors in pairs, will our gcd algorithm still work in the manner we have described?",
             "answer": {
               "answerKey": "(i) Check through ⌊√n⌋. (ii) Yes, after ordering/comparing common divisors rather than relying on the last item in an unsorted list.",
               "schoolMethod": "(i) If j divides n, the paired factor is $\\dfrac{n}{j}$. At least one of the pair is at most √n, since if both were larger their product would exceed n. Therefore check j=1,2,…,⌊√n⌋. Whenever j divides n, record both j and $\\dfrac{n}{j}$ (record only one copy if j=√n).\n\n(ii) Yes, the common-divisor method still works if the divisors are paired. However, the list may no longer be in increasing order. So one cannot automatically report the rightmost/last common divisor as the gcd; instead compare all common divisors and report the largest, or use a descending search that stops at the first common divisor."
@@ -911,7 +911,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "How would the divisors(n) algorithm change if it examined numbers from n down to 1?",
+            "text": "How would our original algorithm change if we computed the divisors of n by examining the numbers from 1 to n in reverse order, from n down to 1?",
             "answer": {
               "answerKey": "Scan n,n−1,…,1; divisors are output in decreasing order.",
               "schoolMethod": "Initialize an empty list D. For j = n, n−1, …, 1, if n mod j = 0, append j to D. Because the scan is descending, D contains the divisors in decreasing order. The first divisor found is n and the last is 1."
@@ -921,7 +921,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "In the improved gcd algorithm, what happens if common divisors are examined from min(m,n) down to 1?",
+            "text": "What about the last algorithm described above? What happens when we look at common divisors starting from min(m, n) and work backwards to 1?",
             "answer": {
               "answerKey": "The first common divisor found is gcd(m,n), so the scan can stop immediately.",
               "schoolMethod": "Set s=min(m,n). For j=s,s−1,…,1, test whether m mod j=0 and n mod j=0. The first j satisfying both conditions is the **greatest** common divisor, because every larger candidate has already been checked and rejected. Thus return j immediately; no list of common divisors is needed."
@@ -937,7 +937,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Use the improved Euclid division algorithm to compute (i) gcd(375,825), (ii) gcd(51000,81000), (iii) gcd(1789287,237656), (iv) gcd(2587392,157656).",
+            "text": "Compute the following using the improved version of Euclid’s algorithm.\n\n(i) gcd(375, 825)\n\n(ii) gcd(51000, 81000)\n\n(iii) gcd(1789287, 237656)\n\n(iv) gcd(2587392, 157656)",
             "answer": {
               "answerKey": "(i) 75; (ii) 3000; (iii) 1; (iv) 24.",
               "schoolMethod": "(i) 825=2(375)+75; 375=5(75)+0, so gcd=**75**.\n\n(ii) 81000=1(51000)+30000; 51000=1(30000)+21000; 30000=1(21000)+9000; 21000=2(9000)+3000; 9000=3(3000)+0. Hence gcd=**3000**.\n\n(iii) Euclid’s algorithm gives successive remainders until the final non-zero remainder is 1, so gcd=**1** (the numbers are coprime).\n\n(iv) The successive remainders terminate at 24, with the next remainder 0, so gcd=**24**."
@@ -947,7 +947,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Assume m≥n. Verify that d divides m and n if and only if d divides both n and m mod n.",
+            "text": "Assume that m ≥ n. Verify that d divides m and n if and only if d divides both n and m mod n.",
             "answer": {
               "answerKey": "The common divisors of (m,n) are exactly the common divisors of (n,m mod n).",
               "schoolMethod": "**Proof.** Write m=qn+r, where r=m mod n.\n\n(⇒) If d|m and d|n, then d divides m−qn=r. Hence d|n and d|r.\n\n(⇐) If d|n and d|r, then d divides qn+r=m. Hence d|m and d|n.\n\nBoth directions hold, so the two pairs have exactly the same common divisors; in particular, their gcds are equal."
@@ -957,7 +957,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "Write an algorithm prime(n) to check whether n is prime, using divisors(n).",
+            "text": "Write an algorithm prime(n) to check if n is prime.\n\n(Hint: A prime number p has exactly two distinct factors, 1 and p. Can you make use of divisors(n) to write out prime(n)?)",
             "answer": {
               "answerKey": "Return true exactly when divisors(n) has two elements.",
               "schoolMethod": "```text\nprime(n):\n    if n < 2: return false\n    D := divisors(n)\n    if length(D) = 2: return true\n    else: return false\n```\nA prime integer has exactly two positive divisors, 1 and itself. A number below 2 is not prime. Hence the test correctly distinguishes primes from composites."
@@ -967,7 +967,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": true,
-            "text": "Write an algorithm primedivisors(n) to compute the prime divisors of n.",
+            "text": "Write an algorithm primedivisors(n) to compute the list of divisors of n that are prime numbers.\n\n(Hint: Compute divisors(n) and then filter out the primes in this list.)",
             "answer": {
               "answerKey": "Compute divisors and retain only primes.",
               "schoolMethod": "```text\nprimedivisors(n):\n    D := divisors(n)\n    P := empty list\n    for each d in D:\n        if prime(d): append d to P\n    return P\n```\nFor example, divisors(180) = [1,2,3,4,5,6,9,10,12,15,18,20,30,36,45,60,90,180], so primedivisors(180) = **[2,3,5]**. The algorithm checks every divisor and keeps precisely the prime ones."
@@ -977,7 +977,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": true,
-            "text": "Write an algorithm for prime factorisation. (i) How can the prime factorisation 180=2²×3²×5 be represented? (ii) How can two prime factorizations be compared?",
+            "text": "We can also find the gcd of two numbers by computing prime factorisation of both the numbers. Try to write an algorithm to compute the prime factorisation of a number.\n\n(i) The prime factorisation of 180 is 2² × 3² × 5¹. How would you represent this?\n\n(ii) How would you compare the prime factorisations of two numbers?",
             "answer": {
               "answerKey": "Represent as [(2,2),(3,2),(5,1)] or {2:2,3:2,5:1}; compare exponents.",
               "schoolMethod": "```text\nprimeFactorisation(n):\n    F := empty list of (prime, exponent) pairs\n    p := 2\n    while p*p <= n:\n        e := 0\n        while n mod p = 0:\n            n := n / p\n            e := e + 1\n        if e > 0: append (p,e) to F\n        p := p + 1\n    if n > 1: append (n,1) to F\n    return F\n```\n\n(i) Store 180=2²×3²×5 as **[(2,2),(3,2),(5,1)]**, meaning prime 2 has exponent 2, prime 3 exponent 2 and prime 5 exponent 1.\n\n(ii) For two numbers, compare the exponents of each prime, treating a missing prime as exponent 0. The gcd uses the **minimum** exponent for each prime; the lcm uses the **maximum** exponent. If every exponent in one factorisation is no larger than the corresponding exponent in the other, the first number divides the second."
@@ -994,23 +994,35 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 39,
-            "text": "Explain why the right-to-left column addition algorithm works, and show how to adapt it to add decimal fractions.",
+            "text": "See if you can complete the argument about grouping by units, tens, hundreds, … to justify why the addition algorithm works.",
             "answer": {
-              "answerKey": "The algorithm is valid because each column represents a power of ten and each carry is worth ten units of the next column. Example: 12.5 + 3.78 = 16.28.",
-              "schoolMethod": "In base ten, 10 units of any place value equal 1 unit of the next place value. Adding a column gives a digit sum; write its remainder after division by 10 and carry the quotient to the next column. This preserves the total value at every step. For decimals, align decimal points and pad with zeros: 12.50 + 3.78 = 16.28. Equivalently, multiply both numbers by 100, add 1250 + 378 = 1628, then divide by 100 to obtain **16.28**."
+              "answerKey": "Each column represents a power of ten; ten units of one place make one unit of the next, so carrying preserves the total value.",
+              "schoolMethod": "Group both numbers into units, tens, hundreds, and so on. Adding a column gives a digit sum; write its remainder after division by 10 in that column and carry the quotient to the next column, because ten units of a place value equal one unit of the next place value. Doing this for every column keeps the total value unchanged, so the final digit string is the sum."
             }
           },
           {
             "id": "q2",
-            "number": "1",
+            "number": "2",
+            "isHard": false,
+            "page": 39,
+            "text": "How would you modify the algorithm to add two decimal fractions?",
+            "answer": {
+              "answerKey": "Align the decimal points (pad with zeros) and add column by column, placing the decimal point in the answer. Example: 12.5 + 3.78 = 16.28.",
+              "schoolMethod": "Align the decimal points and pad the shorter decimal with zeros so both have the same number of decimal places: 12.50 + 3.78. Now add column by column from the right, carrying exactly as for whole numbers, and place the decimal point in the same position in the answer: 12.50 + 3.78 = 16.28. Equivalently, multiply by 100 to get 1250 + 378 = 1628, then divide by 100."
+            }
+          },
+          {
+            "id": "q3",
+            "number": "3",
             "isHard": false,
             "page": 41,
-            "text": "Use the divisor algorithm to list all positive divisors of 15, 135 and 775. What happens to the amount of work as the numbers grow?",
+            "text": "Try to execute the algorithm to compute the divisors of 15, 135, and 775. How does the amount of work increase as the numbers grow?",
             "answer": {
               "answerKey": "Divisors: 15 → {1,3,5,15}; 135 → {1,3,5,9,15,27,45,135}; 775 → {1,5,25,31,155,775}.",
-              "schoolMethod": "Check positive integers for exact divisibility and list each divisor once. Since 15 = 3 × 5, its divisors are 1, 3, 5, 15. Since 135 = 3³ × 5, its divisors are 1, 3, 5, 9, 15, 27, 45, 135. Since 775 = 5² × 31, its divisors are 1, 5, 25, 31, 155, 775. A naive search that tests every integer up to n requires work proportional to n; testing factor pairs only up to √n can reduce the number of candidates substantially."
+              "schoolMethod": "Check positive integers for exact divisibility and list each divisor once. Since 15 = 3 × 5, its divisors are 1, 3, 5, 15. Since 135 = 3³ × 5, its divisors are 1, 3, 5, 9, 15, 27, 45, 135. Since 775 = 5² × 31, its divisors are 1, 5, 25, 31, 155, 775. The algorithm tests every integer up to n, so the work grows in proportion to n; testing factor pairs only up to √n reduces the work substantially."
             }
           }
+        
         ]
       }
     ]
