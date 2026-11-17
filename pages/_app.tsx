@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import { useEffect, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
 import { useRouter } from 'next/router';
 import { Toaster } from 'react-hot-toast';
 import { supabase } from '@/lib/supabase';
@@ -26,7 +27,6 @@ export default function App({ Component, pageProps }: AppProps) {
   const { fetchProfile, setUser, setLoading } = useAuthStore();
   const [loaderState, setLoaderState] = useState<'hidden' | 'loading' | 'finish'>('hidden');
   const loaderStateRef = useRef<'hidden' | 'loading' | 'finish'>('hidden');
-  const showTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const shownAtRef = useRef(0);
 
@@ -37,28 +37,33 @@ export default function App({ Component, pageProps }: AppProps) {
 
   // ── Page-transition solar loader ─────────────────────────────────────────
   // The destination page loads IN THE BACKGROUND while the loader is on screen.
-  // The loader is removed only after that page has been committed, painted,
-  // fonts are ready and its eager images have decoded — so it never disappears
-  // while the student is still staring at the old/blank page. If the next route
-  // is ready almost instantly it is never shown at all (no flash).
+  // The loader is shown SYNCHRONOUSLY on routeChangeStart — a setTimeout-based
+  // delay cannot fire while Next renders a heavy page on the main thread, so a
+  // delayed loader appeared only AFTER the page had rendered and then just
+  // flashed over it, never covering the real loading window. From here it is
+  // removed only after the page has been committed, painted, fonts are ready
+  // and its eager images have decoded. If the next route is ready before the
+  // loader has ever painted (double rAF), it is removed before it is ever seen
+  // — instant navigations show no animation at all (no flash).
   useEffect(() => {
     let cancelled = false;
     let watchdog: ReturnType<typeof setTimeout> | null = null;
-    const SHOW_DELAY_MS = 120;    // don't flash for instant navigations
-    const MIN_VISIBLE_MS = 420;   // once shown, stay at least this long
-    const FADE_MS = 240;          // quick fade once the page is ready
-    const PAINT_CAP_MS = 1600;    // safety: never hang on a stalled image
-    const IMAGE_CAP_MS = 800;
-    const FONTS_CAP_MS = 350;     // fallback faces are fine; don't wait for webfonts
-    const WATCHDOG_MS = 20000;    // safety: never leave the loader stuck
+    let routeSettled = false;   // routeChangeComplete/Error already happened
+    let painted = false;        // the loader has been through at least one paint
+    const MIN_VISIBLE_MS = 420; // once seen, stay at least this long
+    const FADE_MS = 240;        // quick fade once the page is ready
+    const PAINT_CAP_MS = 8000;  // safety: never hang on a stalled image
+    const IMAGE_CAP_MS = 6000;  // wait for the page's eager images to finish
+    const FONTS_CAP_MS = 1000;  // fallback faces are fine; don't wait for webfonts
+    const WATCHDOG_MS = 90000;  // safety: never leave the loader stuck.
+                                // NOT 20s — on slow connections a route can
+                                // legitimately take longer than that, and the
+                                // loader must stay up while the page loads.
 
     const clearWatchdog = () => {
       if (watchdog) { clearTimeout(watchdog); watchdog = null; }
     };
 
-    const clearShowTimer = () => {
-      if (showTimerRef.current) { clearTimeout(showTimerRef.current); showTimerRef.current = null; }
-    };
     const clearHideTimer = () => {
       if (hideTimerRef.current) { clearTimeout(hideTimerRef.current); hideTimerRef.current = null; }
     };
@@ -66,6 +71,14 @@ export default function App({ Component, pageProps }: AppProps) {
     const hide = () => {
       if (cancelled) return;
       clearHideTimer();
+      // Never painted → the student never saw it; remove without animation.
+      // flushSync so the removal commits before the browser can paint the
+      // overlay — instant navigations show no animation at all.
+      if (!painted) {
+        flushSync(() => setLoaderState('hidden'));
+        loaderStateRef.current = 'hidden';
+        return;
+      }
       const shownFor = shownAtRef.current ? Date.now() - shownAtRef.current : MIN_VISIBLE_MS;
       const wait = Math.max(0, MIN_VISIBLE_MS - shownFor);
       hideTimerRef.current = setTimeout(() => {
@@ -128,45 +141,58 @@ export default function App({ Component, pageProps }: AppProps) {
     };
 
     const start = () => {
-      shownAtRef.current = 0;
-      clearShowTimer();
+      shownAtRef.current = Date.now();
+      routeSettled = false;
+      painted = false;
       clearHideTimer();
       clearWatchdog();
       watchdog = setTimeout(() => {
         if (loaderStateRef.current === 'loading') hide();
       }, WATCHDOG_MS);
-      showTimerRef.current = setTimeout(() => {
-        if (cancelled) return;
-        shownAtRef.current = Date.now();
-        setLoader('loading');
-      }, SHOW_DELAY_MS);
+      // Synchronous commit: the overlay is in the DOM before Next starts its
+      // async route work, so it covers even the heavy synchronous render that
+      // follows (a delayed timer could not fire during that block — the loader
+      // appeared only after the page had already rendered, then just flashed).
+      flushSync(() => setLoaderState('loading'));
+      loaderStateRef.current = 'loading';
+      // Two frames later the loader overlay has really been painted. If the
+      // navigation completes before that, `hide()` removes it before it is
+      // ever visible, so fast loads produce no flash at all.
+      if (typeof window !== 'undefined' && typeof window.requestAnimationFrame === 'function') {
+        window.requestAnimationFrame(() => window.requestAnimationFrame(() => { painted = true; }));
+      } else {
+        painted = true;
+      }
     };
 
     const done = () => {
-      clearShowTimer();
+      routeSettled = true;
       clearWatchdog();
       if (loaderStateRef.current !== 'loading') return; // never shown → nothing to hide
+      if (!painted) { hide(); return; }                 // complete before first paint → no flash
       whenPainted(hide);
     };
 
-    const failed = () => {
-      clearShowTimer();
+    const failed = (err?: unknown) => {
+      routeSettled = true;
       clearWatchdog();
+      // A cancelled navigation (another route started) is not a failure — the
+      // replacement navigation manages the loader from here on.
+      if (err && typeof err === 'object' && 'cancelled' in err && (err as { cancelled?: boolean }).cancelled) return;
       if (loaderStateRef.current !== 'loading') return;
       hide();
     };
 
     router.events.on('routeChangeStart', start);
     router.events.on('routeChangeComplete', done);
-    router.events.on('routeChangeError', failed);
+    router.events.on('routeChangeError', failed as (err: Error, url: string) => void);
     return () => {
       cancelled = true;
-      clearShowTimer();
       clearHideTimer();
       clearWatchdog();
       router.events.off('routeChangeStart', start);
       router.events.off('routeChangeComplete', done);
-      router.events.off('routeChangeError', failed);
+      router.events.off('routeChangeError', failed as (err: Error, url: string) => void);
     };
   }, [router.events]);
 
