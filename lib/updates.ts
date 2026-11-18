@@ -60,6 +60,16 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'maths-part1-think-reflect-added',
+    date: '2026-11-18',
+    type: 'content',
+    title: 'Think & Reflect added in Maths Part I',
+    summary: 'All 8 chapters now have a Think and Reflect tab with the book’s 69 reflection prompts, word-for-word.',
+    body: 'The Ganita Manjari Part I textbook does have Think and Reflect boxes — they were missing from the site. Every box from Chapters 1–8 has been added as its own tab after the exercise tabs.',
+    href: '/class-9/maths/ganita-manjari/0904ch01/orienting-yourself-the-use-of-coordinates',
+    hrefLabel: 'See Chapter 1',
+  },
+  {
     id: 'maths-part2-think-reflect-complete',
     date: '2026-11-18',
     type: 'content',

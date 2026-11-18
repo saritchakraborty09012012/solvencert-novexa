@@ -206,7 +206,47 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
           }
         ]
       }
-    ]
+    ,
+      {
+        "id": "ex1.reflect",
+        "title": "Think and Reflect",
+        "introHtml": "",
+        "questions": [
+          {
+            "id": "q1",
+            "number": "1",
+            "head": "<span class=\"qnum\">1</span><span class=\"qtext\"><span class=\"ln\">What are the standard widths for a room door? Look around your home and in school.</span><span class=\"ln\">Are the doors in your school suitable for people in wheelchairs?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "1. What are the standard widths for a room door? Look around your home and in school. Are the doors in your school suitable for people in wheelchairs? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q2",
+            "number": "2",
+            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">What is the x-coordinate of a point on the y-axis?</span><span class=\"ln\">Is there a similar generalisation for a point on the x-axis?</span><span class=\"ln\">Does point Q (y, x) ever coincide with point P (x, y)? Justify your answer.</span><span class=\"ln\">If x ≠ y, then (x, y) ≠ (y, x); and (x, y) = (y, x) if and only if x = y. Is this claim true?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "2. What is the x-coordinate of a point on the y-axis? Is there a similar generalisation for a point on the x-axis? Does point Q (y, x) ever coincide with point P (x, y)? Justify your answer. If x ≠ y, then (x, y) ≠ (y, x); and (x, y) = (y, x) if and only if x = y. Is this claim true? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q3",
+            "number": "3",
+            "head": "<span class=\"qnum\">3</span><span class=\"qtext\"><span class=\"ln\">In moving from A (3, 4) to D (7, 1), what distance has been covered along the x-axis? What about the distance along the y-axis?</span><span class=\"ln\">Can these distances help you find the distance AD?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "3. In moving from A (3, 4) to D (7, 1), what distance has been covered along the x-axis? What about the distance along the y-axis? Can these distances help you find the distance AD? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q4",
+            "number": "4",
+            "head": "<span class=\"qnum\">4</span><span class=\"qtext\"><span class=\"ln\">What has remained the same and what has changed with this reflection?</span><span class=\"ln\">Would these observations be the same if ΔADM is reflected in the x-axis (instead of the y-axis)?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "4. What has remained the same and what has changed with this reflection? Would these observations be the same if ΔADM is reflected in the x-axis (instead of the y-axis)? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          }
+        ]
+      }
+]
   },
   {
     "id": "ch02",
@@ -576,7 +616,135 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
           }
         ]
       }
-    ]
+    ,
+      {
+        "id": "ex2.reflect",
+        "title": "Think and Reflect",
+        "introHtml": "",
+        "questions": [
+          {
+            "id": "q1",
+            "number": "1",
+            "head": "<span class=\"qnum\">1</span><span class=\"qtext\"><span class=\"ln\">Can you identify the terms, variables and coefficients of this algebraic expression?</span><span class=\"ln\">How is it different from the algebraic expression in Example 1?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "1. Can you identify the terms, variables and coefficients of this algebraic expression? How is it different from the algebraic expression in Example 1? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q2",
+            "number": "2",
+            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">Can you identify the terms, variables and coefficients of this algebraic expression?</span><span class=\"ln\">Can you point out any similarity or difference between the algebraic expressions obtained in Examples 1 and 3?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "2. Can you identify the terms, variables and coefficients of this algebraic expression? Can you point out any similarity or difference between the algebraic expressions obtained in Examples 1 and 3? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q3",
+            "number": "3",
+            "head": "<span class=\"qnum\">3</span><span class=\"qtext\"><span class=\"ln\">Find the perimeter of squares with sides 1 cm, 1.5 cm, 2 cm, 2.5 cm and 3 cm. What will happen to the perimeters if the sides increase by 0.5 cm?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "3. Find the perimeter of squares with sides 1 cm, 1.5 cm, 2 cm, 2.5 cm and 3 cm. What will happen to the perimeters if the sides increase by 0.5 cm? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q4",
+            "number": "4",
+            "head": "<span class=\"qnum\">4</span><span class=\"qtext\"><span class=\"ln\">If a player paid ₹750, how many matches did he play?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "4. If a player paid ₹750, how many matches did he play? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q5",
+            "number": "5",
+            "head": "<span class=\"qnum\">5</span><span class=\"qtext\"><span class=\"ln\">We have learnt that to evaluate the value of an algebraic expression, we substitute a value of the variable in the given expression. Consider Example 3, where the wire is bent to form a rectangle. Here, the area of the rectangle, 10x − x², is a function of x. Can you interpret this as an input-output process?</span><span class=\"ln\">What value does the expression take when x = 6 cm?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "5. We have learnt that to evaluate the value of an algebraic expression, we substitute a value of the variable in the given expression. Consider Example 3, where the wire is bent to form a rectangle. Here, the area of the rectangle, 10x − x², is a function of x. Can you interpret this as an input-output process? What value does the expression take when x = 6 cm? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q6",
+            "number": "6",
+            "head": "<span class=\"qnum\">6</span><span class=\"qtext\"><span class=\"ln\">Predict the number of squares in the next three stages of the pattern and write the sequence of numbers up to Stage 7 of the pattern.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "6. Predict the number of squares in the next three stages of the pattern and write the sequence of numbers up to Stage 7 of the pattern. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q7",
+            "number": "7",
+            "head": "<span class=\"qnum\">7</span><span class=\"qtext\"><span class=\"ln\">Using the expression 2n − 1, can you find out how many tiles will be there in the 15th stage and the 26th stage of the pattern? Also, which stage will contain 21 tiles and 47 tiles?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "7. Using the expression 2n − 1, can you find out how many tiles will be there in the 15th stage and the 26th stage of the pattern? Also, which stage will contain 21 tiles and 47 tiles? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q8",
+            "number": "8",
+            "head": "<span class=\"qnum\">8</span><span class=\"qtext\"><span class=\"ln\">What amount will be left on the 15th day? How many days will it take for the entire amount to be spent?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "8. What amount will be left on the 15th day? How many days will it take for the entire amount to be spent? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q9",
+            "number": "9",
+            "head": "<span class=\"qnum\">9</span><span class=\"qtext\"><span class=\"ln\">For how many km will the fare be ₹130?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "9. For how many km will the fare be ₹130? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q10",
+            "number": "10",
+            "head": "<span class=\"qnum\">10</span><span class=\"qtext\"><span class=\"ln\">What is the cost for travelling 15 km? For how many kilometres will the cost of the journey be ₹700?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "10. What is the cost for travelling 15 km? For how many kilometres will the cost of the journey be ₹700? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q11",
+            "number": "11",
+            "head": "<span class=\"qnum\">11</span><span class=\"qtext\"><span class=\"ln\">What will be the height of the water at the end of 5 months?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "11. What will be the height of the water at the end of 5 months? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q12",
+            "number": "12",
+            "head": "<span class=\"qnum\">12</span><span class=\"qtext\"><span class=\"ln\">Can you guess what the numbers 20 and 150 in the equation y = 20x + 150 represent?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "12. Can you guess what the numbers 20 and 150 in the equation y = 20x + 150 represent? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q13",
+            "number": "13",
+            "head": "<span class=\"qnum\">13</span><span class=\"qtext\"><span class=\"ln\">Identify other points on the line by completing the following table.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "13. Identify other points on the line by completing the following table. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q14",
+            "number": "14",
+            "head": "<span class=\"qnum\">14</span><span class=\"qtext\"><span class=\"ln\">Differentiate between the graphs of the equations y = 3x + 1, and y = −3x + 1.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "14. Differentiate between the graphs of the equations y = 3x + 1, and y = −3x + 1. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q15",
+            "number": "15",
+            "head": "<span class=\"qnum\">15</span><span class=\"qtext\"><span class=\"ln\">Does this help you to conclude anything about the linear equation y = ax + b when a is fixed but b varies?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "15. Does this help you to conclude anything about the linear equation y = ax + b when a is fixed but b varies? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          }
+        ]
+      }
+]
   },
   {
     "id": "ch03",
@@ -971,7 +1139,103 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
           }
         ]
       }
-    ]
+    ,
+      {
+        "id": "ex3.reflect",
+        "title": "Think and Reflect",
+        "introHtml": "",
+        "questions": [
+          {
+            "id": "q1",
+            "number": "1",
+            "head": "<span class=\"qnum\">1</span><span class=\"qtext\"><span class=\"ln\">Why does a negative times a negative equal a positive? Think of it in terms of action and debt. If a negative number represents a debt, then multiplying by a negative number represents the removal of that debt. (Hint: If someone takes away (−) four of your debts that are each worth ₹3 (that is, −3), you are effectively ₹12 richer! Therefore, (−3) × (−4) = +12.)</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "1. Why does a negative times a negative equal a positive? Think of it in terms of action and debt. If a negative number represents a debt, then multiplying by a negative number represents the removal of that debt. (Hint: If someone takes away (−) four of your debts that are each worth ₹3 (that is, −3), you are effectively ₹12 richer! Therefore, (−3) × (−4) = +12.) Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q2",
+            "number": "2",
+            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">Can you explain why we need q ≠ 0 in the definition of a rational number?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "2. Can you explain why we need q ≠ 0 in the definition of a rational number? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q3",
+            "number": "3",
+            "head": "<span class=\"qnum\">3</span><span class=\"qtext\"><span class=\"ln\">While adding or subtracting two rational numbers having different denominators, how will you make the denominators equal?</span><span class=\"ln\">Verify the distributive law for rational numbers.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "3. While adding or subtracting two rational numbers having different denominators, how will you make the denominators equal? Verify the distributive law for rational numbers. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q4",
+            "number": "4",
+            "head": "<span class=\"qnum\">4</span><span class=\"qtext\"><span class=\"ln\">Try and represent 8/5 and −7/4 on a number line.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "4. Try and represent 8/5 and −7/4 on a number line. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q5",
+            "number": "5",
+            "head": "<span class=\"qnum\">5</span><span class=\"qtext\"><span class=\"ln\">Can √2 be written as a rational number p/q?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "5. Can √2 be written as a rational number p/q? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q6",
+            "number": "6",
+            "head": "<span class=\"qnum\">6</span><span class=\"qtext\"><span class=\"ln\">Try to prove the irrationality of √3 using the approach of proof by contradiction. Will the same approach work for √5, √7, or √10 ?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "6. Try to prove the irrationality of √3 using the approach of proof by contradiction. Will the same approach work for √5, √7, or √10 ? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q7",
+            "number": "7",
+            "head": "<span class=\"qnum\">7</span><span class=\"qtext\"><span class=\"ln\">We have seen how to obtain a line whose length is a rational number. How do we obtain lines whose lengths are irrational?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "7. We have seen how to obtain a line whose length is a rational number. How do we obtain lines whose lengths are irrational? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q8",
+            "number": "8",
+            "head": "<span class=\"qnum\">8</span><span class=\"qtext\"><span class=\"ln\">Try to extend this method for constructing line segments of lengths √3 and √5 using a ruler and a compass. Generalise this method to construct a line segment of any length of the form √n, where n is a positive integer.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "8. Try to extend this method for constructing line segments of lengths √3 and √5 using a ruler and a compass. Generalise this method to construct a line segment of any length of the form √n, where n is a positive integer. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q9",
+            "number": "9",
+            "head": "<span class=\"qnum\">9</span><span class=\"qtext\"><span class=\"ln\">Try to find the decimal expansions of 10/3 and 11/12. What do you observe about the repetition of the digits after the decimal point?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "9. Try to find the decimal expansions of 10/3 and 11/12. What do you observe about the repetition of the digits after the decimal point? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q10",
+            "number": "10",
+            "head": "<span class=\"qnum\">10</span><span class=\"qtext\"><span class=\"ln\">The decimal expansion of p/q will be terminating precisely when the prime factors of q are only 2, or 5 or both 2 and 5. Can you explain why?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "10. The decimal expansion of p/q will be terminating precisely when the prime factors of q are only 2, or 5 or both 2 and 5. Can you explain why? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q11",
+            "number": "11",
+            "head": "<span class=\"qnum\">11</span><span class=\"qtext\"><span class=\"ln\">Consider this puzzle: What is the square root of −1? We know that 1 × 1 = 1. We also know that (−1) × (−1) = 1. There is no Real Number that, when multiplied by itself, results in a negative number. Thus, √−1 cannot exist on number line.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "11. Consider this puzzle: What is the square root of −1? We know that 1 × 1 = 1. We also know that (−1) × (−1) = 1. There is no Real Number that, when multiplied by itself, results in a negative number. Thus, √−1 cannot exist on number line. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          }
+        ]
+      }
+]
   },
   {
     "id": "ch04",
@@ -1222,7 +1486,103 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
           }
         ]
       }
-    ]
+    ,
+      {
+        "id": "ex4.reflect",
+        "title": "Think and Reflect",
+        "introHtml": "",
+        "questions": [
+          {
+            "id": "q1",
+            "number": "1",
+            "head": "<span class=\"qnum\">1</span><span class=\"qtext\"><span class=\"ln\">Try and find other patterns like this one. For example, you could consider 4 consecutive squares and see if you can find a pattern.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "1. Try and find other patterns like this one. For example, you could consider 4 consecutive squares and see if you can find a pattern. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q2",
+            "number": "2",
+            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">What can you say about a and b if (a + b)² &lt; a² + b²?</span><span class=\"ln\">What can you say about a and b if (a + b)² &gt; a² + b²?</span><span class=\"ln\">When will (a + b)² be equal to a² + b²?</span><span class=\"ln\">Did you observe that (a + b)² and a² + b² are both positive? What term will decide which is larger? Use the expansion of (a + b)² to decide.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "2. What can you say about a and b if (a + b)² < a² + b²? What can you say about a and b if (a + b)² > a² + b²? When will (a + b)² be equal to a² + b²? Did you observe that (a + b)² and a² + b² are both positive? What term will decide which is larger? Use the expansion of (a + b)² to decide. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q3",
+            "number": "3",
+            "head": "<span class=\"qnum\">3</span><span class=\"qtext\"><span class=\"ln\">What if we replace b by −b in (a + b)² = a² + 2ab + b²?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "3. What if we replace b by −b in (a + b)² = a² + 2ab + b²? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q4",
+            "number": "4",
+            "head": "<span class=\"qnum\">4</span><span class=\"qtext\"><span class=\"ln\">Label the squares and rectangles in Fig. 4.4 so that it represents the identity (a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "4. Label the squares and rectangles in Fig. 4.4 so that it represents the identity (a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q5",
+            "number": "5",
+            "head": "<span class=\"qnum\">5</span><span class=\"qtext\"><span class=\"ln\">Try to evaluate the following using a suitable identity: (i) 35² (ii) 65² (iii) 85² (iv) 105². Do you observe any interesting pattern?</span><span class=\"ln\">Observe the two rows of figures below. They represent an algebraic identity. Try to identify it.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "5. Try to evaluate the following using a suitable identity: (i) 35² (ii) 65² (iii) 85² (iv) 105². Do you observe any interesting pattern? Observe the two rows of figures below. They represent an algebraic identity. Try to identify it. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q6",
+            "number": "6",
+            "head": "<span class=\"qnum\">6</span><span class=\"qtext\"><span class=\"ln\">Suppose 7x is split as 2x + 5x; can a similar rectangular arrangement be formed? Consider other possibilities and check.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "6. Suppose 7x is split as 2x + 5x; can a similar rectangular arrangement be formed? Consider other possibilities and check. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q7",
+            "number": "7",
+            "head": "<span class=\"qnum\">7</span><span class=\"qtext\"><span class=\"ln\">Algebra tiles can be used to represent products and find factors.</span><span class=\"ln\">Figure out the product of x + 2 and x + 3 using algebra tiles.</span><span class=\"ln\">Lay out algebra tiles for x² + 11x + 30 in such a way that you will see its factors.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "7. Algebra tiles can be used to represent products and find factors. Figure out the product of x + 2 and x + 3 using algebra tiles. Lay out algebra tiles for x² + 11x + 30 in such a way that you will see its factors. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q8",
+            "number": "8",
+            "head": "<span class=\"qnum\">8</span><span class=\"qtext\"><span class=\"ln\">We have seen that (x + 3)(x + 4) = x² + 7x + 12. Also (x + 6)(x + 7) = x² + 13x + 42. Generalise the pattern to get an expression for (x + a)(x + b).</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "8. We have seen that (x + 3)(x + 4) = x² + 7x + 12. Also (x + 6)(x + 7) = x² + 13x + 42. Generalise the pattern to get an expression for (x + a)(x + b). Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q9",
+            "number": "9",
+            "head": "<span class=\"qnum\">9</span><span class=\"qtext\"><span class=\"ln\">James and Reshma were talking about algebraic identities they learnt in school. James: (a − b)² (a + b) = (a² − 2ab + b²)(a + b). Reshma: I have a different idea. (a − b)² (a + b) = (a − b) [(a − b) (a + b)] = (a − b)(a² − b²). I will find this product to get the answer.</span><span class=\"ln\">According to you, who is correct and why?</span><span class=\"ln\">Try to combine more such identities and find new results.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "9. James and Reshma were talking about algebraic identities they learnt in school. James: (a − b)² (a + b) = (a² − 2ab + b²)(a + b). Reshma: I have a different idea. (a − b)² (a + b) = (a − b) [(a − b) (a + b)] = (a − b)(a² − b²). I will find this product to get the answer. According to you, who is correct and why? Try to combine more such identities and find new results. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q10",
+            "number": "10",
+            "head": "<span class=\"qnum\">10</span><span class=\"qtext\"><span class=\"ln\">Do you think x − y is also a factor of x⁴ − y⁴?</span><span class=\"ln\">Can you see how x − y is a factor of x⁴ − y⁴?</span><span class=\"ln\">How about x⁵ − y⁵? Does this also have x − y as a factor?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "10. Do you think x − y is also a factor of x⁴ − y⁴? Can you see how x − y is a factor of x⁴ − y⁴? How about x⁵ − y⁵? Does this also have x − y as a factor? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q11",
+            "number": "11",
+            "head": "<span class=\"qnum\">11</span><span class=\"qtext\"><span class=\"ln\">Try to simplify the following rational expression:</span><span class=\"ln\">(36s² − 12st + t²)/(t² + 2ts − 48s²) = (6s − t)²/((__ + __)(__ + __)).</span><span class=\"ln\">(Hint: Factor t² + 2ts − 48s² and simplify the rational expressions assuming that t² + 2ts − 48s² ≠ 0).</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "11. Try to simplify the following rational expression: (36s² − 12st + t²)/(t² + 2ts − 48s²) = (6s − t)²/((__ + __)(__ + __)). (Hint: Factor t² + 2ts − 48s² and simplify the rational expressions assuming that t² + 2ts − 48s² ≠ 0). Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          }
+        ]
+      }
+]
   },
   {
     "id": "ch05",
@@ -1632,7 +1992,39 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
           }
         ]
       }
-    ]
+    ,
+      {
+        "id": "ex5.reflect",
+        "title": "Think and Reflect",
+        "introHtml": "",
+        "questions": [
+          {
+            "id": "q1",
+            "number": "1",
+            "head": "<span class=\"qnum\">1</span><span class=\"qtext\"><span class=\"ln\">Jamuna has a circular piece of paper. She is trying to locate its centre. Amina gives her a suggestion. She follows the instructions and is thrilled to find that it works. Can you guess what Amina told her?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "1. Jamuna has a circular piece of paper. She is trying to locate its centre. Amina gives her a suggestion. She follows the instructions and is thrilled to find that it works. Can you guess what Amina told her? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q2",
+            "number": "2",
+            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">What are the rotational symmetries of a square? How many lines of reflection symmetry does it have? What about a regular pentagon? A regular hexagon?</span><span class=\"ln\">What is the length of the longest chord in a circle of radius 5 units? Is there a smallest chord?</span><span class=\"ln\">The locus of points at a given distance from a given point is a circle. What can we say about the locus of points equidistant from two given points?</span><span class=\"ln\">(Hint: We know that any point that is equidistant from two given points A and B lies on the perpendicular bisector of AB. Does this make the perpendicular bisector the locus? For this, we have to show that all the points on the perpendicular bisector are equidistant from A and B.)</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "2. What are the rotational symmetries of a square? How many lines of reflection symmetry does it have? What about a regular pentagon? A regular hexagon? What is the length of the longest chord in a circle of radius 5 units? Is there a smallest chord? The locus of points at a given distance from a given point is a circle. What can we say about the locus of points equidistant from two given points? (Hint: We know that any point that is equidistant from two given points A and B lies on the perpendicular bisector of AB. Does this make the perpendicular bisector the locus? For this, we have to show that all the points on the perpendicular bisector are equidistant from A and B.) Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q3",
+            "number": "3",
+            "head": "<span class=\"qnum\">3</span><span class=\"qtext\"><span class=\"ln\">How many circles pass through two points on a plane?</span><span class=\"ln\">Are there circles of all possible radii passing through A and B? What is the radius of the smallest circle passing through A and B? What is the radius of the largest circle passing through A and B?</span><span class=\"ln\">As you move away from segment AB along its perpendicular bisector, do the radii of the circles containing A and B increase or decrease?</span><span class=\"ln\">As you go along the perpendicular bisector, will the circle drawn from that point through A and B appear more curved or less curved?</span><span class=\"ln\">You are given two points A and B on a plane. How many squares can you draw on the same plane with A and B on the boundary? How many squares can you draw on the plane with A and B as the corners of the square?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "3. How many circles pass through two points on a plane? Are there circles of all possible radii passing through A and B? What is the radius of the smallest circle passing through A and B? What is the radius of the largest circle passing through A and B? As you move away from segment AB along its perpendicular bisector, do the radii of the circles containing A and B increase or decrease? As you go along the perpendicular bisector, will the circle drawn from that point through A and B appear more curved or less curved? You are given two points A and B on a plane. How many squares can you draw on the same plane with A and B on the boundary? How many squares can you draw on the plane with A and B as the corners of the square? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          }
+        ]
+      }
+]
   },
   {
     "id": "ch06",
@@ -2117,7 +2509,87 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
           }
         ]
       }
-    ]
+    ,
+      {
+        "id": "ex6.reflect",
+        "title": "Think and Reflect",
+        "introHtml": "",
+        "questions": [
+          {
+            "id": "q1",
+            "number": "1",
+            "head": "<span class=\"qnum\">1</span><span class=\"qtext\"><span class=\"ln\">In my school, the playground is too small to have a 400 m track, so the school constructed a 200 m track instead. Does this mean that we need a smaller stagger for the race tracks in my school (i.e., smaller than the stagger used in the Olympics), for the same 4 × 100 m relay race?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "1. In my school, the playground is too small to have a 400 m track, so the school constructed a 200 m track instead. Does this mean that we need a smaller stagger for the race tracks in my school (i.e., smaller than the stagger used in the Olympics), for the same 4 × 100 m relay race? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q2",
+            "number": "2",
+            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">What is the connection between this question and the one about the 400 m athletics track?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "2. What is the connection between this question and the one about the 400 m athletics track? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q3",
+            "number": "3",
+            "head": "<span class=\"qnum\">3</span><span class=\"qtext\"><span class=\"ln\">What is the difference in radius between the first and second lanes? Use the Fig. 6.11 to find the stagger needed by the runner in the second lane. Will an equal stagger be needed between the third and second lanes?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "3. What is the difference in radius between the first and second lanes? Use the Fig. 6.11 to find the stagger needed by the runner in the second lane. Will an equal stagger be needed between the third and second lanes? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q4",
+            "number": "4",
+            "head": "<span class=\"qnum\">4</span><span class=\"qtext\"><span class=\"ln\">What happens if the parallelogram is &#x27;thin&#x27; (Fig. 6.18) and the foot of the perpendicular from C to AD does not lie on side AD? The construction then does not seem to work. How do we fix this &#x27;gap&#x27;?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "4. What happens if the parallelogram is 'thin' (Fig. 6.18) and the foot of the perpendicular from C to AD does not lie on side AD? The construction then does not seem to work. How do we fix this 'gap'? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q5",
+            "number": "5",
+            "head": "<span class=\"qnum\">5</span><span class=\"qtext\"><span class=\"ln\">The area of a rectangle can be found when we know the lengths of its sides. Is the same true for a parallelogram? That is, can we find the area of a parallelogram when we know the lengths of its sides? Why or why not?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "5. The area of a rectangle can be found when we know the lengths of its sides. Is the same true for a parallelogram? That is, can we find the area of a parallelogram when we know the lengths of its sides? Why or why not? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q6",
+            "number": "6",
+            "head": "<span class=\"qnum\">6</span><span class=\"qtext\"><span class=\"ln\">Since ΔABD and ΔACD have equal area, you may wonder—Can we divide ΔABD using straight cuts into two or more pieces that we can then rearrange to exactly cover ΔACD? What do you think? Is it possible?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "6. Since ΔABD and ΔACD have equal area, you may wonder—Can we divide ΔABD using straight cuts into two or more pieces that we can then rearrange to exactly cover ΔACD? What do you think? Is it possible? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q7",
+            "number": "7",
+            "head": "<span class=\"qnum\">7</span><span class=\"qtext\"><span class=\"ln\">Suppose we are given two polygons P and Q with equal area. Will it always be possible to divide one of them using straight cuts into two or more pieces and then rearrange the pieces to exactly cover the other polygon? Try this out for familiar shapes, e.g., 1. A square and non-square rectangle with equal area, 2. Two triangles with different shapes but equal area, 3. A triangle and a square with equal area. Formulate a conjecture of your own about this.</span><span class=\"ln\">Think of various rectangles with perimeter 40 units (the sides do not have to be integers). 1. How many such rectangles are there? 2. Among them, is there one whose area is the largest? What are its dimensions? 3. Among all these rectangles, is there one whose area is the smallest? What are its dimensions? Do either of these answers come as a surprise to you?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "7. Suppose we are given two polygons P and Q with equal area. Will it always be possible to divide one of them using straight cuts into two or more pieces and then rearrange the pieces to exactly cover the other polygon? Try this out for familiar shapes, e.g., 1. A square and non-square rectangle with equal area, 2. Two triangles with different shapes but equal area, 3. A triangle and a square with equal area. Formulate a conjecture of your own about this. Think of various rectangles with perimeter 40 units (the sides do not have to be integers). 1. How many such rectangles are there? 2. Among them, is there one whose area is the largest? What are its dimensions? 3. Among all these rectangles, is there one whose area is the smallest? What are its dimensions? Do either of these answers come as a surprise to you? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q8",
+            "number": "8",
+            "head": "<span class=\"qnum\">8</span><span class=\"qtext\"><span class=\"ln\">What procedure would you use to square a given triangle? Here, the task is to construct a square whose area is equal to the area of some given triangle. Think carefully. How would you proceed?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "8. What procedure would you use to square a given triangle? Here, the task is to construct a square whose area is equal to the area of some given triangle. Think carefully. How would you proceed? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q9",
+            "number": "9",
+            "head": "<span class=\"qnum\">9</span><span class=\"qtext\"><span class=\"ln\">Why were human beings so fond of using circular shapes? Was this only for practical reasons, or could there have been other reasons too? What kinds of uses have human beings found for the circular shape?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "9. Why were human beings so fond of using circular shapes? Was this only for practical reasons, or could there have been other reasons too? What kinds of uses have human beings found for the circular shape? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          }
+        ]
+      }
+]
   },
   {
     "id": "ch07",
@@ -2385,7 +2857,55 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
           }
         ]
       }
-    ]
+    ,
+      {
+        "id": "ex7.reflect",
+        "title": "Think and Reflect",
+        "introHtml": "",
+        "questions": [
+          {
+            "id": "q1",
+            "number": "1",
+            "head": "<span class=\"qnum\">1</span><span class=\"qtext\"><span class=\"ln\">Such unpredictability can be useful sometimes! For example, in a cricket match, the fact that a coin is tossed to decide which team will bat first is considered to be a fair method. Can you explain why?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "1. Such unpredictability can be useful sometimes! For example, in a cricket match, the fact that a coin is tossed to decide which team will bat first is considered to be a fair method. Can you explain why? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q2",
+            "number": "2",
+            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">Ask your friend to predict the outcome of a ₹1 coin you toss. Do you see that your friend could guess heads or tails but could not know for certain? That&#x27;s randomness! All possible results are known, but each individual try is unpredictable.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "2. Ask your friend to predict the outcome of a ₹1 coin you toss. Do you see that your friend could guess heads or tails but could not know for certain? That's randomness! All possible results are known, but each individual try is unpredictable. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q3",
+            "number": "3",
+            "head": "<span class=\"qnum\">3</span><span class=\"qtext\"><span class=\"ln\">If I have rolled a 4 on a die 8 times in succession, the probability of rolling a 4 again is still only ≈ 0.16 (assuming the die is fair). Probability does not tell you what will happen next but predicts what will happen in the long run.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "3. If I have rolled a 4 on a die 8 times in succession, the probability of rolling a 4 again is still only ≈ 0.16 (assuming the die is fair). Probability does not tell you what will happen next but predicts what will happen in the long run. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q4",
+            "number": "4",
+            "head": "<span class=\"qnum\">4</span><span class=\"qtext\"><span class=\"ln\">When we used the sample space {Rain, No Rain} in Example 1, we focused only on whether it will rain or not. However, if we want to include different amounts of rainfall like drizzle, light rain or heavy rain, we need to expand the sample space to {No Rain, Drizzle, Light Rain, Heavy Rain} so that it better matches the level of detail required for the question. It is important to ensure the sample space is detailed enough to suit the specific problem being studied.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "4. When we used the sample space {Rain, No Rain} in Example 1, we focused only on whether it will rain or not. However, if we want to include different amounts of rainfall like drizzle, light rain or heavy rain, we need to expand the sample space to {No Rain, Drizzle, Light Rain, Heavy Rain} so that it better matches the level of detail required for the question. It is important to ensure the sample space is detailed enough to suit the specific problem being studied. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q5",
+            "number": "5",
+            "head": "<span class=\"qnum\">5</span><span class=\"qtext\"><span class=\"ln\">Can you calculate the probability of getting one head and one tail?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "5. Can you calculate the probability of getting one head and one tail? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          }
+        ]
+      }
+]
   },
   {
     "id": "ch08",
@@ -2702,6 +3222,102 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
           }
         ]
       }
-    ]
+    ,
+      {
+        "id": "ex8.reflect",
+        "title": "Think and Reflect",
+        "introHtml": "",
+        "questions": [
+          {
+            "id": "q1",
+            "number": "1",
+            "head": "<span class=\"qnum\">1</span><span class=\"qtext\"><span class=\"ln\">Can you describe the pattern in each of the above sequences?</span><span class=\"ln\">Can you predict the next few numbers in these sequences?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "1. Can you describe the pattern in each of the above sequences? Can you predict the next few numbers in these sequences? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q2",
+            "number": "2",
+            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">Can you think of any other kinds of sequences?</span><span class=\"ln\">List out five different types of sequences and discuss their properties with your friends.</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "2. Can you think of any other kinds of sequences? List out five different types of sequences and discuss their properties with your friends. Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q3",
+            "number": "3",
+            "head": "<span class=\"qnum\">3</span><span class=\"qtext\"><span class=\"ln\">Why is it useful to have an explicit formula for the nᵗʰ term of a sequence?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "3. Why is it useful to have an explicit formula for the nᵗʰ term of a sequence? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q4",
+            "number": "4",
+            "head": "<span class=\"qnum\">4</span><span class=\"qtext\"><span class=\"ln\">Can you find the rule describing the nᵗʰ term of the sequence of square numbers?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "4. Can you find the rule describing the nᵗʰ term of the sequence of square numbers? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q5",
+            "number": "5",
+            "head": "<span class=\"qnum\">5</span><span class=\"qtext\"><span class=\"ln\">Can you predict the number of squares in Stages 5 and 6 of the sequence?</span><span class=\"ln\">In Stages 10, 11 and 12?</span><span class=\"ln\">In Stage 20?</span><span class=\"ln\">At any stage?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "5. Can you predict the number of squares in Stages 5 and 6 of the sequence? In Stages 10, 11 and 12? In Stage 20? At any stage? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q6",
+            "number": "6",
+            "head": "<span class=\"qnum\">6</span><span class=\"qtext\"><span class=\"ln\">Consider all the sequences we have discussed so far in this chapter. Which ones are arithmetic progressions and which ones are not? Can you justify your claim?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "6. Consider all the sequences we have discussed so far in this chapter. Which ones are arithmetic progressions and which ones are not? Can you justify your claim? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q7",
+            "number": "7",
+            "head": "<span class=\"qnum\">7</span><span class=\"qtext\"><span class=\"ln\">Can the same approach be used to find the sum of 1 + 2 + 3 + ... + 100?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "7. Can the same approach be used to find the sum of 1 + 2 + 3 + ... + 100? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q8",
+            "number": "8",
+            "head": "<span class=\"qnum\">8</span><span class=\"qtext\"><span class=\"ln\">Can you use this formula to find S₂₀, S₅₀ or S₁₀₀₀?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "8. Can you use this formula to find S₂₀, S₅₀ or S₁₀₀₀? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q9",
+            "number": "9",
+            "head": "<span class=\"qnum\">9</span><span class=\"qtext\"><span class=\"ln\">Let us revisit the sequence tₙ of triangular numbers 1, 3, 6, 10, 15, ... shown in Fig. 8.1. Note that the nᵗʰ term of this sequence is the sum of the first n natural numbers. Thus tₙ = n(n+1)/2.</span><span class=\"ln\">Can you use this to find the 10ᵗʰ, 17ᵗʰ and 80ᵗʰ triangular numbers?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "9. Let us revisit the sequence tₙ of triangular numbers 1, 3, 6, 10, 15, ... shown in Fig. 8.1. Note that the nᵗʰ term of this sequence is the sum of the first n natural numbers. Thus tₙ = n(n+1)/2. Can you use this to find the 10ᵗʰ, 17ᵗʰ and 80ᵗʰ triangular numbers? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q10",
+            "number": "10",
+            "head": "<span class=\"qnum\">10</span><span class=\"qtext\"><span class=\"ln\">Can you predict the number of squares in Stages 5 and 6 of the pattern?</span><span class=\"ln\">In Stages 10, 11 and 12?</span><span class=\"ln\">In Stage 20?</span><span class=\"ln\">At any stage?</span><span class=\"ln\">How is this different from the growing pattern in Fig. 8.3?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "10. Can you predict the number of squares in Stages 5 and 6 of the pattern? In Stages 10, 11 and 12? In Stage 20? At any stage? How is this different from the growing pattern in Fig. 8.3? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          },
+          {
+            "id": "q11",
+            "number": "11",
+            "head": "<span class=\"qnum\">11</span><span class=\"qtext\"><span class=\"ln\">Observe the Sierpiński triangle and try to answer the following questions</span><span class=\"ln\">(a) How many black triangles are there in Stages 0 to 3 of Fig. 8.7?</span><span class=\"ln\">(b) Can you predict the number of black triangles at Stages 4 and 5?</span><span class=\"ln\">(c) Can you find a rule for the number of black triangles at the nᵗʰ stage?</span><span class=\"ln\">(d) Suppose the area of the triangle (that is, the black region) in Stage 0 is 1 square unit. What is the area of the black region in Stages 1, 2 and 3? What will be the area of the black region in Stages 4 and 5? Find a rule for the area of the black region at the nᵗʰ stage. What happens to this area as n, the number of stages, goes on increasing?</span></span>",
+            "body": "<span class=\"ln\">Refer to the Think and Reflect discussion in the textbook on this page.</span>",
+            "plainText": "11. Observe the Sierpiński triangle and try to answer the following questions (a) How many black triangles are there in Stages 0 to 3 of Fig. 8.7? (b) Can you predict the number of black triangles at Stages 4 and 5? (c) Can you find a rule for the number of black triangles at the nᵗʰ stage? (d) Suppose the area of the triangle (that is, the black region) in Stage 0 is 1 square unit. What is the area of the black region in Stages 1, 2 and 3? What will be the area of the black region in Stages 4 and 5? Find a rule for the area of the black region at the nᵗʰ stage. What happens to this area as n, the number of stages, goes on increasing? Refer to the Think and Reflect discussion in the textbook.",
+            "answerKey": "See the textbook discussion."
+          }
+        ]
+      }
+]
   }
 ];
