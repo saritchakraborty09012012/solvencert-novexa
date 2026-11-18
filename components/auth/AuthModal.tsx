@@ -16,9 +16,9 @@ import toast from 'react-hot-toast';
 interface Props { mode:'login'|'signup'; onClose:()=>void; onSwitch:(m:'login'|'signup')=>void; }
 
 // Clean labeled input — icon ABOVE label, NO overlap
-function Field({ label, type='text', value, onChange, placeholder, autoComplete, children }: {
+function Field({ label, type='text', value, onChange, placeholder, autoComplete, error, children }: {
   label:string; type?:string; value:string; onChange:(v:string)=>void;
-  placeholder?:string; autoComplete?:string; children?: React.ReactNode;
+  placeholder?:string; autoComplete?:string; error?:string; children?: React.ReactNode;
 }) {
   return (
     <div className="flex flex-col gap-1">
@@ -26,9 +26,10 @@ function Field({ label, type='text', value, onChange, placeholder, autoComplete,
       <div className="relative">
         <input type={type} value={value} onChange={e=>onChange(type === 'email' ? e.target.value.toLowerCase() : e.target.value)}
           placeholder={placeholder} autoComplete={autoComplete}
-          className="input-field w-full" />
+          className={cn('input-field w-full', error && 'field-invalid')} />
         {children}
       </div>
+      {error && <p className="text-[11px] font-semibold text-red-500">{error}</p>}
     </div>
   );
 }
@@ -49,18 +50,21 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
   const [reward,    setReward]    = useState<{ code: string } | null>(null);
   const [showRetentionNotice, setShowRetentionNotice] = useState(false);
   const [error,     setError]     = useState('');
+  const [dobError,  setDobError]  = useState(''); // DOB → inline red+blink + "Required", NOT the bottom error box
   const [fpStage,   setFpStage]   = useState<null | 'forgot'>(null);
 
   async function handleSignUp() {
     setError('');
+    setDobError('');
     if (!fullName.trim())       return setError('Full name is required.');
     if (!validateEmail(email))  return setError('Enter a valid email (must include @ and .com).');
     if (password.length < 6)    return setError('Password must be at least 6 characters.');
     if (password !== confirmPw) return setError('Passwords do not match.');
     // Email (non-OAuth) sign-ups must provide a date of birth. Applies to new
-    // sign-ups only — nothing is ever demanded from existing users.
-    const dobError = validateDob(dob);
-    if (dobError) return setError(dobError);
+    // sign-ups only — nothing is ever demanded from existing users. Shown as a
+    // red blinking field + "Required" underneath, not in the bottom error box.
+    const dobMsg = validateDob(dob);
+    if (dobMsg) { setDobError(dobMsg === 'Date of birth is required.' ? 'Required' : dobMsg); return; }
     setLoading(true);
     try {
       const { data, error: e } = await supabase.auth.signUp({
@@ -193,7 +197,9 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
               {isSignUp && (
                 <div className="grid grid-cols-2 gap-3">
                   <Field label="Phone (optional)" type="tel" value={phone} onChange={setPhone} placeholder="+91 …" autoComplete="tel" />
-                  <Field label="Date of Birth *" type="date" value={dob} onChange={setDob} autoComplete="bday" />
+                  <Field label="Date of Birth *" type="date" value={dob}
+                    onChange={v=>{setDob(v); setDobError('');}}
+                    autoComplete="bday" error={dobError} />
                 </div>
               )}
 
@@ -244,7 +250,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
 
               <p className="text-center text-sm text-[var(--text-muted)] pt-1">
                 {isSignUp ? 'Already have an account? ' : "Don't have an account? "}
-                <button onClick={()=>onSwitch(isSignUp?'login':'signup')} className="text-blue-500 hover:text-blue-600 font-semibold">
+                <button onClick={()=>{ setDobError(''); onSwitch(isSignUp?'login':'signup'); }} className="text-blue-500 hover:text-blue-600 font-semibold">
                   {isSignUp ? 'Log In' : 'Sign Up Free'}
                 </button>
               </p>

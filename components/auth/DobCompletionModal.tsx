@@ -22,6 +22,7 @@ export default function DobCompletionModal() {
   const { user, isGuest, loading, dobPending, setUser } = useAuthStore();
   const [dob, setDob] = useState('');
   const [error, setError] = useState('');
+  const [dobInvalid, setDobInvalid] = useState(false); // red blinking field + "Required" underneath
   const [saving, setSaving] = useState(false);
 
   const show = !loading && !isGuest && !!user && dobPending && !user.dob;
@@ -46,7 +47,14 @@ export default function DobCompletionModal() {
 
   async function submit() {
     const invalid = validateDob(dob);
-    if (invalid) { setError(invalid); return; }
+    // Invalid/empty → red blinking field with "Required" right below it
+    // (not a generic message). Save failures keep their own message below.
+    if (invalid) {
+      setDobInvalid(true);
+      setError(invalid === 'Date of birth is required.' ? 'Required' : invalid);
+      return;
+    }
+    setDobInvalid(false);
     setError('');
     setSaving(true);
     try {
@@ -93,14 +101,17 @@ export default function DobCompletionModal() {
           <input
             type="date"
             value={dob}
-            onChange={(e) => { setDob(e.target.value); setError(''); }}
+            onChange={(e) => { setDob(e.target.value); setError(''); setDobInvalid(false); }}
             max={today}
             min="1900-01-01"
             autoComplete="bday"
             aria-label="Date of birth"
-            className="input-field w-full text-center"
+            aria-invalid={dobInvalid || undefined}
+            className={`input-field w-full text-center${dobInvalid ? ' field-invalid' : ''}`}
           />
-          {error && <p className="text-xs text-red-500 mt-2">{error}</p>}
+          {error && (
+            <p className={`text-xs mt-2 ${dobInvalid ? 'font-semibold text-red-500' : 'text-red-500'}`}>{error}</p>
+          )}
 
           <button onClick={submit} disabled={saving} className="btn-primary w-full justify-center mt-4 text-sm">
             {saving ? <Loader2 size={16} className="animate-spin" /> : 'Complete Sign Up'}

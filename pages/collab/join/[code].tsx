@@ -26,6 +26,7 @@ export default function JoinCollabPage() {
   const [knownName, setKnownName] = useState('');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
+  const [dobError, setDobError] = useState(''); // DOB → inline red+blink + "Required", not the bottom line
   const [joined, setJoined] = useState(false);
   const [showPw, setShowPw] = useState(false);
 
@@ -92,8 +93,9 @@ export default function JoinCollabPage() {
     if (!validateEmail(email)) return setError('Enter a valid email.');
     if (password.length < 6) return setError('Password must be at least 6 characters.');
     // Same rule as the main sign-up form: new email accounts must give a DOB.
-    const dobError = validateDob(dob);
-    if (dobError) return setError(dobError);
+    // Shown as a red blinking field + "Required" underneath, not in the bottom line.
+    const dobMsg = validateDob(dob);
+    if (dobMsg) { setDobError(dobMsg === 'Date of birth is required.' ? 'Required' : dobMsg); return; }
     setBusy(true);
     try {
       const { data, error: e2 } = await supabase.auth.signUp({
@@ -209,11 +211,15 @@ export default function JoinCollabPage() {
                 type="email" value={email} onChange={(e) => { setEmail(e.target.value.toLowerCase()); setError(''); }}
                 placeholder="Email" autoComplete="email" className="input-field w-full"
               />
-              <input
-                type="date" value={dob} onChange={(e) => setDob(e.target.value)}
-                placeholder="Date of birth (required)" autoComplete="bday" required
-                className="input-field w-full"
-              />
+              <div className="flex flex-col gap-1">
+                <input
+                  type="date" value={dob}
+                  onChange={(e) => { setDob(e.target.value); setDobError(''); }}
+                  placeholder="Date of birth (required)" autoComplete="bday"
+                  className={`input-field w-full${dobError ? ' field-invalid' : ''}`}
+                />
+                {dobError && <p className="text-[11px] font-semibold text-red-500">{dobError}</p>}
+              </div>
               <div className="flex flex-col gap-1">
                 <label className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">Password</label>
                 <div className="relative">

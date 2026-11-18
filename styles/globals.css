@@ -555,6 +555,23 @@ textarea:focus-visible {
   border-color: rgba(217, 180, 91, 0.5);
   box-shadow: 0 0 0 4px rgba(217, 180, 91, 0.14);
 }
+
+/* ── Invalid required field (e.g. DOB on sign-up): red border + gentle blink ── */
+@keyframes field-invalid-blink {
+  0%, 100% { border-color: rgba(239, 68, 68, 0.95); box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.16); }
+  50%      { border-color: rgba(239, 68, 68, 0.35); box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.04); }
+}
+/* High-specificity selectors so every UI theme (ui1/ui2/ui3) + dark mode loses
+   to the red state; while blinking, the keyframes outrank all normal rules. */
+.input-field.field-invalid,
+html[data-ui] .input-field.field-invalid,
+html[data-ui] .input-field.field-invalid:focus,
+.dark .input-field.field-invalid,
+.dark .input-field.field-invalid:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+  animation: field-invalid-blink 1.1s ease-in-out infinite;
+}
 select.input-field {
   background-image: none;
   appearance: none;
