@@ -134,9 +134,15 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
 
   const isSignUp = mode === 'signup';
   const isForgot = fpStage === 'forgot';
+  // After a successful sign-up (referral reward) or login (history-retention
+  // notice), the form itself must LEAVE the screen — those follow-ups render
+  // at z-70 and would otherwise sit hidden BEHIND this z-100 form overlay,
+  // leaving the user stuck with a sign-up form that never closes.
+  const showForm = !reward && !showRetentionNotice;
 
   return (
     <>
+    {showForm && (
     <div className="fixed inset-0 z-[100] flex items-end justify-center p-0 sm:items-center sm:p-4">
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
       <div className="relative w-full sm:max-w-md max-h-[90vh] bg-[var(--surface-0)] rounded-t-2xl sm:rounded-2xl shadow-soft-xl border border-[var(--border)] animate-scale-in overflow-hidden flex flex-col">
@@ -259,6 +265,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
         </div>
       </div>
     </div>
+    )}
 
     {reward && <RewardModal referralCode={reward.code} onClose={() => { setReward(null); onClose(); }} />}
     {showRetentionNotice && <HistoryRetentionModal onClose={onClose} />}
