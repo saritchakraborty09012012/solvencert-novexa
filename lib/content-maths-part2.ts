@@ -2181,7 +2181,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "The volume of a cube is 64 cm³. Find its total surface area.",
+            "text": "The volume of a cube is 64 cm³. What is its total surface area?",
             "answer": {
               "answerKey": "96 cm².",
               "schoolMethod": "If a is the side, a³=64 ⇒ a=4 cm. Total surface area S=6a²=6(4²)=**96 cm²**."
@@ -2191,7 +2191,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "How many cubes of side 20 cm fit tightly in a cubical box of side 2 m?",
+            "text": "How many small cubes with side 20 cm can be packed tight in a cubical box with side 2 m?",
             "answer": {
               "answerKey": "1000 cubes.",
               "schoolMethod": "Convert 2 m to 200 cm. Along each edge, $\\dfrac{200}{20}$=10 small cubes fit. Total =10×10×10=**1000 cubes**."
@@ -2201,7 +2201,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "A godown is 40 m×25 m×10 m and is filled with boxes measuring 2 m×1.25 m×1 m. Find the number of boxes.",
+            "text": "The dimensions of a godown are 40 m × 25 m × 10 m. If it is filled with cuboidal boxes, each of dimensions 2 m × 1.25 m × 1 m, then find the number of boxes.",
             "answer": {
               "answerKey": "4000 boxes.",
               "schoolMethod": "Godown volume=40×25×10=10,000 m³. One box volume=2×1.25×1=2.5 m³. Since each dimension divides the corresponding godown dimension exactly, the packed count is ($\\dfrac{40}{2}$)($\\dfrac{25}{1.25}$)($\\dfrac{10}{1}$)=20×20×10=**4000 boxes**."
@@ -2211,7 +2211,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "Two cubes, each of volume 125 cm³, are joined end to end. Find the surface area of the resulting cuboid.",
+            "text": "Two cubes each of volume 125 cm³ are joined end to end. Find the surface area of the resulting cuboid.",
             "answer": {
               "answerKey": "250 cm².",
               "schoolMethod": "Each cube has side ∛125=5 cm. Joined face-to-face, the cuboid measures 10 cm×5 cm×5 cm. Its total surface area is 2(lw+lh+wh)=2(10×5+10×5+5×5)=2(50+50+25)=**250 cm²**."
@@ -2221,7 +2221,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "A cube of side 4 cm is cut into 1 cm cubes. Find the ratio of the original cube’s surface area to the sum of the surface areas of all the small cubes.",
+            "text": "A cube of side 4 cm is cut into cubes of side 1 cm. What is the ratio of the surface areas of the original cube and all the cut-out cubes? (Note that there is no change in volume but a big change in the surface area). This property has major consequences in the biological world.)",
             "answer": {
               "answerKey": "1:4.",
               "schoolMethod": "Original surface area=6×4²=96 cm². There are 4³=64 small cubes; each has surface area 6×1²=6 cm², so their total surface area is 64×6=384 cm². Ratio=96:384=**1:4**. Volume is preserved, but cutting exposes new surfaces."
@@ -2231,7 +2231,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "The three faces of a cuboid meeting at one corner have areas 6 cm², 15 cm² and 10 cm². Find its volume.",
+            "text": "The surface areas of the three faces of a cuboid that meet at one of the corners of the cuboid are 6 cm², 15 cm², and 10 cm² respectively. What is the volume of the cuboid?",
             "answer": {
               "answerKey": "30 cm³.",
               "schoolMethod": "Let its edges be l,w,h. The face areas give lw=6, wh=15 and lh=10. Multiplying, (lwh)²=(lw)(wh)(lh)=6×15×10=900. Since volume is positive, lwh=√900=**30 cm³**."
@@ -2241,7 +2241,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": true,
-            "text": "A 5 cm cube is painted on all faces and cut into 1 cm³ cubes. How many small cubes have (i) exactly three painted faces, (ii) exactly two, (iii) exactly one, (iv) no painted faces?\n\n![ch14-ex14-1-q7-cube](/figs/maths-0904ch14-ex14-1-q7-cube.png)",
+            "text": "A cube of side 5 cm is painted on all its faces. If it is sliced into 1 cm³ cubes, how many of these 1 cm³ cubes have\n\n(i) exactly three faces painted?\n\n(ii) exactly two faces painted?\n\n(iii) exactly one face painted?\n\n(iv) no face painted?\n\n![ch14-ex14-1-q7-cube](/figs/maths-0904ch14-ex14-1-q7-cube.png)",
             "answer": {
               "answerKey": "(i) 8; (ii) 36; (iii) 54; (iv) 27.",
               "schoolMethod": "(i) Exactly three painted faces occur only at the 8 corners: **8**.\n\n(ii) On each of 12 edges, the non-corner cubes have two painted faces. There are 5−2=3 such cubes per edge, so 12×3=**36**.\n\n(iii) On each of 6 faces, the interior face cubes (not edges) have one painted face. Each face has (5−2)²=9, so 6×9=**54**.\n\n(iv) Fully internal cubes have no painted faces. Count=(5−2)³=3³=**27**. Check: 8+36+54+27=125=5³."
@@ -2251,7 +2251,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": true,
-            "text": "Find all cuboids with positive integer edge lengths and total surface area exactly 100 cm². Are there more than one? Show all cases.",
+            "text": "Find a cuboid with edges whose lengths are integers (in cm), given that it has a total surface area of exactly 100 cm².\n\n(i) Is there more than one such cuboid?\n\n(ii) Can you find them all?\n\n(iii) Show that you have found them all.",
             "answer": {
               "answerKey": "Up to reordering, (1,2,16) cm and (2,4,7) cm; exactly two.",
               "schoolMethod": "Let integer edges be a≤b≤c. From 2(ab+bc+ca)=100, we need ab+bc+ca=50. Since a≤b≤c, 3a²≤50, so a≤4.\n\n**a=1:** b+c+bc=50 ⇒ (b+1)(c+1)=51=3×17 (the only factor pair with b≥1 and c≥b is 3×17). Thus (b,c)=(2,16).\n\n**a=2:** 2b+2c+bc=50 ⇒ (b+2)(c+2)=54. With b≥2 and c≥b, the valid factor pair is 6×9, giving (b,c)=(4,7).\n\n**a=3:** (b+3)(c+3)=59. Since 59 is prime, no pair with b≥3 exists.\n\n**a=4:** (b+4)(c+4)=66, but both factors are at least 8; no factor pair of 66 has both factors at least 8. Hence no further cases. The two cuboids are **1×2×16** and **2×4×7**. Their surface areas are respectively 2(2+16+32)=100 and 2(8+14+28)=100 cm²."
@@ -2261,7 +2261,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q9",
             "number": "9",
             "isHard": false,
-            "text": "Think and Reflect: compare school pool designs A=8 ft×50 ft×20 ft and B=6 ft×100 ft×15 ft. Which is appropriate and why? Use 1 ft³≈28.3 L.",
+            "text": "Suppose a swimming pool is being built in your school. Two choices are available for the dimensions of the pool: (A) 8 ft (depth) × 50 ft × 20 ft and (B) 6 ft (depth) × 100 ft × 15 ft. Which option would be suitable/appropriate for your school? Why? What parameters/aspects did you consider to make the choice? [1 cubic foot ≈ 28.3 litres]",
             "answer": {
               "answerKey": "A: 8,000 ft³ ≈ 226,400 L; B: 9,000 ft³ ≈ 254,700 L. B holds 1,000 ft³ (≈28,300 L) more water, but the suitable choice depends on available space, depth, safety, and intended use.",
               "schoolMethod": "**Option A:** Volume = depth × length × width = 8 × 50 × 20 = **8,000 ft³**.\nIn litres, 8,000 × 28.3 = **226,400 L**.\n\n**Option B:** Volume = 6 × 100 × 15 = **9,000 ft³**.\nIn litres, 9,000 × 28.3 = **254,700 L**.\n\nOption B holds 9,000 − 8,000 = **1,000 ft³** more water, equivalent to 1,000 × 28.3 = **28,300 L**. B is shallower but needs a 100 ft length; A is deeper and shorter. There is no universally correct choice: the answer should justify dimensions, site space, intended users, safety and cost."
@@ -2277,7 +2277,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Cylinder B has twice the radius and half the height of cylinder A. Find CSA(A):CSA(B) and volume(A):volume(B).",
+            "text": "Two cylinders, A and B, are given. The radius of cylinder B is twice that of cylinder A, and the height of cylinder B is half that of cylinder A. Find the ratio of the curved surface area of A to the curved surface area of B. Also find the ratio of the volume of A to the volume of B.",
             "answer": {
               "answerKey": "CSA ratio 1:1; volume ratio 1:2.",
               "schoolMethod": "Let cylinder A have radius r and height h. Then B has radius 2r and height $\\dfrac{h}{2}$.\n\nCSA(A)=2πrh. CSA(B)=2π(2r)($\\dfrac{h}{2}$)=2πrh, so the ratio is **1:1**.\n\nV(A)=πr²h. V(B)=π(2r)²($\\dfrac{h}{2}$)=2πr²h, so V(A):V(B)=**1:2**."
@@ -2287,7 +2287,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "The radii of two cylinders are in the ratio 2:3 and heights in the ratio 3:2. Find (a) volume ratio and (b) CSA ratio.",
+            "text": "The radii of two cylinders are in the ratio 2:3, and their heights are in the ratio 3:2. Find (a) the ratio of their volumes, and (b) the ratio of their curved surface areas.",
             "answer": {
               "answerKey": "(a) 2:3; (b) 1:1.",
               "schoolMethod": "Let r₁:r₂=2:3 and h₁:h₂=3:2.\n\n(a) Volumes are proportional to r²h, so V₁:V₂=(2²×3):(3²×2)=12:18=**2:3**.\n\n(b) Curved areas are proportional to rh, so CSA₁:CSA₂=(2×3):(3×2)=**1:1**."
@@ -2297,7 +2297,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "A cube has edge r cm. A largest possible right circular cylinder is cut out of it. Find the cylinder’s volume.",
+            "text": "The edge of a cube measures r cm. The largest possible right circular cylinder is cut out of the cube. What do you think is the volume of the cylinder (in cm³)?",
             "answer": {
               "answerKey": "πr³/4 cm³.",
               "schoolMethod": "The cylinder’s height equals the cube’s edge, h=r. Its circular base is the largest circle that fits in a square face, so its diameter is r and radius is $\\dfrac{r}{2}$. Therefore V=π($\\dfrac{r}{2}$)²(r)=**πr³/4 cm³**."
@@ -2307,7 +2307,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": true,
-            "text": "The radius of a cylinder is increased by 10% and its height is decreased by x%. Its volume remains unchanged. Find x.",
+            "text": "The radius of the base of a cylinder is increased by 10%. At the same time, the height of the cylinder is decreased by x%. Given that the volume of the cylinder remains unchanged, find the value of x.",
             "answer": {
               "answerKey": "x≈17.36%.",
               "schoolMethod": "Let original volume be V=πr²h. New radius=1.1r and new height=(1−$\\dfrac{x}{100}$)h. Equal volumes give 1.1²(1−$\\dfrac{x}{100}$)=1. Thus 1−$\\dfrac{x}{100}$=$\\dfrac{1}{1.21}$=$\\dfrac{100}{121}$. Hence $\\dfrac{x}{100}$=$\\dfrac{21}{121}$ and x=$\\dfrac{2100}{121}$≈**17.36%**."
@@ -2317,7 +2317,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "A metal cube of side 12 cm is melted and recast as cylindrical rods of radius 2 cm and height 12 cm. Find (i) cube volume, (ii) one rod volume, (iii) approximate number of complete rods using π≈$\\dfrac{22}{7}$.",
+            "text": "A solid metallic cube of side 12 cm is melted and recast into solid cylindrical rods, each having radius 2 cm and height 12 cm. Find:\n\n(i) the volume of the cube,\n\n(ii) the volume of one cylindrical rod,\n\n(iii) the approximate number of complete cylindrical rods that can be formed. (π ≈ 22/7)",
             "answer": {
               "answerKey": "(i) 1728 cm³; (ii) 48π=$\\dfrac{1056}{7}$≈150.86 cm³; (iii) 11 complete rods.",
               "schoolMethod": "(i) Cube volume=12³=**1728 cm³**.\n\n(ii) Rod volume=πr²h=π×2²×12=**48π cm³**. With π≈$\\dfrac{22}{7}$, this is $\\dfrac{1056}{7}$≈**150.86 cm³**.\n\n(iii) Number of rods by volume=$\\dfrac{1728}{48π}$=36/π≈11.46. Only whole rods can be made, so **11 complete rods** can be formed."
@@ -2333,7 +2333,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Find the total surface area of a cone with slant height 21 m and base diameter 24 m.",
+            "text": "Find the total surface area of a cone, if its slant height is 21 m and diameter of its base is 24 m.",
             "answer": {
               "answerKey": "Total surface area = 396π m² ≈ 1244.07 m².",
               "schoolMethod": "Radius r=$\\dfrac{24}{2}$=12 m and slant height l=21 m. Total surface area of a cone = πr(l+r) = π×12×(21+12)=396π m². Using π≈3.14159, 396π≈**1244.07 m²**."
@@ -2343,7 +2343,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Find the curved surface area of a right circular cone with slant height 10 cm and radius 7 cm.",
+            "text": "Find the curved surface area of a right circular cone whose slant height is 10 cm and base radius is 7 cm.",
             "answer": {
               "answerKey": "220 cm² (using π=$\\dfrac{22}{7}$).",
               "schoolMethod": "CSA=πrl=π×7×10=70π cm². Using π=$\\dfrac{22}{7}$, CSA=70×$\\dfrac{22}{7}$=**220 cm²**."
@@ -2353,7 +2353,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "A cone has height 16 cm and base radius 12 cm. Find its curved and total surface areas.",
+            "text": "The height of a cone is 16 cm, and its base radius is 12 cm. Find the curved surface area and the total surface area of the cone.",
             "answer": {
               "answerKey": "CSA=240π cm²; TSA=384π cm².",
               "schoolMethod": "Slant height l=√(h²+r²)=√(16²+12²)=√400=20 cm.\n\nCSA=πrl=π×12×20=**240π cm²**.\n\nTSA=πr(l+r)=π×12×(20+12)=**384π cm²**."
@@ -2363,7 +2363,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "A cone has height 15 cm and volume 1570 cm³. Find its base radius.",
+            "text": "A cone has a height of 15 cm. If its volume is 1570 cm³, find the radius of the base.",
             "answer": {
               "answerKey": "10 cm (using π≈3.14).",
               "schoolMethod": "V=($\\dfrac{1}{3}$)πr²h. Hence 1570=($\\dfrac{1}{3}$)πr²(15)=5πr². Thus r²=$\\dfrac{1570}{5\\pi}$=314/π. With π≈3.14, r²=100 and **r=10 cm**."
@@ -2373,7 +2373,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "The curved surface area of a cone is 308 cm² and its slant height is 14 cm. Find (i) radius, (ii) total surface area.",
+            "text": "The curved surface area of a cone is 308 cm² and its slant height is 14 cm. Find (i) the radius of the base, (ii) the total surface area of the cone.",
             "answer": {
               "answerKey": "(i) 7 cm; (ii) 462 cm².",
               "schoolMethod": "(i) CSA=πrl=308. With l=14 and π=$\\dfrac{22}{7}$, 308=($\\dfrac{22}{7}$)×r×14=44r, so r=**7 cm**.\n\n(ii) Base area=πr²=($\\dfrac{22}{7}$)×49=154 cm². TSA=CSA+base area=308+154=**462 cm²**."
@@ -2383,7 +2383,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "A joker’s cap is a cone of radius 7 cm and height 24 cm. Find the sheet area needed to make 10 caps.",
+            "text": "A joker's cap is in the form of a right circular cone of base radius 7 cm and height 24 cm. Find the area of the sheet required to make 10 such caps.",
             "answer": {
               "answerKey": "5500 cm².",
               "schoolMethod": "Slant height l=√(7²+24²)=√625=25 cm. A cap is open at its base, so only curved area is needed. One cap: πrl=($\\dfrac{22}{7}$)×7×25=550 cm². Ten caps require 10×550=**5500 cm²**."
@@ -2393,7 +2393,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": true,
-            "text": "A conical tent has height 8 m and base radius 6 m. Tarpaulin is 3 m wide. Find the length needed, including 20 cm extra for stitching and cutting waste.",
+            "text": "What length of tarpaulin 3 m wide is required to make a conical tent of height 8 m and base radius 6 m? Assume that the extra length of material that is required for stitching margins and wastage in cutting is 20 cm.",
             "answer": {
               "answerKey": "Approximately 63.03 m.",
               "schoolMethod": "Slant height l=√(8²+6²)=√100=10 m. The conical tent has no base sheet, so tarpaulin area=CSA=πrl=π×6×10=60π m². With a 3 m wide roll, required length before allowance=$\\dfrac{60π}{3}$=20π≈62.832 m. Add 0.20 m for stitching/waste: **20π+0.2≈63.03 m**."
@@ -2403,7 +2403,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "A right triangle with sides 6 cm, 8 cm and 10 cm is rotated 360° about its 8 cm side. Find the volume and curved surface area of the solid.",
+            "text": "A right triangle with sides 6 cm, 8 cm and 10 cm is rotated through 360° about the side of 8 cm. Find the volume and the curved surface area of the solid so formed.",
             "answer": {
               "answerKey": "Volume=96π cm³; CSA=60π cm².",
               "schoolMethod": "The 8 cm side is the cone’s height, the other perpendicular side 6 cm becomes the base radius, and the hypotenuse 10 cm is the slant height. Thus V=($\\dfrac{1}{3}$)πr²h=($\\dfrac{1}{3}$)π×36×8=**96π cm³**. Curved area=πrl=π×6×10=**60π cm²**."
@@ -2413,7 +2413,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q9",
             "number": "9",
             "isHard": true,
-            "text": "A conical cup is filled with water to half its depth. What fraction of the cup’s volume does the water occupy?\n\n![ch14-ex14-3-q9-cup](/figs/maths-0904ch14-ex14-3-q9-cup.png)",
+            "text": "Suppose you have a cup in the shape of a right circular cone. Fill it with water to half the depth of the cone. What fraction of the volume of the cup is occupied by the water?\n\n![ch14-ex14-3-q9-cup](/figs/maths-0904ch14-ex14-3-q9-cup.png)",
             "answer": {
               "answerKey": "$\\dfrac{1}{8}$.",
               "schoolMethod": "The water fills a smaller cone similar to the full cup. Its height is half the original, so every linear dimension (including radius) is scaled by $\\dfrac{1}{2}$. Volumes of similar solids scale as the cube of the linear scale factor: ($\\dfrac{1}{2}$)³=**$\\dfrac{1}{8}$**. Only one-eighth of the cup’s volume is occupied."
@@ -2429,7 +2429,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "A ball bearing has radius 0.7 cm. Find its surface area.",
+            "text": "A ball bearing has a radius of 0.7 cm. Find its surface area.",
             "answer": {
               "answerKey": "6.16 cm² approximately.",
               "schoolMethod": "Surface area of a sphere=4πr²=4π(0.7)²=1.96π. Using π=$\\dfrac{22}{7}$ gives 1.96×$\\dfrac{22}{7}$=**6.16 cm²**."
@@ -2439,7 +2439,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": true,
-            "text": "Two solid spheres of the same metal weigh 5920 g and 740 g. Find the radius of the larger sphere if the smaller sphere has diameter 5 cm.",
+            "text": "Two solid spheres made of the same metal have weights 5920 g and 740 g. Determine the radius of the larger sphere, if the diameter of the smaller one is 5 cm.",
             "answer": {
               "answerKey": "5 cm.",
               "schoolMethod": "For the same material, mass is proportional to volume. Volume ratio=5920:740=8:1. For spheres, volume ratio equals the cube of the radius ratio; thus ($\\dfrac{R}{r}$)³=8 ⇒ $\\dfrac{R}{r}$=2. The smaller sphere radius is $\\dfrac{5}{2}$=2.5 cm, so larger radius=2×2.5=**5 cm**."
@@ -2449,7 +2449,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "The moon’s diameter is approximately one fourth of Earth’s diameter. Find the ratio of their surface areas.",
+            "text": "The diameter of the moon is approximately one fourth the diameter of the earth. Given that the moon and earth are both roughly spherical, find the ratio of their surface areas.",
             "answer": {
               "answerKey": "Moon : Earth = 1:16.",
               "schoolMethod": "For spheres, surface area is proportional to the square of diameter. The diameter ratio (Moon:Earth)=1:4, so surface-area ratio=(1²):(4²)=**1:16**."
@@ -2459,7 +2459,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "Find (i) the curved surface area and (ii) total surface area of a hemisphere of radius 21 cm.",
+            "text": "Find (i) the curved surface area and (ii) the total surface area of a hemisphere of radius 21 cm.",
             "answer": {
               "answerKey": "(i) 2772 cm²; (ii) 4158 cm².",
               "schoolMethod": "For a hemisphere, CSA=2πr² and TSA=3πr². With r=21 cm and π=$\\dfrac{22}{7}$, CSA=2×($\\dfrac{22}{7}$)×441=**2772 cm²**. TSA=3×($\\dfrac{22}{7}$)×441=**4158 cm²**."
@@ -2469,7 +2469,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "Metal spheres of radius 2 cm are packed in a box 16 cm×8 cm×8 cm. The box is then filled with preservative liquid. Find the liquid volume to the nearest integer.",
+            "text": "Metal spheres, each of radius 2 cm, are packed into a rectangular box of internal dimensions 16 cm × 8 cm × 8 cm. When 16 spheres are packed, the box is filled with preservative liquid. Find the volume of this liquid. Round your answer to the nearest integer.",
             "answer": {
               "answerKey": "488 cm³ approximately.",
               "schoolMethod": "Box volume=16×8×8=1024 cm³. One sphere volume=($\\dfrac{4}{3}$)π(2³)=$\\dfrac{32\\pi}{3}$ cm³. Sixteen spheres occupy 16×$\\dfrac{32\\pi}{3}$=$\\dfrac{512\\pi}{3}$≈536.17 cm³. Liquid volume=1024−$\\dfrac{512\\pi}{3}$≈487.83 cm³, which rounds to **488 cm³**."
@@ -2479,7 +2479,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "Show that increasing the radius of a sphere by 10% increases its volume by approximately 33.1%.",
+            "text": "The radius of a sphere is increased by 10%. Show that the volume increases by approximately 33.1%.",
             "answer": {
               "answerKey": "Increase =33.1%.",
               "schoolMethod": "Let the original radius be r. The old volume is ($\\dfrac{4}{3}$)πr³. New radius=1.1r, so new volume=($\\dfrac{4}{3}$)π(1.1r)³=1.331($\\dfrac{4}{3}$)πr³. The new volume is 133.1% of the old volume; therefore the increase is **33.1%**."
@@ -2489,7 +2489,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": true,
-            "text": "The radius of a sphere is increased by x%, and its volume increases by 72.8%. Find x.",
+            "text": "The radius of a sphere is increased by x%. The volume of the sphere increases by 72.8%. Find the value of x.",
             "answer": {
               "answerKey": "x=20%.",
               "schoolMethod": "The volume factor is 1+$\\dfrac{72.8}{100}$=1.728. If the radius factor is 1+$\\dfrac{x}{100}$, then (1+$\\dfrac{x}{100}$)³=1.728. Since 1.2³=1.728, 1+$\\dfrac{x}{100}$=1.2, hence **x=20%**."
@@ -2499,7 +2499,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "A hemispherical dome has base circumference 35.2 m. Find the cost of painting its curved surface at ₹10 per 100 cm².\n\n![ch14-ex14-4-q8-dome](/figs/maths-0904ch14-ex14-4-q8-dome.png)",
+            "text": "The hemispherical dome of a building needs to be painted (see Fig. 14.16). If the circumference of the base of the dome is 35.2 m, find the cost of painting it, given the cost of painting is ₹ 10 per 100 cm².\n\n![ch14-ex14-4-q8-dome](/figs/maths-0904ch14-ex14-4-q8-dome.png)",
             "answer": {
               "answerKey": "₹1,97,120.",
               "schoolMethod": "Base circumference 2πr=35.2 m. Using π=$\\dfrac{22}{7}$, r=35.2×$\\dfrac{7}{44}$=5.6 m. Curved surface area of a hemisphere=2πr²=2×($\\dfrac{22}{7}$)×(5.6)²=197.12 m². Since 1 m²=10,000 cm², area=1,971,200 cm²=19,712 lots of 100 cm². Cost=19,712×₹10=**₹1,97,120**."
@@ -2515,7 +2515,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Estimate how many scoops of ice cream can be obtained from a cuboidal container measuring 10 cm×15 cm×20 cm.\n\n![ch14-end-q1-icecream](/figs/maths-0904ch14-end-q1-icecream.png)",
+            "text": "Estimate how many scoops of ice cream can be obtained from a cuboidal container of dimensions 10 cm × 15 cm × 20 cm.\n\n![ch14-end-q1-icecream](/figs/maths-0904ch14-end-q1-icecream.png)",
             "answer": {
               "answerKey": "Approximately 45 average scoops, assuming each scoop is about a sphere of radius 2.5 cm.",
               "schoolMethod": "Container volume=10×15×20=3000 cm³. Assume one average scoop is approximated by a sphere of radius 2.5 cm. Its volume is ($\\dfrac{4}{3}$)π(2.5)³≈65.45 cm³. The theoretical quotient is $\\dfrac{3000}{65.45}$≈45.8, so the container contains about **45 full scoops** under this assumption. Scoop size and trapped air change the real count, so the result is an estimate, not an exact universal number."
@@ -2525,7 +2525,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "A cube of integer side length a is made of unit cubes. Give an expression for the number of unit cubes to be added to make a cube of side a+1.",
+            "text": "A cube of integer side length a is made of unit cubes. Write an expression giving the number of unit cubes to be added to make a cube of side length a + 1.",
             "answer": {
               "answerKey": "3a²+3a+1.",
               "schoolMethod": "The existing cube contains a³ unit cubes. The larger cube contains (a+1)³. The extra cubes needed are (a+1)³−a³=a³+3a²+3a+1−a³=**3a²+3a+1**."
@@ -2535,7 +2535,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": true,
-            "text": "Estimate: (i) could one person drink enough water in a lifetime to fill a classroom? (ii) estimate the number of bricks used in the walls of a classroom.\n\n![ch14-end-q3-bricks](/figs/maths-0904ch14-end-q3-bricks.png)",
+            "text": "Solve the following:\n\n(i) Could a person drink enough water in a lifetime to fill an entire room the size of your classroom?\n\n(ii) Estimate the number of bricks used to build the walls of your classroom.\n\n![ch14-end-q3-bricks](/figs/maths-0904ch14-end-q3-bricks.png)",
             "answer": {
               "answerKey": "(i) Usually no; an 80-year drinking-water estimate is about 58 m³ versus a classroom around 150–200 m³. (ii) About 4000 bricks under the sample dimensions below.",
               "schoolMethod": "(i) Assume a person drinks 2 L/day for 80 years. Water consumed≈2×365×80=58,400 L=**58.4 m³**. A sample classroom of 8 m×7 m×3 m has volume 168 m³, nearly three times as much. Under these assumptions the answer is **no**. A smaller room or higher daily water amount changes the comparison.\n\n(ii) Assume the classroom is 8 m×7 m with 3 m wall height. Gross wall area=perimeter×height=2(8+7)×3=90 m². Subtract about 8 m² for doors and windows, leaving 82 m². Approximate exposed face area of one brick is 0.20×0.10=0.020 m², so estimated brick count=$\\dfrac{82}{0.020}$=**4100 bricks**, before allowing for mortar and breakage. This is a transparent estimate, not a site measurement."
@@ -2545,7 +2545,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "Compare: (A) one chocolate cube of side 50 mm; (B) 100 chocolate cubes of side 10 mm. Which gives more chocolate?",
+            "text": "You are given two options: (A) one chocolate cube of side 50 mm, (B) hundred chocolate cubes of side 10 mm. Which option gives you more chocolate?",
             "answer": {
               "answerKey": "A gives 125 cm³; B gives 100 cm³, so A gives more.",
               "schoolMethod": "Convert units: 50 mm=5 cm, so A volume=5³=**125 cm³**. Each cube in B has side 10 mm=1 cm and volume 1 cm³; 100 cubes have total volume **100 cm³**. Option A gives 25 cm³ more chocolate."
@@ -2555,7 +2555,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "If all people in the world were crowded together at one location, approximately how much ground area would they cover?\n\n![ch14-end-q5-crowd](/figs/maths-0904ch14-end-q5-crowd.png)",
+            "text": "If all the people in the world are crowded together in one location, how much area would it cover?\n\n![ch14-end-q5-crowd](/figs/maths-0904ch14-end-q5-crowd.png)",
             "answer": {
               "answerKey": "About 2000 km², using 8 billion people and 0.25 m² per person.",
               "schoolMethod": "For an estimate, take world population as about 8 billion and allocate 0.25 m² per person for very tightly packed standing people. Area=8×10⁹×0.25=2×10⁹ m². Since 1 km²=10⁶ m², this is **2000 km²**. This is equivalent to a square roughly √2000≈44.7 km on each side. The answer scales directly with the assumed space per person."
@@ -2565,7 +2565,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "Milk is served in cylindrical glasses of diameter 7 cm and filled to height 12 cm. How many litres are needed for 1600 students? Use 1000 cm³=1 L.",
+            "text": "A school provides milk to its students in cylindrical glasses, each with a diameter of 7 cm. If each glass is filled with milk to a height of 12 cm, how many litres of milk are needed to serve 1600 students? Use 1000 cm³ = 1 litre.",
             "answer": {
               "answerKey": "About 739 L.",
               "schoolMethod": "Radius=$\\dfrac{7}{2}$=3.5 cm, height=12 cm. One glass volume=πr²h=π(3.5)²(12)=147π cm³. With π=$\\dfrac{22}{7}$, this is 462 cm³. For 1600 students: 462×1600=739,200 cm³=**739.2 L**."
@@ -2575,7 +2575,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": false,
-            "text": "The surface area of a sphere of radius 5 cm is five times the curved surface area of a cone of radius 4 cm. Find the cone’s height and volume.",
+            "text": "The surface area of a sphere of radius 5 cm is five times the area of the curved surface of a cone of radius 4 cm. Find the height and the volume of the cone.",
             "answer": {
               "answerKey": "Height 3 cm; volume 16π cm³.",
               "schoolMethod": "Sphere surface area=4π(5²)=100π cm². This equals five times the cone’s CSA, so the cone CSA=20π cm². For radius 4, CSA=πrl=4πl; hence 4πl=20π ⇒ l=5 cm. Cone height h=√(l²−r²)=√(25−16)=3 cm. Volume=($\\dfrac{1}{3}$)πr²h=($\\dfrac{1}{3}$)π×16×3=**16π cm³**."
@@ -2585,7 +2585,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "Take Earth radius 6370 km, Jupiter radius 69,900 km and Sun radius 695,700 km. Estimate (i) Jupiter/Earth volume ratio and (ii) Sun/Earth volume ratio.",
+            "text": "Take Earth to be a perfect sphere with radius 6370 km. Take Jupiter to be a perfect sphere with radius 69,900 km. Take the Sun to be a perfect sphere with radius 6,95,700 km. Compute approximately:\n\n(i) the ratio of the volume of Jupiter to the volume of the Earth;\n\n(ii) the ratio of the volume of the Sun to the volume of the Earth.\n\n(Calculator can be used.)",
             "answer": {
               "answerKey": "(i) ≈1321:1; (ii) ≈1,302,710:1.",
               "schoolMethod": "For spheres, V=($\\dfrac{4}{3}$)πr³, so the ratios are cubes of the radius ratios.\n\n(i) $\\dfrac{VJ}{VE}$=($\\dfrac{69,900}{6370}$)³≈**1321.34**. Jupiter’s volume is about 1321 times Earth’s.\n\n(ii) $\\dfrac{VS}{VE}$=($\\dfrac{695,700}{6370}$)³≈**1,302,710**. The Sun’s volume is about 1.30 million times Earth’s. The common factor ($\\dfrac{4}{3}$)π cancels."
@@ -2595,7 +2595,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q9",
             "number": "9",
             "isHard": false,
-            "text": "Show that the volume of a sphere equals $\\dfrac{2}{3}$ of the volume of the smallest cylinder that encloses it.",
+            "text": "Show that the volume of a sphere is equal to 2/3 of the volume of the smallest cylinder which encloses it.",
             "answer": {
               "answerKey": "Vsphere=($\\dfrac{2}{3}$)Vcylinder.",
               "schoolMethod": "Let the sphere radius be r. The smallest right circular cylinder enclosing it has radius r and height 2r. Cylinder volume=πr²(2r)=2πr³. Sphere volume=($\\dfrac{4}{3}$)πr³. Therefore Vsphere/Vcylinder=[($\\dfrac{4}{3}$)πr³]/(2πr³)=**$\\dfrac{2}{3}$**, as required."
@@ -2605,7 +2605,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q10",
             "number": "10",
             "isHard": true,
-            "text": "A string wraps tightly around the equator of a spherical body. A second string 1 m longer forms a concentric circle at a constant height above it. Find the height above the surface for Earth, Moon, Jupiter and a volleyball.\n\n![ch14-end-q10-globe](/figs/maths-0904ch14-end-q10-globe.png)",
+            "text": "Suppose the Earth is perfectly spherical. A string is wrapped tightly around the equator of the Earth. Another string, 1 metre longer, is placed around the Earth so that it forms a larger circle, staying the same distance above the ground everywhere.\n\nHow high above the ground is the second string?\n\nRepeat this for: (i) the Moon (ii) Jupiter (iii) a volleyball. Are you surprised by the three answers? Why or why not?\n\n![ch14-end-q10-globe](/figs/maths-0904ch14-end-q10-globe.png)",
             "answer": {
               "answerKey": "For every sphere, height =$\\dfrac{1}{2π}$ m≈0.159 m=15.9 cm.",
               "schoolMethod": "Let the original radius be R and the added height be h. The circumference increases from 2πR to 2π(R+h), an increase of 2πh. Since the added string is 1 m longer, 2πh=1 ⇒ h=$\\dfrac{1}{2π}$=0.15915 m≈**15.9 cm**. The original radius cancels, so the answer is the same for Earth, the Moon, Jupiter and a volleyball, assuming perfect spheres and a uniform gap."
@@ -2615,7 +2615,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q11",
             "number": "11",
             "isHard": true,
-            "text": "A square pyramid is fitted inside a cylinder of radius r and height h. The square base lies on the cylinder’s base with its corners on the circular boundary; the apex lies on the top. Find volume(pyramid):volume(cylinder).",
+            "text": "We have a cylinder with a base radius of r cm and height h cm. A square pyramid is fitted inside. The square base of the pyramid lies on the base of the cylinder, its corners on the boundary of the cylinder. The apex of the pyramid lies on the top of the cylinder. Find the ratio of the volume of this pyramid to the volume of the cylinder.",
             "answer": {
               "answerKey": "2:(3π), i.e. $\\dfrac{2}{3\\pi}$:1.",
               "schoolMethod": "The square base is inscribed in the circle of radius r. Its diagonal is the circle’s diameter 2r. If the square side is s, s√2=2r, so s²=2r². Pyramid volume=($\\dfrac{1}{3}$)(base area)(height)=($\\dfrac{1}{3}$)(2r²)h=($\\dfrac{2}{3}$)r²h. Cylinder volume=πr²h. Thus the ratio is [($\\dfrac{2}{3}$)r²h] : [πr²h] = **$\\dfrac{2}{3\\pi}$:1**."
@@ -2625,7 +2625,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q12",
             "number": "12",
             "isHard": false,
-            "text": "Find the change in volume when: (i) the length of a cuboid l,w,h is increased by 1 unit; (ii) the radius of a cylinder r,h is increased by 1 unit; (iii) the radius of a sphere is decreased by 1 unit.",
+            "text": "What is the change in volume when:\n\n(i) the length of a cuboid with dimensions l, w, h is increased by 1 unit?\n(a) 1 cubic unit   (b) (lwh + 1) cubic unit\n(c) wh cubic units   (d) lw cubic units\n(e) lh cubic units\n\n(ii) the radius of a cylinder with dimensions r, h is increased by 1 unit?\n(a) 1 cubic unit   (b) πr²h cubic units\n(c) πr² cubic units   (d) 2πrh + 2πh cubic units\n(e) 2πrh + πh cubic units\n\n*(iii) the radius of a sphere is decreased by 1 unit?",
             "answer": {
               "answerKey": "(i) wh; (ii) 2πrh+πh; (iii) decrease = 4πr²−4πr+$\\dfrac{4\\pi}{3}$.",
               "schoolMethod": "(i) Old V=lwh; new V=(l+1)wh. Change=(l+1)wh−lwh=**wh cubic units** (option c).\n\n(ii) Old V=πr²h; new V=π(r+1)²h. Increase=πh[(r+1)²−r²]=πh(2r+1)=**2πrh+πh cubic units** (option e).\n\n(iii) For r≥1, new radius r−1. Decrease=($\\dfrac{4}{3}$)πr³−($\\dfrac{4}{3}$)π(r−1)³=($\\dfrac{4}{3}$)π[3r²−3r+1]=**4πr²−4πr+$\\dfrac{4\\pi}{3}$ cubic units**. The signed change (new minus old) is the negative of this quantity."
@@ -2635,7 +2635,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q13",
             "number": "13",
             "isHard": false,
-            "text": "Given a cube of volume V, express its total surface area S in terms of V.",
+            "text": "Given a cube with volume V, express its total surface area S in terms of V.",
             "answer": {
               "answerKey": "S=6V^($\\dfrac{2}{3}$).",
               "schoolMethod": "If the cube side is a, then V=a³ ⇒ a=V^($\\dfrac{1}{3}$). Total surface area S=6a²=6(V^($\\dfrac{1}{3}$))²=**6V^($\\dfrac{2}{3}$)**."
@@ -2655,7 +2655,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q15",
             "number": "15",
             "isHard": false,
-            "text": "A cylindrical glass has radius 4 cm and water depth 16 cm. How many marbles of radius 1 cm must be dropped in to raise the water to 20 cm?\n\n![ch14-end-q15-crow](/figs/maths-0904ch14-end-q15-crow.png)",
+            "text": "A cylindrical glass of height 25 cm and radius 4 cm has water up to a height of 16 cm. A crow wants to drink water from this glass. The water must be at a height of 20 cm for the crow to reach it. There are some marbles lying around. How many marbles of radius 1 cm should the crow drop into the glass to make the water reach the required height?\n\n![ch14-end-q15-crow](/figs/maths-0904ch14-end-q15-crow.png)",
             "answer": {
               "answerKey": "48 marbles.",
               "schoolMethod": "The rise is 20−16=4 cm. The additional volume needed is the cylinder’s base area times the rise: π(4²)(4)=64π cm³. One marble displaces its own volume (fully submerged): ($\\dfrac{4}{3}$)π(1³)=$\\dfrac{4\\pi}{3}$ cm³. Number=64π÷$\\dfrac{4\\pi}{3}$=64×$\\dfrac{3}{4}$=**48 marbles**. The final water level 20 cm is below the glass height 25 cm."
@@ -2665,7 +2665,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q16",
             "number": "16",
             "isHard": false,
-            "text": "Estimate the volume of ink in a new ballpoint pen by making reasonable measurements and approximations.",
+            "text": "Find the volume of ink in a new ball point pen. Take the necessary measurements and make approximations, as needed.",
             "answer": {
               "answerKey": "About 0.3 cm³ in the illustrative pen model.",
               "schoolMethod": "Use a sample measurement: assume the ink reservoir is approximately cylindrical, with internal radius 1 mm=0.1 cm and ink length 9 cm. Cylinder volume=π(0.1)²(9)=0.09π≈0.283 cm³. Allow roughly 0.02 cm³ for the small ink-filled tip, giving an estimate of about **0.30 cm³** (0.30 mL). For a particular pen, measure its actual inner radius and ink length; changing either dimension changes the result."
@@ -2675,7 +2675,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q17",
             "number": "17",
             "isHard": true,
-            "text": "(i) A ball of chapati dough has radius 6 cm. Estimate how many chapatis can be made. (ii) Estimate edible flesh in half a coconut or muskmelon after taking measurements.\n\n![ch14-end-q17-dough](/figs/maths-0904ch14-end-q17-dough.png)",
+            "text": "Solve:\n\n(i) A ball of chapati dough of radius 6 cm is prepared. Estimate how many chapatis can be made from it?\n\n*(ii) Cut a coconut/muskmelon in half and find out the approximate volume of edible coconut flesh/fruit by taking the necessary measurements.\n\n![ch14-end-q17-dough](/figs/maths-0904ch14-end-q17-dough.png)",
             "answer": {
               "answerKey": "(i) About 10 chapatis under the sample assumptions. (ii) For a 5 cm-radius fruit, about 180 cm³ edible flesh under a 70% yield assumption.",
               "schoolMethod": "(i) Dough volume=($\\dfrac{4}{3}$)π(6³)=288π≈904.8 cm³. Assume one chapati uses a dough volume equivalent to a disk of radius 12 cm and average thickness 0.2 cm: V≈π(12²)(0.2)=28.8π≈90.5 cm³. Number≈$\\dfrac{904.8}{90.5}$≈10. Thus about **10 chapatis** can be made; actual count depends on size and thickness.\n\n(ii) As an example, approximate a half-muskmelon by a hemisphere of radius 5 cm. Half-sphere volume=($\\dfrac{2}{3}$)π(5³)≈261.8 cm³. If about 70% is edible flesh after excluding rind/seeds, edible volume≈0.70×261.8≈**183 cm³**. Measure the actual fruit and substitute its radius; this is only a worked estimate."
@@ -2685,7 +2685,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q18",
             "number": "18",
             "isHard": false,
-            "text": "(i) Would laying every page of this textbook side-by-side cover a classroom floor? (ii) Estimate the maximum number of textbooks that fit in an empty 15 ft×20 ft×30 ft storeroom.",
+            "text": "Looking at the Ganita Manjari, Grade 9, Part 2 textbook, Sheela wonders:\n\n(i) If all the pages of this textbook were laid out side-by-side on the floor would they cover the entire classroom floor?\n\n(ii) What is the maximum number of textbooks that can fit in an empty storeroom of dimensions 15 ft × 20 ft × 30 ft?",
             "answer": {
               "answerKey": "(i) About 8 m², usually not a classroom floor. (ii) About 303,000 by a pure volume estimate using a 20×28×1.5 cm book.",
               "schoolMethod": "(i) Suppose the book has about 150 pages, each approximately 20 cm×27 cm=0.054 m². Total area≈150×0.054=**8.1 m²**. A sample classroom floor 8 m×7 m=56 m² is much larger, so the pages would not cover it.\n\n(ii) Storeroom volume=15×20×30=9000 ft³. Since 1 ft³≈0.0283168 m³, that is about 254.85 m³. Approximate one book as 20 cm×28 cm×1.5 cm=840 cm³=0.00084 m³. Volume ratio=$\\dfrac{254.85}{0.00084}$≈303,393, so the idealized upper bound is about **303,000 books**. Real packing is lower because of gaps, orientation and access space."
@@ -2695,7 +2695,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q19",
             "number": "19",
             "isHard": true,
-            "text": "Estimate the side length of a giant cube that could contain the entire human population.\n\n![ch14-end-q19-cube](/figs/maths-0904ch14-end-q19-cube.png)",
+            "text": "If the entire human population decided to climb into one giant cube, how long would the side have to be?\n\n![ch14-end-q19-cube](/figs/maths-0904ch14-end-q19-cube.png)",
             "answer": {
               "answerKey": "About 824 m, using 8 billion people and 0.07 m³ per person’s body volume.",
               "schoolMethod": "For an order-of-magnitude estimate, take population as 8×10⁹ and average human body volume as approximately 0.07 m³. Total body volume≈8×10⁹×0.07=5.6×10⁸ m³. If tightly packed into one cube, side s satisfies s³=5.6×10⁸, so s=∛(5.6×10⁸)≈**824 m**. Real packing would require extra space, making the cube larger."
@@ -2705,7 +2705,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q20",
             "number": "20",
             "isHard": true,
-            "text": "Earth radius is about 6371 km and the estimated volume of surface water is 1.38 billion km³. If all this water formed a uniform spherical layer around Earth, (i) write an expression for thickness t; (ii) evaluate it.",
+            "text": "The Earth's surface has an estimated volume of 1.38 billion km³ of water. Suppose the Earth is a perfect sphere and all this water forms a uniform layer completely covering the Earth's surface, like a thin water bubble. Estimate the thickness of this water layer. The Earth's radius is ~6371 km.\n\n(i) Write an expression that gives the thickness of this water layer.\n\n(ii) Simplify the expression in (i) using a calculator.",
             "answer": {
               "answerKey": "t=[6371³+3$\\dfrac{1.38\\times10^9}{4\\pi}$]^($\\dfrac{1}{3}$)−6371≈2.704 km.",
               "schoolMethod": "(i) Let R=6371 km. The water shell volume equals the difference of sphere volumes:\n\n($\\dfrac{4}{3}$)π[(R+t)³−R³]=1.38×10⁹.\n\nSolving for t gives **t=[R³+3$\\dfrac{1.38\\times10^9}{4\\pi}$]^($\\dfrac{1}{3}$)−R**, with R=6371 km.\n\n(ii) Substitution gives t≈**2.704 km**, or about 2.7 km. The thin-shell approximation V≈4πR²t gives almost the same result."
@@ -2715,7 +2715,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q21",
             "number": "21",
             "isHard": true,
-            "text": "Give the dimensions of a cuboid whose volume is halved when its surface area is doubled.",
+            "text": "Give the dimension of a cuboid whose volume is halved when its surface area is doubled.",
             "answer": {
               "answerKey": "The question does not specify the original solid or reference dimensions. Relative to a unit cube (volume 1 and total surface area 6), one approximate example is 2.361 × 2.361 × 0.0897 units: volume ≈0.5 and total surface area ≈12. This is not unique.",
               "schoolMethod": "The prompt does not state the starting cuboid, so the phrase “halved” and “doubled” needs a reference. To give a concrete example, take a **unit cube** as the reference: volume 1 unit³ and total surface area 6 unit². We seek a cuboid with dimensions a × a × c satisfying\n\n(a) a²c = $\\dfrac{1}{2}$\n\n(b) 2(a² + 2ac) = 12, so a² + 2ac = 6.\n\nFrom (a), c = $\\dfrac{1}{2a²}$. Substitute into (b): a² + $\\dfrac{1}{a}$ = 6, or a³ − 6a + 1 = 0. One positive root is approximately a = 2.361; then c = $\\dfrac{1}{2a²}$ ≈ 0.0897.\n\nThus one approximate example is **2.361 × 2.361 × 0.0897 units**. Its volume is about 0.5 unit³ and its total surface area about 12 unit². Other dimensions may also work; the original wording is ambiguous without a specified reference object."
@@ -2725,7 +2725,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "id": "q22",
             "number": "22",
             "isHard": false,
-            "text": "Project: estimate the volume of a house using reasonable dimensions and show the calculations.",
+            "text": "Project: Find the volume of your house making necessary approximations. Present how you solved it.",
             "answer": {
               "answerKey": "Illustrative total interior volume ≈189 m³.",
               "schoolMethod": "Divide the house into simple cuboids and add their volumes. One sample layout, with 3 m ceiling height, is:\n\n| Room | Assumed dimensions (m) | Volume |\n|---|---|---:|\n| Living room | 5×4×3 | 60 m³ |\n| Bedroom 1 | 4×3×3 | 36 m³ |\n| Bedroom 2 | 4×3×3 | 36 m³ |\n| Kitchen | 3×3×3 | 27 m³ |\n| Bathroom | 2×2×3 | 12 m³ |\n| Corridor | 4×1.5×3 | 18 m³ |\n\nTotal=60+36+36+27+12+18=**189 m³**. This is an illustrative solution: replace the assumed dimensions with measurements of the actual house, and include or exclude wall thickness consistently."
@@ -2742,7 +2742,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "number": "1",
             "isHard": false,
             "page": 124,
-            "text": "Explain why the volume of a cuboid is area of base × height. Then write the total surface area and volume formulas for a cube of side a.",
+            "text": "Try to work out for yourself why this model explains the formula for the volume of a cuboid, i.e.,\n\nvolume = area of base × height.\n\nWrite the formula for the surface area and the volume of a cube.",
             "answer": {
               "answerKey": "Cuboid volume = base area × height. For a cube: total surface area = 6a² and volume = a³.",
               "schoolMethod": "If the base has length l and width w, one layer of unit-height cubes contains lw unit cubes. Stacking h such layers gives lwh cubes, so V = lwh = (lw)h = area of base × height. A cube has six square faces of area a² each, giving total surface area **6a²**. Its volume is **a³**."
