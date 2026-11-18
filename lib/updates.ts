@@ -60,6 +60,16 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'maths-part2-think-reflect-complete',
+    date: '2026-11-18',
+    type: 'content',
+    title: 'Think & Reflect complete in Ch12–Ch13',
+    summary: 'Ch12 tiling explorations (pp. 69–74) and all 17 Ch13 Think & Reflect boxes (pp. 88–115) added with exact book wording.',
+    body: 'Chapter 12 now includes the 11 in-text tiling prompts with figures 12.27–12.32 and the hat tile. Chapter 13 Think and Reflect was rebuilt with all 17 textbook boxes in order; incorrect and duplicate entries were removed. The shape-puzzle figure from page 106 is included.',
+    href: '/class-9/maths/ganita-manjari/0904ch13/two-variables-one-line/ex13.reflect',
+    hrefLabel: 'See Chapter 13',
+  },
+  {
     id: 'maths-part2-ch12-ch14-book-exact',
     date: '2026-11-17',
     type: 'content',
