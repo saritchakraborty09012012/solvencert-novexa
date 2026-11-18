@@ -16,6 +16,7 @@ import { setStorageUserId, loadAllFromSupabase, clearAllStorageOnLogout } from '
 import TunnelLoader from '@/components/features/BrainLoader';
 import GuestOnboardingPopups from '@/components/features/GuestOnboardingPopups';
 import WhatsNewPopup from '@/components/features/WhatsNewPopup';
+import DobCompletionModal from '@/components/auth/DobCompletionModal';
 import HashScrollHandler from '@/components/features/HashScrollHandler';
 import '@/styles/globals.css';
 import '@/styles/ui3.css';
@@ -412,6 +413,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <TunnelLoader state={loaderState} />
       <GuestOnboardingPopups />
       <WhatsNewPopup />
+      {/* New Google sign-ups: blocking DOB prompt until their profile is complete. */}
+      <DobCompletionModal />
       <HashScrollHandler />
       <CollabPresenceBar />
       <CollabBanner />

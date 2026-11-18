@@ -41,6 +41,32 @@ export function validateDob(dob: string): string | null {
   return null;
 }
 
+// ── Post-sign-up DOB prompt (OAuth / Google only) ──────────────────────────
+// Google never shares a date of birth, so brand-new OAuth sign-ups get a
+// blocking one-step popup after they land on the site. Gated on the account's
+// creation time so EVERY existing user — including the 7 Google accounts that
+// already exist with dob = null — is left alone. Deployed 2026-11-17; the
+// newest account before that was created 2026-11-14.
+export const DOB_OAUTH_REQUIRED_SINCE = Date.parse('2026-11-17T00:00:00+05:30');
+
+/**
+ * True when the signed-in user MUST still hand over a date of birth:
+ *   - they signed up through an OAuth provider (not email/password), AND
+ *   - no dob is on file yet, AND
+ *   - the account was created on/after the launch date above (new sign-ups only).
+ * Returns false for anything unknown so existing users are never prompted.
+ */
+export function needsDobCompletion(
+  auth: { provider: string | null | undefined; createdAt?: string | null },
+  dob: string | null | undefined,
+): boolean {
+  if (!auth.provider || auth.provider === 'email') return false; // email sign-ups give DOB up-front
+  if (dob) return false;                                        // already on file
+  if (!auth.createdAt) return false;                            // unknown age → never prompt
+  const created = Date.parse(auth.createdAt);
+  return Number.isFinite(created) && created >= DOB_OAUTH_REQUIRED_SINCE;
+}
+
 export function validateUTR(utr: string): boolean {
   return /^\d{12}$/.test(utr);
 }

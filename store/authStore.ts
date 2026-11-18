@@ -2,12 +2,13 @@ import { create } from 'zustand';
 import { supabase } from '@/lib/supabase';
 import { clearGuestLimits } from '@/lib/guestLimits';
 import { identifyUser, resetUser } from '@/lib/analytics';
-import { generateInitials, generateReferralCode } from '@/utils/helpers';
+import { generateInitials, generateReferralCode, needsDobCompletion } from '@/utils/helpers';
 import type { Profile } from '@/types/database';
 
 /** Minimal shape of a Supabase auth user needed to bootstrap a profile. */
 export interface AuthUserLike {
   email?: string;
+  created_at?: string;
   user_metadata?: Record<string, unknown> | null;
   app_metadata?: Record<string, unknown> | null;
 }
@@ -16,18 +17,21 @@ interface AuthState {
   user:       Profile | null;
   loading:    boolean;
   isGuest:    boolean;
+  /** A brand-new OAuth sign-up still owes us a date of birth (blocking popup). */
+  dobPending: boolean;
   setUser:    (user: Profile | null) => void;
   setLoading: (loading: boolean) => void;
   signOut:    () => Promise<void>;
   fetchProfile: (userId: string, authUser?: AuthUserLike) => Promise<void>;
 }
 
-export const useAuthStore = create<AuthState>((set) => ({
+export const useAuthStore = create<AuthState>((set, get) => ({
   user:    null,
   loading: true,
   isGuest: true,
+  dobPending: false,
 
-  setUser: (user) => set({ user, isGuest: !user }),
+  setUser: (user) => set({ user, isGuest: !user, ...(user ? {} : { dobPending: false }) }),
   setLoading: (loading) => set({ loading }),
 
   fetchProfile: async (userId: string, authUser?: AuthUserLike) => {
@@ -83,7 +87,7 @@ export const useAuthStore = create<AuthState>((set) => ({
         error = retry.error;
       }
 
-      if (error || !data) { set({ user: null, isGuest: true, loading: false }); return; }
+      if (error || !data) { set({ user: null, isGuest: true, loading: false, dobPending: false }); return; }
 
       // Trial over → plan must read 'free'. Writes ONLY the `plan` column, only
       // on the signed-in user's own row, and only while it still reads as a
@@ -104,16 +108,25 @@ export const useAuthStore = create<AuthState>((set) => ({
         if (flipped) data.plan = 'free';
       }
 
-      set({ user: data as Profile, isGuest: false, loading: false });
+      // New OAuth sign-up with no DOB on file → the blocking "one step left"
+      // popup (DobCompletionModal). Recomputed whenever the caller passes the
+      // auth user (it does on every session restore); when it doesn't, keep
+      // whatever was decided last. `dob` on the row wins: once it's saved the
+      // popup never comes back.
+      const dobPending = authUser
+        ? needsDobCompletion({ provider, createdAt: authUser.created_at }, data.dob)
+        : get().dobPending;
+
+      set({ user: data as Profile, isGuest: false, loading: false, dobPending });
       identifyUser(userId, { name: data.full_name, plan: data.plan });
     } catch {
-      set({ user: null, isGuest: true, loading: false });
+      set({ user: null, isGuest: true, loading: false, dobPending: false });
     }
   },
 
   signOut: async () => {
     await supabase.auth.signOut();
-    set({ user: null, isGuest: true });
+    set({ user: null, isGuest: true, dobPending: false });
     resetUser();
   },
 }));
