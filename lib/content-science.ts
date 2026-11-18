@@ -106,7 +106,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "What argument would you give for the necessity of a cell wall in plants (fixed in one place) versus in animals (moving from place to place)?",
+            "text": "What argument would you give for the necessity of a cell wall in plants usually fixed in one place versus in animals usually moving from one place to the other?",
             "answer": {
               "answerKey": "Cell wall gives rigidity to stationary plants; mobile animal cells need flexibility, not a rigid wall.",
               "solution": "Plants are stationary and must withstand <u>turgor pressure</u>, wind, and gravity — the rigid <u>cell wall</u> provides structural support. Animals move freely; a rigid wall would restrict movement. Their flexible <u>cell membrane</u> is sufficient."
@@ -115,7 +115,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "What consequences would you predict for a plant cell if its cell wall became as flexible as a cell membrane?",
+            "text": "What consequences would you predict for a plant cell if its cell wall were to become as flexible as a cell membrane?",
             "answer": {
               "answerKey": "The plant cell would lose the rigid support normally provided by the wall and would be unable to maintain normal turgor safely.",
               "solution": "A plant cell without a rigid wall would lose mechanical support and would be more vulnerable to changes in water balance. In a hypotonic medium, water entering by <u>osmosis</u> could make the membrane swell and rupture because there is no strong cell wall to resist the pressure."
@@ -124,7 +124,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "Why is it important to cut potato pieces in equal size and measure their initial weight before placing them in different liquids?",
+            "text": "Why is it important to cut the two potato pieces in roughly equal size and measure their initial weight before placing them in different liquids?",
             "answer": {
               "answerKey": "To ensure a fair test; equal size ensures only the type of liquid is the variable.",
               "solution": "Equal size and initial weight ensure the experiment is <u>controlled</u> — the only variable is the type of liquid. Any observed change in weight can then be attributed solely to <u>osmosis</u>."
@@ -142,7 +142,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "Draw a well-labelled schematic diagram of a plant or animal cell. Clues: nucleus is dark and round; ER spreads like a network; mitochondria and chloroplasts are rod-shaped.",
+            "text": "Draw a well-labelled schematic diagram of a plant or an animal cell using these clues — (i) Nucleus appears as a dark and round body inside the cell. (ii) ER spreads like a network of extended nuclear envelope. (iii) Mitochondria and chloroplasts are rod shaped. You may refer to Fig. 2.10.",
+              "figure": "/figs/science-ex2-pp-q5-fig2-10.png",
             "answer": {
               "answerKey": "Diagram: cell wall → membrane → nucleus (dark, round) → ER (network) → rod-shaped chloroplasts and mitochondria.",
               "solution": "<u>Plant Cell</u> (description): Rectangular boundary = cell wall. Just inside = cell membrane. Large central vacuole. Round dark nucleus with connected ER (network). Rod-shaped <u>chloroplasts</u> and <u>mitochondria</u>. Golgi body (stacked discs). Ribosomes (dots on RER)."
@@ -151,7 +152,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "Instead of many small ones, why does a cell not have a single giant mitochondrion? How does this relate to surface area?",
+            "text": "Instead of many small ones, why does a cell not have a single giant mitochondrion? How does this relate to the concept of surface area?",
             "answer": {
               "answerKey": "Many small mitochondria have greater total surface area-to-volume ratio, increasing ATP production efficiency.",
               "solution": "Many small mitochondria have a much larger total <u>surface area-to-volume ratio</u> than one large organelle. Cellular respiration occurs on the inner membrane (cristae) — more surface area means more reaction sites and greater <u>ATP synthesis</u>."
@@ -160,7 +161,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q7",
             "number": "7",
-            "text": "If skin cells divided by meiosis instead of mitosis, what would happen to a cut on the skin?",
+            "text": "If the skin cells start dividing by meiosis instead of mitosis, what do you think will happen to a cut on the skin?",
             "answer": {
               "answerKey": "Cut would not heal; meiosis produces haploid cells unsuitable for body tissue repair.",
               "solution": "Skin repair requires <u>diploid</u>, genetically identical cells. If skin cells divided by <u>meiosis</u>, the resulting haploid cells (half chromosome number) would be abnormal. The wound would fail to heal correctly."
@@ -175,7 +176,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "Differentiate: (i) Cell membrane vs. cell wall (permeability); (ii) RER vs. SER (structure); (iii) Chloroplasts vs. chromoplasts (pigments).",
+            "text": "Differentiate between the following pairs of terms based on the clues given in parentheses: (i) Cell membrane and cell wall (permeability) (ii) RER and SER (structure) (iii) Chloroplasts and chromoplasts (pigments)",
             "answer": {
               "answerKey": "(i) Selectively permeable vs. fully permeable. (ii) Has ribosomes vs. no ribosomes. (iii) Chlorophyll vs. carotenoids.",
               "solution": "(i) <u>Cell membrane</u>: selectively permeable; <u>Cell wall</u>: fully permeable. (ii) <u>RER</u>: ribosomes on surface; <u>SER</u>: smooth, no ribosomes. (iii) <u>Chloroplasts</u>: contain chlorophyll (green); <u>Chromoplasts</u>: contain yellow/orange/red carotenoid pigments."
@@ -184,7 +185,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Cell X in pure water swells; Cell Y in concentrated salt solution shrinks. Which statement correctly explains this? (iii) Water moved into X and out of Y through the cell membrane.",
+            "text": "Two similar animal cells are placed in two different solutions: • Cell X is placed in pure water. • Cell Y is placed in a concentrated salt solution. Cells are observed after some time. Cell X swells, and Cell Y shrinks. Which statement provides the correct explanation for the above observations? (i) Salt molecules moved into Cell Y, causing it to shrink. (ii) Water moved into Cell X and more water moved out of Cell Y than the salt solution entered it. (iii) Water moved into Cell X and moved out of Cell Y through the cell membrane. (iv) Solute movement caused osmosis in both cells.",
             "answer": {
               "answerKey": "(iii) is correct — water moves by osmosis from high to low water concentration.",
               "solution": "Option (iii) is correct. Pure water has higher water concentration than inside Cell X; water enters by <u>osmosis</u> and swells. Salt solution has lower water concentration outside Cell Y; water exits and cell shrinks. Only <u>water moves</u> through the selectively permeable membrane."
@@ -193,7 +194,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "Identify parts (a) to (g) in Fig. 2.20 and match with functions: controlling activities; cellular respiration; storage/rigidity; separates cell; structural rigidity; packs/stores from ER; manufactures food.",
+            "text": "Look at the diagram of a cell in Fig. 2.20. Identify the parts labelled from (a) to (g) and correctly match them with their functions given below: (i) Controlling all the activities of a cell. (ii) Site of cellular respiration. (iii) Storage organelle that also provides rigidity to the cell. (iv) Separates the cell contents from surroundings. (v) Provides structural rigidity to the cell. (vi) Packs and stores materials received from ER. (vii) Helps in manufacturing food.",
+              "figure": "/figs/science-ex2-rr-q3-fig2-20.png",
             "answer": {
               "answerKey": "a=Cell wall, b=Cell membrane, c=Vacuole, d=Nucleus, e=Mitochondria, f=Golgi body, g=Chloroplast.",
               "solution": "Matching: (a) <u>Cell wall</u> — structural rigidity; (b) <u>Cell membrane</u> — separates cell; (c) <u>Vacuole</u> — storage/rigidity; (d) <u>Nucleus</u> — controls activities; (e) <u>Mitochondria</u> — cellular respiration; (f) <u>Golgi body</u> — packs/stores from ER; (g) <u>Chloroplast</u> — manufactures food."
@@ -211,7 +213,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "Renu says all plant parts including roots contain plastids. Rohit says plastids are absent in roots. Who is correct?",
+            "text": "Two students, Renu and Rohit, were having a discussion on the plastids. Renu emphasised that all parts of the plants, even roots, contain plastids. However, Rohit did not agree with the statement and told her that plastids are absent in plant roots since the roots are underground and do not need to perform photosynthesis. Who is correct? Justify your answer.",
             "answer": {
               "answerKey": "Renu is correct: plant roots contain plastids, especially colourless leucoplasts; Rohit is wrong to say plastids are absent.",
               "solution": "Renu is correct. <u>Plant cells, including root cells, contain plastids</u>. Roots generally lack chloroplasts because they are not photosynthetic, but they can contain <u>leucoplasts</u>, colourless plastids involved in storage. Therefore Rohit’s statement that plastids are absent from roots is incorrect."
@@ -220,7 +222,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "Discuss how mitochondria and chloroplasts are structurally and functionally similar and different.",
+            "text": "Mitochondria and chloroplasts are two important organelles in a plant cell. Discuss how these two organelles are structurally and functionally similar to each other, and different from each other.",
             "answer": {
               "answerKey": "Similar: double membrane, own DNA, 70S ribosomes. Different: mitochondria = respiration; chloroplasts = photosynthesis.",
               "solution": "<u>Similarities</u>: Both have double membrane, circular DNA, 70S ribosomes, and can self-replicate. <u>Differences</u>: Mitochondria — inner membrane forms cristae; site of <u>cellular respiration</u> (ATP). Chloroplasts — have thylakoids with chlorophyll; site of <u>photosynthesis</u>."
@@ -229,7 +231,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q7",
             "number": "7",
-            "text": "Which pair of cell organelles contains DNA? (i) Chloroplasts/Ribosomes; (ii) Mitochondria/Nucleus; (iii) Golgi/Ribosomes; (iv) Nucleus/Lysosomes.",
+            "text": "Which of the following pairs of cell organelles contains DNA? (i) Chloroplasts, Ribosomes (ii) Mitochondria, Nucleus (iii) Golgi bodies, Ribosomes (iv) Nucleus, Lysosomes",
             "answer": {
               "answerKey": "(ii) Mitochondria and Nucleus both contain DNA.",
               "solution": "Option (ii) is correct. <u>Nucleus</u> contains chromosomal DNA. <u>Mitochondria</u> contain their own circular DNA (mtDNA). Ribosomes, Golgi bodies, and Lysosomes do not contain DNA."
@@ -238,7 +240,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q8",
             "number": "8",
-            "text": "A researcher placed carrots in plain water and concentrated salt solution. (i) Hypothesis? (ii) Improvement? (iii) Why plain water carrot stays stiff but salt solution carrot becomes limp?",
+            "text": "A researcher carried out an experiment in which she took two carrots of similar size. She placed one carrot in plain water and the other carrot in concentrated salt solution (Fig. 2.21). After 24 hours she recorded her observations. (i) What hypothesis does she want to test through this experiment? (ii) What would you suggest for the improvement of this experiment? (iii) Why does the carrot in plain water stay stiff and crunchy, but the carrot in concentrated salt solution become rubbery and limp?",
+              "figure": "/figs/science-ex2-rr-q8-fig2-21.png",
             "answer": {
               "answerKey": "Osmosis determines cell turgidity based on external solution. Use equal-sized carrots. Turgid vs. plasmolysed.",
               "solution": "(i) Hypothesis: <u>Osmosis</u> occurs across cell membranes — cells become turgid in plain water, plasmolysed in salt. (ii) Improvement: Equal-sized carrots; record mass before/after; use distilled water. (iii) Plain water → water enters → <u>turgid</u> (stiff). Salt solution → water exits → cells <u>plasmolysed</u> (limp)."
@@ -256,7 +259,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "Potato cup experiment: Cup A (empty), B (sugar), C (salt), D (boiled potato + sugar). (i) Why does water gather in B and C? (ii) Why is A necessary? (iii) Why no water in A and D?",
+            "text": "Carry out the following experiment: Take four peeled potato halves and scoop each one out to make potato cups. One of these potato cups should be made from a boiled potato. Place each of the potato cups in a beaker containing water (Fig. 2.22). Now, set up the experiment as follows: (a) Keep Cup A empty. (b) Add one teaspoon sugar in Cup B. (c) Add one teaspoon salt in Cup C. (d) Add one teaspoon sugar in the boiled potato in Cup D. Observe the four potato cups at least two hours and answer the following questions: (i) Explain why water gathers in the hollowed portion of Cup B and Cup C. (ii) Why is Cup A necessary for this experiment? (iii) Explain why water does not gather in the hollowed portions of Cups A and D.",
+              "figure": "/figs/science-ex2-rr-q10-fig2-22.png",
             "answer": {
               "answerKey": "(i) Osmosis — high solute draws water in. (ii) Control. (iii) No gradient in A; dead cells in D prevent osmosis.",
               "solution": "(i) Sugar/salt creates high solute concentration → water enters by <u>osmosis</u> from potato cells into cup. (ii) Cup A is the <u>control</u> — confirms water does not accumulate without a solute. (iii) A has no gradient; D has boiled (dead) cells — selectively permeable membranes are destroyed → <u>no osmosis</u>."
@@ -283,7 +287,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q13",
             "number": "13",
-            "text": "Which phenomenon inhibits tumour formation in the human body? Can plants also develop tumours?",
+            "text": "Which phenomenon inhibits the formation of tumors in the human body? Can plants also develop tumors? Explain.",
             "answer": {
               "answerKey": "Apoptosis prevents tumours. Yes — plants develop crown gall disease (Agrobacterium tumefaciens).",
               "solution": "<u>Apoptosis</u> (programmed cell death) and controlled cell cycle regulation prevent uncontrolled division. Plants can develop tumours — e.g., <u>crown gall disease</u> caused by Agrobacterium tumefaciens, which inserts DNA into plant cells causing uncontrolled growth."
@@ -292,7 +296,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q14",
             "number": "14",
-            "text": "Which organelles help in synthesis of the cell membrane? Write the path from synthesis to the cell membrane.",
+            "text": "The cell membrane of a cell is made up of proteins and lipids. Which cell organelles help in the synthesis of cell membrane? Write the path of these compounds from their site of synthesis to the cell membrane and show this through a labelled diagram.",
             "answer": {
               "answerKey": "Ribosomes (proteins) + SER (lipids) → Golgi body → vesicles → cell membrane.",
               "solution": "Proteins synthesised by <u>ribosomes</u> on RER; lipids by <u>SER</u>. Both transported to <u>Golgi body</u> for processing into vesicles. Vesicles fuse with <u>cell membrane</u> supplying new components."
@@ -310,7 +314,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q16",
             "number": "16",
-            "text": "Deepa uses salt, sugar, or jaggery to preserve amla and lemons. (i) Scientific concept applied? (ii) How does high salt/sugar prevent spoilage? (iii) Suggest a healthy recipe. (iv) Scientific values addressed?",
+            "text": "A farmer, Deepa, was very happy with the harvest of amla (Indian Gooseberry) and lemons on her farm. However, she could sell only one-fourth of the produce in the local market. Recognising that a significant amount of produce may be lost post-harvest, she employed a traditional yet scientifically sound method to extend the shelf life of amla and lemons. She turned perishable produce into profitable products, such as pickles and sharbat. She used the excess produce to prepare pickles, murabbas, and sharbat by adding appropriate amounts of salt, sugar, or jaggery to small pieces of fruit and their juices. These were then stored in small glass bottles for sale, helping her prevent the wastage of post-harvest produce. This shift from farming to agro-processing would strengthen food security and boost the local economy, creating a sustainable model that cuts waste while increasing her income. Based on the above passage answer the following questions: (i) Which scientific concept has the farmer applied in the preservation of the farm produce? (ii) How does the addition of high concentrations of salt and sugar create an environment that prevents the growth of spoilage-causing bacteria and fungi? (iii) Suggest a healthy recipe of this kind for food preservation. (iv) What are the scientific values addressed in this case?",
             "answer": {
               "answerKey": "(i) Osmosis/plasmolysis. (ii) Hypertonic medium plasmolyses microbes. (iii) Amla murabba. (iv) Sustainable practices.",
               "solution": "(i) <u>Osmosis (plasmolysis)</u> — high salt/sugar creates hypertonic environment. (ii) Bacteria/fungi lose water by osmosis → <u>plasmolysed</u> → cannot grow or reproduce → food preserved. (iii) <u>Amla murabba</u>: Boil amla in sugar syrup; store in glass jars. (iv) Sustainable food practices, reduction of post-harvest waste."
@@ -422,7 +426,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "Coconut husk fibres are hard and brittle; coriander leaf stalks are soft and flexible. Find out the reason.",
+            "text": "You may have noticed that fibres of coconut husk are hard and brittle, whereas the leaf stalks of coriander are soft and flexible. Find out the reason.",
             "answer": {
               "answerKey": "Coconut husk: sclerenchyma (dead, lignified). Coriander stalk: collenchyma (living, pectin-thickened, flexible).",
               "solution": "Coconut husk fibres = <u>sclerenchyma</u> — dead cells with thick, lignified walls → hard and brittle. Coriander stalks contain <u>collenchyma</u> — living cells with cellulose/pectin deposits (not lignin) → flexible and soft."
@@ -431,7 +435,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Why is a thick cuticle advantageous for a desert plant but disadvantageous for a plant living underwater?",
+            "text": "Why do you think that a thick cuticle on the outer wall of epidermis is advantageous for a plant living in the desert but disadvantageous for a plant living underwater?",
             "answer": {
               "answerKey": "Desert: prevents water loss. Underwater: blocks absorption of water, CO₂, O₂ needed for survival.",
               "solution": "In <u>desert plants</u>, a thick cuticle reduces transpiration — conserves water. For <u>underwater plants</u>, the cuticle would block direct absorption of water, CO₂, and O₂ from the surrounding water, hindering photosynthesis and respiration."
@@ -440,7 +444,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "Water absorbed by roots travels against gravity through xylem. How do dead xylem cells work with living leaf cells to keep water moving?",
+            "text": "Once water is absorbed by plant roots, it has to travel against gravity through xylem. How do the 'dead' cells of the xylem work together with the living cells of leaves at the top to keep the water moving?",
             "answer": {
               "answerKey": "Transpiration pull (cohesion-tension) from living stomata in leaves pulls water up through dead xylem tubes.",
               "solution": "Living <u>guard cells</u> open stomata → water evaporates (<u>transpiration</u>). This creates negative pressure (suction) that pulls the continuous water column upward through dead <u>xylem vessels</u> via cohesion of water molecules."
@@ -449,7 +453,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q4",
             "number": "4",
-            "text": "What would happen if there were no stomata in the epidermis of stems or leaves?",
+            "text": "What do you think will happen if there were no stomata in the epidermis of the stem or leaves?",
             "answer": {
               "answerKey": "No gas exchange → photosynthesis stops; no transpiration pull → water transport stops; plant dies.",
               "solution": "Without <u>stomata</u>, CO₂ cannot enter and O₂ cannot exit → photosynthesis stops. <u>Transpiration pull</u> ceases → water and mineral transport from roots stops. The plant would overheat, wilt, and die."
@@ -458,7 +462,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "Identify which joints are involved in classical/folk dance poses (Fig. 3.17) and what movement each allows.",
+            "text": "Look at the picture given below (Fig. 3.17). Carefully observe the various poses of classical and folk dances of India. Can you identify which joints are involved? Also, what type of movement each joint allows?",
+              "figure": "/figs/science-ex3-pp-q5-fig3-17.png",
             "answer": {
               "answerKey": "Hip: ball-and-socket (all directions). Knee/Ankle: hinge (one plane). Wrist: ellipsoidal.",
               "solution": "<u>Hip joint</u>: ball-and-socket — movement in all directions. <u>Knee joint</u>: hinge — flexion and extension only. <u>Ankle joint</u>: hinge/gliding — up-down movement. <u>Shoulder joint</u>: ball-and-socket — wide range of arm movement."
@@ -501,6 +506,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q4",
             "number": "4",
             "text": "Straight-leg jump vs. normal jump — how did ankle, knee, and hip positions differ?",
+              "figure": "/figs/science-ex3-rr-q4-fig3-21.png",
             "answer": {
               "answerKey": "Normal jump: joints flex on landing, absorbing impact. Straight-leg jump: joints rigid, full impact on bones.",
               "solution": "In a <u>normal jump</u>: knee and ankle flex (bend) upon landing — impact force distributed over time, reducing stress. In a <u>straight-leg jump</u>: all joints rigid — full impact transmitted directly to bones → greater stress and discomfort."
@@ -518,7 +524,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "Assertion-Reason: A. Squamous epithelium for gas exchange. B. Cardiac muscle — no fatigue. C. Tendons connect bone to bone. D. Hinge joint — one plane movement.",
+            "text": "In each of the following cases (A, B, C and D), choose the correct option as given below: (i) Both (A) and (R) are true, and (R) is the correct explanation of (A). (ii) Both (A) and (R) are true, but (R) is not the correct explanation of (A). (iii) (A) is true, but (R) is false. (iv) (A) is false, but (R) is true. A. Assertion: Epithelium is well-suited for gas exchange in the lungs. Reason: It consists of multiple layers of tall cells that slow down diffusion. B. Assertion: Cardiac muscle can contract continuously without fatigue. Reason: Cardiac muscle cells have a high number of mitochondria and an abundant blood supply. C. Assertion: Tendons connect bone to bone and allow joint movement. Reason: Tendons are made of tough connective tissue that transmits force from muscle to bone. D. Assertion: In a hinge joint, movement occurs primarily in one plane. Reason: The bone ends are shaped to allow sliding in all directions.",
             "answer": {
               "answerKey": "A:(iii) A true, R false. B:(i) Both true, R correct. C:(iv) A false, R true. D:(i) Both true, R correct.",
               "solution": "A: (iii) — <u>Squamous epithelium</u> is suited for gas exchange (thin → fast diffusion), but R is false (it is thin/flat, not multi-layered). B: (i) — <u>Cardiac muscle</u> has abundant mitochondria → never fatigues; R correctly explains. C: (iv) — A is false: <u>tendons</u> connect muscle to bone (ligaments connect bone to bone). D: (i) — Hinge joint moves in one plane; both true and related."
@@ -527,7 +533,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q7",
             "number": "7",
-            "text": "Plot age vs. diameter and annual rings of teak tree. (i) Relationship between diameter and age? (ii) Diameter vs. annual rings? (iii) Which tissue causes girth increase?",
+            "text": "Plot a graph between the age of a tree (in years) on the x-axis and the diameter of the tree (in cm) along the y-axis, using the data given in the Table 3.7. (i) Analyse the graph in terms of the diameter of the stem over time and share the interpretation. (ii) What is the relation between the diameter of the teak tree to the annual rings formed? (iii) Which specialised tissue is responsible for the girth of the stem and where is it located?",
+              "figure": "/figs/science-ex3-rr-q7-table3-7.png",
             "answer": {
               "answerKey": "(i) Diameter increases with age. (ii) Diameter proportional to annual rings. (iii) Vascular cambium (lateral meristem).",
               "solution": "(i) Diameter increases consistently with age — near-linear growth. (ii) Diameter is directly proportional to number of <u>annual rings</u>. (iii) <u>Vascular cambium</u> (lateral meristematic tissue) is responsible for secondary growth (girth increase)."
@@ -536,7 +543,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q8",
             "number": "8",
-            "text": "A tree was debarked by an elephant. (i) Which functions are hampered? (ii) Tissue affected by further damage? (iii) Function hampered if tissue beneath bark is damaged? (iv) Assumptions?",
+            "text": "In a forest, it was observed that one of the trees was severely debarked by an elephant to meet its food requirements, as the bark is a rich source of nutrients (Fig. 3.22). Based on your learning, answer the following: (i) Which function(s) of the tree is/are hampered by debarking? (ii) Which plant tissue would be affected by further damage to the tree trunk even after debarking? (iii) Which function of the tree would be hampered if the tissues beneath the bark were severely damaged? (iv) What assumptions are you making to answer the questions above? How would the answer change if your assumptions are also changed?",
+              "figure": "/figs/science-ex3-rr-q8-fig3-22.png",
             "answer": {
               "answerKey": "(i) Protection and phloem food transport. (ii) Vascular cambium. (iii) Xylem water transport. (iv) Xylem intact below bark.",
               "solution": "(i) Bark functions lost: <u>protection</u> from pests/pathogens; <u>food transport</u> (phloem in bark). (ii) Further damage destroys <u>vascular cambium</u> → secondary growth stops. (iii) Below-bark damage destroys <u>xylem</u> → water/mineral transport upward stops → tree dies. (iv) Assumption: only bark removed; xylem remains intact."
@@ -545,7 +553,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q9",
             "number": "9",
-            "text": "A mango sapling bends during monsoon without breaking. Which tissue is responsible? What if replaced by sclerenchyma?",
+            "text": "Aamrapali observed that a young mango sapling's stem bends flexibly during monsoon winds and does not break. Which tissue is responsible for this flexibility? Predict and provide your explanation of the impact if the existing tissue was replaced by sclerenchyma.",
             "answer": {
               "answerKey": "Collenchyma provides flexibility. Sclerenchyma is lignified and dead — stem would snap in wind.",
               "solution": "<u>Collenchyma</u> — living cells with unevenly thickened pectin/cellulose walls — allows bending without breaking. If replaced by <u>sclerenchyma</u> (dead, lignified): stem becomes rigid and brittle → would break in strong winds."
@@ -554,7 +562,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "Sohan used sugarcane cuttings type A and B. B sprouted; A did not. (i) Why? (ii) What difference? (iii) What observation confirms? (iv) Parameters kept same?",
+            "text": "Sohan designed an experiment for the regeneration of sugarcane, where he used cuttings to grow sugarcane. He used two types of cuttings, type 'A' and type 'B' (Fig. 3.23). After a few weeks, type 'B' cuttings sprouted and developed into sugarcane plants, whereas the type 'A' cuttings did not sprout. (i) Why were the type 'B' cuttings able to grow as sugarcane but type 'A' could not? (ii) What difference was present in type 'B' compared to type 'A'? (iii) What observation or measurement was made to determine whether this change had an effect? (iv) What parameters should be kept the same for both types of cuttings to ensure a fair comparison?",
+              "figure": "/figs/science-ex3-rr-q10-fig3-23.png",
             "answer": {
               "answerKey": "(i) B had nodes (meristematic tissue); A had only internodes. (ii) Nodes with buds. (iii) Sprouting/root formation. (iv) Soil, water, light, cutting length.",
               "solution": "(i) Type B cuttings had <u>nodes</u> (with meristematic tissue/axillary buds); Type A had only internodes (no meristematic cells). (ii) Presence of nodes with buds. (iii) Observation: sprouting and new root development in Type B. (iv) Same: soil, water, light, temperature, cutting length."
@@ -563,7 +572,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q11",
             "number": "11",
-            "text": "Rohan says a tissue is a group of similar cells performing similar functions. Rajiv says this is only true for simple tissues. Explain.",
+            "text": "During the discussion in class, Rohan gives a statement that, \"A tissue is a group of similar cells performing similar functions\". But Rajiv counter argues that, \"this is true in case of simple tissues but quite different in case of complex tissues\". Provide your explanation in view of the discussion in class.",
             "answer": {
               "answerKey": "Simple tissues: same cell type, one function. Complex tissues: different cell types, work together for one function.",
               "solution": "Rohan is correct for <u>simple tissues</u>: e.g., parenchyma — all similar cells, storage/photosynthesis. Rajiv is correct for <u>complex tissues</u>: e.g., xylem contains tracheids, vessels, parenchyma, and fibres — different cells working together for water transport."
@@ -572,7 +581,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q12",
             "number": "12",
-            "text": "Coconut husk fibres are used for tough mats. Which tissue provides strength? Why can't parenchyma serve the same purpose?",
+            "text": "Coconut husk fibres are used for mats which are tough and fibrous. Which tissue has structural features suitable for providing this strength? Explain why living parenchyma couldn't serve the same purpose.",
             "answer": {
               "answerKey": "Sclerenchyma (dead, lignified). Parenchyma is thin-walled and soft — cannot provide tensile strength.",
               "solution": "<u>Sclerenchyma</u> — dead cells with thick, lignified walls — extremely strong and rigid → suitable for mats. <u>Parenchyma</u> has thin, non-lignified walls and large vacuoles — soft and flexible → cannot withstand stress."
@@ -581,7 +590,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q13",
             "number": "13",
-            "text": "Vibha says meristematic cells are only at root and shoot apices. Is this correct? What can Neha ask to challenge it?",
+            "text": "Vibha claims to her friend Neha that, \"Meristematic cells are located only at the root and shoot apices\". What do you think about this statement? What question can Neha ask Vibha to help her understand further if the statement is incorrect?",
             "answer": {
               "answerKey": "Incorrect — lateral meristems (vascular cambium) are also present along the sides of stems.",
               "solution": "Vibha's statement is incomplete. While <u>apical meristems</u> are at tips, <u>lateral meristems</u> (vascular cambium, cork cambium) are present along the sides of stems — enabling secondary growth. Neha can ask: \"How does a tree trunk increase in girth if meristems only exist at tips?\""
@@ -590,7 +599,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q14",
             "number": "14",
-            "text": "A plant cell and an animal cell are the same size. (i) Which has a larger vacuole? (ii) Assumptions?",
+            "text": "A plant cell and an animal cell are of the same size. (i) Which cell will have a larger vacuole? Give reasons. (ii) What assumptions are you making to answer the question above?",
             "answer": {
               "answerKey": "(i) Plant cell — large central vacuole occupies up to 90% of volume. (ii) Assuming typical mature cells.",
               "solution": "(i) The <u>plant cell</u> has a larger central vacuole — occupies up to 90% of cell volume for storage and turgor. Animal cells have only small, temporary vacuoles. (ii) Assumption: both are typical mature cells."
@@ -599,7 +608,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q15",
             "number": "15",
-            "text": "A textbook says \"each plant tissue performs only one specific function.\" What questions would you ask? What examples counter this?",
+            "text": "A textbook states, \"Each plant tissue performs only one specific function\". What questions would you ask to critically examine the correctness of this statement? What examples of tissues would you take to find out the answers to these questions?",
             "answer": {
               "answerKey": "False — parenchyma performs multiple functions (storage, photosynthesis, repair). Xylem also provides structural support.",
               "solution": "Critical questions: \"Does parenchyma only store or also photosynthesise?\" Counter-examples: <u>Parenchyma</u> — storage, photosynthesis (chlorenchyma), secretion, repair. <u>Xylem</u> — water transport AND mechanical support. Statement is oversimplified."
@@ -666,7 +675,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "When will the displacement be zero for an athlete running back and forth on a straight track? What is the total distance in that case?",
+            "text": "In the example of an athlete running back and forth on a straight track (Fig. 4.4), when will the displacement of the athlete be zero? What will be the total distance travelled in that case?",
+              "figure": "/figs/science-ex4-pp-q1-fig4-4.png",
             "answer": {
               "answerKey": "Displacement = 0 when athlete returns to starting point. Distance = 2 × track length.",
               "solution": "<u>Displacement is zero</u> when the athlete returns to the starting point after running to the end and back. If track length = d, total distance = 2d while displacement = 0."
@@ -675,7 +685,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Fuel used in a vehicle depends on which: (i) Total distance travelled; (ii) Displacement?",
+            "text": "Fuel used up in a vehicle depends on which of the following? Justify your answer. (i) Total distance travelled (ii) Displacement",
             "answer": {
               "answerKey": "(i) Total distance — fuel is burned for every metre of actual movement, regardless of direction.",
               "solution": "Fuel consumption depends on (i) <u>Total distance travelled</u>. Fuel is burned for every metre of actual movement, regardless of direction. Displacement measures only straight-line change in position."
@@ -684,7 +694,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "A ball rolls down an inclined track O to D. Is its motion a straight line? Are total distance and displacement equal at A, B, C, D?",
+            "text": "A ball rolls down an inclined track as shown in Fig. 4.6. Is its motion, a straight line motion? Assuming the starting point of the ball (O) to be the origin, can its motion from O to D be depicted using a horizontal line as shown in Fig. 4.3? Are the values of total distance travelled and magnitude of displacement from O equal or different at positions A, B, C and D?",
+              "figure": "/figs/science-ex4-pp-q3-fig4-6.png",
             "answer": {
               "answerKey": "Motion is curved. Distance > displacement at A, B, C. They may be approximately equal at D.",
               "solution": "The ball follows the <u>curved inclined path</u>, not a true straight line. At intermediate positions A, B, C: total distance > displacement (path curves). Only near flat portion D might they be approximately equal."
@@ -693,7 +704,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q4",
             "number": "4",
-            "text": "Drive 200 km north in 3 h, then 200 km south in 2 h. Find average speed and average velocity for the trip.",
+            "text": "During a family road trip, you drive 200 km north in three hours. Afterwards, you drive 200 km south in two hours. Find the average speed and average velocity for your entire trip.",
             "answer": {
               "answerKey": "Average speed = 80 km/h; Average velocity = 0 km/h.",
               "solution": "Total distance = 200 + 200 = 400 km; Total time = 3 + 2 = 5 h\n\n<u>Average speed</u> = 400 ÷ 5 = <strong>80 km h⁻¹</strong>\n\nTotal displacement = 200N – 200S = 0; <u>Average velocity</u> = <strong>0 km h⁻¹</strong>"
@@ -702,7 +713,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "Under what conditions is (i) magnitude of average velocity equal to average speed; (ii) average velocity zero while average speed is non-zero?",
+            "text": "Under what condition(s) is the (i) magnitude of average velocity of an object equal to its average speed? (ii) magnitude of average velocity of an object zero while its average speed is not zero?",
             "answer": {
               "answerKey": "(i) Motion in one direction only. (ii) Object returns to starting point.",
               "solution": "(i) When object moves in a <u>straight line without reversing direction</u>, total distance = total displacement.\n(ii) When object <u>returns to starting point</u>, displacement = 0 → average velocity = 0; but distance ≠ 0 → average speed ≠ 0."

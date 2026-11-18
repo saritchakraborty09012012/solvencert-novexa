@@ -60,6 +60,16 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'science-exact-wording-figures',
+    date: '2026-11-18',
+    type: 'content',
+    title: 'Science questions now match the book, with figures',
+    summary: '134 question prompts rewritten word-for-word from Exploration, and 50 book figures now shown with their questions.',
+    body: 'Visual page-by-page comparison of Chapters 1–13. Answer-leaking options and reversed comparisons were corrected. Graph, diagram, table and photograph figures that the book prints beside questions are now displayed on the site.',
+    href: '/class-9/science/exploration',
+    hrefLabel: 'Open Science',
+  },
+  {
     id: 'maths-part1-think-reflect-added',
     date: '2026-11-18',
     type: 'content',
