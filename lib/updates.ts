@@ -60,6 +60,16 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'sst-it-solutions-better',
+    date: '2026-11-18',
+    type: 'content',
+    title: 'Social Science & IT Solutions Improved',
+    summary: 'Errors corrected and missing questions and diagrams added — everything now matches the book.',
+    body: 'Questions in Social Science Part I and IT Part B were checked again against the book. Wrong wordings, missing options and dropped figures were fixed.',
+    href: '/class-9/sst/understanding-society-india-and-beyond',
+    hrefLabel: 'Open Social Science',
+  },
+  {
     id: 'science-exact-wording-figures',
     date: '2026-11-18',
     type: 'content',

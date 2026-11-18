@@ -90,7 +90,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "With the help of NCERT’s School Bhuvan portal, you can also map your own village/city. You can access and explore the NCERT’s School Bhuvan portal by visiting the website: https://bhuvan-app1.nrsc.gov.in/mhrd_ncert/",
+            "text": "With the help of NCERT's School Bhuvan portal, you can also map your own village/city. You can access and explore NCERT's School Bhuvan portal by visiting the website: https://bhuvan-app1.nrsc.gov.in/mhrd_ncert/",
             "answer": {
               "answerKey": "Use the School Bhuvan portal to map and explore your own village/city.",
               "schoolMethod": "Open the NCERT School Bhuvan portal, locate your own village/city, and explore the available map information. Record observations about features and spatial patterns in your locality for class discussion."
@@ -172,7 +172,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S MAP: Complete the table for any two plates (name of the plate, continents, ocean).",
+            "text": "Pick any two plates from the map above and complete the table given below.",
             "answer": {
               "answerKey": "Eurasian Plate and Pacific Plate.",
               "schoolMethod": "<table style=\"border-collapse:collapse;width:100%\"><thead><tr><th style=\"border:1px solid #d1d5db;padding:6px\">Name of the Plate</th><th style=\"border:1px solid #d1d5db;padding:6px\">Continents</th><th style=\"border:1px solid #d1d5db;padding:6px\">Ocean</th></tr></thead><tbody><tr><td style=\"border:1px solid #d1d5db;padding:6px\">Eurasian Plate</td><td style=\"border:1px solid #d1d5db;padding:6px\">Europe and most of Asia</td><td style=\"border:1px solid #d1d5db;padding:6px\">Parts of the Arctic and North Atlantic Ocean</td></tr><tr><td style=\"border:1px solid #d1d5db;padding:6px\">Pacific Plate</td><td style=\"border:1px solid #d1d5db;padding:6px\">No major continent (mostly oceanic plate)</td><td style=\"border:1px solid #d1d5db;padding:6px\">Pacific Ocean</td></tr></tbody></table>"
@@ -182,7 +182,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: What is the correlation between the plate map and the earthquake/volcano map?",
+            "text": "Examine the plate map (Fig. 2.3) with the earthquake and volcano map (Fig. 2.4). What correlation do you observe?",
             "answer": {
               "answerKey": "Earthquakes and volcanoes concentrate along plate boundaries.",
               "schoolMethod": "Most earthquakes and volcanoes occur along plate boundaries, especially around the Pacific Ocean rim (the Ring of Fire), showing that plate edges are the most tectonically active zones."
@@ -192,7 +192,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: Which continents/countries lie around the Ring of Fire?",
+            "text": "Observe the map showing the distribution of earthquakes and volcanoes (Fig. 2.4). Can you identify which continents and countries are located around the Ring of Fire with the help of an atlas or a globe?",
             "answer": {
               "answerKey": "Japan, Indonesia, Philippines, USA, Chile, New Zealand, Russia.",
               "schoolMethod": "Japan, Indonesia, the Philippines, the USA (Alaska, California), Chile, New Zealand, and Russia lie around the Pacific Ring of Fire, spanning Asia, North America, South America, and Oceania."
@@ -202,7 +202,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: Does India have a risk of earthquakes? Which region is vulnerable, and why are lives at risk?",
+            "text": "Does India have a risk of earthquakes? A large earthquake in a densely populated country like India can cause severe damage to life and environment. Can you find out which region is more vulnerable to earthquakes? Why do you think human lives are at risk?",
             "answer": {
               "answerKey": "Yes — the Himalayan belt and North-East India.",
               "schoolMethod": "Yes. The Himalayan belt and North-East India are most vulnerable due to active plate collision. Dense population and weak construction in these areas increase risk to human life."
@@ -212,7 +212,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "Look carefully at this photograph and answer the following questions.",
+            "text": "Look carefully at this photograph and answer the following questions: → What do you think caused this situation? → What could that grey powder be? → What does it tell us about the Earth's internal forces?",
             "answer": {
               "answerKey": "A volcanic eruption caused the situation; the grey powder is volcanic ash; it demonstrates the action of Earth’s internal forces.",
               "schoolMethod": "a. The situation was caused by a volcanic eruption. b. The grey powder is volcanic ash/deposited volcanic material. c. It shows that internal forces of the Earth can produce volcanic eruptions and bring material from inside the Earth to the surface."
@@ -233,7 +233,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: How are farmers affected by water erosion and wind erosion (Fig. 2.9)?",
+            "text": "Observe the photographs (Fig. 2.9) and also note the types of erosion. How are farmers affected by erosion due to water and wind?",
             "answer": {
               "answerKey": "Both reduce soil fertility and crop yields.",
               "schoolMethod": "Water erosion washes away fertile topsoil and can flood fields, while wind erosion blows away loose soil in dry regions; both reduce soil fertility and lower crop yields for farmers."
@@ -249,7 +249,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: What makes the Sundarbans delta unique and popular with tourists?",
+            "text": "Have you heard about the Sundarbans delta? Try and explore its uniqueness and find out why it is popular with tourists.",
             "answer": {
               "answerKey": "Mangrove forests and Royal Bengal Tigers.",
               "schoolMethod": "The Sundarbans, formed by the Ganga–Brahmaputra delta, is unique for its dense mangrove forests and Royal Bengal Tigers, attracting tourists for wildlife viewing and eco-tourism."
@@ -265,7 +265,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: What were the reasons behind the sudden Chamoli (Uttarakhand) flood of February 2021?",
+            "text": "A devastating flood struck the Chamoli district in Uttarakhand in February 2021 in which many people and livestock lost their lives. There was severe damage to buildings, roads, bridges, hydel projects, and connectivity to villages was adversely affected. Can you find out the reasons that led to the sudden and unexpected flood?",
             "answer": {
               "answerKey": "A glacial lake outburst triggered by a glacier/rock avalanche.",
               "schoolMethod": "The disaster was caused by a glacier/rock avalanche that triggered a sudden glacial lake outburst, releasing huge volumes of water and debris down the Rishiganga valley."
@@ -281,7 +281,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: Identify the agent that created landforms around your school/residence.",
+            "text": "Observe the landforms around your school or residence and try to identify which agent may have created them.",
             "answer": {
               "answerKey": "Sample: water erosion and physical weathering.",
               "schoolMethod": "Sample answer: Small gullies near a school may form due to water erosion in monsoon rains, while cracked walls or rocks nearby show physical weathering from daily temperature changes."
@@ -453,7 +453,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q12",
             "number": "12",
             "isHard": false,
-            "text": "Create a poster showing landforms considered sacred or important in your region, with folk stories associated with them.",
+            "text": "Create a poster showing landforms that are considered to be the sacred or important in your region, and add the folk stories associated with them.",
             "answer": {
               "answerKey": "Sample: poster on the Ganga and Himalayan peaks.",
               "schoolMethod": "Sample: a poster on the river Ganga and Himalayan peaks can include folk stories of their divine origin, highlighting their cultural and religious importance in Indian tradition."
@@ -483,7 +483,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q15",
             "number": "15",
             "isHard": false,
-            "text": "Divide the class into three groups (water, wind, and glacier). Each project should highlight causes, impact on human life and environment, and mitigation measures.",
+            "text": "Divide the class into three groups. Each group will work on one project (water, wind, and glacier). The project should highlight the causes, impact on human life and the environment, and mitigation measures.",
             "answer": {
               "answerKey": "Each group covers causes, impacts and mitigation for its agent.",
               "schoolMethod": "Each group should explain how water-, wind-, or glacier-related landforms and disasters form, describe their effects on settlements, agriculture, and environment, and list suitable mitigation measures."
@@ -555,7 +555,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: Can you imagine what would happen if there were no atmosphere?",
+            "text": "Can you imagine what would happen if there were no atmosphere? Discuss your thoughts with your friends and teachers.",
             "answer": {
               "answerKey": "No breathable air, extreme temperatures, no weather or rainfall.",
               "schoolMethod": "Without an atmosphere, there would be no air to breathe, extreme temperature swings between day and night, no protection from harmful UV rays, and no weather or rainfall."
@@ -571,7 +571,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S RECALL: How is nitrogen useful for plants?",
+            "text": "How is nitrogen useful for plants? Remember that you learnt this in the chapter 'The Invisible Living World: Beyond Our Naked Eyes', in your Grade 8 Science textbook.",
             "answer": {
               "answerKey": "Needed for proteins and chlorophyll; fixed by soil bacteria.",
               "schoolMethod": "Nitrogen is essential for making proteins and chlorophyll in plants. Certain soil bacteria convert atmospheric nitrogen into compounds that plant roots can absorb for growth."
@@ -587,7 +587,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: Other times when strong winds have caused problems for you.",
+            "text": "You might have noticed that sometimes the wind is so strong that it is difficult to walk against it. Can you think of some other times when strong winds have caused problems for you?",
             "answer": {
               "answerKey": "Sample: knocked over umbrella, damaged trees, disrupted plans.",
               "schoolMethod": "Sample answer: Strong winds have knocked over my umbrella in the rain, blown away loose papers, damaged trees and rooftops, and disrupted outdoor games and travel plans."
@@ -597,7 +597,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: Find other categories of wind based on speed and their common effects.",
+            "text": "Find out other categories of wind based on speed and their common effects, and share your findings in class.",
             "answer": {
               "answerKey": "Gentle breeze, gale and hurricane with their effects.",
               "schoolMethod": "Sample additions to Table 3.1: Gentle breeze (12–19 km/hr) — leaves and small twigs move constantly; Gale (62–88 km/hr) — breaks twigs, walking becomes difficult; Hurricane (above 118 km/hr) — causes widespread structural destruction."
@@ -613,7 +613,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S ANALYSE: Note the weather report from a local newspaper for two weeks.",
+            "text": "Note down the weather report from a local newspaper for two weeks and observe the changes occurring in the weather.",
             "answer": {
               "answerKey": "Sample: gradual rise in temperature and humidity with a few rain days.",
               "schoolMethod": "Sample observation: Over two weeks, temperature and humidity rose gradually, with a few days of light rain and mostly clear skies, showing a stable, slowly changing season."
@@ -623,7 +623,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: Which ragas of Hindustani Classical music are connected to each season?",
+            "text": "Hindustani Classical music associates certain rāgas with specific seasons. Find out which rāgas are connected to each season with the help of your elders and teachers.",
             "answer": {
               "answerKey": "Raga Malhar — monsoon; Raga Basant — spring; Raga Bhairav — winter morning.",
               "schoolMethod": "Sample answer: Raga Malhar is linked with the rainy season (Varsha), Raga Basant with spring (Vasanta), and Raga Bhairav is traditionally sung in the early morning of winter."
@@ -639,7 +639,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: Describe in your own words how monsoon affects the lives of people around you.",
+            "text": "Describe in your own words how monsoon affects the lives of the people around you.",
             "answer": {
               "answerKey": "Sample: fills wells, helps paddy sowing, but floods roads.",
               "schoolMethod": "Sample answer: Monsoon rains fill our wells and rivers and help farmers sow paddy, but heavy rainfall also floods roads and disrupts daily transport, school, and local markets."
@@ -691,7 +691,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "What are the guidelines for the management of floods according to the NDMA?",
+            "text": "What are the guidelines for the management of floods according to the National Disaster Management Authority (NDMA)?",
             "answer": {
               "answerKey": "Forecasting, embankments, zoning, drills, relief coordination.",
               "schoolMethod": "NDMA guidelines include flood forecasting and warning systems, strengthening embankments, floodplain zoning, community preparedness drills, and coordinated relief and rescue operations."
@@ -897,7 +897,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "Collect pictures of houses and clothing from different regions of India and examine their relationship with climate/relief.",
+            "text": "Collect pictures of houses and clothing of people from different regions of India. Examine whether they reflect any relationship with the climatic conditions or the relief of those regions.",
             "answer": {
               "answerKey": "Sample: Kerala sloping roofs, Rajasthan thick walls, Ladakh flat roofs.",
               "schoolMethod": "Sample: Kerala houses have sloping roofs suited to heavy rainfall; Rajasthan homes have thick walls and small windows for a hot, dry climate; Ladakh homes have flat roofs and thick walls for cold, dry mountain conditions."
@@ -969,7 +969,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: Observe the Harappan seal — why has the script not been deciphered, and what efforts have been made?",
+            "text": "You have studied about the Harappan script in your previous grades. Observe this seal carefully and discuss why the script has not yet been deciphered. Also, find out what efforts have been made to decipher it. You can use your textbook, consult your teacher, or refer to online sources.",
             "answer": {
               "answerKey": "Short inscriptions, no bilingual text, unknown language.",
               "schoolMethod": "The script remains undeciphered because inscriptions are very short, there is no bilingual text (like the Rosetta Stone) to compare it with, and its underlying language is unknown. Scholars have tried computer-based pattern analysis and comparisons with other ancient scripts, but no breakthrough has been achieved yet."
@@ -1001,7 +1001,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: Do the skulls (Fig. 4.6) show changes in shape/features? Is there a gradual straightening of the face?",
+            "text": "Let us observe the images given above and answer the following questions. → Do you notice any changes in the shape or features of the skulls across different ancestors? → Can you observe a gradual straightening of the face?",
             "answer": {
               "answerKey": "Yes — larger brain-case, flatter face, prominent forehead.",
               "schoolMethod": "Yes. The skulls show a gradual increase in brain-case size, a flatter face, and a more prominent forehead moving from Homo habilis to Homo sapiens, reflecting brain and facial evolution."
@@ -1017,7 +1017,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: Why is the Neolithic shift to farming called a 'revolution' rather than a simple change?",
+            "text": "Why do you think the shift to farming during the Neolithic period is called a revolution rather than a simple change? Discuss with your classmates.",
             "answer": {
               "answerKey": "It fundamentally transformed human life within a short span.",
               "schoolMethod": "It is called a revolution because it fundamentally transformed human life — from mobile hunting-gathering to settled farming, permanent villages, and food surplus — within a relatively short span of time."
@@ -1033,7 +1033,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: Identify domesticated animals, habitats, and objects in Fig. 4.14. Are any still used today?",
+            "text": "Observe the chart (Fig. 4.14) and identify the animals that were domesticated. Also try and identify the types of human habitats and objects that were used. Are any of these still used in present times?",
             "answer": {
               "answerKey": "Cattle, sheep, goats, pigs; mud-brick houses; pottery.",
               "schoolMethod": "Domesticated animals include cattle, sheep, goats, and pigs; habitats included mud-brick houses, while objects included pottery vessels. Cattle-rearing and pottery-making are still widely practised today."
@@ -1049,7 +1049,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: How would long-distance trade have been affected without a standard system of weights?",
+            "text": "Harappans had their own standard systems of weight and measurement. This is evident from the meticulously planned settlements and efficient international trade practices of the Harappans. They followed a binary multiple (1, 2, 4, 8, 16, etc.) system for weighing smaller units and used multiples of ten for larger denominations. Such cubical stone weights have been reported from several sites. Can you imagine how long-distance trade would have been affected had the Harappans not followed a standard system of weights?",
             "answer": {
               "answerKey": "Unfair exchange, disputes and loss of trust.",
               "schoolMethod": "Without standard weights, traders could not measure goods fairly, leading to disputes, unequal exchange, and loss of trust, which would have seriously hindered long-distance trade."
@@ -1091,7 +1091,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: Similarities between temples in India and Sumerian temples as centres of activity.",
+            "text": "Do you find any similarities between the temples in India and those of the Sumerian civilisation as centres of socio-cultural and economic activity?",
             "answer": {
               "answerKey": "Both were centres of economic, social and cultural life.",
               "schoolMethod": "Like Sumerian ziggurats, Indian temples also served as centres of economic, social, and cultural life, managing land and wealth and hosting festivals alongside religious worship."
@@ -1101,7 +1101,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "Activity — LET US RECALL: Does our understanding of a civilisation change when its script is deciphered compared to when it is not?",
+            "text": "The cuneiform writing system was contemporary to the Harappan script, but while cuneiform has been deciphered, the Harappan script has not yet been deciphered. Do you think our understanding of a civilisation changes when its script is deciphered compared to when it is not?",
             "answer": {
               "answerKey": "Yes — deciphered scripts reveal details, undeciphered limit us.",
               "schoolMethod": "Yes. Deciphered scripts (like cuneiform) reveal names, events, beliefs, and daily life in detail, while undeciphered scripts (like the Harappan script) limit understanding mainly to material remains and inference."
@@ -1111,7 +1111,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: The Epic of Gilgamesh is one of the earliest written stories — find other such stories.",
+            "text": "The Epic of Gilgamesh, written during the Mesopotamian civilisation, is one of the earliest stories written. Try and find out more such stories and share them in class.",
             "answer": {
               "answerKey": "Examples include the oldest version of ‘Sindbad the Sailor’, animal fables, tales of ghosts and miracles, romances, and the oldest known form of ‘Cinderella’.",
               "schoolMethod": "The textbook notes an old version of ‘Sindbad the Sailor’ preserved in an Egyptian papyrus collection, along with animal fables, tales of ghosts and miracles, romances, and the oldest known form of ‘Cinderella’. Students may also find other early written stories from different civilisations."
@@ -1127,7 +1127,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: Why a scale with a heart on one side and a feather on the other (Fig. 4.29)? What does this tell us about early Egyptian beliefs?",
+            "text": "Why do you think there is a scale with a heart on one side and a feather on the other (fig. 4.29)? What can this papyrus tell us about early Egyptian beliefs?",
             "answer": {
               "answerKey": "The 'weighing of the heart' against the feather of truth (Ma'at).",
               "schoolMethod": "This depicts the Egyptian belief in the 'weighing of the heart' after death — the heart was weighed against the feather of truth (Ma'at) to judge whether the soul deserved the afterlife."
@@ -1137,7 +1137,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Activity — LET'S MAP: Locate the River Nile. Why is the northern part called Lower Egypt and the southern part Upper Egypt?",
+            "text": "Can you locate the River Nile on the given map? Why do you think the northern part is called Lower Egypt and the southern part Upper Egypt?",
             "answer": {
               "answerKey": "Nile flows south to north; elevation decides Upper/Lower.",
               "schoolMethod": "The Nile flows from south to north into the Mediterranean Sea. Since the land near its source (south) lies at a higher elevation, it is called Upper Egypt, while the northern delta region, at a lower elevation, is called Lower Egypt."
@@ -1147,7 +1147,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: What were the social classes of early Egypt, their occupations, and daily routines (Fig. 4.32)?",
+            "text": "Look at the social hierarchy pyramid in the image. What were the social classes of early Egypt? What were the different kinds of occupations? What could have been a typical daily routine of the people from each class?",
             "answer": {
               "answerKey": "Pharaoh, officials/priests, free landholders/artisans, serfs/slaves.",
               "schoolMethod": "The classes were the Pharaoh (ruler), officials/nobles/priests (administration and worship), free landholders/artisans/merchants (farming and trade), and serfs/slaves (manual labour); each had very different daily routines, from ruling and worship to farming and hard physical work."
@@ -1157,7 +1157,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: What do the daily-use images (Fig. 4.33) tell us about Egyptian fashion, and which classes used them?",
+            "text": "Observe the images given above. What do they tell you about Egyptian fashion? ◊ Which social classes do you think used these items? ◊ What clues in the images help you to make this guess? Try to explain your reasoning based on the materials, designs, or accessories shown in the pictures.",
             "answer": {
               "answerKey": "Finely crafted items suggest use by wealthier classes.",
               "schoolMethod": "Sample answer: The finely painted pottery and woven sandals suggest use by wealthier classes or officials, since such crafted, decorative items indicate greater resources than the plain, functional tools used by labourers."
@@ -1173,7 +1173,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity — LET'S EXPLORE: Find more examples of Chinese characters that resemble the objects or ideas they represent.",
+            "text": "The Chinese script is logographic, with characters representing entire words or morphemes (smallest meaningful units of language), rather than sounds. Person 人 → Tree 木 → Explore more examples of Chinese characters that resemble the objects or ideas they represent. Note down at least two such characters and explain how their shapes are connected to their meanings.",
             "answer": {
               "answerKey": "Sample: 'mountain' (山) and 'sun' (日).",
               "schoolMethod": "Sample answer: The character for 'mountain' (山) shows three peaks resembling a mountain range, and the character for 'sun' (日) is a rounded square resembling the sun's disc."
@@ -1183,7 +1183,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Activity — THINK ABOUT IT: What other reasons could there have been for building the Great Wall of China?",
+            "text": "What could have been the other reasons for building the Great Wall of China? Explore and share your findings on the Great Wall through a model or presentation.",
             "answer": {
               "answerKey": "Control trade routes, monitor travellers, project power.",
               "schoolMethod": "Besides defence against nomadic raids, the wall may have helped control and tax trade routes, monitor travellers, mark territorial boundaries, and project the power of the ruling dynasty."
@@ -1193,7 +1193,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "Activity — LET'S RECALL: Recall the Silk Route from Grade 7 — how was India connected with it, and with Buddhism's spread to China?",
+            "text": "Do you remember studying about the Silk Route in Grade 7? How was India connected with it? Can you recollect China's contact with India with reference to Buddhism that you studied in Grade 7?",
             "answer": {
               "answerKey": "Silk Route carried goods; Buddhism spread via monks and traders.",
               "schoolMethod": "The Silk Route connected China to India and beyond, carrying silk, spices, and other goods. Buddhism spread from India to China along this route through monks and traders in the early centuries CE."
@@ -1209,7 +1209,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Do you think life became easier or more challenging after humans started farming? Give two reasons.",
+            "text": "Do you think life became easier or more challenging after humans started farming? Give two reasons for your answer.",
             "answer": {
               "answerKey": "Both — stable food and homes, but hard labour and weather risks.",
               "schoolMethod": "Farming made life both easier and harder — it ensured a stable food supply and permanent homes, but also brought harder physical labour and dependence on unpredictable weather."
@@ -1219,7 +1219,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "The environment offers opportunities and challenges — explain with reference to early farming communities and river-valley civilisations.",
+            "text": "The environment offers human societies both opportunities as well as challenges. Explain with reference to early farming communities and river-valley civilisations.",
             "answer": {
               "answerKey": "Rivers gave fertility and water but also floods and droughts.",
               "schoolMethod": "Rivers offered fertile soil and water for farming, enabling civilisations like the Harappans and Egyptians to flourish, but floods, droughts, and unpredictable water levels also posed serious challenges to these communities."
@@ -1229,7 +1229,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "Why do historians divide early human history into Stone Age, Bronze Age, and Iron Age? What does this classification tell us about human progress?",
+            "text": "Why do historians divide early human history into different ages such as Stone Age, Bronze Age, and Iron Age? What does this classification tell us about human progress?",
             "answer": {
               "answerKey": "Based on tool materials; shows progressive technological advance.",
               "schoolMethod": "Historians use this classification based on the materials used for tools, showing how human technology and skills progressively advanced from simple stone tools to more effective metal tools over time."
@@ -1249,7 +1249,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": true,
-            "text": "Imagine the Harappan script gets deciphered tomorrow. What new types of information might historians learn?",
+            "text": "Imagine that the Harappan script gets deciphered tomorrow. What new types of information do you think historians might learn?",
             "answer": {
               "answerKey": "Names, religious beliefs, trade records, laws, daily events.",
               "schoolMethod": "Historians could learn Harappan names, religious beliefs, trade records, laws, and daily events, transforming our understanding of their society much like deciphered cuneiform did for Mesopotamia."
@@ -1259,7 +1259,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "Prepare a table with three columns — Palaeolithic, Mesolithic, and Neolithic — showing tools, settlements, art, and subsistence.",
+            "text": "Prepare a table with three columns—Palaeolithic, Mesolithic, and Neolithic—and fill in their distinctive features: tools, settlements, art, and subsistence.",
             "answer": {
               "answerKey": "Table comparing the three periods across four features.",
               "schoolMethod": "<table style=\"border-collapse:collapse;width:100%\"><thead><tr><th style=\"border:1px solid #d1d5db;padding:6px\">Feature</th><th style=\"border:1px solid #d1d5db;padding:6px\">Palaeolithic</th><th style=\"border:1px solid #d1d5db;padding:6px\">Mesolithic</th><th style=\"border:1px solid #d1d5db;padding:6px\">Neolithic</th></tr></thead><tbody><tr><td style=\"border:1px solid #d1d5db;padding:6px\"><b>Tools</b></td><td style=\"border:1px solid #d1d5db;padding:6px\">Handaxes, cleavers, scrapers</td><td style=\"border:1px solid #d1d5db;padding:6px\">Microliths, bone points</td><td style=\"border:1px solid #d1d5db;padding:6px\">Polished stone tools, pottery</td></tr><tr><td style=\"border:1px solid #d1d5db;padding:6px\"><b>Settlements</b></td><td style=\"border:1px solid #d1d5db;padding:6px\">Caves, open camps</td><td style=\"border:1px solid #d1d5db;padding:6px\">Temporary camps near rivers/lakes</td><td style=\"border:1px solid #d1d5db;padding:6px\">Permanent villages</td></tr><tr><td style=\"border:1px solid #d1d5db;padding:6px\"><b>Art</b></td><td style=\"border:1px solid #d1d5db;padding:6px\">Cave paintings, early beads</td><td style=\"border:1px solid #d1d5db;padding:6px\">Rock-shelter paintings (e.g., Bhimbetka)</td><td style=\"border:1px solid #d1d5db;padding:6px\">Painted pottery, ornaments</td></tr><tr><td style=\"border:1px solid #d1d5db;padding:6px\"><b>Subsistence</b></td><td style=\"border:1px solid #d1d5db;padding:6px\">Hunting and gathering</td><td style=\"border:1px solid #d1d5db;padding:6px\">Hunting, fishing, gathering wild grains</td><td style=\"border:1px solid #d1d5db;padding:6px\">Farming and animal domestication</td></tr></tbody></table>"
@@ -1269,7 +1269,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": true,
-            "text": "\"Bronze Age civilisations developed independently but shared common features.\" Examine this statement.",
+            "text": "\"Bronze Age civilisations developed independently but shared common features.\" Examine this statement with reference to the civilisations given in the chapter.",
             "answer": {
               "answerKey": "Independent river-valley origins with shared urban, writing, metallurgy features.",
               "schoolMethod": "The Harappan, Mesopotamian, Egyptian, and Chinese civilisations arose independently in river valleys, yet all shared features like urban centres, writing systems, metallurgy, trade, and social hierarchy."
@@ -1279,7 +1279,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "Discuss both the advantages and disadvantages of settling near rivers.",
+            "text": "Although rivers provided many benefits, they also created challenges for early societies. Discuss both the advantages and disadvantages of settling near rivers.",
             "answer": {
               "answerKey": "Fertile soil and water vs floods and water-borne diseases.",
               "schoolMethod": "Rivers provided fertile soil, water, and transport routes that supported agriculture and trade, but they also brought risks of floods, water-borne diseases, and destruction of settlements during overflow."
@@ -1289,7 +1289,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q9",
             "number": "9",
             "isHard": true,
-            "text": "Find out more about the Code of Hammurabi. Why was it important? Was it fair to all sections of society?",
+            "text": "With the help of your teacher, find out more about the Code of Hammurabi. Why was it important? Do you think it was fair to all sections of society? Give reasons for your answer.",
             "answer": {
               "answerKey": "Early written law code; punishments varied by class, favouring nobles.",
               "schoolMethod": "The Code of Hammurabi was one of the earliest written law codes, establishing rules for justice and conduct across the empire. However, it was not entirely fair, as punishments varied by social class, generally favouring nobles over commoners and slaves."
@@ -1309,7 +1309,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q11",
             "number": "11",
             "isHard": true,
-            "text": "Compare the social hierarchy and daily life of people in Egyptian civilisation with those in Mesopotamia or China. What similarities and differences do you notice?",
+            "text": "Compare the social hierarchy and daily life of people in the Egyptian civilisation with those in Mesopotamia or China. What similarities and differences do you notice?",
             "answer": {
               "answerKey": "Similar class pyramid; Egyptian pharaoh held god-like status.",
               "schoolMethod": "All three had a ruling class (pharaoh/king) at the top, followed by priests/nobles, then farmers/artisans, and slaves/serfs at the bottom. However, the Egyptian pharaoh held god-like status, while Mesopotamian and Chinese rulers, though powerful, were seen as chosen by or answerable to divine will."
@@ -1329,7 +1329,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q13",
             "number": "13",
             "isHard": false,
-            "text": "Activity: Choose one early civilisation and prepare a mini-scrapbook or presentation on their innovations in tools, writing, art, and architecture.",
+            "text": "Activity: Choose one early civilisation (Mesopotamia, Egypt, or China) and prepare a mini-scrapbook or a presentation showing their innovations in tools, writing, art, and architecture. Include pictures, brief descriptions, and explain their significance.",
             "answer": {
               "answerKey": "Sample: Egypt — pyramids and hieroglyphics.",
               "schoolMethod": "Practical task: Select Egypt, Mesopotamia, or China, and compile pictures with brief descriptions of key innovations — for example, pyramids and hieroglyphics for Egypt, cuneiform and ziggurats for Mesopotamia, or the Great Wall and silk for China — explaining their historical significance."
@@ -1465,7 +1465,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q12",
             "number": "12",
             "isHard": false,
-            "text": "Read the source and answer the questions: The Nashik cave inscription (2nd century CE) of Ushavadatta records:",
+            "text": "Read the source and answer the questions: \"Ushavadāta, son of Dinika, son-in-law of king Nahapāna … has bestowed this cave on the Saṅgha generally; he has also given a perpetual endowment, three thousand—3000 kāhāpanas, which, for the members of the Saṅgha of any sect, and any origin dwelling in this cave, will serve as cloth money and money for outside life (kuśana); and those kāhāpanas have been invested in guild dwelling at Govadhana—2000 in a weavers' guild, interest one prātika (monthly) for the hundred, (and) 1000 in another weaver's guild, interest three quarters of a paḍika (monthly) for the hundred.\"",
             "answer": {
               "answerKey": "Seven centres located across Bihar, Maharashtra, MP, TN and UP.",
               "schoolMethod": "Pataliputra — present-day Patna, Bihar (on the Ganga, capital of the Mauryan and Gupta empires). Nasik — Maharashtra, on the Godavari river (site of the Nasik cave inscriptions). Ujjayini — present-day Ujjain, Madhya Pradesh, on the Kshipra river. Vikramashila — Bihar, on the Ganga (a major centre of learning, 8th–9th century CE). Kanchipuram — Tamil Nadu (Pallava capital and centre of learning). Mathura — Uttar Pradesh, on the Yamuna river. Rajagriha — present-day Rajgir, Bihar (early capital of Magadha). (Note: Locate these points on an outline map of India using Fig. 5.4, 5.10 and 5.12 as reference for accurate placement.)"
@@ -1841,7 +1841,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Fig. 7.1. Importance of elections in a democracy. (Fill in the two empty boxes to indicate why elections are important for democratic functioning, and discuss how each one of them is ensured through elections.)",
+            "text": "Fill in the two empty boxes in Fig. 7.1 to indicate why elections are important for democratic functioning, and discuss how each one of them is ensured through elections.",
             "answer": {
               "answerKey": "Empty boxes: Participation and Choice/Competition.",
               "schoolMethod": "Suggested values for the two empty boxes: Participation — elections are ensured to be inclusive through Universal Adult Franchise, giving every eligible citizen aged 18+ the right to vote. Choice/Competition — a multi-party system and registration of independent candidates ensure voters have genuine alternatives to choose from. How each is ensured through elections: Representation — periodic direct elections to the Lok Sabha, Vidhan Sabha and local bodies ensure people's chosen representatives make decisions on their behalf. Equality — Universal Adult Franchise and the principle of 'one person, one vote' ensure every citizen's vote carries equal weight. Accountability — regular elections mean representatives must seek the people's mandate again, ensuring they remain answerable to voters. Legitimacy — a government elected through free and fair elections derives rightful authority to govern. Participation — inclusive measures (SIR, home voting, PwD facilities) ensure the widest possible citizen involvement. Choice/Competition — the multi-party system offers voters real alternatives, strengthening democratic decision-making."
@@ -1977,7 +1977,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Look at the road to free and fair elections above (Fig. 7.13). Fill in the empty potholes with some more challenges after discussing them with your teachers and parents. How can we overcome these challenges?",
+            "text": "What reforms have been introduced by the ECI to make voting more inclusive for the following groups? a. People with Disabilities b. Service Voters c. Senior Citizens—60 years and above; and 80 years and above d. Prisoners e. Persons in preventive detention",
             "answer": {
               "answerKey": "Rolls, schedule, party registration, fair conduct; free-and-fair conduct is most important.",
               "schoolMethod": "Functions of the ECI: Creating and updating the electoral roll, including Special Intensive Revision (SIR). Deciding the schedule and date of elections. Registering political parties and allocating election symbols. Ensuring the free and fair conduct of elections, including enforcement of the Model Code of Conduct. Acting as a quasi-judicial body to resolve disputes over party recognition and symbols. Answer: Ensuring free and fair elections is arguably the most important function, since it is the foundation on which the legitimacy of all other functions — accurate rolls, party registration, and results — ultimately rests."
@@ -2283,7 +2283,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "A student has ₹100 …",
+            "text": "A student has ₹100 and must choose between buying a notebook or saving the money for buying a tennis racket later. Which economic concept best explains this situation? a. Demand b. Opportunity cost c. Production d. Inflation",
             "answer": {
               "answerKey": "(b) Opportunity cost.",
               "schoolMethod": "(b) Opportunity cost — buying the notebook means giving up the value of saving towards the tennis racket, which is its opportunity cost."
@@ -2511,7 +2511,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": true,
-            "text": "From your surroundings, list two goods or services that are provided by the government (for example: roads, streetlights, parks, police, and so on.). Choose one of the goods you listed and answer: → Who does benefit from it? → Why would it be difficult for a private company to provide this service on its own? → Imagine the government stops providing this good or service, what problems might people in your area face?",
+            "text": "From your surroundings, list two goods or services that are provided by the government (for example: roads, streetlights, parks, police, and so on.). Choose one of the goods you listed and answer the following. → Who does benefit from it? → Why would it be difficult for a private company to provide this service on its own? → Imagine the government stops providing this good or service, what problems might people in your area face?",
             "answer": {
               "answerKey": "Intervene only on market failure; avoid excessive regulation.",
               "schoolMethod": "A democratic government should intervene only when markets fail to serve public interest, such as during unfair pricing, monopoly, or under-provision of essential goods, while avoiding excessive regulation that discourages enterprise and innovation."
