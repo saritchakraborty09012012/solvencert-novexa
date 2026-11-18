@@ -32,6 +32,12 @@ import WhatsNewPyro from '@/components/features/WhatsNewPyro';
  *
  * Visibility rules:
  *   • Logged-in users see updates dated on/after their signup day.
+ *   • Exception — never on the signup day itself: a brand-new account must
+ *     not be greeted by update popups the instant it finishes signing up.
+ *     Everything already in the log predates the account, so on the first
+ *     load of the signup day it is all marked seen instead. Updates
+ *     published after the signup announce normally (from later the same
+ *     day, or the next visit).
  *   • Guests never see popups on their very first visit. That visit only
  *     records a baseline (date + latest update id); later visits show the
  *     updates that shipped after that baseline.
@@ -143,6 +149,37 @@ function markFirstGuestSession() {
   }
 }
 
+const SIGNUP_SEED_KEY = 'sn_signup_seed_uid_v1';
+
+/** True while the local calendar day still matches the account's signup day. */
+function isSignupDay(createdAt: string): boolean {
+  const created = new Date(createdAt);
+  if (Number.isNaN(created.getTime())) return false;
+  const now = new Date();
+  return (
+    created.getFullYear() === now.getFullYear() &&
+    created.getMonth() === now.getMonth() &&
+    created.getDate() === now.getDate()
+  );
+}
+
+/** Which user (if any) already got the signup-day seed on this browser. */
+function signupSeedUid(): string | null {
+  try {
+    return window.localStorage.getItem(SIGNUP_SEED_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function markSignupSeed(uid: string) {
+  try {
+    window.localStorage.setItem(SIGNUP_SEED_KEY, uid);
+  } catch {
+    /* ignore */
+  }
+}
+
 /** Index (in the newest-first UPDATES list) of the most recent update this
  *  browser has seen — i.e. the seen watermark. Infinity when nothing seen. */
 function newestSeenIndex(seen: Set<string>): number {
@@ -191,6 +228,22 @@ export default function WhatsNewPopup() {
       if (isFirstGuestSession()) return;
       pending = guestPending(seen, since);
     } else {
+      // New accounts must not be greeted by update popups the instant they
+      // finish signing up: on the signup day, everything already in the log
+      // shipped before the account existed. Mark it all seen and bail out —
+      // keyed by user id so a later reload the same day still announces
+      // updates that ship after the signup, and a different account signing
+      // up on this browser re-seeds for itself.
+      if (
+        user?.id &&
+        user?.created_at &&
+        isSignupDay(user.created_at) &&
+        signupSeedUid() !== user.id
+      ) {
+        markSeen(UPDATES);
+        markSignupSeed(user.id);
+        return;
+      }
       const available = getUpdatesForSignup(user?.created_at);
       // Watermark: only updates newer than the most recent one this browser
       // has seen are ever shown. Older updates that were never individually
