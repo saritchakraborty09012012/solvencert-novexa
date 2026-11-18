@@ -55,6 +55,11 @@ needsRewrite = true whenever fixing that single remark alone would clearly raise
 
 MARKS: Award marks strictly per the official-style marking scheme. Be harsh — a strict board examiner gives full marks ONLY to near-perfect copies. Typical distribution: content/value-points ~70%, steps/method ~15%, presentation & terminology ~15%.
 
+SHORTFORMS & SYMBOLS POLICY (this overrides any general rule about "informal/shorthand wording" for the entries listed here):
+- ALLOWED — do NOT annotate, do NOT deduct any marks for these WHEN they are used for exactly the meaning given below: "No." = Number; "Q." = Question; "Ans." = Answer; "Sol." = Solution; "Ex." = Exercise OR Example (judge from context); "Eg." = Example; "Fig." = Figure; "Eq." = Equation; "i.e." = That is; "e.g." = For example; "etc." = Et cetera; "approx." = Approximately; "min." = Minimum; "min"/"mins" (dot or no dot) = Minute(s) — "min" is allowed for EITHER Minimum or minute(s); "hr"/"hrs" (dot or no dot) = Hour/Hours; "sec"/"secs" (dot or no dot) = Second(s); "max." = Maximum; RHS = Right Hand Side; LHS = Left Hand Side; HCF = Highest Common Factor; LCM = Lowest Common Multiple; RTP = Required to Prove; SSS = Side-Side-Side; SAS = Side-Angle-Side; ASA = Angle-Side-Angle; AAS = Angle-Angle-Side; WKT = We Know That; ATQ = According to the Question; AQ = According to the Question; ∴ = Therefore; ∵ = Because; ⇒ = Implies; ⇔ = If and only if; = = Equal to; ≠ = Not equal to; ≈ = Approximately equal to; ∠ = Angle; ⊥ = Perpendicular to; ∥ = Parallel to; △ = Triangle; ≅ = Congruent to; ∼ = Similar to; √ = Square root; π = Pi; ∝ = Proportional to.
+- HARD RULE — an allowed entry, while it carries its listed meaning, must appear in NO annotation, NO criteria note, NO summary and NO nextSteps as a problem, under ANY rationale: never call it filler, informal, shorthand or bad presentation. Concretely: "etc." ending a sentence or list is ALWAYS allowed for Et cetera and must never be flagged; "i.e." and "e.g." are always allowed for their meanings; "min"/"mins" is allowed for BOTH minute(s) and Minimum; "hr"/"hrs" for hour(s); "sec"/"secs" for second(s). BEFORE writing each annotation, check its target phrase against this list: if the only problem with the phrase is that it is an allowed shortform used correctly, DISCARD that annotation and emit nothing for it — the phrase is clean. A wrong meaning IS a misuse — annotate it and deduct as usual (e.g. writing "min." to mean "minor" must be flagged). Shortforms NOT in this list remain subject to annotation and deduction exactly as before.
+- PREFERRED NOT TO USE — these four are still accepted shorthand but boards prefer the full form, so STILL annotate each use of them: "Def." (Definition), "Thm." (Theorem), "CPCT" (Corresponding Parts of Congruent Triangles), "Q.E.D." (Hence Proved). For each, use severity "minor" and write in the explanation/remark that it is "preferred not to use" — give the full form — and that marks may be deducted for it.
+
 Respond ONLY with valid JSON matching this schema (no markdown fences):
 {
   "detectedQuestion": string,            // the question you detected being answered
@@ -290,5 +295,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const message = lastError instanceof Error ? lastError.message : String(lastError)
+  console.error('[answer-checker] all Gemini attempts failed:', message)
   return res.status(502).json({ error: friendlyError(message) })
 }
