@@ -4,6 +4,7 @@
 
 export interface ScienceQuestion {
   id: string; number: string; text: string;
+  figure?: string;
   parts?: string[];
   answer: { answerKey: string; solution: string; };
 }
@@ -716,7 +717,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "Father walked 250 m to shop, returned home (forgot bag), went to shop again, then returned home. Find total distance and displacement.",
+            "text": "My father went to a shop from home which is located at a distance of 250 m on a straight road. On reaching there, he discovered that he forgot to carry a cloth bag. He came home to take it, went to the shop again, bought provisions and came back home. How much was the total distance travelled by him? What was his displacement from home?",
             "answer": {
               "answerKey": "Total distance = 1000 m; Displacement = 0 m.",
               "solution": "4 trips of 250 m each.\n\n<u>Total distance</u> = 4 × 250 = <strong>1000 m</strong>\n\n<u>Displacement</u> = Start (home) to End (home) = <strong>0 m</strong>"
@@ -725,7 +726,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Student runs from ground floor to 4th floor (collect book), then to 2nd floor. Height of each floor = 3 m. Find (i) total vertical distance, (ii) displacement from start.",
+            "text": "A student runs from the ground floor to the fourth floor of a school building to collect a book and then comes down to their classroom on the second floor. If the height of each floor is 3 m, find: (i) the total vertical distance travelled, and (ii) their displacement from the starting point.",
             "answer": {
               "answerKey": "(i) 18 m total distance; (ii) 6 m upward displacement.",
               "solution": "Ground → 4th floor: 4 × 3 = 12 m (upward)\n4th → 2nd floor: 2 × 3 = 6 m (downward)\n\n(i) <u>Total distance</u> = 12 + 6 = <strong>18 m</strong>\n(ii) <u>Displacement</u> = Ground to 2nd floor = 2 × 3 = <strong>6 m upward</strong>"
@@ -734,7 +735,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "A girl's scooter speedometer reads constant. Is it possible for her scooter to be accelerating? If so, how?",
+            "text": "A girl is riding her scooter and finds that its speedometer reading is constant. Is it possible for her scooter to be accelerating and if so, how?",
             "answer": {
               "answerKey": "Yes — uniform circular motion: constant speed but changing direction = acceleration.",
               "solution": "Yes, the scooter can be accelerating even at constant speed. If moving along a <u>circular path</u>, the direction continuously changes. Since acceleration = change in velocity (speed or direction), this is <u>centripetal acceleration</u>."
@@ -743,7 +744,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q4",
             "number": "4",
-            "text": "A car starts from rest and reaches 24 m/s in 6 s. Find average acceleration and distance travelled.",
+            "text": "A car starts from rest and its velocity reaches 24 m s⁻¹ in 6 s. Find the average acceleration and the distance travelled in these 6 s.",
             "answer": {
               "answerKey": "Acceleration = 4 m/s²; Distance = 72 m.",
               "solution": "u = 0, v = 24 m s⁻¹, t = 6 s\n\n<u>Acceleration</u> a = (v–u)/t = 24/6 = <strong>4 m s⁻²</strong>\n\n<u>Distance</u> s = ut + ½At² = 0 + ½×4×36 = <strong>72 m</strong>"
@@ -752,7 +753,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "A motorbike at 28 m/s decelerates uniformly and stops after 98 m. Find acceleration and time to stop.",
+            "text": "A motorbike moving with initial velocity 28 m s⁻¹ and constant acceleration stops after travelling 98 m. Find the acceleration of the motorbike and the time taken to come to a stop.",
             "answer": {
               "answerKey": "Acceleration = –4 m/s²; Time = 7 s.",
               "solution": "u = 28 m s⁻¹, v = 0, s = 98 m\n\nv² = u² + 2as → 0 = 784 + 2a×98 → <u>a = –4 m s⁻²</u>\n\nv = u + at → 0 = 28 + (–4)t → <u>t = 7 s</u>"
@@ -761,7 +762,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "Fig. 4.27: position-time graph of objects A and B moving in same direction. Do they ever have equal velocity? Justify.",
+            "text": "Fig. 4.27 shows a position-time graph of two objects A and B that are moving along the parallel tracks in the same direction. Do objects A and B ever have equal velocity? Justify your answer.",
+              "figure": "/figs/science-ex4-rr-q6-fig4-27.png",
             "answer": {
               "answerKey": "Yes — at the instant where the slopes (tangents) of their position-time graphs are equal.",
               "solution": "<u>Velocity = slope</u> of position-time graph. Two objects have equal velocity at the instant where their tangent slopes are equal. For curved graphs, it may occur at one or more instants."
@@ -770,7 +772,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q7",
             "number": "7",
-            "text": "Graph: objects A and B have same initial and final positions over 0–10 s. Which options are correct: (i) equal avg velocity; (ii) equal avg speed; (iii) A's avg speed lower; (iv) A's avg speed greater?",
+            "text": "A graph in Fig. 4.28 shows the change in position with time for two objects A and B moving in a straight line from 0 to 10 seconds. Choose the correct option(s). (i) The average velocity of both over the 10 s time interval is equal since they have the same initial and final positions. (ii) The average speeds of both over the 10 s time interval are equal since both cover equal distance in equal time. (iii) The average speed of A over the 10 s time interval is lower than that of B since it covers a shorter distance than B in 10 seconds. (iv) The average speed of A over the 10 s time interval is greater than that of B since B's speed is lower than A's in some segments.",
+              "figure": "/figs/science-ex4-rr-q7-fig4-28.png",
             "answer": {
               "answerKey": "(i) and (ii) are correct.",
               "solution": "The two objects have the same initial and final positions, so their displacements are equal and therefore their <u>average velocities</u> are equal. From the graph, the total distances travelled are also equal, so their <u>average speeds</u> are equal."
@@ -779,7 +782,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q8",
             "number": "8",
-            "text": "Truck at 54 km/h slows to 36 km/h in 36 s (constant acceleration). What distance did he travel?",
+            "text": "A truck driver driving at a speed of 54 km h⁻¹ notices a road sign with a speed limit of 40 km h⁻¹ (Fig. 4.29) for trucks. He slows down to 36 km h⁻¹ in 36 s. What was the distance travelled by him during this time? Assume the acceleration to be constant while slowing down.",
+              "figure": "/figs/science-ex4-rr-q8-fig4-29.png",
             "answer": {
               "answerKey": "Distance = 450 m.",
               "solution": "u = 54 km h⁻¹ = 15 m s⁻¹; v = 36 km h⁻¹ = 10 m s⁻¹; t = 36 s\n\na = (10–15)/36 = –5/36 m s⁻²\n\n<u>s</u> = ut + ½at² = 15×36 + ½×(–5/36)×36² = 540 – 90 = <strong>450 m</strong>"
@@ -788,7 +792,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q9",
             "number": "9",
-            "text": "Car accelerates from rest to 20 m/s in 5 s, travels at 20 m/s for 10 s, brakes uniformly to stop in 6 s. Find total distance.",
+            "text": "A car starts from rest and accelerates uniformly to 20 m s⁻¹ in 5 seconds. It then travels at 20 m s⁻¹ for 10 seconds and finally applies the brake (with uniform acceleration) to stop in 6 seconds. Find the total distance travelled.",
             "answer": {
               "answerKey": "Total distance = 310 m.",
               "solution": "Phase 1 (acceleration): s₁ = ½×20×5 = 50 m\nPhase 2 (constant speed): s₂ = 20×10 = 200 m\nPhase 3 (braking): s₃ = (20+0)/2×6 = 60 m\n\n<u>Total distance</u> = 50 + 200 + 60 = <strong>310 m</strong>"
@@ -797,7 +801,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "Bus at 36 km/h. Driver reacts in 0.5 s, then brakes at –2.5 m/s². Obstacle 30 m away. Will the bus stop in time?",
+            "text": "A bus is travelling at 36 km h⁻¹ when the driver sees an obstacle 30 m ahead. The driver takes 0.5 seconds to react before pressing the brake. Once the brake is applied, the velocity of the bus reduces with constant acceleration of 2.5 m s⁻². Will the bus be able to stop before reaching the obstacle?",
             "answer": {
               "answerKey": "Yes — total stopping distance = 25 m < 30 m. Bus stops safely.",
               "solution": "u = 36 km h⁻¹ = 10 m s⁻¹\n\nReaction distance = 10 × 0.5 = 5 m\nBraking: 0 = 100 + 2(–2.5)s → s = 20 m\n\nTotal = 5 + 20 = 25 m < 30 m → <u>Bus stops safely.</u>"
@@ -806,7 +810,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q11",
             "number": "11",
-            "text": "\"The Earth moves around the Sun.\" Can an object on Earth be considered at rest?",
+            "text": "A student said, \"The Earth moves around the Sun\". In this context, discuss whether an object kept on the Earth can be considered to be at rest.",
             "answer": {
               "answerKey": "Yes — motion is relative; an object is at rest relative to Earth even though Earth moves.",
               "solution": "<u>Motion is relative</u>. An object on Earth is at rest relative to Earth (same reference frame). Relative to the Sun, it moves with Earth. We choose the reference frame based on convenience."
@@ -815,7 +819,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q12",
             "number": "12",
-            "text": "Velocity-time graph for a cyclist (0–120 s). Shade constant velocity and decreasing velocity regions. Calculate total displacement and average acceleration.",
+            "text": "The velocity-time graph from 0 s to 120 s for a cyclist is shown in Fig. 4.30. Shade the areas (in different colours) representing the displacement of the cyclist (i) while cyclist is moving with constant velocity. (ii) when the velocity of cyclist is decreasing. Also, calculate the displacement and average acceleration in the 120 s time interval.",
+              "figure": "/figs/science-ex4-rr-q12-fig4-30.png",
             "answer": {
               "answerKey": "Displacement = 320 m; average acceleration = 1/60 m s⁻².",
               "solution": "From Fig. 4.30: displacement = triangular area (0–20 s) + rectangular area (20–100 s) + trapezoidal area (100–120 s) = ½×20×3 + 80×3 + ½×(3+2)×20 = <strong>320 m</strong>. Average acceleration = (final velocity − initial velocity)/time = (2−0)/120 = <strong>1/60 m s⁻²</strong>."
@@ -824,7 +829,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q13",
             "number": "13",
-            "text": "A girl's velocity-time graph shows her running. Estimate distance from graph.",
+            "text": "A girl is preparing for her first marathon by running on a straight road. She uses a smartwatch to calculate her running speed at different intervals. The graph (Fig. 4.31) depicts her velocity versus time. Estimate the distance she ran based on the graph.",
+              "figure": "/figs/science-ex4-rr-q13-fig4-31.png",
             "answer": {
               "answerKey": "Area under velocity-time graph = total distance ≈ 774 m.",
               "solution": "Estimate <u>area under v-t graph</u> using geometric shapes (triangles/rectangles/trapezoids).\n\nPer book data: <u>Total distance ≈ 774 m</u>\n\nMethod: Break graph into triangles and rectangles; calculate each area and sum."
@@ -833,7 +839,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q14",
             "number": "14",
-            "text": "Car at constant 6 m/s for 2 min, then accelerates at 1 m/s² for 6 s. Find total displacement.",
+            "text": "On entering a state highway, a car continues to move with a constant velocity of 6 m s⁻¹ for 2 minutes and then accelerates with a constant acceleration 1 m s⁻² for 6 seconds. Find the displacement of the car on the state highway in the 2 min + 6 s time interval by drawing a velocity-time graph for its motion.",
             "answer": {
               "answerKey": "Total displacement = 774 m.",
               "solution": "Phase 1: t = 120 s, v = 6 m s⁻¹ → s₁ = 6×120 = 720 m\n\nPhase 2: u = 6, a = 1 m s⁻², t = 6 s → s₂ = 6×6 + ½×1×36 = 36+18 = 54 m\n\n<u>Total displacement</u> = 720 + 54 = <strong>774 m</strong>"
@@ -842,7 +848,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q15",
             "number": "15",
-            "text": "Car A reaches 5 m/s in 5 s; Car B reaches 3 m/s in 10 s (both from rest). Plot v-t graphs. Find displacement for A (0–5 s) and B (0–10 s).",
+            "text": "Two cars A and B start moving with a constant acceleration from rest, in a straight line. Car A attains a velocity of 5 m s⁻¹ in 5 s. Car B attains a velocity of 3 m s⁻¹ in 10 s. Plot the velocity-time graphs for both the cars in the same graph. Using the graph, calculate the displacement in the two time intervals mentioned (Hint: Calculate the acceleration in both cases. Then calculate their velocities at five instants of time to plot the graph).",
             "answer": {
               "answerKey": "A: a = 1 m/s², displacement = 12.5 m. B: a = 0.3 m/s², displacement = 15 m.",
               "solution": "Car A: a = 5/5 = 1 m s⁻²; s = ½×1×25 = <strong>12.5 m</strong>\n\nCar B: a = 3/10 = 0.3 m s⁻²; s = ½×0.3×100 = <strong>15 m</strong>\n\nV-t graph: both are straight lines from origin — A steeper (slope 1); B less steep (slope 0.3)."
@@ -851,7 +857,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q16",
             "number": "16",
-            "text": "Rohan studies 6 PM to 7:30 PM. Minute hand length = 7 cm. Find (i) distance, (ii) displacement, (iii) speed, (iv) velocity of minute hand tip.",
+            "text": "Rohan studies science from 6 PM to 7:30 PM at home. Consider the tip of the minute's hand of the wall clock. During the given time interval, what is its: (i) distance travelled, (ii) displacement, (iii) speed, and (iv) velocity. The length of the minute's hand is 7 cm (Fig. 4.32).",
+              "figure": "/figs/science-ex4-rr-q16-clock.png",
             "answer": {
               "answerKey": "(i) 66 cm; (ii) 14 cm; (iii) 11/900 cm/s; (iv) 7/2700 cm/s.",
               "solution": "Time = 90 min = 5400 s; 1.5 revolutions; Circumference = 2π×7 ≈ 44 cm\n\n(i) <u>Distance</u> = 1.5×44 = <strong>66 cm</strong>\n(ii) After 1.5 rev, hand at 9 o'clock; <u>Displacement</u> = 2×7 = <strong>14 cm</strong> (diameter)\n(iii) <u>Speed</u> = 66/5400 = <strong>11/900 cm s⁻¹</strong>\n(iv) <u>Velocity</u> = 14/5400 = <strong>7/2700 cm s⁻¹</strong>"
@@ -918,7 +925,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "A talcum powder contains 4% m/m zinc oxide. How much zinc oxide is in 300 g of talcum powder?",
+            "text": "A common talcum powder contains 4 % m/m zinc oxide, which acts as an antiseptic. How much zinc oxide is present in 300 g of the talcum powder?",
             "answer": {
               "answerKey": "12 g of zinc oxide.",
               "solution": "Mass of ZnO = (4/100) × 300 = <strong>12 g</strong>"
@@ -927,7 +934,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Two tablespoons (15 mL each) of orange juice concentrate mixed with water to make 150 mL. What is % v/v of concentrate?",
+            "text": "Your mother gives you a bottle of orange juice concentrate to mix with water and serve it to your visiting guests. She asks you to mix two tablespoons of the concentrate with water in a glass tumbler. If each tablespoons measures 15 mL and you make 150 mL of juice per person, what is the % v/v of orange juice concentrate in the mixture you prepared?",
             "answer": {
               "answerKey": "20% v/v.",
               "solution": "Volume of concentrate = 2×15 = 30 mL; Total volume = 150 mL\n\n<u>% v/v</u> = (30/150) × 100 = <strong>20% v/v</strong>"
@@ -936,7 +943,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "Vinegar = 5% v/v acetic acid. How would you make vinegar from glacial (100%) acetic acid?",
+            "text": "Vinegar, used as a food preservative and additive, contains 5 % v/v acetic acid. Glacial acetic acid, a liquid, i.e., 100% acetic acid. If you want to make vinegar from glacial acetic acid, how would you proceed?",
             "answer": {
               "answerKey": "Take 5 mL glacial acetic acid, add 95 mL distilled water to make 100 mL of 5% v/v solution.",
               "solution": "Take <u>5 mL of glacial acetic acid</u>. Slowly add 95 mL of distilled water while stirring. Final solution = 100 mL of 5% v/v vinegar. (Always add acid to water — never water to acid.)"
@@ -945,7 +952,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q4",
             "number": "4",
-            "text": "Equal masses of hot saturated solutions of A and B are cooled from 80°C to 60°C. Which deposits more solid?",
+            "text": "Refer to the solubility curves given in Activity 5.2. If equal masses of hot, saturated solutions of compounds 'A' and 'B' are cooled from 80 °C to 60 °C, which solution is likely to deposit more solid?",
+              "figure": "/figs/science-ex5-pp-q4-solubility.png",
             "answer": {
               "answerKey": "The compound whose solubility decreases more sharply between 80°C and 60°C deposits more solid.",
               "solution": "The amount of solid deposited equals the <u>decrease in solubility</u> × mass of solvent. The compound with a steeper solubility curve between 80°C and 60°C has greater decrease in solubility → deposits more crystals."
@@ -954,7 +962,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "Will the size of common salt crystals change if rate of evaporation is increased or decreased?",
+            "text": "Will there be any change in the size of common salt crystals if the rate of evaporation is increased or decreased? Explain.",
             "answer": {
               "answerKey": "Faster evaporation → smaller crystals. Slower evaporation → larger, well-shaped crystals.",
               "solution": "At <u>faster evaporation</u>: salt crystallises rapidly → many small crystals form simultaneously. At <u>slower evaporation</u>: gradual crystallisation → fewer, larger, well-shaped crystals. Rate of evaporation controls nucleation and crystal growth."
@@ -963,7 +971,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "State True/False: (i) Salt separated by evaporation or distillation; (ii) Distillation works for same boiling point; (iii) Solvent level should be above sample spot; (iv) Evaporation and crystallization are same.",
+            "text": "State whether the following statements are True or False. Also, correct the False statements. (i) Salt can be separated from a salt solution by evaporation or distillation. (ii) Distillation can be used for separation of two liquids even when these have the same boiling point. (iii) In paper chromatography, the solvent level should be above the sample spot at the beginning of the experiment. (iv) Evaporation and crystallization are the same processes.",
             "answer": {
               "answerKey": "(i) True. (ii) False. (iii) False. (iv) False.",
               "solution": "(i) <u>True</u> — both evaporation and distillation can separate salt from water. (ii) <u>False</u> — distillation works for liquids with different boiling points. (iii) <u>False</u> — solvent level must be below the sample spot (chromatography). (iv) <u>False</u> — evaporation removes solvent only; crystallisation controls cooling rate to form pure crystals."
@@ -990,7 +998,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q9",
             "number": "9",
-            "text": "Clouds are made of tiny water droplets or ice crystals in air. What type of mixture are clouds?",
+            "text": "Clouds are made up of tiny water droplets or ice crystals floating in the air. Based on what you know about solutions, suspensions and colloids, what type of mixture do you think clouds are and why?",
             "answer": {
               "answerKey": "Colloid (aerosol) — liquid/solid particles dispersed in gas (air).",
               "solution": "Clouds are <u>colloids (aerosols)</u>: tiny water droplets (1–1000 nm) dispersed in air. They show the <u>Tyndall effect</u>, do not settle quickly, and cannot be separated by filtration."
@@ -999,7 +1007,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "Why do cities with a lot of smoke and dust look hazy?",
+            "text": "Why do cities with a lot of smoke and dust in the air often look hazy?",
             "answer": {
               "answerKey": "Smoke/dust particles form a colloid that scatters light (Tyndall effect), reducing visibility.",
               "solution": "Smoke and dust particles form a <u>colloidal system</u> in air. These particles scatter light — the <u>Tyndall effect</u> — making the sky look hazy and opaque. Scattering reduces direct transmission of sunlight, limiting visibility."
@@ -1014,7 +1022,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "Which are correctly classified as homogeneous (Hm) and heterogeneous (Ht)? Options (i)–(iv) given.",
+            "text": "Which of the following mixtures are correctly classified as homogeneous (Hm) and heterogeneous (Ht)? Choose the correct option. (i) Air — Hm, Milk — Ht, Sugar solution — Hm, Smoke — Hm (ii) Brass — Ht, Fog — Ht, Vinegar — Ht, Muddy water — Hm (iii) Copper sulfate solution — Hm, Salt solution — Hm, Milk — Hm, Bronze — Hm (iv) Muddy water — Ht, Milk — Ht, Blood — Ht, Brass — Hm",
             "answer": {
               "answerKey": "(iv) is correct: Muddy water–Ht, Milk–Ht, Blood–Ht, Brass–Hm.",
               "solution": "Option (iv) is correct: Muddy water — <u>Ht</u> (suspension); Milk — <u>Ht</u> (colloid); Blood — <u>Ht</u> (colloid); Brass — <u>Hm</u> (alloy, uniform composition). Option (iii) is wrong: Milk is a colloid (heterogeneous), not homogeneous."
@@ -1023,7 +1031,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Which mixtures show the Tyndall Effect? (a) air and dust; (b) CuSO₄ + water; (c) starch + water; (d) acetone + water.",
+            "text": "Choose the correct options, and explain the reason for the correct and incorrect options. Which among the following mixtures show the Tyndall Effect? A mixture of: (a) air and dust particles (b) copper sulfate and water (c) starch and water (d) acetone and water (i) a and b (ii) b and d (iii) a and c (iv) c and d",
             "answer": {
               "answerKey": "(iii) a and c are colloids and show the Tyndall Effect.",
               "solution": "Option (iii) a and c is correct. (a) Air + dust — <u>colloidal aerosol</u> → Tyndall effect. (c) Starch + water — <u>colloidal sol</u> → Tyndall effect. (b) CuSO₄ + water and (d) acetone + water — true solutions → no Tyndall effect."
@@ -1041,7 +1049,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q4",
             "number": "4",
-            "text": "(i) Cake recipe: 75 g sugar, 420 g flour, 5 g NaHCO₃. Express % m/m. (ii) Brass = 70% Cu. Quantities in 120 g brass?",
+            "text": "Solve the following problems: (i) A cake recipe uses dry ingredients, namely 75 g of sugar for 420 g of all-purpose flour and 5 g of sodium hydrogencarbonate. Express the concentration of each component in the mixture using an appropriate method. (ii) A brass alloy contains 70% copper by mass. Calculate the quantities of copper and zinc present in 120 g of brass.",
             "answer": {
               "answerKey": "(i) Sugar=15%, Flour=84%, NaHCO₃=1%. (ii) Cu=84 g, Zn=36 g.",
               "solution": "(i) Total = 500 g; Sugar: <u>15%</u>; Flour: <u>84%</u>; NaHCO₃: <u>1%</u>\n(ii) Cu = 70% of 120 = <u>84 g</u>; Zn = 30% of 120 = <u>36 g</u>"
@@ -1050,7 +1058,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "A 1-litre (910 g) cooking oil pack mixed with water — separate layer? Which on top? How to separate? Draw diagram.",
+            "text": "The label on a cooking oil pack says one litre (910 g). If this oil is mixed with water, will it form a separate layer? If so, which substance will be on top? How will you separate the two layers? Also, draw the diagram of the apparatus used.",
             "answer": {
               "answerKey": "Yes — oil less dense, floats on top. Separate using a separating funnel.",
               "solution": "Oil is immiscible with water and less dense (910 g/L vs water 1000 g/L) → <u>oil floats on top</u>. Separation: <u>Separating funnel</u> — water (denser) drains from bottom stopcock; oil remains on top and is collected."
@@ -1059,7 +1067,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "Assertion: Solutions do not exhibit Tyndall effect. Reason: Particles in solutions are larger than 100 nm.",
+            "text": "Assertion (A): Solutions do not exhibit the Tyndall effect. Reason (R): The particles in solutions are larger than 100 nm, so they cannot scatter light. Choose the correct option: (i) Both A and R are true, and R is the correct explanation of A. (ii) Both A and R are true, but R is not the correct explanation of A. (iii) A is true, but R is false. (iv) A is false, but R is true.",
             "answer": {
               "answerKey": "(iii) Assertion true, Reason false — solution particles are <1 nm, not >100 nm.",
               "solution": "Option (iii) is correct. <u>Assertion is true</u>: Solutions do not show Tyndall effect. <u>Reason is false</u>: Solution particles are smaller than 1 nm — too small to scatter light. Tyndall effect requires particles in the 1–1000 nm (colloidal) range."
@@ -1068,7 +1076,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q7",
             "number": "7",
-            "text": "How would you separate: Mud from muddy water; Plasma from blood; Naphthalene and sand; Chalk and common salt; Common salt and water; Oil from water; Pigments of a flower?",
+            "text": "How would you separate the mixtures given in Table 5.3? Mention the reason for choosing your method. If a mixture cannot be separated, explain why.",
             "answer": {
               "answerKey": "Filtration; Centrifugation; Sublimation; Filtration+Evaporation; Evaporation/Distillation; Separating funnel; Chromatography.",
               "solution": "Mud from muddy water: <u>Filtration</u>.\nPlasma from blood: <u>Centrifugation</u>.\nNaphthalene and sand: <u>Sublimation</u>.\nChalk and salt: <u>Filter</u> (chalk) → evaporate filtrate (salt).\nSalt and water: <u>Evaporation</u> or Distillation.\nOil from water: <u>Separating funnel</u>.\nFlower pigments: <u>Chromatography</u>."
@@ -1077,7 +1085,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q8",
             "number": "8",
-            "text": "Two miscible liquids A (b.p. 60°C) and B (b.p. 90°C) to be separated. Suggest method and draw diagram.",
+            "text": "Two miscible liquids, A and B, are present in a mixture. The boiling point of A is 60 °C and the boiling point of B is 90 °C. Suggest a method to separate them. Also, draw a labelled diagram of the method suggested.",
             "answer": {
               "answerKey": "Fractional distillation — A distils at 60°C first, then B at 90°C.",
               "solution": "Method: <u>Fractional Distillation</u>. Heat mixture in a round-bottom flask. Liquid A (b.p. 60°C) vaporises first → passes through fractionating column → condenses → collected. Raise temperature to 90°C → B distils.\nDiagram: flask → fractionating column → condenser → collection flask."
@@ -1086,7 +1094,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q9",
             "number": "9",
-            "text": "Compare evaporation, crystallization, and distillation. When would you prefer each?",
+            "text": "Compare evaporation, crystallization and distillation. In which situation, would you prefer each of these over the others?",
             "answer": {
               "answerKey": "Evaporation: recover solid. Crystallization: pure crystals. Distillation: separate liquids with different boiling points.",
               "solution": "<u>Evaporation</u>: preferred to recover solid solute from solution (e.g., table salt from brine).\n<u>Crystallization</u>: preferred for pure solid crystals — e.g., pure alum crystals.\n<u>Distillation</u>: preferred to separate miscible liquids with different boiling points."
@@ -1095,7 +1103,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "Blood is a colloidal mixture. (i) What if blood behaved like a true suspension? (ii) Identify dispersed phase and medium.",
+            "text": "Blood is an example of a colloidal mixture. (i) What would happen if blood behaved like a true suspension inside the body? (ii) In a blood sample, identify the dispersed phase and the dispersion medium.",
             "answer": {
               "answerKey": "(i) Blood cells would settle — fatal. (ii) Dispersed phase: blood cells/proteins; Medium: plasma.",
               "solution": "(i) If blood were a suspension, blood cells would settle at vessel bottoms → blocking circulation → fatal. (ii) <u>Dispersed phase</u>: RBCs, WBCs, platelets, proteins. <u>Dispersion medium</u>: plasma (mostly water)."
@@ -1104,7 +1112,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q11",
             "number": "11",
-            "text": "You have a mixture of sand, common salt, and naphthalene. Write the correct sequence of separation from Fig. 5.25b.",
+            "text": "You are given a mixture of sand, common salt and naphthalene (Fig. 5.25a). The Fig. 5.25b depicts various steps used to separate the components of this mixture. Identify and write down the correct sequence of separation techniques.",
+              "figure": "/figs/science-ex5-rr-q11-fig5-25.png",
             "answer": {
               "answerKey": "Sublimation (naphthalene) → Filter/dissolve in water (sand) → Evaporate (common salt).",
               "solution": "Step 1 — <u>Sublimation</u>: Heat mixture → naphthalene sublimes, collected on cold surface.\nStep 2 — <u>Dissolve + Filter</u>: Add water to sand+salt → filter to remove sand.\nStep 3 — <u>Evaporation</u>: Evaporate filtrate → common salt recovered."
@@ -1122,7 +1131,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q13",
             "number": "13",
-            "text": "Using solubility table: (i) Mass of KNO₃ for saturated solution in 50 g water at 40°C? (ii) What happens when KCl saturated at 80°C is cooled to 25°C? (iii) Effect of temperature on solubility?",
+            "text": "Answer the following questions with the help of the data given in Table 5.4. (i) What mass of potassium nitrate would be needed to prepare its saturated solution in 50 g of water at 40 °C? (ii) A student makes a saturated solution of potassium chloride in water at 80 °C and leaves the solution to cool at room temperature (25 °C). What would she observe as the solution cools? Explain. (iii) What is the effect of temperature on the solubility of salts? Also, compare the changes in the solubility of the four given salts with increasing temperature from 10 °C to 80 °C.",
             "answer": {
               "answerKey": "(i) 31 g. (ii) KCl crystals precipitate. (iii) Solubility of most solids increases with temperature.",
               "solution": "(i) KNO₃ solubility at 40°C = 62 g/100 g water. For 50 g: 62×50/100 = <u>31 g</u>\n(ii) Solubility of KCl drops from ~54 g/100 g (80°C) to ~35 g/100 g (25°C) → ~19 g of KCl <u>crystallises out</u>.\n(iii) Solubility of KNO₃, KCl, NH₄Cl increases with temperature; NaCl shows very little change."
@@ -1131,7 +1140,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q14",
             "number": "14",
-            "text": "Student A: 20 g sugar in 80 g water. B: 20 g sugar in 100 g water. C: 30 g sugar in 80 g water. (i) % m/m for each. (ii) Who has most concentrated?",
+            "text": "Three students, A, B and C, are preparing sugar solutions for an experiment: • Student A dissolves 20 g of sugar in 80 g of water. • Student B dissolves 20 g of sugar in 100 g of water. • Student C dissolves 30 g of sugar in 80 g of water. (i) Calculate the mass percentage (% m/m) concentration of sugar in each student's solution. (ii) Whose solution is the most concentrated? Explain why.",
             "answer": {
               "answerKey": "(i) A=20%, B=16.67%, C=27.27%. (ii) Student C.",
               "solution": "A: (20/100)×100 = <u>20%</u>\nB: (20/120)×100 = <u>16.67%</u>\nC: (30/110)×100 = <u>27.27%</u>\n\n<u>Student C</u> has the most concentrated solution."
@@ -1140,7 +1149,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q15",
             "number": "15",
-            "text": "Examine Fig. 5.26: (i) Identify separation technique S. (ii) Label A, B, C. (iii) Which mixtures from Table 5.5 can be separated? (a) water-acetone; (b) water-salt; (c) acetone-alcohol; (d) sand-salt; (e) alcohol-chloroform; (f) alcohol-benzene.",
+            "text": "Examine Fig. 5.26. (i) Identify the separation technique marked as 'S'. (ii) Label the apparatus A, B and C. (iii) Which of the following mixtures can be separated by the technique identified above? Use the data given in Table 5.5. Mixtures: (a) water — acetone (b) water — salt (c) acetone — alcohol (d) sand — salt (e) alcohol — chloroform (f) alcohol — benzene.",
+              "figure": "/figs/science-ex5-rr-q15-fig5-26.png",
             "answer": {
               "answerKey": "(i) Distillation. (ii) A=flask, B=thermometer, C=condenser. (iii) a, c, e, f (miscible liquids with different b.p.).",
               "solution": "(i) Technique S = <u>Distillation</u>.\n(ii) A = Round-bottom flask; B = Thermometer; C = Condenser.\n(iii) Can be separated: (a) water–acetone ✓; (c) acetone–alcohol ✓; (e) alcohol–chloroform ✓; (f) alcohol–benzene ✓.\nCannot: (b) water–salt (not liquid-liquid); (d) sand–salt (solid mixture)."
@@ -1330,7 +1340,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "Block P has two opposing forces (4 N and 5 N). Block Q moves at constant velocity. Which option is correct? (i) P has net force, Q does not.",
+            "text": "Two blocks P and Q on a smooth horizontal surface are shown in Fig. 6.36a and Fig. 6.36b. Two forces of magnitudes 4 N and 5 N are acting in opposite directions on block P, while block Q is moving with a constant velocity. Which of the following statement is correct? (i) P experiences a net force and Q does not experience a net force. (ii) P does not experience a net force and Q experiences a net force. (iii) Both P and Q experience a net force. (iv) Neither P nor Q experiences a net force.",
+              "figure": "/figs/science-ex6-rr-q3-fig6-36.png",
             "answer": {
               "answerKey": "(i) is correct — P: net force = 1 N; Q: constant velocity → net force = 0.",
               "solution": "Option (i) is correct. Block P: net force = 5–4 = <u>1 N</u> (net force present). Block Q: constant velocity → acceleration = 0 → <u>net force = 0</u>."
@@ -1339,7 +1350,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q4",
             "number": "4",
-            "text": "100 oarsmen in a snake boat: 95 row forward (200 N each), 5 row backward (200 N each). Find net force.",
+            "text": "While practising for the snake boat race (Vallum kalli in Kerala), 100 oarsmen are rowing a boat together. Out of these, 95 row backwards to propel the boat forward. But by mistake, 5 oarsmen row in the opposite direction. If each oarsman applies a horizontal force of 200 N, what is the net force on the snake boat? (Ignore drag forces, air friction, etc.)",
             "answer": {
               "answerKey": "Net force = 18,000 N forward.",
               "solution": "Forward force = 95 × 200 = 19,000 N\nBackward force = 5 × 200 = 1,000 N\n\n<u>Net force</u> = 19,000 – 1,000 = <strong>18,000 N (forward)</strong>"
@@ -1348,7 +1359,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "When net force acts on an object, it: (iv) accelerates in direction of force, proportional to force.",
+            "text": "When a net force acts on an object, we observe that the object accelerates: (i) opposite to the direction of force, with acceleration proportional to the force acting on the object. (ii) opposite to the direction of force, with acceleration proportional to the mass of the object. (iii) in the direction of force, with acceleration inversely proportional to the force acting on the object. (iv) in the direction of force, with acceleration proportional to the force acting on the object.",
             "answer": {
               "answerKey": "(iv) is correct — Newton's Second Law: F = ma.",
               "solution": "Option (iv) is correct. By <u>Newton's Second Law</u>: F = ma. Object accelerates in the direction of the net force, with acceleration proportional to force and inversely proportional to mass."
@@ -1358,6 +1369,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q6",
             "number": "6",
             "text": "Position-time graphs for A, B, C, D. Net force acts on which object?",
+              "figure": "/figs/science-ex6-rr-q6-fig6-37.png",
             "answer": {
               "answerKey": "Object C — curved position-time graph indicates changing velocity (acceleration), hence net force.",
               "solution": "A net force causes acceleration = changing velocity → shown as a <u>curved line</u> on a position-time graph. A straight line = uniform velocity = no net force. <u>Object C</u> (curved graph) has acceleration → net force acts."
@@ -1367,6 +1379,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q7",
             "number": "7",
             "text": "A sailor jumps from a small boat to the shore. Does the boat move? In which direction? Why?",
+              "figure": "/figs/science-ex6-rr-q7-fig6-38.png",
             "answer": {
               "answerKey": "Yes — boat moves backward (Newton's Third Law: equal and opposite reaction).",
               "solution": "Yes, the boat moves <u>backward</u>. By <u>Newton's Third Law</u>: when the sailor pushes off the boat forward, the boat receives an equal and opposite reaction force → moves away from the shore."
@@ -1376,6 +1389,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q8",
             "number": "8",
             "text": "During high jump, a landing mat or sand bed is placed. Explain the reason.",
+              "figure": "/figs/science-ex6-rr-q8-fig6-39.png",
             "answer": {
               "answerKey": "Soft mat increases time of impact, reducing force on athlete (impulse = F × t = constant).",
               "solution": "By Newton's Second Law: F = Δp/Δt. A soft mat <u>increases the time (Δt)</u> for the athlete to stop. Since the change in momentum is fixed, larger Δt means <u>smaller force</u> on the athlete → prevents injury."
@@ -1384,7 +1398,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q9",
             "number": "9",
-            "text": "A loaded cart collides with an identical empty cart. Which exerts a larger force? (iv) Equal magnitude.",
+            "text": "A hand cart loaded with vegetables collides with an identical but empty hand cart. During the collision: (i) the loaded cart exerts a force of larger magnitude on the empty cart. (ii) the empty cart exerts a force of larger magnitude on the loaded cart. (iii) neither cart exerts a force on the other. (iv) the loaded cart and the empty cart, both exert an equal magnitude of force on each other.",
             "answer": {
               "answerKey": "Newton's Third Law: every action has an equal and opposite reaction.",
               "solution": "Option (iv) is correct. By <u>Newton's Third Law</u>: during collision, both carts exert <u>equal and opposite forces</u> on each other, regardless of their masses."
@@ -1394,6 +1408,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q10",
             "number": "10",
             "text": "Acceleration-mass graph shows constant force F. Plot the force-mass graph.",
+              "figure": "/figs/science-ex6-rr-q10-fig6-40.png",
             "answer": {
               "answerKey": "Force-mass graph is a horizontal straight line (F = constant regardless of mass).",
               "solution": "From a–m graph: a = F/m → a∝1/m (hyperbola). For the <u>Force-mass graph</u>: since F is constant, it is a <u>horizontal straight line</u> parallel to the mass-axis. Force does not change with mass (it is externally fixed)."
@@ -1403,6 +1418,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q11",
             "number": "11",
             "text": "Velocity-time graph for a 10 kg object (Fig. 6.41). Calculate force acting on it.",
+              "figure": "/figs/science-ex6-rr-q11-fig6-41.png",
             "answer": {
               "answerKey": "Force = 25 N.",
               "solution": "From graph: a = slope of v-t graph\n\nF = ma = 10 × 2.5 = <strong>25 N</strong>"
@@ -1411,7 +1427,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q12",
             "number": "12",
-            "text": "Bullet: mass 50 g, velocity 100 m/s, penetrates 50 cm of wood and stops. Estimate stopping force.",
+            "text": "A bullet of mass 50 g moving with a speed of 100 m s⁻¹ enters a heavy stationary wooden block and stops after penetrating a distance of 50 cm. Estimate the stopping force acting on the bullet (assume that the bullet undergoes constant acceleration within the block).",
             "answer": {
               "answerKey": "Stopping force = 500 N.",
               "solution": "m = 0.05 kg; u = 100 m s⁻¹; v = 0; s = 0.5 m\n\nv² = u² + 2as → 0 = 10000 + 2a×0.5 → a = –10000 m s⁻²\n\n<u>F</u> = ma = 0.05 × 10000 = <strong>500 N</strong> (opposing motion)"
@@ -1447,7 +1463,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q16",
             "number": "16",
-            "text": "Bar magnet brought near a compass needle. Needle moves; magnet does not. Explain using Newton's Third Law.",
+            "text": "When the pole of a bar magnet is brought close to a magnetic compass, the bar magnet and the compass needle (which is also a magnet) exert a magnetic force on each other. As per Newton's third law of motion, both the forces are equal in magnitude and opposite in direction. However, the compass needle moves, whereas the bar magnet does not move (Fig. 6.42). Explain why.",
+              "figure": "/figs/science-ex6-rr-q16-fig6-42.png",
             "answer": {
               "answerKey": "Forces are equal, but compass needle has negligible mass — small force gives it large acceleration.",
               "solution": "Newton's Third Law holds: both experience equal and opposite magnetic forces. The compass needle has very small mass → by Newton's Second Law, a = F/m → <u>large acceleration</u> → rotates noticeably. Bar magnet has much larger mass → negligible acceleration."
@@ -1683,6 +1700,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q7",
             "number": "7",
             "text": "For the situation depicted in Fig. 7.19, calculate the mechanical energy of the ball just before it hits the ground and show that even at this position, it is mgh.",
+              "figure": "/figs/science-ex7-pp-q7-fig7-19.png",
             "answer": {
               "answerKey": "The mechanical energy just before impact is mgh, equal to the initial potential energy (ignoring dissipative losses).",
               "solution": "Mechanical energy = kinetic + potential. Just before impact, the ball has converted the initial potential energy into kinetic energy (with zero height reference at the ground), so <u>E = K + U = mgh</u>."
@@ -1692,6 +1710,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q8",
             "number": "8",
             "text": "You may have seen an exhibit like that in Fig. 7.22 in a science park, where a ball is released from the highest point. Describe how the kinetic energy and potential energy change at points A, B and C. Why do subsequent points, such as C, D and E, usually have lower heights compared to the previous ones? Could it have anything to do with the energy lost due to friction?",
+              "figure": "/figs/science-ex7-pp-q8-fig7-22.png",
             "answer": {
               "answerKey": "As the ball descends, potential energy decreases and kinetic energy increases; as it climbs, the reverse occurs. Later peaks are lower because mechanical energy is lost mainly to friction and air resistance.",
               "solution": "At a high point A the ball has more <u>potential energy</u> and less kinetic energy. Moving downward toward B, PE decreases and KE increases. Climbing toward C, KE decreases and PE increases. In a real system, friction and air resistance convert part of the mechanical energy into thermal energy, so successive turning points are lower."
@@ -1700,7 +1719,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q9",
             "number": "9",
-            "text": "Explain why roads on hills are built to wind around in gentle slopes rather than going straight up (Fig. 4.26)?",
+            "text": "Explain why roads on hills are built to wind around in gentle slopes rather than going straight up (Fig. 4.26).",
             "answer": {
               "answerKey": "An inclined road increases the distance over which the same height is gained, reducing the force needed at any instant.",
               "solution": "For a given height, a gentler slope means a longer path. The component of the vehicle’s weight along the slope is smaller, so the required driving force is reduced. The total gain in gravitational potential energy is still mgh."
@@ -1710,6 +1729,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q10",
             "number": "10",
             "text": "To reach a higher floor, we find climbing an inclined ladder easier in comparison to climbing a vertical ladder (Fig. 7.30). Explain why.",
+              "figure": "/figs/science-ex7-pp-q10-fig7-30.png",
             "answer": {
               "answerKey": "The inclined ladder provides a longer path, reducing the required upward force for the same gain in height.",
               "solution": "An inclined ladder increases the distance over which the same vertical height is gained, reducing the component of gravitational force that must be overcome at any instant. The work against gravity remains approximately mgh, but the required force is smaller."
@@ -1719,6 +1739,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q11",
             "number": "11",
             "text": "Why is it easier to open the lid of a can by using a spoon as shown in Fig. 7.35?",
+              "figure": "/figs/science-ex7-pp-q11-fig7-35.png",
             "answer": {
               "answerKey": "The spoon acts as a lever, increasing the turning effect of the applied force about the fulcrum.",
               "solution": "The spoon is a <u>lever</u>. Its long effort arm produces a larger turning effect (torque) for the same hand force, making it easier to lift the lid."
@@ -1736,7 +1757,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q13",
             "number": "13",
-            "text": "Throughout history, many designs of perpetual machines (using wheels, weights or magnets) have been proposed but none actually work. Why do all real machines eventually slow down and stop? Explain in terms of work and energy.",
+            "text": "Throughout history, many designs of perpetual machines (using wheels, weights or magnets) have been proposed but never actually work. Why do all real machines eventually slow down and stop? Explain in terms of work and energy.",
             "answer": {
               "answerKey": "Real machines always dissipate some mechanical energy through friction, air resistance, deformation and other losses, so no machine can run forever without energy input.",
               "solution": "Real machines cannot avoid dissipative forces such as <u>friction</u> and air resistance. These convert useful mechanical energy into thermal energy (and sound, deformation, etc.). Without continuous external energy input, the machine’s useful mechanical energy decreases and it eventually slows and stops."
@@ -1751,7 +1772,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "True or False: (i) Work done if object doesn't move; (ii) Lifting bucket vertically = positive work; (iii) SI unit of work = joule; (iv) Motionless stretched rubber band has KE; (v) Energy can change form.",
+            "text": "State whether True or False.\n\n(i) Work is said to be done when a force is applied, even if the object does not move.\n\n(ii) Lifting a bucket vertically upward results in positive work done on the bucket.\n\n(iii) The SI unit for both work and energy is joule (J).\n\n(iv) A motionless stretched rubber band has kinetic energy.\n\n(v) Energy can change from one form to another.",
             "answer": {
               "answerKey": "(i) False. (ii) True. (iii) True. (iv) False. (v) True.",
               "solution": "(i) <u>False</u> — no displacement → no work. (ii) <u>True</u> — force and displacement both upward → W = +mgh. (iii) <u>True</u> — SI unit of work and energy is joule (J). (iv) <u>False</u> — stretched rubber band has elastic potential energy, not kinetic. (v) <u>True</u> — law of conservation of energy."
@@ -1760,7 +1781,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Fill in: (i) Work done = ___ × ___; (ii) 1 J when force of ___ N causes 1 m displacement; (iii) KE = ___; (iv) PE at height h = ___; (v) Power = ___ at which work is done.",
+            "text": "Fill in the blanks-\n\n(i) Work done = _____ × _____ (in the direction of force).\n\n(ii) 1 joule of work is done when a force of _____ newton displaces an object by 1 metre in the direction of the force.\n\n(iii) The expression for kinetic energy of a body of mass m and velocity v is ___.\n\n(iv) The potential energy of an object of mass m at a small height h from the Earth's surface is the _____.\n\n(v) Power is defined as the _____ at which work is done.",
             "answer": {
               "answerKey": "(i) Force × Displacement. (ii) 1 N. (iii) ½mv². (iv) mgh. (v) Rate.",
               "solution": "(i) Work = <u>Force × Displacement</u> (in direction of force). (ii) 1 joule when force = <u>1 Newton</u> displaces object by 1 m. (iii) KE = <u>½mv²</u>. (iv) PE = <u>mgh</u>. (v) Power = <u>rate</u> at which work is done (P = W/t)."
@@ -1769,7 +1790,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "Ball thrown upwards reaches highest point. Which statements are correct? (iii) KE = 0; (iv) PE = maximum.",
+            "text": "When a ball thrown upwards reaches its highest point, tick which of the following statement(s) are correct?\n\n(i) The force acting on the ball is zero.\n\n(ii) The acceleration of the ball is zero.\n\n(iii) Its kinetic energy is zero.\n\n(iv) Its potential energy is maximum.",
             "answer": {
               "answerKey": "(iii) and (iv) are correct.",
               "solution": "At highest point:\n(i) False — gravity still acts (F = mg ≠ 0).\n(ii) False — acceleration = g downward throughout.\n(iii) <u>True</u> — velocity = 0 at highest point → KE = 0.\n(iv) <u>True</u> — all energy is potential → PE = maximum."
@@ -1778,7 +1799,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q4",
             "number": "4",
-            "text": "Identify energy transformation: (i) truck uphill; (ii) unwinding watch spring; (iii) photosynthesis; (iv) water from dam; (v) burning matchstick; (vi) firecracker; (vii) microphone; (viii) electric bulb; (ix) solar panel.",
+            "text": "For each of the following situations, identify the energy transformation that takes place: (i) a truck moving uphill, (ii) unwinding of a watch spring, (iii) photosynthesis in green leaves, (iv) water flowing from a dam, (v) burning of a matchstick, (vi) explosion of a fire cracker, (vii) speaking into a microphone, (viii) a glowing electric bulb, and (ix) a solar panel.",
             "answer": {
               "answerKey": "Chemical→KE+PE; Elastic PE→KE; Light→Chemical; PE→KE; Chemical→Heat+Light; Chemical→Sound+Heat+Light; Sound→Electrical; Electrical→Light+Heat; Solar→Electrical.",
               "solution": "(i) Chemical → KE + Potential. (ii) Elastic Potential → Kinetic. (iii) Light → Chemical (glucose). (iv) Potential → Kinetic. (v) Chemical → Heat + Light. (vi) Chemical → Sound + Heat + Light. (vii) Sound → Electrical. (viii) Electrical → Light + Heat. (ix) Solar → Electrical."
@@ -1787,7 +1808,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "Student (50 kg) lifted to top floor (h = 72.5 m) in elevator; same student climbs stairs. g = 10 m/s². Compare PE gained. Conclusion about PE and path?",
+            "text": "A student is slowly lifted straight up in an elevator from the ground level to the top floor of a building. Later, the same student climbs the staircase, all the way to the top. Given that the height of the building is h = 72.5 m, acceleration due to gravity is g = 10 m s⁻², and student's mass is m = 50 kg.\n\n(i) Find the gain in the potential energy if the student is lifted straight up to the top.\n\n(ii) Find the gain in the potential energy when the student climbs the stairs to the same top.\n\n(iii) What do you conclude about the dependence of the potential energy on the path taken?",
             "answer": {
               "answerKey": "(i) PE = 36,250 J (elevator). (ii) PE = 36,250 J (stairs). (iii) PE is path-independent.",
               "solution": "PE = mgh = 50 × 10 × 72.5 = <strong>36,250 J</strong>\n\nElevator and stairs give the same PE — <u>PE depends only on height (h)</u>, not on the path taken."
@@ -1796,7 +1817,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "Crane lifts mass m to 10th floor in time t. Then same mass to 20th floor in 2t. How much more energy? How does power compare?",
+            "text": "A crane lifts a mass m to the 10th floor of a building in a certain time. It then raises the same mass to the 20th floor of the same building in double the time. How much more energy and power are required? Assume that the height of all floors is equal.",
             "answer": {
               "answerKey": "Energy: twice as much (double height). Power: same (double energy in double time).",
               "solution": "Energy to 10th floor: W₁ = 10mgH; Energy to 20th floor: W₂ = 20mgH = <u>twice W₁</u>.\n\nPower₁ = 10mgH/t; Power₂ = 20mgH/2t = 10mgH/t → <u>same power</u>."
@@ -1805,7 +1826,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q7",
             "number": "7",
-            "text": "Factors determining energy to raise a flag? Work change if slower or quicker? If speed doubled, how does power change?",
+            "text": "Which factors determine the energy required to raise a flag from the ground to the top of all flagpole using a pulley? Does raising the flag slowly or quickly change the amount of work done? If the speed at which the flag is raised is doubled, how does the power requirement change? Explain your answers.",
             "answer": {
               "answerKey": "Energy = mgh; Work same regardless of speed. Doubled speed → doubled power.",
               "solution": "Energy = <u>mgh</u> — depends on mass of flag and height of flagpole.\nWork is the same whether fast or slow (same F × same d).\nIf speed doubles, time halves → <u>Power = W/t doubles</u>."
@@ -1814,7 +1835,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q8",
             "number": "8",
-            "text": "Man (60 kg) + scooter (100 kg) accelerates to v. Next day, son (40 kg) also rides. Same speed, same time. Ratio of fuel used?",
+            "text": "A man of mass 60 kg rides a scooter of mass 100 kg. He accelerates the scooter to a velocity v. The next day, his son with a mass of 40 kg joins him as a passenger. If the scooter reaches the same speed on both days in the same time interval, what is the ratio of the fuel of the tank used on the two days? Assume that the energy transfer to the scooter happens entirely due to fuel, and no other losses occur due to air resistance and friction.",
             "answer": {
               "answerKey": "Ratio = 4:5.",
               "solution": "KE day 1: ½(160)v² = 80v²\nKE day 2: ½(200)v² = 100v²\n\n<u>Ratio</u> = 80:100 = <strong>4:5</strong>"
@@ -1823,7 +1844,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q9",
             "number": "9",
-            "text": "Seesaw with adult weighing twice the child (balanced). Show figure with distances from fulcrum.",
+            "text": "On a seesaw with sliding seats, a child is sitting on one side and an adult on the other side. The adult weighs twice that of the child. The seesaw however is balanced. Draw a figure which depicts this situation showing the distances from the fulcrum where the child and the adult are seated.",
             "answer": {
               "answerKey": "Child at 2d; Adult at d from fulcrum (W × 2d = 2W × d).",
               "solution": "Principle of Moments: Clockwise moment = Anticlockwise moment.\n\nChild's weight W × 2d = Adult's weight 2W × d → balanced.\n\nDiagram: Fulcrum centre; <u>Child</u> at 2 units from fulcrum; <u>Adult</u> at 1 unit from fulcrum."
@@ -1832,7 +1853,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "Ball (2 kg) thrown up at 20 m/s. (i) Sign of work by gravity during up/down motion? (ii) Ball reaches 19.4 m. Work done by air resistance?",
+            "text": "A ball of mass 2 kg is thrown up with a velocity of 20 m s⁻¹.\n\n(i) Identify the sign of the work done by gravity on the ball during its upward motion and its downward motion.\n\n(ii) If the ball reaches a height of 19.4 m, how much work was done by air resistance (assume g = 10 m s⁻²).",
             "answer": {
               "answerKey": "(i) Upward: negative; Downward: positive. (ii) –12 J.",
               "solution": "(i) Upward: gravity force ↓, displacement ↑ → W = <u>negative</u>. Downward: both same direction → W = <u>positive</u>.\n(ii) KE at throw = ½×2×400 = 400 J; PE at max height = 2×10×19.4 = 388 J\n\n<u>Work by air resistance</u> = 388 – 400 = <strong>–12 J</strong>"
@@ -1841,7 +1862,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q11",
             "number": "11",
-            "text": "10 kg block. Variable force from graph (trapezoidal: 50 N from 0–2 m then decreasing to 4 m). KE at 0 m = 180 J. Find speed at (i) 0 m, (ii) 4 m.",
+            "text": "A 10.0 kg block is moving on horizontal floor with negligible friction. As shown in the Fig. 7.37, a variable force is applied on the block in its direction of motion from its position at 0 m till 4 m. If the block had a kinetic energy of 180 J when it was at 0 m, find the block's speed (i) at 0 m, and (ii) at 4 m. Does the block have negative acceleration in any portion of its motion?",
+              "figure": "/figs/science-ex7-rr-q11-fig7-37.png",
             "answer": {
               "answerKey": "(i) v = 6 m/s. (ii) v = √66 m/s ≈ 8.1 m/s.",
               "solution": "(i) KE = ½mv² → 180 = ½×10×v² → <u>v = 6 m s⁻¹</u>\n(ii) Work done (area under graph, 0–4 m) = 150 J\nKE at 4 m = 180 + 150 = 330 J\n½×10×v² = 330 → <u>v = √66 ≈ 8.1 m s⁻¹</u>"
@@ -1850,7 +1872,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q12",
             "number": "12",
-            "text": "Gravity on Moon = 1/6 of Earth. Astronaut throws ball to 8 m height on Earth. How far on Moon with same initial velocity?",
+            "text": "The gravitational attraction on the surface of the Moon (lunar surface) is about 1/6th of that on the surface of the Earth. An astronaut can throw a ball up to a height of 8 m from the surface of the Earth. How far up will the ball thrown with the same upward velocity travel from the surface of the Moon?",
+              "figure": "/figs/science-ex7-rr-q12-fig7-38.png",
             "answer": {
               "answerKey": "Ball travels 48 m on the Moon.",
               "solution": "u² = 2g_E × h_E = 2g_E × 8 (same initial velocity)\n\nOn Moon: h_M = u²/(2g_M) = 2g_E×8/(2×g_E/6) = 8×6 = <strong>48 m</strong>"
@@ -1859,7 +1882,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q13",
             "number": "13",
-            "text": "Car (1000 kg) moving at 35 m/s. A–B: reaction phase (constant speed). B–C: braking to stop. (i) Describe A–B motion. (ii) KE at A. (iii) Work by brakes B–C. (iv) KE transforms to?",
+            "text": "A 1000 kg car is moving along a road at a constant speed. Suddenly, the driver notices some obstruction ahead and applies the brakes to come to a complete stop. The graphical representation of motion of the car starting from the instant the driver spots the traffic ahead is shown in Fig. 7.38\n\n(i) Describe how the car moves between positions A and B.\n\n(ii) Calculate the kinetic energy of the car at A.\n\n(iii) State the work done by the brakes in bringing the car to a halt between B and C.\n\n(iv) What does the kinetic energy of the car transform into?",
+              "figure": "/figs/science-ex7-rr-q12-fig7-38.png",
             "answer": {
               "answerKey": "(i) Constant speed. (ii) 612,500 J. (iii) –612,500 J. (iv) Heat energy.",
               "solution": "(i) A–B: car moves at <u>constant speed</u> (reaction time). (ii) KE = ½×1000×35² = <strong>612,500 J</strong>. (iii) Work by brakes = <strong>–612,500 J</strong> (removes all KE). (iv) KE converts to <u>heat energy</u> due to friction between brake pads and wheels."
@@ -1868,7 +1892,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q14",
             "number": "14",
-            "text": "PE-displacement graph for 0.5 kg ball (frictionless track). At O: v = 0, PE = 30 J. At P: PE = 20 J; Q: PE = 10 J; R: PE = 40 J. Find velocity at P, Q, R.",
+            "text": "The potential energy-displacement graph of a 0.5 kg ball moving along a frictionless track is shown in Fig. 7.39. At O, the velocity of the ball is 0 m s⁻¹ and potential energy is 30 J. Calculate the velocity of the ball at P, Q and R.",
+              "figure": "/figs/science-ex7-rr-q14-fig7-39.png",
             "answer": {
               "answerKey": "At P: v = 2√10 m/s. At Q: v = 4√5 m/s. At R: ball cannot reach.",
               "solution": "Total energy (O) = 0 + 30 = 30 J\n\nAt P (PE=20 J): KE = 10 J → ½×0.5×v² = 10 → <u>v = 2√10 m s⁻¹</u>\nAt Q (PE=10 J): KE = 20 J → ½×0.5×v² = 20 → <u>v = 4√5 ≈ 8.9 m s⁻¹</u>\nAt R (PE=40 J): Total energy needed = 40 J > 30 J → <u>Ball cannot reach R.</u>"
@@ -1877,7 +1902,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q15",
             "number": "15",
-            "text": "Coconut (1.5 kg) falls from 10 m tree. Average resistive force of sand = 3000 N. (i) Velocity just before impact. (ii) Depth of depression in sand. g = 10 m/s².",
+            "text": "A coconut of mass 1.5 kg falls from the top of a coconut tree onto the wet sand on a beach. The height of the tree is 10 m. On impact, the coconut comes to rest by making a depression in the sand.\n\n(i) Calculate the velocity of the coconut just before it hits the sand.\n\n(ii) Assume that the average resistive force of sand is 3000 N and all of the coconut's energy is used to create the depression in the sand. Calculate the depth of the depression the coconut makes in the sand. Assume g = 10 m s⁻².",
             "answer": {
               "answerKey": "(i) ≈ 14.1 m/s. (ii) 0.05 m.",
               "solution": "(i) v² = 2gh = 2×10×10 = 200 → <u>v = 10√2 ≈ 14.1 m s⁻¹</u>\n(ii) KE at impact = ½×1.5×200 = 150 J\nWork by sand = F×d → 3000×d = 150 → <u>d = 0.05 m (5 cm)</u>"
@@ -2076,7 +2101,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "An atom with an atomic number of 26 has 56 nucleons. Find out its number of electrons, protons and neutrons.",
+            "text": "An atom with an atomic number of 26 has 56 nucleons. Find out its protons, electrons, and neutrons.",
             "answer": {
               "answerKey": "Electrons = 26; protons = 26; neutrons = 30.",
               "solution": "Atomic number Z = number of protons = 26. A neutral atom has 26 electrons. Neutrons = nucleons − protons = 56 − 26 = <strong>30</strong>."
@@ -2148,7 +2173,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q18",
             "number": "18",
-            "text": "If a bromine atom is available in the form of two isotopes, ⁷⁹₃₅Br (49.7%) and ⁸¹₃₅Br (50.3%), calculate the average atomic mass.",
+            "text": "If a bromine atom is available in the form of, say two isotopes, ⁷⁹₃₅Br (49.7%) and ⁸¹₃₅Br (50.3%), calculate the average atomic mass of the bromine atom.",
             "answer": {
               "answerKey": "80.006 u (approximately 80.01 u).",
               "solution": "Average atomic mass = (79×49.7/100) + (81×50.3/100) = 39.263 + 40.743 = <strong>80.006 u</strong>."
@@ -2163,7 +2188,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "Choose correct options about Rutherford's gold foil experiment: (ii) disproved plum pudding, led to nuclear model; (iii) large deflection indicates mass/charge concentrated in tiny nucleus.",
+            "text": "Choose the correct options and explain the reason for the correct and incorrect options in the context of Ernest Rutherford's gold foil experiment:\n\n(i) The experiment clearly showed the existence of neutrons in the nucleus.\n\n(ii) The results disproved the plum pudding model and led to the idea of a nucleus at the centre of the atom.\n\n(iii) The large deflection of a few alpha particles indicated that most of the mass of the atom and positive charge are packed into a tiny centre.\n\n(iv) The way alpha particles were deflected showed that electrons move around the nucleus.",
             "answer": {
               "answerKey": "(ii) and (iii) are correct.",
               "solution": "(i) Incorrect — neutrons discovered by Chadwick (1932), not from this experiment. (ii) <u>Correct</u> — large deflections disproved Thomson's model; led to nuclear model. (iii) <u>Correct</u> — few particles bounced back → nucleus is tiny, dense, positively charged. (iv) Incorrect — fixed orbits were Bohr's model."
@@ -2172,7 +2197,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Which are correct/incorrect about Bohr's atomic model? (iii) Electrons revolve in fixed energy orbits without losing energy is correct.",
+            "text": "Which of the following statements are correct or incorrect according to the Bohr's atomic model? Give a reason for each statement.\n\n(i) Electrons lose energy while moving in fixed orbits and slowly fall into the nucleus.\n\n(ii) Electrons can exist anywhere around the nucleus with no fixed energy.\n\n(iii) Electrons revolve around the nucleus in orbits of fixed energy without losing energy.\n\n(iv) Electrons can be found between energy levels as they move around the nucleus.",
             "answer": {
               "answerKey": "(iii) is correct. (i), (ii), (iv) are incorrect.",
               "solution": "(i) Incorrect: Bohr's model states electrons in fixed orbits do NOT lose energy. (ii) Incorrect: Electrons occupy only specific fixed energy levels. (iii) <u>Correct</u>: Electrons revolve in fixed stationary orbits without radiating energy. (iv) Incorrect: Electrons cannot exist between energy levels."
@@ -2199,7 +2224,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "Arrange chronologically: (i) Bohr's fixed orbits; (ii) Thomson's plum pudding; (iii) Rutherford's nuclear model; (iv) Dalton's indivisible atom.",
+            "text": "Explain and arrange the following statements in the correct chronological order to show how atomic models have evolved over time.\n\n(i) Bohr's model proposed that electrons move in fixed orbits around the nucleus, each with a definite energy.\n\n(ii) Thomson's model depicted the atom as a 'plum pudding' with electrons embedded in a sphere of positive charge.\n\n(iii) Rutherford's model proposed that atoms have a dense central nucleus.\n\n(iv) Dalton's model described atoms as indivisible particles.",
             "answer": {
               "answerKey": "Correct order: (iv) Dalton → (ii) Thomson → (iii) Rutherford → (i) Bohr.",
               "solution": "Chronological: (iv) <u>Dalton</u> (1803) — indivisible atom → (ii) <u>Thomson</u> (1897) — plum pudding → (iii) <u>Rutherford</u> (1911) — nuclear model → (i) <u>Bohr</u> (1913) — quantised orbit model."
@@ -2217,7 +2242,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q7",
             "number": "7",
-            "text": "Assertion: Discovery of subatomic particles helped understand atomic structure. Reason: Electrons = protons in an atom.",
+            "text": "Assertion (A): The discovery of subatomic particles helped in understanding the atomic structure.\n\nReason (R): The number of electrons is equal to the number of protons in an atom.\n\nChoose the correct option: (i) Both A and R are true, and R is the correct explanation of A. (ii) Both A and R are true, but R is not the correct explanation of A. (iii) A is true, but R is false. (iv) A is false, but R is true.",
             "answer": {
               "answerKey": "(ii) Both A and R are true, but R is not the correct explanation of A.",
               "solution": "Option (ii) is correct. Both statements are individually true. However, the electron-proton equality is a consequence of <u>atomic neutrality</u>, not the reason why discovering subatomic particles helped understand atomic structure."
@@ -2235,7 +2260,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q9",
             "number": "9",
-            "text": "From Fig. 8.17 (four atomic configs a–d): find name, symbol, electrons, valence electrons, valency, atomic number.",
+            "text": "Find the following information for the elements shown in Fig. 8.17:\n\n(i) Name of the element (ii) Symbol (iii) Total number of electrons (iv) Number of valence electrons (v) Valency of the element (vi) Number of protons (vii) Atomic number",
+              "figure": "/figs/science-ex8-rr-q9-fig8-17.png",
             "answer": {
               "answerKey": "(a) Li Z=3; (b) N Z=7; (c) Al Z=13; (d) F Z=9.",
               "solution": "(a) <u>Lithium (Li)</u>: Z=3, e⁻=3, valence e⁻=1, valency=1.\n(b) <u>Nitrogen (N)</u>: Z=7, e⁻=7, valence e⁻=5, valency=3.\n(c) <u>Aluminium (Al)</u>: Z=13, e⁻=13, valence e⁻=3, valency=3.\n(d) <u>Fluorine (F)</u>: Z=9, e⁻=9, valence e⁻=7, valency=1."
@@ -2467,7 +2493,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q18",
             "number": "18",
-            "text": "Write the formulae for the compounds formed from the following pairs of ions: (i) Fe³⁺ and OH⁻ (ii) K⁺ and CO₃²⁻.",
+            "text": "Write the formula for the compounds formed from the following pairs of ions: (i) Fe³⁺ and OH⁻ (ii) K⁺ and CO₃²⁻",
             "answer": {
               "answerKey": "Fe(OH)₃; K₂CO₃.",
               "solution": "Balance charges: Fe³⁺ needs three OH⁻ → <strong>Fe(OH)₃</strong>. Two K⁺ balance one CO₃²⁻ → <strong>K₂CO₃</strong>."
@@ -2591,6 +2617,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q7",
             "number": "7",
             "text": "Which figure correctly represents Cl⁻ ion? (Atomic number of Cl = 17)",
+              "figure": "/figs/science-ex9-rr-q7-fig9-18.png",
             "answer": {
               "answerKey": "(ii) is correct — 17 protons, 18 electrons, configuration 2,8,8.",
               "solution": "Cl⁻: Cl gains 1e⁻ → 18 electrons (2,8,8), 17 protons. Correct representation shows 3 shells: K=2, L=8, M=8. Per answer key: option <u>(ii)</u>."
@@ -2618,6 +2645,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q10",
             "number": "10",
             "text": "Complete Table 9.3: NH₄⁺, Li⁺, Al³⁺, Cu²⁺ with NO₃⁻, SO₄²⁻, PO₄³⁻.",
+              "figure": "/figs/science-ex9-rr-q10-table9-3.png",
             "answer": {
               "answerKey": "NH₄NO₃, (NH₄)₂SO₄, (NH₄)₃PO₄; LiNO₃, Li₂SO₄, Li₃PO₄; Al(NO₃)₃, Al₂(SO₄)₃, AlPO₄; Cu(NO₃)₂, CuSO₄, Cu₃(PO₄)₂.",
               "solution": "NH₄⁺: <u>NH₄NO₃, (NH₄)₂SO₄, (NH₄)₃PO₄</u>\nLi⁺: <u>LiNO₃, Li₂SO₄, Li₃PO₄</u>\nAl³⁺: <u>Al(NO₃)₃, Al₂(SO₄)₃, AlPO₄</u>\nCu²⁺: <u>Cu(NO₃)₂, CuSO₄, Cu₃(PO₄)₂</u>"
@@ -2765,7 +2793,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "The variation of density of the medium for two sound waves is shown in Fig. 10.17 (a) and (b). Label compression and rarefaction by C and R on it. In the graph given in Fig. 10.17 (c) and (d), label the axes and draw the curves corresponding to Fig. 10.17 (a) and (b).",
+            "text": "The variation of density of medium for two sound waves is shown in Fig. 10.17 (a) and (b). Label compression and rarefaction by C and R on it. In the graph given in Fig. 10.17 (c) and (d), label the axes and draw the curves corresponding to Fig. 10.17 (a) and (b).",
+              "figure": "/figs/science-ex10-pp-q6-fig10-17.png",
             "answer": {
               "answerKey": "C marks regions of above-average density; R marks below-average density. The corresponding graphs plot density on the vertical axis against distance on the horizontal axis.",
               "solution": "Mark <strong>C</strong> at the crowded/high-density regions and <strong>R</strong> at the spread-out/low-density regions. In the graph, put <u>distance</u> on the x-axis and <u>density</u> on the y-axis, with corresponding maxima (crests) and minima (troughs)."
@@ -2774,7 +2803,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q7",
             "number": "7",
-            "text": "Conduct Activity 10.1 once again with a thick rubber band and then with a thin rubber band. Does the thin rubber band vibrate faster than the thick rubber band? If yes, how do the frequency and time period of the sound produced by the thin rubber band differ from that of the thick rubber band?",
+            "text": "Conduct Activity 10.1 once again with a thick rubber band and then with a thin rubber band. Does the thick rubber band vibrate faster than the thin rubber band? If yes, how do the frequency and time period of the sound produced by the thin rubber band differ from that of the thick rubber band?",
             "answer": {
               "answerKey": "The thin rubber band generally vibrates faster, so it has higher frequency and shorter time period than the thick rubber band.",
               "solution": "A thin, tightly stretched rubber band generally vibrates with a <u>higher frequency</u> than a thick one. Therefore its sound has a <u>higher frequency</u> and a <u>shorter time period</u> (T = 1/ν)."
@@ -2793,6 +2822,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q9",
             "number": "9",
             "text": "For the sound wave represented by the graph shown in Fig. 10.19, what is half of its wavelength?",
+              "figure": "/figs/science-ex10-pp-q9-fig10-19.png",
             "answer": {
               "answerKey": "1.5 cm.",
               "solution": "From the graph, one full wavelength is 3.0 cm. Therefore half the wavelength is <strong>1.5 cm</strong>."
@@ -2801,7 +2831,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "Table 10.1 shows the speed of sound in a few media at atmospheric pressure. Compare the speeds in different media by finding the ratio of (i) the speed of sound in water with respect to the speed in air; (ii) the speed of sound in steel with respect to the speed in water.",
+            "text": "Compare the speeds in different media by finding the ratio of (i) the speed of sound in water with respect to the speed in the air (ii) the speed of sound in steel with respect to the speed in the water.",
             "answer": {
               "answerKey": "(i) 75:17; (ii) 10:3.",
               "solution": "Water:air = 1500:340 = <strong>75:17</strong>. Steel:water = 5000:1500 = <strong>10:3</strong>."
@@ -2811,6 +2841,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q11",
             "number": "11",
             "text": "Two friends are standing along a steel fence at a distance of 340 m from each other (Fig. 10.23). Gunjan places her ear over the fence and her friend knocks the fence with a metal object. Using the values of the speed of sound in steel and air given in Table 10.1, calculate the time difference between the sound that reached Gunjan through the air and the steel. Would it have been possible for her to distinguish between the two sounds? (The time interval between two sounds must be at least 0.1 s to be heard separately.)",
+              "figure": "/figs/science-ex10-pp-q11-fig10-23.png",
             "answer": {
               "answerKey": "0.932 s; Yes, the two sounds can be distinguished because the time difference exceeds 0.1 s.",
               "solution": "Through steel: t = 340/5000 = 0.068 s. Through air: t = 340/340 = 1.000 s. Time difference = 1.000−0.068 = <strong>0.932 s</strong>. Since 0.932 s > 0.1 s, <u>yes</u>, Gunjan could distinguish the two sounds."
@@ -2843,7 +2874,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "Which observation best supports that sound is a mechanical wave? (ii) Sound needs a medium.",
+            "text": "Which observation best supports the idea that sound is a mechanical wave?\n\n(i) Sound shows reflection (ii) Sound needs a medium to propagate (iii) Sound has frequency (iv) Sound carries energy",
             "answer": {
               "answerKey": "(ii) is correct — mechanical waves require a material medium to propagate.",
               "solution": "Option (ii) is correct. A <u>mechanical wave</u> requires a material medium (solid, liquid, gas). Sound cannot travel in vacuum — this uniquely identifies it as mechanical."
@@ -2852,7 +2883,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Increasing frequency will increase sound's: (iii) number of compressions per second.",
+            "text": "For a sound wave propagating in a medium, increasing its frequency will increase its\n\n(i) wavelength (ii) speed (iii) number of compressions per second (iv) time period",
             "answer": {
               "answerKey": "(iii) is correct — frequency = compressions per second.",
               "solution": "Option (iii) is correct. <u>Frequency</u> = number of complete oscillations (compressions) per second. Speed depends on medium; wavelength decreases; time period T = 1/f decreases."
@@ -2861,7 +2892,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "20 compressions pass a point in 4 seconds. What is the frequency? (ii) 5 Hz.",
+            "text": "If 20 compressions pass a point in 4 seconds, the frequency is (i) 80 Hz (ii) 10 Hz (iii) 5 Hz (iv) 0.2 Hz",
             "answer": {
               "answerKey": "(ii) 5 Hz — frequency = 20/4 = 5 Hz.",
               "solution": "Frequency = compressions/time = 20/4 = <strong>5 Hz</strong>\n\nOption (ii) is correct."
@@ -2879,7 +2910,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "Two sound wave graphs (same scale): which has (i) greater wavelength, (ii) smaller amplitude?",
+            "text": "Graphs representing two sound waves are given in Fig. 10.30. If the scales on the X and Y axes of the two graphs are the same, which of the two sound waves has (i) greater wavelength, and (ii) smaller amplitude?",
+              "figure": "/figs/science-ex10-rr-q5-fig10-30.png",
             "answer": {
               "answerKey": "(i) Graph with wider wave pattern. (ii) Graph with lower height.",
               "solution": "(i) <u>Greater wavelength</u>: wave with more spread-out crests and troughs (longer distance between successive compressions). (ii) <u>Smaller amplitude</u>: wave with less height of compressions — lower intensity/volume."
@@ -2888,7 +2920,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "Three waves A, B, C in Fig. 10.31. Frequency: A maximum, C minimum. Identify corresponding curves.",
+            "text": "The sound waves emitted by three sources A, B and C are represented in Fig. 10.31. If the frequency of A is maximum and C is minimum, identify the corresponding curves, and mark A, B and C on them.",
+              "figure": "/figs/science-ex10-rr-q6-fig10-31.png",
             "answer": {
               "answerKey": "A (max frequency) = smallest wavelength curve. C (min frequency) = largest wavelength curve.",
               "solution": "A (max frequency): curve with <u>smallest wavelength</u> (most crests per unit distance). B (intermediate): medium wavelength. C (min frequency): curve with <u>largest wavelength</u> (fewest crests per unit distance)."
@@ -2933,7 +2966,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q11",
             "number": "11",
-            "text": "Ultrasonic sensor (40 kHz). Warning at 1.2 m from obstacle. Time for signal to travel to obstacle and back? Speed = 345 m/s.",
+            "text": "A vehicle is fitted with an ultrasonic distance sensor as part of parking assistance system which provides echolocation, while the driver is reversing the vehicle. It emits ultrasonic wave (about 40 kHz) which is reflected by the obstacle. When the warning beep starts sounding at a distance of 1.2 m from the obstacle, how much time is taken by ultrasonic wave to travel to the obstacle and come back? Assume the speed of ultrasonic wave in air to be 345 m s⁻¹.",
             "answer": {
               "answerKey": "Time ≈ 0.007 s.",
               "solution": "Distance = 2 × 1.2 = 2.4 m\n\n<u>Time</u> = 2.4/345 ≈ <strong>0.007 s</strong>"
@@ -2942,7 +2975,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q12",
             "number": "12",
-            "text": "Speed of sound: 344 m/s at 22°C; 331 m/s at 0°C. Extra time for thunder to travel 1720 m at 0°C vs 22°C.",
+            "text": "The speed of sound in air is about 331 m s⁻¹ at 0 °C and nearly 344 m s⁻¹ at 22 °C. Roughly how much extra time will the sound of thunder take to travel a distance of 1720 m, if the air temperature changes from 22 °C to 0 °C? Assume that all other conditions remain unchanged.",
             "answer": {
               "answerKey": "Extra time = 65/331 s ≈ 0.196 s.",
               "solution": "t₁ (22°C) = 1720/344 = 5 s\nt₂ (0°C) = 1720/331 ≈ 5.196 s\n\n<u>Extra time</u> = t₂ – t₁ = 65/331 s ≈ <strong>0.196 s</strong>"
@@ -2951,7 +2984,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q13",
             "number": "13",
-            "text": "Sound wave at 340 m/s. From Fig. 10.32: wavelength = 4 cm. Calculate wavelength and frequency.",
+            "text": "The variation of density of medium for a sound wave propagating with a speed of 340 m s⁻¹ is shown in Fig. 10.32. Calculate the wavelength and frequency of the sound wave.",
+              "figure": "/figs/science-ex10-rr-q13-fig10-32.png",
             "answer": {
               "answerKey": "Wavelength = 0.04 m; Frequency = 8500 Hz.",
               "solution": "λ = 4 cm = 0.04 m\n\n<u>f</u> = v/λ = 340/0.04 = <strong>8500 Hz</strong>"
@@ -2960,7 +2994,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q14",
             "number": "14",
-            "text": "Two waves A and B at 345 m/s (Fig. 10.33). A: wavelength = 2.5 cm; B: wavelength = 5 cm. Calculate frequencies.",
+            "text": "The graphical representation of two sound waves A and B propagating at the same speed of 345 m s⁻¹ is shown in Fig. 10.33. What is the wavelength of each of them? Also, calculate their frequencies.",
+              "figure": "/figs/science-ex10-rr-q14-fig10-33.png",
             "answer": {
               "answerKey": "Wave A: f = 13,800 Hz. Wave B: f = 6,900 Hz.",
               "solution": "Wave A: λ = 2.5 cm = 0.025 m; f = 345/0.025 = <strong>13,800 Hz</strong>\nWave B: λ = 5.0 cm = 0.05 m; f = 345/0.05 = <strong>6,900 Hz</strong>"
@@ -2969,7 +3004,8 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q15",
             "number": "15",
-            "text": "Two identical sound sources at A (air) and B (water), both travel same distance to cliff and back. Time for A = 4.5× time for B. Find ratio of speed of sound in air to water.",
+            "text": "Two identical sound sources are placed at A and B — one in air and one submerged in water (Fig. 10.34). Both produce sounds at the same time, which travel horizontally to the vertical side of the cliff and come back. If the time taken by the sound to return to A is 4.5 times than that of B, what is the ratio between the speeds of sound in air and water?",
+              "figure": "/figs/science-ex10-rr-q15-fig10-34.png",
             "answer": {
               "answerKey": "Ratio = 1:4.5 = 2:9.",
               "solution": "For same distance d: t = 2d/v → v ∝ 1/t\n\nv_air/v_water = t_B/t_A = 1/4.5 = <strong>2:9</strong>"
@@ -3082,6 +3118,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q2",
             "number": "2",
             "text": "Look at the pictures (Fig. 11.16) of calotropis (madar) seeds and dandelion seeds. Can you guess what kind of seed dispersal these seeds are adapted for?",
+              "figure": "/figs/science-ex11-pp-q2-fig11-16.png",
             "answer": {
               "answerKey": "Wind dispersal; the seeds have light, hairy/feathery structures that help them travel in air.",
               "solution": "Both are adapted for <u>wind dispersal</u>. Their light seeds and hair-like/feathery structures increase drag and allow the wind to carry them away from the parent plant."
@@ -3117,7 +3154,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q6",
             "number": "6",
-            "text": "Ravi is growing taller, his voice is changing and reproductive organs are maturing. What stage of life is he experiencing?",
+            "text": "Ravi suddenly notices that he is growing taller rapidly, his shoulders are broadening, and his voice cracks. What stage of life is he entering?",
             "answer": {
               "answerKey": "Adolescence.",
               "solution": "These are characteristic changes of <u>adolescence/puberty</u>, when reproductive organs mature and the body undergoes rapid physical changes."
@@ -3126,7 +3163,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q7",
             "number": "7",
-            "text": "Rina had her first menstrual period on 5 March. If her cycle is approximately 28 days, on what date would her next period be expected?",
+            "text": "Rina's period occurs every 28 days. Her last period was on the 5th of March. On which day is she most likely to get her next period?",
             "answer": {
               "answerKey": "2 April.",
               "solution": "A 28-day interval after 5 March gives approximately <strong>2 April</strong>."
@@ -3135,7 +3172,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q8",
             "number": "8",
-            "text": "A zygote is formed by fusion of a sperm and an egg in humans. How many chromosomes does the zygote have?",
+            "text": "A human zygote has just formed. How many chromosomes does it have?",
             "answer": {
               "answerKey": "46 chromosomes.",
               "solution": "A human sperm and egg each carry 23 chromosomes. Fusion restores the diploid number: <strong>23 + 23 = 46</strong>."
@@ -3144,7 +3181,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q9",
             "number": "9",
-            "text": "Why are protective devices such as condoms important in reproductive health?",
+            "text": "What protective devices can be used during sexual activity to reduce the spread of STIs?",
             "answer": {
               "answerKey": "They reduce the risk of pregnancy and help prevent transmission of many sexually transmitted infections.",
               "solution": "Condoms act as a barrier that can reduce the chance of sperm reaching the egg and can also reduce transmission of many <u>sexually transmitted infections</u>."
@@ -3153,7 +3190,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "Oral contraceptive pills can help prevent pregnancy. What risk remains if they are used without condoms?",
+            "text": "If a couple uses oral contraceptive pills but not condoms, which risks remain and why?",
             "answer": {
               "answerKey": "They do not protect against sexually transmitted infections.",
               "solution": "Oral contraceptive pills can prevent ovulation and pregnancy but do <u>not</u> provide a barrier against sexually transmitted infections. Condoms provide STI protection in addition to contraception."
@@ -3162,7 +3199,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q11",
             "number": "11",
-            "text": "Why are human babies dependent on adults for a long period after birth compared with many other animals?",
+            "text": "In many animals, the young ones can walk or find food soon after birth but human babies are completely dependent on adults for a long time. What might be some advantages and disadvantages of this for humans as a species?",
             "answer": {
               "answerKey": "Human young are born with prolonged developmental needs and their brains/body systems continue to mature after birth, so extended parental care is needed.",
               "solution": "Human babies require prolonged care because many physical, behavioural and cognitive capacities continue developing after birth. Adults provide <u>food, protection, warmth and learning support</u> for an extended period."
@@ -3195,7 +3232,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q3",
             "number": "3",
-            "text": "Assertion: Zygote immediately attaches to uterus wall after fertilisation. Reason: Uterus wall always prepared to receive zygote.",
+            "text": "Assertion (A): The zygote formed after fertilisation immediately attaches to the uterus wall. Reason (R): The uterus wall is always prepared to receive the zygote. (i) Both A and R are true, and R is the correct explanation of A. (ii) Both A and R are true, but R is not the correct explanation of A. (iii) A is true, but R is false. (iv) A is false, but R is true.",
             "answer": {
               "answerKey": "(iv) A is false, R is true.",
               "solution": "Option (iv) is correct. <u>Assertion is false</u>: Zygote does NOT attach immediately — it divides to form a blastocyst and implants in 6–7 days. <u>Reason is true</u>: During luteal phase, endometrium thickens and prepares for implantation."
@@ -3268,6 +3305,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q11",
             "number": "11",
             "text": "From pictures of tomato, wheat, and papaya — which type(s) of pollination might have occurred?",
+              "figure": "/figs/science-ex11-rr-q11-pollination.png",
             "answer": {
               "answerKey": "Tomato: self-pollination. Wheat: self-pollination. Papaya: cross-pollination.",
               "solution": "<u>Tomato</u>: stamens surround stigma → self-pollination. <u>Wheat</u>: flowers open after pollination → self-pollination. <u>Papaya</u>: male and female flowers on separate trees → cross-pollination (dioecious plant)."
@@ -3277,6 +3315,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q12",
             "number": "12",
             "text": "Apple orchards: Place A (natural pollinators), Place B (beekeeping added). (i) Hypotheses? (ii) Parameters? (iii) Compare data. (iv) Inference?",
+              "figure": "/figs/science-ex11-rr-q12-fig11-24.png",
             "answer": {
               "answerKey": "Beekeeping improves pollination. Place B has higher fruit setting and lower fruit drop. Bees boost apple yield.",
               "solution": "(i) Hypothesis: Managed honeybees increase cross-pollination efficiency → higher fruit yield. (ii) Constants: tree variety, soil, climate, irrigation. (iii) Place B: higher fruit setting, lower fruit drop than Place A. (iv) Inference: <u>Managed bee colonies significantly enhance pollination</u> → beekeeping is beneficial for apple farming."
@@ -3285,7 +3324,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q13",
             "number": "13",
-            "text": "A student claims ovulation always happens on day 14. Is this correct? Give two reasons.",
+            "text": "A student claims, 'In humans, ovulation always happens on day 14 of the menstrual cycle'. Critically examine this claim and state whether the claim is correct or not. Give at least two reasons for your answer.",
             "answer": {
               "answerKey": "Not always correct — cycle length varies; stress/illness can shift ovulation timing.",
               "solution": "The claim is <u>not entirely correct</u>.\nReason 1: The 28-day cycle is an average — cycles range 21–35 days, shifting ovulation timing.\nReason 2: Stress, illness, hormonal imbalance can delay or advance ovulation. Ovulation typically occurs 14 days before the next period, not necessarily on day 14."
@@ -3379,7 +3418,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "Which feature confirms an animal is an insect (not an earthworm)? (ii) Body with jointed legs.",
+            "text": "Meena and Hari observed an animal in their garden. Hari called it an insect while Meena said it was an earthworm. Choose the correct option which confirms that it is an insect. (i) Bilateral symmetrical body (ii) Body with jointed legs (iii) Cylindrical body (iv) Body with little segmentation",
             "answer": {
               "answerKey": "(ii) Jointed legs — characteristic of Arthropoda; insects have 6 jointed legs.",
               "solution": "Option (ii) is correct. <u>Jointed legs</u> are characteristic of Arthropoda (insects have 3 pairs = 6 jointed legs). Earthworms are cylindrical, segmented worms with no jointed legs."
@@ -3388,7 +3427,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Sponges lack tissues/organs. Which feature classifies them under Animal Kingdom? (iii) Presence of cell membrane.",
+            "text": "Sponges represent one of the simplest animal body plans. Their bodies lack true tissues and organs. Which feature of sponge cells supports its classification under the animal kingdom? (i) Absence of mitochondria (ii) Ability to photosynthesise (iii) Presence of a cell membrane (iv) Presence of a cell wall",
             "answer": {
               "answerKey": "(iii) Cell membrane — animals are eukaryotes with a cell membrane (no cell wall).",
               "solution": "Option (iii) is correct. All animal cells have a <u>cell membrane</u>. Sponges have no cell wall (plant feature), do not photosynthesise. The cell membrane confirms their animal nature."
@@ -3478,7 +3517,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q12",
             "number": "12",
-            "text": "Which group — class or genus — has fewer members but more features in common?",
+            "text": "In the classification hierarchy, which group—class or genus—has fewer members but more features in common? Explain your answer.",
             "answer": {
               "answerKey": "Genus has fewer members and more features in common.",
               "solution": "<u>Genus</u> is a more specific taxonomic level — fewer species share more common features. Class is broader — contains many orders, genera, and species; members share fewer specific features. Specificity increases: Kingdom → Phylum → Class → Order → Family → <u>Genus</u> → Species."
@@ -3506,6 +3545,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "id": "q15",
             "number": "15",
             "text": "During a long-term ecological study, students examined organisms collected from three different environments — a freshwater pond, damp soil near decaying logs and the digestive tract of animals. Instead of naming organisms directly, scientists recorded only structural, cellular and nutritional features as given in the table below. Based on the case study, answer: (i) Identify one organism that clearly belongs to Kingdom Fungi and state one supporting observation. (ii) Which organism belongs to Kingdom Monera and what characteristic justifies it? (iii) Organisms R and Q are both eukaryotic, yet are placed in different kingdoms. Analyse the criteria that separate them. (iv) Explain why S cannot be classified using mode of nutrition alone. (v) T does not fit any of the five kingdoms. Which fundamental characteristic does it lack and what does this reveal about limitations of classification systems?",
+              "figure": "/figs/science-ex12-rr-q15-table.png",
             "answer": {
               "answerKey": "(i) Q—multicellular, filamentous, cell wall, no chlorophyll, grows on dead organic matter. (ii) P—no true nucleus/prokaryotic. (iii) R is unicellular Protista with specialised features; Q is multicellular, filamentous Fungi with absorptive nutrition. (iv) S must be classified using multiple structural features, not nutrition alone. (v) T is acellular and lacks cellular organisation, showing the limits of a cellular five-kingdom scheme.",
               "solution": "<strong>(i)</strong> Q belongs to <u>Fungi</u>; it is multicellular and filamentous, has a cell wall, lacks chlorophyll and grows on dead organic matter. <strong>(ii)</strong> P belongs to <u>Monera</u>; it has no true nucleus, so it is prokaryotic. <strong>(iii)</strong> R is a unicellular eukaryote with a contractile vacuole, flagellar movement and flexible nutritional strategy, fitting <u>Protista</u>; Q is multicellular and filamentous with absorptive nutrition, fitting <u>Fungi</u>. <strong>(iv)</strong> S has multicellular organisation, differentiated tissues and a backbone; structural organisation and other characters are needed, not nutrition alone. <strong>(v)</strong> T is <u>acellular</u>, lacking the cellular organisation used by the five-kingdom system, illustrating a limitation of that classification."
@@ -3598,7 +3638,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q5",
             "number": "5",
-            "text": "How do seeds and fruits affect where and how plants can survive?",
+            "text": "How do seeds and fruits affect, where and how plants can survive?",
             "answer": {
               "answerKey": "They protect the developing embryo and provide mechanisms/resources for dispersal, allowing plants to colonise new places and survive away from standing water.",
               "solution": "Seeds protect the embryo and often contain stored food; fruits can aid seed protection and dispersal. Dispersal by wind, water, animals or other mechanisms lets plants reach <u>new habitats</u> and reduces competition with the parent plant."
@@ -3643,7 +3683,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q10",
             "number": "10",
-            "text": "How can changes in climate affect biodiversity?",
+            "text": "How can changes in climate affect the biodiversity?",
             "answer": {
               "answerKey": "Climate change can alter temperature, rainfall, habitats and seasonal patterns, causing range shifts, population declines and extinctions.",
               "solution": "Changes in temperature, rainfall, sea level and extreme events can alter habitats and food availability. Species may shift ranges or breeding times; species unable to adapt or move can decline or become extinct, reducing biodiversity."
@@ -3668,7 +3708,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q1",
             "number": "1",
-            "text": "Most appropriate role of biogeochemical cycles in an ecosystem: (ii) Recycle essential nutrients between biotic and abiotic.",
+            "text": "Choose the most appropriate option to describe the role of biogeochemical cycles in an ecosystem. (i) To provide food directly to all organisms. (ii) To recycle essential nutrients between biotic and abiotic components. (iii) To create new elements for use by living things. (iv) To remove pollutants and toxins from the organism.",
             "answer": {
               "answerKey": "(ii) is correct — biogeochemical cycles recycle essential elements between living and non-living components.",
               "solution": "Option (ii) is correct. <u>Biogeochemical cycles</u> (carbon, nitrogen, water, phosphorus) recycle essential elements between living organisms (biotic) and the environment (abiotic). Matter is conserved — not created or destroyed."
@@ -3677,7 +3717,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q2",
             "number": "2",
-            "text": "Which is primarily responsible for warming of the Earth? (iii) Earth's surface absorbs solar radiation, re-radiates heat trapped by greenhouse gases.",
+            "text": "Which of the following is primarily responsible for warming of the Earth? (i) Solar radiation is immediately absorbed by carbon dioxide, which then releases it as heat. (ii) The atmosphere's tiny particles absorb incoming solar radiation, which directly heats the Earth. (iii) The Earth's surface absorbs solar radiation, which is then re-radiated and trapped by greenhouse gases. (iv) The Earth's environment is heated only by the solar radiation reflected by the clouds.",
             "answer": {
               "answerKey": "(iii) is correct — the greenhouse effect mechanism.",
               "solution": "Option (iii) is correct. Solar radiation (short-wave) passes through atmosphere → absorbed by Earth's surface → re-radiated as infrared (long-wave) radiation → trapped by <u>greenhouse gases</u> (CO₂, methane) → Earth warms."
@@ -3794,7 +3834,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
           {
             "id": "q15",
             "number": "15",
-            "text": "Describe the interrelationship between different spheres of the Earth. Illustrate with an example.",
+            "text": "Describe the interrelationship between different spheres of the Earth. Illustrate with example how these spheres function in a delicate balance.",
             "answer": {
               "answerKey": "All spheres interact: geosphere, hydrosphere, atmosphere, biosphere. Monsoon example shows their delicate balance.",
               "solution": "The Earth's spheres are deeply interconnected. Example — <u>Monsoon</u>: Sunlight (solar energy + atmosphere) heats Arabian Sea (hydrosphere) → moist air rises → rainfall over India → rivers flow over rocks (geosphere) → water absorbed by soil and plants (biosphere). Disrupting any sphere (e.g., deforestation) affects all others."

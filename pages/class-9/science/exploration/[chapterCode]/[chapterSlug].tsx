@@ -96,6 +96,9 @@ export function QuestionCard({ q, exerciseId, chapterCode, chapterSlug, chapterT
                 ))}
               </ol>
             )}
+            {q.figure && (
+              <img src={q.figure} alt={`Figure for question ${q.number}`} className="qfig-img mt-3 max-w-full rounded-lg border border-[var(--border)]" style={{ maxHeight: 420 }} />
+            )}
           </div>
         </div>
       </div>
