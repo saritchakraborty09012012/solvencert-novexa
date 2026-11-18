@@ -6,6 +6,7 @@ export interface SstQuestion {
   id:     string;
   number: string;
   text:   string;
+  figure?: string;
   parts?: string[];
   isHard: boolean;
   answer: { answerKey: string; schoolMethod: string; };
@@ -1464,22 +1465,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q12",
             "number": "12",
             "isHard": false,
-            "text": "Read the source and answer the questions (Nasik cave inscription of Ushavadatta).",
-            "parts": [
-              "What does this source tell us about the economic role of guilds?",
-              "Why were guilds trusted with money deposits?",
-              "Identify the donor and the donees from the given source."
-            ],
-            "answer": {
-              "answerKey": "Guilds acted as banks; donor was Ushavadatta, donees the Sangha.",
-              "schoolMethod": "a. It shows guilds functioned as banking institutions — they accepted monetary deposits/endowments and paid a fixed rate of interest, which was used to fund religious and community needs. b. Guilds were well-established, regulated economic institutions with guild courts enforcing professional standards, making them reliable custodians for investing and safely generating steady income. c. Donor: Ushavadatta, son of Dinika and son-in-law of King Nahapana. Donees: the Sangha (the Buddhist monastic community) of any sect residing in the cave."
-            }
-          },
-          {
-            "id": "q13",
-            "number": "13",
-            "isHard": false,
-            "text": "Mark and locate on the map of India the following important centres: Pataliputra, Nasik, Ujjayini, Vikramashila, Kanchipuram, Mathura, Rajagriha.",
+            "text": "Read the source and answer the questions: The Nashik cave inscription (2nd century CE) of Ushavadatta records:",
             "answer": {
               "answerKey": "Seven centres located across Bihar, Maharashtra, MP, TN and UP.",
               "schoolMethod": "Pataliputra — present-day Patna, Bihar (on the Ganga, capital of the Mauryan and Gupta empires). Nasik — Maharashtra, on the Godavari river (site of the Nasik cave inscriptions). Ujjayini — present-day Ujjain, Madhya Pradesh, on the Kshipra river. Vikramashila — Bihar, on the Ganga (a major centre of learning, 8th–9th century CE). Kanchipuram — Tamil Nadu (Pallava capital and centre of learning). Mathura — Uttar Pradesh, on the Yamuna river. Rajagriha — present-day Rajgir, Bihar (early capital of Magadha). (Note: Locate these points on an outline map of India using Fig. 5.4, 5.10 and 5.12 as reference for accurate placement.)"
@@ -1489,29 +1475,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q14",
             "number": "14",
             "isHard": true,
-            "text": "Prepare a short presentation or poster on one of the following.",
-            "parts": [
-              "Life in the Vedic society",
-              "Early education system (gurukula)",
-              "Trade and guilds in early India",
-              "Role of women in early Indian society"
-            ],
-            "answer": {
-              "answerKey": "Key points for any one chosen topic.",
-              "schoolMethod": "a. Life in the Vedic society: Kin-based organisation into janas and kulas; raja as clan chief and protector. Assemblies — sabha, samiti, vidhata — involved the community in political matters. Varna was functional, not fixed by birth; occupations were flexible and mobile. Women participated in learning, rituals, chariot races and gatherings such as the sabha. Life organised around the four ashramas and the shodasha samskaras (sixteen rites of passage). b. Early education system (gurukula): Education was holistic, cultivating truth, humility, self-control and reverence for all beings. Subjects included the Vedas, grammar, logic, philosophy, mathematics, medicine, astronomy, and arts like music, dance and archery. The guru-shishya parampara (teacher-student relationship) was sacred; the student lived as part of the teacher's family. Prominent centres of learning included Takshashila, Nalanda, Vikramashila and Vallabhi. c. Trade and guilds in early India: Guilds (shrenis) were associations of traders, artisans and merchants that regulated quality and prices. They functioned as banks, financiers and trustees, as seen in the Nasik cave inscription. Major trade routes — Dakshinapatha and Uttarapatha — and ports like Muziris and Tamralipti connected India to distant regions. The Jataka literature mentions eighteen types of guilds, showing their well-established role in the economy. d. Role of women in early Indian society: Vedic period: women sages (Apala, Vishvavara, Ghosha, Lopamudra) composed hymns; women attended the sabha and took part in chariot races. Post-Vedic texts like the Manu-smriti continued to emphasise honouring women. Gupta-Vakataka period: Prabhavati Gupta ruled as regent in the Vakataka kingdom and issued land grants in her own name. Sangam and Chola periods: women engaged in agrarian tasks, crafts, poetry (Avvaiyar) and temple patronage (Sembiyan Mahadevi)."
-            }
-          }
-        ]
-      },
-      {
-        "id": "sec2",
-        "title": "In-Chapter Prompts & Activities",
-        "questions": [
-          {
-            "id": "q1",
-            "number": "1",
-            "isHard": false,
-            "text": "Chapter Introduction (LET’S EXPLORE): follow the timeline at the bottom of each page; pick one event and document — what happened, when did it happen, why does it matter?",
+            "text": "Prepare a short presentation or poster on one of the following—",
             "answer": {
               "answerKey": "Track the timeline strip page by page; present one event with date and significance.",
               "schoolMethod": "Read each page’s timeline strip as you study. Choose the most interesting event (e.g., rise of Magadha, Ashoka’s reign). Record: (1) <u>What happened</u>, (2) <u>When</u> (century, BCE–CE), (3) <u>Why it matters</u> (effect on state, society or culture). Share one event in class."
@@ -1521,7 +1485,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "THINK ABOUT IT (Assemblies): modern heads of government are checked by constitutions and parliaments. Do the Vedic raja and assemblies (sabha, samiti) suggest a similar principle of people’s participation?",
+            "text": "In modern democracies, heads of government exercise power but are bound by constitutions and parliaments, which function as representative bodies that check the powers of elected leaders. Do the roles of the rājā and the assemblies in Vedic times suggest a similar principle? Can we say that systems of governance in Indian history—since their early institutionalised forms—were guided by the idea of ensuring people's participation in the political process?",
             "answer": {
               "answerKey": "Yes, in early form — assemblies checked the raja, though participation was narrower than today.",
               "schoolMethod": "The raja needed the <u>sabha and samiti’s support</u> and could be questioned by them — a check on absolute power, like parliaments today. Difference: participation was limited (mainly free men), not universal citizens. So: <u>participation principle ancient, democratic form modern</u>."
@@ -1531,7 +1495,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q3",
             "number": "3",
             "isHard": false,
-            "text": "THINK ABOUT IT (Junagadh inscription): why did different rulers record their inscriptions on the same rock instead of a new stone?",
+            "text": "Why do you think different rulers chose to record their inscriptions on the same stone instead of a new one? Discuss your answers with your classmates.",
             "answer": {
               "answerKey": "Same rock meant stacked legitimacy and greater authority in a prominent public place.",
               "schoolMethod": "Later rulers (Rudradaman, Skandagupta) inscribed beside earlier ones to <u>associate themselves</u> with past glory and show continuity. A prominent, durable public rock also carried <u>greater authority</u> than a fresh, unknown stone."
@@ -1541,7 +1505,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "THINK ABOUT IT (Duties of the King): the Mahabharata and Arthashastra stress protecting people and ensuring justice. Why was this important, and what does it reveal about ruler–subject relations?",
+            "text": "Texts such as the Mahābhārata and the Arthaśāstra describe the king's duties as protecting people and ensuring justice. Why do you think it was important for rulers to protect people and ensure justice? What do these descriptions tell us about ideas of governance and the relationship between rulers and subjects during that period?",
             "answer": {
               "answerKey": "A moral bargain — subjects obey and pay taxes; the king secures life, property and dharma.",
               "schoolMethod": "Protection and justice were the king’s side of a <u>bargain</u>: subjects paid taxes and obeyed; the king secured life, property and dharma. It reveals a <u>moral contract</u> — legitimacy depended on welfare, and unjust rulers could be criticised in theory."
@@ -1551,7 +1515,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": false,
-            "text": "THINK ABOUT IT (How Empires Were Administered): how did dividing kingdoms into provinces, districts and villages help rulers? What similarities exist with governance in India today?",
+            "text": "How would dividing a kingdom into provinces, districts, and villages have helped rulers manage their empires? What similarities can you identify between these administrative divisions and the system of governance in India today?",
             "answer": {
               "answerKey": "Delegated control made large empires manageable; Centre → State → District → Panchayat mirrors it.",
               "schoolMethod": "Division allowed <u>delegated control</u>: local officers collected revenue, kept order and reported upward — essential without modern communication. Today’s <u>Centre → State → District → Panchayat</u> mirrors province → district → village, continuing the same logic."
@@ -1561,7 +1525,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "LET’S RECALL (Irrigation): the Cholas built canals, lakes and tanks; Karikala Chola’s Grand Anicut (Kallanai) is still in use. Why were such works recorded in inscriptions?",
+            "text": "The Cholas were builders of irrigation systems that included canals, lakes, and tanks with connecting channels. Do you remember reading in your previous grades about the Grand Anicut (Kallanai) built by Karikala Chola? Such irrigation structures helped store and distribute water, support agriculture, and encouraged the growth of settlements. The Grand Anicut continued to be used and repaired by later rulers and administrations over many centuries, showing the lasting importance of irrigation works undertaken by Cholas. Remarkably, it remains in use even today. Why do you think irrigation structures like dams and canals were considered so important that their construction was recorded in inscriptions?",
             "answer": {
               "answerKey": "Irrigation meant revenue, prosperity and fame — kings advertised welfare works as proof of good rule.",
               "schoolMethod": "Chola tanks and canals stored monsoon water and <u>expanded agriculture and settlements</u>; the Kallanai diverted Kaveri water and survives through centuries of repair. Such works were recorded because they proved the king delivered <u>prosperity and welfare</u>."
@@ -1571,7 +1535,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q7",
             "number": "7",
             "isHard": false,
-            "text": "LET’S RECALL + THINK ABOUT IT (Political Institutions): the name ‘Bharata’ first appears in the Rig Veda for the Bharata jana. What does this tell about early identity? Do raja and assemblies suggest early people’s participation?",
+            "text": "In previous grades, you have read that the name 'Bharata' first appears in the Rig Veda. It is used in reference to the 'Bharata jana', or the people who were ruled by the family of the Bharatas. What does this tell us about how early communities identified themselves and their rulers?",
             "answer": {
               "answerKey": "Identity came from the jana (people), not territory; consulting assemblies shows participation as an early value.",
               "schoolMethod": "Identity came from the <u>jana (people/clan)</u> — people were ‘ruled by the Bharata family’, not defined by borders. And yes: kings consulting <u>sabha and samiti</u> shows participation was an <u>early institutional value</u>, even if narrower than modern democracy."
@@ -1581,7 +1545,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "LET’S ANALYSE: settlements concentrate in the Ganga region in the first millennium BCE with iron tools, more grain, PGW then NBPW pottery. What crucial factors drove this change?",
+            "text": "If you visualise the maps of the Indian subcontinent of the second and first millennium BCE, you will find more settlements concentrated in the Ganga region in the latter map. Archaeological findings from this region during the first millennium BCE provide increasing evidence of the use of iron implements, a wider variety of grain, and the characteristic PGW pottery. Further, in the second half of the first millennium BCE, particularly in the middle Ganga region (from present-day Prayagraj to eastern Bihar), there is evidence of a refined 'deluxe ware' called NBPW, known for its smooth, glossy black surface. Archaeologically, this phase marks the emergence of a richer, more advanced material culture. Literary sources from this period also contain numerous references to expanding agricultural activities, increased grain output, greater crop variety—particularly paddy—and the use of iron implements. Can you identify the crucial factors behind this change?",
             "answer": {
               "answerKey": "Iron tools, expanded paddy agriculture, craft-trade growth — surplus → population → states.",
               "schoolMethod": "Key factors: <u>iron implements</u> cleared forests and deep-ploughed heavy soils; <u>expanded paddy agriculture</u> fed more people; <u>craft and trade growth</u> (NBPW luxury ware) supported towns. Together: <u>surplus → population → states</u>."
@@ -1591,7 +1555,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q9",
             "number": "9",
             "isHard": false,
-            "text": "LET’S EXPLORE (Gurukula): compare your school life with a gurukula student’s — routine, subjects, teacher relations, discipline, living. What advantages and challenges does each have?",
+            "text": "Compare your school life with the life of a student in a gurukula in early India. Think about aspects such as daily routine, subjects studied, relationship with teachers, discipline, and living arrangements. What advantages and challenges do you think each system of education might have for students?",
             "answer": {
               "answerKey": "Compare point by point — gurukula: closeness and character vs narrow access; school: choice vs less attention.",
               "schoolMethod": "<u>Gurukula</u>: lived with the guru, holistic learning, strict discipline — advantage: character and closeness; challenge: narrow access, hard life. <u>Your school</u>: wider subjects, many peers — advantage: choice and social life; challenge: less individual attention. Present both sides."
@@ -1601,7 +1565,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q10",
             "number": "10",
             "isHard": false,
-            "text": "LET’S EXPLORE (Rig Veda 9.112.3): one family holds different occupations (poet, doctor, grinder). What does this indicate, how does it challenge birth-fixed status, and which occupations exist today?",
+            "text": "Read the verse given above and discuss it in groups. As you do so, think like historians—look for clues in the source and use them to understand what life may have been like. While discussing, keep these questions in mind: → What does the source tell us? (evidence) → What can we understand from it? (interpretation) → What might it not tell us? (limits of the source) Now answer the following: 1. What occupations are mentioned in the family described in the verse? What does this indicate about the nature of occupations in Vedic society? 2. How does the above verse challenge the idea that social status and occupation were fixed by birth? 3. What different occupations do you find in contemporary society? After the discussion, compare your group's responses with those of another group and note the similarities and differences in interpretation. Did all groups interpret the source in the same way? What does this tell us about how historians use evidence to understand the past?",
             "answer": {
               "answerKey": "Work varied within a family — by skill, not birth; list modern jobs to show mobility continues.",
               "schoolMethod": "The verse shows <u>different occupations in one family</u>, so work was by <u>choice and skill, not birth</u> — challenging later rigid-caste readings of Vedic society. For today, list 4–5 jobs around you (teacher, driver, farmer, engineer) to show occupational mobility continues."
@@ -1627,34 +1591,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Why is it important that the ultimate source of power rests with the people in a democracy?",
-            "parts": [
-              "How does people’s participation through voting strengthen popular sovereignty?"
-            ],
-            "answer": {
-              "answerKey": "Popular sovereignty means authority ultimately comes from the people; voting lets citizens exercise that authority by choosing representatives.",
-              "schoolMethod": "It is important because democratic government derives its authority from the people rather than from an individual or unelected authority. Voting gives citizens a direct means of exercising popular sovereignty: they choose representatives, can replace them through periodic elections, and thereby participate in deciding who exercises public power."
-            }
-          },
-          {
-            "id": "q2",
-            "number": "2",
-            "isHard": false,
-            "text": "The Constitution not only guarantees Fundamental Rights to citizens but also outlines their Fundamental Duties and the Directive Principles of State Policy. Discuss their significance and identify the differences among them.",
-            "parts": [
-              "The Constitution not only guarantees Fundamental Rights to citizens but also outlines their Fundamental Duties and the Directive Principles of State Policy. Discuss their significance and identify the differences among them.",
-              "The Right to Education (Article 21A) was added in 2009, ensuring free and compulsory education for children aged 6 to 14. Discuss its significance."
-            ],
-            "answer": {
-              "answerKey": "Fundamental Rights protect enforceable freedoms; Fundamental Duties set civic responsibilities; Directive Principles guide the State in policymaking. Article 21A strengthens access to education for children aged 6–14.",
-              "schoolMethod": "Fundamental Rights safeguard citizens’ freedoms and dignity and are enforceable in courts, subject to constitutional restrictions. Fundamental Duties state responsibilities expected of citizens, such as respecting the Constitution and promoting harmony. Directive Principles of State Policy provide guiding principles for the State to promote social and economic welfare; they are not directly enforceable in court. Article 21A, added in 2009, made free and compulsory education for children aged 6–14 a constitutional right, strengthening equal opportunity and access to schooling."
-            }
-          },
-          {
-            "id": "q3",
-            "number": "3",
-            "isHard": false,
-            "text": "What do you think would happen if the same organ of the government made laws, implemented them, and enforced them?",
+            "text": "Why is it important that the ultimate source of power rests with the people in a democracy? How does people's participation through voting strengthen popular sovereignty?",
             "answer": {
               "answerKey": "Concentrating legislative, executive and judicial/enforcement powers in one organ could enable misuse of power and weaken checks and balances.",
               "schoolMethod": "If one organ made laws, implemented them, and enforced them without effective checks, there would be a risk of concentration and misuse of power. Separation of powers assigns distinct responsibilities to the legislature, executive and judiciary and creates checks and balances that help protect citizens’ rights and the Constitution."
@@ -1664,25 +1601,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q4",
             "number": "4",
             "isHard": false,
-            "text": "Fill in the second column with suitable examples from your state, town, or village for the key features of democracy in India.",
-            "parts": [
-              "Popular Sovereignty",
-              "Rule of Law",
-              "Separation of Powers",
-              "Fundamental Rights",
-              "Accountability and Transparency",
-              "Multi-Party System"
-            ],
-            "answer": {
-              "answerKey": "Use local examples showing each democratic feature.",
-              "schoolMethod": "Sample: Popular Sovereignty — citizens vote in elections to choose representatives. Rule of Law — the same laws apply to ordinary citizens and public officials. Separation of Powers — legislatures make laws, executives implement them, and courts interpret laws and review actions. Fundamental Rights — citizens can seek legal protection when rights are violated. Accountability and Transparency — Question Hour, audits and RTI help scrutinise government action. Multi-Party System — voters can choose among candidates from different political parties. Replace these with examples from your own state, town or village."
-            }
-          },
-          {
-            "id": "q5",
-            "number": "5",
-            "isHard": false,
-            "text": "Select your ideal team from Fig. 6.5 and give reasons for your selection.",
+            "text": "The first column of the table below lists some key features of democracy in India. Fill in the second column with suitable examples from your state, town, or village. One row has been completed for you.",
             "answer": {
               "answerKey": "A reasoned personal choice based on democratic qualities such as participation, equality, cooperation and responsible decision-making.",
               "schoolMethod": "Choose the team you consider most democratic and justify the choice using the behaviour shown in Fig. 6.5. Strong reasons would refer to participation, listening to different views, equality, cooperation, fairness, shared responsibility and peaceful decision-making."
@@ -1692,24 +1611,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "Work in pairs or small groups. Choose any two of India’s neighbouring countries (Afghanistan, Bangladesh, Bhutan, China, Maldives, Myanmar, Nepal, Pakistan, or Sri Lanka) and find out the following.",
-            "parts": [
-              "Does the country hold regular elections?",
-              "Who chooses the Head of the Government?",
-              "Is there more than one political party?",
-              "How much freedom do citizens have to express their opinions and criticise the government?",
-              "How would you describe this system? Give reasons: Democratic, Partially democratic, or Non-democratic."
-            ],
-            "answer": {
-              "answerKey": "Model comparison: Bhutan — democratic; China — non-democratic/one-party system, based on the features requested in the activity.",
-              "schoolMethod": "Sample comparison: Bhutan holds regular elections in a constitutional-monarchy framework with more than one political party, so it can be described as democratic. China has elections within a one-party political system dominated by the Communist Party, with much more restricted political competition and criticism of the government, so it can be described as non-democratic under the activity’s criteria. For an assignment, students should research their chosen countries and justify the classification using the four questions in the textbook."
-            }
-          },
-          {
-            "id": "q7",
-            "number": "7",
-            "isHard": false,
-            "text": "A democratic system seeks to promote participation, ensure fairness, limit the concentration of power, and resolve disagreements peacefully. Identify examples from the above case study that reflect these features.",
+            "text": "Work in pairs or small groups. Choose any two of India's neighbouring countries (Afghanistan, Bangladesh, Bhutan, China, Maldives, Myanmar, Nepal, Pakistan, or Sri Lanka) and find out the following: → Does the country hold regular elections? → Who chooses the Head of the Government? → Is there more than one political party? → How much freedom do citizens have to express their opinions and criticise the government? How would you describe this system? Give reasons for your answer. → Democratic or Partially democratic or Non-democratic",
             "answer": {
               "answerKey": "Participation, fairness, limits on concentrated power, and peaceful resolution are reflected through the case-study institutions and decision-making processes.",
               "schoolMethod": "Identify evidence from the Jethipura and South Manubankul Gram Panchayat case studies: citizens participate in local decision-making; women and marginalised groups are included; Gram Sabha procedures and quorum support fairness; elected local bodies limit concentration of power; and discussion and collective decisions provide peaceful ways to resolve community issues."
@@ -1759,44 +1661,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q12",
             "number": "12",
             "isHard": false,
-            "text": "Think, Discuss, Act: How do your actions as a student contribute to your school community and to democracy in a larger context?",
-            "parts": [
-              "Think: How do your actions as a student contribute to your school community and to democracy in a larger context?",
-              "Discuss: Talk to your classmates about a social or community issue that you care about. How can you, as a student, make a difference?",
-              "Act: Choose one activity to fulfil your civic responsibility this month. Reflect on how your actions contribute to strengthening democracy and community spirit."
-            ],
-            "answer": {
-              "answerKey": "Responsible participation, respectful discussion and a concrete civic action strengthen democratic habits.",
-              "schoolMethod": "Think: being informed, respecting others, following rules, protecting public property and participating responsibly develop democratic habits. Discuss: choose an issue and listen to different views before proposing a practical student-led response. Act: carry out one lawful community or school activity, then reflect on how participation, responsibility and cooperation contributed to the community."
-            }
-          }
-        ]
-      },
-      {
-        "id": "sec1",
-        "title": "Questions and Activities — Complete Answers",
-        "questions": [
-          {
-            "id": "q1",
-            "number": "1",
-            "isHard": false,
-            "text": "Read the passage and answer the questions that follow (School cabinet, Republic Day celebration, voting on activities).",
-            "parts": [
-              "Which democratic values are reflected in this situation?",
-              "How does voting help resolve differences of opinion?",
-              "Why is the majority decision important in a democracy?",
-              "Mention responsibilities of elected representatives after a decision is made."
-            ],
-            "answer": {
-              "answerKey": "Participation, deliberation, equality, majority rule; peaceful resolution; legitimacy; accountability.",
-              "schoolMethod": "a. Values reflected: Participation — every member shared their opinion on activities to include. Deliberation — the cabinet discussed different views before deciding. Equality — each member's vote carried equal weight. Majority rule — the decision was based on what most members supported. b. Voting allows every member to express a preference; the option receiving the most support is adopted, resolving disagreement peacefully and fairly, without conflict or force. c. The majority decision reflects the collective will of most people, provides a fair and peaceful method of decision-making, and gives legitimacy to the final outcome. d. Responsibilities: Implement the decided activities fairly and efficiently. Remain accountable to all members, including those who held a different view. Ensure transparency in how the decision is carried out."
-            }
-          },
-          {
-            "id": "q2",
-            "number": "2",
-            "isHard": true,
-            "text": "How would democracy be affected if citizens stopped following laws and civic responsibilities? Explain with an example.",
+            "text": "Think: How do your actions as a student contribute to your school community and to democracy in a larger context? Discuss: Talk to your classmates about a social or community issue that you care about. How can you, as a student, make a difference? Act: Choose one activity to fulfil your civic responsibility this month. Reflect on how your actions contribute to strengthening democracy and community spirit.",
             "answer": {
               "answerKey": "Rule of law and public trust decline, harming accountability.",
               "schoolMethod": "Democracy would weaken as the rule of law and public trust decline, harming accountability and order. For example, damaging public property or spreading misinformation undermines democratic values and institutions."
@@ -1976,7 +1841,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Activity. Fill in the two empty boxes in Fig. 7.1 to indicate why elections are important for democratic functioning, and discuss how each is ensured through elections.",
+            "text": "Fig. 7.1. Importance of elections in a democracy. (Fill in the two empty boxes to indicate why elections are important for democratic functioning, and discuss how each one of them is ensured through elections.)",
             "answer": {
               "answerKey": "Empty boxes: Participation and Choice/Competition.",
               "schoolMethod": "Suggested values for the two empty boxes: Participation — elections are ensured to be inclusive through Universal Adult Franchise, giving every eligible citizen aged 18+ the right to vote. Choice/Competition — a multi-party system and registration of independent candidates ensure voters have genuine alternatives to choose from. How each is ensured through elections: Representation — periodic direct elections to the Lok Sabha, Vidhan Sabha and local bodies ensure people's chosen representatives make decisions on their behalf. Equality — Universal Adult Franchise and the principle of 'one person, one vote' ensure every citizen's vote carries equal weight. Accountability — regular elections mean representatives must seek the people's mandate again, ensuring they remain answerable to voters. Legitimacy — a government elected through free and fair elections derives rightful authority to govern. Participation — inclusive measures (SIR, home voting, PwD facilities) ensure the widest possible citizen involvement. Choice/Competition — the multi-party system offers voters real alternatives, strengthening democratic decision-making."
@@ -1992,7 +1857,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": true,
-            "text": "Let's Explore. Different democracies use different electoral systems. Prepare and present a case study on the electoral system(s) of six countries from different continents, and discuss their latest election results.",
+            "text": "Different democracies use different electoral systems. Make groups of 5–6 students. Each group will select six countries from different continents. Prepare and present a case study on the type of electoral system(s) operating in those countries, and discuss their latest election results of those countries.",
             "answer": {
               "answerKey": "India/UK — FPTP; Germany — MMP; South Africa — PR; Brazil — PR; Australia — AV.",
               "schoolMethod": "Illustrative case study outline (verify latest results from official sources): Asia — India: First-Past-The-Post (FPTP) for Lok Sabha/Vidhan Sabha elections. Europe — United Kingdom: First-Past-The-Post for the House of Commons. Europe — Germany: Mixed system combining FPTP and Proportional Representation (Mixed-Member Proportional). Africa — South Africa: Proportional Representation, where seats are allotted based on the share of national vote. South America — Brazil: Proportional Representation for its lower house (Chamber of Deputies). Oceania — Australia: Preferential/Alternative Vote system for its House of Representatives. Note: This is a research-based group activity; the electoral system type given above is factual, but the latest election results for each country should be verified from current official sources at the time of presentation."
@@ -2008,7 +1873,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Don't Miss Out. India has had four Delimitation Commissions — in 1952, 1963, 1973, and 2002. Find out the reason for the long interval between 1973 and 2002.",
+            "text": "Article 82 of the Constitution of India mandates the establishment of a Delimitation Commission. India has had four Delimitation Commissions—in 1952, 1963, 1973, and 2002. Can you find out the reason for the long interval between 1973 and 2002 with the help of your teacher?",
             "answer": {
               "answerKey": "42nd Amendment froze delimitation at 1971 census figures until 2000.",
               "schoolMethod": "The 42nd Constitutional Amendment (1976) froze the delimitation of constituencies at the 1971 census figures until the year 2000, so that States implementing family planning were not penalised with fewer seats for controlling population growth. The 84th Amendment (2001) later extended this freeze, and the 2002 Delimitation Commission only readjusted boundaries without changing the total number of seats."
@@ -2024,7 +1889,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Think About It. Find out the various steps of the procedure for voter registration and the list of required documents.",
+            "text": "You will turn 18 in a few years. As a responsible citizen, you should register yourself as a voter. Find out the various steps of the procedure for registration, and the list of required documents for the same. Discuss, with anyone who has just turned 18 and has registered as a voter, the ease or difficulty faced in the voter registration process.",
             "answer": {
               "answerKey": "Fill Form 6 online/offline, attach age and residence proof, verification, EPIC.",
               "schoolMethod": "A voter-registration application is submitted through the ECI’s prescribed registration process, with the required proof of age and residence and subsequent verification. Applicants should follow the current ECI instructions and document list because procedures and accepted documents can change."
@@ -2034,7 +1899,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Let's Explore. What is ETPBS? Find out who are classified as service voters and who can vote using ETPBS.",
+            "text": "Do you know what ETPBS is? ETPBS stands for Electronically Transmitted Postal Ballot System. It enables service voters to cast their vote on an electronically received postal ballot from their preferred location, which is outside their originally assigned voting constituency. Find out who are classified as service voters and who can vote using ETPBS?",
             "answer": {
               "answerKey": "ETPBS lets service voters cast postal ballots electronically.",
               "schoolMethod": "ETPBS (Electronically Transmitted Postal Ballot System) allows eligible service voters to receive and cast their postal ballots electronically from outside their home constituency. Persons classified as service voters (eligible for ETPBS): Members of the Armed Forces of the Union. Members of a State's armed police force serving outside that state. Government employees posted abroad (e.g., in Indian missions/embassies). Spouses of the above categories of service voters, if they are ordinarily residing with them."
@@ -2050,7 +1915,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "Let's Map (1). Choose any three states (including yours). Find the symbols of state parties belonging to those states and plot them on the map of India. List their major agenda as per their latest manifesto.",
+            "text": "Choose any three states (including yours). Find the symbols of state parties belonging to those states and plot them on the given map of India. List down their major agenda, as mentioned in their manifesto in the latest Lok Sabha/Vidhan Sabha/Local Body Elections.",
             "answer": {
               "answerKey": "Use ECI website for symbols and official manifestos for agenda.",
               "schoolMethod": "Suggested method (since manifesto details change with each election, verify from the party's official/ECI source before plotting): Identify the state you wish to study on the outline map (Fig. 7.10). Visit the Election Commission of India's website (eci.gov.in) to find the list of recognised state parties for that state and their allotted symbols. Note down 2–3 major agenda points from the party's official manifesto for the most recent Lok Sabha/Vidhan Sabha/Local Body election. Mark the state on the map and label it with the party name, symbol, and its key agenda points."
@@ -2060,7 +1925,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q2",
             "number": "2",
             "isHard": false,
-            "text": "Let's Map (2). Form groups and compare the policy preferences of two political parties in the last Lok Sabha Elections across Education, National security, Social welfare, Environment, Economy, and Health, citing credible sources.",
+            "text": "Form groups of 4–6 students. Identify and compare the policy preferences on the following parameters for two political parties in the last Lok Sabha Elections using credible sources like party manifestos, newspapers, etc. Present the points of comparison in a poster using bullet points, symbols, colour coding, etc.",
             "answer": {
               "answerKey": "Compare manifestos with cited sources per policy area.",
               "schoolMethod": "Suggested approach: This is a research-based comparative activity. Using each party's official election manifesto, reputed newspapers, and the ECI website as sources, note each party's stated viewpoint on every policy area listed, along with any specific law or policy it aligns with, and cite the source for each entry in the table. Note: As party positions and manifestos change with every election, this activity should be completed using the most recent, verified official sources rather than assumed positions."
@@ -2112,24 +1977,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "What reforms have been introduced by the ECI to make voting more inclusive for the following groups?",
-            "parts": [
-              "People with Disabilities",
-              "Service Voters",
-              "Senior Citizens — 60 years and above; and 80 years and above",
-              "Prisoners",
-              "Persons in preventive detention"
-            ],
-            "answer": {
-              "answerKey": "Saksham App, ETPBS, home voting, Section 62 exclusion, postal ballot.",
-              "schoolMethod": "a. People with Disabilities: The Saksham App assists with registration and locating polling stations; EVMs with Braille signage, wheelchairs, and volunteer assistance are provided at polling booths; home voting is available for PwDs with 40%+ benchmark disability. b. Service Voters: They can cast their vote through the Electronically Transmitted Postal Ballot System (ETPBS), receiving and returning ballots electronically from outside their home constituency. c. Senior Citizens — 60 years and above; and 80 years and above: Senior citizens aged 60+ get priority entry and assistance at polling booths; those aged 80 years (also extended to 85+ as per the chapter) and above are offered the facility of voting from home. d. Prisoners: Under Section 62 of the Representation of the People Act, 1951, persons confined in prison under a sentence of imprisonment, or in lawful police custody, are not entitled to vote. e. Persons in preventive detention: Unlike convicted prisoners, persons under preventive detention (not undergoing a sentence) retain their right to vote and can typically exercise it through postal ballot."
-            }
-          },
-          {
-            "id": "q2",
-            "number": "2",
-            "isHard": false,
-            "text": "What are the various functions of the Election Commission of India? Which of these functions is most important for the conduct of free and fair elections? Explain.",
+            "text": "Look at the road to free and fair elections above (Fig. 7.13). Fill in the empty potholes with some more challenges after discussing them with your teachers and parents. How can we overcome these challenges?",
             "answer": {
               "answerKey": "Rolls, schedule, party registration, fair conduct; free-and-fair conduct is most important.",
               "schoolMethod": "Functions of the ECI: Creating and updating the electoral roll, including Special Intensive Revision (SIR). Deciding the schedule and date of elections. Registering political parties and allocating election symbols. Ensuring the free and fair conduct of elections, including enforcement of the Model Code of Conduct. Acting as a quasi-judicial body to resolve disputes over party recognition and symbols. Answer: Ensuring free and fair elections is arguably the most important function, since it is the foundation on which the legitimacy of all other functions — accurate rolls, party registration, and results — ultimately rests."
@@ -2159,7 +2007,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q5",
             "number": "5",
             "isHard": true,
-            "text": "Why should you vote? Arrange the following in descending order of your choice and discuss the reasons: (a) Opportunity to choose my representative (b) Makes me a responsible person (c) Opportunity to change the non-performing representative (d) Strengthens democracy.",
+            "text": "Why should you vote? Arrange the following in the descending order of your choice. Discuss the reasons for your choice.",
             "answer": {
               "answerKey": "Sample order: (d), (a), (c), (b).",
               "schoolMethod": "Sample Answer (personal opinion; order may vary): Sample order: (d) Strengthens democracy, (a) Opportunity to choose my representative, (c) Opportunity to change the non-performing representative, (b) Makes me a responsible person — because voting first upholds the democratic system as a whole, then serves my direct interests, before shaping my personal civic character."
@@ -2189,38 +2037,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "Read the case study (Ishani's first vote) and answer the following questions.",
-            "parts": [
-              "What initiatives were taken by the ECI to enable the voters to cast their vote?",
-              "Which other document might Ishani be carrying that is valid for voting, in the absence of her Voter ID/Aadhaar card?",
-              "Cite examples of violations of the Model Code of Conduct from the passage.",
-              "Give a suitable title to the passage.",
-              "Find out how the police and army personnel cast their votes."
-            ],
-            "answer": {
-              "answerKey": "Online registration, assistance, wheelchair, VVPAT, home voting; alternative photo IDs; MCC violations; ETPBS postal ballots.",
-              "schoolMethod": "a. Online voter registration through the ECI portal, security and volunteer assistance at the booth, a wheelchair for the disabled brother, VVPAT for vote verification, and home voting facility for the elderly grandmother. b. She could have carried any of the ECI's alternative photo ID documents, such as a PAN card, passport, driving licence, or a bank/post office passbook with photograph. c. Wall writing and campaign posters pasted throughout the market, and large groups distributing pamphlets and raising slogans in public spaces close to polling day, may violate MCC rules on defacement of property and campaigning restrictions near polling time. d. \"Ishani's First Vote: A Journey Through India's Inclusive Election Process\". e. Police and army personnel on election duty, being classified as service voters, cast their votes through postal ballots, including the Electronically Transmitted Postal Ballot System (ETPBS)."
-            }
-          },
-          {
-            "id": "q9",
-            "number": "9",
-            "isHard": false,
-            "text": "A comparative chart of three countries is given (political and economic dimensions). Answer the questions based on it.",
-            "parts": [
-              "What is the difference between having a voting right in a country with a multi-party system and another with a single-party system?",
-              "In which of the above countries would you like to stay and why?"
-            ],
-            "answer": {
-              "answerKey": "Multi-party gives real choice; single-party limits competition.",
-              "schoolMethod": "a. In a multi-party system, voters have genuine choice among competing parties and ideologies, enabling real change of government; in a single-party system, though citizens may vote, choice is restricted to one party's candidates, limiting real competition and accountability. b. Sample Answer (personal opinion): Country A, because political freedom, competitive elections, and the ability to choose and change representatives matter more to democratic life than economic standard of living alone."
-            }
-          },
-          {
-            "id": "q10",
-            "number": "10",
-            "isHard": true,
-            "text": "What are the challenges to conducting free and fair elections?",
+            "text": "Read the case study below and answer the following questions:",
             "answer": {
               "answerKey": "Misinformation, intimidation, money power, accessibility and awareness gaps.",
               "schoolMethod": "Misinformation and fake news, especially through social media. Intimidation and undue influence on voters. Use of money and muscle power in campaigns. Accessibility barriers for PwDs, senior citizens, and remote/tribal populations. Gaps in voter awareness, particularly among first-time or marginalised voters."
@@ -2230,7 +2047,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q11",
             "number": "11",
             "isHard": false,
-            "text": "On the Stage: Conduct a school election role-play for Head Girl, Head Boy, and Sports Captain, assuming various roles.",
+            "text": "On the Stage. Elections are to be held in your school for the posts of Head Girl, Head Boy, and Sports Captain. Assume the roles of an Election Commissioner, Returning Officer, Polling Agent, Candidate, Campaigner, Polling Officer, Police Personnel, and a Journalist, and perform their roles while ensuring free, fair, and transparent elections.",
             "answer": {
               "answerKey": "Roles: Election Commissioner, RO, polling/campaign/security/media roles.",
               "schoolMethod": "Suggested role responsibilities for the activity: Election Commissioner — oversees the entire process impartially and ensures rules are followed. Returning Officer — manages nominations, supervises voting in the constituency, and declares results. Polling Agent — represents a candidate at the booth and observes the voting process. Candidate — campaigns within the agreed code of conduct. Campaigner — promotes the candidate's agenda following fair campaign rules. Polling Officer — manages the voting process and identity verification at the booth. Police Personnel — maintains security and law and order at the polling venue. Journalist — reports on the process factually and impartially."
@@ -2240,7 +2057,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q12",
             "number": "12",
             "isHard": false,
-            "text": "Make videos or audios on topics like: My Vote My Nation; No Voter to be Left Behind; How to Eliminate the Ill of Money Power.",
+            "text": "Try and make videos or audios on topics like: My Vote My Nation; No Voter to be Left Behind; How to Eliminate the Ill of Money Power, etc.",
             "answer": {
               "answerKey": "Suggested key messages for each topic.",
               "schoolMethod": "My Vote My Nation — emphasise that voting is both a right and a responsibility that shapes the nation's future; include a call to register and vote. No Voter to be Left Behind — highlight ECI initiatives like SIR, home voting, Saksham App, and ETPBS that ensure inclusive participation for all citizens. How to Eliminate the Ill of Money Power — explain provisions of the RPA 1951 against bribery/inducements, and encourage reporting violations via the cVIGIL app."
@@ -2250,7 +2067,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q13",
             "number": "13",
             "isHard": true,
-            "text": "Select one national or state political party and prepare a comparative chart of the last two State Legislative Assembly elections, covering manifesto promises, vote percentage, seats won, and women candidates.",
+            "text": "Select one national or state political party. Using authentic and reliable sources such as the Election Commission of India (ECI) website, the official website of the selected political party, and newspapers. Prepare a comparative chart of the last two State Legislative Assembly elections. The chart should include the following details for the chosen party: a. Some promises made in the Election manifesto b. Percentage of votes polled c. Number of seats won d. Number of women who contested e. Number of women candidates elected Present the data for both elections in a clear and comparative format, citing all sources used.",
             "answer": {
               "answerKey": "Use ECI data to tabulate manifesto, votes, seats, women candidates.",
               "schoolMethod": "Suggested approach: This activity requires current, verified data. Using the ECI website, the party's official website, and newspapers as sources, prepare a table with columns for each election year showing: (a) key manifesto promises, (b) percentage of votes polled, (c) number of seats won, (d) number of women who contested, and (e) number of women candidates elected — citing the source for each data point. Note: Since specific figures change with every election and vary by state/party, this activity is best completed using the latest official ECI data at the time of the assignment."
@@ -2260,7 +2077,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q14",
             "number": "14",
             "isHard": true,
-            "text": "Do you think 'One Nation, One Election' can improve the efficiency of the electoral process? Discuss potential advantages and limitations.",
+            "text": "Do you think 'One Nation, One Election' can improve the efficiency of the electoral process? Divide the class and discuss into two groups—one to examine its potential advantages and the other to analyse its limitations.",
             "answer": {
               "answerKey": "Reduces cost/disruption but may strain federal structure and logistics.",
               "schoolMethod": "Potential Advantages: Reduces the frequency and cost of conducting separate elections across the country. Minimises disruption to governance caused by the Model Code of Conduct being repeatedly in force. Reduces the burden on security forces and administrative machinery deployed for elections. Offers voters a more convenient, single occasion to exercise their franchise. Potential Limitations: May affect India's federal structure, as state-specific issues could get overshadowed by national narratives. Logistical challenge of synchronising the terms of different state legislatures and the Lok Sabha. Uncertainty over the procedure to be followed if a state or central government falls before completing its term. Requires a much larger simultaneous deployment of EVMs, VVPATs, and personnel."
@@ -2466,7 +2283,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q6",
             "number": "6",
             "isHard": false,
-            "text": "A student has ₹100 and must choose between buying a notebook or saving the money for buying a tennis racket later. Which economic concept best explains this situation?",
+            "text": "A student has ₹100 …",
             "answer": {
               "answerKey": "(b) Opportunity cost.",
               "schoolMethod": "(b) Opportunity cost — buying the notebook means giving up the value of saving towards the tennis racket, which is its opportunity cost."
@@ -2578,7 +2395,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": false,
-            "text": "What happens when you consume the first mango, the second, and so on? You are barely interested by this point. Why do you think this happens?",
+            "text": "What happens when you consume the first mango? It tastes delicious, right? The second one is good? The third one and so on? You are barely interested in eating mangoes by this point. Why do you think this happens?",
             "answer": {
               "answerKey": "Each extra mango gives less satisfaction — diminishing marginal utility.",
               "schoolMethod": "Each additional mango consumed gives less satisfaction than the one before it. This is known as the principle of diminishing marginal utility, which explains why the willingness to pay for a good falls as more of it is consumed."
@@ -2694,28 +2511,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q1",
             "number": "1",
             "isHard": true,
-            "text": "From your surroundings, list two goods or services provided by the government (for example: roads, streetlights, parks, police, and so on). Choose one of the goods you listed and answer the following.",
-            "parts": [
-              "Who does benefit from it?",
-              "Why would it be difficult for a private company to provide this service on its own?",
-              "Imagine the government stops providing this good or service, what problems might people in your area face?"
-            ],
-            "answer": {
-              "answerKey": "Sample: streetlights and parks — everyone benefits, non-excludable, unsafe without them.",
-              "schoolMethod": "(Sample) Streetlights and public parks are two services provided by the government in my locality. Who does benefit from it? — All residents, pedestrians, and vehicle users benefit from streetlights, as they improve safety and visibility at night for everyone without exception. Why would it be difficult for a private company to provide this service on its own? — A private company cannot easily charge individual users, since streetlights cannot exclude non-paying users, making it unprofitable for private provision. Imagine the government stops providing this good or service, what problems might people in your area face? — Without streetlights, roads would become unsafe at night, increasing the risk of accidents, theft, and other crimes in the locality. (Sample answer — students should list goods/services actually available in their own surroundings.)"
-            }
-          }
-        ]
-      },
-      {
-        "id": "sec9",
-        "title": "Let's Recall — Democracy and Market Intervention",
-        "questions": [
-          {
-            "id": "q1",
-            "number": "1",
-            "isHard": true,
-            "text": "According to you, how should a democratic government decide when and how much it should intervene in markets to protect people’s welfare?",
+            "text": "From your surroundings, list two goods or services that are provided by the government (for example: roads, streetlights, parks, police, and so on.). Choose one of the goods you listed and answer: → Who does benefit from it? → Why would it be difficult for a private company to provide this service on its own? → Imagine the government stops providing this good or service, what problems might people in your area face?",
             "answer": {
               "answerKey": "Intervene only on market failure; avoid excessive regulation.",
               "schoolMethod": "A democratic government should intervene only when markets fail to serve public interest, such as during unfair pricing, monopoly, or under-provision of essential goods, while avoiding excessive regulation that discourages enterprise and innovation."
@@ -2822,7 +2618,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "q8",
             "number": "8",
             "isHard": false,
-            "text": "In the table below, different prices of guava are given — think and write how much guava you will buy at each price, ask the same to three friends, fill the table, and make individual and total demand graphs.",
+            "text": "In the table below, different prices of guava are given. a. Think and write how much guava you will buy at each price. b. Ask the same question to three of your friends and fill in the table. c. Also make a graph for each one of you and one final graph for the total quantity.",
             "answer": {
               "answerKey": "Quantity rises as price falls; market curve is the horizontal sum.",
               "schoolMethod": "(Sample) As the price of guava falls from ₹100/kg to ₹20/kg, the quantity each person is willing to buy rises, following the Law of Demand. Adding up all individual quantities at each price and plotting them gives the individual demand curves and the market (total) demand curve, both sloping downward from left to right. (Activity-based question — students should collect actual responses from three friends and draw the graphs themselves.)"

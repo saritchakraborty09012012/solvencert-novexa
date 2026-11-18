@@ -127,6 +127,11 @@ export function QuestionCard({ question, exerciseId, isMaths, subject, subjectSl
               onGuestBlock={onUnlock}
             />
           </div>
+          {question.figure && (
+            typeof question.figure === 'string'
+              ? <img src={question.figure} alt={`Figure for question ${question.number}`} className="qfig-img mt-3 max-w-full rounded-lg border border-[var(--border)]" style={{ maxHeight: 420 }} />
+              : <div className="qfig mt-3" dangerouslySetInnerHTML={{ __html: question.figure.svg }} />
+          )}
           {question.parts && question.parts.length > 0 && (
             <ol className="mt-2 space-y-1.5 pl-1">
               {question.parts.map((part, pi) => (
