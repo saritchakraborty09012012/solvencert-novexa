@@ -283,7 +283,7 @@ export const HISTORY_ARTS_CHAPTERS = [
             id: 'q2',
             number: '2',
             isHard: false,
-            text: 'Discussion circle: The murals at Ajanta have survived more than 1,500 years. How long do you think murals made today can last?',
+            text: 'Discussion circle: The murals at Ajanta have survived more than 1,500 years for us to see them today. How long do you think murals made today can last?',
             answer: {
               answerKey: 'Modern murals using synthetic paints may last only a few decades without special conservation, since they generally lack the plaster-and-earth-pigment technique and sheltered cave environment that helped preserve the Ajanta murals.',
               schoolMethod: 'Modern murals using synthetic paints may last only a few decades without special conservation, since they generally lack the plaster-and-earth-pigment technique and sheltered cave environment that helped preserve the Ajanta murals.',

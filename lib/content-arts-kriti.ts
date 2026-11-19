@@ -158,7 +158,7 @@ export const KRITI_ARTS_CHAPTERS = [
             id: 'q5',
             number: '5',
             isHard: false,
-            text: "Which are the various departments in theatre that come together for a performance? As a director, and in what order would you like to work with these departments, starting with the script?",
+            text: "Which are the various departments in theatre that come together for a performance? As a director, in what order would you like to work with these departments, starting with the script?",
             answer: {
               answerKey: "• Script/Direction\n• Acting (casting and actor preparation)\n• Set design\n• Costume and props (Āhārya)\n• Lighting design\n• Sound design\n\nAs a director, I would begin with script work to build the vision, move to blocking and acting with the cast, then bring in set, costumes/props, lighting, and sound so every department aligns with the script before final run-throughs.",
               schoolMethod: "• Script/Direction\n• Acting (casting and actor preparation)\n• Set design\n• Costume and props (Āhārya)\n• Lighting design\n• Sound design\n\nAs a director, I would begin with script work to build the vision, move to blocking and acting with the cast, then bring in set, costumes/props, lighting, and sound so every department aligns with the script before final run-throughs.",

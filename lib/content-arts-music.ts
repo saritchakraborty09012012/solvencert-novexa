@@ -139,7 +139,7 @@ export const MUSIC_ARTS_CHAPTERS = [
           },
           {
             id: 'q8', number: 'Q8', isHard: false,
-            text: "Describe the connection between the science of sound and musical instruments (in about 50 words).",
+            text: "Describe the connection between the science of sound and musical instruments (50 words).",
             answer: { answerKey: "Musical instruments work on the scientific principles of vibration: tightening or loosening a string changes its pitch, a hollow resonating body increases loudness, and the thickness or material of the vibrating part determines tone quality. These same principles govern how every instrument is designed and played.", schoolMethod: "Musical instruments work on the scientific principles of vibration: tightening or loosening a string changes its pitch, a hollow resonating body increases loudness, and the thickness or material of the vibrating part determines tone quality. These same principles govern how every instrument is designed and played." },
           },
           {
@@ -257,6 +257,26 @@ export const MUSIC_ARTS_CHAPTERS = [
             text: "Describe one system of classification of rāgas with examples.",
             answer: { answerKey: "Rāgas are classified by Rāga-Jāti -- the number of notes used in the Arohana and Avarohana. A 7-note scale is Sampurna (e.g., Yaman), a 6-note scale is Shadava (e.g., Gurjari Todi), and a 5-note scale is Audava (e.g., Bhoopali).", schoolMethod: "Rāgas are classified by Rāga-Jāti -- the number of notes used in the Arohana and Avarohana. A 7-note scale is Sampurna (e.g., Yaman), a 6-note scale is Shadava (e.g., Gurjari Todi), and a 5-note scale is Audava (e.g., Bhoopali)." },
           },
+          {
+            id: 'q9', number: 'Q9', isHard: false,
+            text: "Find out about the contributions of the following stalwarts to Indian music.",
+            answer: { answerKey: "Refer to the table of stalwarts in the textbook and write each one's contribution to Indian music.", schoolMethod: "Refer to the table of stalwarts in the textbook and write each one's contribution to Indian music." },
+          },
+          {
+            id: 'q10', number: 'Q10', isHard: false,
+            text: "Identify the Rāga-jāti based on the following:",
+            answer: { answerKey: "Identify the Rāga-jāti from the given table using the number of svaras in the ārohaṇa and avarohaṇa.", schoolMethod: "Identify the Rāga-jāti from the given table using the number of svaras in the ārohaṇa and avarohaṇa." },
+          },
+          {
+            id: 'q11', number: 'Q11', isHard: false,
+            text: "Complete the table.",
+            answer: { answerKey: "Complete the table as given in the textbook.", schoolMethod: "Complete the table as given in the textbook." },
+          },
+          {
+            id: 'q12', number: 'Q12', isHard: false,
+            text: "Write the tāla lipi (notation) of Teen Tāla.",
+            answer: { answerKey: "Teen Tāla (16 mātrās, 4-4-4-4) — notation: X 2 3 4 | 2 3 4 | X 3 4 | 2 3 4 (X = sam, khālī marks the 9th mātrā).", schoolMethod: "Teen Tāla has 16 mātrās divided into four vibhāgas of four beats each. Its tāla lipi is written with the sam (X) on the first beat and the khālī sign on the ninth." },
+          },
         ],
       },
       {
@@ -348,7 +368,7 @@ export const MUSIC_ARTS_CHAPTERS = [
           },
           {
             id: 'q2', number: 'Q2', isHard: false,
-            text: "Describe some features of Chutney music (in about 50 words).",
+            text: "Describe some features of Chutney music (50 words).",
             answer: { answerKey: "Chutney music emerged from Indian migrants in the Caribbean. It blends Bhojpuri folk songs and bhajans with Caribbean soca and calypso. Its lyrics mix Bhojpuri, Hindi, English and Creole, while instruments like the dholak, tassa, dhantal and keyboards give it an energetic, dance-driven sound.", schoolMethod: "Chutney music emerged from Indian migrants in the Caribbean. It blends Bhojpuri folk songs and bhajans with Caribbean soca and calypso. Its lyrics mix Bhojpuri, Hindi, English and Creole, while instruments like the dholak, tassa, dhantal and keyboards give it an energetic, dance-driven sound." },
           },
           {

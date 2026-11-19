@@ -391,7 +391,7 @@ export const DANCE_ARTS_CHAPTERS = [
             id: 'q1',
             number: '1',
             isHard: false,
-            text: 'What was your experience in fusing two dance forms respectfully?',
+            text: 'What was your experience in fusing the two dances respectively?',
             answer: {
               answerKey: "Sample: Fusing Bhangra's energetic shoulder and arm movements with Odissi's fluid tribhagi posture was challenging but rewarding -- it required understanding both traditions' core values to blend them without diluting either dance's identity.",
               schoolMethod: "Sample: Fusing Bhangra's energetic shoulder and arm movements with Odissi's fluid tribhagi posture was challenging but rewarding -- it required understanding both traditions' core values to blend them without diluting either dance's identity.",

@@ -60,6 +60,16 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'arts-solutions-better',
+    date: '2026-11-19',
+    type: 'content',
+    title: 'Arts Solutions Improved',
+    summary: 'Errors corrected and missing questions added — everything now matches the book',
+    body: 'Music, dance, theatre and visual arts questions were checked again against the book. Four missing music questions were added and wrong wordings were fixed.',
+    href: '/class-9/arts/madhurima',
+    hrefLabel: 'Open Arts',
+  },
+  {
     id: 'more-subjects-solutions-better',
     date: '2026-11-19',
     type: 'content',
