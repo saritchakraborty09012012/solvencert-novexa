@@ -15,7 +15,7 @@ export const KAUSHAL_CH1_3_CHAPTERS = [
             id: 'q1',
             number: '1',
             isHard: false,
-            text: "Portfolio: Select any product that you can trace back to agricultural practices. Find out the price of the raw product sold by a farmer and the cost at which it is sold. What is the price difference? Find out why the value has increased.",
+            text: "Portfolio: Select any product that you can trace back to agricultural practices. Find out (you can do an Internet search or ask different stakeholders, including vegetable sellers) the price of the raw product/produce sold by a farmer and the cost at which it is sold. What is the price difference? Find out why the value of the raw product/produce has increased.",
             answer: {
               answerKey: "Product chosen: Wheat and its processed form, atta (wheat flour). A farmer sells wheat at about ₹22 per kg at the farm gate, while packaged atta costs about ₹45 per kg in a supermarket, a difference of nearly 100 per cent. The value increases because of costs added at each stage of the value chain: post-harvest handling (cleaning, storage in warehouses), processing (milling into flour), packaging, branding, transport, and the profit margins of the miller and retailer.",
               schoolMethod: "Product chosen: Wheat and its processed form, atta (wheat flour). A farmer sells wheat at about ₹22 per kg at the farm gate, while packaged atta costs about ₹45 per kg in a supermarket, a difference of nearly 100 per cent. The value increases because of costs added at each stage of the value chain: post-harvest handling (cleaning, storage in warehouses), processing (milling into flour), packaging, branding, transport, and the profit margins of the miller and retailer.",
@@ -41,7 +41,7 @@ export const KAUSHAL_CH1_3_CHAPTERS = [
             id: 'q2',
             number: '1',
             isHard: false,
-            text: "Portfolio: Keep a record of data collected over a period of time with your DIY meteorological laboratory and share it with a farmer/gardener. Record their feedback.",
+            text: "Portfolio: Keep a record of data you have collected over a period of time with your DIY meteorological laboratory and share it with a farmer/gardener. Record their feedback.",
             answer: {
               answerKey: "Rainfall, temperature and wind-direction readings were recorded daily for three months using the self-made rain gauge, dry-wet bulb thermometer and wind vane. The record was shared with a local farmer, who confirmed that the rainfall data matched his own observations and found the readings useful for deciding irrigation timing for his vegetable plot.",
               schoolMethod: "Rainfall, temperature and wind-direction readings were recorded daily for three months using the self-made rain gauge, dry-wet bulb thermometer and wind vane. The record was shared with a local farmer, who confirmed that the rainfall data matched his own observations and found the readings useful for deciding irrigation timing for his vegetable plot.",
@@ -73,7 +73,7 @@ export const KAUSHAL_CH1_3_CHAPTERS = [
             id: 'q1',
             number: '1',
             isHard: false,
-            text: "Task - Exploring vocations around us: (1) What kind of work related to agricultural practices do you observe around yourself?",
+            text: "Task - Exploring vocations around us: (1) What kind of work related to agricultural practices do you observe around yourself? You can use different sources of information, for example, experts, site visits, libraries, online resources, specific government sites or reports.",
             answer: {
               answerKey: "Around the school and neighbourhood, the following work was observed: rooftop kitchen gardening, dairy farming, vegetable vending in the local market, a nursery selling saplings, and farmers using drip irrigation for vegetable crops.",
               schoolMethod: "Around the school and neighbourhood, the following work was observed: rooftop kitchen gardening, dairy farming, vegetable vending in the local market, a nursery selling saplings, and farmers using drip irrigation for vegetable crops.",
@@ -83,7 +83,7 @@ export const KAUSHAL_CH1_3_CHAPTERS = [
             id: 'q2',
             number: '2',
             isHard: false,
-            text: "Task - Exploring vocations around us: (2) Briefly describe what the work involves - inputs, key processes and outcomes.",
+            text: "Task - Exploring vocations around us: (2) Briefly describe what the work involves–what are the inputs, what are the key processes and what are the outcomes..",
             answer: {
               answerKey: "Inputs: seeds/saplings, water, compost, basic tools and labour. Key processes: soil preparation, sowing, irrigation, weeding, pest and disease management, and harvesting. Outcomes: fresh, chemical-free produce for home consumption or sale, generating income and improving household food security.",
               schoolMethod: "Inputs: seeds/saplings, water, compost, basic tools and labour. Key processes: soil preparation, sowing, irrigation, weeding, pest and disease management, and harvesting. Outcomes: fresh, chemical-free produce for home consumption or sale, generating income and improving household food security.",
@@ -139,7 +139,7 @@ export const KAUSHAL_CH1_3_CHAPTERS = [
             id: 'q4',
             number: '4',
             isHard: false,
-            text: "Q4. Create a farm-to-plate journey map for any farming produce, indicating the value chain as the produce travels from where it was grown to the table.",
+            text: "Q4. Create a farm-to-plate journey map for any farming produce. Indicate the value chain as the produce travels from where it was grown to the table in the form of food..",
             answer: {
               answerKey: "Farm-to-plate journey of tomato: Farming (cultivation and harvest at the farm) → Post-harvest handling (sorting, cleaning, grading) → Storage (crates/cold storage) → Transport to mandi → Wholesale marketing → Retailer/supermarket → Consumer's kitchen → Cooked food on the table, with value and price increasing at every stage due to handling, transport and profit margins.",
               schoolMethod: "Farm-to-plate journey of tomato: Farming (cultivation and harvest at the farm) → Post-harvest handling (sorting, cleaning, grading) → Storage (crates/cold storage) → Transport to mandi → Wholesale marketing → Retailer/supermarket → Consumer's kitchen → Cooked food on the table, with value and price increasing at every stage due to handling, transport and profit margins.",

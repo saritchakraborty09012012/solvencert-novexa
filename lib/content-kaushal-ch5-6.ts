@@ -15,7 +15,7 @@ export const KAUSHAL_CH5_6_CHAPTERS = [
             id: 'q1',
             number: '1',
             isHard: false,
-            text: 'List all the factors that add value to any raw material.',
+            text: 'List all the factors that add value to any raw material. Ask around, search in the library, search online, read newspapers and identify experts who can help you.',
             answer: {
               answerKey: "Value is added to a raw material through the following factors:\n• Processing: melting, moulding, cutting or shaping the raw material into a usable form.\n• Finishing: polishing, coating or painting, which improves appearance and durability.\n• Assembly of parts: adding functional components such as handles improves usability.\n• Skilled labour and design: craftsmanship and good design increase market value.\n• Packaging and branding: attractive packaging and quality certification raise the sale price.\nExample (given in text): metal scrap (₹20/kg) is melted, moulded, polished and fitted with a wooden handle to become a kitchen utensil worth ₹1200 – value is added at every processing stage.",
               schoolMethod: "Value is added to a raw material through the following factors:\n• Processing: melting, moulding, cutting or shaping the raw material into a usable form.\n• Finishing: polishing, coating or painting, which improves appearance and durability.\n• Assembly of parts: adding functional components such as handles improves usability.\n• Skilled labour and design: craftsmanship and good design increase market value.\n• Packaging and branding: attractive packaging and quality certification raise the sale price.\nExample (given in text): metal scrap (₹20/kg) is melted, moulded, polished and fitted with a wooden handle to become a kitchen utensil worth ₹1200 – value is added at every processing stage.",
@@ -195,7 +195,7 @@ export const KAUSHAL_CH5_6_CHAPTERS = [
             id: 'q2',
             number: '2',
             isHard: false,
-            text: 'Create a safety symbol to caution people about extremely hot surfaces. Think about the colour and image while designing it.',
+            text: 'Create a safety symbol to caution people about extremely hot surfaces. Think about the colour and image while you design it.',
             answer: {
               answerKey: "A yellow triangular sign with a black border, showing a black hand symbol above wavy heat lines, with the words 'CAUTION: HOT SURFACE' below. Yellow is used because, as per Table 5.2, it denotes warning and physical hazards.",
               schoolMethod: "A yellow triangular sign with a black border, showing a black hand symbol above wavy heat lines, with the words 'CAUTION: HOT SURFACE' below. Yellow is used because, as per Table 5.2, it denotes warning and physical hazards.",
