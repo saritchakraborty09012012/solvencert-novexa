@@ -60,6 +60,16 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'more-subjects-solutions-better',
+    date: '2026-11-19',
+    type: 'content',
+    title: 'More Subject Solutions Improved',
+    summary: 'Errors corrected and missing questions added — everything now matches the book.',
+    body: 'Social Science Part II, Sanskrit (Sharda and Iravati) and IT solutions were checked again against the book. Wrong wordings and dropped questions were fixed.',
+    href: '/class-9/sst/sst-part-2',
+    hrefLabel: 'Open Solutions',
+  },
+  {
     id: 'sst-it-solutions-better',
     date: '2026-11-18',
     type: 'content',

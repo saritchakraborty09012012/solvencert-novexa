@@ -2187,7 +2187,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "id": "bq3",
             "number": "BQ3",
             "isHard": false,
-            "text": "How can a business plan be developed?",
+            "text": "How to develop a business plan?",
             "answer": {
               "answerKey": "A business plan sets out the idea, target customers, market research, product, resources, operations, marketing, finance, risks and social impact.",
               "schoolMethod": "A business plan begins with a clear problem or customer need and a product or service that may meet it. It identifies target customers and competitors, describes the product and its benefits, lists people, materials, technology and infrastructure required, explains daily operations, sets a marketing strategy, estimates start-up and monthly costs and expected revenue, calculates likely profit or loss, identifies risks and explains social and environmental impact. The plan should be reviewed as evidence, costs and customer needs change."
