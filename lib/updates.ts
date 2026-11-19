@@ -60,6 +60,16 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'all-subjects-solutions-better',
+    date: '2026-11-19',
+    type: 'content',
+    title: 'Solutions Updated Across All Subjects',
+    summary: 'Errors corrected and missing questions added — everything now matches the book.',
+    body: 'Every subject was checked page by page against the NCERT books. Wrong wordings, missing questions and diagrams were fixed across Maths, Science, Social Science, Hindi, Sanskrit, IT, Arts and Skill Education.',
+    href: '/answers',
+    hrefLabel: 'See all Solutions',
+  },
+  {
     id: 'arts-solutions-better',
     date: '2026-11-19',
     type: 'content',

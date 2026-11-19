@@ -15,7 +15,7 @@ export const KAUSHAL_CH10_12_CHAPTERS = [
             id: 'q1',
             number: '1',
             isHard: false,
-            text: 'What type of healthcare services are required in the neighbourhood? (Survey-based)',
+            text: 'What type of healthcare services are required in the neighbourhood? Do a quick survey in the community to determine what will be useful.',
             answer: {
               answerKey: "A quick community survey revealed the need for a basic health screening camp -- checking blood pressure, blood sugar, height, weight and BMI -- along with awareness on hygiene, nutrition and prevention of occupational health risks, as most households lacked easy access to regular check-ups.",
               schoolMethod: "A quick community survey revealed the need for a basic health screening camp -- checking blood pressure, blood sugar, height, weight and BMI -- along with awareness on hygiene, nutrition and prevention of occupational health risks, as most households lacked easy access to regular check-ups.",
@@ -267,7 +267,7 @@ export const KAUSHAL_CH10_12_CHAPTERS = [
             id: 'q4',
             number: '4',
             isHard: false,
-            text: '4. Why is it especially important to keep the patient or visitor at the centre while providing healthcare services? Give one example.',
+            text: '4. Why is it especially important to keep the patient or visitor at the centre while providing healthcare services? Give one example to support your answer.',
             answer: {
               answerKey: "Healthcare directly affects a person's body and emotions, so ignoring their comfort can cause fear or harm. For example, explaining a procedure before checking blood sugar helps the visitor stay calm and cooperative.",
               schoolMethod: "Healthcare directly affects a person's body and emotions, so ignoring their comfort can cause fear or harm. For example, explaining a procedure before checking blood sugar helps the visitor stay calm and cooperative.",
@@ -317,7 +317,7 @@ export const KAUSHAL_CH10_12_CHAPTERS = [
             id: 'q9',
             number: '6',
             isHard: false,
-            text: '6. During a health camp, an elderly person and a pregnant woman arrive late. How should the service team respond? Explain your reasoning based on fair and ethical decision-making.',
+            text: '6. During a health camp, many people are waiting for check-ups. An elderly person and a pregnant woman arrive late. How should the service team respond? Explain your reasoning based on fair and ethical decision-making.',
             answer: {
               answerKey: "The team should give them priority access to check-up desks ahead of the general queue, since elderly persons and pregnant women may find long waiting physically difficult; this reflects fair, empathetic and inclusive service without being unfair to others already waiting, who can be politely informed.",
               schoolMethod: "The team should give them priority access to check-up desks ahead of the general queue, since elderly persons and pregnant women may find long waiting physically difficult; this reflects fair, empathetic and inclusive service without being unfair to others already waiting, who can be politely informed.",
@@ -637,7 +637,7 @@ export const KAUSHAL_CH10_12_CHAPTERS = [
             id: 'q3',
             number: '3',
             isHard: false,
-            text: '3. Tourists sometimes ignore local rules or damage natural and cultural sites. Why does this happen? What are the responsibilities of tourists and service providers to prevent this?',
+            text: '3. Tourists sometimes ignore local rules, or damage natural and cultural sites. Why do you think such behaviour occurs? What are the responsibilities of tourists and service providers to prevent this from happening?',
             answer: {
               answerKey: "This often happens due to lack of awareness or a sense of anonymity while travelling. Tourists must follow guidelines and respect sites; service providers must clearly communicate rules, display signage, and gently but firmly enforce responsible behaviour.",
               schoolMethod: "This often happens due to lack of awareness or a sense of anonymity while travelling. Tourists must follow guidelines and respect sites; service providers must clearly communicate rules, display signage, and gently but firmly enforce responsible behaviour.",
@@ -647,7 +647,7 @@ export const KAUSHAL_CH10_12_CHAPTERS = [
             id: 'q4',
             number: '4',
             isHard: false,
-            text: '4. During a tourist visit to a remote area, the bus breaks down. What preparations are necessary to ensure tourist safety, minimise inconvenience and maintain trust?',
+            text: '4. During a tourist visit to a remote area, the bus breaks down. What kind of preparations are necessary to ensure tourist safety, minimise inconvenience and maintain trust under these unexpected circumstances?',
             answer: {
               answerKey: "Carry emergency contact numbers, a first-aid kit and extra water in advance; keep tourists informed calmly about the delay, arrange alternate transport quickly, and reassure the group to maintain their trust and confidence in the service.",
               schoolMethod: "Carry emergency contact numbers, a first-aid kit and extra water in advance; keep tourists informed calmly about the delay, arrange alternate transport quickly, and reassure the group to maintain their trust and confidence in the service.",
@@ -677,7 +677,7 @@ export const KAUSHAL_CH10_12_CHAPTERS = [
             id: 'q7',
             number: '7',
             isHard: false,
-            text: '7. Of the tasks that you did, which did you enjoy the most? Which did you enjoy the least? Give examples of what went well and what did not. What would you do differently next time?',
+            text: '7. Of the tasks that you did, which did you enjoy the most? Which did you enjoy the least? Give examples of what went well and what did not go well. What would you do differently next time?',
             answer: {
               answerKey: "Preparing the script and interacting with visitors was most enjoyable, as it involved storytelling; preparing the Bill of Materials was least enjoyable due to detailed cost calculations. The guided walk went smoothly, but time management at rest stops needs improvement next time.",
               schoolMethod: "Preparing the script and interacting with visitors was most enjoyable, as it involved storytelling; preparing the Bill of Materials was least enjoyable due to detailed cost calculations. The guided walk went smoothly, but time management at rest stops needs improvement next time.",

@@ -242,7 +242,7 @@ export const KAUSHAL_CH7_9_CHAPTERS = [
             id: 'q1',
             number: '1',
             isHard: false,
-            text: 'Select any service you have experienced. Find out how the value of this service increases in different scenarios. Identify the elements that add value. Also list the sources of information used to gather this data.',
+            text: 'Select any service you have experienced. Find out how the value of this service increases in different scenarios. You can do an Internet search and ask different stakeholders. Identify the elements that add value. Also, list the sources of information you used to gather this data.',
             answer: {
               answerKey: "For a roadside tea stall, the value increases as elements such as comfortable seating, hygienic surroundings, a variety of snacks and a pleasant, decorated environment are added, turning a simple cart into a full cafe experience. The elements that add value are hospitality, hygiene, comfort, decor and quality of product/service. This information was gathered through personal observation of the service and by asking the vendor and regular customers.",
               schoolMethod: "For a roadside tea stall, the value increases as elements such as comfortable seating, hygienic surroundings, a variety of snacks and a pleasant, decorated environment are added, turning a simple cart into a full cafe experience. The elements that add value are hospitality, hygiene, comfort, decor and quality of product/service. This information was gathered through personal observation of the service and by asking the vendor and regular customers.",
@@ -402,7 +402,7 @@ export const KAUSHAL_CH7_9_CHAPTERS = [
             id: 'q1',
             number: '1',
             isHard: false,
-            text: 'What kind of work related to human services do you observe [around you]?',
+            text: 'What kind of work related to human services do you observe?',
             answer: {
               answerKey: "Around us, we observe healthcare workers (doctors, nurses, ASHA workers), teachers, shopkeepers, sanitation workers, delivery personnel, bank staff and hospitality workers, all providing services that meet the everyday needs of the community.",
               schoolMethod: "Around us, we observe healthcare workers (doctors, nurses, ASHA workers), teachers, shopkeepers, sanitation workers, delivery personnel, bank staff and hospitality workers, all providing services that meet the everyday needs of the community.",
