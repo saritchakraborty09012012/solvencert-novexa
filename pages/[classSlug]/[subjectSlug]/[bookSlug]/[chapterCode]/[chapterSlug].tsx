@@ -12,6 +12,7 @@ import GuestPaywall from '@/components/features/GuestPaywall';
 import QuestionNav from '@/components/features/QuestionNav';
 import BookmarkButton from '@/components/features/BookmarkButton';
 import ThumbsRating from '@/components/features/ThumbsRating';
+import { QUESTION_FIGURES } from '@/lib/question-figures';
 import ReportFlag from '@/components/features/ReportFlag';
 import AuthModal from '@/components/auth/AuthModal';
 import { CLASS_9_SUBJECTS, getSubject, type Question } from '@/lib/content';
@@ -107,6 +108,7 @@ export function QuestionCard({ question, exerciseId, isMaths, subject, subjectSl
   const schoolLabel = subjectSlug === 'advanced-science' ? 'Board Level Answers' : 'School Level Solution';
   const answerLabel = isMaths ? 'Sol.' : (subjectSlug === 'hindi' || subjectSlug === 'sanskrit') ? 'उत्तर:' : 'Ans.';
   const ctx = `Question: ${question.text}${question.parts?'\n'+question.parts.join('\n'):''}\nAnswer: ${question.answer.schoolMethod}`;
+  const bookFigure = QUESTION_FIGURES[`${chapterCode}:${exerciseId}:${question.id}`];
 
   return (
     <div className="question-block" id={`q-${exerciseId}-${question.id}`}>
@@ -131,6 +133,9 @@ export function QuestionCard({ question, exerciseId, isMaths, subject, subjectSl
             typeof question.figure === 'string'
               ? <img src={question.figure} alt={`Figure for question ${question.number}`} className="qfig-img mt-3 max-w-full rounded-lg border border-[var(--border)]" style={{ maxHeight: 420 }} />
               : <div className="qfig mt-3" dangerouslySetInnerHTML={{ __html: question.figure.svg }} />
+          )}
+          {bookFigure && (
+            <img src={bookFigure} alt={`Book figure for question ${question.number}`} className="qfig-img mt-3 max-w-full rounded-lg border border-[var(--border)]" style={{ maxHeight: 420 }} />
           )}
           {question.parts && question.parts.length > 0 && (
             <ol className="mt-2 space-y-1.5 pl-1">
