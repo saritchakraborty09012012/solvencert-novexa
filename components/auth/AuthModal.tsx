@@ -25,13 +25,13 @@ function Field({ label, type='text', value, onChange, placeholder, autoComplete,
     <div className="flex flex-col gap-1">
       <label className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">{label}</label>
       <div className="relative">
-        {prefix && (
-          <span aria-hidden className="pointer-events-none select-none absolute left-[18px] top-1/2 -translate-y-1/2 text-[0.95rem] text-[var(--text-muted)] opacity-60">{prefix}</span>
-        )}
         <input type={type} value={value} onChange={e=>onChange(type === 'email' ? e.target.value.toLowerCase() : e.target.value)}
           placeholder={placeholder} autoComplete={autoComplete} inputMode={inputMode}
           style={prefix ? { paddingLeft: '3.5rem' } : undefined}
           className={cn('input-field w-full', error && 'field-invalid')} />
+        {prefix && (
+          <span aria-hidden className="pointer-events-none select-none absolute left-[18px] top-1/2 z-10 -translate-y-1/2 text-[0.95rem] text-[var(--text-muted)] opacity-70">{prefix}</span>
+        )}
         {children}
       </div>
       {error && <p className="text-[11px] font-semibold text-red-500">{error}</p>}
