@@ -135,7 +135,7 @@ export function QuestionCard({ question, exerciseId, isMaths, subject, subjectSl
               : <div className="qfig mt-3" dangerouslySetInnerHTML={{ __html: question.figure.svg }} />
           )}
           {bookFigure && (
-            <img src={bookFigure} alt={`Book figure for question ${question.number}`} className="qfig-img mt-3 max-w-full rounded-lg border border-[var(--border)]" style={{ maxHeight: 420 }} />
+            <img src={bookFigure} alt={`Book figure for question ${question.number}`} className="qfig-img mt-3 mx-auto block max-w-full rounded-lg border border-[var(--border)] object-contain" style={{ maxHeight: 300 }} />
           )}
           {question.parts && question.parts.length > 0 && (
             <ol className="mt-2 space-y-1.5 pl-1">
