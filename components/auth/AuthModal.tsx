@@ -16,16 +16,21 @@ import toast from 'react-hot-toast';
 interface Props { mode:'login'|'signup'; onClose:()=>void; onSwitch:(m:'login'|'signup')=>void; }
 
 // Clean labeled input — icon ABOVE label, NO overlap
-function Field({ label, type='text', value, onChange, placeholder, autoComplete, error, children }: {
+function Field({ label, type='text', value, onChange, placeholder, autoComplete, error, prefix, inputMode, children }: {
   label:string; type?:string; value:string; onChange:(v:string)=>void;
-  placeholder?:string; autoComplete?:string; error?:string; children?: React.ReactNode;
+  placeholder?:string; autoComplete?:string; error?:string; prefix?:string;
+  inputMode?:React.HTMLAttributes<HTMLInputElement>['inputMode']; children?: React.ReactNode;
 }) {
   return (
     <div className="flex flex-col gap-1">
       <label className="text-xs font-semibold text-[var(--text-muted)] uppercase tracking-wider">{label}</label>
       <div className="relative">
+        {prefix && (
+          <span aria-hidden className="pointer-events-none select-none absolute left-[18px] top-1/2 -translate-y-1/2 text-[0.95rem] text-[var(--text-muted)] opacity-60">{prefix}</span>
+        )}
         <input type={type} value={value} onChange={e=>onChange(type === 'email' ? e.target.value.toLowerCase() : e.target.value)}
-          placeholder={placeholder} autoComplete={autoComplete}
+          placeholder={placeholder} autoComplete={autoComplete} inputMode={inputMode}
+          style={prefix ? { paddingLeft: '3.5rem' } : undefined}
           className={cn('input-field w-full', error && 'field-invalid')} />
         {children}
       </div>
@@ -202,7 +207,9 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
               <Field label="Email Address" type="email" value={email} onChange={v=>{setEmail(v);setError('');}} placeholder="you@example.com" autoComplete="email" />
               {isSignUp && (
                 <div className="grid grid-cols-2 gap-3">
-                  <Field label="Phone (optional)" type="tel" value={phone} onChange={setPhone} placeholder="+91 …" autoComplete="tel" />
+                  <Field label="Phone (optional)" type="tel" value={phone}
+                    onChange={v=>setPhone(v.replace(/\D/g, '').slice(-10))}
+                    placeholder="9876543210" autoComplete="tel" prefix="+91" inputMode="numeric" />
                   <Field label="Date of Birth *" type="date" value={dob}
                     onChange={v=>{setDob(v); setDobError('');}}
                     autoComplete="bday" error={dobError} />
