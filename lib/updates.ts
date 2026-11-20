@@ -60,6 +60,16 @@ export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
 /** Newest first. Add new updates at the top. */
 export const UPDATES: UpdateEntry[] = [
   {
+    id: 'missing-book-figures-added',
+    date: '2026-11-20',
+    type: 'content',
+    title: 'Missing Pictures Now Added',
+    summary: 'Errors corrected and missing questions and diagrams added — everything now matches the book.',
+    body: 'Social Science Part II and Skill Education questions now show the maps, graphs, tables and diagrams printed beside them in the book. 61 book figures were added.',
+    href: '/class-9/sst/sst-part-2',
+    hrefLabel: 'Open Solutions',
+  },
+  {
     id: 'all-subjects-solutions-better',
     date: '2026-11-19',
     type: 'content',
