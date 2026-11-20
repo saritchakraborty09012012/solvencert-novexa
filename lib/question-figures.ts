@@ -50,4 +50,12 @@ export const QUESTION_FIGURES: Record<string, string> = {
   '0908ch06:sec3:it3': '/figs/sst2-ch06-fig6-5-lijjat.png',
   '0908ch06:sec3:it4': '/figs/sst2-ch06-fig6-6-plan.png',
   '0908ch06:sec3:it6': '/figs/sst2-ch06-fig6-12-chettiar.png',
+  '0908ch01:sec3:it3': '/figs/sst2-ch01-fig1-5-tides.png',
+  '0908ch01:sec3:it4': '/figs/sst2-ch01-currents-world.png',
+  '0908ch04:sec3:it3': '/figs/sst2-ch04-fig4-2-sengol.png',
+  '0908ch04:sec3:it9': '/figs/sst2-ch04-policy-table.png',
+  '0908ch04:sec3:it10': '/figs/sst2-ch04-traffic.png',
+  '0908ch05:sec3:it11': '/figs/sst2-ch05-table5-1-tax.png',
+  '0908ch06:sec3:it1': '/figs/sst2-ch06-fig6-1-tree.png',
+  '0908ch06:sec3:it2': '/figs/sst2-ch06-fig6-2-entrepreneur.png',
 };
