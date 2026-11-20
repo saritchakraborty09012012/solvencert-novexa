@@ -208,7 +208,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
               {isSignUp && (
                 <div className="grid grid-cols-2 gap-3">
                   <Field label="Phone (optional)" type="tel" value={phone}
-                    onChange={v=>setPhone(v.replace(/\D/g, '').slice(-10))}
+                    onChange={v=>setPhone(v.replace(/\D/g, '').slice(0, 10))}
                     placeholder="9876543210" autoComplete="tel" prefix="+91" inputMode="numeric" />
                   <Field label="Date of Birth *" type="date" value={dob}
                     onChange={v=>{setDob(v); setDobError('');}}
