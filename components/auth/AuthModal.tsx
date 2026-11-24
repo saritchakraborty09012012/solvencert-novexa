@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { X, Eye, EyeOff, Loader2, ArrowRight, Mail, AlertCircle } from 'lucide-react';
 import { SolveNCERTLogo } from '@/components/ui/Logo';
 import { supabase } from '@/lib/supabase';
@@ -15,6 +15,10 @@ import { verifySignupEmail } from '@/lib/reoon';
 import toast from 'react-hot-toast';
 
 interface Props { mode:'login'|'signup'; onClose:()=>void; onSwitch:(m:'login'|'signup')=>void; }
+
+// Shown inside the primary button while Reoon checks a new signup, so the
+// golden button never looks stuck with just a silent spinner.
+const SIGNUP_STATUS = ['Verifying your email…', 'Please wait…', 'Just a sec…'];
 
 // Clean labeled input — icon ABOVE label, NO overlap
 function Field({ label, type='text', value, onChange, placeholder, autoComplete, error, prefix, inputMode, children }: {
@@ -51,6 +55,7 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
   const [confirmPw, setConfirmPw] = useState('');
   const [showPw,    setShowPw]    = useState(false);
   const [loading,   setLoading]   = useState(false);
+  const [signupStatusIndex, setSignupStatusIndex] = useState(0);
   const [googleLoading, setGoogleLoading] = useState(false);
   const [otpSent,   setOtpSent]   = useState(false);
   const [reward,    setReward]    = useState<{ code: string } | null>(null);
@@ -58,6 +63,17 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
   const [error,     setError]     = useState('');
   const [dobError,  setDobError]  = useState(''); // DOB → inline red+blink + "Required", NOT the bottom error box
   const [fpStage,   setFpStage]   = useState<null | 'forgot'>(null);
+
+  // Cycle friendly status text only while a signup is in flight. Login keeps
+  // its simple spinner; the index resets as soon as the modal is idle again.
+  useEffect(() => {
+    if (!loading || mode !== 'signup') { setSignupStatusIndex(0); return; }
+    const id = window.setInterval(
+      () => setSignupStatusIndex(i => (i + 1) % SIGNUP_STATUS.length),
+      1400,
+    );
+    return () => window.clearInterval(id);
+  }, [loading, mode]);
 
   async function handleSignUp() {
     setError('');
@@ -262,8 +278,16 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
               )}
 
               <button onClick={isSignUp?handleSignUp:handleLogin} disabled={loading || googleLoading} className="btn-primary w-full justify-center mt-1">
-                {loading ? <Loader2 size={16} className="animate-spin" />
-                  : isSignUp ? 'Create Account'
+                {loading ? (
+                  isSignUp ? (
+                    <span className="flex items-center gap-2">
+                      <Loader2 size={16} className="animate-spin flex-shrink-0" />
+                      <span key={signupStatusIndex} className="animate-fade-in whitespace-nowrap">
+                        {SIGNUP_STATUS[signupStatusIndex]}
+                      </span>
+                    </span>
+                  ) : <Loader2 size={16} className="animate-spin" />
+                ) : isSignUp ? 'Create Account'
                   : <span className="flex items-center gap-2">Sign In <ArrowRight size={14} /></span>}
               </button>
 
