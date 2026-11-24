@@ -1,6 +1,6 @@
 'use client'
 
-import { Heart } from 'lucide-react'
+import { Heart, Mail } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { SolveNCERTLogo, NovexaLogo } from '@/components/ui/Logo'
@@ -50,12 +50,11 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   },
 ]
 
-const SOCIALS = [
-  { src: '/ui3-logos/instagram.svg', label: 'Instagram' },
-  { src: '/ui3-logos/x.svg', label: 'X' },
-  { src: '/ui3-logos/youtube.svg', label: 'YouTube' },
-  { src: '/ui3-logos/facebook.svg', label: 'Facebook' },
-  { src: '/ui3-logos/telegram.svg', label: 'Telegram' },
+type Social = { label: string; href: string; faded: boolean; src?: string; icon?: 'mail' };
+const SOCIALS: Social[] = [
+  { src: '/ui3-logos/instagram.svg', label: 'Instagram', href: '#', faded: true },
+  { src: '/ui3-logos/youtube.svg', label: 'YouTube', href: '#', faded: true },
+  { icon: 'mail', label: 'Mail', href: 'mailto:nde.noirdemons@atomicmail.io', faded: false },
 ]
 
 export function SiteFooter() {
@@ -70,16 +69,17 @@ export function SiteFooter() {
               answers. Learn smarter. Score higher. Updated for the 2026 revised syllabus.
             </p>
             <div className="mt-5 flex gap-2">
-              {SOCIALS.map(({ src, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  aria-label={label}
-                  className="grid size-8 place-items-center rounded-lg border border-border opacity-70 transition-all hover:border-primary/50 hover:opacity-100"
-                >
-                  <Image src={src} alt="" width={16} height={16} className="size-4 brightness-0 invert" />
-                </a>
-              ))}
+              {SOCIALS.map(({ label, href, faded, src, icon }) => {
+                const glyph = icon === 'mail'
+                  ? <Mail size={15} className="text-muted-foreground" />
+                  : <Image src={src || ''} alt="" width={16} height={16} className="size-4 brightness-0 invert" />;
+                const className = `grid size-8 place-items-center rounded-lg border border-border ${faded ? 'opacity-40 cursor-default' : 'transition-all hover:border-primary/50 hover:opacity-80'}`;
+                return faded ? (
+                  <span key={label} aria-label={label} title={label} className={className}>{glyph}</span>
+                ) : (
+                  <a key={label} href={href} aria-label={label} title={label} className={className}>{glyph}</a>
+                );
+              })}
             </div>
           </div>
 

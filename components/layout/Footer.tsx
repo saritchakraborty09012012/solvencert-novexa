@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Twitter, Instagram, Youtube, Mail } from 'lucide-react';
+import { Instagram, Youtube, Mail } from 'lucide-react';
 import { BrandLogo, NovexaLogo } from '@/components/ui/Logo';
 import { useAuthStore } from '@/store/authStore';
 import { FeedbackStars } from '@/components/features/FeedbackWidget';
@@ -21,12 +21,15 @@ export default function Footer() {
               AI-powered NCERT solutions for CBSE Class 9. Human-verified, board-pattern answers. <strong className="text-[var(--text-secondary)]">2026 Revised Syllabus.</strong>
             </p>
             <div className="flex gap-2.5">
-              {[Twitter, Instagram, Youtube, Mail].map((Icon, i) => (
-                <a key={i} href={Icon === Mail ? 'mailto:nde.noirdemons@atomicmail.io' : '#'}
-                  className="w-7 h-7 rounded-lg bg-[var(--surface-2)] flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-3)] hover:-translate-y-0.5 transition-all border border-[var(--border-subtle)]">
-                  <Icon size={13} />
-                </a>
-              ))}
+              <span aria-label="Instagram" title="Instagram" className="w-7 h-7 rounded-lg bg-[var(--surface-2)] flex items-center justify-center text-[var(--text-muted)] opacity-40 cursor-default border border-[var(--border-subtle)]">
+                <Instagram size={13} />
+              </span>
+              <span aria-label="YouTube" title="YouTube" className="w-7 h-7 rounded-lg bg-[var(--surface-2)] flex items-center justify-center text-[var(--text-muted)] opacity-40 cursor-default border border-[var(--border-subtle)]">
+                <Youtube size={13} />
+              </span>
+              <a href="mailto:nde.noirdemons@atomicmail.io" aria-label="Mail" title="Mail" className="w-7 h-7 rounded-lg bg-[var(--surface-2)] flex items-center justify-center text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-3)] hover:-translate-y-0.5 transition-all border border-[var(--border-subtle)]">
+                <Mail size={13} />
+              </a>
             </div>
           </div>
 
