@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { History, Plus, X, Download, Trash2, Pencil, Check, MessageSquare, Sparkles, UserPlus } from 'lucide-react';
+import Link from 'next/link';
+import { History, Plus, X, Download, Trash2, Pencil, Check, MessageSquare, Sparkles, UserPlus, Crown } from 'lucide-react';
 import type { AISession } from '@/lib/aiHistory';
 import AuthModal from '@/components/auth/AuthModal';
 import { cn } from '@/utils/helpers';
@@ -56,8 +57,11 @@ export default function AIChatHistorySidebar({ open, onClose, sessions, activeId
             <>
               <div className="rounded-xl border border-[var(--border)] bg-[var(--surface-1)] p-3">
                 <p className="text-[11px] leading-relaxed text-[var(--text-secondary)]">
-                  Sessions stay for <b>{retentionDays} days from their last edit</b>, then they are deleted from our database. Premium accounts keep chats until you choose auto-delete in Settings. Saved chats sync across your devices.
+                  Sessions stay for <b>{retentionDays} days from their last edit</b>, and sync across devices before they are deleted from our database.
                 </p>
+                <Link href="/pricing" className="mt-2.5 inline-flex items-center gap-1.5 rounded-lg border border-amber-300 dark:border-amber-700/60 bg-amber-50 dark:bg-amber-950/30 px-3 py-2 text-[11px] font-semibold text-amber-700 dark:text-amber-300 hover:bg-amber-100 dark:hover:bg-amber-950/50 active:bg-amber-200 dark:active:bg-amber-900/40 transition-colors">
+                  <Crown size={12} className="flex-shrink-0" /> Upgrade to keep chats forever
+                </Link>
               </div>
               <button onClick={() => { onNew(); onClose(); }} className="w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs font-semibold py-2.5">
                 <Plus size={13} /> New Session
