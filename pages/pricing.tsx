@@ -22,9 +22,15 @@ const FREE_FEATURES = [
 
 const PREMIUM_FEATURES = [
   'All free features',
-  'AI Learn — full access',
-  'Quizzes & practice papers — unlimited',
-  'Mock tests — unlimited',
+  'Unlimited notes generation',
+  'Unlimited answer checks',
+  'Unlimited flashcards',
+  'Unlimited quizzes',
+  'Unlimited practice papers',
+  'Unlimited mock tests',
+  'Unlimited thorough and detailed student performance analysis and growth',
+  'Unlimited-time platform history persistence',
+  'Unlimited-time AI chat history persistence',
   'Study Room — up to 10 friends',
   'Priority AI responses',
 ];
