@@ -8,6 +8,10 @@ import ReportFlag from './ReportFlag';
 import ThumbsRating from './ThumbsRating';
 import MathRenderer from './MathRenderer';
 import { supabase } from '@/lib/supabase';
+import {
+  appendAIMessages, createAISession, findFollowupSession, followupSessionTitle,
+  loadAIHistorySettings,
+} from '@/lib/aiHistory';
 import { useAuthStore } from '@/store/authStore';
 import { useCollabStore, useCollabEffective } from '@/store/collabStore';
 import { cn } from '@/utils/helpers';
@@ -48,6 +52,39 @@ export default function AIFollowUp({ context, subject, chapterNumber, exerciseLa
   const { user } = useAuthStore();
   const eff = useCollabEffective();
   const [threads, setThreads] = useState<{ id: string; question: string; answer: string; done_by_name: string | null; done_by_id: string | null; created_at: string }[]>([]);
+  // Cross-device session history (new tables) — guests never save here.
+  const [sessionId, setSessionId] = useState<string | null>(null);
+  const [historyOn, setHistoryOn] = useState(true);
+
+  React.useEffect(() => {
+    if (!user?.id) { setSessionId(null); return; }
+    Promise.all([findFollowupSession(user.id, itemKey), loadAIHistorySettings(user.id)])
+      .then(([session, settings]) => {
+        setSessionId(session?.id ?? null);
+        setHistoryOn(settings.history_enabled);
+      }).catch(() => {});
+  }, [user?.id, itemKey]);
+
+  async function persistSession(question: string, answer: string) {
+    if (!user?.id || !historyOn) return;
+    const now = new Date().toISOString();
+    const messages = [
+      { role: 'user' as const, text: question, createdAt: now },
+      { role: 'ai' as const, text: answer, createdAt: now },
+    ];
+    if (sessionId) {
+      await appendAIMessages(sessionId, messages);
+      return;
+    }
+    const created = await createAISession({
+      userId: user.id,
+      title: followupSessionTitle(subject, chapterNumber, exerciseLabel, itemKey),
+      kind: 'followup',
+      contextLabel: itemKey,
+      messages,
+    });
+    if (created) setSessionId(created.id);
+  }
 
   // load past threads for this question (host account when mirroring)
   React.useEffect(() => {
@@ -91,7 +128,10 @@ export default function AIFollowUp({ context, subject, chapterNumber, exerciseLa
       setReply(ans);
       setQuery('');
       setEditing(false);
-      if (q) persistThread(q, ans);
+      if (q) {
+        void persistThread(q, ans);
+        void persistSession(q, ans);
+      }
     } catch { setReply('Connection error.'); }
     finally { setLoading(false); }
   }

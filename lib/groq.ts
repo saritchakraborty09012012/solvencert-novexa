@@ -1,13 +1,9 @@
-import { SCIENCE_BOOK_CONTEXT } from './content-science';
-import { ENGLISH_BOOK_CONTEXT } from './content-english';
-import { IT_BOOK_CONTEXT } from './content-it';
-import { EMPLOYABILITY_BOOK_CONTEXT } from './content-employability';
-import { SST_BOOK_CONTEXT } from './content-sst';
-import { SST_PART2_BOOK_CONTEXT } from './content-sst-part2';
-import { ADVMATH_BOOK_CONTEXT } from './content-advmath';
-import { ADVSCIENCE_BOOK_CONTEXT } from './content-advscience';
+// NOTE: full book-content modules are intentionally NOT imported here. They are
+// very large (all questions) and exceeded Groq's 8k TPM limit with 413 errors.
+// Keep this prompt compact; per-question context is supplied by the caller.
 
 const GROQ_BASE_URL = 'https://api.groq.com/openai/v1/chat/completions';
+const GROQ_USER_AGENT = 'SolveNCERT/1.0 (+https://solvencert-novexa.vercel.app)';
 
 type Msg = { role:'system'|'user'|'assistant'; content:string };
 
@@ -15,7 +11,7 @@ const getMainKey = () => process.env.GROQ_API_KEY;
 const getSrchKey = () => process.env.GROQ_AI_SEARCH_KEY;
 const getPayKey  = () => process.env.GROQ_PAYMENT_VERIFY_KEY;
 
-/** Groq chat model (llama-3.1-8b-instant was decommissioned by Groq). */
+/** Best available Groq model for this app; keep fallbacks for bursts/deprecations. */
 const GROQ_MODEL = 'openai/gpt-oss-120b';
 
 type ChatParams = { model:string; messages:Msg[]; max_tokens:number; temperature:number; stream:boolean; reasoning_effort?:'low'|'medium' };
@@ -33,11 +29,12 @@ async function chatCompletions(apiKey: string|undefined, params: ChatParams): Pr
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${apiKey}`,
+      'User-Agent': GROQ_USER_AGENT,
     },
     body: JSON.stringify(body),
   });
   if (!res.ok) {
-    throw new Error(`Groq request failed: ${res.status} ${await res.text()}`);
+    throw new Error(`Groq request failed: ${res.status} ${(await res.text()).slice(0, 300)}`);
   }
   return (await res.json()) as ChatCompletion;
 }
@@ -77,27 +74,25 @@ YOUR KNOWLEDGE (NCERT 2026 Revised Syllabus):
 ${MATHS_CONTEXT}
 
 === SCIENCE (Exploration) ===
-${SCIENCE_BOOK_CONTEXT}
+Measurement and SI units, motion and Newton's laws, work and energy, sound, light, electricity, matter, atoms and molecules, cells, reproduction, heredity, environment.
 
 === ENGLISH (Kaveri) ===
-${ENGLISH_BOOK_CONTEXT}
+Prose and poetry, comprehension, grammar, vocabulary, letter/essay writing.
 
 === INFORMATION TECHNOLOGY (Code 402) ===
-${IT_BOOK_CONTEXT}
+IT-ITeS industry, keyboarding, LibreOffice Writer/Calc/Impress, internet and e-commerce.
 
 === EMPLOYABILITY SKILLS ===
-${EMPLOYABILITY_BOOK_CONTEXT}
+Communication, self-management, ICT basics, entrepreneurship, green skills (separate from IT 402).
 
 === SOCIAL SCIENCE (Understanding Society: India and Beyond — Parts I & II) ===
-${SST_BOOK_CONTEXT}
-
-${SST_PART2_BOOK_CONTEXT}
+Geography: Earth, atmosphere, climate, oceans. History: early humans, civilisations, 1000-1700 CE. Civics: democracy, elections, governance. Economics: choice, opportunity cost, demand and supply, personal finance, startups.
 
 === ADVANCED MATHEMATICS (Optional) ===
-${ADVMATH_BOOK_CONTEXT}
+Sets, logarithms, relations and functions, coordinate geometry, permutations and combinations, progressions.
 
 === ADVANCED SCIENCE ===
-${ADVSCIENCE_BOOK_CONTEXT}
+Significant figures, machines, work and energy, atomic structure, chemical bonding, mixtures, microscopy, biotechnology.
 
 SUBJECT RULES — STRICTLY FOLLOW:
 1. Maths questions → give mathematical solutions with steps and formulas
@@ -145,7 +140,7 @@ const MODE_PROMPTS: Record<AIMode,string> = {
 };
 
 /** Models to try in order; later ones are smaller/faster fallbacks for bursts. */
-const GROQ_MODELS = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'llama-3.3-70b-versatile'];
+const GROQ_MODELS = ['openai/gpt-oss-120b', 'qwen/qwen3.8-27b', 'openai/gpt-oss-20b'];
 
 /** Shared keys distinct from the main one, used as fallback when the main key is rate-limited. */
 const FALLBACK_KEYS = [getSrchKey, getPayKey].filter(fn => fn() !== getMainKey() && fn());
@@ -164,6 +159,10 @@ async function chatCompletionsResilient(keys: string[], params: ChatParams, retr
           return await chatCompletions(apiKey, { ...params, model } as ChatParams);
         } catch (err) {
           lastErr = err;
+          const msg = err instanceof Error ? err.message : String(err);
+          const status = Number((msg.match(/failed:\s*(\d{3})/) || [])[1] || 0);
+          // 4xx (except 429) will not improve on retry — don't waste Vercel time.
+          if (status >= 400 && status < 500 && status !== 429) throw err;
           if (attempt < retries) {
             await new Promise(r => setTimeout(r, 250 * (attempt + 1)));
           }
@@ -330,4 +329,22 @@ Reply ONLY with JSON: {"verified":true/false,"confidence":"high/medium/low","rea
     }));
     return JSON.parse((c.choices?.[0]?.message?.content||'{}').replace(/```json|```/g,'').trim());
   } catch { return {verified:false,confidence:'low',reason:'Service unavailable.'}; }
+}
+
+/** Short, topic-based name for a new AI chat session (max ~6 words). */
+export async function nameChatSession(prompt: string): Promise<string> {
+  const c = await chatCompletionsResilient(
+    [getMainKey(), ...FALLBACK_KEYS].filter(Boolean) as string[],
+    withEffort({
+      // Qwen answers immediately; gpt-oss models spend their first ~100 tokens
+      // on hidden reasoning, so they need a larger budget to emit any title.
+      model: ['qwen/qwen3.8-27b', 'openai/gpt-oss-20b'],
+      messages: [
+        { role:'system', content:'Name this student chat session. Reply with ONLY a short crisp topic title of at most 6 words, no quotes, no prefix, no punctuation at the end.' },
+        { role:'user', content: prompt.slice(0, 400) },
+      ],
+      max_tokens: 200, temperature: 0.2, stream: false,
+    } as unknown as ChatParams),
+  );
+  return (c.choices?.[0]?.message?.content || '').trim().replace(/^["']|["']$/g, '').replace(/[.!]+$/, '').slice(0, 60);
 }
