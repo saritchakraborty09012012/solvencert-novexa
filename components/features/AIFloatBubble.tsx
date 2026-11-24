@@ -170,12 +170,12 @@ export default function AIFloatBubble({ isOpen, onToggle, initialContext }: { is
   }
 
   return (
-    <div className="relative w-[calc(100vw-1rem)] sm:w-[380px] max-w-[380px] flex flex-col bg-[var(--surface-0)] border border-[var(--border)] rounded-2xl shadow-soft-xl overflow-hidden animate-slide-up" style={{ maxHeight: 'min(520px, calc(100dvh - 6rem))' }}>
+    <div className="relative w-[calc(100vw-1rem)] sm:w-[380px] max-w-[380px] flex flex-col bg-[var(--surface-0)] border border-[var(--border)] rounded-2xl shadow-soft-xl overflow-hidden animate-slide-up" style={{ maxHeight: 'min(640px, calc(100dvh - 6rem))' }}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white flex-shrink-0">
         <div className="flex items-center gap-1.5">
-          <button onClick={() => { setHistoryOpen(true); void refreshSessions(); }} aria-label="Chat history" title="Chat history" className="p-1.5 -ml-1.5 rounded-lg hover:bg-white/20 transition-colors"><History size={16} /></button>
-          <button onClick={newSession} aria-label="New session" title="New session" className="p-1.5 rounded-lg hover:bg-white/20 transition-colors"><SquarePen size={16} /></button>
+          <button onClick={() => { setHistoryOpen(true); void refreshSessions(); }} aria-label="Chat history" title="Chat history" className="h-9 w-9 -ml-2 flex items-center justify-center rounded-lg hover:bg-white/20 active:bg-white/30 transition-colors"><History size={16} /></button>
+          <button onClick={newSession} aria-label="New session" title="New session" className="h-9 w-9 flex items-center justify-center rounded-lg hover:bg-white/20 active:bg-white/30 transition-colors"><SquarePen size={16} /></button>
           <Sparkles size={14} className="ml-1" /><span className="text-sm font-semibold">SolveNCERT AI</span>
         </div>
         <button onClick={onToggle} aria-label="Close AI assistant" className="p-2 -mr-1 rounded-lg hover:bg-white/20 transition-colors"><X size={18} /></button>
@@ -192,7 +192,7 @@ export default function AIFloatBubble({ isOpen, onToggle, initialContext }: { is
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-3 space-y-3 min-h-[160px]">
+      <div className="flex-1 min-h-0 overflow-y-auto p-3 space-y-3">
         {msgs.length === 0 && (
           <div className="text-center py-6">
             <Brain size={26} className="mx-auto text-blue-400 mb-2" />

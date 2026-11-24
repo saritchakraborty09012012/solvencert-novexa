@@ -29,17 +29,17 @@ export default function AIChatHistorySidebar({ open, onClose, sessions, activeId
 
   return (
     <div className="absolute inset-0 z-20 flex" onClick={onClose}>
-      <div className="w-[86%] max-w-[320px] h-full flex flex-col bg-[var(--surface-0)] border-r border-[var(--border)] shadow-2xl animate-slide-up" onClick={e => e.stopPropagation()}>
-        <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white flex-shrink-0">
-          <div className="flex items-center gap-2"><History size={15} /><span className="text-sm font-semibold">Chat History</span></div>
-          <button onClick={onClose} aria-label="Close history" className="p-1.5 rounded-lg hover:bg-white/20"><X size={16} /></button>
+      <div className="w-[88%] max-w-[320px] min-w-0 h-full flex flex-col bg-[var(--surface-0)] border-r border-[var(--border)] shadow-2xl animate-slide-up" onClick={e => e.stopPropagation()}>
+        <div className="flex items-center justify-between px-3 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white flex-shrink-0">
+          <div className="flex items-center gap-2 min-w-0"><History size={15} className="flex-shrink-0" /><span className="text-sm font-semibold truncate">Chat History</span></div>
+          <button onClick={onClose} aria-label="Close history" className="h-9 w-9 flex-shrink-0 flex items-center justify-center rounded-lg hover:bg-white/20 active:bg-white/30"><X size={16} /></button>
         </div>
 
         <div className="px-3 pt-3 pb-2 flex-shrink-0 space-y-2">
           <div className="flex gap-1">
             {(['all', 'bubble', 'followup'] as const).map(f => (
               <button key={f} onClick={() => setFilter(f)}
-                className={cn('text-[10px] font-semibold px-2.5 py-1.5 rounded-full border transition-colors',
+                className={cn('text-[10px] font-semibold px-3 py-2 rounded-full border transition-colors',
                   filter === f ? 'bg-blue-600 text-white border-blue-600' : 'bg-[var(--surface-1)] text-[var(--text-muted)] border-[var(--border)]')}>
                 {f === 'all' ? 'All' : f === 'bubble' ? 'AI chats' : 'Follow-ups'}
               </button>
@@ -50,7 +50,7 @@ export default function AIChatHistorySidebar({ open, onClose, sessions, activeId
             <div className="rounded-xl border border-blue-200 dark:border-blue-900/60 bg-blue-50 dark:bg-blue-950/30 p-3">
               <p className="text-xs font-semibold text-blue-700 dark:text-blue-300">Sign up for histories</p>
               <p className="text-[11px] text-[var(--text-secondary)] mt-1">Your AI chats are saved only for registered users and stay synced across devices. Guests don&apos;t get saved history.</p>
-              <button onClick={() => setAuthMode('signup')} className="mt-2 inline-flex items-center gap-1.5 text-[11px] font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg px-3 py-1.5"><UserPlus size={12} /> Sign up</button>
+              <button onClick={() => setAuthMode('signup')} className="mt-2 inline-flex items-center gap-1.5 text-[11px] font-semibold text-white bg-blue-600 hover:bg-blue-700 active:bg-blue-800 rounded-lg px-4 py-2.5"><UserPlus size={12} /> Sign up</button>
             </div>
           ) : (
             <>
@@ -59,14 +59,14 @@ export default function AIChatHistorySidebar({ open, onClose, sessions, activeId
                   Sessions stay for <b>{retentionDays} days from their last edit</b>, then they are deleted from our database. Premium accounts keep chats until you choose auto-delete in Settings. Saved chats sync across your devices.
                 </p>
               </div>
-              <button onClick={() => { onNew(); onClose(); }} className="w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold py-2">
+              <button onClick={() => { onNew(); onClose(); }} className="w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs font-semibold py-2.5">
                 <Plus size={13} /> New Session
               </button>
             </>
           )}
         </div>
 
-        <div className="flex-1 overflow-y-auto px-3 pb-3 space-y-2">
+        <div className="flex-1 min-h-0 overflow-y-auto px-3 pb-3 space-y-2">
           {!guest && shown.length === 0 && (
             <p className="text-center text-[11px] text-[var(--text-muted)] py-6">No saved sessions yet.</p>
           )}
@@ -76,12 +76,12 @@ export default function AIChatHistorySidebar({ open, onClose, sessions, activeId
               {editingId === s.id ? (
                 <div className="flex items-center gap-1">
                   <input autoFocus value={draft} onChange={e => setDraft(e.target.value)} onKeyDown={e => { if (e.key === 'Enter') { onRename(s.id, draft); setEditingId(null); } if (e.key === 'Escape') setEditingId(null); }}
-                    className="input-field text-[11px] py-1 flex-1 min-w-0" />
-                  <button onClick={() => { onRename(s.id, draft); setEditingId(null); }} className="p-1 rounded-lg bg-blue-600 text-white"><Check size={12} /></button>
+                    className="input-field text-xs py-2 flex-1 min-w-0" />
+                  <button onClick={() => { onRename(s.id, draft); setEditingId(null); }} aria-label="Save name" className="h-8 w-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-600 text-white"><Check size={12} /></button>
                 </div>
               ) : (
-                <button onClick={() => { onSelect(s); onClose(); }} className="w-full text-left">
-                  <p className="text-[11px] font-semibold text-[var(--text-primary)] line-clamp-2 flex items-start gap-1.5">
+                <button onClick={() => { onSelect(s); onClose(); }} className="w-full text-left py-1">
+                  <p className="text-xs font-semibold text-[var(--text-primary)] line-clamp-2 flex items-start gap-1.5">
                     {s.kind === 'followup' ? <Sparkles size={11} className="text-amber-500 mt-0.5 flex-shrink-0" /> : <MessageSquare size={11} className="text-blue-500 mt-0.5 flex-shrink-0" />}
                     <span className="min-w-0">{s.title}</span>
                   </p>
@@ -89,9 +89,9 @@ export default function AIChatHistorySidebar({ open, onClose, sessions, activeId
                 </button>
               )}
               <div className="flex items-center gap-1 mt-2">
-                <button onClick={() => { setEditingId(s.id); setDraft(s.title); }} title="Rename session" className="p-1.5 rounded-lg text-[var(--text-muted)] hover:text-blue-500 hover:bg-[var(--surface-2)]"><Pencil size={11} /></button>
-                <button onClick={() => onExport(s)} title="Download PDF" className="p-1.5 rounded-lg text-[var(--text-muted)] hover:text-blue-500 hover:bg-[var(--surface-2)]"><Download size={11} /></button>
-                <button onClick={() => onDelete(s.id)} title="Delete session" className="p-1.5 rounded-lg text-[var(--text-muted)] hover:text-red-500 hover:bg-[var(--surface-2)] ml-auto"><Trash2 size={11} /></button>
+                <button onClick={() => { setEditingId(s.id); setDraft(s.title); }} title="Rename session" aria-label="Rename session" className="h-8 w-8 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-blue-500 hover:bg-[var(--surface-2)] active:bg-[var(--surface-3)]"><Pencil size={13} /></button>
+                <button onClick={() => onExport(s)} title="Download PDF" aria-label="Download PDF" className="h-8 w-8 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-blue-500 hover:bg-[var(--surface-2)] active:bg-[var(--surface-3)]"><Download size={13} /></button>
+                <button onClick={() => onDelete(s.id)} title="Delete session" aria-label="Delete session" className="h-8 w-8 flex items-center justify-center rounded-lg text-[var(--text-muted)] hover:text-red-500 hover:bg-[var(--surface-2)] active:bg-[var(--surface-3)] ml-auto"><Trash2 size={13} /></button>
               </div>
             </div>
           ))}
