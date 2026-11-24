@@ -170,7 +170,7 @@ export default function AIFloatBubble({ isOpen, onToggle, initialContext }: { is
   }
 
   return (
-    <div className="relative w-[calc(100vw-1rem)] sm:w-[380px] max-w-[380px] flex flex-col bg-[var(--surface-0)] border border-[var(--border)] rounded-2xl shadow-soft-xl overflow-hidden animate-slide-up" style={{ height: 'min(640px, calc(100dvh - 6rem))' }}>
+    <div className="relative w-[calc(100vw-1rem)] sm:w-[380px] max-w-[380px] flex flex-col bg-[var(--surface-0)] border border-blue-300/70 dark:border-blue-400/30 ring-1 ring-black/5 dark:ring-white/10 rounded-2xl shadow-soft-xl overflow-hidden animate-slide-up" style={{ height: 'min(640px, calc(100dvh - 6rem))' }}>
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white flex-shrink-0">
         <div className="flex items-center gap-1.5">

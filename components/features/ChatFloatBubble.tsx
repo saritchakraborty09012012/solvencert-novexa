@@ -97,7 +97,7 @@ export default function ChatFloatBubble({ isOpen, onToggle }: Props) {
   // ── Restoring session (auto-restore from localStorage) ────────────────────
   if (restoring) {
     return (
-      <div className="w-[280px] bg-[var(--surface-0)] border border-[var(--border)] rounded-2xl shadow-soft-xl p-5 text-center animate-slide-up">
+      <div className="w-[280px] bg-[var(--surface-0)] border border-blue-300/70 dark:border-blue-400/30 ring-1 ring-black/5 dark:ring-white/10 rounded-2xl shadow-soft-xl p-5 text-center animate-slide-up">
         <Loader2 size={20} className="animate-spin text-blue-500 mx-auto mb-2" />
         <p className="text-xs text-[var(--text-muted)]">Restoring your session…</p>
       </div>
@@ -107,7 +107,7 @@ export default function ChatFloatBubble({ isOpen, onToggle }: Props) {
   // ── Open + guest → sign-up prompt ─────────────────────────────────────────
   if (isGuest) {
     return (
-      <div className="w-[280px] bg-[var(--surface-0)] border border-[var(--border)] rounded-2xl shadow-soft-xl overflow-hidden animate-slide-up">
+      <div className="w-[280px] bg-[var(--surface-0)] border border-blue-300/70 dark:border-blue-400/30 ring-1 ring-black/5 dark:ring-white/10 rounded-2xl shadow-soft-xl overflow-hidden animate-slide-up">
         <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--border)]">
           <div className="flex items-center gap-2 text-[var(--text-primary)]">
             <MessageCircle size={14} className="text-blue-500" />
@@ -135,7 +135,7 @@ export default function ChatFloatBubble({ isOpen, onToggle }: Props) {
   // ── Open + logged-in host → collaborate card ──────────────────────────────
   return (
     <>
-      <div className="w-[300px] bg-[var(--surface-0)] border border-[var(--border)] rounded-2xl shadow-soft-xl overflow-hidden animate-slide-up">
+      <div className="w-[300px] bg-[var(--surface-0)] border border-blue-300/70 dark:border-blue-400/30 ring-1 ring-black/5 dark:ring-white/10 rounded-2xl shadow-soft-xl overflow-hidden animate-slide-up">
         {/* Header — Start Study Room lives here */}
         <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--border)]">
           <div className="flex items-center gap-2 text-[var(--text-primary)]">
