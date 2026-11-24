@@ -66,8 +66,8 @@ export const UPDATES: UpdateEntry[] = [
     title: 'Your AI chats are saved now',
     summary: 'AI chats and question follow-ups stay for 30 days and open on any of your devices.',
     body: 'Tap the history button in the AI window to see your past chats and follow-ups. Rename them, download as PDF, or delete them any time. Saved chats are for signed-in users and sync across your phone, tablet and computer. Free accounts keep them for up to 30 days from the last message.',
-    href: '/settings/account',
-    hrefLabel: 'History settings',
+    href: '/settings/ai',
+    hrefLabel: 'AI Settings',
   },
   {
     id: 'missing-book-figures-added',
