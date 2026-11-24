@@ -11,6 +11,7 @@ import RewardModal from './RewardModal';
 import HistoryRetentionModal from './HistoryRetentionModal';
 import ForgotPasswordForm from './ForgotPasswordForm';
 import GoogleButton from './GoogleButton';
+import { verifySignupEmail } from '@/lib/reoon';
 import toast from 'react-hot-toast';
 
 interface Props { mode:'login'|'signup'; onClose:()=>void; onSwitch:(m:'login'|'signup')=>void; }
@@ -72,6 +73,11 @@ export default function AuthModal({ mode, onClose, onSwitch }: Props) {
     if (dobMsg) { setDobError(dobMsg === 'Date of birth is required.' ? 'Required' : dobMsg); return; }
     setLoading(true);
     try {
+      // EMAIL SIGNUP ONLY: Reoon must approve the address before Supabase
+      // creates the user. Login and Google OAuth never reach this code.
+      const verdict = await verifySignupEmail(email.toLowerCase());
+      if (!verdict.ok) { setError(verdict.error); return; }
+
       const { data, error: e } = await supabase.auth.signUp({
         email: email.toLowerCase(), password,
         options: { data:{ full_name:fullName, dob: dob||null, phone: phone||null }, emailRedirectTo:`${window.location.origin}/auth/callback` },

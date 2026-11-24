@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase';
 import { useAuthStore } from '@/store/authStore';
 import { useCollabStore, attachCollabChannel } from '@/store/collabStore';
 import { validateEmail, validateDob } from '@/utils/helpers';
+import { verifySignupEmail } from '@/lib/reoon';
 import toast from 'react-hot-toast';
 
 /**
@@ -98,6 +99,10 @@ export default function JoinCollabPage() {
     if (dobMsg) { setDobError(dobMsg === 'Date of birth is required.' ? 'Required' : dobMsg); return; }
     setBusy(true);
     try {
+      // Same Reoon gate as the main sign-up form — before Supabase user creation.
+      const verdict = await verifySignupEmail(email.toLowerCase().trim());
+      if (!verdict.ok) { setError(verdict.error); return; }
+
       const { data, error: e2 } = await supabase.auth.signUp({
         email: email.toLowerCase().trim(),
         password,

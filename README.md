@@ -378,6 +378,21 @@ To add material:
 
 ---
 
+## Email signup verification (Reoon)
+
+Email **signup** runs a server-side Reoon Power Mode check **before** `supabase.auth.signUp`.
+Email **login** and **Google OAuth** are untouched. Set `REOON_API_KEY` as a
+**server-only** environment variable in `.env.local` and in Vercel
+(Project → Settings → Environment Variables). Never prefix it with
+`NEXT_PUBLIC_` — it must never reach the browser. If the variable is missing or
+Reoon times out, signup fails closed (no Supabase user is created). Supabase
+email confirmation stays disabled (`mailer_autoconfirm = true`).
+
+The API key is used only by `pages/api/auth/verify-signup-email.ts`, via
+`URLSearchParams`, with a 50s abort timeout under a 60s function limit.
+
+---
+
 ## Payments
 
 Premium activation is manual today:
