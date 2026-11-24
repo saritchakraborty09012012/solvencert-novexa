@@ -2,10 +2,20 @@
 
 import { ArrowRight, BookOpen, Globe, Sigma } from 'lucide-react'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import AuthModal from '@/components/auth/AuthModal'
+import { useAuthStore } from '@/store/authStore'
 
 export function JourneyCta() {
+  const router = useRouter()
+  const { isGuest, loading } = useAuthStore()
   const [authModal, setAuthModal] = useState<'login' | 'signup' | null>(null)
+
+  function handleClick() {
+    if (loading) return
+    if (isGuest) setAuthModal('signup')
+    else router.push('/answers')
+  }
 
   return (
     <section className="mx-auto max-w-7xl px-4 pb-10 lg:px-8">
@@ -21,7 +31,7 @@ export function JourneyCta() {
           </p>
           <button
             type="button"
-            onClick={() => setAuthModal('signup')}
+            onClick={handleClick}
             className="gold-btn group mt-7 inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-bold transition-transform hover:scale-[1.03] active:scale-95"
           >
             Get Started Free
