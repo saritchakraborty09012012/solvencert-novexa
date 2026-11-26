@@ -77,7 +77,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Prepare a short report and present it in class.",
             "answer": {
               "answerKey": "A short report comparing the earlier and present situation, causes of change, and effects on people’s lives.",
-              "schoolMethod": "Model report: describe the change observed in the locality over the past five years; state what the situation was earlier, what has changed, what may have caused the change, and how the change has affected people’s lives. Replace the sample details with observations from your own locality before presenting it in class."
+              "schoolMethod": "Model report: We describe the change observed in the locality over the past five years; We state what the situation was earlier, what has changed, what may have caused the change, and how the change has affected people’s lives. We replace the sample details with observations from the locality before presenting it in class."
             }
           }
         ]
@@ -93,7 +93,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "With the help of NCERT's School Bhuvan portal, you can also map your own village/city. You can access and explore NCERT's School Bhuvan portal by visiting the website: https://bhuvan-app1.nrsc.gov.in/mhrd_ncert/",
             "answer": {
               "answerKey": "Use the School Bhuvan portal to map and explore your own village/city.",
-              "schoolMethod": "Open the NCERT School Bhuvan portal, locate your own village/city, and explore the available map information. Record observations about features and spatial patterns in your locality for class discussion."
+              "schoolMethod": "We open the NCERT School Bhuvan portal, locate the village/city, and explore the available map information. We record observations about features and spatial patterns in the locality for class discussion."
             }
           }
         ]
@@ -386,7 +386,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Draw and label a diagram of a meander and a delta.",
             "answer": {
               "answerKey": "Label the key features of each (Figs. 2.11 and 2.12).",
-              "schoolMethod": "Draw a meander showing the winding river bend, oxbow lake, steep outer bank, and inner bar (as in Fig. 2.11); draw a delta showing the river, distributaries, islands/bars, and the sea (as in Fig. 2.12)."
+              "schoolMethod": "We draw a meander showing the winding river bend, oxbow lake, steep outer bank, and inner bar (as in Fig. 2.11); We draw a delta showing the river, distributaries, islands/bars, and the sea (as in Fig. 2.12)."
             }
           },
           {
@@ -426,7 +426,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Prepare a model of landforms created by underground water.",
             "answer": {
               "answerKey": "Model of Karst topography — cave, stalactites, sinkhole.",
-              "schoolMethod": "Build a clay or thermocol model showing a cave with stalactites and stalagmites, a sinkhole, and an underground river, together depicting Karst topography."
+              "schoolMethod": "We build a clay or thermocol model showing a cave with stalactites and stalagmites, a sinkhole, and an underground river, together depicting Karst topography."
             }
           },
           {
@@ -436,7 +436,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "What precautionary measures will you take if you are staying in an earthquake-prone region?",
             "answer": {
               "answerKey": "Emergency kit, secure furniture, safe spots, no lifts, safe construction.",
-              "schoolMethod": "Keep an emergency kit ready, secure heavy furniture, know safe spots like under sturdy tables, avoid lifts during a quake, and follow earthquake-resistant building practices."
+              "schoolMethod": "We keep an emergency kit ready, secure heavy furniture, know safe spots like under sturdy tables, avoid lifts during a quake, and follow earthquake-resistant building practices."
             }
           },
           {
@@ -446,7 +446,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Prepare a map showing landform-associated disasters that happened in the current calendar year.",
             "answer": {
               "answerKey": "Mark landslides, avalanches, GLOFs and dust storms on a map.",
-              "schoolMethod": "Mark the locations and types of landslides, avalanches, GLOFs, and dust storms reported this year on an outline map of India/the world, using newspapers or verified news sources."
+              "schoolMethod": "We mark the locations and types of landslides, avalanches, GLOFs, and dust storms reported this year on an outline map of India/the world, using newspapers or verified news sources."
             }
           },
           {
@@ -476,7 +476,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Translate the given poster on landslide into your native language and display it in your home.",
             "answer": {
               "answerKey": "Translate the poster into your mother tongue and display it.",
-              "schoolMethod": "Translate the landslide-awareness poster from the chapter into your mother tongue (for example, Hindi) and display it at home to spread disaster awareness within the family."
+              "schoolMethod": "We translate the landslide-awareness poster from the chapter into the mother tongue (for example, Hindi) and display it at home to spread disaster awareness within the family."
             }
           },
           {
@@ -658,7 +658,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Activity — LET'S EXPLORE: My Carbon Footprint — self-assessment and climate action pledge.",
             "answer": {
               "answerKey": "Tick your habits per category and add points; pledge actions.",
-              "schoolMethod": "This is a self-assessment activity — tick the option in each category (Transport, Electricity, Water, Waste/Plastics) that best matches your own habits, then add up the points as shown (Low = 1, Medium = 2, High = 3, Very high = 4) to get your personal score. Sample Climate Action Pledge (Step 3): I will switch off lights, fans, and other appliances whenever I leave a room. I will carry a reusable bottle and cloth bag instead of using single-use plastics."
+              "schoolMethod": "This is a self-assessment activity — tick the option in each category (Transport, Electricity, Water, Waste/Plastics) that best matches the habits, then add up the points as shown (Low = 1, Medium = 2, High = 3, Very high = 4) to get the personal score. Sample Climate Action Pledge (Step 3): I will switch off lights, fans, and other appliances whenever I leave a room. I will carry a reusable bottle and cloth bag instead of using single-use plastics."
             }
           }
         ]
@@ -730,7 +730,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Draw a labelled diagram of the structure of atmosphere.",
             "answer": {
               "answerKey": "Five layers from the surface upward.",
-              "schoolMethod": "Draw the five layers from the Earth's surface upward — Troposphere, Stratosphere, Mesosphere, Thermosphere, and Exosphere — labelling the tropopause, stratopause, and mesopause boundaries, as shown in Fig. 3.3."
+              "schoolMethod": "We draw the five layers from the Earth's surface upward — Troposphere, Stratosphere, Mesosphere, Thermosphere, and Exosphere — labelling the tropopause, stratopause, and mesopause boundaries, as shown in Fig. 3.3."
             }
           },
           {
@@ -1322,7 +1322,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Activity: Using maps, locate the major rivers and civilisations of Mesopotamia, Egypt, China, and the Sindhu–Sarasvati Valley. Mark the trade links between them.",
             "answer": {
               "answerKey": "Mark the four river systems and trade links.",
-              "schoolMethod": "Practical task: Mark the Euphrates–Tigris (Mesopotamia), Nile (Egypt), Huang He/Yangtze (China), and Indus–Ghaggar–Sarasvati (India) river systems on a world map, and draw trade links such as the Harappan–Mesopotamian sea route via the Persian Gulf (through Dilmun and Magan)."
+              "schoolMethod": "Practical task: We mark the Euphrates–Tigris (Mesopotamia), Nile (Egypt), Huang He/Yangtze (China), and Indus–Ghaggar–Sarasvati (India) river systems on a world map, and draw trade links such as the Harappan–Mesopotamian sea route via the Persian Gulf (through Dilmun and Magan)."
             }
           },
           {
@@ -1332,7 +1332,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Activity: Choose one early civilisation (Mesopotamia, Egypt, or China) and prepare a mini-scrapbook or a presentation showing their innovations in tools, writing, art, and architecture. Include pictures, brief descriptions, and explain their significance.",
             "answer": {
               "answerKey": "Sample: Egypt — pyramids and hieroglyphics.",
-              "schoolMethod": "Practical task: Select Egypt, Mesopotamia, or China, and compile pictures with brief descriptions of key innovations — for example, pyramids and hieroglyphics for Egypt, cuneiform and ziggurats for Mesopotamia, or the Great Wall and silk for China — explaining their historical significance."
+              "schoolMethod": "Practical task: We select Egypt, Mesopotamia, or China, and compile pictures with brief descriptions of key innovations — for example, pyramids and hieroglyphics for Egypt, cuneiform and ziggurats for Mesopotamia, or the Great Wall and silk for China — explaining their historical significance."
             }
           }
         ]
@@ -1468,7 +1468,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Read the source and answer the questions: \"Ushavadāta, son of Dinika, son-in-law of king Nahapāna … has bestowed this cave on the Saṅgha generally; he has also given a perpetual endowment, three thousand—3000 kāhāpanas, which, for the members of the Saṅgha of any sect, and any origin dwelling in this cave, will serve as cloth money and money for outside life (kuśana); and those kāhāpanas have been invested in guild dwelling at Govadhana—2000 in a weavers' guild, interest one prātika (monthly) for the hundred, (and) 1000 in another weaver's guild, interest three quarters of a paḍika (monthly) for the hundred.\"",
             "answer": {
               "answerKey": "Seven centres located across Bihar, Maharashtra, MP, TN and UP.",
-              "schoolMethod": "Pataliputra — present-day Patna, Bihar (on the Ganga, capital of the Mauryan and Gupta empires). Nasik — Maharashtra, on the Godavari river (site of the Nasik cave inscriptions). Ujjayini — present-day Ujjain, Madhya Pradesh, on the Kshipra river. Vikramashila — Bihar, on the Ganga (a major centre of learning, 8th–9th century CE). Kanchipuram — Tamil Nadu (Pallava capital and centre of learning). Mathura — Uttar Pradesh, on the Yamuna river. Rajagriha — present-day Rajgir, Bihar (early capital of Magadha). (Note: Locate these points on an outline map of India using Fig. 5.4, 5.10 and 5.12 as reference for accurate placement.)"
+              "schoolMethod": "Pataliputra — present-day Patna, Bihar (on the Ganga, capital of the Mauryan and Gupta empires). Nasik — Maharashtra, on the Godavari river (site of the Nasik cave inscriptions). Ujjayini — present-day Ujjain, Madhya Pradesh, on the Kshipra river. Vikramashila — Bihar, on the Ganga (a major centre of learning, 8th–9th century CE). Kanchipuram — Tamil Nadu (Pallava capital and centre of learning). Mathura — Uttar Pradesh, on the Yamuna river. Rajagriha — present-day Rajgir, Bihar (early capital of Magadha). (Note: We locate these points on an outline map of India using Fig. 5.4, 5.10 and 5.12 as reference for accurate placement.)"
             }
           },
           {
@@ -1478,7 +1478,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Prepare a short presentation or poster on one of the following—",
             "answer": {
               "answerKey": "Track the timeline strip page by page; present one event with date and significance.",
-              "schoolMethod": "Read each page’s timeline strip as you study. Choose the most interesting event (e.g., rise of Magadha, Ashoka’s reign). Record: (1) <u>What happened</u>, (2) <u>When</u> (century, BCE–CE), (3) <u>Why it matters</u> (effect on state, society or culture). Share one event in class."
+              "schoolMethod": "We read each page’s timeline strip as we study. We choose the most interesting event (e.g., rise of Magadha, Ashoka’s reign). We record: (1) <u>What happened</u>, (2) <u>When</u> (century, BCE–CE), (3) <u>Why it matters</u> (effect on state, society or culture). Share one event in class."
             }
           },
           {
@@ -1558,7 +1558,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Compare your school life with the life of a student in a gurukula in early India. Think about aspects such as daily routine, subjects studied, relationship with teachers, discipline, and living arrangements. What advantages and challenges do you think each system of education might have for students?",
             "answer": {
               "answerKey": "Compare point by point — gurukula: closeness and character vs narrow access; school: choice vs less attention.",
-              "schoolMethod": "<u>Gurukula</u>: lived with the guru, holistic learning, strict discipline — advantage: character and closeness; challenge: narrow access, hard life. <u>Your school</u>: wider subjects, many peers — advantage: choice and social life; challenge: less individual attention. Present both sides."
+              "schoolMethod": "<u>Gurukula</u>: lived with the guru, holistic learning, strict discipline — advantage: character and closeness; challenge: narrow access, hard life. <u>the school</u>: wider subjects, many peers — advantage: choice and social life; challenge: less individual attention. We present both sides."
             }
           },
           {
@@ -1568,7 +1568,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Read the verse given above and discuss it in groups. As you do so, think like historians—look for clues in the source and use them to understand what life may have been like. While discussing, keep these questions in mind: → What does the source tell us? (evidence) → What can we understand from it? (interpretation) → What might it not tell us? (limits of the source) Now answer the following: 1. What occupations are mentioned in the family described in the verse? What does this indicate about the nature of occupations in Vedic society? 2. How does the above verse challenge the idea that social status and occupation were fixed by birth? 3. What different occupations do you find in contemporary society? After the discussion, compare your group's responses with those of another group and note the similarities and differences in interpretation. Did all groups interpret the source in the same way? What does this tell us about how historians use evidence to understand the past?",
             "answer": {
               "answerKey": "Work varied within a family — by skill, not birth; list modern jobs to show mobility continues.",
-              "schoolMethod": "The verse shows <u>different occupations in one family</u>, so work was by <u>choice and skill, not birth</u> — challenging later rigid-caste readings of Vedic society. For today, list 4–5 jobs around you (teacher, driver, farmer, engineer) to show occupational mobility continues."
+              "schoolMethod": "The verse shows <u>different occupations in one family</u>, so work was by <u>choice and skill, not birth</u> — challenging later rigid-caste readings of Vedic society. For today, list 4–5 jobs around we (teacher, driver, farmer, engineer) to show occupational mobility continues."
             }
           }
         ]
@@ -1604,7 +1604,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "The first column of the table below lists some key features of democracy in India. Fill in the second column with suitable examples from your state, town, or village. One row has been completed for you.",
             "answer": {
               "answerKey": "A reasoned personal choice based on democratic qualities such as participation, equality, cooperation and responsible decision-making.",
-              "schoolMethod": "Choose the team you consider most democratic and justify the choice using the behaviour shown in Fig. 6.5. Strong reasons would refer to participation, listening to different views, equality, cooperation, fairness, shared responsibility and peaceful decision-making."
+              "schoolMethod": "We choose the team we consider most democratic and justify the choice using the behaviour shown in Fig. 6.5. Strong reasons would refer to participation, listening to different views, equality, cooperation, fairness, shared responsibility and peaceful decision-making."
             }
           },
           {
@@ -1614,7 +1614,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Work in pairs or small groups. Choose any two of India's neighbouring countries (Afghanistan, Bangladesh, Bhutan, China, Maldives, Myanmar, Nepal, Pakistan, or Sri Lanka) and find out the following: → Does the country hold regular elections? → Who chooses the Head of the Government? → Is there more than one political party? → How much freedom do citizens have to express their opinions and criticise the government? How would you describe this system? Give reasons for your answer. → Democratic or Partially democratic or Non-democratic",
             "answer": {
               "answerKey": "Participation, fairness, limits on concentrated power, and peaceful resolution are reflected through the case-study institutions and decision-making processes.",
-              "schoolMethod": "Identify evidence from the Jethipura and South Manubankul Gram Panchayat case studies: citizens participate in local decision-making; women and marginalised groups are included; Gram Sabha procedures and quorum support fairness; elected local bodies limit concentration of power; and discussion and collective decisions provide peaceful ways to resolve community issues."
+              "schoolMethod": "We identify evidence from the Jethipura and South Manubankul Gram Panchayat case studies: citizens participate in local decision-making; women and marginalised groups are included; Gram Sabha procedures and quorum support fairness; elected local bodies limit concentration of power; and discussion and collective decisions provide peaceful ways to resolve community issues."
             }
           },
           {
@@ -1634,7 +1634,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Explore and discuss the contributions of eminent Indian leaders who worked towards strengthening grassroots democracy.",
             "answer": {
               "answerKey": "Examples include leaders who advocated for rural communities and the rights and participation of marginalised sections.",
-              "schoolMethod": "Research a leader such as Chaudhary Charan Singh or Babu Jagjivan Ram, both mentioned in the chapter, and explain how the leader advocated for rural people, the poor or marginalised groups. Present the contribution with reliable historical evidence."
+              "schoolMethod": "Research a leader such as Chaudhary Charan Singh or Babu Jagjivan Ram, both mentioned in the chapter, and explain how the leader advocated for rural people, the poor or marginalised groups. We present the contribution with reliable historical evidence."
             }
           },
           {
@@ -1644,7 +1644,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "In small groups, identify two or three examples of information shared on social media that you believe may be misleading or false. Discuss what made you question their reliability and how such information can influence people’s opinions. Reflect on why access to accurate and authentic information is important in a democracy.",
             "answer": {
               "answerKey": "Check sources, evidence, dates and context; misinformation can distort public opinion and democratic decision-making.",
-              "schoolMethod": "Choose examples and check who published them, whether credible sources support them, whether the date and context are correct, and whether evidence is provided. Explain that misleading information can create false beliefs, influence public opinion unfairly, and weaken trust and informed participation. Accurate and authentic information helps citizens form reasoned opinions and participate responsibly."
+              "schoolMethod": "We choose examples and check who published them, whether credible sources support them, whether the date and context are correct, and whether evidence is provided. We explain that misleading information can create false beliefs, influence public opinion unfairly, and weaken trust and informed participation. Accurate and authentic information helps citizens form reasoned opinions and participate responsibly."
             }
           },
           {
@@ -1738,7 +1738,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Conduct a model parliament session or Gram Sabha in class on local issues — cleanliness, responsibilities towards public property, or school safety.",
             "answer": {
               "answerKey": "Suggested approach with roles, discussion and majority vote.",
-              "schoolMethod": "Suggested approach: Choose a local issue, such as school cleanliness or public property care. Assign roles — a presiding officer/sarpanch, members/representatives, and note-taker. Allow members to raise concerns and propose solutions through discussion. Conduct a vote on the best proposal, following majority decision, and record the outcome, reflecting real parliamentary/Gram Sabha procedure."
+              "schoolMethod": "Suggested approach: We choose a local issue, such as school cleanliness or public property care. Assign roles — a presiding officer/sarpanch, members/representatives, and note-taker. Allow members to raise concerns and propose solutions through discussion. We conduct a vote on the best proposal, following majority decision, and record the outcome, reflecting real parliamentary/Gram Sabha procedure."
             }
           },
           {
@@ -1844,7 +1844,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Fill in the two empty boxes in Fig. 7.1 to indicate why elections are important for democratic functioning, and discuss how each one of them is ensured through elections.",
             "answer": {
               "answerKey": "Empty boxes: Participation and Choice/Competition.",
-              "schoolMethod": "Suggested values for the two empty boxes: Participation — elections are ensured to be inclusive through Universal Adult Franchise, giving every eligible citizen aged 18+ the right to vote. Choice/Competition — a multi-party system and registration of independent candidates ensure voters have genuine alternatives to choose from. How each is ensured through elections: Representation — periodic direct elections to the Lok Sabha, Vidhan Sabha and local bodies ensure people's chosen representatives make decisions on their behalf. Equality — Universal Adult Franchise and the principle of 'one person, one vote' ensure every citizen's vote carries equal weight. Accountability — regular elections mean representatives must seek the people's mandate again, ensuring they remain answerable to voters. Legitimacy — a government elected through free and fair elections derives rightful authority to govern. Participation — inclusive measures (SIR, home voting, PwD facilities) ensure the widest possible citizen involvement. Choice/Competition — the multi-party system offers voters real alternatives, strengthening democratic decision-making."
+              "schoolMethod": "Suggested values for the two empty boxes: Participation — elections are ensured to be inclusive through Universal Adult Franchise, giving every eligible citizen aged 18+ the right to vote. Choice/Competition — a multi-party system and registration of independent candidates ensure voters have genuine alternatives to choose from. How each is ensured through elections: Representation — periodic direct elections to the Lok Sabha, Vidhan Sabha and local bodies ensure people's chosen representatives make decisions on their behalf. Equality — Universal Adult Franchise and the principle of 'one person, one vote' ensure every citizen's vote carries equal weight. Accountability — regular elections mean representatives must seek the people's mandate again, ensuring they remain answerable to voters. Legitimacy — a government elected through free and fair elections derives rightful authority to govern. Participation — inclusive measures (SIR, home voting, PwD facilities) We ensure the widest possible citizen involvement. Choice/Competition — the multi-party system offers voters real alternatives, strengthening democratic decision-making."
             }
           }
         ]
@@ -1860,7 +1860,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Different democracies use different electoral systems. Make groups of 5–6 students. Each group will select six countries from different continents. Prepare and present a case study on the type of electoral system(s) operating in those countries, and discuss their latest election results of those countries.",
             "answer": {
               "answerKey": "India/UK — FPTP; Germany — MMP; South Africa — PR; Brazil — PR; Australia — AV.",
-              "schoolMethod": "Illustrative case study outline (verify latest results from official sources): Asia — India: First-Past-The-Post (FPTP) for Lok Sabha/Vidhan Sabha elections. Europe — United Kingdom: First-Past-The-Post for the House of Commons. Europe — Germany: Mixed system combining FPTP and Proportional Representation (Mixed-Member Proportional). Africa — South Africa: Proportional Representation, where seats are allotted based on the share of national vote. South America — Brazil: Proportional Representation for its lower house (Chamber of Deputies). Oceania — Australia: Preferential/Alternative Vote system for its House of Representatives. Note: This is a research-based group activity; the electoral system type given above is factual, but the latest election results for each country should be verified from current official sources at the time of presentation."
+              "schoolMethod": "Illustrative case study outline (verify latest results from official sources): Asia — India: First-Past-The-Post (FPTP) for Lok Sabha/Vidhan Sabha elections. Europe — United Kingdom: First-Past-The-Post for the House of Commons. Europe — Germany: Mixed system combining FPTP and Proportional Representation (Mixed-Member Proportional). Africa — South Africa: Proportional Representation, where seats are allotted based on the share of national vote. South America — Brazil: Proportional Representation for its lower house (Chamber of Deputies). Oceania — Australia: Preferential/Alternative Vote system for its House of Representatives. We note: This is a research-based group activity; the electoral system type given above is factual, but the latest election results for each country should be verified from current official sources at the time of presentation."
             }
           }
         ]
@@ -1918,7 +1918,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Choose any three states (including yours). Find the symbols of state parties belonging to those states and plot them on the given map of India. List down their major agenda, as mentioned in their manifesto in the latest Lok Sabha/Vidhan Sabha/Local Body Elections.",
             "answer": {
               "answerKey": "Use ECI website for symbols and official manifestos for agenda.",
-              "schoolMethod": "Suggested method (since manifesto details change with each election, verify from the party's official/ECI source before plotting): Identify the state you wish to study on the outline map (Fig. 7.10). Visit the Election Commission of India's website (eci.gov.in) to find the list of recognised state parties for that state and their allotted symbols. Note down 2–3 major agenda points from the party's official manifesto for the most recent Lok Sabha/Vidhan Sabha/Local Body election. Mark the state on the map and label it with the party name, symbol, and its key agenda points."
+              "schoolMethod": "Suggested method (since manifesto details change with each election, verify from the party's official/ECI source before plotting): We identify the state we wish to study on the outline map (Fig. 7.10). Visit the Election Commission of India's website (eci.gov.in) to find the list of recognised state parties for that state and their allotted symbols. We note down 2–3 major agenda points from the party's official manifesto for the most recent Lok Sabha/Vidhan Sabha/Local Body election. We mark the state on the map and label it with the party name, symbol, and its key agenda points."
             }
           },
           {
@@ -1928,7 +1928,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Form groups of 4–6 students. Identify and compare the policy preferences on the following parameters for two political parties in the last Lok Sabha Elections using credible sources like party manifestos, newspapers, etc. Present the points of comparison in a poster using bullet points, symbols, colour coding, etc.",
             "answer": {
               "answerKey": "Compare manifestos with cited sources per policy area.",
-              "schoolMethod": "Suggested approach: This is a research-based comparative activity. Using each party's official election manifesto, reputed newspapers, and the ECI website as sources, note each party's stated viewpoint on every policy area listed, along with any specific law or policy it aligns with, and cite the source for each entry in the table. Note: As party positions and manifestos change with every election, this activity should be completed using the most recent, verified official sources rather than assumed positions."
+              "schoolMethod": "Suggested approach: This is a research-based comparative activity. Using each party's official election manifesto, reputed newspapers, and the ECI website as sources, note each party's stated viewpoint on every policy area listed, along with any specific law or policy it aligns with, and cite the source for each entry in the table. We note: As party positions and manifestos change with every election, this activity should be completed using the most recent, verified official sources rather than assumed positions."
             }
           },
           {
@@ -1964,7 +1964,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Let's Analyse. Look at Fig. 7.13 (Road to free and fair elections). Fill in the empty potholes with more challenges. How can we overcome these challenges?",
             "answer": {
               "answerKey": "Money/muscle power, divisive appeals, low turnout, EVM rumours, paid news; overcome via MCC, awareness, VVPAT, security.",
-              "schoolMethod": "Additional challenges (potholes): Use of money and muscle power to influence voters. Appeals to vote on the basis of caste, religion, or community, despite being prohibited. Low voter turnout in certain regions due to apathy or inaccessibility. Spread of rumours or distrust regarding EVMs and the voting process. Paid news and biased media coverage influencing public opinion. Ways to overcome these challenges: Strict enforcement of the Model Code of Conduct and the Representation of the People Acts, 1950 and 1951. Continuous voter awareness campaigns to counter misinformation and encourage informed participation. Use of technology such as EVMs with VVPAT to build transparency and trust. Adequate security deployment and strict, swift legal action against violations."
+              "schoolMethod": "Additional challenges (potholes): We use of money and muscle power to influence voters. Appeals to vote on the basis of caste, religion, or community, despite being prohibited. Low voter turnout in certain regions due to apathy or inaccessibility. Spread of rumours or distrust regarding EVMs and the voting process. Paid news and biased media coverage influencing public opinion. Ways to overcome these challenges: Strict enforcement of the Model Code of Conduct and the Representation of the People Acts, 1950 and 1951. Continuous voter awareness campaigns to counter misinformation and encourage informed participation. We use of technology such as EVMs with VVPAT to build transparency and trust. Adequate security deployment and strict, swift legal action against violations."
             }
           }
         ]
@@ -2040,7 +2040,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Read the case study below and answer the following questions:",
             "answer": {
               "answerKey": "Misinformation, intimidation, money power, accessibility and awareness gaps.",
-              "schoolMethod": "Misinformation and fake news, especially through social media. Intimidation and undue influence on voters. Use of money and muscle power in campaigns. Accessibility barriers for PwDs, senior citizens, and remote/tribal populations. Gaps in voter awareness, particularly among first-time or marginalised voters."
+              "schoolMethod": "Misinformation and fake news, especially through social media. Intimidation and undue influence on voters. We use of money and muscle power in campaigns. Accessibility barriers for PwDs, senior citizens, and remote/tribal populations. Gaps in voter awareness, particularly among first-time or marginalised voters."
             }
           },
           {
@@ -2070,7 +2070,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Select one national or state political party. Using authentic and reliable sources such as the Election Commission of India (ECI) website, the official website of the selected political party, and newspapers. Prepare a comparative chart of the last two State Legislative Assembly elections. The chart should include the following details for the chosen party: a. Some promises made in the Election manifesto b. Percentage of votes polled c. Number of seats won d. Number of women who contested e. Number of women candidates elected Present the data for both elections in a clear and comparative format, citing all sources used.",
             "answer": {
               "answerKey": "Use ECI data to tabulate manifesto, votes, seats, women candidates.",
-              "schoolMethod": "Suggested approach: This activity requires current, verified data. Using the ECI website, the party's official website, and newspapers as sources, prepare a table with columns for each election year showing: (a) key manifesto promises, (b) percentage of votes polled, (c) number of seats won, (d) number of women who contested, and (e) number of women candidates elected — citing the source for each data point. Note: Since specific figures change with every election and vary by state/party, this activity is best completed using the latest official ECI data at the time of the assignment."
+              "schoolMethod": "Suggested approach: This activity requires current, verified data. Using the ECI website, the party's official website, and newspapers as sources, prepare a table with columns for each election year showing: (a) key manifesto promises, (b) percentage of votes polled, (c) number of seats won, (d) number of women who contested, and (e) number of women candidates elected — citing the source for each data point. We note: Since specific figures change with every election and vary by state/party, this activity is best completed using the latest official ECI data at the time of the assignment."
             }
           },
           {
@@ -2316,7 +2316,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             "text": "Analyse how a country's present economic choices can shape its long-term future. Why is it important to consider future consequences while making economic decisions today?",
             "answer": {
               "answerKey": "Today’s investment shapes future growth; ignoring it causes depletion and debt.",
-              "schoolMethod": "Present economic choices, such as investing in education, health, or infrastructure, determine a country's future productivity, growth, and quality of life. If future consequences are ignored for short-term gains, it can lead to resource depletion, rising debt, or slower long-term development, making it essential to consider long-term impact while deciding today."
+              "schoolMethod": "We present economic choices, such as investing in education, health, or infrastructure, determine a country's future productivity, growth, and quality of life. If future consequences are ignored for short-term gains, it can lead to resource depletion, rising debt, or slower long-term development, making it essential to consider long-term impact while deciding today."
             }
           },
           {
@@ -2636,7 +2636,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             ],
             "answer": {
               "answerKey": "Negotiation with supply/demand; high when scarce, low when abundant.",
-              "schoolMethod": "Who decides the prices of different vegetables in the vegetable market? — Prices are decided through negotiation between buyers and sellers, based on daily supply, demand, transportation cost, and competition among sellers, rather than by any single authority. Sometimes the prices of a few vegetables is too high, and sometimes too low. Why is this? — Prices rise when supply is low due to poor harvest, seasonal shortage, or high demand, and fall when supply is abundant or demand is weak. The price of tomatoes is high in the morning and eventually gets lower by the evening. Have you ever noticed this? Comment. — Tomato prices are often higher in the morning when fresh stock and demand are high, and fall in the evening as sellers try to clear perishable stock before it spoils, raising supply relative to demand."
+              "schoolMethod": "Who decides the prices of different vegetables in the vegetable market? — Prices are decided through negotiation between buyers and sellers, based on daily supply, demand, transportation cost, and competition among sellers, rather than by any single authority. Sometimes the prices of a few vegetables is too high, and sometimes too low. Why is this? — Prices rise when supply is low due to poor harvest, seasonal shortage, or high demand, and fall when supply is abundant or demand is weak. The price of tomatoes is high in the morning and eventually gets lower by the evening. Have we ever noticed this? Comment. — Tomato prices are often higher in the morning when fresh stock and demand are high, and fall in the evening as sellers try to clear perishable stock before it spoils, raising supply relative to demand."
             }
           },
           {
@@ -2678,7 +2678,7 @@ export const SST_CHAPTERS: SstChapter[] = [
             ],
             "answer": {
               "answerKey": "Equilibrium at ₹30 and 15 kg; ₹20 excess supply, ₹40 excess demand.",
-              "schoolMethod": "Plot the demand and supply curve using the above data — The demand curve slopes downward and the supply curve slopes upward; when plotted together, they intersect at one common point. Identify the equilibrium price and quantity — The two curves intersect at ₹30, where quantity demanded equals quantity supplied at 15 kg. Hence, the equilibrium price is ₹30 and the equilibrium quantity is 15 kg. Observe the above data and analyse what happens if the price is set at ₹20 or ₹40 — At ₹20, quantity demanded (10 kg) is less than quantity supplied (20 kg), creating an excess supply of 10 kg. At ₹40, quantity demanded (20 kg) exceeds quantity supplied (10 kg), creating an excess demand of 10 kg. In both cases, prices would adjust back towards the equilibrium price of ₹30."
+              "schoolMethod": "We plot the demand and supply curve using the above data — The demand curve slopes downward and the supply curve slopes upward; when plotted together, they intersect at one common point. We identify the equilibrium price and quantity — The two curves intersect at ₹30, where quantity demanded equals quantity supplied at 15 kg. Hence, the equilibrium price is ₹30 and the equilibrium quantity is 15 kg. We observe the above data and analyse what happens if the price is set at ₹20 or ₹40 — At ₹20, quantity demanded (10 kg) is less than quantity supplied (20 kg), creating an excess supply of 10 kg. At ₹40, quantity demanded (20 kg) exceeds quantity supplied (10 kg), creating an excess demand of 10 kg. In both cases, prices would adjust back towards the equilibrium price of ₹30."
             }
           }
         ]

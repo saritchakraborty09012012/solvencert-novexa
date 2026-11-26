@@ -66,7 +66,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Suppose you ride a bicycle from your school to your home. You want to model the time it takes to go home from school. What details would you keep? What details could you ignore? Suggest why ignoring some details may actually be useful.",
             "answer": {
               "answerKey": "Keep variables that materially affect travel time (distance, route, speed, traffic/stops); omit details with negligible effect for the purpose of the model.",
-              "solution": "Keep the route/distance, typical cycling speed, traffic, major stops and other factors that can noticeably change the travel time. You can ignore small details such as the exact shape or colour of objects along the route because they add complexity without improving the prediction for this purpose."
+              "solution": "We keep the route/distance, typical cycling speed, traffic, major stops and other factors that can noticeably change the travel time. we can ignore small details such as the exact shape or colour of objects along the route because they add complexity without improving the prediction for this purpose."
             }
           },
           {
@@ -75,7 +75,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Think of some questions Meghna could ask Varsha to make this prediction scientifically testable.",
             "answer": {
               "answerKey": "Ask questions that specify the variable, conditions and measurable outcome needed to test the prediction.",
-              "solution": "For example: What exactly are you predicting? Under what conditions? What measurements or observations would support or contradict it? What time interval, sample, or repeated trials would make the prediction testable?"
+              "solution": "For example: What exactly are we predicting? Under what conditions? What measurements or observations would support or contradict it? What time interval, sample, or repeated trials would make the prediction testable?"
             }
           },
           {
@@ -244,7 +244,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
               "figure": "/figs/science-ex2-rr-q8-fig2-21.png",
             "answer": {
               "answerKey": "Osmosis determines cell turgidity based on external solution. Use equal-sized carrots. Turgid vs. plasmolysed.",
-              "solution": "(i) Hypothesis: <u>Osmosis</u> occurs across cell membranes — cells become turgid in plain water, plasmolysed in salt. (ii) Improvement: Equal-sized carrots; record mass before/after; use distilled water. (iii) Plain water → water enters → <u>turgid</u> (stiff). Salt solution → water exits → cells <u>plasmolysed</u> (limp)."
+              "solution": "(i) Hypothesis: <u>Osmosis</u> occurs across cell membranes — cells become turgid in plain water, plasmolysed in salt. (ii) Improvement: Equal-sized carrots; We record mass before/after; We use distilled water. (iii) Plain water → water enters → <u>turgid</u> (stiff). Salt solution → water exits → cells <u>plasmolysed</u> (limp)."
             }
           },
           {
@@ -626,7 +626,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 3.1 (onion root growth jars): place one onion bulb in each of two water jars; measure root lengths on days 1–3; on day 3 cut Jar B’s root tips by 1 cm and measure for four more days. What trend and inference do you expect?",
             "answer": {
               "answerKey": "Jar A roots keep growing; Jar B roots stop — growth happens at the root tip (apical meristem).",
-              "solution": "Record lengths in Table 3.1 for both jars. <u>Jar A</u>: roots lengthen steadily. <u>Jar B</u>: after tip-cutting, growth <u>stops</u>. Inference: growth occurs at the <u>root tip (apical meristem)</u> — removing it removes the dividing cells, so elongation halts."
+              "solution": "We record lengths in Table 3.1 for both jars. <u>Jar A</u>: roots lengthen steadily. <u>Jar B</u>: after tip-cutting, growth <u>stops</u>. Inference: growth occurs at the <u>root tip (apical meristem)</u> — removing it removes the dividing cells, so elongation halts."
             }
           },
           {
@@ -644,7 +644,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 3.3 (identify connective tissues): perform the actions in Table 3.4 (e.g., bending, stretching body parts) and match each experience to a connective tissue in Fig. 3.12. How should you approach the matching?",
             "answer": {
               "answerKey": "Match the mechanical experience (stretch, cushion, pull) to the tissue built for it — tendon, ligament, cartilage, bone, blood.",
-              "solution": "Do each action and note what you feel: <u>pull without stretch</u> (tendon — muscle to bone); <u>stretch and recoil</u> (ligament — bone to bone); <u>smooth cushioning</u> (cartilage — joints, nose); <u>rigidity</u> (bone); <u>flow/transport</u> (blood). Study each tissue’s fibres and matrix in Fig. 3.12 to confirm."
+              "solution": "Do each action and note what we feel: <u>pull without stretch</u> (tendon — muscle to bone); <u>stretch and recoil</u> (ligament — bone to bone); <u>smooth cushioning</u> (cartilage — joints, nose); <u>rigidity</u> (bone); <u>flow/transport</u> (blood). Study each tissue’s fibres and matrix in Fig. 3.12 to confirm."
             }
           },
           {
@@ -844,7 +844,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
               "figure": "/figs/science-ex4-rr-q13-fig4-31.png",
             "answer": {
               "answerKey": "Area under velocity-time graph = total distance ≈ 774 m.",
-              "solution": "Estimate <u>area under v-t graph</u> using geometric shapes (triangles/rectangles/trapezoids).\n\nPer book data: <u>Total distance ≈ 774 m</u>\n\nMethod: Break graph into triangles and rectangles; calculate each area and sum."
+              "solution": "Estimate <u>area under v-t graph</u> using geometric shapes (triangles/rectangles/trapezoids).\n\nPer book data: <u>Total distance ≈ 774 m</u>\n\nMethod: Break graph into triangles and rectangles; We calculate each area and sum."
             }
           },
           {
@@ -896,7 +896,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 4.2 (car acceleration): look up the 0–100 km/h time for various cars and compute average acceleration. How is it calculated, and what are the units?",
             "answer": {
               "answerKey": "a = Δv/Δt; convert 100 km/h to 27.8 m/s, divide by time in seconds.",
-              "solution": "Note each car’s 0–100 km/h time T from the internet. Convert: 100 km/h = <u>27.8 m s⁻¹</u>. Average acceleration <u>a = 27.8 ÷ T m s⁻²</u>. Example: T = 10 s → a ≈ <u>2.78 m s⁻²</u>. Shorter T means sportier (larger) acceleration."
+              "solution": "We note each car’s 0–100 km/h time T from the internet. We convert: 100 km/h = <u>27.8 m s⁻¹</u>. Average acceleration <u>a = 27.8 ÷ T m s⁻²</u>. Example: T = 10 s → a ≈ <u>2.78 m s⁻²</u>. Shorter T means sportier (larger) acceleration."
             }
           },
           {
@@ -905,7 +905,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 4.3 (plot a position–time graph): draw axes on graph paper, put time on X and position on Y, choose a scale (e.g., 5 divisions = 1 s; 5 divisions = 20 m), plot Table 4.3 and join the points. What shape do you get, and what does it mean?",
             "answer": {
               "answerKey": "A straight line through the origin — uniform velocity (equal distances in equal times).",
-              "solution": "Mark time (1 s, 2 s …) on <u>X</u> and position (20 m, 40 m …) on <u>Y</u>; plot each pair and join. The points form a <u>straight line</u> (Fig. 4.11c) — position grows uniformly with time, meaning <u>constant (uniform) velocity</u>."
+              "solution": "We mark time (1 s, 2 s …) on <u>X</u> and position (20 m, 40 m …) on <u>Y</u>; We plot each pair and join. The points form a <u>straight line</u> (Fig. 4.11c) — position grows uniformly with time, meaning <u>constant (uniform) velocity</u>."
             }
           },
           {
@@ -914,7 +914,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 4.4 (velocity from the graph): on segment AB draw lines parallel to the axes to form triangle ABC. What do sides BC and CA represent, and how do you get average velocity?",
             "answer": {
               "answerKey": "BC = change in position (s₂−s₁); CA = change in time (t₂−t₁); v = BC ÷ CA (slope).",
-              "solution": "<u>BC</u> (vertical) = change in position <u>(s₂ − s₁)</u>; <u>CA</u> (horizontal) = change in time <u>(t₂ − t₁)</u>. Read s₁, s₂, t₁, t₂ off the graph; average velocity <u>v = (s₂ − s₁) ÷ (t₂ − t₁)</u> — the <u>slope</u> of AB. Steeper slope means faster motion."
+              "solution": "<u>BC</u> (vertical) = change in position <u>(s₂ − s₁)</u>; <u>CA</u> (horizontal) = change in time <u>(t₂ − t₁)</u>. We read s₁, s₂, t₁, t₂ off the graph; average velocity <u>v = (s₂ − s₁) ÷ (t₂ − t₁)</u> — the <u>slope</u> of AB. Steeper slope means faster motion."
             }
           }
         ]
@@ -957,7 +957,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Vinegar, used as a food preservative and additive, contains 5 % v/v acetic acid. Glacial acetic acid, a liquid, i.e., 100% acetic acid. If you want to make vinegar from glacial acetic acid, how would you proceed?",
             "answer": {
               "answerKey": "Take 5 mL glacial acetic acid, add 95 mL distilled water to make 100 mL of 5% v/v solution.",
-              "solution": "Take <u>5 mL of glacial acetic acid</u>. Slowly add 95 mL of distilled water while stirring. Final solution = 100 mL of 5% v/v vinegar. (Always add acid to water — never water to acid.)"
+              "solution": "We take <u>5 mL of glacial acetic acid</u>. Slowly add 95 mL of distilled water while stirring. Final solution = 100 mL of 5% v/v vinegar. (Always add acid to water — never water to acid.)"
             }
           },
           {
@@ -976,7 +976,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Will there be any change in the size of common salt crystals if the rate of evaporation is increased or decreased? Explain.",
             "answer": {
               "answerKey": "Faster evaporation → smaller crystals. Slower evaporation → larger, well-shaped crystals.",
-              "solution": "At <u>faster evaporation</u>: salt crystallises rapidly → many small crystals form simultaneously. At <u>slower evaporation</u>: gradual crystallisation → fewer, larger, well-shaped crystals. Rate of evaporation controls nucleation and crystal growth."
+              "solution": "At <u>faster evaporation</u>: salt crystallises rapidly → many small crystals form simultaneously. At <u>slower evaporation</u>: gradual crystallisation → fewer, larger, well-shaped crystals. We rate of evaporation controls nucleation and crystal growth."
             }
           },
           {
@@ -1127,7 +1127,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
               "figure": "/figs/science-ex5-rr-q11-fig5-25.png",
             "answer": {
               "answerKey": "Sublimation (naphthalene) → Filter/dissolve in water (sand) → Evaporate (common salt).",
-              "solution": "Step 1 — <u>Sublimation</u>: Heat mixture → naphthalene sublimes, collected on cold surface.\nStep 2 — <u>Dissolve + Filter</u>: Add water to sand+salt → filter to remove sand.\nStep 3 — <u>Evaporation</u>: Evaporate filtrate → common salt recovered."
+              "solution": "Step 1 — <u>Sublimation</u>: Heat mixture → naphthalene sublimes, collected on cold surface.\nStep 2 — <u>Dissolve + Filter</u>: We add water to sand+salt → filter to remove sand.\nStep 3 — <u>Evaporation</u>: Evaporate filtrate → common salt recovered."
             }
           },
           {
@@ -1206,7 +1206,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 5.6 (separating funnel): pour 5 mL mustard oil and 20 mL water into a separating funnel and let it stand. Which layer is which, and how do you collect them separately?",
             "answer": {
               "answerKey": "Oil floats on water; drain the lower water layer first through the stopcock, then the oil.",
-              "solution": "On standing, <u>yellow oil forms the upper layer</u> (less dense, immiscible) and <u>water the lower layer</u>. Open the stopcock slowly to run the <u>water out first</u>; close it as the boundary arrives, discard the mixed drops, then collect the <u>oil separately</u>."
+              "solution": "On standing, <u>yellow oil forms the upper layer</u> (less dense, immiscible) and <u>water the lower layer</u>. We open the stopcock slowly to run the <u>water out first</u>; close it as the boundary arrives, discard the mixed drops, then collect the <u>oil separately</u>."
             }
           },
           {
@@ -1795,7 +1795,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Fill in the blanks-\n\n(i) Work done = _____ × _____ (in the direction of force).\n\n(ii) 1 joule of work is done when a force of _____ newton displaces an object by 1 metre in the direction of the force.\n\n(iii) The expression for kinetic energy of a body of mass m and velocity v is ___.\n\n(iv) The potential energy of an object of mass m at a small height h from the Earth's surface is the _____.\n\n(v) Power is defined as the _____ at which work is done.",
             "answer": {
               "answerKey": "(i) Force × Displacement. (ii) 1 N. (iii) ½mv². (iv) mgh. (v) Rate.",
-              "solution": "(i) Work = <u>Force × Displacement</u> (in direction of force). (ii) 1 joule when force = <u>1 Newton</u> displaces object by 1 m. (iii) KE = <u>½mv²</u>. (iv) PE = <u>mgh</u>. (v) Power = <u>rate</u> at which work is done (P = W/t)."
+              "solution": "(i) We work = <u>Force × Displacement</u> (in direction of force). (ii) 1 joule when force = <u>1 Newton</u> displaces object by 1 m. (iii) KE = <u>½mv²</u>. (iv) PE = <u>mgh</u>. (v) Power = <u>rate</u> at which work is done (P = W/t)."
             }
           },
           {
@@ -1877,7 +1877,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
               "figure": "/figs/science-ex7-rr-q11-fig7-37.png",
             "answer": {
               "answerKey": "(i) v = 6 m/s. (ii) v = √66 m/s ≈ 8.1 m/s.",
-              "solution": "(i) KE = ½mv² → 180 = ½×10×v² → <u>v = 6 m s⁻¹</u>\n(ii) Work done (area under graph, 0–4 m) = 150 J\nKE at 4 m = 180 + 150 = 330 J\n½×10×v² = 330 → <u>v = √66 ≈ 8.1 m s⁻¹</u>"
+              "solution": "(i) KE = ½mv² → 180 = ½×10×v² → <u>v = 6 m s⁻¹</u>\n(ii) We work done (area under graph, 0–4 m) = 150 J\nKE at 4 m = 180 + 150 = 330 J\n½×10×v² = 330 → <u>v = √66 ≈ 8.1 m s⁻¹</u>"
             }
           },
           {
@@ -1897,7 +1897,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
               "figure": "/figs/science-ex7-rr-q12-fig7-38.png",
             "answer": {
               "answerKey": "(i) Constant speed. (ii) 612,500 J. (iii) –612,500 J. (iv) Heat energy.",
-              "solution": "(i) A–B: car moves at <u>constant speed</u> (reaction time). (ii) KE = ½×1000×35² = <strong>612,500 J</strong>. (iii) Work by brakes = <strong>–612,500 J</strong> (removes all KE). (iv) KE converts to <u>heat energy</u> due to friction between brake pads and wheels."
+              "solution": "(i) A–B: car moves at <u>constant speed</u> (reaction time). (ii) KE = ½×1000×35² = <strong>612,500 J</strong>. (iii) We work by brakes = <strong>–612,500 J</strong> (removes all KE). (iv) KE converts to <u>heat energy</u> due to friction between brake pads and wheels."
             }
           },
           {
@@ -1931,7 +1931,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "A weightlifter holds a barbell steady in her hands. Is she doing any work on the barbell while holding it steady?",
             "answer": {
               "answerKey": "No — work needs displacement; holding steady moves nothing.",
-              "solution": "Work = force × <u>displacement in the force’s direction</u>. The barbell does not move, so displacement is <u>zero</u> → work done is <u>zero</u>, however tired her muscles feel (that energy goes into body heat, not the barbell)."
+              "solution": "We work = force × <u>displacement in the force’s direction</u>. The barbell does not move, so displacement is <u>zero</u> → work done is <u>zero</u>, however tired her muscles feel (that energy goes into body heat, not the barbell)."
             }
           },
           {
@@ -2000,7 +2000,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 7.3 (cart up a ramp): lift a cart vertically with a spring balance, then pull it up planks of decreasing steepness to the same height. How does the required force change?",
             "answer": {
               "answerKey": "Less steep → smaller force (same work = same mgh, spread over longer distance).",
-              "solution": "Vertical lift needs the <u>full weight</u>. Up a plank, the balance reads <u>less</u> — and <u>still less</u> as the plank flattens. Work stays <u>mgh</u> in all cases (ignoring friction): a gentler slope trades <u>longer distance for smaller force</u> — the inclined plane’s advantage."
+              "solution": "Vertical lift needs the <u>full weight</u>. Up a plank, the balance reads <u>less</u> — and <u>still less</u> as the plank flattens. We work stays <u>mgh</u> in all cases (ignoring friction): a gentler slope trades <u>longer distance for smaller force</u> — the inclined plane’s advantage."
             }
           },
           {
@@ -2079,7 +2079,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "If you could ask Rutherford one question about his work, what would it be?",
             "answer": {
               "answerKey": "Open-ended; the question should be scientifically relevant to Rutherford’s experiment/model.",
-              "solution": "A suitable question would be: “How did you estimate the size and charge concentration of the nucleus from the observed scattering angles?” Other scientifically relevant questions about the experimental setup or interpretation are also acceptable."
+              "solution": "A suitable question would be: “How did we estimate the size and charge concentration of the nucleus from the observed scattering angles?” Other scientifically relevant questions about the experimental setup or interpretation are also acceptable."
             }
           },
           {
@@ -2489,7 +2489,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Name the following: (i) CO₂ (ii) NO₂ (iii) SF₆ (iv) PCl₃.",
             "answer": {
               "answerKey": "Carbon dioxide; nitrogen dioxide; sulfur hexafluoride; phosphorus trichloride.",
-              "solution": "Apply the prefixes for the number of atoms: <strong>CO₂ carbon dioxide; NO₂ nitrogen dioxide; SF₆ sulfur hexafluoride; PCl₃ phosphorus trichloride</strong>."
+              "solution": "We apply the prefixes for the number of atoms: <strong>CO₂ carbon dioxide; NO₂ nitrogen dioxide; SF₆ sulfur hexafluoride; PCl₃ phosphorus trichloride</strong>."
             }
           },
           {
@@ -2762,7 +2762,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Explore various ways of producing sound.",
             "answer": {
               "answerKey": "Sound can be produced by vibrating objects in different ways, such as plucking, striking, rubbing or blowing.",
-              "solution": "Try plucking a string, striking a metal object, rubbing surfaces or blowing across an air column. In each case, sound is associated with <u>vibrations</u> of the source."
+              "solution": "We try plucking a string, striking a metal object, rubbing surfaces or blowing across an air column. In each case, sound is associated with <u>vibrations</u> of the source."
             }
           },
           {
@@ -2808,7 +2808,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
               "figure": "/figs/science-ex10-pp-q6-fig10-17.png",
             "answer": {
               "answerKey": "C marks regions of above-average density; R marks below-average density. The corresponding graphs plot density on the vertical axis against distance on the horizontal axis.",
-              "solution": "Mark <strong>C</strong> at the crowded/high-density regions and <strong>R</strong> at the spread-out/low-density regions. In the graph, put <u>distance</u> on the x-axis and <u>density</u> on the y-axis, with corresponding maxima (crests) and minima (troughs)."
+              "solution": "We mark <strong>C</strong> at the crowded/high-density regions and <strong>R</strong> at the spread-out/low-density regions. In the graph, put <u>distance</u> on the x-axis and <u>density</u> on the y-axis, with corresponding maxima (crests) and minima (troughs)."
             }
           },
           {
@@ -2944,7 +2944,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Draw a graph for a sound wave with density amplitude = 3 units and wavelength = 4 cm.",
             "answer": {
               "answerKey": "Sinusoidal wave: y-axis amplitude = ±3 units; x-axis one full cycle every 4 cm.",
-              "solution": "Draw a <u>sinusoidal (sine) wave</u>:\nY-axis (density): peak at +3, trough at –3, equilibrium at 0.\nX-axis (distance in cm): one complete cycle every 4 cm.\nLabel: <u>amplitude = 3 units</u>, <u>wavelength = 4 cm</u>."
+              "solution": "We draw a <u>sinusoidal (sine) wave</u>:\nY-axis (density): peak at +3, trough at –3, equilibrium at 0.\nX-axis (distance in cm): one complete cycle every 4 cm.\nLabel: <u>amplitude = 3 units</u>, <u>wavelength = 4 cm</u>."
             }
           },
           {
@@ -3043,7 +3043,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 10.2 (tuning fork and water): strike a fork on a rubber pad, hold it near the ear, then touch a prong to water. What do the two observations prove?",
             "answer": {
               "answerKey": "The fork sounds near the ear and ripples water on touch — inaudible-fast vibration made visible.",
-              "solution": "Near the ear you <u>hear the hum</u> though prongs look still. Touching water throws up <u>ripples/splashes</u> — the prongs <u>are vibrating</u>, too fast to see. Together: the fork is a <u>vibrating source</u>; water makes its motion visible."
+              "solution": "Near the ear we <u>hear the hum</u> though prongs look still. Touching water throws up <u>ripples/splashes</u> — the prongs <u>are vibrating</u>, too fast to see. Together: the fork is a <u>vibrating source</u>; water makes its motion visible."
             }
           },
           {
@@ -3329,7 +3329,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
               "figure": "/figs/science-ex11-rr-q12-fig11-24.png",
             "answer": {
               "answerKey": "Beekeeping improves pollination. Place B has higher fruit setting and lower fruit drop. Bees boost apple yield.",
-              "solution": "(i) Hypothesis: Managed honeybees increase cross-pollination efficiency → higher fruit yield. (ii) Constants: tree variety, soil, climate, irrigation. (iii) Place B: higher fruit setting, lower fruit drop than Place A. (iv) Inference: <u>Managed bee colonies significantly enhance pollination</u> → beekeeping is beneficial for apple farming."
+              "solution": "(i) Hypothesis: Managed honeybees increase cross-pollination efficiency → higher fruit yield. (ii) Constants: tree variety, soil, climate, irrigation. (iii) We place B: higher fruit setting, lower fruit drop than Place A. (iv) Inference: <u>Managed bee colonies significantly enhance pollination</u> → beekeeping is beneficial for apple farming."
             }
           },
           {
@@ -3353,7 +3353,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 11.1 (cutting, grafting, layering): observe gardeners/farmers performing these three techniques and record the steps. What is each technique in one line?",
             "answer": {
               "answerKey": "Cutting: stem piece rooted. Grafting: scion joined to stock. Layering: stem rooted while attached.",
-              "solution": "<u>Cutting</u>: a stem piece is cut and planted to root independently. <u>Grafting</u>: a <u>scion</u> (desired shoot) is joined onto a <u>stock</u> (rooted stem) so tissues fuse. <u>Layering</u>: a still-attached twig is bent into soil to root before separation. Record each step observed."
+              "solution": "<u>Cutting</u>: a stem piece is cut and planted to root independently. <u>Grafting</u>: a <u>scion</u> (desired shoot) is joined onto a <u>stock</u> (rooted stem) so tissues fuse. <u>Layering</u>: a still-attached twig is bent into soil to root before separation. We record each step observed."
             }
           },
           {
@@ -3371,7 +3371,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 11.3 (bread mould): keep moistened bread/roti in a warm dark moist chamber; inspect daily; after 3 days mount some mould with cotton-blue stain. What growth and structures do you expect?",
             "answer": {
               "answerKey": "Cottony mould spreading daily; microscope shows thread-like hyphae with spore sacs (sporangia).",
-              "solution": "White/grey <u>cottony patches spread</u> over 3 days (faster in warmth + moisture). Stained mounts reveal branching <u>hyphae</u> tipped with round <u>sporangia</u> full of spores — the fungus feeds on bread and <u>reproduces by spores</u>. Draw and label both."
+              "solution": "White/grey <u>cottony patches spread</u> over 3 days (faster in warmth + moisture). Stained mounts reveal branching <u>hyphae</u> tipped with round <u>sporangia</u> full of spores — the fungus feeds on bread and <u>reproduces by spores</u>. We draw and label both."
             }
           },
           {
@@ -3574,7 +3574,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 12.4 (bacteria and cyanobacteria slides): observe permanent slides under the microscope and compare with Fig. 12.6. What should you look for?",
             "answer": {
               "answerKey": "Tiny cells with no visible nucleus — prokaryotic organisation in both.",
-              "solution": "Both show <u>very small cells without a defined nucleus</u> or membrane-bound organelles. Cyanobacteria may appear as <u>chains/filaments (sometimes greenish)</u>; bacteria as <u>rods, spheres or spirals</u>. Match shapes with Fig. 12.6 and note the prokaryotic plan."
+              "solution": "Both show <u>very small cells without a defined nucleus</u> or membrane-bound organelles. Cyanobacteria may appear as <u>chains/filaments (sometimes greenish)</u>; bacteria as <u>rods, spheres or spirals</u>. We match shapes with Fig. 12.6 and note the prokaryotic plan."
             }
           },
           {
@@ -3583,7 +3583,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 12.5 (hay infusion): soak grass/straw in pond water in a muslin-covered bottle for a week, then examine a drop under the microscope. What moving organisms do you expect?",
             "answer": {
               "answerKey": "Free-swimming protists — Paramecium, Amoeba, Euglena — thriving on decay bacteria.",
-              "solution": "The infusion breeds bacteria, which feed <u>protists</u>: slipping <u>Paramecium</u> (cilia), crawling <u>Amoeba</u> (pseudopodia), green whipping <u>Euglena</u> (flagellum). Record shape and movement of each — a living sample of Kingdom <u>Protista</u>."
+              "solution": "The infusion breeds bacteria, which feed <u>protists</u>: slipping <u>Paramecium</u> (cilia), crawling <u>Amoeba</u> (pseudopodia), green whipping <u>Euglena</u> (flagellum). We record shape and movement of each — a living sample of Kingdom <u>Protista</u>."
             }
           },
           {
@@ -3863,7 +3863,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Activity 13.2 (albedo table): complete Table 13.1 from authentic sources — Snow 0.80–0.90, Ice 0.50–0.70, Crushed rock 0.25–0.30 are given. What typical values go against Light coloured soil, Black soil and Ocean water, and what does albedo mean?",
             "answer": {
               "answerKey": "Albedo = fraction of sunlight reflected; light soil ≈ 0.3–0.4, black soil ≈ 0.05–0.15, ocean ≈ 0.06–0.10.",
-              "solution": "<u>Albedo</u> = reflected ÷ incoming solar radiation (0–1). Typical entries: <u>Light coloured soil ≈ 0.30–0.40</u> (reflects well), <u>Black soil ≈ 0.05–0.15</u> (absorbs most), <u>Ocean water ≈ 0.06–0.10</u> (absorbs most, slight angle dependence). Confirm exact figures from IMD/NCERT sources and note why snow cools while oceans warm."
+              "solution": "<u>Albedo</u> = reflected ÷ incoming solar radiation (0–1). Typical entries: <u>Light coloured soil ≈ 0.30–0.40</u> (reflects well), <u>Black soil ≈ 0.05–0.15</u> (absorbs most), <u>Ocean water ≈ 0.06–0.10</u> (absorbs most, slight angle dependence). We confirm exact figures from IMD/NCERT sources and note why snow cools while oceans warm."
             }
           }
         ]
@@ -3878,7 +3878,7 @@ export const SCIENCE_CHAPTERS: ScienceChapter[] = [
             "text": "Visit the website https://phet.colorado.edu/en/simulations/greenhouse-effect and study the effect of the concentration of greenhouse gas on surface temperature.",
             "answer": {
               "answerKey": "Increasing greenhouse-gas concentration in the simulation increases the trapping of outgoing infrared radiation and raises surface temperature.",
-              "solution": "In the simulation, increasing greenhouse-gas concentration increases the amount of outgoing infrared energy absorbed and re-emitted by the atmosphere, so the <u>surface temperature rises</u>. Record the values/observations from the simulation."
+              "solution": "In the simulation, increasing greenhouse-gas concentration increases the amount of outgoing infrared energy absorbed and re-emitted by the atmosphere, so the <u>surface temperature rises</u>. We record the values/observations from the simulation."
             }
           },
           {

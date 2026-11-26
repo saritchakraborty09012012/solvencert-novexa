@@ -556,7 +556,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Answer the following questions based on the graph.\n\n![Cumulative number of objects currently orbiting Earth, by year of launch/separation (as of Apr. 24, 2026)](/figs/maths-0904ch10-eoc-q7-graph.png)\n\n(i) In 2003, approximately how many total objects were found orbiting Earth in space? In what year did this number double?\n\n(ii) Find the approximate number and share of payload objects and other objects in the year 2025.\n\n(iii) What can you say about the number of payload objects over time, and the number of other objects over time? What can you say about the share of payload objects over time, and the share of other objects over time?",
             "answer": {
               "answerKey": "(i) About 10,000 objects in 2003; the total reaches roughly 20,000 around 2021. (ii) In 2025, about 33,000 objects in total: approximately 17,000 payloads (about 52%) and 16,000 other objects (about 48%). (iii) Both categories increase in number; payloads rise particularly quickly in later years, so their share grows to about half while the share of other objects decreases.",
-              "schoolMethod": "**(i) Doubling the total.** Read the stacked graph at 2003: the total is approximately **10,000 objects**. Twice this is 2 × 10,000 = 20,000. The cumulative total reaches about 20,000 near **2021** (read approximately from the graph).\n\n**(ii) Split in 2025.** The total height is approximately 33,000. The payload portion is about 17,000, so \\(\\dfrac{17,000}{33,000}\\times100\\%\\approx51.5\\%\\approx52\\%\\). The other-object count is about 33,000 − 17,000 = **16,000**, or \\(\\dfrac{16,000}{33,000}\\times100\\%\\approx48.5\\%\\approx48\\%\\). These are estimates because the graph is read visually.\n\n**(iii) Trend.** Both the payload count and other-object count increase over time. Payloads increase more sharply in the later years; consequently, payloads make up about 52% of the 2025 total and other objects about 48%, even though the number of other objects also continues to grow."
+              "schoolMethod": "**(i) Doubling the total.** We read the stacked graph at 2003: the total is approximately **10,000 objects**. Twice this is 2 × 10,000 = 20,000. The cumulative total reaches about 20,000 near **2021** (read approximately from the graph).\n\n**(ii) We split in 2025.** The total height is approximately 33,000. The payload portion is about 17,000, so \\(\\dfrac{17,000}{33,000}\\times100\\%\\approx51.5\\%\\approx52\\%\\). The other-object count is about 33,000 − 17,000 = **16,000**, or \\(\\dfrac{16,000}{33,000}\\times100\\%\\approx48.5\\%\\approx48\\%\\). These are estimates because the graph is read visually.\n\n**(iii) Trend.** Both the payload count and other-object count increase over time. Payloads increase more sharply in the later years; consequently, payloads make up about 52% of the 2025 total and other objects about 48%, even though the number of other objects also continues to grow."
             }
           },
           {
@@ -566,7 +566,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Observe the following infographic.\n\n![What percentage of schools have a playground — map of India](/figs/maths-0904ch10-eoc-q8-map.png)\n\n(i) Identify the correct inference(s) from the statements given.\n\n(a) More schools have a playground in Haryana compared to Uttarakhand.\n\n(b) Approximately every 2 out of 3 schools in Arunachal Pradesh have a playground.\n\n(c) Punjab has the highest number of schools with a playground.\n\n(d) Suppose it is given that Maharashtra has more schools than Telangana. Then the number of schools having a playground is more in Maharashtra.\n\n(ii) Using the information given, can we find the nation-wide percentage of schools with a playground? If not, what additional information is needed?",
             "answer": {
               "answerKey": "(i) (b) and (d) can be inferred. (a) and (c) cannot be concluded from the displayed percentages alone. (ii) No. The number of schools in each state/UT (or the total count of schools and playground schools) is needed.",
-              "schoolMethod": "**(i)(a)** The statement compares absolute counts, not percentages. The chart gives the share of schools with playgrounds; without knowing how many schools each state has, the count cannot be compared. **Not inferable.**\n\n**(i)(b)** Two out of three is about 66.7%, matching the displayed share for Arunachal Pradesh. **Inferable.**\n\n**(i)(c)** Punjab may have the highest displayed percentage, but that does not prove it has the largest count; state totals may differ. **Not inferable.**\n\n**(i)(d)** Given that Maharashtra has more schools than Telangana and the chart shows Maharashtra’s playground percentage is higher, the number with playgrounds must also be higher. If M and T are total schools and pM>pT while M>T, then MpM>TpT. **Inferable.**\n\n**(ii)** A national percentage is a weighted percentage: total schools with playgrounds divided by all schools. We need the number of schools in every state/UT (and then the corresponding playground counts), or equivalent nationwide totals. An unweighted average of state percentages would generally be incorrect."
+              "schoolMethod": "**(i)(a)** The statement compares absolute counts, not percentages. The chart gives the share of schools with playgrounds; without knowing how many schools each state has, the count cannot be compared. **Not inferable.**\n\n**(i)(b)** Two out of three is about 66.7%, matching the displayed share for Arunachal Pradesh. **Inferable.**\n\n**(i)(c)** Punjab may have the highest displayed percentage, but that does not prove it has the largest count; We state totals may differ. **Not inferable.**\n\n**(i)(d)** Given that Maharashtra has more schools than Telangana and the chart shows Maharashtra’s playground percentage is higher, the number with playgrounds must also be higher. If M and T are total schools and pM>pT while M>T, then MpM>TpT. **Inferable.**\n\n**(ii)** A national percentage is a weighted percentage: total schools with playgrounds divided by all schools. We need the number of schools in every state/UT (and then the corresponding playground counts), or equivalent nationwide totals. An unweighted average of state percentages would generally be incorrect."
             }
           },
           {
@@ -586,7 +586,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A triathlon is an endurance race consisting of swimming 3.8 km, cycling 180 km, and running 42.2 km. Athletes compete for the fastest overall time, completing each segment in that order. The following table shows the finish time of 3 athletes in each segment.\n\n**Table 10.4:** Finish time of three athletes in each segment of a triathlon race (values in hh : mm)\n\n| | Swimming | Cycling | Running |\n|---|---|---|---|\n| Athlete 1 | 01:08 | 05:00 | 03:15 |\n| Athlete 2 | 01:05 | 05:10 | 03:35 |\n| Athlete 3 | 01:22 | 05:55 | 03:50 |\n\n(i) What is a suitable representation of this data — a stacked bar chart or a 100% stacked bar chart? Why do you think so?\n\n(ii) Suppose a 100% stacked bar chart is drawn. Which of the following question(s) can be answered by looking at just that chart?\n\n(a) Who finished the race first?\n\n(b) Approximately what fraction of their race time did Athlete 1 spend cycling?\n\n(c) Which athlete took the longest for running?",
             "answer": {
               "answerKey": "(i) Stacked bar chart. (ii) Only (b).",
-              "schoolMethod": "(i) Use a **stacked bar chart**, because the total elapsed time matters and must be compared in absolute units. Convert to minutes if needed: Athlete 1 =68+300+195=563 min (9 h 23 min); Athlete 2 =65+310+215=590 min (9 h 50 min); Athlete 3 =82+355+230=667 min (11 h 7 min). Thus Athlete 1 finishes first.\n\n(ii) A 100% chart shows proportions of each athlete’s time, so it answers **(b)**: Athlete 1’s cycling share is $\\dfrac{300}{563}$≈53.3%. It does not establish (a), since total durations are lost; nor (c), because a segment’s share cannot by itself tell which athlete had the greatest absolute running time."
+              "schoolMethod": "(i) We use a **stacked bar chart**, because the total elapsed time matters and is compared in absolute units. We convert to minutes where needed: Athlete 1 =68+300+195=563 min (9 h 23 min); Athlete 2 =65+310+215=590 min (9 h 50 min); Athlete 3 =82+355+230=667 min (11 h 7 min). Thus Athlete 1 finishes first.\n\n(ii) A 100% chart shows proportions of each athlete’s time, so it answers **(b)**: Athlete 1’s cycling share is $\\dfrac{300}{563}$≈53.3%. It does not establish (a), since total durations are lost; nor (c), because a segment’s share cannot by itself tell which athlete had the greatest absolute running time."
             }
           },
           {
@@ -606,7 +606,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Individual project: Do at least one of the following.\n\n(i) Recall the previous day and fill in the approximate time spent lying down, sitting, and standing/moving around, etc. Ask at least 2 of your family members about their day and fill it in. Alternatively, you can choose to track just your own body-state for any one of the weekdays, Saturday, and Sunday. Visualise it using a stacked bar chart. Discuss with your class how you arrived at the estimated time spent in each state.\n\n(ii) Visualise your family’s monthly expenditure using a 100% stacked bar chart.\n\n(a) First, identify the expense categories in your family budget.\n\n(b) Discuss with your family members to decide how you will collect and organise the data.\n\n(c) Collect expense data for at least 3 months.\n\n(d) Represent the data in a 100% stacked bar chart, with each bar showing how the total monthly expenditure is divided across the different categories.\n\n(e) Finally, write your observations and inferences based on the chart.",
             "answer": {
               "answerKey": "Sample project solution provided.",
-              "schoolMethod": "**Sample response for (i):** Record 24-hour totals (in hours):\n\n| Person | Lying | Sitting | Moving | Total |\n|---|---|---|---|---|\n| Student | 8 | 7 | 9 | 24 |\n| Parent 1 | 7 | 8 | 9 | 24 |\n| Parent 2 | 7 | 7 | 10 | 24 |\n\nEach row sums to 24 hours. Percentage of each state = hours÷24×100:\n\n| Person | Lying (%) | Sitting (%) | Moving (%) |\n|---|---|---|---|\n| Student | 33.3 | 29.2 | 37.5 |\n| Parent 1 | 29.2 | 33.3 | 37.5 |\n| Parent 2 | 29.2 | 29.2 | 41.7 |\n\nEach 100% bar is split into the lying, sitting and moving shares in this order. The student and parent 1 spend the largest share moving (37.5%); parent 2 spends the most time moving (41.7%).\n\n**Sample response for (ii):** Suppose monthly expenditure in ₹ is as follows:\n\n| Category | January (₹) | February (₹) | March (₹) |\n|---|---|---|---|\n| Housing | 8,000 | 8,000 | 8,000 |\n| Food | 6,000 | 6,200 | 5,800 |\n| Education | 2,000 | 2,000 | 2,000 |\n| Transport | 1,500 | 1,600 | 1,700 |\n| Health | 1,000 | 800 | 1,200 |\n| Other | 1,500 | 1,400 | 1,300 |\n\nEach month's total is ₹20,000, so each category's percentage = (amount ÷ 20,000) × 100:\n\n| Category | January (%) | February (%) | March (%) |\n|---|---|---|---|\n| Housing | 40 | 40 | 40 |\n| Food | 30 | 31 | 29 |\n| Education | 10 | 10 | 10 |\n| Transport | 7.5 | 8 | 8.5 |\n| Health | 5 | 4 | 6 |\n| Other | 7.5 | 7 | 6.5 |\n\nEach 100% bar is split into these shares, one bar per month. Housing stays at 40% and education at 10% throughout; food falls from 30% to 29%, health rises from 5% to 6%, and other falls from 7.5% to 6.5% over the three months."
+              "schoolMethod": "**Sample response for (i):** We record 24-hour totals (in hours):\n\n| Person | Lying | Sitting | Moving | Total |\n|---|---|---|---|---|\n| Student | 8 | 7 | 9 | 24 |\n| Parent 1 | 7 | 8 | 9 | 24 |\n| Parent 2 | 7 | 7 | 10 | 24 |\n\nEach row sums to 24 hours. Percentage of each state = hours÷24×100:\n\n| Person | Lying (%) | Sitting (%) | Moving (%) |\n|---|---|---|---|\n| Student | 33.3 | 29.2 | 37.5 |\n| Parent 1 | 29.2 | 33.3 | 37.5 |\n| Parent 2 | 29.2 | 29.2 | 41.7 |\n\nEach 100% bar is split into the lying, sitting and moving shares in this order. The student and parent 1 spend the largest share moving (37.5%); parent 2 spends the most time moving (41.7%).\n\n**Sample response for (ii):** Suppose monthly expenditure in ₹ is as follows:\n\n| Category | January (₹) | February (₹) | March (₹) |\n|---|---|---|---|\n| Housing | 8,000 | 8,000 | 8,000 |\n| Food | 6,000 | 6,200 | 5,800 |\n| Education | 2,000 | 2,000 | 2,000 |\n| Transport | 1,500 | 1,600 | 1,700 |\n| Health | 1,000 | 800 | 1,200 |\n| Other | 1,500 | 1,400 | 1,300 |\n\nEach month's total is ₹20,000, so each category's percentage = (amount ÷ 20,000) × 100:\n\n| Category | January (%) | February (%) | March (%) |\n|---|---|---|---|\n| Housing | 40 | 40 | 40 |\n| Food | 30 | 31 | 29 |\n| Education | 10 | 10 | 10 |\n| Transport | 7.5 | 8 | 8.5 |\n| Health | 5 | 4 | 6 |\n| Other | 7.5 | 7 | 6.5 |\n\nEach 100% bar is split into these shares, one bar per month. Housing stays at 40% and education at 10% throughout; food falls from 30% to 29%, health rises from 5% to 6%, and other falls from 7.5% to 6.5% over the three months."
             }
           },
           {
@@ -616,7 +616,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Small-group project: Make a group of 3–4 students. Choose one scenario to design a custom rating scheme by assigning appropriate weights: (a) shopping experience at a cloth store, (b) travel experience in a bus, (c) tourism experience of a nearby tourist spot, (d) clinic/hospital experience\n\n(i) Discuss and arrive at 4–6 aspects to rate. For each aspect chosen, justify why it matters for an overall experience.\n\n(ii) Discuss and decide the relative weights and justify.\n\n(iii) Collect or imagine ratings from at least 10 people on a scale of 1–5 (5 being very good).\n\n(iv) Compute each individual rating. Compute the overall average across individuals.\n\n(v) Make a 100% stacked bar chart using your data.\n\n(vi) Write a short note on the observations and inferences, what your rating system captures well and what it misses.",
             "answer": {
               "answerKey": "Illustrative weighted-rating project included.",
-              "schoolMethod": "**Example: local tourist spot.** Rate cleanliness, accessibility, safety, information/signage and attractions on a 1–5 scale, with weights 3:2:3:1:4 respectively. The weights sum to 13. For a visitor who gives 4, 3, 5, 4, 5, the score is [3(4)+2(3)+3(5)+1(4)+4(5)]/13=$\\dfrac{53}{13}$≈4.08.\n\nUse the same weighted-mean formula for each of ten visitors, then average their ten scores. For the 100% stacked chart, show each visitor’s ratings as shares of their weighted total or show the proportion of respondents in each rating band per aspect. Report which aspects score highest/lowest and acknowledge that a 1–5 rating may not capture every aspect. This is a complete model; replace sample ratings with the group’s ten responses."
+              "schoolMethod": "**Example: local tourist spot.** We rate cleanliness, accessibility, safety, information/signage and attractions on a 1–5 scale, with weights 3:2:3:1:4 respectively. The weights sum to 13. For a visitor who gives 4, 3, 5, 4, 5, the score is [3(4)+2(3)+3(5)+1(4)+4(5)]/13=$\\dfrac{53}{13}$≈4.08.\n\nUse the same weighted-mean formula for each of ten visitors, then average their ten scores. For the 100% stacked chart, show each visitor’s ratings as shares of their weighted total or show the proportion of respondents in each rating band per aspect. We report which aspects score highest/lowest and acknowledge that a 1–5 rating may not capture every aspect. This is a complete model; We replace sample ratings with the group’s ten responses."
             }
           },
           {
@@ -626,7 +626,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Whole class project: Each student shares the average age of their family and the number of family members. Discuss among the class and come up with a way to find out the average age of all the families of the class.",
             "answer": {
               "answerKey": "Weighted average: Σ(family size × family mean age)/Σ(family sizes).",
-              "schoolMethod": "For family i, let nᵢ be the number of members and aᵢ their average age. Their combined ages total nᵢaᵢ. Add all family totals and divide by the total number of people: **class average age = $\\dfrac{\\Sigma n_i a_i}{\\Sigma n_i}$**. A simple average of the family averages would be wrong unless every family had the same size."
+              "schoolMethod": "For family i, let nᵢ be the number of members and aᵢ their average age. Their combined ages total nᵢaᵢ. We add all family totals and divide by the total number of people: **class average age = $\\dfrac{\\Sigma n_i a_i}{\\Sigma n_i}$**. A simple average of the family averages would be wrong unless every family had the same size."
             }
           },
           {
@@ -822,7 +822,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Add two 4-digit numbers using the steps we have written down. Make sure you follow the steps precisely; do not perform any action that is not explicitly mentioned. Are you able to obtain the correct result?",
             "answer": {
               "answerKey": "Example: 4738 + 6957 = 11695.",
-              "schoolMethod": "Take 4738 and 6957.\n\nUnits: 8+7=15; write 5, carry 1.\nTens: 3+5+1=9; write 9, carry 0.\nHundreds: 7+9=16; write 6, carry 1.\nThousands: 4+6+1=11; write 1, carry 1.\nNo digits remain, so the final carry 1 is written at the left.\n\nTherefore **4738+6957=11695**. The result agrees with direct addition."
+              "schoolMethod": "We take 4738 and 6957.\n\nUnits: 8+7=15; We write 5, carry 1.\nTens: 3+5+1=9; We write 9, carry 0.\nHundreds: 7+9=16; We write 6, carry 1.\nThousands: 4+6+1=11; We write 1, carry 1.\nNo digits remain, so the final carry 1 is written at the left.\n\nTherefore **4738+6957=11695**. The result agrees with direct addition."
             }
           },
           {
@@ -924,7 +924,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "What about the last algorithm described above? What happens when we look at common divisors starting from min(m, n) and work backwards to 1?",
             "answer": {
               "answerKey": "The first common divisor found is gcd(m,n), so the scan can stop immediately.",
-              "schoolMethod": "Set s=min(m,n). For j=s,s−1,…,1, test whether m mod j=0 and n mod j=0. The first j satisfying both conditions is the **greatest** common divisor, because every larger candidate has already been checked and rejected. Thus return j immediately; no list of common divisors is needed."
+              "schoolMethod": "We set s=min(m,n). For j=s,s−1,…,1, test whether m mod j=0 and n mod j=0. The first j satisfying both conditions is the **greatest** common divisor, because every larger candidate has already been checked and rejected. Thus return j immediately; no list of common divisors is needed."
             }
           }
         ]
@@ -950,7 +950,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Assume that m ≥ n. Verify that d divides m and n if and only if d divides both n and m mod n.",
             "answer": {
               "answerKey": "The common divisors of (m,n) are exactly the common divisors of (n,m mod n).",
-              "schoolMethod": "**Proof.** Write m=qn+r, where r=m mod n.\n\n(⇒) If d|m and d|n, then d divides m−qn=r. Hence d|n and d|r.\n\n(⇐) If d|n and d|r, then d divides qn+r=m. Hence d|m and d|n.\n\nBoth directions hold, so the two pairs have exactly the same common divisors; in particular, their gcds are equal."
+              "schoolMethod": "**Proof.** We write m=qn+r, where r=m mod n.\n\n(⇒) If d|m and d|n, then d divides m−qn=r. Hence d|n and d|r.\n\n(⇐) If d|n and d|r, then d divides qn+r=m. Hence d|m and d|n.\n\nBoth directions hold, so the two pairs have exactly the same common divisors; in particular, their gcds are equal."
             }
           },
           {
@@ -997,7 +997,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "See if you can complete the argument about grouping by units, tens, hundreds, … to justify why the addition algorithm works.",
             "answer": {
               "answerKey": "Each column represents a power of ten; ten units of one place make one unit of the next, so carrying preserves the total value.",
-              "schoolMethod": "Group both numbers into units, tens, hundreds, and so on. Adding a column gives a digit sum; write its remainder after division by 10 in that column and carry the quotient to the next column, because ten units of a place value equal one unit of the next place value. Doing this for every column keeps the total value unchanged, so the final digit string is the sum."
+              "schoolMethod": "We group both numbers into units, tens, hundreds, and so on. Adding a column gives a digit sum; We write its remainder after division by 10 in that column and carry the quotient to the next column, because ten units of a place value equal one unit of the next place value. Doing this for every column keeps the total value unchanged, so the final digit string is the sum."
             }
           },
           {
@@ -1019,7 +1019,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Try to execute the algorithm to compute the divisors of 15, 135, and 775. How does the amount of work increase as the numbers grow?",
             "answer": {
               "answerKey": "Divisors: 15 → {1,3,5,15}; 135 → {1,3,5,9,15,27,45,135}; 775 → {1,5,25,31,155,775}.",
-              "schoolMethod": "Check positive integers for exact divisibility and list each divisor once. Since 15 = 3 × 5, its divisors are 1, 3, 5, 15. Since 135 = 3³ × 5, its divisors are 1, 3, 5, 9, 15, 27, 45, 135. Since 775 = 5² × 31, its divisors are 1, 5, 25, 31, 155, 775. The algorithm tests every integer up to n, so the work grows in proportion to n; testing factor pairs only up to √n reduces the work substantially."
+              "schoolMethod": "We check positive integers for exact divisibility and list each divisor once. Since 15 = 3 × 5, its divisors are 1, 3, 5, 15. Since 135 = 3³ × 5, its divisors are 1, 3, 5, 9, 15, 27, 45, 135. Since 775 = 5² × 31, its divisors are 1, 5, 25, 31, 155, 775. The algorithm tests every integer up to n, so the work grows in proportion to n; testing factor pairs only up to √n reduces the work substantially."
             }
           }
         
@@ -1102,7 +1102,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "True or false?\n\n(i) A parallelogram with a right angle is a rectangle.\n\n(ii) A rhombus with perpendicular diagonals is a square.\n\n(iii) If the diagonals of a parallelogram are equal, then it is a rectangle.",
             "answer": {
               "answerKey": "(i) True. (ii) False. (iii) True.",
-              "schoolMethod": "(i) **True.** Adjacent angles in a parallelogram are supplementary. If one angle is 90°, its adjacent angle is also 90°, and then all four angles are right angles: it is a rectangle.\n\n(ii) **False.** The diagonals of every rhombus are perpendicular, but a rhombus need not be a square. A non-square rhombus is a counterexample. Add the condition that a diagonal’s length equals the other (or that one angle is 90°) to force a square.\n\n(iii) **True.** In a parallelogram, equal diagonals imply two adjacent triangles are congruent in a way that makes an angle a right angle; equivalently, a parallelogram with equal diagonals is a rectangle."
+              "schoolMethod": "(i) **True.** Adjacent angles in a parallelogram are supplementary. If one angle is 90°, its adjacent angle is also 90°, and then all four angles are right angles: it is a rectangle.\n\n(ii) **False.** The diagonals of every rhombus are perpendicular, but a rhombus need not be a square. A non-square rhombus is a counterexample. We add the condition that a diagonal’s length equals the other (or that one angle is 90°) to force a square.\n\n(iii) **True.** In a parallelogram, equal diagonals imply two adjacent triangles are congruent in a way that makes an angle a right angle; equivalently, a parallelogram with equal diagonals is a rectangle."
             }
           },
           {
@@ -1122,7 +1122,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The following questions examine converses of true properties. Answer them with Yes or No. If your answer is No, what extra condition can you add so that the answer becomes Yes?\n\n(i) If the diagonals of a quadrilateral ABCD bisect its angles, must ABCD be a rhombus?\n\n(ii) If the diagonals of a quadrilateral ABCD bisect each other at right angles, must ABCD be a rhombus?\n\n(iii) If the diagonals of a quadrilateral ABCD are of equal length, must ABCD be a rectangle? (In the ancient Indian study of quadrilaterals, equality of diagonals was considered significant. Quadrilaterals were first classified according to whether their diagonals were equal or not, before considering equality of sides.)",
             "answer": {
               "answerKey": "(i) Yes. (ii) Yes. (iii) No; add that ABCD is a parallelogram.",
-              "schoolMethod": "(i) **Yes.** If both diagonals bisect the opposite angles, the adjacent right triangles formed by the diagonals are congruent; this gives equal adjacent sides, and the quadrilateral is a rhombus.\n\n(ii) **Yes.** If the diagonals bisect each other, ABCD is a parallelogram. If they also meet at right angles, its adjacent sides form equal right triangles, so adjacent sides are equal; hence it is a rhombus.\n\n(iii) **No.** An isosceles trapezium has equal diagonals but need not be a rectangle. Add the condition that ABCD is a **parallelogram**; a parallelogram with equal diagonals is a rectangle."
+              "schoolMethod": "(i) **Yes.** If both diagonals bisect the opposite angles, the adjacent right triangles formed by the diagonals are congruent; this gives equal adjacent sides, and the quadrilateral is a rhombus.\n\n(ii) **Yes.** If the diagonals bisect each other, ABCD is a parallelogram. If they also meet at right angles, its adjacent sides form equal right triangles, so adjacent sides are equal; hence it is a rhombus.\n\n(iii) **No.** An isosceles trapezium has equal diagonals but need not be a rectangle. We add the condition that ABCD is a **parallelogram**; a parallelogram with equal diagonals is a rectangle."
             }
           },
           {
@@ -1148,7 +1148,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "(i) If P, Q, R are the midpoints of sides AB, AC, BC respectively of △ABC, show that △PQR is congruent to △QPA and to two other triangles which you should identify.\n\n(ii) Suppose someone erases △ABC, leaving only △PQR on the paper. Can you reconstruct △ABC from △PQR?\n\n![ch12-ex12-3-q1-fig12-22](/figs/maths-0904ch12-ex12-3-q1-fig12-22.png)",
             "answer": {
               "answerKey": "All four small triangles are congruent; PQR alone fixes the three side lengths of ABC, but not its orientation (which is irrelevant to congruence).",
-              "schoolMethod": "(i) By the Midpoint Theorem, PQ=$\\dfrac{BC}{2}$, PR=$\\dfrac{AC}{2}$ and QR=$\\dfrac{AB}{2}$. Also AP=PB=$\\dfrac{AB}{2}$, AQ=QC=$\\dfrac{AC}{2}$ and BR=RC=$\\dfrac{BC}{2}$. Thus each of △APQ, △PBR, △QCR and △PQR has side lengths $\\dfrac{AB}{2}$, $\\dfrac{AC}{2}$, $\\dfrac{BC}{2}$ in some order. By **SSS**, all four are congruent.\n\n(ii) Yes, up to congruence: construct a triangle whose sides are twice the corresponding side lengths of △PQR; its side lengths are AB, AC and BC. By SSS, this reconstructed △A′B′C′ is congruent to △ABC."
+              "schoolMethod": "(i) By the Midpoint Theorem, PQ=$\\dfrac{BC}{2}$, PR=$\\dfrac{AC}{2}$ and QR=$\\dfrac{AB}{2}$. Also AP=PB=$\\dfrac{AB}{2}$, AQ=QC=$\\dfrac{AC}{2}$ and BR=RC=$\\dfrac{BC}{2}$. Thus each of △APQ, △PBR, △QCR and △PQR has side lengths $\\dfrac{AB}{2}$, $\\dfrac{AC}{2}$, $\\dfrac{BC}{2}$ in some order. By **SSS**, all four are congruent.\n\n(ii) Yes, up to congruence: We construct a triangle whose sides are twice the corresponding side lengths of △PQR; its side lengths are AB, AC and BC. By SSS, this reconstructed △A′B′C′ is congruent to △ABC."
             }
           },
           {
@@ -1168,7 +1168,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "In a quadrilateral ABCD, suppose AB ∥ DC and AB ≠ CD. Suppose G and H are the midpoints of AC and BD respectively. Prove that GH ∥ AB. (Why did we assume AB ≠ CD?)",
             "answer": {
               "answerKey": "GH is parallel to both bases; AB≠DC avoids the parallelogram case where G=H.",
-              "schoolMethod": "**Proof:** Draw diagonal AC. In △ABC, G and H are not both midpoints of the same triangle; instead use coordinates or a standard trapezium mid-segment argument. Set A=(0,h), B=(b,h), D=(d,0), C=(d+c,0), where AB=b and DC=c. Then G=($\\dfrac{d+c}{2}$,$\\dfrac{h}{2}$) and H=($\\dfrac{b+d}{2}$,$\\dfrac{h}{2}$). They have the same y-coordinate, so **GH∥AB∥DC**.\n\nIf AB=DC while the bases are parallel, ABCD is a parallelogram. Its diagonals bisect each other, so G=H and GH is not a non-zero segment. The condition prevents this degenerate case."
+              "schoolMethod": "**Proof:** We draw diagonal AC. In △ABC, G and H are not both midpoints of the same triangle; instead use coordinates or a standard trapezium mid-segment argument. We set A=(0,h), B=(b,h), D=(d,0), C=(d+c,0), where AB=b and DC=c. Then G=($\\dfrac{d+c}{2}$,$\\dfrac{h}{2}$) and H=($\\dfrac{b+d}{2}$,$\\dfrac{h}{2}$). They have the same y-coordinate, so **GH∥AB∥DC**.\n\nIf AB=DC while the bases are parallel, ABCD is a parallelogram. Its diagonals bisect each other, so G=H and GH is not a non-zero segment. The condition prevents this degenerate case."
             }
           },
           {
@@ -1214,7 +1214,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Draw a non-convex 4-gon DART. Show how we can tile the plane with copies of DART. Both methods that we discussed earlier will work. Which do you prefer?",
             "answer": {
               "answerKey": "Both the 180°-rotation edge method and the Varignon-parallelogram grid method can tile the plane.",
-              "schoolMethod": "Take a simple concave quadrilateral DART with one reflex angle. **Method 1:** place one copy beside another by rotating a copy through 180° about the midpoint of a shared edge. The two copies match along that edge; repeat at every exposed edge to extend the pattern without gaps. The four angles of the original quadrilateral sum to 360°, which allows the vertices to close around a point.\n\n**Method 2:** join the midpoints of each copy’s sides. These form a Varignon parallelogram. Tile the plane with copies of that parallelogram, then place the matching DART in each parallelogram cell using the same midpoint arrangement. Both methods give a tiling. The 180°-rotation method is usually easier to construct by hand because each new copy is placed directly against a shared edge."
+              "schoolMethod": "We take a simple concave quadrilateral DART with one reflex angle. **Method 1:** We place one copy beside another by rotating a copy through 180° about the midpoint of a shared edge. The two copies match along that edge; We repeat at every exposed edge to extend the pattern without gaps. The four angles of the original quadrilateral sum to 360°, which allows the vertices to close around a point.\n\n**Method 2:** We join the midpoints of each copy’s sides. These form a Varignon parallelogram. Tile the plane with copies of that parallelogram, then place the matching DART in each parallelogram cell using the same midpoint arrangement. Both methods give a tiling. The 180°-rotation method is usually easier to construct by hand because each new copy is placed directly against a shared edge."
             }
           }
         ]
@@ -1230,7 +1230,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Using a fact about parallelograms, show how to tile the plane using any given triangle. (Hint: Can you use the parallelogram tiling in the introduction?)",
             "answer": {
               "answerKey": "Two congruent copies of any triangle form a parallelogram; parallelograms tile the plane, so the triangle also tiles the plane.",
-              "schoolMethod": "Take △ABC and a congruent copy. Rotate the copy through 180° about the midpoint M of side BC. The vertices B and C swap, and M is also the midpoint of the segment joining A to its image A′. Thus the diagonals AA′ and BC of quadrilateral ABA′C bisect each other at M, so ABA′C is a parallelogram. Parallelograms tile the plane by translations. Each parallelogram is split by a diagonal into two copies of △ABC; therefore copies of the given triangle tile the plane without gaps or overlaps."
+              "schoolMethod": "We take △ABC and a congruent copy. We rotate the copy through 180° about the midpoint M of side BC. The vertices B and C swap, and M is also the midpoint of the segment joining A to its image A′. Thus the diagonals AA′ and BC of quadrilateral ABA′C bisect each other at M, so ABA′C is a parallelogram. Parallelograms tile the plane by translations. Each parallelogram is split by a diagonal into two copies of △ABC; therefore copies of the given triangle tile the plane without gaps or overlaps."
             }
           },
           {
@@ -1240,7 +1240,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Mark the midpoint of the line drawn on the paper (see Fig. 12.33), given that the horizontal lines are equally spaced. Justify your answer.\n\n![ch12-end-q2-fig12-33](/figs/maths-0904ch12-end-q2-fig12-33.png)",
             "answer": {
               "answerKey": "The midpoint is where the slanted segment crosses the fourth horizontal line (halfway between its endpoints on the second and sixth lines).",
-              "schoolMethod": "The endpoints of the slanted segment lie on the second and sixth horizontal rules. Mark M where the segment crosses the fourth rule, halfway between those two rules. To justify this, draw a perpendicular through M to the horizontal rules, meeting the second and sixth rules at U and V. Equal spacing gives MU=MV. The triangles at the two ends, △MUX and △MVY (where X,Y are the segment endpoints), have a right angle, equal vertical angles at M, and MU=MV; hence they are congruent by ASA. Therefore MX=MY and **M is the midpoint** of the slanted segment."
+              "schoolMethod": "The endpoints of the slanted segment lie on the second and sixth horizontal rules. We mark M where the segment crosses the fourth rule, halfway between those two rules. To justify this, draw a perpendicular through M to the horizontal rules, meeting the second and sixth rules at U and V. Equal spacing gives MU=MV. The triangles at the two ends, △MUX and △MVY (where X,Y are the segment endpoints), have a right angle, equal vertical angles at M, and MU=MV; hence they are congruent by ASA. Therefore MX=MY and **M is the midpoint** of the slanted segment."
             }
           },
           {
@@ -1250,7 +1250,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "You know that the sum of angles of a quadrilateral is 360°, even for a non-convex quadrilateral (Recall the proof.) Now consider a self-intersecting quadrilateral ABCD, where AB and CD intersect at point E. Show that ∠A + ∠B + ∠C + ∠D < 360°. Can you construct ABCD such that ∠A + ∠B + ∠C + ∠D = 2°?",
             "answer": {
               "answerKey": "∠A+∠B+∠C+∠D = 360°−2∠AED, so the sum is less than 360°. Yes: choose ∠AED=179° to obtain 2°.",
-              "schoolMethod": "Since E lies on AB and CD, the crossing divides the figure into triangles △EAD and △EBC. Let x=∠AED. The vertically opposite angle ∠BEC also equals x. In △EAD, ∠A+∠D=180°−x; in △EBC, ∠B+∠C=180°−x. Adding gives ∠A+∠B+∠C+∠D=360°−2x<360°, because x>0°. To make the sum 2°, set 360°−2x=2°, giving x=179°. Choose the two crossing lines so that the relevant angle is 179° (the adjacent angle is 1°), and place A,B,C,D on the two lines in the order shown. Then the vertex-angle sum is exactly **2°**."
+              "schoolMethod": "Since E lies on AB and CD, the crossing divides the figure into triangles △EAD and △EBC. Let x=∠AED. The vertically opposite angle ∠BEC also equals x. In △EAD, ∠A+∠D=180°−x; in △EBC, ∠B+∠C=180°−x. Adding gives ∠A+∠B+∠C+∠D=360°−2x<360°, because x>0°. To make the sum 2°, set 360°−2x=2°, giving x=179°. We choose the two crossing lines so that the relevant angle is 179° (the adjacent angle is 1°), and place A,B,C,D on the two lines in the order shown. Then the vertex-angle sum is exactly **2°**."
             }
           },
           {
@@ -1280,7 +1280,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "You saw how to use the Midpoint Theorem to divide a given triangle into 4 congruent triangles. Can we divide a triangle into 3 congruent triangles? This exercise shows us how to do that and more, provided we are allowed to cut and reassemble.\n\n(i) Draw medians AP, BQ and CR of ΔABC, meeting in a common point M. Cut along each median to get 6 triangles. Show with justification how to assemble the 6 pieces into 3 congruent triangles! (Hint: Align ΔMPB and ΔMPC along equal sides PB and PC, matching P with itself and B with C.) Prove that you get a triangle. What are its side lengths?\n\n*(ii) Repeat the procedure with each of the 3 assembled triangles you got in (i). Show that each of the resulting 9 triangles has sides AB/3, BC/3 and AC/3.\n\nThe procedure and the result above were unnoticed till 2014, when they were discovered by Lee Sallows, an amateur mathematician!\n\n(iii) Can we next ask about the possibility of cutting a triangle and reassembling it into 2 congruent triangles. You were asked this question in the chapter Measuring Space: Perimeter and Area. Can you solve this now? (Hint: Use median AP in ΔABC and then a median of ΔAPB.)\n\nFor any two given figures with straight sides, we can ask whether one figure can be cut (using only straight cuts) into pieces and reassembled to make the other. This notion is called scissors congruence. The figures need not be in the plane. Research on such questions at a higher level is ongoing.",
             "answer": {
               "answerKey": "(i) Three congruent triangles with sides $\\dfrac{2}{3}$ of the three medians. (ii) Nine congruent triangles, each with side lengths $\\dfrac{AB}{3}$, $\\dfrac{BC}{3}$, $\\dfrac{AC}{3}$. (iii) Three pieces can be reassembled into two congruent triangles.",
-              "schoolMethod": "**(i)** Let P,Q,R be the midpoints of BC, CA, AB. The centroid theorem gives AM=2MP, BM=2MQ and CM=2MR. Rotate △MPB by 180° about P. Since PB=PC, B lands on C and M lands on M′ with P the midpoint of MM′. Because B,P,C are collinear, M,P,M′ are collinear; the moved △MPB joins △MPC to form triangle △MM′C. Its sides are MM′=2MP=AM, M′C=MB and MC. Since MB=2MQ and MC=2MR, the lengths are the three centroid-to-vertex segments AM, BM, CM (equivalently, two-thirds of the corresponding medians). Pair the other two pairs around Q and R in the same way. All three resulting triangles have the same three side lengths, so they are congruent by SSS.\n\n**(ii)** In an assembled triangle from part (i), the three medians have lengths $\\dfrac{BC}{2}$, $\\dfrac{CA}{2}$ and $\\dfrac{AB}{2}$: this follows from the parallelograms formed by the half-turn construction and the midpoint relations. Reapplying part (i) makes the sides of each of its three pieces two-thirds of those medians, namely ($\\dfrac{2}{3}$)($\\dfrac{AB}{2}$)=$\\dfrac{AB}{3}$, ($\\dfrac{2}{3}$)($\\dfrac{BC}{2}$)=$\\dfrac{BC}{3}$ and ($\\dfrac{2}{3}$)($\\dfrac{AC}{2}$)=$\\dfrac{AC}{3}$. Doing this for each of the three assembled triangles produces **nine congruent triangles** with those side lengths.\n\n**(iii)** First cut along median AP, producing △APB and △APC, with P the midpoint of BC. In △APB, let K be the midpoint of AB and draw median PK. Cut along PK. Rotate △PKB by 180° about K: B maps to A, and P maps to P′, with K the midpoint of PP′. The pieces △PKA and the rotated △PKB form △APP′ because P,K,P′ are collinear. Its sides are AP, AP′=BP=PC and PP′=2PK=AC (by the Midpoint Theorem in △ABC). Thus △APP′ and △APC have the same three side lengths AP, PC and AC, so they are congruent by SSS. This gives two congruent triangles after cutting and rearranging the three pieces."
+              "schoolMethod": "**(i)** Let P,Q,R be the midpoints of BC, CA, AB. The centroid theorem gives AM=2MP, BM=2MQ and CM=2MR. We rotate △MPB by 180° about P. Since PB=PC, B lands on C and M lands on M′ with P the midpoint of MM′. Because B,P,C are collinear, M,P,M′ are collinear; the moved △MPB joins △MPC to form triangle △MM′C. Its sides are MM′=2MP=AM, M′C=MB and MC. Since MB=2MQ and MC=2MR, the lengths are the three centroid-to-vertex segments AM, BM, CM (equivalently, two-thirds of the corresponding medians). Pair the other two pairs around Q and R in the same way. All three resulting triangles have the same three side lengths, so they are congruent by SSS.\n\n**(ii)** In an assembled triangle from part (i), the three medians have lengths $\\dfrac{BC}{2}$, $\\dfrac{CA}{2}$ and $\\dfrac{AB}{2}$: this follows from the parallelograms formed by the half-turn construction and the midpoint relations. Reapplying part (i) makes the sides of each of its three pieces two-thirds of those medians, namely ($\\dfrac{2}{3}$)($\\dfrac{AB}{2}$)=$\\dfrac{AB}{3}$, ($\\dfrac{2}{3}$)($\\dfrac{BC}{2}$)=$\\dfrac{BC}{3}$ and ($\\dfrac{2}{3}$)($\\dfrac{AC}{2}$)=$\\dfrac{AC}{3}$. Doing this for each of the three assembled triangles produces **nine congruent triangles** with those side lengths.\n\n**(iii)** First cut along median AP, producing △APB and △APC, with P the midpoint of BC. In △APB, let K be the midpoint of AB and draw median PK. We cut along PK. We rotate △PKB by 180° about K: B maps to A, and P maps to P′, with K the midpoint of PP′. The pieces △PKA and the rotated △PKB form △APP′ because P,K,P′ are collinear. Its sides are AP, AP′=BP=PC and PP′=2PK=AC (by the Midpoint Theorem in △ABC). Thus △APP′ and △APC have the same three side lengths AP, PC and AC, so they are congruent by SSS. This gives two congruent triangles after cutting and rearranging the three pieces."
             }
           },
           {
@@ -1290,7 +1290,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A more general midpoint theorem and its converse. In a quadrilateral ABCD, suppose AB ∥ DC. Recall that such ABCD is called a trapezium. Let E be the midpoint of AD. A line drawn through E intersects side BC at F.\n\n(i) If EF ∥ AB, then show that F is the midpoint of BC. Conclude that EF = (AB+CD)/2.\n\n(ii) If F is the midpoint of BC, then show that EF ∥ AB.\n\nThere are at least two ways to solve (ii). Do it directly by using the midpoint M of BD and showing that EM and FM are the same lines. Or use (i) along with the same idea used in the second proof of the converse of the Midpoint Theorem. Which way do you think is simpler?\n\n![ch12-end-q7-fig12-36](/figs/maths-0904ch12-end-q7-fig12-36.png)",
             "answer": {
               "answerKey": "(i) F is the midpoint of BC and EF=$\\dfrac{AB+CD}{2}$. (ii) EF∥AB.",
-              "schoolMethod": "**(i)** Draw diagonal AC and let EF meet it at G. In △ADC, E is the midpoint of AD and EG∥DC, so by the Converse of the Midpoint Theorem G is the midpoint of AC and EG=$\\dfrac{DC}{2}$. In △CAB, G is the midpoint of CA and GF∥AB, so F is the midpoint of CB and GF=$\\dfrac{AB}{2}$. Hence EF=EG+GF=$\\dfrac{DC}{2}$+$\\dfrac{AB}{2}$=$\\dfrac{AB+CD}{2}$.\n\n**(ii)** Let M be the midpoint of BD. In △DAB, E and M are the midpoints of DA and DB, so EM∥AB. In △DBC, M and F are the midpoints of DB and BC, so MF∥DC∥AB. Since EM and MF pass through M and are both parallel to AB, they are the same line. Therefore E,M,F are collinear and **EF∥AB**."
+              "schoolMethod": "**(i)** We draw diagonal AC and let EF meet it at G. In △ADC, E is the midpoint of AD and EG∥DC, so by the Converse of the Midpoint Theorem G is the midpoint of AC and EG=$\\dfrac{DC}{2}$. In △CAB, G is the midpoint of CA and GF∥AB, so F is the midpoint of CB and GF=$\\dfrac{AB}{2}$. Hence EF=EG+GF=$\\dfrac{DC}{2}$+$\\dfrac{AB}{2}$=$\\dfrac{AB+CD}{2}$.\n\n**(ii)** Let M be the midpoint of BD. In △DAB, E and M are the midpoints of DA and DB, so EM∥AB. In △DBC, M and F are the midpoints of DB and BC, so MF∥DC∥AB. Since EM and MF pass through M and are both parallel to AB, they are the same line. Therefore E,M,F are collinear and **EF∥AB**."
             }
           },
           {
@@ -1300,7 +1300,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The diagonals AC and BD of a parallelogram ABCD intersect at O. A line through O meets AB and CD at points P and Q respectively. Show that O is the midpoint of PQ. (Multiple proofs are possible. Which is the simplest?)\n\n![ch12-end-q8-fig12-37](/figs/maths-0904ch12-end-q8-fig12-37.png)",
             "answer": {
               "answerKey": "OP=OQ; therefore O is the midpoint of PQ.",
-              "schoolMethod": "Consider △OAP and △OCQ. OA=OC because diagonals of a parallelogram bisect each other. Since AB∥CD, ∠OAP=∠OCQ (alternate interior angles), and ∠AOP=∠COQ (vertically opposite angles). Thus △OAP≅△OCQ by ASA. Hence OP=OQ. As P,O,Q lie on the same line, **O is the midpoint of PQ**."
+              "schoolMethod": "We consider △OAP and △OCQ. OA=OC because diagonals of a parallelogram bisect each other. Since AB∥CD, ∠OAP=∠OCQ (alternate interior angles), and ∠AOP=∠COQ (vertically opposite angles). Thus △OAP≅△OCQ by ASA. Hence OP=OQ. As P,O,Q lie on the same line, **O is the midpoint of PQ**."
             }
           },
           {
@@ -1340,7 +1340,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "(i) Suppose ABCD is a parallelogram and M, N are midpoints of AB and CD respectively. Show that segments DM and BN trisect segment AC.\n\n(ii) Use part (i) to find a procedure to trisect any given segment PQ. Find two other ways to trisect PQ, one using Exercise 11 above and a third using the Centroid Theorem.\n\n![ch12-end-q12-fig12-40](/figs/maths-0904ch12-end-q12-fig12-40.png)",
             "answer": {
               "answerKey": "The two intersections of DM and BN with AC divide AC into three equal parts. A segment can be trisected using this parallelogram construction, equal parallel intercepts, or the Centroid Theorem.",
-              "schoolMethod": "**(i)** Since M,N are midpoints, MB=$\\dfrac{AB}{2}$ and DN=$\\dfrac{CD}{2}$. In a parallelogram AB=CD, so MB=DN; also MB∥DN. Therefore MBND is a parallelogram and DM∥BN. Let DM meet AC at X, and BN meet AC at Y. In △ABY, M is the midpoint of AB and MX∥BY, so X is the midpoint of AY: AX=XY. In △CDX, N is the midpoint of CD and NY∥DX, so Y is the midpoint of CX: CY=YX. Hence **AX=XY=YC**.\n\n**(ii), Method 1 (parallelogram):** Make PQ a diagonal of a parallelogram PBQD. Let O be the midpoint of PQ; choose B,D on any line through O with OB=OD and construct the parallelogram. Find M and N, the midpoints of PB and QD; the lines DM and BN meet PQ at its trisection points by part (i).\n\n**Method 2 (parallel intercepts):** Draw a ray from P and mark three consecutive equal segments on it, ending at X₃. Join X₃ to Q. Through the first two marks draw lines parallel to X₃Q; by the equal-intercept theorem they cut PQ into three equal parts.\n\n**Method 3 (centroid):** Construct △PBC so that PQ is a median (choose B and C on a line through Q with QB=QC). Draw a second median from B to the midpoint of PC, meeting PQ at centroid G. The centroid theorem gives PG:GQ=2:1, so GQ=$\\dfrac{PQ}{3}$. Bisect PG to obtain the other trisection point."
+              "schoolMethod": "**(i)** Since M,N are midpoints, MB=$\\dfrac{AB}{2}$ and DN=$\\dfrac{CD}{2}$. In a parallelogram AB=CD, so MB=DN; also MB∥DN. Therefore MBND is a parallelogram and DM∥BN. Let DM meet AC at X, and BN meet AC at Y. In △ABY, M is the midpoint of AB and MX∥BY, so X is the midpoint of AY: AX=XY. In △CDX, N is the midpoint of CD and NY∥DX, so Y is the midpoint of CX: CY=YX. Hence **AX=XY=YC**.\n\n**(ii), Method 1 (parallelogram):** We make PQ a diagonal of a parallelogram PBQD. Let O be the midpoint of PQ; We choose B,D on any line through O with OB=OD and construct the parallelogram. We find M and N, the midpoints of PB and QD; the lines DM and BN meet PQ at its trisection points by part (i).\n\n**Method 2 (parallel intercepts):** We draw a ray from P and mark three consecutive equal segments on it, ending at X₃. We join X₃ to Q. Through the first two marks draw lines parallel to X₃Q; by the equal-intercept theorem they cut PQ into three equal parts.\n\n**Method 3 (centroid):** We construct △PBC so that PQ is a median (choose B and C on a line through Q with QB=QC). We draw a second median from B to the midpoint of PC, meeting PQ at centroid G. The centroid theorem gives PG:GQ=2:1, so GQ=$\\dfrac{PQ}{3}$. Bisect PG to obtain the other trisection point."
             }
           },
           {
@@ -1360,7 +1360,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Let P, Q, R, S be four points on sides AB, BC, CD and DA respectively of a quadrilateral ABCD. Suppose PQRS is a parallelogram. Must P, Q, R and S be midpoints of the respective sides? This can be considered a possible converse question to Theorem 9.",
             "answer": {
               "answerKey": "No. In a square of side 4, choosing each point one unit from the next corner produces a smaller square PQRS, although no chosen point is a midpoint.",
-              "schoolMethod": "Take square ABCD of side 4. Let P be on AB with AP=1, Q on BC with BQ=1, R on CD with CR=1, and S on DA with DS=1. Each corner triangle, such as △SAP, is right-angled with legs 1 and 3. These four triangles are congruent by SAS, so their opposite hypotenuses satisfy PQ=QR=RS=SP. The four segments also have equal side directions by the symmetry of the square; hence PQRS is a square and therefore a parallelogram. But AP=1 while $\\dfrac{AB}{2}$=2, so P is not a midpoint; similarly for Q,R,S. Thus the converse is **false**."
+              "schoolMethod": "We take square ABCD of side 4. Let P be on AB with AP=1, Q on BC with BQ=1, R on CD with CR=1, and S on DA with DS=1. Each corner triangle, such as △SAP, is right-angled with legs 1 and 3. These four triangles are congruent by SAS, so their opposite hypotenuses satisfy PQ=QR=RS=SP. The four segments also have equal side directions by the symmetry of the square; hence PQRS is a square and therefore a parallelogram. But AP=1 while $\\dfrac{AB}{2}$=2, so P is not a midpoint; similarly for Q,R,S. Thus the converse is **false**."
             }
           },
           {
@@ -1370,7 +1370,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "(i) Complete the following proof of the Midpoint Theorem. Extend segment PQ beyond Q until point S. By how much should we extend PQ?\n\nIt would be good to be able to prove that ΔAPQ ≅ ΔCSQ. (Why?) Use this as a guide to specify the location of S and then complete this proof.\n\n(ii) Give a similar proof of the converse of the Midpoint Theorem (Theorem 7). Start by extending PQ up to a suitable point S.\n\n![ch12-end-q15-fig12-41](/figs/maths-0904ch12-end-q15-fig12-41.png)",
             "answer": {
               "answerKey": "(i) Extend to S so that QS=PQ; then △APQ≅△CSQ and PBCS is a parallelogram. (ii) For the converse, extend to S so that PS=BC; again PBCS is a parallelogram and Q is the midpoint of AC.",
-              "schoolMethod": "**(i)** Given P and Q are the midpoints of AB and AC, extend PQ beyond Q to S so that QS=PQ. Then Q is the midpoint of PS. In △APQ and △CSQ, AQ=CQ, PQ=SQ and ∠AQP=∠CQS (vertically opposite), so the triangles are congruent by SAS. Thus CS=AP=PB and CS∥AB∥PB. Since one pair of opposite sides of PBCS is equal and parallel, PBCS is a parallelogram. Therefore PS∥BC and PS=BC. As PS=PQ+QS=2PQ, we obtain PQ∥BC and PQ=$\\dfrac{BC}{2}$.\n\n**(ii)** Now P is the midpoint of AB and PQ∥BC. Extend PQ to S so that PS=BC. Since PS∥BC and PS=BC, PBCS is a parallelogram, so CS∥AB and CS=PB=AP. Compare △APQ and △CSQ: AP=CS, ∠PAQ=∠SCQ and ∠APQ=∠CSQ (alternate angles). They are congruent by ASA; hence AQ=CQ, so Q is the midpoint of AC. Also PQ=$\\dfrac{PS}{2}$=$\\dfrac{BC}{2}$."
+              "schoolMethod": "**(i)** Given P and Q are the midpoints of AB and AC, extend PQ beyond Q to S so that QS=PQ. Then Q is the midpoint of PS. In △APQ and △CSQ, AQ=CQ, PQ=SQ and ∠AQP=∠CQS (vertically opposite), so the triangles are congruent by SAS. Thus CS=AP=PB and CS∥AB∥PB. Since one pair of opposite sides of PBCS is equal and parallel, PBCS is a parallelogram. Therefore PS∥BC and PS=BC. As PS=PQ+QS=2PQ, we obtain PQ∥BC and PQ=$\\dfrac{BC}{2}$.\n\n**(ii)** Now P is the midpoint of AB and PQ∥BC. We extend PQ to S so that PS=BC. Since PS∥BC and PS=BC, PBCS is a parallelogram, so CS∥AB and CS=PB=AP. We compare △APQ and △CSQ: AP=CS, ∠PAQ=∠SCQ and ∠APQ=∠CSQ (alternate angles). They are congruent by ASA; hence AQ=CQ, so Q is the midpoint of AC. Also PQ=$\\dfrac{PS}{2}$=$\\dfrac{BC}{2}$."
             }
           },
           {
@@ -1390,7 +1390,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Show that the sum of angles of a non-planar quadrilateral is always less than 360°. Can you find a non-planar quadrilateral ABCD for which ∠A + ∠B + ∠C + ∠D = 2°?\n\n(Hint: Think of a diagonal, say AC, as a hinge around which triangles ABC and ADC can rotate.) What happens to each angle of ABCD as you do this rotation?",
             "answer": {
               "answerKey": "For a genuinely folded quadrilateral, the angle sum is less than 360°. Yes; by choosing two very thin triangles and continuously rotating one about AC, the sum can be made exactly 2°.",
-              "schoolMethod": "Start with a flat convex quadrilateral ABCD whose angle sum is 360°, and treat AC as a hinge. Keep △ADC fixed while rotating △ABC out of its plane. The angles ∠B and ∠D remain unchanged because each belongs to a rigid triangle. The angles at A and C decrease: as B moves from the opposite side of AC towards D’s side, the distance BD decreases; with AB and AD fixed, the angle between them (∠A) decreases, and similarly ∠C decreases. Therefore, once the quadrilateral is genuinely non-planar, the total is strictly less than 360°.\n\nTo obtain 2°, choose two very thin triangles on AC, so the limiting sum during near-complete folding can be made smaller than 2°. Initially the flat sum is 360°; during rotation the sum changes continuously. By the intermediate value property, at some non-flat position the sum is exactly **2°**."
+              "schoolMethod": "We start with a flat convex quadrilateral ABCD whose angle sum is 360°, and treat AC as a hinge. We keep △ADC fixed while rotating △ABC out of its plane. The angles ∠B and ∠D remain unchanged because each belongs to a rigid triangle. The angles at A and C decrease: as B moves from the opposite side of AC towards D’s side, the distance BD decreases; with AB and AD fixed, the angle between them (∠A) decreases, and similarly ∠C decreases. Therefore, once the quadrilateral is genuinely non-planar, the total is strictly less than 360°.\n\nTo obtain 2°, choose two very thin triangles on AC, so the limiting sum during near-complete folding can be made smaller than 2°. Initially the flat sum is 360°; during rotation the sum changes continuously. By the intermediate value property, at some non-flat position the sum is exactly **2°**."
             }
           },
           {
@@ -1400,7 +1400,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Let us see a third method to tile the plane using a 4-gon.\n\nFocus on only two coloured copies of SOME sharing a vertex. What do you see? It appears that each 4-gon is just a shifted copy of the other. Let us see exactly how. Draw two copies of SOME as shown in Fig. 12.42 so that the diagonals EO and E'O' are collinear with O = E'. Now place a cutout of one copy on top of SOME with diagonal EO drawn on it. Slide this cutout so that segment EO moves along EO' until EO matches E'O'. Verify that your cutout exactly matches S'O'ME'.\n\n(i) Prove the exact match of SOME with S'O'ME' using four parallelograms.\n\n(ii) Follow the described procedure along each diagonal of the starting coloured 4-gon in both directions to get 4 new 4-gons. Using these 4 copies, repeat the procedure 4 more times to place 4 new copies, resulting in a 3 by 3 grid of 9 copies exactly like the 9 coloured copies in Fig. 12.42. These 9 copies meet each other only at vertices and once again the blank spaces among them also form 4-gons congruent to SOME!\n\n![ch12-end-q18-fig12-42](/figs/maths-0904ch12-end-q18-fig12-42.png)",
             "answer": {
               "answerKey": "Sliding by the vector from E to O produces an exact translated copy; four parallelograms establish the matching sides. Repetition along both diagonals makes a grid with congruent quadrilaterals and congruent gaps.",
-              "schoolMethod": "**(i)** Slide a cutout of SOME by the same vector \\(\\overrightarrow{EO}\\), so E maps to E′=O and O maps to O′. Every point shifts by the same vector; hence SS′∥EO, MM′∥EO and each has length EO. Together with E′=O and the collinearity of E,O,O′, the four quadrilaterals ESS′E′, OSS′O′, EMM′E′ and OMM′O′ each have one pair of opposite sides equal and parallel. Each is therefore a parallelogram. Their other sides are equal and parallel too, showing that each side of S′O′M′E′ matches the corresponding side of SOME. Thus the two quadrilaterals coincide exactly after translation.\n\n**(ii)** Translate copies in both directions along diagonals EO and SM. Four new copies fit around the initial quadrilateral, meeting it only at vertices. Repeat outward from each of those copies to make a 3×3 grid and continue. Each blank region between four translated copies is another congruent quadrilateral (possibly rotated 180°), so the copies and the gaps cover the plane exactly without overlap or uncovered region."
+              "schoolMethod": "**(i)** We slide a cutout of SOME by the same vector \\(\\overrightarrow{EO}\\), so E maps to E′=O and O maps to O′. Every point shifts by the same vector; hence SS′∥EO, MM′∥EO and each has length EO. Together with E′=O and the collinearity of E,O,O′, the four quadrilaterals ESS′E′, OSS′O′, EMM′E′ and OMM′O′ each have one pair of opposite sides equal and parallel. Each is therefore a parallelogram. Their other sides are equal and parallel too, showing that each side of S′O′M′E′ matches the corresponding side of SOME. Thus the two quadrilaterals coincide exactly after translation.\n\n**(ii)** We translate copies in both directions along diagonals EO and SM. Four new copies fit around the initial quadrilateral, meeting it only at vertices. We repeat outward from each of those copies to make a 3×3 grid and continue. Each blank region between four translated copies is another congruent quadrilateral (possibly rotated 180°), so the copies and the gaps cover the plane exactly without overlap or uncovered region."
             }
           },
           {
@@ -1410,7 +1410,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Is there a 4-gon with given side lengths?\n\n(i) Recall the following fact about triangles and check it by construction. For given positive numbers a, b, c, is there a triangle whose sides have these lengths? The answer is Yes exactly when the sum of any two numbers is greater than the third. If we arrange the numbers in increasing order (suppose a ≤ b ≤ c), then this amounts to requiring a + b > c. (Hint: Start by drawing a segment of length c.)\n\n(ii) Suppose a 4-gon has 2, 5, 11 as three side lengths. Can the length of the fourth side be 100? Can it be 10? Can it be 1? What are the possible lengths of the fourth side?\n\n(iii) For given positive numbers a, b, c, d, how will you decide if there is a 4-gon whose sides have these lengths?",
             "answer": {
               "answerKey": "(i) A triangle exists exactly when a+b>c. (ii) 100: no; 10: yes; 1: no; possible fourth side x satisfies 4<x<18. (iii) The longest side must be shorter than the sum of the other three.",
-              "schoolMethod": "**(i)** Draw a segment of length c. Draw a circle of radius a at one endpoint and radius b at the other. They meet away from the segment exactly when a+b>c; equality gives a degenerate straight line and a+b<c gives no intersection.\n\n**(ii)** Let the fourth length be x. A quadrilateral can exist only if every side is shorter than the sum of the other three. Thus 11<2+5+x, giving x>4, and x<2+5+11=18. Hence the range is **4<x<18**. So 100 is impossible, 10 is possible, and 1 is impossible.\n\n**(iii)** For four positive lengths, a non-degenerate quadrilateral exists exactly when the largest length is less than the sum of the other three. Necessity follows because the other three sides must form a broken path between the endpoints of the longest side. For sufficiency, choose a diagonal length that satisfies the triangle inequalities for two triangles using the four sides, then place those triangles on opposite sides of the diagonal; the resulting quadrilateral has the required four side lengths."
+              "schoolMethod": "**(i)** We draw a segment of length c. We draw a circle of radius a at one endpoint and radius b at the other. They meet away from the segment exactly when a+b>c; equality gives a degenerate straight line and a+b<c gives no intersection.\n\n**(ii)** Let the fourth length be x. A quadrilateral can exist only if every side is shorter than the sum of the other three. Thus 11<2+5+x, giving x>4, and x<2+5+11=18. Hence the range is **4<x<18**. So 100 is impossible, 10 is possible, and 1 is impossible.\n\n**(iii)** For four positive lengths, a non-degenerate quadrilateral exists exactly when the largest length is less than the sum of the other three. Necessity follows because the other three sides must form a broken path between the endpoints of the longest side. For sufficiency, choose a diagonal length that satisfies the triangle inequalities for two triangles using the four sides, then place those triangles on opposite sides of the diagonal; the resulting quadrilateral has the required four side lengths."
             }
           },
           {
@@ -1430,7 +1430,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Sum of angles of a polygon. What is the sum of angles of a (planar non-self-intersecting) n-gon? We know that the answer is 180° for n = 3 and 360° for n = 4. Find the next few values. Then find a formula in terms of n and prove it.",
             "answer": {
               "answerKey": "The sums are 180°, 360°, 540°, 720°, 900°, 1080°, respectively; the general sum is (n−2)×180°.",
-              "schoolMethod": "Join one vertex of a convex n-gon to all its non-adjacent vertices. The diagonals divide the polygon into n−2 non-overlapping triangles. Each triangle has angle sum 180°, and together their angles make precisely the polygon’s internal angles. Therefore the sum is \\((n-2)\times180^\\circ\\). For n=3,4,5,6,7,8 the values are **180°, 360°, 540°, 720°, 900°, 1080°**."
+              "schoolMethod": "We join one vertex of a convex n-gon to all its non-adjacent vertices. The diagonals divide the polygon into n−2 non-overlapping triangles. Each triangle has angle sum 180°, and together their angles make precisely the polygon’s internal angles. Therefore the sum is \\((n-2)\times180^\\circ\\). For n=3,4,5,6,7,8 the values are **180°, 360°, 540°, 720°, 900°, 1080°**."
             }
           },
           {
@@ -1440,7 +1440,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Multiple converses to a theorem. Let us see how multiple statements can be considered converses to the Midpoint Theorem and how Theorem 7 is one of them.\n\nTo formulate a converse we should express the original statement in \"If ... then ...\" form. For a complex statement, there may be multiple ways to do it. For the Midpoint Theorem, there starts with ΔABC and points P and Q on sides AB and AC respectively.\n\nThe theorem has two assumptions and two conclusions, which we have named for further discussion.\n\nAssumptions: (P MID) P is the midpoint of AB, and (Q MID) Q is the midpoint of AC.\n\nConclusions: (PRLL) PQ ∥ BC, and (HALF) PQ = BC/2.\n\nLet us use these four named conditions to discuss various possible statements.\n\n(i) A natural converse of the Midpoint Theorem would be: \"If (PRLL) and (HALF) are true, then (P MID) and (Q MID) are true.\" Write out this statement fully. Experiment and see that it seems to be true! Prove the statement. (Hint: Try to run a proof of the Midpoint Theorem backwards.)\n\n(ii) To see Theorem 7 as a converse of the Midpoint Theorem, we first write the Midpoint Theorem as follows: \"Suppose P is the midpoint of side AB of ΔABC and Q is a point on side AC. If Q is the midpoint of AC then PQ ∥ BC.\" (Also PQ = BC/2, but let us set that aside for now.) Write the converse of the same sentence in quotes in keeping the first sentence the same. Verify that Theorem 7 is what you get! (And PQ = BC/2 also follows.) Now write Theorem 7 in terms of the four named conditions.\n\n(iii) The discussion so far suggests that it is reasonable to take two of the four listed statements as assumptions and ask if the other two are true. Verify that only one such combination remains to be examined. \"If (P MID) and (HALF) are true, then can we conclude (Q MID) and/or (PRLL)?\" Write this out in words. This is a precise version of question (1) stated before Theorem 7. Can you answer it?\n\nIn the text, why did we focus only on Theorem 7 among the multiple possibilities? Because Theorem 7 turns out to be particularly useful. It is still important to pursue various avenues while exploring a subject: often it is only after examining multiple possibilities that we can judge what is most valuable.",
             "answer": {
               "answerKey": "(i) Yes: similarity gives AP=PB and AQ=QC. (ii) If P is midpoint of AB and PQ∥BC, then Q is midpoint of AC (and PQ=$\\dfrac{BC}{2}$). (iii) No: P midpoint and PQ=$\\dfrac{BC}{2}$ alone imply neither Q is midpoint nor PQ∥BC.",
-              "schoolMethod": "**(i)** Since PQ∥BC, △APQ∼△ABC. The ratio $\\dfrac{PQ}{BC}$=$\\dfrac{1}{2}$ therefore gives $\\dfrac{AP}{AB}$=$\\dfrac{AQ}{AC}$=$\\dfrac{1}{2}$. Thus AP=PB and AQ=QC, so P and Q are the midpoints.\n\n**(ii)** The statement is: “If P is the midpoint of AB and the line through P parallel to BC meets AC at Q, then Q is the midpoint of AC.” By Theorem 7, PQ=$\\dfrac{BC}{2}$ as well.\n\n**(iii)** Neither conclusion follows. A counterexample: take A=(0,0), B=(2,0), C=(3,1) and P=(1,0), which is the midpoint of AB. Let Q=(0.3,0.1), on AC. Then PQ²=(0.3−1)²+(0.1−0)²=0.50, so PQ=√0.5=$\\dfrac{\\sqrt{2}}{2}$; BC=√2 and hence PQ=$\\dfrac{BC}{2}$. But Q is not the midpoint of AC (that would be (1.5,0.5)) and the slope of PQ is −$\\dfrac{1}{7}$ while the slope of BC is 1, so PQ is not parallel to BC. Thus P MID and HALF alone imply neither Q MID nor PRLL."
+              "schoolMethod": "**(i)** Since PQ∥BC, △APQ∼△ABC. The ratio $\\dfrac{PQ}{BC}$=$\\dfrac{1}{2}$ therefore gives $\\dfrac{AP}{AB}$=$\\dfrac{AQ}{AC}$=$\\dfrac{1}{2}$. Thus AP=PB and AQ=QC, so P and Q are the midpoints.\n\n**(ii)** The statement is: “If P is the midpoint of AB and the line through P parallel to BC meets AC at Q, then Q is the midpoint of AC.” By Theorem 7, PQ=$\\dfrac{BC}{2}$ as well.\n\n**(iii)** Neither conclusion follows. A counterexample: We take A=(0,0), B=(2,0), C=(3,1) and P=(1,0), which is the midpoint of AB. Let Q=(0.3,0.1), on AC. Then PQ²=(0.3−1)²+(0.1−0)²=0.50, so PQ=√0.5=$\\dfrac{\\sqrt{2}}{2}$; BC=√2 and hence PQ=$\\dfrac{BC}{2}$. But Q is not the midpoint of AC (that would be (1.5,0.5)) and the slope of PQ is −$\\dfrac{1}{7}$ while the slope of BC is 1, so PQ is not parallel to BC. Thus P MID and HALF alone imply neither Q MID nor PRLL."
             }
           },
           {
@@ -1450,7 +1450,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Validity of tiling methods. Show using reasoning that each of the three tiling methods we saw produces a tiling of the plane using the given 4-gon. You have to prove that when we place new copies using any of the three procedures, the entire plane is covered with no gaps and no overlaps. First, think carefully about what it means to prove this. Then find a proof for each procedure.",
             "answer": {
               "answerKey": "The half-turn method matches complete edges; the vertex method uses the 360° angle sum; the translation method builds congruent translated cells and congruent gaps.",
-              "schoolMethod": "**Method 1: half-turn about a side midpoint.** Rotate a copy of the quadrilateral by 180° about the midpoint of a side. The side endpoints swap, so the two copies share the complete side exactly. Repeating at each exposed side gives an edge-to-edge pattern. Around each meeting vertex the four interior angles of the quadrilateral occur once each; their sum is 360°, so there is neither a gap nor an overlap.\n\n**Method 2: fit four copies around a vertex.** Place four copies so that their four interior angles meet at one point. A quadrilateral’s angles sum to 360°, so they fill the full turn exactly. Continue the pattern by matching copies along full sides using half-turns; every local gap is filled and no two interiors overlap.\n\n**Method 3: translation grid.** The construction in Exercise 18 shows that a copy translated by a diagonal vector matches exactly. Repeating the same translation in both diagonal directions creates a grid of translated copies. Each remaining gap is a congruent, turned copy of the original quadrilateral, so the copies and gaps fill the plane without overlap."
+              "schoolMethod": "**Method 1: half-turn about a side midpoint.** We rotate a copy of the quadrilateral by 180° about the midpoint of a side. The side endpoints swap, so the two copies share the complete side exactly. Repeating at each exposed side gives an edge-to-edge pattern. Around each meeting vertex the four interior angles of the quadrilateral occur once each; their sum is 360°, so there is neither a gap nor an overlap.\n\n**Method 2: fit four copies around a vertex.** We place four copies so that their four interior angles meet at one point. A quadrilateral’s angles sum to 360°, so they fill the full turn exactly. We continue the pattern by matching copies along full sides using half-turns; every local gap is filled and no two interiors overlap.\n\n**Method 3: translation grid.** The construction in Exercise 18 shows that a copy translated by a diagonal vector matches exactly. Repeating the same translation in both diagonal directions creates a grid of translated copies. Each remaining gap is a congruent, turned copy of the original quadrilateral, so the copies and gaps fill the plane without overlap."
             }
           },
           {
@@ -1477,7 +1477,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Can we use any given quadrilateral to tile the plane? If not, which quadrilaterals can be used and which cannot?",
             "answer": {
               "answerKey": "See the discussion in the book.",
-              "schoolMethod": "Refer to the corresponding Think and Reflect discussion in the textbook on page 51."
+              "schoolMethod": "We refer to the corresponding Think and Reflect discussion in the textbook on page 51."
             }
           },
           {
@@ -1488,7 +1488,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Informally, a quadrilateral is a figure with four straight sides, as in the first figure ABCD in Fig. 12.2 below. But consider the other six figures in Fig. 12.2: the five plane figures NOPE, SILY, DART, CUTS, OPENS, and the non-planar BENT. Should we call all these figures quadrilaterals? If you answer 'no' for any of them, how will you define a quadrilateral so that such a figure is excluded? As you can see, some care is needed to precisely define what we think of as a quadrilateral.",
             "answer": {
               "answerKey": "See the discussion in the book.",
-              "schoolMethod": "Refer to the corresponding Think and Reflect discussion in the textbook on page 52."
+              "schoolMethod": "We refer to the corresponding Think and Reflect discussion in the textbook on page 52."
             }
           },
           {
@@ -1499,7 +1499,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Can we similarly define a quadrilateral ABCD?",
             "answer": {
               "answerKey": "See the discussion in the book.",
-              "schoolMethod": "Refer to the corresponding Think and Reflect discussion in the textbook on page 53."
+              "schoolMethod": "We refer to the corresponding Think and Reflect discussion in the textbook on page 53."
             }
           },
           {
@@ -1510,7 +1510,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The angles of a quadrilateral add up to 360°. Therefore, if the opposite angles are equal, what can we say about adjacent angles? Is the converse of your answer true? Conclude that Theorem 3 can also be stated as follows. \"If each pair of adjacent angles in a quadrilateral ABCD... then ABCD is a parallelogram.\" Fill in the blank.",
             "answer": {
               "answerKey": "See the discussion in the book.",
-              "schoolMethod": "Refer to the corresponding Think and Reflect discussion in the textbook on page 59."
+              "schoolMethod": "We refer to the corresponding Think and Reflect discussion in the textbook on page 59."
             }
           },
           {
@@ -1521,7 +1521,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Try to prove directly that the four smaller triangles are congruent. You will see that no congruence test applies, because many quantities are unknown.",
             "answer": {
               "answerKey": "See the discussion in the book.",
-              "schoolMethod": "Refer to the corresponding Think and Reflect discussion in the textbook on page 62."
+              "schoolMethod": "We refer to the corresponding Think and Reflect discussion in the textbook on page 62."
             }
           },
           {
@@ -1532,7 +1532,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Read the statement of the Midpoint Theorem again. The following questions seem natural to ask. What can we say about (1) a segment PQ (with P on side AB and Q on AC) that is parallel to the third side and has half the length, and (2) the line that passes through the midpoint of one side and is parallel to another side? We will address question (1) in Exercise 22 at the end of the chapter. For now, experiment and see if you can make a guess about question (2). It appears that this line must bisect the remaining side! Let us try to justify this.",
             "answer": {
               "answerKey": "See the discussion in the book.",
-              "schoolMethod": "Refer to the corresponding Think and Reflect discussion in the textbook on page 63."
+              "schoolMethod": "We refer to the corresponding Think and Reflect discussion in the textbook on page 63."
             }
           },
           {
@@ -1543,7 +1543,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Give another proof of the Centroid Theorem using a clever construction that we will describe only partly and ask you to complete. Once again let M be the intersection point of the two medians CP and BQ. We want to show that the intersection point of line AM with side BC is the midpoint of BC. For this, extend AM up to a carefully chosen point S such that BSCM becomes a parallelogram. (Hint: To arrange MC ∥ BS, first note that PM and MC are along the same line. Now where should M be on segment AS? Does your placement of S also prove MB ∥ CS?)",
             "answer": {
               "answerKey": "See the discussion in the book.",
-              "schoolMethod": "Refer to the corresponding Think and Reflect discussion in the textbook on page 66."
+              "schoolMethod": "We refer to the corresponding Think and Reflect discussion in the textbook on page 66."
             }
           },
           {
@@ -1554,7 +1554,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Suppose we have a tiling of the plane. Consider any vertex. As we go around this vertex and consider the angles made by consecutive lines, the total of these angles must be 360°. This suggests an idea. What if we take 4 copies of SOME and fit them together around a common point so that each angle is used once as we go around?",
             "answer": {
               "answerKey": "See the discussion in the book.",
-              "schoolMethod": "Refer to the corresponding Think and Reflect discussion in the textbook on page 70."
+              "schoolMethod": "We refer to the corresponding Think and Reflect discussion in the textbook on page 70."
             }
           },
           {
@@ -1565,7 +1565,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Before you see the answer in Fig. 12.28, see the hints below and try to find a tiling using the given irregular 4-gon SOME. First, trace SOME on paper with its four angles labelled 1, 2, 3, 4. Remember that they add up to 360°. Cut out 15 identical copies.",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 69 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 69 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1576,7 +1576,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "There are multiple ways of doing this, as shown in Fig. 12.27. Can you use any of these ways to continue fitting further copies of SOME to tile the plane? Try it with the 15 copies you made!\n\n![fig12-27](/figs/maths-0904ch12-reflect-fig12-27.png)",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 70 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 70 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1587,7 +1587,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Here is how one can tile! Recreate it with your pieces.\n\n![fig12-28](/figs/maths-0904ch12-reflect-fig12-28.png)",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 70 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 70 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1598,7 +1598,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "How can we understand the figure? There seems to be a repeating pattern. (1) Can you precisely describe a procedure to draw the pattern so that someone can draw the tiling on their own, based only on your description? (2) Can you justify why your procedure works?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 70 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 70 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1609,7 +1609,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Now repeat this procedure at each edge of every copy of SOME that you add. Verify that this will result in a tiling! Two steps of a possible continuation are shown in Fig. 12.30. The first step (Fig. 12.30 A) adds 4 copies around the starting copy and the second step (Fig. 12.30 B) adds 4 more copies. Note two interesting things about the second step: (1) each new copy can be obtained by rotating any one of its neighbours, and both ways give the same result. (2) The new copies fit perfectly. Can you explain these facts by reasoning? This is needed to prove that the method works!\n\n![fig12-30](/figs/maths-0904ch12-reflect-fig12-30.png)",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 71 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 71 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1620,7 +1620,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Do you see which of the three possibilities shown in Fig. 12.27 occurs in the tiling?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 71 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 71 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1631,7 +1631,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Before we explain Method 2, let us conduct a thought experiment. Remember the Varignon parallelogram for 4-gons (Theorem 9). Imagine that we have drawn this parallelogram in each copy of SOME in the tiling shown earlier in Fig. 12.28. Visualise what the picture looks like. Fig. 12.31 shows the result. It appears that the Varignon parallelograms form a grid, giving the same parallelogram tiling we saw in the introduction!\n\n![fig12-31](/figs/maths-0904ch12-reflect-fig12-31.png)",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 72 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 72 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1642,7 +1642,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "This suggests an idea. What if we start by drawing just the simple grid tiling made by the Varignon parallelogram of SOME? Can we use this grid to construct the new tiling by SOME?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 72 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 72 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1653,7 +1653,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A grid of Varignon parallelograms of SOME is given in Fig. 12.32. To begin with, focus only on the 9 green coloured copies of SOME in Fig. 12.31. We will first place only these 9 copies in Fig. 12.32. The corresponding parallelograms are shaded in Fig. 12.32. Place 9 copies of SOME so as to match the way the green coloured copies of SOME are placed in Fig. 12.31 (You were asked to give a precise description of how to do this in Exercise Set 12.3, Q5.) If done carefully, you will observe that each 4-gon you placed meets other placed copies exactly at vertices. Now see how 4 copies of SOME are made automatically in the gaps! Carefully place four more copies of SOME in these gaps. Continuing this process with more copies of SOME will give us the desired tiling.\n\n![fig12-32](/figs/maths-0904ch12-reflect-fig12-32.png)",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 72 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 72 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1664,7 +1664,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "It should be emphasised that our procedure needs to be justified to assure us that it will always work. We will not do this here, but invite you to try it on your own!",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 73 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 73 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -1675,7 +1675,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A Cutting-edge Discovery\n\nThe following shape—the first of its kind!—that leads to aperiodic tilings was discovered only recently in 2023 by a team of four mathematicians (Smith, Myers, Kaplan and Goodman-Strauss).\n\nCut out 15 identical copies of the following shape (known as the 'hat') and start to tile with it. Do you see any pattern? You will find that the hat shape will tile the plane endlessly, but without ever quite repeating the same pattern. That is why it is called an 'aperiodic' tiling.\n\n![hat](/figs/maths-0904ch12-reflect-hat.png)",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the tiling exploration on page 74 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the tiling exploration on page 74 of Ganita Manjari, Grade 9, Part II."
             }
           }
         ]
@@ -1711,7 +1711,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Complete the following table after expressing the given linear equations in standard form.\n\n| Linear equation in two variables | Standard Form | Coefficient of x | Coefficient of y | Constant term |\n|---|---|---|---|---|\n| y − 15 = √2x | | | | |\n| 3y − 2x = 0 | | | | |\n| 5x = 3y | | | | |\n| x = 8 | | | | |\n| 3y = 1 | | | | |",
             "answer": {
               "answerKey": "(i) √2x−y+15=0: (a,b,c)=(√2,−1,15); (ii) −2x+3y=0: (−2,3,0); (iii) 5x−3y=0: (5,−3,0); (iv) x−8=0: (1,0,−8); (v) 3y−1=0: (0,3,−1).",
-              "schoolMethod": "**Standard form:** collect all terms on the left so the equation is ax + by + c = 0. The coefficient triple is (a,b,c).\n\n(i) y − 15 = √2x ⇒ **√2x − y + 15 = 0**; (a,b,c) = (√2, −1, 15).\n\n(ii) 3y − 2x = 0 ⇒ **−2x + 3y + 0 = 0**; (a,b,c) = (−2, 3, 0).\n\n(iii) 5x = 3y ⇒ **5x − 3y + 0 = 0**; (a,b,c) = (5, −3, 0).\n\n(iv) x = 8 ⇒ **x + 0y − 8 = 0**; (a,b,c) = (1, 0, −8).\n\n(v) 3y = 1 ⇒ **0x + 3y − 1 = 0**; (a,b,c) = (0, 3, −1).\n\nMultiplying an equation by −1 gives an equivalent standard form, provided all three coefficients change sign together."
+              "schoolMethod": "**Standard form:** We collect all terms on the left so the equation is ax + by + c = 0. The coefficient triple is (a,b,c).\n\n(i) y − 15 = √2x ⇒ **√2x − y + 15 = 0**; (a,b,c) = (√2, −1, 15).\n\n(ii) 3y − 2x = 0 ⇒ **−2x + 3y + 0 = 0**; (a,b,c) = (−2, 3, 0).\n\n(iii) 5x = 3y ⇒ **5x − 3y + 0 = 0**; (a,b,c) = (5, −3, 0).\n\n(iv) x = 8 ⇒ **x + 0y − 8 = 0**; (a,b,c) = (1, 0, −8).\n\n(v) 3y = 1 ⇒ **0x + 3y − 1 = 0**; (a,b,c) = (0, 3, −1).\n\nMultiplying an equation by −1 gives an equivalent standard form, provided all three coefficients change sign together."
             }
           },
           {
@@ -1747,7 +1747,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Find any two solutions for each of the following equations:\n\n(i) 7x − 3y = 21    (ii) 2x + 3y = 5",
             "answer": {
               "answerKey": "(i) (3,0), (0,−7). (ii) (1,1), (4,−1).",
-              "schoolMethod": "(i) For 7x−3y=21: set y=0 to obtain x=3, giving (3,0). Set x=0: −3y=21, so y=−7, giving (0,−7).\n\n(ii) For 2x+3y=5: set x=1, then 2+3y=5, so y=1 and (1,1). Set y=−1, then 2x−3=5, so x=4 and (4,−1). Substitution verifies all four ordered pairs."
+              "schoolMethod": "(i) For 7x−3y=21: We set y=0 to obtain x=3, giving (3,0). We set x=0: −3y=21, so y=−7, giving (0,−7).\n\n(ii) For 2x+3y=5: We set x=1, then 2+3y=5, so y=1 and (1,1). We set y=−1, then 2x−3=5, so x=4 and (4,−1). Substitution verifies all four ordered pairs."
             }
           },
           {
@@ -1787,7 +1787,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "State whether the following sentences are True or False. Justify your answer.\n\n(i) A linear equation in two variables has only one solution.\n\n(ii) The graph of a linear equation in two variables always passes through the origin.\n\n(iii) A linear equation in two variables can never have rational solutions.\n\n(iv) x = 3 is a valid linear equation in two variables.\n\n(v) The equation 2x + 3y = 7 has infinitely many solutions.\n\n(vi) The point (1, 2) is a solution of the equation 2x + 3y = 7.",
             "answer": {
               "answerKey": "(i) F; (ii) F; (iii) F; (iv) T; (v) T; (vi) F.",
-              "schoolMethod": "(i) **False:** a non-vertical linear equation has infinitely many ordered-pair solutions; for example, ($\\dfrac{0,7}{3}$) and ($\\dfrac{1,5}{3}$) solve 2x+3y=7.\n\n(ii) **False:** only equations with zero constant term (in standard form ax+by+c=0, c=0) necessarily pass through (0,0); 2x+3y=7 does not.\n\n(iii) **False:** for 2x+3y=7, (2,1) is an integer solution and hence rational.\n\n(iv) **True:** x=3 can be written x+0y−3=0, a linear equation in two variables.\n\n(v) **True:** choose any x and solve y=$\\dfrac{7-2x}{3}$, giving infinitely many solutions.\n\n(vi) **False:** 2(1)+3(2)=8≠7."
+              "schoolMethod": "(i) **False:** a non-vertical linear equation has infinitely many ordered-pair solutions; for example, ($\\dfrac{0,7}{3}$) and ($\\dfrac{1,5}{3}$) solve 2x+3y=7.\n\n(ii) **False:** only equations with zero constant term (in standard form ax+by+c=0, c=0) necessarily pass through (0,0); 2x+3y=7 does not.\n\n(iii) **False:** for 2x+3y=7, (2,1) is an integer solution and hence rational.\n\n(iv) **True:** x=3 can be written x+0y−3=0, a linear equation in two variables.\n\n(v) **True:** We choose any x and solve y=$\\dfrac{7-2x}{3}$, giving infinitely many solutions.\n\n(vi) **False:** 2(1)+3(2)=8≠7."
             }
           },
           {
@@ -1905,7 +1905,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Form a pair of linear equations and find their common solutions graphically.\n\n10 students of Grade 9 took part in a Mathematics quiz. If the number of girls is 4 more than the number of boys, find the number of boys and girls who took part in the quiz.",
             "answer": {
               "answerKey": "3 boys and 7 girls.",
-              "schoolMethod": "Let b be boys and g be girls. Total students: b+g=10. “Four more girls than boys” gives g−b=4. Add the equations: 2g=14 ⇒ g=7; then b=3.\n\nFor a graph, write g=10−b and g=b+4. Plot the first through (0,10),(10,0), and the second through (0,4),(3,7). They intersect at **(b,g)=(3,7)**, giving 3 boys and 7 girls."
+              "schoolMethod": "Let b be boys and g be girls. Total students: b+g=10. “Four more girls than boys” gives g−b=4. We add the equations: 2g=14 ⇒ g=7; then b=3.\n\nFor a graph, write g=10−b and g=b+4. We plot the first through (0,10),(10,0), and the second through (0,4),(3,7). They intersect at **(b,g)=(3,7)**, giving 3 boys and 7 girls."
             }
           },
           {
@@ -1925,7 +1925,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Which of the following pairs of linear equations have solutions? If they have solutions, find them graphically.\n\n(i) x + y = 5, 2x + 2y = 10\n\n(ii) x − y = 8, 3x − 3y = 16\n\n(iii) 2x + y − 6 = 0, 4x − 2y − 4 = 0\n\n(iv) 2x − 2y − 2 = 0, 4x − 4y − 5 = 0",
             "answer": {
               "answerKey": "(i) Coincident, infinitely many solutions; (ii) no solution; (iii) (2,2); (iv) no solution.",
-              "schoolMethod": "(i) Dividing the second equation by 2 gives x+y=5, the first equation itself. The graphs coincide, so every point on x+y=5 is a common solution.\n\n(ii) The equations reduce to x−y=8 and x−y=$\\dfrac{16}{3}$. These are distinct parallel lines; there is **no solution**.\n\n(iii) 2x+y=6 and 4x−2y=4. Doubling the first gives 4x+2y=12. Add the second: 8x=16 ⇒ x=2; then y=2. The graphs intersect at **(2,2)**.\n\n(iv) The first reduces to x−y=1 and the second to x−y=$\\dfrac{5}{4}$. The lines are parallel and distinct, so there is no solution."
+              "schoolMethod": "(i) Dividing the second equation by 2 gives x+y=5, the first equation itself. The graphs coincide, so every point on x+y=5 is a common solution.\n\n(ii) The equations reduce to x−y=8 and x−y=$\\dfrac{16}{3}$. These are distinct parallel lines; there is **no solution**.\n\n(iii) 2x+y=6 and 4x−2y=4. Doubling the first gives 4x+2y=12. We add the second: 8x=16 ⇒ x=2; then y=2. The graphs intersect at **(2,2)**.\n\n(iv) The first reduces to x−y=1 and the second to x−y=$\\dfrac{5}{4}$. The lines are parallel and distinct, so there is no solution."
             }
           },
           {
@@ -1935,7 +1935,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Half the perimeter of a rectangular garden, whose length is 4 m more than its width, is 36 m. Find the dimensions of the garden.",
             "answer": {
               "answerKey": "Length 20 m; width 16 m.",
-              "schoolMethod": "Let width=w m, length=l m. Half the perimeter is l+w=36, and l=w+4. Substitute: (w+4)+w=36 ⇒ 2w=32 ⇒ w=16 m. Then l=20 m. Check: l+w=36 and l−w=4."
+              "schoolMethod": "Let width=w m, length=l m. Half the perimeter is l+w=36, and l=w+4. Substitute: (w+4)+w=36 ⇒ 2w=32 ⇒ w=16 m. Then l=20 m. We check: l+w=36 and l−w=4."
             }
           },
           {
@@ -1945,7 +1945,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Given the linear equation 2x + 3y − 8 = 0, write another linear equation in two variables so that the graphs of the pair formed represent (i) intersecting lines (ii) parallel lines (iii) coincident lines.",
             "answer": {
               "answerKey": "Examples: (i) x+y−1=0; (ii) 4x+6y−10=0; (iii) 4x+6y−16=0.",
-              "schoolMethod": "(i) **Intersecting:** choose x+y−1=0. Its x:y coefficient ratio 1:1 differs from 2:3, so there is one intersection.\n\n(ii) **Parallel, distinct:** choose 4x+6y−10=0. The x and y coefficients are twice those of the original, but the constant −10 is not twice −8 (which would be −16). So the lines are parallel but not coincident.\n\n(iii) **Coincident:** multiply the whole original equation by 2, obtaining **4x+6y−16=0**. Both equations represent the same line."
+              "schoolMethod": "(i) **Intersecting:** We choose x+y−1=0. Its x:y coefficient ratio 1:1 differs from 2:3, so there is one intersection.\n\n(ii) **Parallel, distinct:** We choose 4x+6y−10=0. The x and y coefficients are twice those of the original, but the constant −10 is not twice −8 (which would be −16). So the lines are parallel but not coincident.\n\n(iii) **Coincident:** multiply the whole original equation by 2, obtaining **4x+6y−16=0**. Both equations represent the same line."
             }
           },
           {
@@ -1955,7 +1955,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Here is a problem that was posed by Mahāvīrāchārya in Gaṇita sāra saṅgraha (c. 850 CE).\n\nThe price of 9 citrons and 7 fragrant wood-apples taken together is 107; and the price of 7 citrons and 9 fragrant wood-apples taken together is 101.\n\nO mathematician, tell me quickly the price of each citron and of each fragrant wood-apple.\n\n(Hint: The given problem can be modelled as\n\n9x + 7y = 107\n7x + 9y = 101\n\nCan you figure out a way of solving these equations without directly using elimination or the substitution method? What is special in this pair of equations? The x and y coefficients are interchanged in the 2 equations.\n\nWhat will happen if we add the pair of equations? What will happen if we subtract the pair of equations? Can the resulting equations be solved to find the values of x and y?)",
             "answer": {
               "answerKey": "Citron ₹8; fragrant wood-apple ₹5.",
-              "schoolMethod": "Add the equations: 16x+16y=208 ⇒ x+y=13. Subtract the second equation from the first: 2x−2y=6 ⇒ x−y=3. Add these simpler equations: 2x=16, so x=8. Then y=13−8=5. Therefore one citron costs **₹8** and one fragrant wood-apple **₹5**."
+              "schoolMethod": "We add the equations: 16x+16y=208 ⇒ x+y=13. Subtract the second equation from the first: 2x−2y=6 ⇒ x−y=3. We add these simpler equations: 2x=16, so x=8. Then y=13−8=5. Therefore one citron costs **₹8** and one fragrant wood-apple **₹5**."
             }
           },
           {
@@ -1965,7 +1965,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "5 pencils and 7 pens together cost ₹50, whereas 7 pencils and 5 pens together cost ₹46. Find the cost of each pencil and pen.",
             "answer": {
               "answerKey": "Pencil ₹3; pen ₹5.",
-              "schoolMethod": "Let pencil cost be p and pen cost be q. 5p+7q=50 and 7p+5q=46. Adding: 12p+12q=96 ⇒ p+q=8. Subtracting the first from the second: 2p−2q=−4 ⇒ p−q=−2. Add the last two relations: 2p=6 ⇒ p=3; hence q=5. Check: 5(3)+7(5)=50 and 7(3)+5(5)=46."
+              "schoolMethod": "Let pencil cost be p and pen cost be q. 5p+7q=50 and 7p+5q=46. Adding: 12p+12q=96 ⇒ p+q=8. Subtracting the first from the second: 2p−2q=−4 ⇒ p−q=−2. We add the last two relations: 2p=6 ⇒ p=3; hence q=5. We check: 5(3)+7(5)=50 and 7(3)+5(5)=46."
             }
           },
           {
@@ -1975,7 +1975,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Find the height of the stool.\n\n![ch13-ex13-5-q9-stool](/figs/maths-0904ch13-ex13-5-q9-stool.png)",
             "answer": {
               "answerKey": "Stool height = 55 cm; cat height = 30 cm.",
-              "schoolMethod": "Let s be stool height and c be cat height. In the first picture, the cat is on the stool, so s+c=85. In the second, the cat is on the floor and the stool seat is 25 cm above its head, so s−c=25. Add the equations: 2s=110 ⇒ **s=55 cm**. Then c=85−55=30 cm. The stool is 55 cm high."
+              "schoolMethod": "Let s be stool height and c be cat height. In the first picture, the cat is on the stool, so s+c=85. In the second, the cat is on the floor and the stool seat is 25 cm above its head, so s−c=25. We add the equations: 2s=110 ⇒ **s=55 cm**. Then c=85−55=30 cm. The stool is 55 cm high."
             }
           }
         ]
@@ -2001,7 +2001,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "In countries like the USA, temperature is measured in Fahrenheit, whereas in countries like India, it is measured in Celsius. Here is a linear equation that converts Celsius to Fahrenheit:\n\nF = (9/5)C + 32\n\n(i) Draw the graph of the linear equation above using Celsius on the x-axis and Fahrenheit on the y-axis.\n\n(ii) If the temperature is 30 °C, what is the temperature in Fahrenheit?\n\n(iii) If the temperature is 95 °F, what is the temperature in Celsius?\n\n(iv) If the temperature is 0 °C, what is the temperature in Fahrenheit and if the temperature is 0 °F, what is the temperature in Celsius?\n\n(v) Is there a temperature which is numerically the same in both Fahrenheit and Celsius? If yes, find it.",
             "answer": {
               "answerKey": "(i) Plot e.g. (0,32),(100,212), join them; (ii) 86°F; (iii) 35°C; (iv) 32°F and −$\\dfrac{160}{9}$°C ≈−17.8°C; (v) −40°.",
-              "schoolMethod": "(i) The graph is a straight line. Useful points are: C=0 gives F=32; C=100 gives F=($\\dfrac{9}{5}$)(100)+32=212; C=−40 gives F=−40. Plot points (0,32), (100,212), and join them with a straight line.\n\n(ii) F=($\\dfrac{9}{5}$)(30)+32=54+32=**86°F**.\n\n(iii) 95=($\\dfrac{9}{5}$)C+32 ⇒ 63=($\\dfrac{9}{5}$)C ⇒ C=63×$\\dfrac{5}{9}$=**35°C**.\n\n(iv) At C=0, F=32°F. At F=0, 0=($\\dfrac{9}{5}$)C+32 ⇒ C=−$\\dfrac{160}{9}$≈**−17.78°C**.\n\n(v) Set F=C: C=($\\dfrac{9}{5}$)C+32 ⇒ −($\\dfrac{4}{5}$)C=32 ⇒ C=−40. Thus **−40°C=−40°F**."
+              "schoolMethod": "(i) The graph is a straight line. Useful points are: C=0 gives F=32; C=100 gives F=($\\dfrac{9}{5}$)(100)+32=212; C=−40 gives F=−40. We plot points (0,32), (100,212), and join them with a straight line.\n\n(ii) F=($\\dfrac{9}{5}$)(30)+32=54+32=**86°F**.\n\n(iii) 95=($\\dfrac{9}{5}$)C+32 ⇒ 63=($\\dfrac{9}{5}$)C ⇒ C=63×$\\dfrac{5}{9}$=**35°C**.\n\n(iv) At C=0, F=32°F. At F=0, 0=($\\dfrac{9}{5}$)C+32 ⇒ C=−$\\dfrac{160}{9}$≈**−17.78°C**.\n\n(v) We set F=C: C=($\\dfrac{9}{5}$)C+32 ⇒ −($\\dfrac{4}{5}$)C=32 ⇒ C=−40. Thus **−40°C=−40°F**."
             }
           },
           {
@@ -2011,7 +2011,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Solve the following system of equations graphically:\n2x + y = 6, 2x − y − 2 = 0.",
             "answer": {
               "answerKey": "The lines intersect at (2,2).",
-              "schoolMethod": "Rewrite the equations as y=6−2x and y=2x−2. For the first line, plot (0,6) and (3,0). For the second, plot (0,−2) and (1,0). Draw both straight lines; their intersection satisfies both equations. Algebraically checking the intersection: add 2x+y=6 and 2x−y=2 to get 4x=8, so x=2; then y=2. The graphical solution is **(2,2)**."
+              "schoolMethod": "We rewrite the equations as y=6−2x and y=2x−2. For the first line, plot (0,6) and (3,0). For the second, plot (0,−2) and (1,0). We draw both straight lines; their intersection satisfies both equations. Algebraically checking the intersection: We add 2x+y=6 and 2x−y=2 to get 4x=8, so x=2; then y=2. The graphical solution is **(2,2)**."
             }
           },
           {
@@ -2041,7 +2041,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A person is choosing between two mobile plans.\n\nPlan A: ₹50 monthly fee + ₹0.20 per minute of call time.\n\nPlan B: ₹30 monthly fee + ₹0.30 per minute of call time.\n\nFor how many minutes of calling per month is Plan A cheaper than Plan B? For how many minutes is Plan B cheaper? Also find the number of minutes at which both plans cost the same.",
             "answer": {
               "answerKey": "A is cheaper for more than 200 minutes; B for fewer than 200; equal at 200 minutes.",
-              "schoolMethod": "For m call minutes, A(m)=50+0.20m and B(m)=30+0.30m. Set equal: 50+0.20m=30+0.30m ⇒ 20=0.10m ⇒ m=200. At 200 min both cost ₹90. If m<200, Plan B is cheaper because it has the lower fixed fee; if m>200, Plan A is cheaper because its per-minute charge is lower."
+              "schoolMethod": "For m call minutes, A(m)=50+0.20m and B(m)=30+0.30m. We set equal: 50+0.20m=30+0.30m ⇒ 20=0.10m ⇒ m=200. At 200 min both cost ₹90. If m<200, Plan B is cheaper because it has the lower fixed fee; if m>200, Plan A is cheaper because its per-minute charge is lower."
             }
           },
           {
@@ -2071,7 +2071,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Find the values of a and b for which the following system of equations has infinitely many solutions:\n(a + b)x − 2by = 5a + 2b + 1; 3x − y = 14.",
             "answer": {
               "answerKey": "a=5 and b=1.",
-              "schoolMethod": "For coincident lines, all three ratios must agree. Write the first as (a+b)x−2by−(5a+2b+1)=0 and the second as 3x−y−14=0. The coefficient ratio requires $\\dfrac{a+b}{3}$=$\\dfrac{-2b}{-1}$=2b. Hence a+b=6b, so a=5b. The constant ratio gives $\\dfrac{5a+2b+1}{14}$=2b. Substitute a=5b: (25b+2b+1)=28b ⇒ b=1; thus a=5. These values make the first equation 6x−2y=28, twice the second equation."
+              "schoolMethod": "For coincident lines, all three ratios must agree. We write the first as (a+b)x−2by−(5a+2b+1)=0 and the second as 3x−y−14=0. The coefficient ratio requires $\\dfrac{a+b}{3}$=$\\dfrac{-2b}{-1}$=2b. Hence a+b=6b, so a=5b. The constant ratio gives $\\dfrac{5a+2b+1}{14}$=2b. Substitute a=5b: (25b+2b+1)=28b ⇒ b=1; thus a=5. These values make the first equation 6x−2y=28, twice the second equation."
             }
           },
           {
@@ -2081,7 +2081,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Find the value of ‘k’ for which the following system of equations represents a pair of coincident lines:\nx + 2y = 3; (k − 1)x + (k + 1)y = k + 3.",
             "answer": {
               "answerKey": "k=3.",
-              "schoolMethod": "Write the first as x+2y−3=0 and the second as (k−1)x+(k+1)y−(k+3)=0. For coincident lines, the second coefficient triple must be a scalar multiple λ of (1,2,−3). Thus k−1=λ and k+1=2λ. Subtracting gives 2=k−1, so k=3 and λ=2. Check the constant: −(k+3)=−6=2(−3), so all three coefficients are proportional. Therefore **k=3**."
+              "schoolMethod": "We write the first as x+2y−3=0 and the second as (k−1)x+(k+1)y−(k+3)=0. For coincident lines, the second coefficient triple must be a scalar multiple λ of (1,2,−3). Thus k−1=λ and k+1=2λ. Subtracting gives 2=k−1, so k=3 and λ=2. We check the constant: −(k+3)=−6=2(−3), so all three coefficients are proportional. Therefore **k=3**."
             }
           },
           {
@@ -2091,7 +2091,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "(i) Robot 1 starts from the origin and traces a path by repeatedly moving 3 units to the right and then 4 units upward. Robot 2 starts from the point (10, 0) and repeatedly moves 1 unit to the right and then 2 units upward. Will the paths traced by these two robots intersect and if so, where?\n\n(ii) Robot 1 starts from (3, 0) and traces a path by repeatedly moving 5 units to the right and then 5 units upward. Robot 2 starts from the point (7, 0) and repeatedly moves 5 units to the right and then 3 units downwards. Will the paths traced by these two robots intersect and if so, where?",
             "answer": {
               "answerKey": "(i) Yes. The isolated intersections are (24, 28) and (33, 44); the paths also overlap along the segments from (26, 32) to (27, 32), from (27, 32) to (27, 34), from (28, 36) to (29, 36), from (30, 38) to (30, 40), and from (30, 40) to (31, 40). (ii) Yes. The first horizontal segments overlap from (7, 0) to (8, 0).",
-              "schoolMethod": "Trace the **actual horizontal and vertical segments**, including their endpoints; comparing only the robots’ overall directions would miss overlaps.\n\n**(i)** Robot 1 has horizontal segments at heights 0, 4, 8, …, with each segment 3 units long, and vertical segments 4 units long. Robot 2 has horizontal segments at heights 0, 2, 4, …, with each segment 1 unit long, and vertical segments 2 units long. Comparing segments at the same height or on the same vertical line gives these common parts:\n\n• Isolated intersection points: **(24, 28)** and **(33, 44)**.\n• Shared horizontal segment at height 32: **from (26, 32) to (27, 32)**.\n• Shared vertical segment at x = 27: **from (27, 32) to (27, 34)**.\n• Shared horizontal segment at height 36: **from (28, 36) to (29, 36)**.\n• Shared vertical segment at x = 30: **from (30, 38) to (30, 40)**.\n• Shared horizontal segment at height 40: **from (30, 40) to (31, 40)**.\n\nThus, the paths share portions of five segments, besides the two isolated points. The endpoints listed for adjacent shared portions are intentionally repeated because the overlap changes from horizontal to vertical there.\n\n**(ii)** Robot 1’s first horizontal segment runs from (3, 0) to (8, 0). Robot 2’s first horizontal segment runs from (7, 0) to (12, 0). Hence they share the segment **from (7, 0) to (8, 0)**. After leaving the x-axis, Robot 1 moves upward while Robot 2 moves downward, so their later vertical/horizontal steps do not meet."
+              "schoolMethod": "We trace the **actual horizontal and vertical segments**, including their endpoints; comparing only the robots’ overall directions would miss overlaps.\n\n**(i)** Robot 1 has horizontal segments at heights 0, 4, 8, …, with each segment 3 units long, and vertical segments 4 units long. Robot 2 has horizontal segments at heights 0, 2, 4, …, with each segment 1 unit long, and vertical segments 2 units long. Comparing segments at the same height or on the same vertical line gives these common parts:\n\n• Isolated intersection points: **(24, 28)** and **(33, 44)**.\n• Shared horizontal segment at height 32: **from (26, 32) to (27, 32)**.\n• Shared vertical segment at x = 27: **from (27, 32) to (27, 34)**.\n• Shared horizontal segment at height 36: **from (28, 36) to (29, 36)**.\n• Shared vertical segment at x = 30: **from (30, 38) to (30, 40)**.\n• Shared horizontal segment at height 40: **from (30, 40) to (31, 40)**.\n\nThus, the paths share portions of five segments, besides the two isolated points. The endpoints listed for adjacent shared portions are intentionally repeated because the overlap changes from horizontal to vertical there.\n\n**(ii)** Robot 1’s first horizontal segment runs from (3, 0) to (8, 0). Robot 2’s first horizontal segment runs from (7, 0) to (12, 0). Hence they share the segment **from (7, 0) to (8, 0)**. After leaving the x-axis, Robot 1 moves upward while Robot 2 moves downward, so their later vertical/horizontal steps do not meet."
             }
           },
           {
@@ -2111,7 +2111,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The sum of the digits of a two-digit number is 15. The number obtained by interchanging the digits exceeds the given number by 9. Find the number.",
             "answer": {
               "answerKey": "78.",
-              "schoolMethod": "Let the tens digit be x and units digit be y. x+y=15. The number is 10x+y; the reversed number is 10y+x. The difference condition is (10y+x)−(10x+y)=9 ⇒ 9(y−x)=9 ⇒ y−x=1. Add the two equations: x+y=15 and y−x=1 give 2y=16 ⇒ y=8, x=7. The number is **78**; reversed 87 is 9 greater."
+              "schoolMethod": "Let the tens digit be x and units digit be y. x+y=15. The number is 10x+y; the reversed number is 10y+x. The difference condition is (10y+x)−(10x+y)=9 ⇒ 9(y−x)=9 ⇒ y−x=1. We add the two equations: x+y=15 and y−x=1 give 2y=16 ⇒ y=8, x=7. The number is **78**; reversed 87 is 9 greater."
             }
           },
           {
@@ -2158,7 +2158,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Are (1, $\\frac{9}{2}$), (0, 6), (4, 1) and ($\\frac{1}{2}$, $\\frac{21}{4}$) solutions of the equation 3x + 2y = 12?\n\nCan you find any other solution? How many solutions can you find?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 88 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 88 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2169,7 +2169,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Four friends — Ranju, Meena, Farhan, and Toshi — are solving problems.\n\nRanju: I noticed something! If c = 0 in the standard form of a line ax + by + c = 0, then the line must pass through the origin. Look, if I substitute x = 0 and y = 0, in equation ax + by = 0, the equation is satisfied. So, the origin lies on the line! We can also say that the line passes through the origin.\n\nFarhan: Let us try for the equation 2x + 3y = 0. Here a = 2, b = 3 but c = 0. If we substitute x = 0, then we get 3y = 0 or y = 0. This means (0, 0) lies on the line. So yes, this line passes through the origin.\n\nToshi: Suppose our equation has b = c = 0, say, 5x = 0. This becomes x = 0 which is the equation of the y-axis. And the y-axis passes through the origin.\n\nMeena: And if we take a = c = 0, say, 7y = 0, that means y = 0, which is the equation of the x-axis that also passes through the origin.\n\nSo, they conclude: Whenever c = 0, the line ax + by + c = 0 will always pass through the origin, irrespective of the values of a or b. Do you agree with them?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 92 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 92 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2180,7 +2180,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "1. Consider the point on the line AB whose x-coordinate is 8. What is the y-coordinate of this point? Express this as an ordered pair.\n\n2. What is the x-coordinate of the point on the line AB whose y-coordinate is 6? Express this as an ordered pair.",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 97 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 97 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2191,7 +2191,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Can you use the points A, B and C to verify that the slope of this line is indeed −5?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 99 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 99 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2202,7 +2202,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The cost of one paratha and 2 bowls of dahi is ₹90. Also, the cost of 2 parathas and 7 bowls of dahi is ₹260. Can you figure out the cost of one paratha and one bowl of dahi and explain your reasoning?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 104 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 104 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2213,7 +2213,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Solve the puzzle and discuss your strategy with your friends. Can you determine the value represented by each shape?\n\n![Shape puzzle grid](/figs/maths-0904ch13-reflect-p106-shapes.png)",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 106 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 106 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2224,7 +2224,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "What if we had expressed y in terms of x, i.e., take Equation (2) and write y = $\\frac{1}{2}$(3 − x). Would we still get the same solution?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 107 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 107 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2235,7 +2235,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "The method used in solving this problem is called the Elimination Method because we eliminate one of the variables to obtain a linear equation in the other variable. In the example above, we eliminated y. Try the same problem by eliminating x instead of y. Also try to solve the two equations using the Substitution Method. Assess the pros and cons of each method.",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 109 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 109 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2246,7 +2246,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Does a pair of linear equations always have a unique solution? Can you analyse this using the Elimination Method? While subtracting the equations to eliminate a particular variable, if the other variable remains, then clearly there is a unique solution. But what if the second variable gets eliminated too while eliminating the first variable? Can you think of a situation where this happens?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 109 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 109 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2257,7 +2257,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "How many solutions are there to the equations\n\n10x − 5y = 20 and 4x − 2y = 8?\n\nGive 3 more examples of pairs of equations that lead to 0 = 0 after subtraction, and therefore have infinitely many solutions. Can you find a simple rule to check when this happens?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 110 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 110 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2268,7 +2268,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "What if one of a₂, b₂, c₂ is zero?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 110 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 110 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2279,7 +2279,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Does a pair of linear equations always have either a unique solution or infinitely many solutions?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 110 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 110 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2290,7 +2290,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Give 3 more examples of pairs of equations that have no solution. Can you find a simple rule to check when this will happen?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 111 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 111 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2301,7 +2301,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Are the converses of the above statements true?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 112 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 112 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2312,7 +2312,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Can there be methods other than elimination and substitution to reduce a pair of linear equations in two variables to a linear equation in one variable? If so, describe them.",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 112 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 112 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2323,7 +2323,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "How do we find solutions from the graph? What can we say about the number of solutions when the two lines (i) intersect at a point, (ii) are parallel, (iii) are coincident?",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 113 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 113 of Ganita Manjari, Grade 9, Part II."
             }
           },
           {
@@ -2334,7 +2334,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Can you prove that two lines of equal slope are parallel?\n\n(Hint: Consider the equations of the two lines to be y = mx + d₁ and y = mx + d₂)",
             "answer": {
               "answerKey": "See the textbook discussion.",
-              "schoolMethod": "Refer to the Think and Reflect discussion on page 115 of Ganita Manjari, Grade 9, Part II."
+              "schoolMethod": "We refer to the Think and Reflect discussion on page 115 of Ganita Manjari, Grade 9, Part II."
             }
           }
         ]
@@ -2370,7 +2370,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "How many small cubes with side 20 cm can be packed tight in a cubical box with side 2 m?",
             "answer": {
               "answerKey": "1000 cubes.",
-              "schoolMethod": "Convert 2 m to 200 cm. Along each edge, $\\dfrac{200}{20}$=10 small cubes fit. Total =10×10×10=**1000 cubes**."
+              "schoolMethod": "We convert 2 m to 200 cm. Along each edge, $\\dfrac{200}{20}$=10 small cubes fit. Total =10×10×10=**1000 cubes**."
             }
           },
           {
@@ -2420,7 +2420,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "A cube of side 5 cm is painted on all its faces. If it is sliced into 1 cm³ cubes, how many of these 1 cm³ cubes have\n\n(i) exactly three faces painted?\n\n(ii) exactly two faces painted?\n\n(iii) exactly one face painted?\n\n(iv) no face painted?\n\n![ch14-ex14-1-q7-cube](/figs/maths-0904ch14-ex14-1-q7-cube.png)",
             "answer": {
               "answerKey": "(i) 8; (ii) 36; (iii) 54; (iv) 27.",
-              "schoolMethod": "(i) Exactly three painted faces occur only at the 8 corners: **8**.\n\n(ii) On each of 12 edges, the non-corner cubes have two painted faces. There are 5−2=3 such cubes per edge, so 12×3=**36**.\n\n(iii) On each of 6 faces, the interior face cubes (not edges) have one painted face. Each face has (5−2)²=9, so 6×9=**54**.\n\n(iv) Fully internal cubes have no painted faces. Count=(5−2)³=3³=**27**. Check: 8+36+54+27=125=5³."
+              "schoolMethod": "(i) Exactly three painted faces occur only at the 8 corners: **8**.\n\n(ii) On each of 12 edges, the non-corner cubes have two painted faces. There are 5−2=3 such cubes per edge, so 12×3=**36**.\n\n(iii) On each of 6 faces, the interior face cubes (not edges) have one painted face. Each face has (5−2)²=9, so 6×9=**54**.\n\n(iv) Fully internal cubes have no painted faces. We count=(5−2)³=3³=**27**. We check: 8+36+54+27=125=5³."
             }
           },
           {
@@ -2572,7 +2572,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "What length of tarpaulin 3 m wide is required to make a conical tent of height 8 m and base radius 6 m? Assume that the extra length of material that is required for stitching margins and wastage in cutting is 20 cm.",
             "answer": {
               "answerKey": "Approximately 63.03 m.",
-              "schoolMethod": "Slant height l=√(8²+6²)=√100=10 m. The conical tent has no base sheet, so tarpaulin area=CSA=πrl=π×6×10=60π m². With a 3 m wide roll, required length before allowance=$\\dfrac{60π}{3}$=20π≈62.832 m. Add 0.20 m for stitching/waste: **20π+0.2≈63.03 m**."
+              "schoolMethod": "Slant height l=√(8²+6²)=√100=10 m. The conical tent has no base sheet, so tarpaulin area=CSA=πrl=π×6×10=60π m². With a 3 m wide roll, required length before allowance=$\\dfrac{60π}{3}$=20π≈62.832 m. We add 0.20 m for stitching/waste: **20π+0.2≈63.03 m**."
             }
           },
           {
@@ -2694,7 +2694,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Estimate how many scoops of ice cream can be obtained from a cuboidal container of dimensions 10 cm × 15 cm × 20 cm.\n\n![ch14-end-q1-icecream](/figs/maths-0904ch14-end-q1-icecream.png)",
             "answer": {
               "answerKey": "Approximately 45 average scoops, assuming each scoop is about a sphere of radius 2.5 cm.",
-              "schoolMethod": "Container volume=10×15×20=3000 cm³. Assume one average scoop is approximated by a sphere of radius 2.5 cm. Its volume is ($\\dfrac{4}{3}$)π(2.5)³≈65.45 cm³. The theoretical quotient is $\\dfrac{3000}{65.45}$≈45.8, so the container contains about **45 full scoops** under this assumption. Scoop size and trapped air change the real count, so the result is an estimate, not an exact universal number."
+              "schoolMethod": "Container volume=10×15×20=3000 cm³. We assume one average scoop is approximated by a sphere of radius 2.5 cm. Its volume is ($\\dfrac{4}{3}$)π(2.5)³≈65.45 cm³. The theoretical quotient is $\\dfrac{3000}{65.45}$≈45.8, so the container contains about **45 full scoops** under this assumption. Scoop size and trapped air change the real count, so the result is an estimate, not an exact universal number."
             }
           },
           {
@@ -2714,7 +2714,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Solve the following:\n\n(i) Could a person drink enough water in a lifetime to fill an entire room the size of your classroom?\n\n(ii) Estimate the number of bricks used to build the walls of your classroom.\n\n![ch14-end-q3-bricks](/figs/maths-0904ch14-end-q3-bricks.png)",
             "answer": {
               "answerKey": "(i) Usually no; an 80-year drinking-water estimate is about 58 m³ versus a classroom around 150–200 m³. (ii) About 4000 bricks under the sample dimensions below.",
-              "schoolMethod": "(i) Assume a person drinks 2 L/day for 80 years. Water consumed≈2×365×80=58,400 L=**58.4 m³**. A sample classroom of 8 m×7 m×3 m has volume 168 m³, nearly three times as much. Under these assumptions the answer is **no**. A smaller room or higher daily water amount changes the comparison.\n\n(ii) Assume the classroom is 8 m×7 m with 3 m wall height. Gross wall area=perimeter×height=2(8+7)×3=90 m². Subtract about 8 m² for doors and windows, leaving 82 m². Approximate exposed face area of one brick is 0.20×0.10=0.020 m², so estimated brick count=$\\dfrac{82}{0.020}$=**4100 bricks**, before allowing for mortar and breakage. This is a transparent estimate, not a site measurement."
+              "schoolMethod": "(i) We assume a person drinks 2 L/day for 80 years. Water consumed≈2×365×80=58,400 L=**58.4 m³**. A sample classroom of 8 m×7 m×3 m has volume 168 m³, nearly three times as much. Under these assumptions the answer is **no**. A smaller room or higher daily water amount changes the comparison.\n\n(ii) We assume the classroom is 8 m×7 m with 3 m wall height. Gross wall area=perimeter×height=2(8+7)×3=90 m². Subtract about 8 m² for doors and windows, leaving 82 m². Approximate exposed face area of one brick is 0.20×0.10=0.020 m², so estimated brick count=$\\dfrac{82}{0.020}$=**4100 bricks**, before allowing for mortar and breakage. This is a transparent estimate, not a site measurement."
             }
           },
           {
@@ -2724,7 +2724,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "You are given two options: (A) one chocolate cube of side 50 mm, (B) hundred chocolate cubes of side 10 mm. Which option gives you more chocolate?",
             "answer": {
               "answerKey": "A gives 125 cm³; B gives 100 cm³, so A gives more.",
-              "schoolMethod": "Convert units: 50 mm=5 cm, so A volume=5³=**125 cm³**. Each cube in B has side 10 mm=1 cm and volume 1 cm³; 100 cubes have total volume **100 cm³**. Option A gives 25 cm³ more chocolate."
+              "schoolMethod": "We convert units: 50 mm=5 cm, so A volume=5³=**125 cm³**. Each cube in B has side 10 mm=1 cm and volume 1 cm³; 100 cubes have total volume **100 cm³**. Option A gives 25 cm³ more chocolate."
             }
           },
           {
@@ -2844,7 +2844,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Find the volume of ink in a new ball point pen. Take the necessary measurements and make approximations, as needed.",
             "answer": {
               "answerKey": "About 0.3 cm³ in the illustrative pen model.",
-              "schoolMethod": "Use a sample measurement: assume the ink reservoir is approximately cylindrical, with internal radius 1 mm=0.1 cm and ink length 9 cm. Cylinder volume=π(0.1)²(9)=0.09π≈0.283 cm³. Allow roughly 0.02 cm³ for the small ink-filled tip, giving an estimate of about **0.30 cm³** (0.30 mL). For a particular pen, measure its actual inner radius and ink length; changing either dimension changes the result."
+              "schoolMethod": "We use a sample measurement: We assume the ink reservoir is approximately cylindrical, with internal radius 1 mm=0.1 cm and ink length 9 cm. Cylinder volume=π(0.1)²(9)=0.09π≈0.283 cm³. Allow roughly 0.02 cm³ for the small ink-filled tip, giving an estimate of about **0.30 cm³** (0.30 mL). For a particular pen, measure its actual inner radius and ink length; changing either dimension changes the result."
             }
           },
           {
@@ -2854,7 +2854,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Solve:\n\n(i) A ball of chapati dough of radius 6 cm is prepared. Estimate how many chapatis can be made from it?\n\n*(ii) Cut a coconut/muskmelon in half and find out the approximate volume of edible coconut flesh/fruit by taking the necessary measurements.\n\n![ch14-end-q17-dough](/figs/maths-0904ch14-end-q17-dough.png)",
             "answer": {
               "answerKey": "(i) About 10 chapatis under the sample assumptions. (ii) For a 5 cm-radius fruit, about 180 cm³ edible flesh under a 70% yield assumption.",
-              "schoolMethod": "(i) Dough volume=($\\dfrac{4}{3}$)π(6³)=288π≈904.8 cm³. Assume one chapati uses a dough volume equivalent to a disk of radius 12 cm and average thickness 0.2 cm: V≈π(12²)(0.2)=28.8π≈90.5 cm³. Number≈$\\dfrac{904.8}{90.5}$≈10. Thus about **10 chapatis** can be made; actual count depends on size and thickness.\n\n(ii) As an example, approximate a half-muskmelon by a hemisphere of radius 5 cm. Half-sphere volume=($\\dfrac{2}{3}$)π(5³)≈261.8 cm³. If about 70% is edible flesh after excluding rind/seeds, edible volume≈0.70×261.8≈**183 cm³**. Measure the actual fruit and substitute its radius; this is only a worked estimate."
+              "schoolMethod": "(i) Dough volume=($\\dfrac{4}{3}$)π(6³)=288π≈904.8 cm³. We assume one chapati uses a dough volume equivalent to a disk of radius 12 cm and average thickness 0.2 cm: V≈π(12²)(0.2)=28.8π≈90.5 cm³. Number≈$\\dfrac{904.8}{90.5}$≈10. Thus about **10 chapatis** can be made; actual count depends on size and thickness.\n\n(ii) As an example, approximate a half-muskmelon by a hemisphere of radius 5 cm. Half-sphere volume=($\\dfrac{2}{3}$)π(5³)≈261.8 cm³. If about 70% is edible flesh after excluding rind/seeds, edible volume≈0.70×261.8≈**183 cm³**. We measure the actual fruit and substitute its radius; this is only a worked estimate."
             }
           },
           {
@@ -2904,7 +2904,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
             "text": "Project: Find the volume of your house making necessary approximations. Present how you solved it.",
             "answer": {
               "answerKey": "Illustrative total interior volume ≈189 m³.",
-              "schoolMethod": "Divide the house into simple cuboids and add their volumes. One sample layout, with 3 m ceiling height, is:\n\n| Room | Assumed dimensions (m) | Volume |\n|---|---|---:|\n| Living room | 5×4×3 | 60 m³ |\n| Bedroom 1 | 4×3×3 | 36 m³ |\n| Bedroom 2 | 4×3×3 | 36 m³ |\n| Kitchen | 3×3×3 | 27 m³ |\n| Bathroom | 2×2×3 | 12 m³ |\n| Corridor | 4×1.5×3 | 18 m³ |\n\nTotal=60+36+36+27+12+18=**189 m³**. This is an illustrative solution: replace the assumed dimensions with measurements of the actual house, and include or exclude wall thickness consistently."
+              "schoolMethod": "Divide the house into simple cuboids and add their volumes. One sample layout, with 3 m ceiling height, is:\n\n| Room | Assumed dimensions (m) | Volume |\n|---|---|---:|\n| Living room | 5×4×3 | 60 m³ |\n| Bedroom 1 | 4×3×3 | 36 m³ |\n| Bedroom 2 | 4×3×3 | 36 m³ |\n| Kitchen | 3×3×3 | 27 m³ |\n| Bathroom | 2×2×3 | 12 m³ |\n| Corridor | 4×1.5×3 | 18 m³ |\n\nTotal=60+36+36+27+12+18=**189 m³**. This is an illustrative solution: We replace the assumed dimensions with measurements of the actual house, and include or exclude wall thickness consistently."
             }
           }
         ]
