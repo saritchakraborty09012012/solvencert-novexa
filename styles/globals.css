@@ -546,6 +546,9 @@ textarea:focus-visible {
   box-shadow: 0 0 0 4px rgba(43, 78, 166, 0.12);
 }
 .input-field::placeholder { color: var(--text-muted); }
+/* Empty date inputs render blank on some mobile browsers — hide the native
+   placeholder segments so our own "dd-mm-yyyy" overlay shows instead. */
+input[type='date'].dob-empty::-webkit-datetime-edit { color: transparent; }
 .dark .input-field {
   background: linear-gradient(180deg, #1d1c22 0%, #18171d 100%);
   border-color: rgba(255,255,255,0.12);

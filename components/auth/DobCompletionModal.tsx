@@ -98,17 +98,22 @@ export default function DobCompletionModal() {
             Please enter your DOB to complete sign up — Google doesn't share it, so we need it from you.
           </p>
 
-          <input
-            type="date"
-            value={dob}
-            onChange={(e) => { setDob(e.target.value); setError(''); setDobInvalid(false); }}
-            max={today}
-            min="1900-01-01"
-            autoComplete="bday"
-            aria-label="Date of birth"
-            aria-invalid={dobInvalid || undefined}
-            className={`input-field w-full text-center${dobInvalid ? ' field-invalid' : ''}`}
-          />
+          <div className="relative">
+            <input
+              type="date"
+              value={dob}
+              onChange={(e) => { setDob(e.target.value); setError(''); setDobInvalid(false); }}
+              max={today}
+              min="1900-01-01"
+              autoComplete="bday"
+              aria-label="Date of birth"
+              aria-invalid={dobInvalid || undefined}
+              className={`input-field w-full text-center${!dob ? ' dob-empty' : ''}${dobInvalid ? ' field-invalid' : ''}`}
+            />
+            {!dob && (
+              <span aria-hidden className="pointer-events-none absolute inset-0 flex items-center justify-center text-[var(--text-muted)]">dd-mm-yyyy</span>
+            )}
+          </div>
           {error && (
             <p className={`text-xs mt-2 ${dobInvalid ? 'font-semibold text-red-500' : 'text-red-500'}`}>{error}</p>
           )}
