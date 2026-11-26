@@ -275,34 +275,38 @@ html[data-ui="ui3"] .ganita-notebook .sol-note {
 /* subtle divider between multi part answers */
 .ganita-notebook .part-divider { height: 1px; background: var(--dash); margin: 14px 0; }
 
-/* tables inside solutions */
+/* Tables inside WORKED SOLUTIONS — deliberately NOT book-styled: neutral
+   notebook colours + UI font, so they read as our own worked data rather than
+   a scan of the printed book. Book-look colours apply to question tables only. */
 .ganita-notebook .qbody table {
-  width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-family: 'Kalam', cursive;
+  width: 100%; border-collapse: collapse; margin: 10px 0 14px;
+  font-family: var(--font-dm-sans), system-ui, sans-serif; font-size: 0.9rem;
 }
-.ganita-notebook .qbody th, .ganita-notebook .qbody td {
-  border: 1px solid var(--table-border); padding: 7px 10px; text-align: center; vertical-align: middle;
+.ganita-notebook .qbody table th, .ganita-notebook .qbody table td {
+  border: 1px solid var(--border); padding: 7px 10px; text-align: center; vertical-align: middle;
+  background: var(--surface-1); color: var(--text-primary); font-weight: 400;
 }
-.ganita-notebook .qbody th { font-weight: 700; background: var(--table-head); }
-.ganita-notebook .qbody td:first-child, .ganita-notebook .qbody th:first-child { text-align: left; }
+.ganita-notebook .qbody table th {
+  font-weight: 600; background: var(--surface-2); color: var(--text-primary);
+}
+.ganita-notebook .qbody table td:first-child, .ganita-notebook .qbody table th:first-child { text-align: left; }
 
 .ganita-notebook .question-table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; }
 .ganita-notebook .question-table th, .ganita-notebook .question-table td { border: 1px solid var(--table-border); padding: 8px 10px; }
 .ganita-notebook .question-table th { background: var(--table-head2); font-weight: 700; }
 
-/* ── Book-look data tables ─────────────────────────────────────────────────
+/* ── Book-look data tables (QUESTION text only) ───────────────────────────
    Colours sampled directly from the printed Ganita Manjari tables
    (Part II, Ex 10.4): tan header + tan label column #DAC38D, cream body
    #EEE3CC, hairline rules and text in near-black #231F20, serif type.
-   Applied to every table in the notebook (question text and solution) in
-   every theme, so a table always matches the book page it came from. */
-.ganita-notebook .qtext table,
-.ganita-notebook .qbody table {
+   Only question tables get this look — worked-solution tables above stay
+   neutral so they never masquerade as book data. */
+.ganita-notebook .qtext table {
   background: #eee3cc;
   font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
   font-size: 12.5px;
 }
-.ganita-notebook .qtext table th, .ganita-notebook .qtext table td,
-.ganita-notebook .qbody table th, .ganita-notebook .qbody table td {
+.ganita-notebook .qtext table th, .ganita-notebook .qtext table td {
   border: 1px solid #231f20;
   background: #eee3cc;
   color: #231f20;
@@ -313,9 +317,7 @@ html[data-ui="ui3"] .ganita-notebook .sol-note {
 }
 /* header row + first (label) column take the book's tan fill */
 .ganita-notebook .qtext table th,
-.ganita-notebook .qbody table th,
-.ganita-notebook .qtext table td:first-child,
-.ganita-notebook .qbody table td:first-child {
+.ganita-notebook .qtext table td:first-child {
   background: #dac38d;
   font-weight: 700;
 }
