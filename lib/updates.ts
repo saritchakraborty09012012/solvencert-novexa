@@ -46,8 +46,8 @@ export interface UpdateEntry {
    */
   href?: string;
   hrefLabel?: string;
-  /** Mark beta features/books so the UI can show a Beta chip. */
-  beta?: boolean;
+  /** Mark Part II books so the UI can show a Part II tag. */
+  partTwo?: boolean;
 }
 
 export const UPDATE_TYPE_LABEL: Record<UpdateType, string> = {
@@ -307,10 +307,10 @@ export const UPDATES: UpdateEntry[] = [
     date: '2026-10-31',
     type: 'release',
     title: 'SST Part II is live',
-    summary: 'Social Science Part II solutions are now available in beta.',
+    summary: 'Social Science Part II solutions are now available.',
     href: '/class-9/sst/sst-part-2',
     hrefLabel: 'View Part II',
-    beta: true,
+    partTwo: true,
   },
   {
     id: 'sst-part-chooser',

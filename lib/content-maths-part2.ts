@@ -281,7 +281,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "How Quantities Combine: Understanding Data",
     "slug": "how-quantities-combine-understanding-data",
     "code": "0904ch10",
-    "beta": true,
+    "partTwo": true,
     "exercises": [
       {
         "id": "ex10.1",
@@ -809,7 +809,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "The World of Algorithms",
     "slug": "the-world-of-algorithms",
     "code": "0904ch11",
-    "beta": true,
+    "partTwo": true,
     "exercises": [
       {
         "id": "ex11.1",
@@ -1033,7 +1033,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "Quadrilaterals",
     "slug": "quadrilaterals",
     "code": "0904ch12",
-    "beta": true,
+    "partTwo": true,
     "exercises": [
       {
         "id": "ex12.1",
@@ -1688,7 +1688,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "Two Variables, One Line",
     "slug": "two-variables-one-line",
     "code": "0904ch13",
-    "beta": true,
+    "partTwo": true,
     "exercises": [
       {
         "id": "ex13.1",
@@ -2347,7 +2347,7 @@ export const MATHS_PART2_CHAPTERS: Chapter[] = [
     "title": "Math of Space: Surface Area and Volume",
     "slug": "math-of-space-surface-area-and-volume",
     "code": "0904ch14",
-    "beta": true,
+    "partTwo": true,
     "exercises": [
       {
         "id": "ex14.1",

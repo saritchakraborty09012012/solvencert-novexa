@@ -178,7 +178,7 @@ function getIndex(): IndexedEntry[] {
     }
   }
 
-  // Social Science — Understanding Society (Part II, beta)
+  // Social Science — Understanding Society (Part II)
   for (const ch of SST_PART2_CHAPTERS) {
     for (const ex of ch.exercises) {
       for (const q of ex.questions) {

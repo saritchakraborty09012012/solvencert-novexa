@@ -18,8 +18,8 @@ export interface Chapter {
   slug:     string;
   code:     string;
   description?: string;
-  /** This chapter is still being refined — show a "Beta" chip on its card. */
-  beta?:    boolean;
+  /** Part II chapter — show a "Part II" tag on its card. */
+  partTwo?: boolean;
   exercises: Exercise[];
 }
 
@@ -66,8 +66,8 @@ export interface Subject {
   color:    string;
   downloadUrl?: string;
   description?: string;
-  /** Book is still being refined — show a "Beta" badge wherever it is presented. */
-  beta?:    boolean;
+  /** Part II book — show a "Part II" tag wherever it is presented. */
+  partTwo?: boolean;
   chapters: Chapter[];
 }
 
@@ -3358,7 +3358,7 @@ export const CLASS_9_SUBJECTS: Subject[] = [
     code: '0904ss2', icon: '🌍', color: 'indigo',
     downloadUrl: '/ebooks/SSt-Part-II.pdf',
     description: 'Class 9 Social Science Part II — Understanding Society: India and Beyond (Oceans and Life … From Ideas to Startups). All 6 chapters with complete NCERT solutions. NCERT 2026 Revised.',
-    beta: true,
+    partTwo: true,
     chapters: SST_PART2_CHAPTERS,
   },
 

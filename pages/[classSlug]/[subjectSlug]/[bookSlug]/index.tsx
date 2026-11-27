@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { ChevronRight, BookOpen } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
-import BetaBadge from '@/components/features/BetaBadge';
+import PartTwoBadge from '@/components/features/PartTwoBadge';
 import { CLASS_9_SUBJECTS, getSubject } from '@/lib/content';
 import { cn } from '@/utils/helpers';
 
@@ -70,7 +70,7 @@ export default function BookIndexPage({ classSlug, subjectSlug, bookSlug }: Prop
               <h1 className="text-2xl font-display font-bold text-[var(--text-primary)]">Class 9 {subject.name}</h1>
               <p className="text-sm text-[var(--text-muted)] flex items-center gap-2 flex-wrap">
                 {subject.book} · {isComingSoon ? 'Coming soon' : `${subject.chapters.length} Chapters`}
-                {subject.beta && <BetaBadge />}
+                {subject.partTwo && <PartTwoBadge />}
               </p>
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function BookIndexPage({ classSlug, subjectSlug, bookSlug }: Prop
                   className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--surface-1)] transition-colors inline-flex items-center gap-2"
                 >
                   {sib.book}
-                  {sib.beta && <BetaBadge />}
+                  {sib.partTwo && <PartTwoBadge />}
                 </Link>
               ))}
             </div>
@@ -121,8 +121,8 @@ export default function BookIndexPage({ classSlug, subjectSlug, bookSlug }: Prop
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 min-w-0">
                     <p className="text-sm font-semibold text-[var(--text-primary)] truncate">{chapter.title}</p>
-                    {chapter.beta && (
-                      <span title="This chapter is still under testing and constant improvement" className="flex-shrink-0 px-1.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[8px] font-bold uppercase tracking-[0.12em]">Beta</span>
+                    {chapter.partTwo && (
+                      <span title="This chapter is from Part II of the textbook" className="flex-shrink-0 px-1.5 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/40 text-blue-600 dark:text-blue-300 text-[8px] font-bold uppercase tracking-[0.12em]">Part II</span>
                     )}
                   </div>
                   <p className="text-xs text-[var(--text-muted)]">

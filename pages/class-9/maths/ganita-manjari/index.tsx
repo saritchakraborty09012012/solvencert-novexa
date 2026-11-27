@@ -5,7 +5,7 @@ import Layout from '@/components/layout/Layout';
 import { MATHS_SOURCE_CHAPTERS } from '@/lib/content-maths-source';
 import { MATHS_PART2_CHAPTERS } from '@/lib/content-maths-part2';
 
-interface MergedChapter { number: number; code: string; slug: string; title: string; qCount: number; exCount: number; beta?: boolean; }
+interface MergedChapter { number: number; code: string; slug: string; title: string; qCount: number; exCount: number; partTwo?: boolean; }
 
 const PART1_CHAPTERS: MergedChapter[] = MATHS_SOURCE_CHAPTERS.map(ch => ({
   number: ch.number, code: ch.code, slug: ch.slug, title: ch.title, exCount: ch.exercises.length,
@@ -15,7 +15,7 @@ const PART1_CHAPTERS: MergedChapter[] = MATHS_SOURCE_CHAPTERS.map(ch => ({
 const PART2_CHAPTERS: MergedChapter[] = MATHS_PART2_CHAPTERS.map(ch => ({
   number: ch.number, code: ch.code, slug: ch.slug, title: ch.title, exCount: ch.exercises.length,
   qCount: ch.exercises.reduce((a, ex) => a + ex.questions.length, 0),
-  beta: ch.beta,
+  partTwo: true,
 }));
 
 const TOTAL_EX = PART1_CHAPTERS.reduce((a, c) => a + c.exCount, 0) + PART2_CHAPTERS.reduce((a, c) => a + c.exCount, 0);
@@ -44,8 +44,8 @@ function ChapterCard({ chapter }: { chapter: MergedChapter }) {
         <p className="text-[10px] text-[var(--text-muted)] uppercase tracking-wide">Chapter {chapter.number} · {chapter.exCount} exercises</p>
         <div className="flex items-center gap-2 min-w-0">
           <p className="text-sm font-semibold text-[var(--text-primary)] leading-snug truncate">{chapter.title}</p>
-          {chapter.beta && (
-            <span title="This chapter is still under testing and constant improvement" className="flex-shrink-0 px-1.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[8px] font-bold uppercase tracking-[0.12em]">Beta</span>
+          {chapter.partTwo && (
+            <span title="This chapter is from Part II of the textbook" className="flex-shrink-0 px-1.5 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/40 text-blue-600 dark:text-blue-300 text-[8px] font-bold uppercase tracking-[0.12em]">Part II</span>
           )}
         </div>
       </div>

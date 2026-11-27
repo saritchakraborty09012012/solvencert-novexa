@@ -14,8 +14,8 @@ export interface SstSection { id: string; title: string; questions: SstQuestion[
 export interface SstChapter {
   id: string; number: number; title: string; slug: string; code: string;
   description: string;
-  /** This chapter is still being refined — show a "Beta" chip on its card. */
-  beta?: boolean;
+  /** Part II chapter — show a "Part II" tag on its card. */
+  partTwo?: boolean;
   exercises: SstSection[];
 }
 
@@ -26,7 +26,7 @@ export const SST_CHAPTERS: SstChapter[] = [
     "title": "Oceans and Life",
     "slug": "oceans-and-life",
     "code": "0908ch01",
-    "beta": true,
+    "partTwo": true,
     "description": "Explores the oceans, their physical features, movements, resources, maritime zones and the importance of international rules for safe and sustainable use.",
     "exercises": [
       {
@@ -358,7 +358,7 @@ export const SST_CHAPTERS: SstChapter[] = [
     "title": "Life on Earth",
     "slug": "life-on-earth",
     "code": "0908ch02",
-    "beta": true,
+    "partTwo": true,
     "description": "Explains terrestrial and aquatic biomes, the relationship between geography and biodiversity, and the role of communities in forest conservation and ecological balance.",
     "exercises": [
       {
@@ -830,7 +830,7 @@ export const SST_CHAPTERS: SstChapter[] = [
     "title": "Resistance and Resilience (1000–1700 CE)",
     "slug": "resistance-and-resilience",
     "code": "0908ch03",
-    "beta": true,
+    "partTwo": true,
     "description": "Examines political resistance, alliances, forts, economic networks and cultural resilience in the Indian subcontinent between 1000 and 1700 CE.",
     "exercises": [
       {
@@ -1162,7 +1162,7 @@ export const SST_CHAPTERS: SstChapter[] = [
     "title": "Governance and Public Policy",
     "slug": "governance-and-public-policy",
     "code": "0908ch04",
-    "beta": true,
+    "partTwo": true,
     "description": "Explains governance, public policy, the policy cycle, good-governance principles and the shared role of citizens and institutions in public welfare.",
     "exercises": [
       {
@@ -1627,7 +1627,7 @@ export const SST_CHAPTERS: SstChapter[] = [
     "title": "Managing Your Personal Finances",
     "slug": "managing-your-personal-finances",
     "code": "0908ch05",
-    "beta": true,
+    "partTwo": true,
     "description": "Introduces personal finance, budgeting, saving, investment, inflation, insurance, responsible financial decisions and household financial planning.",
     "exercises": [
       {
@@ -1983,7 +1983,7 @@ export const SST_CHAPTERS: SstChapter[] = [
     "title": "From Ideas to Startups",
     "slug": "from-ideas-to-startups",
     "code": "0908ch06",
-    "beta": true,
+    "partTwo": true,
     "description": "Introduces entrepreneurship, business functions, business planning, market research, financial planning, innovation and the social responsibilities of enterprises.",
     "exercises": [
       {
