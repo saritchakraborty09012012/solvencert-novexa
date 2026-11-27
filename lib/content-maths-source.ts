@@ -5,7 +5,7 @@
 // a textual replacement.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export interface MathsSourceQuestion { id: string; number: string; head: string; body: string; plainText: string; answerKey: string; }
+export interface MathsSourceQuestion { id: string; number: string; head: string; body: string; plainText: string; answerKey: string; solNote?: string; }
 export interface MathsSourceExercise { id: string; title: string; introHtml: string; questions: MathsSourceQuestion[]; }
 export interface MathsSourceChapter { id: string; number: number; title: string; slug: string; code: string; exercises: MathsSourceExercise[]; }
 
@@ -319,9 +319,9 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
             "id": "q2",
             "answerKey": "6; 81; 102",
             "number": "2",
-            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">Find the value of the quadratic polynomial 7s2 – 4s + 6 if:</span><span class=\"ln\"><b>(i)</b> s=0</span><span class=\"ln\"><b>(ii)</b> s = –3</span><span class=\"ln\"><b>(iii)</b> s = 4</span></span>",
+            "head": "<span class=\"qnum\">2</span><span class=\"qtext\"><span class=\"ln\">Find the value of the quadratic polynomial 7s² − 4s + 6 if:</span><span class=\"ln\"><b>(i)</b> s=0</span><span class=\"ln\"><b>(ii)</b> s = –3</span><span class=\"ln\"><b>(iii)</b> s = 4</span></span>",
             "body": "<span class=\"ln\">i) ∵ s = 0</span><span class=\"ln\">7s² − 4s + 6 = 7×0² − 4×0 + 6 = <span class=\"box\">6</span> Ans.</span><div class=\"part-divider\"></div><span class=\"ln\">ii) ∵ s = −3</span><span class=\"ln\">7s² − 4s + 6 = 7×(−3)² − 4×(−3) + 6</span><span class=\"ln\">= 63 + 12 + 6 = <span class=\"box\">81</span> Ans.</span><div class=\"part-divider\"></div><span class=\"ln\">iii) ∵ s = 4</span><span class=\"ln\">7s² − 4s + 6 = 7×4² − 4×4 + 6</span><span class=\"ln\">= 112 − 16 + 6 = <span class=\"box\">102</span> Ans.</span>",
-            "plainText": "2. Find the value of the quadratic polynomial 7s2 – 4s + 6 if:(i) s=0(ii) s = –3(iii) s = 4 i) ∵ s = 07s² − 4s + 6 = 7×0² − 4×0 + 6 = 6 Ans. ii) ∵ s = −37s² − 4s + 6 = 7×(−3)² − 4×(−3) + 6= 63 + 12 + 6 = 81 Ans. iii) ∵ s = 47s² − 4s + 6 = 7×4² − 4×4 + 6= 112 − 16 + 6 = 102 Ans."
+            "plainText": "2. Find the value of the quadratic polynomial 7s² − 4s + 6 if:(i) s=0(ii) s = –3(iii) s = 4 i) ∵ s = 07s² − 4s + 6 = 7×0² − 4×0 + 6 = 6 Ans. ii) ∵ s = −37s² − 4s + 6 = 7×(−3)² − 4×(−3) + 6= 63 + 12 + 6 = 81 Ans. iii) ∵ s = 47s² − 4s + 6 = 7×4² − 4×4 + 6= 112 − 16 + 6 = 102 Ans."
           },
           {
             "id": "q3",
@@ -392,7 +392,8 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
             "number": "3",
             "head": "<span class=\"qnum\">3</span><span class=\"qtext\"><span class=\"ln\">Suppose the length of a rectangle is 13 cm. Find the area if the breadth is</span><span class=\"ln\"><b>(i)</b> 12 cm,</span><span class=\"ln\"><b>(ii)</b> 10 cm,</span><span class=\"ln\"><b>(iii)</b> 8 cm. Find the linear pattern representing the area of the rectangle.</span></span>",
             "body": "<span class=\"ln\">Length of rectangle = 13 cm.</span><span class=\"ln\">i) Breadth = 12 cm ⇒ Area = 13×12 = <span class=\"box\">156 cm²</span>.</span><span class=\"ln\">ii) Breadth = 10 cm ⇒ Area = 13×10 = <span class=\"box\">130 cm²</span>.</span><span class=\"ln\">iii) Breadth = 8 cm ⇒ Area = 13×8 = <span class=\"box\">104 cm²</span>.</span><span class=\"ln\">The areas decrease by 26 cm² each time.</span><span class=\"ln\">∴ Linear pattern = <span class=\"box\">182 − 26n</span> = 13(14 − 2n).</span>",
-            "plainText": "3. Suppose the length of a rectangle is 13 cm. Find the area if the breadth is(i) 12 cm,(ii) 10 cm,(iii) 8 cm. Find the linear pattern representing the area of the rectangle. Length of rectangle = 13 cm.i) Breadth = 12 cm ⇒ Area = 13×12 = 156 cm².ii) Breadth = 10 cm ⇒ Area = 13×10 = 130 cm².iii) Breadth = 8 cm ⇒ Area = 13×8 = 104 cm².The areas decrease by 26 cm² each time.∴ Linear pattern = 182 − 26n = 13(14 − 2n)."
+            "plainText": "3. Suppose the length of a rectangle is 13 cm. Find the area if the breadth is(i) 12 cm,(ii) 10 cm,(iii) 8 cm. Find the linear pattern representing the area of the rectangle. Length of rectangle = 13 cm.i) Breadth = 12 cm ⇒ Area = 13×12 = 156 cm².ii) Breadth = 10 cm ⇒ Area = 13×10 = 130 cm².iii) Breadth = 8 cm ⇒ Area = 13×8 = 104 cm².The areas decrease by 26 cm² each time.∴ Linear pattern = 182 − 26n = 13(14 − 2n).",
+            "solNote": "Some places or AI tools may give 13b as the answer. That is WRONG here: it is only the formula (linear expression) for this particular given case, not the actual linear pattern. The linear pattern means continuing the same series as in (i), (ii), (iii) to the nth term — what the area will be for the nth term — without putting any value of the breadth b, just following the given pattern."
           },
           {
             "id": "q4",
@@ -400,7 +401,8 @@ export const MATHS_SOURCE_CHAPTERS: MathsSourceChapter[] = [
             "number": "4",
             "head": "<span class=\"qnum\">4</span><span class=\"qtext\"><span class=\"ln\">Suppose the length of a rectangular box is 7 cm and breadth is 11 cm. Find the volume if the height is</span><span class=\"ln\"><b>(i)</b> 5 cm,</span><span class=\"ln\"><b>(ii)</b> 9 cm,</span><span class=\"ln\"><b>(iii)</b> 13 cm. Find the linear pattern representing the volume of the rectangular box.</span></span>",
             "body": "<span class=\"ln\">Length = 7 cm and breadth = 11 cm.</span><span class=\"ln\">i) h = 5 cm: V = 7×11×5 = <span class=\"box\">385 cm³</span>.</span><span class=\"ln\">ii) h = 9 cm: V = 7×11×9 = <span class=\"box\">693 cm³</span>.</span><span class=\"ln\">iii) h = 13 cm: V = 7×11×13 = <span class=\"box\">1001 cm³</span>.</span><span class=\"ln\">∴ Linear pattern = <span class=\"box\">77(4n+1)</span>.</span>",
-            "plainText": "4. Suppose the length of a rectangular box is 7 cm and breadth is 11 cm. Find the volume if the height is(i) 5 cm,(ii) 9 cm,(iii) 13 cm. Find the linear pattern representing the volume of the rectangular box. Length = 7 cm and breadth = 11 cm.i) h = 5 cm: V = 7×11×5 = 385 cm³.ii) h = 9 cm: V = 7×11×9 = 693 cm³.iii) h = 13 cm: V = 7×11×13 = 1001 cm³.∴ Linear pattern = 77(4n+1)."
+            "plainText": "4. Suppose the length of a rectangular box is 7 cm and breadth is 11 cm. Find the volume if the height is(i) 5 cm,(ii) 9 cm,(iii) 13 cm. Find the linear pattern representing the volume of the rectangular box. Length = 7 cm and breadth = 11 cm.i) h = 5 cm: V = 7×11×5 = 385 cm³.ii) h = 9 cm: V = 7×11×9 = 693 cm³.iii) h = 13 cm: V = 7×11×13 = 1001 cm³.∴ Linear pattern = 77(4n+1).",
+            "solNote": "Some places or AI tools may give 77h as the answer. That is WRONG here: it is only the formula (linear expression) for this particular given case, not the actual linear pattern. The linear pattern means continuing the same series as in (i), (ii), (iii) to the nth term — what the volume will be for the nth term — without putting any value of the height h, just following the given pattern."
           },
           {
             "id": "q5",

@@ -854,7 +854,8 @@ Length = 13 cm.
 The areas decrease by 26 cm² each time.
 
 Linear pattern = $\\boxed{182 - 26n}$`,
-            }
+            },
+            solNote: 'Some places or AI tools may give 13b as the answer. That is WRONG here: it is only the formula (linear expression) for this particular given case, not the actual linear pattern. The linear pattern means continuing the same series as in (i), (ii), (iii) to the nth term — what the area will be for the nth term — without putting any value of the breadth b, just following the given pattern.',
           },
           {
             id: 'q4', number: '4', isHard: false,
@@ -870,7 +871,8 @@ Length = 7 cm, Breadth = 11 cm.
 (iii) h = 13 cm: V = 7 × 11 × 13 = $\\boxed{1001 \\text{ cm}^3}$
 
 Linear pattern = $\\boxed{77(4n + 1)}$`,
-            }
+            },
+            solNote: 'Some places or AI tools may give 77h as the answer. That is WRONG here: it is only the formula (linear expression) for this particular given case, not the actual linear pattern. The linear pattern means continuing the same series as in (i), (ii), (iii) to the nth term — what the volume will be for the nth term — without putting any value of the height h, just following the given pattern.',
           },
           {
             id: 'q5', number: '5', isHard: false,
