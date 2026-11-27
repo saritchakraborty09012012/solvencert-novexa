@@ -91,7 +91,7 @@ export default function SearchPage() {
   }
 
   return (
-    <Layout title="Search NCERT Solutions — Class 9 CBSE" description="Search across all NCERT Class 9 solutions — Maths, Science, English. AI-powered search understands topics, synonyms and related concepts." canonical="/search">
+    <Layout title="Search NCERT Solutions — Class 9 CBSE" description="Search across all NCERT Class 9 solutions — Maths, Science, English. AI-powered search understands topics, synonyms and related concepts." canonical="/search" noindex>
       <div className="max-w-screen-md mx-auto px-6 py-10">
         <div className="mb-8">
           <h1 className="text-2xl font-display font-bold text-[var(--text-primary)] mb-1">Search</h1>

@@ -7,7 +7,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   const base = SITE_URL;
 
   const staticPages = [
-    '', '/answers', '/books', '/premium', '/search',
+    '', '/answers', '/books', '/premium',
     '/privacy', '/terms', '/about', '/contact',
     // Subject landing pages (the "choose a book / part" lists)
     '/class-9/it', '/class-9/hindi', '/class-9/sanskrit', '/class-9/sst',

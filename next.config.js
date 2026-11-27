@@ -54,6 +54,14 @@ const nextConfig = {
       { source: '/class-9/maths',   destination: '/class-9/maths/ganita-manjari', permanent: true },
       { source: '/class-9/science', destination: '/class-9/science/exploration',  permanent: true },
       { source: '/class-9/english', destination: '/class-9/english/kaveri',       permanent: true },
+      // These four subject slugs were served by a client-side-only redirect page
+      // that renders `null`, so crawlers saw an empty URL ("Crawled – currently
+      // not indexed"). Server-side 308 sends them straight to the canonical book
+      // page and keeps only that URL in the index.
+      { source: '/class-9/advanced-maths',   destination: '/class-9/advanced-maths/advanced-mathematics', permanent: true },
+      { source: '/class-9/advanced-science', destination: '/class-9/advanced-science/science-advanced',    permanent: true },
+      { source: '/class-9/arts',             destination: '/class-9/arts/madhurima',                      permanent: true },
+      { source: '/class-9/kaushal-vikas',    destination: '/class-9/kaushal-vikas/kaushal-vikas',         permanent: true },
       // Ganita Manjari Part II lives on the shared book page (anchored section)
       { source: '/class-9/maths/ganita-manjari-part-2', destination: '/class-9/maths/ganita-manjari', permanent: true },
     ];

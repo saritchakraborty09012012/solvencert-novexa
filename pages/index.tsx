@@ -26,11 +26,9 @@ const HOME_SCHEMA = [
     alternateName: SITE_ALTERNATE_NAMES,
     url: SITE_URL,
     description: 'Free NCERT solutions for CBSE Class 9 — 2026 Revised Syllabus',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
-      'query-input': 'required name=search_term_string',
-    },
+    // No SearchAction here on purpose: search engines crawl the urlTemplate
+    // literally (`/search?q={search_term_string}`) and report it as an empty,
+    // unindexable URL in Search Console. Search remains available in-app.
   },
   {
     '@context': 'https://schema.org',

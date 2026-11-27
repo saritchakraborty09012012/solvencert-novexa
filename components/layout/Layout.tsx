@@ -26,6 +26,7 @@ interface LayoutProps {
   noDock?:       boolean;
   bgImage?:      string | null; // /public path of a fixed, viewport-cropped page backdrop (subject themed)
   keywords?:     string;        // per-page SEO keywords (overrides default)
+  noindex?:      boolean;       // utility pages (e.g. search) stay out of the index
 }
 
 const BASE_URL   = SITE_URL;
@@ -33,7 +34,7 @@ const DEFAULT_OG = `${BASE_URL}/solvencert-logo-256.png`;
 const DEFAULT_DESC = 'SolveNCERT — Free NCERT solutions for CBSE Class 9 as per 2026 Revised Syllabus. Maths, Science, English — AI-powered, human-verified answers.';
 
 export default function Layout({
-  children, title, description, canonical, ogImage, ogType = 'website', schema, noFooter, noDock, bgImage, keywords,
+  children, title, description, canonical, ogImage, ogType = 'website', schema, noFooter, noDock, bgImage, keywords, noindex,
 }: LayoutProps) {
   const pageTitle = title ? `${title} | SolveNCERT` : 'SolveNCERT — NCERT Solutions for CBSE Class 9';
   const pageDesc  = description || DEFAULT_DESC;
@@ -113,7 +114,7 @@ export default function Layout({
         <meta name="twitter:image"       content={ogImg} />
 
         {/* ── Extra SEO signals ── */}
-        <meta name="robots"    content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="robots"    content={noindex ? 'noindex, nofollow' : 'index, follow, max-snippet:-1, max-image-preview:large'} />
         <meta name="author"    content={`${SITE_ALTERNATE_NAME} · ${SITE_ALTERNATE_NAME_NDE}`} />
         <meta name="owner"     content={`${BRAND_LOCKUP} · ${SITE_ALTERNATE_NAME_NDE} (NOVEXA)`} />
         {/* Site-wide defaults live in _document; only emit when a page adds its own */}
