@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ChevronRight, Home, BookOpen, Waves } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
-import PartTwoBadge from '@/components/features/PartTwoBadge';
+import NewBadge from '@/components/features/NewBadge';
 import { CLASS_9_SUBJECTS } from '@/lib/content';
 
 export default function SstLandingPage() {
@@ -50,7 +50,7 @@ export default function SstLandingPage() {
               <Waves size={22} />
             </span>
             <div className="flex-1 min-w-0">
-              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide flex items-center gap-2"><PartTwoBadge /></p>
+              <p className="text-xs text-[var(--text-muted)] uppercase tracking-wide flex items-center gap-2"><NewBadge /></p>
               <p className="font-display font-bold text-[var(--text-primary)]">Understanding Society Part II</p>
               <p className="text-xs text-[var(--text-muted)] mt-0.5">{part2?.chapters.length} chapters · Oceans, Life on Earth, History, Civics, Economics</p>
             </div>

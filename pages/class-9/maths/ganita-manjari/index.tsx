@@ -45,7 +45,7 @@ function ChapterCard({ chapter }: { chapter: MergedChapter }) {
         <div className="flex items-center gap-2 min-w-0">
           <p className="text-sm font-semibold text-[var(--text-primary)] leading-snug truncate">{chapter.title}</p>
           {chapter.partTwo && (
-            <span title="This chapter is from Part II of the textbook" className="flex-shrink-0 px-1.5 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/40 text-blue-600 dark:text-blue-300 text-[8px] font-bold uppercase tracking-[0.12em]">Part II</span>
+            <span title="Recently added solutions" className="flex-shrink-0 px-1.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[8px] font-bold uppercase tracking-[0.12em]">New</span>
           )}
         </div>
       </div>

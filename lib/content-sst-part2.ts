@@ -14,7 +14,7 @@ export interface SstSection { id: string; title: string; questions: SstQuestion[
 export interface SstChapter {
   id: string; number: number; title: string; slug: string; code: string;
   description: string;
-  /** Part II chapter — show a "Part II" tag on its card. */
+  /** Part II chapter — show a "New" tag on its card. */
   partTwo?: boolean;
   exercises: SstSection[];
 }

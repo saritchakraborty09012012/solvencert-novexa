@@ -18,7 +18,7 @@ export interface Chapter {
   slug:     string;
   code:     string;
   description?: string;
-  /** Part II chapter — show a "Part II" tag on its card. */
+  /** Part II chapter — show a "New" tag on its card. */
   partTwo?: boolean;
   exercises: Exercise[];
 }
@@ -66,7 +66,7 @@ export interface Subject {
   color:    string;
   downloadUrl?: string;
   description?: string;
-  /** Part II book — show a "Part II" tag wherever it is presented. */
+  /** Part II book — show a "New" tag wherever it is presented. */
   partTwo?: boolean;
   chapters: Chapter[];
 }

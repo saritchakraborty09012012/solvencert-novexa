@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import Link from 'next/link';
 import { ChevronRight, BookOpen, Home, Download } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
-import PartTwoBadge from '@/components/features/PartTwoBadge';
+import NewBadge from '@/components/features/NewBadge';
 import BackToTop from '@/components/features/BackToTop';
 import QuestionNav from '@/components/features/QuestionNav';
 import AuthModal from '@/components/auth/AuthModal';
@@ -154,7 +154,7 @@ export default function ExercisePage({ classSlug, subjectSlug, bookSlug, chapter
                         <span className="w-5 h-5 rounded bg-[var(--surface-2)] text-[10px] font-bold flex items-center justify-center flex-shrink-0">{ch.number}</span>
                         <span className="truncate leading-tight flex-1 min-w-0">{ch.title}</span>
                         {subject.partTwo && (
-                          <span className="px-1.5 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/40 text-blue-600 dark:text-blue-300 text-[8px] font-bold uppercase tracking-[0.12em] flex-shrink-0">Part II</span>
+                          <span className="px-1.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[8px] font-bold uppercase tracking-[0.12em] flex-shrink-0">New</span>
                         )}
                       </Link>
                     </React.Fragment>
@@ -170,7 +170,7 @@ export default function ExercisePage({ classSlug, subjectSlug, bookSlug, chapter
               <div className="flex flex-wrap items-center gap-2 mb-4">
                 <span className="px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-950/30 text-blue-700 dark:text-blue-300 text-xs font-bold">Class 9 · {subject.name}</span>
                 <span className="badge-2026">NCERT 2026 Revised Syllabus</span>
-                {subject.partTwo && <PartTwoBadge />}
+                {subject.partTwo && <NewBadge />}
               </div>
               <h1 className="text-2xl md:text-3xl font-display font-bold text-[var(--text-primary)] leading-tight">Chapter {chapter.number}: {chapter.title} {hasRealCode && <span className="text-lg md:text-xl font-normal text-[var(--text-muted)]">({chapter.code.toUpperCase()})</span>}</h1>
               <p className="text-sm text-[var(--text-secondary)] mt-3 leading-relaxed">{exercise.title} — {exercise.questions.length} questions with step-by-step answers.</p>

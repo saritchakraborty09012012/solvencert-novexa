@@ -58,8 +58,8 @@ export default function UpdatesSettingsPage() {
                   </span>
                   {update.partTwo && (
                     <span
-                      className="px-2 py-0.5 rounded-full bg-blue-500/15 border border-blue-500/40 text-blue-600 dark:text-blue-300 text-[9px] font-bold uppercase tracking-[0.14em]"
-                      title="This update is about Part II of a textbook."
+                      className="px-2 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/40 text-amber-600 dark:text-amber-400 text-[9px] font-bold uppercase tracking-[0.14em]"
+                      title="Recently added solutions."
                     >
                       Part II
                     </span>
